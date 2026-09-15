@@ -1,0 +1,1169 @@
+{
+  "schema": "fan_animated_glb_validation/v1",
+  "created_at_utc": "2026-09-10T14:30:58.687713+00:00",
+  "passed": true,
+  "errors": [],
+  "inputs": {
+    "glb": "D:\\ai3\\LiteReality_motion_analysis_extract_20260828_1214\\continous\\assembly-output\\cases\\0007-desk-fan-1bb4d940c799\\fan_animated.glb",
+    "glb_sha256": "1b503888ab3317be8b0f6159566fe5ea4a4331001dfa5eeb2ca4b069cea6ed85",
+    "glb_bytes": 13471328,
+    "urdf": "D:\\ai3\\LiteReality_motion_analysis_extract_20260828_1214\\continous\\assembly-output\\cases\\0007-desk-fan-1bb4d940c799\\fan.urdf",
+    "urdf_sha256": "b142827b0ae03268bdfe7c63ce3b1fc4b2831d5103ac8ca3cb1e0dc2845784ea",
+    "trajectory": "D:\\ai3\\LiteReality_motion_analysis_extract_20260828_1214\\continous\\assembly-output\\cases\\0007-desk-fan-1bb4d940c799\\joint_trajectory.json",
+    "trajectory_sha256": "fbb0b4b916037e30558d9decaf722642e5428d56bff55d05d0aef92b26574c1f"
+  },
+  "topology": {
+    "link_container_count": 6,
+    "node_count_including_meshes": 12,
+    "link_nodes": {
+      "pedestal": 10,
+      "base_link": 11,
+      "rotor": 6,
+      "motor_head": 7,
+      "guard": 3,
+      "yaw_carrier": 9
+    },
+    "urdf_parent_map": {
+      "pedestal": "base_link",
+      "yaw_carrier": "pedestal",
+      "motor_head": "yaw_carrier",
+      "guard": "motor_head",
+      "rotor": "motor_head"
+    },
+    "moving_links": [
+      "motor_head",
+      "rotor",
+      "yaw_carrier"
+    ],
+    "fixed_root": "base_link"
+  },
+  "animation": {
+    "clip_count": 1,
+    "rotation_channel_count": 3,
+    "clips": [
+      {
+        "index": 0,
+        "name": "fan_urdf_motion",
+        "targets": [
+          "motor_head",
+          "rotor",
+          "yaw_carrier"
+        ],
+        "covers_all_three_moving_links": true,
+        "samplers": [
+          {
+            "node": "yaw_carrier",
+            "property": "rotation",
+            "interpolation": "LINEAR",
+            "input_accessor": 34,
+            "output_accessor": 35,
+            "key_count": 576,
+            "first_time_s": 0.0416666679084301,
+            "last_time_s": 24.0,
+            "maximum_quaternion_norm_error": 5.3889201545587184e-08
+          },
+          {
+            "node": "motor_head",
+            "property": "rotation",
+            "interpolation": "LINEAR",
+            "input_accessor": 34,
+            "output_accessor": 36,
+            "key_count": 576,
+            "first_time_s": 0.0416666679084301,
+            "last_time_s": 24.0,
+            "maximum_quaternion_norm_error": 4.19738324097807e-08
+          },
+          {
+            "node": "rotor",
+            "property": "rotation",
+            "interpolation": "LINEAR",
+            "input_accessor": 34,
+            "output_accessor": 37,
+            "key_count": 576,
+            "first_time_s": 0.0416666679084301,
+            "last_time_s": 24.0,
+            "maximum_quaternion_norm_error": 7.108187105586694e-08
+          }
+        ]
+      }
+    ],
+    "single_clip_contains_every_driver": true,
+    "evaluation_mode": "All disjoint channels evaluated together; single-clip completeness is checked independently.",
+    "quaternion_order": "glTF XYZW",
+    "rotation_interpolation": "Shortest-path normalized quaternion SLERP for LINEAR samplers; q and -q are equivalent.",
+    "sampler_minus_recorded_time_offset_s": 0.0416666679084301,
+    "timeline_note": "Recorded 576 frames use t=(frame-1)/24, hence 0..23.958333 s. This Blender export uses key time=frame/24, hence 0.041666667..24 s. FK compares corresponding frames with that explicit constant +1/24 s offset; an ordinary viewer holds the first pose before its first key."
+  },
+  "forward_kinematics": {
+    "coordinate_conversion": "Blender URDF Z-up to glTF Y-up: C*T_URDF*C^-1, C=Rx(-pi/2), since exporter converts mesh coordinates as well as node bases.",
+    "times_s": [
+      0,
+      3,
+      7,
+      10,
+      11,
+      16,
+      21,
+      23
+    ],
+    "world_matrix_comparisons": 48,
+    "maximum_world_matrix_abs_error": 4.108920521606052e-06,
+    "maximum_quaternion_one_minus_abs_dot": 3.149924765466494e-12,
+    "matrix_tolerance": 1e-05,
+    "samples": [
+      {
+        "recorded_trajectory_time_s": 0,
+        "gltf_sampler_time_s": 0.0416666679084301,
+        "joint_positions_rad": {
+          "rotor_joint": 0.0,
+          "yaw_joint": 0.0,
+          "pitch_joint": 0.0
+        },
+        "links": {
+          "base_link": {
+            "world_matrix_abs_error": 0.0,
+            "gltf_world_translation": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "urdf_converted_world_translation": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          "guard": {
+            "world_matrix_abs_error": 3.44180295375196e-10,
+            "gltf_world_translation": [
+              0.0,
+              0.2974608838558197,
+              0.08477663993835449
+            ],
+            "urdf_converted_world_translation": [
+              0.0,
+              0.2974608842,
+              0.0847766399
+            ]
+          },
+          "motor_head": {
+            "world_matrix_abs_error": 3.93557741951156e-10,
+            "gltf_world_translation": [
+              0.0,
+              0.26753970980644226,
+              -0.037401460111141205
+            ],
+            "urdf_converted_world_translation": [
+              0.0,
+              0.2675397102,
+              -0.0374014601
+            ],
+            "joint": "pitch_joint",
+            "gltf_local_quaternion_xyzw": [
+              0.0,
+              0.0,
+              -0.0,
+              1.0
+            ],
+            "reference_local_quaternion_xyzw": [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ],
+            "sign_invariant_one_minus_abs_dot": 0.0
+          },
+          "pedestal": {
+            "world_matrix_abs_error": 0.0,
+            "gltf_world_translation": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "urdf_converted_world_translation": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          "rotor": {
+            "world_matrix_abs_error": 4.4291381673389196e-10,
+            "gltf_world_translation": [
+              -0.00010958633356494829,
+              0.2998362183570862,
+              0.07480292022228241
+            ],
+            "urdf_converted_world_translation": [
+              -0.000109586334,
+              0.2998362188,
+              0.07480291990000001
+            ],
+            "joint": "rotor_joint",
+            "gltf_local_quaternion_xyzw": [
+              0.0,
+              0.0,
+              -0.0,
+              1.0
+            ],
+            "reference_local_quaternion_xyzw": [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ],
+            "sign_invariant_one_minus_abs_dot": 0.0
+          },
+          "yaw_carrier": {
+            "world_matrix_abs_error": 3.97201549429127e-10,
+            "gltf_world_translation": [
+              0.0,
+              0.20520392060279846,
+              -0.037401460111141205
+            ],
+            "urdf_converted_world_translation": [
+              0.0,
+              0.205203921,
+              -0.0374014601
+            ],
+            "joint": "yaw_joint",
+            "gltf_local_quaternion_xyzw": [
+              0.0,
+              0.0,
+              -0.0,
+              1.0
+            ],
+            "reference_local_quaternion_xyzw": [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ],
+            "sign_invariant_one_minus_abs_dot": 0.0
+          }
+        }
+      },
+      {
+        "recorded_trajectory_time_s": 3,
+        "gltf_sampler_time_s": 3.04166666790843,
+        "joint_positions_rad": {
+          "rotor_joint": 1.0602875205865552,
+          "yaw_joint": 0.0,
+          "pitch_joint": 0.0
+        },
+        "links": {
+          "base_link": {
+            "world_matrix_abs_error": 0.0,
+            "gltf_world_translation": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "urdf_converted_world_translation": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          "guard": {
+            "world_matrix_abs_error": 3.44180295375196e-10,
+            "gltf_world_translation": [
+              0.0,
+              0.2974608838558197,
+              0.08477663993835449
+            ],
+            "urdf_converted_world_translation": [
+              0.0,
+              0.2974608842,
+              0.0847766399
+            ]
+          },
+          "motor_head": {
+            "world_matrix_abs_error": 3.93557741951156e-10,
+            "gltf_world_translation": [
+              0.0,
+              0.26753970980644226,
+              -0.037401460111141205
+            ],
+            "urdf_converted_world_translation": [
+              0.0,
+              0.2675397102,
+              -0.0374014601
+            ],
+            "joint": "pitch_joint",
+            "gltf_local_quaternion_xyzw": [
+              0.0,
+              0.0,
+              -0.0,
+              1.0
+            ],
+            "reference_local_quaternion_xyzw": [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ],
+            "sign_invariant_one_minus_abs_dot": 0.0
+          },
+          "pedestal": {
+            "world_matrix_abs_error": 0.0,
+            "gltf_world_translation": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "urdf_converted_world_translation": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          "rotor": {
+            "world_matrix_abs_error": 2.994093966646183e-07,
+            "gltf_world_translation": [
+              -0.00010958633356494829,
+              0.2998362183570862,
+              0.07480292022228241
+            ],
+            "urdf_converted_world_translation": [
+              -0.000109586334,
+              0.2998362188,
+              0.07480291990000001
+            ],
+            "joint": "rotor_joint",
+            "gltf_local_quaternion_xyzw": [
+              0.0004098928536701445,
+              0.0017764243504772986,
+              -0.505654234888742,
+              0.8627342992158458
+            ],
+            "reference_local_quaternion_xyzw": [
+              0.00040989246011464845,
+              0.0017764239026643682,
+              -0.5056540868595959,
+              0.8627343859777918
+            ],
+            "sign_invariant_one_minus_abs_dot": 1.4654943925052066e-14
+          },
+          "yaw_carrier": {
+            "world_matrix_abs_error": 3.97201549429127e-10,
+            "gltf_world_translation": [
+              0.0,
+              0.20520392060279846,
+              -0.037401460111141205
+            ],
+            "urdf_converted_world_translation": [
+              0.0,
+              0.205203921,
+              -0.0374014601
+            ],
+            "joint": "yaw_joint",
+            "gltf_local_quaternion_xyzw": [
+              0.0,
+              0.0,
+              -0.0,
+              1.0
+            ],
+            "reference_local_quaternion_xyzw": [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ],
+            "sign_invariant_one_minus_abs_dot": 0.0
+          }
+        }
+      },
+      {
+        "recorded_trajectory_time_s": 7,
+        "gltf_sampler_time_s": 7.04166666790843,
+        "joint_positions_rad": {
+          "rotor_joint": 22.61946710584651,
+          "yaw_joint": 0.0,
+          "pitch_joint": 0.0
+        },
+        "links": {
+          "base_link": {
+            "world_matrix_abs_error": 0.0,
+            "gltf_world_translation": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "urdf_converted_world_translation": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          "guard": {
+            "world_matrix_abs_error": 3.44180295375196e-10,
+            "gltf_world_translation": [
+              0.0,
+              0.2974608838558197,
+              0.08477663993835449
+            ],
+            "urdf_converted_world_translation": [
+              0.0,
+              0.2974608842,
+              0.0847766399
+            ]
+          },
+          "motor_head": {
+            "world_matrix_abs_error": 3.93557741951156e-10,
+            "gltf_world_translation": [
+              0.0,
+              0.26753970980644226,
+              -0.037401460111141205
+            ],
+            "urdf_converted_world_translation": [
+              0.0,
+              0.2675397102,
+              -0.0374014601
+            ],
+            "joint": "pitch_joint",
+            "gltf_local_quaternion_xyzw": [
+              0.0,
+              0.0,
+              -0.0,
+              1.0
+            ],
+            "reference_local_quaternion_xyzw": [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ],
+            "sign_invariant_one_minus_abs_dot": 0.0
+          },
+          "pedestal": {
+            "world_matrix_abs_error": 0.0,
+            "gltf_world_translation": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "urdf_converted_world_translation": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          "rotor": {
+            "world_matrix_abs_error": 9.040092642242925e-07,
+            "gltf_world_translation": [
+              -0.00010958633356494829,
+              0.2998362183570862,
+              0.07480292022228241
+            ],
+            "urdf_converted_world_translation": [
+              -0.000109586334,
+              0.2998362188,
+              0.07480291990000001
+            ],
+            "joint": "rotor_joint",
+            "gltf_local_quaternion_xyzw": [
+              -0.0007709393008422557,
+              -0.003341154920646009,
+              0.951050507557398,
+              0.30901646300999325
+            ],
+            "reference_local_quaternion_xyzw": [
+              -0.0007709388129121277,
+              -0.0033411547369418277,
+              0.9510503349065415,
+              0.3090169943749471
+            ],
+            "sign_invariant_one_minus_abs_dot": 1.559863349598345e-13
+          },
+          "yaw_carrier": {
+            "world_matrix_abs_error": 3.97201549429127e-10,
+            "gltf_world_translation": [
+              0.0,
+              0.20520392060279846,
+              -0.037401460111141205
+            ],
+            "urdf_converted_world_translation": [
+              0.0,
+              0.205203921,
+              -0.0374014601
+            ],
+            "joint": "yaw_joint",
+            "gltf_local_quaternion_xyzw": [
+              0.0,
+              0.0,
+              -0.0,
+              1.0
+            ],
+            "reference_local_quaternion_xyzw": [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ],
+            "sign_invariant_one_minus_abs_dot": 0.0
+          }
+        }
+      },
+      {
+        "recorded_trajectory_time_s": 10,
+        "gltf_sampler_time_s": 10.04166666790843,
+        "joint_positions_rad": {
+          "rotor_joint": 33.929200658769766,
+          "yaw_joint": 0.0,
+          "pitch_joint": 0.0
+        },
+        "links": {
+          "base_link": {
+            "world_matrix_abs_error": 0.0,
+            "gltf_world_translation": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "urdf_converted_world_translation": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          "guard": {
+            "world_matrix_abs_error": 3.44180295375196e-10,
+            "gltf_world_translation": [
+              0.0,
+              0.2974608838558197,
+              0.08477663993835449
+            ],
+            "urdf_converted_world_translation": [
+              0.0,
+              0.2974608842,
+              0.0847766399
+            ]
+          },
+          "motor_head": {
+            "world_matrix_abs_error": 3.93557741951156e-10,
+            "gltf_world_translation": [
+              0.0,
+              0.26753970980644226,
+              -0.037401460111141205
+            ],
+            "urdf_converted_world_translation": [
+              0.0,
+              0.2675397102,
+              -0.0374014601
+            ],
+            "joint": "pitch_joint",
+            "gltf_local_quaternion_xyzw": [
+              0.0,
+              0.0,
+              -0.0,
+              1.0
+            ],
+            "reference_local_quaternion_xyzw": [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ],
+            "sign_invariant_one_minus_abs_dot": 0.0
+          },
+          "pedestal": {
+            "world_matrix_abs_error": 0.0,
+            "gltf_world_translation": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "urdf_converted_world_translation": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          "rotor": {
+            "world_matrix_abs_error": 1.108480107703258e-06,
+            "gltf_world_translation": [
+              -0.00010958633356494829,
+              0.2998362183570862,
+              0.07480292022228241
+            ],
+            "urdf_converted_world_translation": [
+              -0.000109586334,
+              0.2998362188,
+              0.07480291990000001
+            ],
+            "joint": "rotor_joint",
+            "gltf_local_quaternion_xyzw": [
+              0.0007709380853584361,
+              0.0033411535923243236,
+              -0.951050123208694,
+              0.309017645923124
+            ],
+            "reference_local_quaternion_xyzw": [
+              -0.0007709388129121275,
+              -0.0033411547369418264,
+              0.951050334906541,
+              -0.3090169943749481
+            ],
+            "sign_invariant_one_minus_abs_dot": 2.345901251032956e-13
+          },
+          "yaw_carrier": {
+            "world_matrix_abs_error": 3.97201549429127e-10,
+            "gltf_world_translation": [
+              0.0,
+              0.20520392060279846,
+              -0.037401460111141205
+            ],
+            "urdf_converted_world_translation": [
+              0.0,
+              0.205203921,
+              -0.0374014601
+            ],
+            "joint": "yaw_joint",
+            "gltf_local_quaternion_xyzw": [
+              0.0,
+              0.0,
+              -0.0,
+              1.0
+            ],
+            "reference_local_quaternion_xyzw": [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ],
+            "sign_invariant_one_minus_abs_dot": 0.0
+          }
+        }
+      },
+      {
+        "recorded_trajectory_time_s": 11,
+        "gltf_sampler_time_s": 11.04166666790843,
+        "joint_positions_rad": {
+          "rotor_joint": 33.929200658769766,
+          "yaw_joint": 0.0,
+          "pitch_joint": 2.99237663467834e-17
+        },
+        "links": {
+          "base_link": {
+            "world_matrix_abs_error": 0.0,
+            "gltf_world_translation": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "urdf_converted_world_translation": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          "guard": {
+            "world_matrix_abs_error": 3.6202476807361753e-07,
+            "gltf_world_translation": [
+              0.0,
+              0.2974608396243194,
+              0.08477665077055259
+            ],
+            "urdf_converted_world_translation": [
+              0.0,
+              0.2974608842,
+              0.0847766399
+            ]
+          },
+          "motor_head": {
+            "world_matrix_abs_error": 3.6202476807361753e-07,
+            "gltf_world_translation": [
+              0.0,
+              0.26753970980644226,
+              -0.037401460111141205
+            ],
+            "urdf_converted_world_translation": [
+              0.0,
+              0.2675397102,
+              -0.0374014601
+            ],
+            "joint": "pitch_joint",
+            "gltf_local_quaternion_xyzw": [
+              1.8101238403681173e-07,
+              0.0,
+              -0.0,
+              0.9999999999999837
+            ],
+            "reference_local_quaternion_xyzw": [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ],
+            "sign_invariant_one_minus_abs_dot": 1.63202784619898e-14
+          },
+          "pedestal": {
+            "world_matrix_abs_error": 0.0,
+            "gltf_world_translation": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "urdf_converted_world_translation": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          "rotor": {
+            "world_matrix_abs_error": 1.1078565936850637e-06,
+            "gltf_world_translation": [
+              -0.00010958633356494829,
+              0.2998361777363193,
+              0.07480293191441108
+            ],
+            "urdf_converted_world_translation": [
+              -0.000109586334,
+              0.2998362188,
+              0.07480291990000001
+            ],
+            "joint": "rotor_joint",
+            "gltf_local_quaternion_xyzw": [
+              0.0007709380854567495,
+              0.003341153592742386,
+              -0.951050123325244,
+              0.3090176455644183
+            ],
+            "reference_local_quaternion_xyzw": [
+              -0.0007709388129121275,
+              -0.0033411547369418264,
+              0.951050334906541,
+              -0.3090169943749481
+            ],
+            "sign_invariant_one_minus_abs_dot": 2.3425705819590803e-13
+          },
+          "yaw_carrier": {
+            "world_matrix_abs_error": 3.97201549429127e-10,
+            "gltf_world_translation": [
+              0.0,
+              0.20520392060279846,
+              -0.037401460111141205
+            ],
+            "urdf_converted_world_translation": [
+              0.0,
+              0.205203921,
+              -0.0374014601
+            ],
+            "joint": "yaw_joint",
+            "gltf_local_quaternion_xyzw": [
+              0.0,
+              0.0,
+              -0.0,
+              1.0
+            ],
+            "reference_local_quaternion_xyzw": [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ],
+            "sign_invariant_one_minus_abs_dot": 0.0
+          }
+        }
+      },
+      {
+        "recorded_trajectory_time_s": 16,
+        "gltf_sampler_time_s": 16.04166666790843,
+        "joint_positions_rad": {
+          "rotor_joint": 50.893800988154645,
+          "yaw_joint": 0.5227129293406287,
+          "pitch_joint": 0.0
+        },
+        "links": {
+          "base_link": {
+            "world_matrix_abs_error": 0.0,
+            "gltf_world_translation": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "urdf_converted_world_translation": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          "guard": {
+            "world_matrix_abs_error": 1.617288591937438e-08,
+            "gltf_world_translation": [
+              0.06099529328555248,
+              0.2974608838558197,
+              0.06846195344006645
+            ],
+            "urdf_converted_world_translation": [
+              0.060995295236815086,
+              0.2974608842,
+              0.06846195226982568
+            ]
+          },
+          "motor_head": {
+            "world_matrix_abs_error": 1.617288591937438e-08,
+            "gltf_world_translation": [
+              0.0,
+              0.26753970980644226,
+              -0.037401460111141205
+            ],
+            "urdf_converted_world_translation": [
+              0.0,
+              0.2675397102,
+              -0.0374014601
+            ],
+            "joint": "pitch_joint",
+            "gltf_local_quaternion_xyzw": [
+              0.0,
+              0.0,
+              -0.0,
+              1.0
+            ],
+            "reference_local_quaternion_xyzw": [
+              0.0,
+              1.3877787807814457e-17,
+              0.0,
+              1.0
+            ],
+            "sign_invariant_one_minus_abs_dot": 0.0
+          },
+          "pedestal": {
+            "world_matrix_abs_error": 0.0,
+            "gltf_world_translation": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "urdf_converted_world_translation": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          "rotor": {
+            "world_matrix_abs_error": 4.061106946395832e-06,
+            "gltf_world_translation": [
+              0.05592113398590458,
+              0.2998362183570862,
+              0.05987475357392465
+            ],
+            "urdf_converted_world_translation": [
+              0.055921135634761476,
+              0.2998362188,
+              0.05987475225259734
+            ],
+            "joint": "rotor_joint",
+            "gltf_local_quaternion_xyzw": [
+              0.00025049866725706236,
+              0.0010856111357119167,
+              -0.309017372988962,
+              0.9510557406849929
+            ],
+            "reference_local_quaternion_xyzw": [
+              0.00025049320490557527,
+              0.0010856069821942637,
+              -0.3090149859200347,
+              0.9510565162951544
+            ],
+            "sign_invariant_one_minus_abs_dot": 3.149924765466494e-12
+          },
+          "yaw_carrier": {
+            "world_matrix_abs_error": 1.617288591937438e-08,
+            "gltf_world_translation": [
+              0.0,
+              0.20520392060279846,
+              -0.037401460111141205
+            ],
+            "urdf_converted_world_translation": [
+              0.0,
+              0.205203921,
+              -0.0374014601
+            ],
+            "joint": "yaw_joint",
+            "gltf_local_quaternion_xyzw": [
+              0.0,
+              0.2583911798239138,
+              -0.0,
+              0.9660403708899571
+            ],
+            "reference_local_quaternion_xyzw": [
+              0.0,
+              0.25839118883963097,
+              0.0,
+              0.9660403684784825
+            ],
+            "sign_invariant_one_minus_abs_dot": 0.0
+          }
+        }
+      },
+      {
+        "recorded_trajectory_time_s": 21,
+        "gltf_sampler_time_s": 21.04166666790843,
+        "joint_positions_rad": {
+          "rotor_joint": 78.10784734987624,
+          "yaw_joint": 0.0,
+          "pitch_joint": 0.0
+        },
+        "links": {
+          "base_link": {
+            "world_matrix_abs_error": 0.0,
+            "gltf_world_translation": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "urdf_converted_world_translation": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          "guard": {
+            "world_matrix_abs_error": 3.44180295375196e-10,
+            "gltf_world_translation": [
+              0.0,
+              0.2974608838558197,
+              0.08477663993835449
+            ],
+            "urdf_converted_world_translation": [
+              0.0,
+              0.2974608842,
+              0.0847766399
+            ]
+          },
+          "motor_head": {
+            "world_matrix_abs_error": 3.93557741951156e-10,
+            "gltf_world_translation": [
+              0.0,
+              0.26753970980644226,
+              -0.037401460111141205
+            ],
+            "urdf_converted_world_translation": [
+              0.0,
+              0.2675397102,
+              -0.0374014601
+            ],
+            "joint": "pitch_joint",
+            "gltf_local_quaternion_xyzw": [
+              0.0,
+              0.0,
+              -0.0,
+              1.0
+            ],
+            "reference_local_quaternion_xyzw": [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ],
+            "sign_invariant_one_minus_abs_dot": 0.0
+          },
+          "pedestal": {
+            "world_matrix_abs_error": 0.0,
+            "gltf_world_translation": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "urdf_converted_world_translation": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          "rotor": {
+            "world_matrix_abs_error": 4.108920521606052e-06,
+            "gltf_world_translation": [
+              -0.00010958633356494829,
+              0.2998362183570862,
+              0.07480292022228241
+            ],
+            "urdf_converted_world_translation": [
+              -0.000109586334,
+              0.2998362188,
+              0.07480291990000001
+            ],
+            "joint": "rotor_joint",
+            "gltf_local_quaternion_xyzw": [
+              0.0007917792723293182,
+              0.003431475841190722,
+              -0.976760017655645,
+              0.21430694335107184
+            ],
+            "reference_local_quaternion_xyzw": [
+              -0.0007917791594257742,
+              -0.0034314742555694566,
+              0.9767595328343295,
+              -0.21430915306504916
+            ],
+            "sign_invariant_one_minus_abs_dot": 2.5587310048535983e-12
+          },
+          "yaw_carrier": {
+            "world_matrix_abs_error": 3.97201549429127e-10,
+            "gltf_world_translation": [
+              0.0,
+              0.20520392060279846,
+              -0.037401460111141205
+            ],
+            "urdf_converted_world_translation": [
+              0.0,
+              0.205203921,
+              -0.0374014601
+            ],
+            "joint": "yaw_joint",
+            "gltf_local_quaternion_xyzw": [
+              0.0,
+              0.0,
+              -0.0,
+              1.0
+            ],
+            "reference_local_quaternion_xyzw": [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ],
+            "sign_invariant_one_minus_abs_dot": 0.0
+          }
+        }
+      },
+      {
+        "recorded_trajectory_time_s": 23,
+        "gltf_sampler_time_s": 23.04166666790843,
+        "joint_positions_rad": {
+          "rotor_joint": 79.16813487046278,
+          "yaw_joint": 0.0,
+          "pitch_joint": 0.0
+        },
+        "links": {
+          "base_link": {
+            "world_matrix_abs_error": 0.0,
+            "gltf_world_translation": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "urdf_converted_world_translation": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          "guard": {
+            "world_matrix_abs_error": 3.44180295375196e-10,
+            "gltf_world_translation": [
+              0.0,
+              0.2974608838558197,
+              0.08477663993835449
+            ],
+            "urdf_converted_world_translation": [
+              0.0,
+              0.2974608842,
+              0.0847766399
+            ]
+          },
+          "motor_head": {
+            "world_matrix_abs_error": 3.93557741951156e-10,
+            "gltf_world_translation": [
+              0.0,
+              0.26753970980644226,
+              -0.037401460111141205
+            ],
+            "urdf_converted_world_translation": [
+              0.0,
+              0.2675397102,
+              -0.0374014601
+            ],
+            "joint": "pitch_joint",
+            "gltf_local_quaternion_xyzw": [
+              0.0,
+              0.0,
+              -0.0,
+              1.0
+            ],
+            "reference_local_quaternion_xyzw": [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ],
+            "sign_invariant_one_minus_abs_dot": 0.0
+          },
+          "pedestal": {
+            "world_matrix_abs_error": 0.0,
+            "gltf_world_translation": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "urdf_converted_world_translation": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          "rotor": {
+            "world_matrix_abs_error": 9.518303034639075e-09,
+            "gltf_world_translation": [
+              -0.00010958633356494829,
+              0.2998362183570862,
+              0.07480292022228241
+            ],
+            "urdf_converted_world_translation": [
+              -0.000109586334,
+              0.2998362188,
+              0.07480291990000001
+            ],
+            "joint": "rotor_joint",
+            "gltf_local_quaternion_xyzw": [
+              -0.0007709392746887559,
+              -0.003341156029749854,
+              0.9510503330841559,
+              0.30901699996850623
+            ],
+            "reference_local_quaternion_xyzw": [
+              -0.0007709388129121289,
+              -0.003341154736941832,
+              0.9510503349065429,
+              0.30901699437494257
+            ],
+            "sign_invariant_one_minus_abs_dot": 0.0
+          },
+          "yaw_carrier": {
+            "world_matrix_abs_error": 3.97201549429127e-10,
+            "gltf_world_translation": [
+              0.0,
+              0.20520392060279846,
+              -0.037401460111141205
+            ],
+            "urdf_converted_world_translation": [
+              0.0,
+              0.205203921,
+              -0.0374014601
+            ],
+            "joint": "yaw_joint",
+            "gltf_local_quaternion_xyzw": [
+              0.0,
+              0.0,
+              -0.0,
+              1.0
+            ],
+            "reference_local_quaternion_xyzw": [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ],
+            "sign_invariant_one_minus_abs_dot": 0.0
+          }
+        }
+      }
+    ]
+  },
+  "limitations": [
+    "Validates selected animation times and exported hierarchy; not continuous collision or physics verification.",
+    "glTF float32 keyframes introduce small numeric error; quaternion signs are not compared component-by-component.",
+    "No main model or animation file is modified by this validator."
+  ]
+}

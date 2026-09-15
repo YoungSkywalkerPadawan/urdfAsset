@@ -1,0 +1,141 @@
+{
+  "summary": {
+    "id": "infinigen_articulated_pepper_grinder_2b03cbc215",
+    "category": "infinigen_articulated/pepper_grinder",
+    "robot_name": "urdf/pepper_grinder/1061/pepper_grinder.urdf",
+    "joint_count": 1,
+    "link_count": 2,
+    "target_link_count": 2,
+    "family": "pepper_grinder",
+    "warnings": [],
+    "diagonal": 0.20628357709092124,
+    "dataset": "infinigen_articulated",
+    "bytes": 371140,
+    "continuous_joint_count": 0,
+    "training_role": "bounded_rotation_axis_auxiliary"
+  },
+  "source": {
+    "dataset": "princeton-vl/infinigen-articulated",
+    "revision": "58df7d3f885a9b7288b7792f70834afb6337dffa",
+    "license": "CC-BY-4.0",
+    "url": "https://huggingface.co/datasets/princeton-vl/infinigen-articulated",
+    "up_axis": "Z",
+    "family": "pepper_grinder",
+    "reference_pose": "URDF zero clamped to limits; mimic propagated",
+    "resolved_meshes": [
+      {
+        "path": "urdf/pepper_grinder/1061/assets/Lid_0.obj",
+        "sha256": "1f66567ee0a01d6361b11ee5d3601d9bcfb2d26afbe36bfdf6a1b4a86f271666"
+      },
+      {
+        "path": "urdf/pepper_grinder/1061/assets/Lid_1.obj",
+        "sha256": "7c46949112b6fef11ac8ca72e750f019e79009d4a768ccd3ae5f424f2e227603"
+      },
+      {
+        "path": "urdf/pepper_grinder/1061/assets/Lid_2.obj",
+        "sha256": "f8cf82a48ac9a417729c9afcec8985eb0b6a5f93aa007e53439f43caadd66c8e"
+      },
+      {
+        "path": "urdf/pepper_grinder/1061/assets/Chamber_Full Base_0.obj",
+        "sha256": "caf2ab13a7f644fffe5d6b24a46281ca501300a30bc8fb898e83594719bd94c0"
+      },
+      {
+        "path": "urdf/pepper_grinder/1061/assets/Knee_Full Base_0.obj",
+        "sha256": "28f7958b92ec56c53c1dcec535791c3a3a560cdbd596c3428a57b44d692bbf09"
+      },
+      {
+        "path": "urdf/pepper_grinder/1061/assets/Foot_Full Base_0.obj",
+        "sha256": "7c45e8a47166fe3f5fe4219501a5b57375ce12ca4eb764054193abe0aed31658"
+      }
+    ],
+    "files": [
+      {
+        "path": "/root/continuous-public-data-20260911/extracted/infinigen_articulated/urdf/pepper_grinder/1061/pepper_grinder.urdf",
+        "sha256": "6da326787034e72ff79add5838cd97ec56501c425c18b4a5cc157f3834e18a76",
+        "bytes": 7729
+      }
+    ]
+  },
+  "links": [
+    {
+      "id": "link_001",
+      "name": "link_1",
+      "point_file": "inputs/link_001.npz",
+      "bounds": [
+        [
+          -0.003247,
+          -0.03571695016247034,
+          0.1549749157948494
+        ],
+        [
+          0.003247,
+          0.0032470498375296586,
+          0.17437723483371734
+        ]
+      ],
+      "faces": 36,
+      "vertices": 72,
+      "geometry_sha256": "a48dbe1fe4fbef84b0d18e373cfe8e4700078049c081241a4c64014498614ddb"
+    },
+    {
+      "id": "link_000",
+      "name": "link_0",
+      "point_file": "inputs/link_000.npz",
+      "bounds": [
+        [
+          -0.038964,
+          -0.038964,
+          1.497295498854162e-07
+        ],
+        [
+          0.038964,
+          0.038964,
+          0.154974543584466
+        ]
+      ],
+      "faces": 3486,
+      "vertices": 4330,
+      "geometry_sha256": "581df6ebd2b07b93dde02821080324adf2ddea9af3f017a6061da88d4f5f77eb"
+    }
+  ],
+  "joints": [
+    {
+      "name": "world_joint",
+      "type": "fixed",
+      "parent": "link_002",
+      "child": "link_000",
+      "reference_q": 0.0,
+      "mimic": null
+    },
+    {
+      "name": "Lid Joint_0",
+      "type": "revolute",
+      "parent": "link_000",
+      "child": "link_001",
+      "reference_q": 0.0,
+      "mimic": null
+    }
+  ],
+  "bounds": [
+    [
+      -0.038964,
+      -0.038964,
+      1.497295498854162e-07
+    ],
+    [
+      0.038964,
+      0.038964,
+      0.17437723483371734
+    ]
+  ],
+  "point_pool_size": 8192,
+  "reference_pose": "URDF zero clamped to limits; mimic propagated",
+  "qc": {
+    "finite_geometry": true,
+    "axis_unit": true,
+    "physical_collision_validation": false,
+    "manual_review": false,
+    "omitted_texture_images": true,
+    "warnings": []
+  }
+}

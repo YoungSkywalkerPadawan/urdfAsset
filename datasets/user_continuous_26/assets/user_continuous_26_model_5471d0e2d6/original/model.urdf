@@ -1,0 +1,159 @@
+<?xml version='1.0' encoding='utf-8'?>
+<robot name="0019-gs1-microscope-realistic-001">
+  <link name="base_link">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/base_link.obj" />
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/base_link.obj" />
+      </geometry>
+    </collision>
+    <inertial>
+      <origin xyz="1.207739115e-05 7.033348083e-05 0.1899999976" rpy="0 0 0" />
+      <mass value="2" />
+      <inertia ixx="0.031774338286448746" iyy="0.028525349199534016" izz="0.01216635536063689" ixy="0" ixz="0" iyz="0" />
+    </inertial>
+  </link>
+  <link name="upper_left">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/upper_left.obj" />
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/upper_left.obj" />
+      </geometry>
+    </collision>
+    <inertial>
+      <origin xyz="-0.01110059116 0.0003241384402 -1.667439938e-05" rpy="0 0 0" />
+      <mass value="0.02" />
+      <inertia ixx="3.131698974252016e-06" iyy="2.379840530550437e-06" izz="2.273949621237117e-06" ixy="0" ixz="0" iyz="0" />
+    </inertial>
+  </link>
+  <link name="upper_right">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/upper_right.obj" />
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/upper_right.obj" />
+      </geometry>
+    </collision>
+    <inertial>
+      <origin xyz="0.01045269705 0.0001027565449 -2.405419946e-05" rpy="0 0 0" />
+      <mass value="0.02" />
+      <inertia ixx="3.13621554217858e-06" iyy="2.4160556462413166e-06" izz="2.3482900618096033e-06" ixy="0" ixz="0" iyz="0" />
+    </inertial>
+  </link>
+  <link name="lower_left">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/lower_left.obj" />
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/lower_left.obj" />
+      </geometry>
+    </collision>
+    <inertial>
+      <origin xyz="-0.01119688433 -0.000182537362 0.0002926792949" rpy="0 0 0" />
+      <mass value="0.02" />
+      <inertia ixx="4.169751691845645e-06" iyy="2.8023719986530115e-06" izz="2.640589132994782e-06" ixy="0" ixz="0" iyz="0" />
+    </inertial>
+  </link>
+  <link name="lower_right">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/lower_right.obj" />
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/lower_right.obj" />
+      </geometry>
+    </collision>
+    <inertial>
+      <origin xyz="0.01130349096 -7.410347462e-05 0.0003405930474" rpy="0 0 0" />
+      <mass value="0.02" />
+      <inertia ixx="4.244216995221799e-06" iyy="2.8585671038270792e-06" izz="2.76872901110809e-06" ixy="0" ixz="0" iyz="0" />
+    </inertial>
+  </link>
+  <link name="objective_turret">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/objective_turret.obj" />
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/objective_turret.obj" />
+      </geometry>
+    </collision>
+    <inertial>
+      <origin xyz="-0.001236509532 -0.01188758668 -0.01945212111" rpy="0 0 0" />
+      <mass value="0.08" />
+      <inertia ixx="5.239922845210946e-05" iyy="5.693040511918953e-05" izz="6.902616005378485e-05" ixy="0" ixz="0" iyz="0" />
+    </inertial>
+  </link>
+  <joint name="upper_left_spin" type="continuous">
+    <parent link="base_link" />
+    <child link="upper_left" />
+    <origin xyz="-0.03898754343 -0.01247545052 0.2701665759" rpy="0 0 0" />
+    <axis xyz="-0.999998033 -0.00195524469 0.0002852412581" />
+    <limit effort="10" velocity="30" />
+    <dynamics damping=".01" friction=".001" />
+  </joint>
+  <joint name="upper_right_spin" type="continuous">
+    <parent link="base_link" />
+    <child link="upper_right" />
+    <origin xyz="0.03898754343 -0.01232298929 0.2701443136" rpy="0 0 0" />
+    <axis xyz="0.999998033 0.00195524469 -0.0002852412581" />
+    <limit effort="10" velocity="30" />
+    <dynamics damping=".01" friction=".001" />
+    <mimic joint="upper_left_spin" multiplier="-1" offset="0" />
+  </joint>
+  <joint name="lower_left_spin" type="continuous">
+    <parent link="base_link" />
+    <child link="lower_left" />
+    <origin xyz="-0.03898754343 0.05173455924 0.09051004052" rpy="0 0 0" />
+    <axis xyz="-0.9999931455 0.003603374586 0.0008811916923" />
+    <limit effort="10" velocity="30" />
+    <dynamics damping=".01" friction=".001" />
+  </joint>
+  <joint name="lower_right_spin" type="continuous">
+    <parent link="base_link" />
+    <child link="lower_right" />
+    <origin xyz="0.03898754343 0.05145358294 0.09044133127" rpy="0 0 0" />
+    <axis xyz="0.9999931455 -0.003603374586 -0.0008811916923" />
+    <limit effort="10" velocity="30" />
+    <dynamics damping=".01" friction=".001" />
+    <mimic joint="lower_left_spin" multiplier="-1" offset="0" />
+  </joint>
+  <joint name="turret_spin" type="continuous">
+    <parent link="base_link" />
+    <child link="objective_turret" />
+    <origin xyz="0.00108257914 -0.02831383608 0.2360126823" rpy="0 0 0" />
+    <axis xyz="0.0007907000836 0.3653961718 0.9308517575" />
+    <limit effort="10" velocity="30" />
+    <dynamics damping=".01" friction=".001" />
+  </joint>
+</robot>

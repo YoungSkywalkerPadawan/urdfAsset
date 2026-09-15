@@ -1,0 +1,652 @@
+{
+  "frame": "Right-handed world frame, metres; see asset.json for source up-axis",
+  "joints": [
+    {
+      "name": "crank_spin",
+      "type": "continuous",
+      "parent": "link_000",
+      "child": "link_003",
+      "mimic": null,
+      "source_limits": [
+        "-inf",
+        "inf"
+      ],
+      "reference_q": 0.0,
+      "source_type": "continuous",
+      "label_basis": "User authored URDF, cross-checked against authored joints.json; geometry-derived reference",
+      "parent_world": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "joint_origin_transform": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.03151891381
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0001917227637
+        ],
+        [
+          -0.0,
+          0.0,
+          1.0,
+          0.2795834541
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "source_axis": [
+        -0.00021838865925214874,
+        -0.9999990721811219,
+        -0.0013445978167997323
+      ],
+      "parent_name": "base_link",
+      "child_name": "crank",
+      "origin_world": [
+        0.03151891381,
+        0.0001917227637,
+        0.2795834541
+      ],
+      "direction_world": [
+        -0.00021838865925214874,
+        -0.9999990721811219,
+        -0.0013445978167997323
+      ],
+      "origin_near_child_center": [
+        0.03151095652068009,
+        -0.036244610351013375,
+        0.27953446184058584
+      ],
+      "training_role": "continuous_supervision"
+    },
+    {
+      "name": "beater_1_spin",
+      "type": "continuous",
+      "parent": "link_000",
+      "child": "link_001",
+      "mimic": {
+        "joint": "crank_spin",
+        "multiplier": "2",
+        "offset": "0"
+      },
+      "source_limits": [
+        "-inf",
+        "inf"
+      ],
+      "reference_q": 0.0,
+      "source_type": "continuous",
+      "label_basis": "User authored URDF, cross-checked against authored joints.json; geometry-derived reference",
+      "parent_world": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "joint_origin_transform": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          -0.1505888253
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          -4.909671406e-05
+        ],
+        [
+          -0.0,
+          0.0,
+          1.0,
+          0.2050407529
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "source_axis": [
+        0.0011230001543532096,
+        0.011918448684552985,
+        0.9999283421583802
+      ],
+      "parent_name": "base_link",
+      "child_name": "beater_1",
+      "origin_world": [
+        -0.1505888253,
+        -4.909671406e-05,
+        0.2050407529
+      ],
+      "direction_world": [
+        0.0011230001543532098,
+        0.011918448684552989,
+        0.9999283421583804
+      ],
+      "origin_near_child_center": [
+        -0.15070135873456272,
+        -0.0012434188697009326,
+        0.10484008042146997
+      ],
+      "training_role": "continuous_supervision"
+    },
+    {
+      "name": "beater_2_spin",
+      "type": "continuous",
+      "parent": "link_000",
+      "child": "link_002",
+      "mimic": {
+        "joint": "crank_spin",
+        "multiplier": "-2",
+        "offset": "0"
+      },
+      "source_limits": [
+        "-inf",
+        "inf"
+      ],
+      "reference_q": 0.0,
+      "source_type": "continuous",
+      "label_basis": "User authored URDF, cross-checked against authored joints.json; geometry-derived reference",
+      "parent_world": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "joint_origin_transform": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          -0.06559597701
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          -0.0005834288895
+        ],
+        [
+          -0.0,
+          0.0,
+          1.0,
+          0.2050407529
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "source_axis": [
+        0.0019200965859634757,
+        0.0051209596255729125,
+        0.9999850443889717
+      ],
+      "parent_name": "base_link",
+      "child_name": "beater_2",
+      "origin_world": [
+        -0.06559597701,
+        -0.0005834288895,
+        0.2050407529
+      ],
+      "direction_world": [
+        0.001920096585963476,
+        0.005120959625572913,
+        0.9999850443889718
+      ],
+      "origin_near_child_center": [
+        -0.06578849474845436,
+        -0.0010968799174526662,
+        0.10477764080382367
+      ],
+      "training_role": "continuous_supervision"
+    },
+    {
+      "name": "gear_1_spin",
+      "type": "continuous",
+      "parent": "link_000",
+      "child": "link_004",
+      "mimic": {
+        "joint": "crank_spin",
+        "multiplier": "1",
+        "offset": "0"
+      },
+      "source_limits": [
+        "-inf",
+        "inf"
+      ],
+      "reference_q": 0.0,
+      "source_type": "continuous",
+      "label_basis": "User authored URDF, cross-checked against authored joints.json; geometry-derived reference",
+      "parent_world": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "joint_origin_transform": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          -0.09649653733
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.05862218514
+        ],
+        [
+          -0.0,
+          0.0,
+          1.0,
+          0.2983088791
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "source_axis": [
+        0.015185227319798716,
+        0.9998573463335222,
+        -0.0073956645497929045
+      ],
+      "parent_name": "base_link",
+      "child_name": "gear_1",
+      "origin_world": [
+        -0.09649653733,
+        0.05862218514,
+        0.2983088791
+      ],
+      "direction_world": [
+        0.015185227319798716,
+        0.9998573463335222,
+        -0.0073956645497929045
+      ],
+      "origin_near_child_center": [
+        -0.0965617255832832,
+        0.05432992447328834,
+        0.29834062774911246
+      ],
+      "training_role": "continuous_supervision"
+    },
+    {
+      "name": "gear_2_spin",
+      "type": "continuous",
+      "parent": "link_000",
+      "child": "link_005",
+      "mimic": {
+        "joint": "crank_spin",
+        "multiplier": "-1",
+        "offset": "0"
+      },
+      "source_limits": [
+        "-inf",
+        "inf"
+      ],
+      "reference_q": 0.0,
+      "source_type": "continuous",
+      "label_basis": "User authored URDF, cross-checked against authored joints.json; geometry-derived reference",
+      "parent_world": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "joint_origin_transform": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          -0.04841051996
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.05858903006
+        ],
+        [
+          -0.0,
+          0.0,
+          1.0,
+          0.3183192015
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "source_axis": [
+        0.044718924658321016,
+        0.9985604229800824,
+        0.029619240963302332
+      ],
+      "parent_name": "base_link",
+      "child_name": "gear_2",
+      "origin_world": [
+        -0.04841051996,
+        0.05858903006,
+        0.3183192015
+      ],
+      "direction_world": [
+        0.04471892465832102,
+        0.9985604229800825,
+        0.029619240963302335
+      ],
+      "origin_near_child_center": [
+        -0.048765100714502754,
+        0.05067134619568141,
+        0.31808434762350785
+      ],
+      "training_role": "continuous_supervision"
+    },
+    {
+      "name": "gear_3_spin",
+      "type": "continuous",
+      "parent": "link_000",
+      "child": "link_006",
+      "mimic": {
+        "joint": "crank_spin",
+        "multiplier": "1",
+        "offset": "0"
+      },
+      "source_limits": [
+        "-inf",
+        "inf"
+      ],
+      "reference_q": 0.0,
+      "source_type": "continuous",
+      "label_basis": "User authored URDF, cross-checked against authored joints.json; geometry-derived reference",
+      "parent_world": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "joint_origin_transform": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          -0.0478647165
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.05861975625
+        ],
+        [
+          -0.0,
+          0.0,
+          1.0,
+          0.2833510041
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "source_axis": [
+        0.020585467560187327,
+        0.9997623925972179,
+        -0.007169161290898892
+      ],
+      "parent_name": "base_link",
+      "child_name": "gear_3",
+      "origin_world": [
+        -0.0478647165,
+        0.05861975625,
+        0.2833510041
+      ],
+      "direction_world": [
+        0.020585467560187327,
+        0.9997623925972179,
+        -0.007169161290898892
+      ],
+      "origin_near_child_center": [
+        -0.04798769012130737,
+        0.05264736813177339,
+        0.28339383128976875
+      ],
+      "training_role": "continuous_supervision"
+    },
+    {
+      "name": "gear_4_spin",
+      "type": "continuous",
+      "parent": "link_000",
+      "child": "link_007",
+      "mimic": {
+        "joint": "crank_spin",
+        "multiplier": "-1",
+        "offset": "0"
+      },
+      "source_limits": [
+        "-inf",
+        "inf"
+      ],
+      "reference_q": 0.0,
+      "source_type": "continuous",
+      "label_basis": "User authored URDF, cross-checked against authored joints.json; geometry-derived reference",
+      "parent_world": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "joint_origin_transform": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          -0.07423421741
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.05862377957
+        ],
+        [
+          -0.0,
+          0.0,
+          1.0,
+          0.2393141687
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "source_axis": [
+        -0.010777131365921233,
+        0.9999198650427077,
+        -0.00664205785091931
+      ],
+      "parent_name": "base_link",
+      "child_name": "gear_4",
+      "origin_world": [
+        -0.07423421741,
+        0.05862377957,
+        0.2393141687
+      ],
+      "direction_world": [
+        -0.010777131365921233,
+        0.9999198650427077,
+        -0.00664205785091931
+      ],
+      "origin_near_child_center": [
+        -0.07417808085885008,
+        0.053415338590307886,
+        0.2393487662387725
+      ],
+      "training_role": "continuous_supervision"
+    }
+  ]
+}

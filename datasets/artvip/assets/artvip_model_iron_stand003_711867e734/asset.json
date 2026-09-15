@@ -1,0 +1,155 @@
+{
+  "summary": {
+    "id": "artvip_model_iron_stand003_711867e734",
+    "category": "artvip/glassware",
+    "robot_name": "Articulated_objects/lab_items/glassware/iron_stand003/model_iron_stand003.usd",
+    "joint_count": 1,
+    "link_count": 3,
+    "target_link_count": 2,
+    "family": "Articulated_objects/lab_items/glassware/iron_stand003/",
+    "warnings": [],
+    "diagonal": 0.8901428878862434,
+    "dataset": "artvip",
+    "bytes": 1103940,
+    "continuous_joint_count": 1,
+    "training_role": "continuous_supervision"
+  },
+  "source": {
+    "dataset": "X-Humanoid/ArtVIP",
+    "revision": "d22f2095bc9db29fdd4b60f4a3c4f8177e1f5e9e",
+    "license": "Apache-2.0",
+    "url": "https://huggingface.co/datasets/X-Humanoid/ArtVIP",
+    "family": "Articulated_objects/lab_items/glassware/iron_stand003/",
+    "label_status": "Authored reference; not manually verified",
+    "up_axis": "Z",
+    "source_meters_per_unit": 1.0,
+    "meters_per_unit_authored": true,
+    "files": [
+      {
+        "path": "/root/continuous-public-data-20260911/raw/artvip/Articulated_objects/lab_items/glassware/iron_stand003/model_iron_stand003.usd",
+        "sha256": "31d1d8814477083d012a6dad5c6918560c7219e545d164e0c26945124258e26c",
+        "bytes": 58126364
+      },
+      {
+        "path": "/root/continuous-public-data-20260911/raw/artvip/Articulated_objects/lab_items/glassware/iron_stand003/resource/material.usd",
+        "sha256": "1627e77fe36450a8f94e416e8ebbec609e8c2628cd29bd6e3fbd986d867833e3",
+        "bytes": 3757
+      },
+      {
+        "path": "/root/continuous-public-data-20260911/raw/artvip/Articulated_objects/lab_items/glassware/iron_stand003/resource/v_0/link_0.usd",
+        "sha256": "4d3a1fde1333cd7a9a905ada631ab53281883845bb8b31c4e2f9f8a55ee9df7b",
+        "bytes": 713187
+      }
+    ]
+  },
+  "links": [
+    {
+      "id": "link_000",
+      "name": "/root/E_Ironstand_1",
+      "point_file": null,
+      "bounds": [
+        [
+          -0.059471200351667405,
+          -0.10195640318288803,
+          2e-07
+        ],
+        [
+          0.0607288003516674,
+          0.09824360318288804,
+          0.8129002067710877
+        ]
+      ],
+      "faces": 1519,
+      "vertices": 2907,
+      "geometry_sha256": "c023dc569561a9f04087c4a81527e2434df09fd8e7cd8cc3d4b881b1925e502f"
+    },
+    {
+      "id": "link_002",
+      "name": "/root/E_part2_2",
+      "point_file": "inputs/link_002.npz",
+      "bounds": [
+        [
+          -0.0616403,
+          -0.04252930045895577,
+          0.17841149999999997
+        ],
+        [
+          0.24079630045895575,
+          0.03807070045895576,
+          0.4632114930381775
+        ]
+      ],
+      "faces": 15151,
+      "vertices": 27401,
+      "geometry_sha256": "64d3e6fec277e2c767fb10b9150101b7a5f9c548242aafbbe369d80ac5712838"
+    },
+    {
+      "id": "link_001",
+      "name": "/root/E_knob01_18",
+      "point_file": "inputs/link_001.npz",
+      "bounds": [
+        [
+          0.21375509978393317,
+          -0.011213699782443047,
+          0.2259758997854233
+        ],
+        [
+          0.2207551,
+          0.0065862997824430464,
+          0.27177590021457676
+        ]
+      ],
+      "faces": 336,
+      "vertices": 576,
+      "geometry_sha256": "b77ecd36567731a1291e21d280070c3f156b008b43b4c0c682ea56054aca4973"
+    }
+  ],
+  "joints": [
+    {
+      "name": "/root/E_Ironstand_1/FixedJoint",
+      "type": "fixed",
+      "parent": "link_003",
+      "child": "link_000",
+      "reference_q": 0.0,
+      "mimic": null
+    },
+    {
+      "name": "/root/E_part2_2/PrismaticJoint_iron_stand003_UP",
+      "type": "prismatic",
+      "parent": "link_000",
+      "child": "link_002",
+      "reference_q": 0.0,
+      "mimic": null
+    },
+    {
+      "name": "/root/E_knob01_18/RevoluteJoint_iron_stand003_down",
+      "type": "continuous",
+      "parent": "link_002",
+      "child": "link_001",
+      "reference_q": 0.0,
+      "mimic": null
+    }
+  ],
+  "bounds": [
+    [
+      -0.0616403,
+      -0.10195640318288803,
+      2e-07
+    ],
+    [
+      0.24079630045895575,
+      0.09824360318288804,
+      0.8129002067710877
+    ]
+  ],
+  "point_pool_size": 8192,
+  "reference_pose": "Authored default pose",
+  "qc": {
+    "finite_geometry": true,
+    "axis_unit": true,
+    "physical_collision_validation": false,
+    "manual_review": false,
+    "omitted_texture_images": true,
+    "warnings": []
+  }
+}

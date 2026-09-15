@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='utf-8'?>
+<robot name="0018-gs1-lever-citrus-press-stylized-001">
+  <link name="base_link">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/base_link.obj" />
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/base_link.obj" />
+      </geometry>
+    </collision>
+    <inertial>
+      <origin xyz="-0.09750851989 4.5388937e-05 0.1896568835" rpy="0 0 0" />
+      <mass value="2" />
+      <inertia ixx="0.029287888596701468" iyy="0.0322997772708374" izz="0.013628021266672027" ixy="0" ixz="0" iyz="0" />
+    </inertial>
+  </link>
+  <link name="lever">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/lever.obj" />
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/lever.obj" />
+      </geometry>
+    </collision>
+    <inertial>
+      <origin xyz="0.1845002174 -0.001116897911 -0.04308906198" rpy="0 0 0" />
+      <mass value="0.3" />
+      <inertia ixx="0.00044949695383111887" iyy="0.004589811835066104" izz="0.0042804584795227635" ixy="0" ixz="0" iyz="0" />
+    </inertial>
+  </link>
+  <joint name="lever_lift" type="revolute">
+    <parent link="base_link" />
+    <child link="lever" />
+    <origin xyz="-0.1797014028 0.001212253235 0.4014915526" rpy="0 0 0" />
+    <axis xyz="0.001518120291 -0.9999987483 0.0004690883507" />
+    <limit effort="10" velocity="30" lower="0" upper="0.45" />
+    <dynamics damping=".01" friction=".001" />
+  </joint>
+</robot>

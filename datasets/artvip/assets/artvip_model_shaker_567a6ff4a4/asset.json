@@ -1,0 +1,183 @@
+{
+  "summary": {
+    "id": "artvip_model_shaker_567a6ff4a4",
+    "category": "artvip/small_instrument",
+    "robot_name": "Articulated_objects/lab_items/small_instrument/shaker/model_shaker.usd",
+    "joint_count": 1,
+    "link_count": 4,
+    "target_link_count": 2,
+    "family": "Articulated_objects/lab_items/small_instrument/shaker/",
+    "warnings": [],
+    "diagonal": 0.619128719353082,
+    "dataset": "artvip",
+    "bytes": 1602963,
+    "continuous_joint_count": 1,
+    "training_role": "continuous_supervision"
+  },
+  "source": {
+    "dataset": "X-Humanoid/ArtVIP",
+    "revision": "d22f2095bc9db29fdd4b60f4a3c4f8177e1f5e9e",
+    "license": "Apache-2.0",
+    "url": "https://huggingface.co/datasets/X-Humanoid/ArtVIP",
+    "family": "Articulated_objects/lab_items/small_instrument/shaker/",
+    "label_status": "Authored reference; not manually verified",
+    "up_axis": "Z",
+    "source_meters_per_unit": 1.0,
+    "meters_per_unit_authored": true,
+    "files": [
+      {
+        "path": "/root/continuous-public-data-20260911/raw/artvip/Articulated_objects/lab_items/small_instrument/shaker/model_shaker.usd",
+        "sha256": "1b3affabaf10c38951969ea8c9f82ffe9d50e9564d178063f9762caab2ee11d0",
+        "bytes": 60914
+      },
+      {
+        "path": "/root/continuous-public-data-20260911/raw/artvip/Articulated_objects/lab_items/small_instrument/shaker/resource/material.usd",
+        "sha256": "bb30d5a08f86e55442f1a8ccd572b335a55ac4e9ec0a1a70e9785db2e9ec73e2",
+        "bytes": 2136
+      },
+      {
+        "path": "/root/continuous-public-data-20260911/raw/artvip/Articulated_objects/lab_items/small_instrument/shaker/resource/v_69323/link_0.usd",
+        "sha256": "1c66269a464dd053ef25a6f6ac90941a492b8b0901e406f481baf608e92e09a1",
+        "bytes": 1683191
+      }
+    ]
+  },
+  "links": [
+    {
+      "id": "link_000",
+      "name": "/root/E_body_24380",
+      "point_file": "inputs/link_000.npz",
+      "bounds": [
+        [
+          -0.20407842846766036,
+          -0.2215737594532013,
+          3.9319998904829845e-05
+        ],
+        [
+          0.20354423682833256,
+          0.22231810591769746,
+          0.07608720660209656
+        ]
+      ],
+      "faces": 1046,
+      "vertices": 1726,
+      "geometry_sha256": "93bbefba789984e6d9bebcadfbdc6272df79784a6081c363d5d9c4fdf85d228e"
+    },
+    {
+      "id": "link_003",
+      "name": "/root/E_part_31305",
+      "point_file": null,
+      "bounds": [
+        [
+          -0.17586293816566467,
+          -0.13800779419212342,
+          0.075515
+        ],
+        [
+          0.17586293816566467,
+          0.19559399349422454,
+          0.1418989186248779
+        ]
+      ],
+      "faces": 16948,
+      "vertices": 50500,
+      "geometry_sha256": "a4534f1c0d7c3da5ed66373ed347ee5439abc8864af78a83466b48dd5b68ee12"
+    },
+    {
+      "id": "link_002",
+      "name": "/root/E_knob_31306",
+      "point_file": null,
+      "bounds": [
+        [
+          0.036027337002778055,
+          -0.2199371658412401,
+          0.03757004071755649
+        ],
+        [
+          0.07070671072902679,
+          -0.18382754069815208,
+          0.06062583925259471
+        ]
+      ],
+      "faces": 100,
+      "vertices": 300,
+      "geometry_sha256": "74804d8ae49b506875e3c03038fdc52a05ebe6b1936f6d3c9020f48cf953cc88"
+    },
+    {
+      "id": "link_001",
+      "name": "/root/E_knob1_31307",
+      "point_file": "inputs/link_001.npz",
+      "bounds": [
+        [
+          0.09246837798097134,
+          -0.21988312030911777,
+          0.037442959872172873
+        ],
+        [
+          0.1271477517072201,
+          -0.18378702415385975,
+          0.06049875926951313
+        ]
+      ],
+      "faces": 100,
+      "vertices": 300,
+      "geometry_sha256": "d49deffb21feaef96ed6ae3444d0d5bff96267aed0522b7d429b8e50bf89a9c8"
+    }
+  ],
+  "joints": [
+    {
+      "name": "/root/E_body_24380/FixedJoint",
+      "type": "fixed",
+      "parent": "link_004",
+      "child": "link_000",
+      "reference_q": 0.0,
+      "mimic": null
+    },
+    {
+      "name": "/root/E_part_31305/RevoluteJoint_shaker_up",
+      "type": "revolute",
+      "parent": "link_000",
+      "child": "link_003",
+      "reference_q": 0.0,
+      "mimic": null
+    },
+    {
+      "name": "/root/E_knob_31306/RevoluteJoint_shaker_left",
+      "type": "revolute",
+      "parent": "link_000",
+      "child": "link_002",
+      "reference_q": 0.0,
+      "mimic": null
+    },
+    {
+      "name": "/root/E_knob1_31307/RevoluteJoint_shaker_right",
+      "type": "continuous",
+      "parent": "link_000",
+      "child": "link_001",
+      "reference_q": 0.0,
+      "mimic": null
+    }
+  ],
+  "bounds": [
+    [
+      -0.20407842846766036,
+      -0.2215737594532013,
+      3.9319998904829845e-05
+    ],
+    [
+      0.20354423682833256,
+      0.22231810591769746,
+      0.1418989186248779
+    ]
+  ],
+  "point_pool_size": 8192,
+  "reference_pose": "Authored default pose",
+  "qc": {
+    "finite_geometry": true,
+    "axis_unit": true,
+    "physical_collision_validation": false,
+    "manual_review": false,
+    "omitted_texture_images": true,
+    "warnings": []
+  }
+}

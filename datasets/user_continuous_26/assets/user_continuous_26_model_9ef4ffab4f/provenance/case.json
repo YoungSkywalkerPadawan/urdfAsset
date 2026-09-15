@@ -1,0 +1,75 @@
+{
+  "id": "0023-perpetual-motion-machine-ce4fab940bc5",
+  "title": "Kinetic orbital ornament",
+  "source": "0023-perpetual-motion-machine-ce4fab940bc5.glb",
+  "nominal_height_m": 0.3,
+  "duration_s": 10,
+  "max_rpm": 10,
+  "camera_direction": [
+    3,
+    -4,
+    1.4
+  ],
+  "motion_label": "Inner orbit rotor spins around the measured central support axis",
+  "links": [
+    {
+      "name": "base_link",
+      "mass": 0.7
+    },
+    {
+      "name": "inner_orbit_rotor",
+      "parent": "base_link",
+      "joint_name": "orbit_spin",
+      "type": "continuous",
+      "origin": [
+        0.0008437851382423804,
+        -0.0012198057506627134,
+        0.04999999999999999
+      ],
+      "axis": [
+        0.0020709973783791967,
+        -0.0031083019438280907,
+        0.999993024690115
+      ],
+      "mass": 0.15,
+      "mesh_scale": 0.9,
+      "cap_color": [
+        0.63,
+        0.63,
+        0.61,
+        1
+      ],
+      "cap_metallic": 0.85,
+      "cap_roughness": 0.18,
+      "cap_max_sides": 12,
+      "surface_cutouts": [
+        {
+          "origin": [
+            0.0008437851382423804,
+            -0.0012198057506627134,
+            0.04999999999999999
+          ],
+          "axis": [
+            0.0020709973783791967,
+            -0.0031083019438280907,
+            0.999993024690115
+          ],
+          "inner_radius": 0,
+          "outer_radius": 0.028,
+          "depth": 0.82
+        }
+      ]
+    }
+  ],
+  "face_owner_names": [
+    "base_link",
+    "inner_orbit_rotor"
+  ],
+  "inferences": [
+    "The central ball, inner curved rods, dark orbit balls and the middle YZ ring form one rigid rotor. The largest outer rings, upright rod, outer bearing decorations and base remain fixed.",
+    "The lower central cylindrical collar supplies the axis. The static source does not establish a complete working gimbal or energy mechanism; the single inner-rotor degree of freedom is an explicitly inferred kinematic design. This animation does not model a perpetual-energy device.",
+    "The generated outer arcs have pre-existing gaps and irregularities. They are preserved rather than invented into a complete mechanism; the original GLB remains unchanged.",
+    "The rotor is scaled to 90% and bored around the fixed upright with radius 0.028 native units. This repairs the original overlapping concentric surfaces. Small cut boundaries are capped where possible; true ring openings remain open.",
+    "Nominal 0.3 m height, masses and inertias are estimates; initial positive direction and speed are demonstration choices."
+  ]
+}

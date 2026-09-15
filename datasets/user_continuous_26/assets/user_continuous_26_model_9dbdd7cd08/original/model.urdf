@@ -1,0 +1,73 @@
+<?xml version='1.0' encoding='utf-8'?>
+<robot name="0006-casual_windmill_g1_bom">
+  <link name="base_link">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/base_link.obj" />
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/base_link.obj" />
+      </geometry>
+    </collision>
+    <inertial>
+      <origin xyz="0.001954883337 -0.005652047694 0.1150348186" rpy="0 0 0" />
+      <mass value="0.5" />
+      <inertia ixx="0.005149715834383913" iyy="0.002961855966030343" izz="0.0037005686331890906" ixy="0" ixz="0" iyz="0" />
+    </inertial>
+  </link>
+  <link name="motor_housing">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/motor_housing.obj" />
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/motor_housing.obj" />
+      </geometry>
+    </collision>
+    <inertial>
+      <origin xyz="-1.464597881e-05 0.09155805409 0.000299833715" rpy="0 0 0" />
+      <mass value="0.2" />
+      <inertia ixx="0.0006318710133580244" iyy="0.0001268563275548066" izz="0.0006302294084536975" ixy="0" ixz="0" iyz="0" />
+    </inertial>
+  </link>
+  <link name="rotor">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/rotor.obj" />
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/rotor.obj" />
+      </geometry>
+    </collision>
+    <inertial>
+      <origin xyz="0.0009827539325 -0.04251949489 0.0009969174862" rpy="0 0 0" />
+      <mass value="0.08" />
+      <inertia ixx="0.000605447820098474" iyy="0.0011153776279741183" izz="0.0005915277496489102" ixy="0" ixz="0" iyz="0" />
+    </inertial>
+  </link>
+  <joint name="motor_housing_fixed" type="fixed">
+    <parent link="base_link" />
+    <child link="motor_housing" />
+    <origin xyz="-0.001168676768 -0.05778006092 0.2534620464" rpy="0 0 0" />
+  </joint>
+  <joint name="rotor_spin" type="continuous">
+    <parent link="motor_housing" />
+    <child link="rotor" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <axis xyz="0.002546220319 -0.9999608397 -0.00847517699" />
+    <limit effort="10" velocity="30" />
+    <dynamics damping=".01" friction=".001" />
+  </joint>
+</robot>

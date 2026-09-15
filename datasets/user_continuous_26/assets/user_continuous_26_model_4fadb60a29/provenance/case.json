@@ -1,0 +1,116 @@
+{
+  "id": "0011-exaggerated-slicer",
+  "title": "Stylized slicer wheel",
+  "source": "0011-exaggerated-slicer.glb",
+  "nominal_height_m": 0.5,
+  "duration_s": 10,
+  "max_rpm": 15,
+  "camera_direction": [
+    1.8,
+    -4,
+    1.2
+  ],
+  "motion_label": "Lower circular wheel rotates inside its fixed support",
+  "links": [
+    {
+      "name": "base_link",
+      "mass": 2,
+      "cap_color": [
+        0.5,
+        0.51,
+        0.52,
+        1
+      ],
+      "cap_metallic": 0.6,
+      "cap_max_sides": 12,
+      "radial_clearances": [
+        {
+          "origin": [
+            0.012028966665847459,
+            0.009661551460267244,
+            -0.22081314525840895
+          ],
+          "axis": [
+            0.019338383015891407,
+            -0.9984515882700176,
+            0.05215796030722578
+          ],
+          "radius": 0.089,
+          "axial_min": -0.044,
+          "axial_max": 0.044,
+          "radial_min": 0.025
+        }
+      ]
+    },
+    {
+      "name": "wheel",
+      "parent": "base_link",
+      "joint_name": "wheel_spin",
+      "type": "continuous",
+      "origin": [
+        0.012028966665847459,
+        0.009661551460267244,
+        -0.22081314525840895
+      ],
+      "axis": [
+        0.019338383015891407,
+        -0.9984515882700176,
+        0.05215796030722578
+      ],
+      "mass": 0.15,
+      "mesh_scale": 0.94,
+      "axial_scale": 0.85,
+      "cap_color": [
+        0.5,
+        0.51,
+        0.52,
+        1
+      ],
+      "cap_metallic": 0.65,
+      "radial_limits": [
+        {
+          "origin": [
+            0.012028966665847459,
+            0.009661551460267244,
+            -0.22081314525840895
+          ],
+          "axis": [
+            0.019338383015891407,
+            -0.9984515882700176,
+            0.05215796030722578
+          ],
+          "radius": 0.087
+        }
+      ],
+      "clearance_recesses": [
+        {
+          "origin": [
+            0.012028966665847459,
+            0.009661551460267244,
+            -0.22081314525840895
+          ],
+          "axis": [
+            -0.019338383015891407,
+            0.9984515882700176,
+            -0.05215796030722578
+          ],
+          "radius": 0.095,
+          "outer_radius": 0.11,
+          "back_plane": 0.039
+        }
+      ]
+    }
+  ],
+  "face_owner_names": [
+    "base_link",
+    "wheel"
+  ],
+  "inferences": [
+    "This generated model has a stylized and ambiguous cutting mechanism. The lower circular wheel is treated as the continuous rotary member; upper curved plate, upright, fork and base remain fixed. This is an inferred kinematic interpretation, not a verified real slicer mechanism.",
+    "Axis is determined from the two wheel-face normals and its rim center. The short-cylinder-only fit was unstable and is recorded as a rejected candidate.",
+    "The wheel is reduced to 94% about its axle and compressed a further 15% axially to recover clearance in the fused source geometry. Segmentation boundaries are capped.",
+    "Positive spin direction points toward the visible front wheel face; the actual powered direction and transmission are unknown.",
+    "Nominal 0.5 m height, mass and inertia are estimates; original stylized surface and texture defects remain.",
+    "Stray rotor vertices beyond radius 0.087 source units are brought back to that radial envelope. The wheel rear face is limited to axial -0.039 before scaling. A local 0.089-radius pocket in the fixed support/base clears the wheel sweep within axial +/-0.044, while excluding the central bearing region below radius 0.025. These are explicit clearance repairs of the fused generated mesh."
+  ]
+}

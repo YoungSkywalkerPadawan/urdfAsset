@@ -1,0 +1,218 @@
+{
+  "id": "0024-rotating-cutting-table",
+  "title": "Rotating cutting table",
+  "source": "0024-rotating-cutting-table.glb",
+  "nominal_height_m": 0.6,
+  "duration_s": 10,
+  "max_rpm": 9,
+  "camera_direction": [
+    3,
+    -4,
+    1.8
+  ],
+  "motion_label": "Table platter and cutting roller rotate on separate measured axes",
+  "links": [
+    {
+      "name": "base_link",
+      "mass": 8,
+      "clearance_recesses": [
+        {
+          "origin": [
+            0.00011742903143387656,
+            -0.0002666597406150195,
+            -0.256
+          ],
+          "axis": [
+            -0.002140089564977412,
+            -0.00022269529144461168,
+            0.9999976852090514
+          ],
+          "radius": 0.45,
+          "outer_radius": 0.47,
+          "back_plane": -0.003,
+          "front_bound": 0.012
+        }
+      ],
+      "surface_cutouts": [
+        {
+          "origin": [
+            -0.028319983880943336,
+            0.13809214485960225,
+            -0.10299527187624287
+          ],
+          "axis": [
+            0.9999507176680161,
+            0.006297699762210794,
+            -0.0076747125630010566
+          ],
+          "inner_radius": 0.008,
+          "outer_radius": 0.064,
+          "depth": 0.025
+        },
+        {
+          "origin": [
+            0.025677354873129537,
+            0.13843222064676164,
+            -0.10340970635464493
+          ],
+          "axis": [
+            0.9999507176680161,
+            0.006297699762210794,
+            -0.0076747125630010566
+          ],
+          "inner_radius": 0.008,
+          "outer_radius": 0.064,
+          "depth": 0.025
+        }
+      ],
+      "extra_cap_mesh": "analysis/inferred_axle_support.npz",
+      "cap_color": [
+        0.5,
+        0.54,
+        0.58,
+        1
+      ],
+      "cap_metallic": 0.65,
+      "cap_roughness": 0.23,
+      "cap_max_sides": 12
+    },
+    {
+      "name": "turntable",
+      "parent": "base_link",
+      "joint_name": "table_spin",
+      "type": "continuous",
+      "origin": [
+        0.00011742903143387656,
+        -0.0002666597406150195,
+        -0.256
+      ],
+      "axis": [
+        -0.002140089564977412,
+        -0.00022269529144461168,
+        0.9999976852090514
+      ],
+      "mass": 2,
+      "mesh_shift_native": [
+        -4.280179129954824e-06,
+        -4.453905828892234e-07,
+        0.001999995370418103
+      ],
+      "clearance_recesses": [
+        {
+          "origin": [
+            0.00011742903143387656,
+            -0.0002666597406150195,
+            -0.256
+          ],
+          "axis": [
+            0.002140089564977412,
+            0.00022269529144461168,
+            -0.9999976852090514
+          ],
+          "radius": 0.45,
+          "outer_radius": 0.47,
+          "back_plane": -0.001
+        }
+      ],
+      "cap_color": [
+        0.47,
+        0.53,
+        0.59,
+        1
+      ],
+      "cap_metallic": 0.65,
+      "cap_roughness": 0.27,
+      "cap_max_sides": 12
+    },
+    {
+      "name": "cutting_roller",
+      "parent": "base_link",
+      "joint_name": "roller_spin",
+      "type": "continuous",
+      "origin": [
+        -0.0013213145039069002,
+        0.13826218275318194,
+        -0.1032024891154439
+      ],
+      "axis": [
+        0.9999507176680161,
+        0.006297699762210794,
+        -0.0076747125630010566
+      ],
+      "mass": 0.15,
+      "motion_multiplier": 2,
+      "mesh_scale": 0.95,
+      "cap_color": [
+        0.54,
+        0.58,
+        0.62,
+        1
+      ],
+      "cap_metallic": 0.65,
+      "cap_roughness": 0.22,
+      "cap_max_sides": 12,
+      "surface_cutouts": [
+        {
+          "origin": [
+            -0.0013213145039069002,
+            0.13826218275318194,
+            -0.1032024891154439
+          ],
+          "axis": [
+            0.9999507176680161,
+            0.006297699762210794,
+            -0.0076747125630010566
+          ],
+          "inner_radius": 0,
+          "outer_radius": 0.01,
+          "depth": 0.14
+        },
+        {
+          "origin": [
+            -0.0013213145039069002,
+            0.13826218275318194,
+            -0.1032024891154439
+          ],
+          "axis": [
+            0.9999507176680161,
+            0.006297699762210794,
+            -0.0076747125630010566
+          ],
+          "inner_radius": 0,
+          "outer_radius": 0.07,
+          "depth": 0.032
+        }
+      ],
+      "radial_limits": [
+        {
+          "origin": [
+            -0.0013213145039069002,
+            0.13826218275318194,
+            -0.1032024891154439
+          ],
+          "axis": [
+            0.9999507176680161,
+            0.006297699762210794,
+            -0.0076747125630010566
+          ],
+          "radius": 0.0565
+        }
+      ]
+    }
+  ],
+  "face_owner_names": [
+    "base_link",
+    "turntable",
+    "cutting_roller"
+  ],
+  "inferences": [
+    "The circular top platter including its radial lattice and outer rim forms one continuous rotor. The lower cylindrical pedestal remains fixed.",
+    "The small upper cutting roller has its own continuous axle; the upper frame, wide blade-like plate and vertical handle remain fixed. The static GLB does not establish additional feed or linkage motions.",
+    "The table axis uses the measured plane of the complete thin outer rim and its robust circle center; a short-cylinder candidate that tilted the platter was rejected. The roller axis follows its cylindrical tread. Positive directions and multiplier 2 are visualization settings, not recovered transmission ratios.",
+    "A small horizontal seam separates the fused platter from its pedestal. The roller is scaled to 95%, with an annular fork clearance and a central shaft bore. These are explicit geometric repairs; original UVs are preserved.",
+    "The source contains malformed lattice spokes and an incomplete upper support arrangement. This is a visual and kinematic articulation, without a fabricated hidden support mechanism or material-cutting simulation.",
+    "Nominal 0.6 m height, mass and inertia are estimates. The source GLB remains unchanged.",
+    "The roller radius is limited to 0.0565 native units before 95% scaling to remove long fused triangles extending into the upper fork.",
+    "The center fork is retained in the gap between the paired roller faces. A 0.0065-radius fixed axle pin and short center support are added as an explicitly inferred connection; they are not recovered source triangles. The roller center gap is 0.032 native units wide."
+  ]
+}

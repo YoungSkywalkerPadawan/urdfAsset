@@ -1,0 +1,102 @@
+{
+  "id": "0012-folding-scooter-001",
+  "title": "Folding scooter wheels",
+  "source": "0012-folding-scooter-001.glb",
+  "nominal_height_m": 0.9,
+  "duration_s": 10,
+  "max_rpm": 12,
+  "camera_direction": [
+    2.7,
+    -4,
+    1.2
+  ],
+  "motion_label": "Front and rear wheels spin; deck and forks remain fixed",
+  "links": [
+    {
+      "name": "base_link",
+      "mass": 3
+    },
+    {
+      "name": "front_wheel",
+      "parent": "base_link",
+      "joint_name": "front_wheel_spin",
+      "type": "continuous",
+      "origin": [
+        -0.0004001882965916446,
+        -0.3793930122014904,
+        -0.39615287362361
+      ],
+      "axis": [
+        0.9999470313236016,
+        0.006575294035732969,
+        0.007918336659931925
+      ],
+      "mass": 0.2,
+      "mesh_scale": 0.96,
+      "axial_scale": 0.85,
+      "cap_color": [
+        0.008,
+        0.009,
+        0.011,
+        1
+      ],
+      "cap_max_sides": 12,
+      "radial_limits": [
+        {
+          "origin": [
+            -0.0004001882965916446,
+            -0.3793930122014904,
+            -0.39615287362361
+          ],
+          "axis": [
+            0.9999470313236016,
+            0.006575294035732969,
+            0.007918336659931925
+          ],
+          "radius": 0.106
+        }
+      ]
+    },
+    {
+      "name": "rear_wheel",
+      "parent": "base_link",
+      "joint_name": "rear_wheel_spin",
+      "type": "continuous",
+      "origin": [
+        0.00037220184763748446,
+        0.3652735074569075,
+        -0.39747385987359535
+      ],
+      "axis": [
+        0.9999384240624685,
+        -0.006886913124139114,
+        0.008701638413974774
+      ],
+      "mass": 0.2,
+      "mesh_scale": 0.96,
+      "axial_scale": 0.85,
+      "cap_color": [
+        0.008,
+        0.009,
+        0.011,
+        1
+      ],
+      "cap_max_sides": 12,
+      "motion_multiplier": 1.0643553179924417
+    }
+  ],
+  "face_owner_names": [
+    "base_link",
+    "front_wheel",
+    "rear_wheel"
+  ],
+  "inferences": [
+    "This continuous-motion case articulates the two wheels. Steering, folding latch, brake and telescoping handle remain fixed; their other degrees of freedom are not demonstrated.",
+    "Each axle follows the measured thin wheel plane; outer tire bands determine centers and nominal radii. Positive axes point toward the same side of the scooter.",
+    "The rear wheel speed is scaled by the fitted radius ratio to match the front wheel peripheral speed. This is an in-place wheel-drive preview without vehicle translation or contact dynamics.",
+    "Wheels are reduced by 4% and compressed a further 15% along their axles to recover fork clearance. Small segmentation holes of at most 12 edges are capped; spoke openings remain. Tires, hubs and disconnected spokes are grouped despite belonging to separate source components.",
+    "Nominal 0.9 m height, masses and inertias are estimates. The source GLB remains unchanged and original materials/UVs are retained.",
+    "A small number of front-wheel vertices extending beyond radius 0.106 source units are clamped to that envelope before scaling to clear the fixed fender. This is a geometric repair, not a recovered tire dimension.",
+    "Disconnected thin front-edge fragments outside the wheel hub are omitted from the derived mesh; their count is recorded in the axis report. The main tire, spokes and fender are retained. This cleanup avoids thin detached sheets rotating around the tire."
+  ]
+}

@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='utf-8'?>
+<robot name="0010-escape_vault_handle_g1_bom">
+  <link name="base_link">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/base_link.obj" />
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/base_link.obj" />
+      </geometry>
+    </collision>
+    <inertial>
+      <origin xyz="-1.525133848e-05 0.0149205327 0.2499999851" rpy="0 0 0" />
+      <mass value="3" />
+      <inertia ixx="0.08056141268420669" iyy="0.11745348417458978" izz="0.07301491175995722" ixy="0" ixz="0" iyz="0" />
+    </inertial>
+  </link>
+  <link name="handwheel">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/handwheel.obj" />
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/handwheel.obj" />
+      </geometry>
+    </collision>
+    <inertial>
+      <origin xyz="-0.001171015203 -0.03343882039 0.007553964853" rpy="0 0 0" />
+      <mass value="0.5" />
+      <inertia ixx="0.007414388492943479" iyy="0.014051081579429395" izz="0.006776823779999888" ixy="0" ixz="0" iyz="0" />
+    </inertial>
+  </link>
+  <joint name="handwheel_spin" type="continuous">
+    <parent link="base_link" />
+    <child link="handwheel" />
+    <origin xyz="-0.003841632046 -0.09961166978 0.2493929863" rpy="0 0 0" />
+    <axis xyz="-0.02188723348 -0.9997584224 -0.00200295588" />
+    <limit effort="10" velocity="30" />
+    <dynamics damping=".01" friction=".001" />
+  </joint>
+</robot>

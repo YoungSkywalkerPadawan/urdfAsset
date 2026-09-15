@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='utf-8'?>
+<robot name="0003-casual_capsule_machine_g1_bom">
+  <link name="base_link">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/base_link.obj" />
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/base_link.obj" />
+      </geometry>
+    </collision>
+    <inertial>
+      <origin xyz="-8.811801672e-05 0.004842698574 0.2249999791" rpy="0 0 0" />
+      <mass value="2" />
+      <inertia ixx="0.054880371509530367" iyy="0.054705164365140536" izz="0.04208554839164572" ixy="0" ixz="0" iyz="0" />
+    </inertial>
+  </link>
+  <link name="knob">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/knob.obj" />
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/knob.obj" />
+      </geometry>
+    </collision>
+    <inertial>
+      <origin xyz="0.0005403999239 -0.004354303703 0.001017671078" rpy="0 0 0" />
+      <mass value="0.1" />
+      <inertia ixx="7.728641542113281e-05" iyy="0.00011684421018087986" izz="7.399265777046557e-05" ixy="0" ixz="0" iyz="0" />
+    </inertial>
+  </link>
+  <joint name="knob_spin" type="continuous">
+    <parent link="base_link" />
+    <child link="knob" />
+    <origin xyz="-0.0001559923985 -0.1575572342 0.09541501105" rpy="0 0 0" />
+    <axis xyz="0.00925122574 -0.9996224642 0.02587156929" />
+    <limit effort="10" velocity="30" />
+    <dynamics damping=".01" friction=".001" />
+  </joint>
+</robot>

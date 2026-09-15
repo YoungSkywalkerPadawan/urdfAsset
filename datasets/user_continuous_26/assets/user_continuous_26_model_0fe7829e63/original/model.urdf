@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='utf-8'?>
+<robot name="0016-gs1-adjustable-wrench-stylized-001">
+  <link name="base_link">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/base_link.obj" />
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/base_link.obj" />
+      </geometry>
+    </collision>
+    <inertial>
+      <origin xyz="-1.650303602e-05 -0.0007622055709 0.01675000042" rpy="0 0 0" />
+      <mass value="0.4" />
+      <inertia ixx="0.0004841229972648872" iyy="0.0034633021322409458" izz="0.003872608459111889" ixy="0" ixz="0" iyz="0" />
+    </inertial>
+  </link>
+  <link name="adjustment_worm">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/adjustment_worm.obj" />
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/adjustment_worm.obj" />
+      </geometry>
+    </collision>
+    <inertial>
+      <origin xyz="1.642713323e-05 0.0003233458847 -1.767417416e-05" rpy="0 0 0" />
+      <mass value="0.025" />
+      <inertia ixx="3.6459268315379728e-06" iyy="3.235546549052154e-06" izz="3.66293475844622e-06" ixy="0" ixz="0" iyz="0" />
+    </inertial>
+  </link>
+  <joint name="worm_spin" type="continuous">
+    <parent link="base_link" />
+    <child link="adjustment_worm" />
+    <origin xyz="-0.06498683244 -0.005970334169 0.01641092449" rpy="0 0 0" />
+    <axis xyz="-0.0182447359 0.9996656179 0.01832401007" />
+    <limit effort="10" velocity="30" />
+    <dynamics damping=".01" friction=".001" />
+  </joint>
+</robot>

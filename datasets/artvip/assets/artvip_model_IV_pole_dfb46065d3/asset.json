@@ -1,0 +1,175 @@
+{
+  "summary": {
+    "id": "artvip_model_IV_pole_dfb46065d3",
+    "category": "artvip/Medical_equipment",
+    "robot_name": "Articulated_objects/Medical_equipment/IV_pole/model_IV_pole.usd",
+    "joint_count": 1,
+    "link_count": 4,
+    "target_link_count": 2,
+    "family": "Articulated_objects/Medical_equipment/IV_pole/",
+    "warnings": [],
+    "diagonal": 2.910275359419876,
+    "dataset": "artvip",
+    "bytes": 4546248,
+    "continuous_joint_count": 1,
+    "training_role": "continuous_supervision"
+  },
+  "source": {
+    "dataset": "X-Humanoid/ArtVIP",
+    "revision": "d22f2095bc9db29fdd4b60f4a3c4f8177e1f5e9e",
+    "license": "Apache-2.0",
+    "url": "https://huggingface.co/datasets/X-Humanoid/ArtVIP",
+    "family": "Articulated_objects/Medical_equipment/IV_pole/",
+    "label_status": "Authored reference; not manually verified",
+    "up_axis": "Z",
+    "source_meters_per_unit": 1.0,
+    "meters_per_unit_authored": true,
+    "files": [
+      {
+        "path": "/root/continuous-public-data-20260911/raw/artvip/Articulated_objects/Medical_equipment/IV_pole/model_IV_pole.usd",
+        "sha256": "dc0ecdf7df456d9529d1e3b89762ad1112f38e2144c21d266f28a2964c3e958e",
+        "bytes": 20301
+      },
+      {
+        "path": "/root/continuous-public-data-20260911/raw/artvip/Articulated_objects/Medical_equipment/IV_pole/resource/material.usd",
+        "sha256": "fd81a457d134b3d3c31711d63127cf94e06391f96ab3a794d98ee43776602d28",
+        "bytes": 4125
+      },
+      {
+        "path": "/root/continuous-public-data-20260911/raw/artvip/Articulated_objects/Medical_equipment/IV_pole/resource/v_0/link_0.usd",
+        "sha256": "1d23d9810ce7044253361cc4ef6804de1a25181a5f36bb84c2ee6bdfa181152c",
+        "bytes": 4727180
+      }
+    ]
+  },
+  "links": [
+    {
+      "id": "link_003",
+      "name": "__context__",
+      "point_file": null,
+      "bounds": [
+        [
+          -0.14248177843359647,
+          -1.2374000001847745,
+          -1.1471169929189682
+        ],
+        [
+          0.13603773296286997,
+          -1.0573328475567254,
+          -0.8989138977350235
+        ]
+      ],
+      "faces": 40421,
+      "vertices": 120609,
+      "geometry_sha256": "95907f7ed3618c976badddf76a732a8e3699982182162609fe992e2ba6d07add"
+    },
+    {
+      "id": "link_000",
+      "name": "/root/E_body_4",
+      "point_file": null,
+      "bounds": [
+        [
+          -0.02732569985098839,
+          -1.3849910769210816,
+          -0.030515699833106993
+        ],
+        [
+          0.0269742991774559,
+          1.2750088897003173,
+          0.0002843
+        ]
+      ],
+      "faces": 123,
+      "vertices": 369,
+      "geometry_sha256": "6fafe5deb7abc8e0f75f0ae24e8a72a4a2a7a222eaaf687cecac9b2864902d74"
+    },
+    {
+      "id": "link_001",
+      "name": "/root/E_knob_8",
+      "point_file": "inputs/link_001.npz",
+      "bounds": [
+        [
+          -0.011703999682605267,
+          -1.0904999999441207,
+          -0.7973287000163912
+        ],
+        [
+          0.011695999682605266,
+          -1.0841000001057983,
+          -0.7721286999836087
+        ]
+      ],
+      "faces": 4800,
+      "vertices": 13672,
+      "geometry_sha256": "b18773f5e2598ed1d46d7aad49344c359b1c413f0c4de760fbcd373334ffb45f"
+    },
+    {
+      "id": "link_002",
+      "name": "/root/E_leg_9",
+      "point_file": "inputs/link_002.npz",
+      "bounds": [
+        [
+          -0.10985977492801682,
+          -1.2192000973986952,
+          -0.911015207941697
+        ],
+        [
+          0.1095404222278214,
+          -0.9997999001568522,
+          -0.004714718399982157
+        ]
+      ],
+      "faces": 4272,
+      "vertices": 12790,
+      "geometry_sha256": "271dc6052e29f09cea8dec8f353ada6f29f95851b7204691da6dfdfa6855165e"
+    }
+  ],
+  "joints": [
+    {
+      "name": "/root/E_body_4/FixedJoint",
+      "type": "fixed",
+      "parent": "link_004",
+      "child": "link_000",
+      "reference_q": 0.0,
+      "mimic": null
+    },
+    {
+      "name": "/root/E_knob_8/RevoluteJoint_IV_pole_down",
+      "type": "continuous",
+      "parent": "link_002",
+      "child": "link_001",
+      "reference_q": -2.975419062010022e-13,
+      "mimic": null
+    },
+    {
+      "name": "/root/E_leg_9/PrismaticJoint_IV_pole_middle",
+      "type": "prismatic",
+      "parent": "link_000",
+      "child": "link_002",
+      "reference_q": 0.0,
+      "mimic": null
+    }
+  ],
+  "bounds": [
+    [
+      -0.14248177843359647,
+      -1.3849910769210816,
+      -1.1471169929189682
+    ],
+    [
+      0.13603773296286997,
+      1.2750088897003173,
+      0.0002843
+    ]
+  ],
+  "point_pool_size": 8192,
+  "reference_pose": "Authored default pose",
+  "qc": {
+    "finite_geometry": true,
+    "axis_unit": true,
+    "physical_collision_validation": false,
+    "manual_review": false,
+    "omitted_texture_images": true,
+    "warnings": []
+  }
+}

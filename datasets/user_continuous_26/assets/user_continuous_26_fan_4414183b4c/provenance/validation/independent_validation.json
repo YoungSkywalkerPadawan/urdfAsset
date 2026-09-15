@@ -1,0 +1,1453 @@
+{
+  "schema": "fan_independent_validation/v1",
+  "created_at_utc": "2026-09-10T14:30:55.472405+00:00",
+  "passed": true,
+  "errors": [],
+  "warnings": [],
+  "environment": {
+    "python": "D:\\soft\\conda\\envs\\assembly-comfyui\\python.exe",
+    "python_version": "3.11.15",
+    "numpy": "2.4.4",
+    "trimesh": "4.12.2",
+    "yourdfpy": "0.0.60"
+  },
+  "scope": "Asset existence, exact source identity, URDF structure/inertial/limits, full mesh loading and independent multi-pose forward kinematics.",
+  "limitations": [
+    "Inertial positivity does not establish measured mass or physical accuracy.",
+    "FK checks do not establish collision-free motion, contact dynamics, stability, motor torque or continuous-time safety.",
+    "Source hash proves identity/unchanged bytes, not source surface preservation after splitting.",
+    "End-point and random samples are finite coverage, not a proof for every joint configuration.",
+    "No source-generation or rendering performance benchmark is performed."
+  ],
+  "source": {
+    "path": "D:\\ai3\\LiteReality_motion_analysis_extract_20260828_1214\\continous\\assembly-output\\cases\\0007-desk-fan-1bb4d940c799\\source\\model.glb",
+    "expected_sha256": "a76cb161af01651a8f88fd12024023f5fa918c1693e64c3047ad9a9c5d4acb83",
+    "actual_sha256": "a76cb161af01651a8f88fd12024023f5fa918c1693e64c3047ad9a9c5d4acb83",
+    "bytes": 13977236,
+    "sha256_matches": true
+  },
+  "urdf": {
+    "path": "D:\\ai3\\LiteReality_motion_analysis_extract_20260828_1214\\continous\\assembly-output\\cases\\0007-desk-fan-1bb4d940c799\\fan.urdf",
+    "sha256": "b142827b0ae03268bdfe7c63ce3b1fc4b2831d5103ac8ca3cb1e0dc2845784ea",
+    "bytes": 15971
+  },
+  "motor_axis_fit": {
+    "path": "D:\\ai3\\LiteReality_motion_analysis_extract_20260828_1214\\continous\\assembly-output\\cases\\0007-desk-fan-1bb4d940c799\\analysis\\motor_axis_fit.json",
+    "sha256": "876199e6796260465b8e2a3d72e3dfee364d28d0a3d59bf775a7228e44c16855",
+    "direction": [
+      0.0008106130489312437,
+      0.9999935005031819,
+      0.00351309804557061
+    ],
+    "frame": "Blender native XYZ = (scene X, -scene Z, scene Y)",
+    "source_evidence": "Generated GLB mesh, not calibrated photographs, CAD or a measured physical motor.",
+    "comparison": "Fitted Blender-native direction versus rotor joint axis; fan joint rest-frame rotations are required to be identity."
+  },
+  "topology": {
+    "link_count": 6,
+    "joint_count": 5,
+    "moving_joint_count": 3,
+    "root_links": [
+      "base_link"
+    ],
+    "visited_link_count": 6,
+    "joints": {
+      "pedestal_fixed": {
+        "type": "fixed",
+        "parent": "base_link",
+        "child": "pedestal",
+        "axis": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "origin": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            -0.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "bounds": null
+      },
+      "yaw_joint": {
+        "type": "revolute",
+        "parent": "pedestal",
+        "child": "yaw_carrier",
+        "axis": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "origin": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0,
+            0.0374014601
+          ],
+          [
+            -0.0,
+            0.0,
+            1.0,
+            0.205203921
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "bounds": [
+          -0.6108652381980153,
+          0.6108652381980153
+        ]
+      },
+      "pitch_joint": {
+        "type": "revolute",
+        "parent": "yaw_carrier",
+        "child": "motor_head",
+        "axis": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "origin": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            -0.0,
+            0.0,
+            1.0,
+            0.0623357892
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "bounds": [
+          -0.2617993877991494,
+          0.3490658503988659
+        ]
+      },
+      "guard_fixed": {
+        "type": "fixed",
+        "parent": "motor_head",
+        "child": "guard",
+        "axis": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "origin": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0,
+            -0.1221781
+          ],
+          [
+            -0.0,
+            0.0,
+            1.0,
+            0.029921174
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "bounds": null
+      },
+      "rotor_joint": {
+        "type": "continuous",
+        "parent": "motor_head",
+        "child": "rotor",
+        "axis": [
+          0.000810613041,
+          0.999993503,
+          0.003513098
+        ],
+        "origin": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            -0.000109586334
+          ],
+          [
+            0.0,
+            1.0,
+            0.0,
+            -0.11220438
+          ],
+          [
+            -0.0,
+            0.0,
+            1.0,
+            0.0322965086
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "bounds": null
+      }
+    }
+  },
+  "inertials": {
+    "base_link": {
+      "mass_kg": 1.7,
+      "inertia_eigenvalues_kg_m2": [
+        0.005046909379200487,
+        0.005847957130422403,
+        0.01081866202373833
+      ],
+      "positive_definite": true
+    },
+    "pedestal": {
+      "mass_kg": 0.8,
+      "inertia_eigenvalues_kg_m2": [
+        0.004640864867513643,
+        0.0046605920336897965,
+        0.005224406200892891
+      ],
+      "positive_definite": true
+    },
+    "yaw_carrier": {
+      "mass_kg": 0.15,
+      "inertia_eigenvalues_kg_m2": [
+        0.0003709515691314391,
+        0.00038310812137977435,
+        0.0005783666015325012
+      ],
+      "positive_definite": true
+    },
+    "motor_head": {
+      "mass_kg": 1.0,
+      "inertia_eigenvalues_kg_m2": [
+        0.006361723224962941,
+        0.00671975585074384,
+        0.007280667581727703
+      ],
+      "positive_definite": true
+    },
+    "guard": {
+      "mass_kg": 0.3,
+      "inertia_eigenvalues_kg_m2": [
+        0.004014653811741242,
+        0.004558649643037094,
+        0.007618891426401952
+      ],
+      "positive_definite": true
+    },
+    "rotor": {
+      "mass_kg": 0.22,
+      "inertia_eigenvalues_kg_m2": [
+        0.002061168368734294,
+        0.0021394258248631933,
+        0.003950252649075024
+      ],
+      "positive_definite": true
+    }
+  },
+  "geometry_counts": {
+    "visual": 6,
+    "collision": 53
+  },
+  "assets": [
+    {
+      "path": "D:\\ai3\\LiteReality_motion_analysis_extract_20260828_1214\\continous\\assembly-output\\cases\\0007-desk-fan-1bb4d940c799\\meshes\\base_link.obj",
+      "exists": true,
+      "kinds": [
+        "visual_mesh"
+      ],
+      "referenced_by": [
+        "base_link"
+      ],
+      "bytes": 390621,
+      "sha256": "2d6c9aa9e5a1a695af9fe6217c03bd36d9d98d198f1fc4a4aae69178b6d00f32"
+    },
+    {
+      "path": "D:\\ai3\\LiteReality_motion_analysis_extract_20260828_1214\\continous\\assembly-output\\cases\\0007-desk-fan-1bb4d940c799\\meshes\\pedestal.obj",
+      "exists": true,
+      "kinds": [
+        "visual_mesh"
+      ],
+      "referenced_by": [
+        "pedestal"
+      ],
+      "bytes": 2027305,
+      "sha256": "246cda8baefdedb7675c46abe05b789f3c55e38b3ac1f0b21fb346783c8c36cd"
+    },
+    {
+      "path": "D:\\ai3\\LiteReality_motion_analysis_extract_20260828_1214\\continous\\assembly-output\\cases\\0007-desk-fan-1bb4d940c799\\meshes\\yaw_carrier.obj",
+      "exists": true,
+      "kinds": [
+        "visual_mesh"
+      ],
+      "referenced_by": [
+        "yaw_carrier"
+      ],
+      "bytes": 1220052,
+      "sha256": "5d433d1a533ee167c57021104da6f64c9b2682ab2a3ede3f245c8e82ca9427c6"
+    },
+    {
+      "path": "D:\\ai3\\LiteReality_motion_analysis_extract_20260828_1214\\continous\\assembly-output\\cases\\0007-desk-fan-1bb4d940c799\\meshes\\motor_head.obj",
+      "exists": true,
+      "kinds": [
+        "visual_mesh"
+      ],
+      "referenced_by": [
+        "motor_head"
+      ],
+      "bytes": 2370412,
+      "sha256": "e6228d47fab01b933e65e46f867a94a0c309454f9d400bd9710e49fa7a0245a5"
+    },
+    {
+      "path": "D:\\ai3\\LiteReality_motion_analysis_extract_20260828_1214\\continous\\assembly-output\\cases\\0007-desk-fan-1bb4d940c799\\meshes\\guard.obj",
+      "exists": true,
+      "kinds": [
+        "visual_mesh"
+      ],
+      "referenced_by": [
+        "guard"
+      ],
+      "bytes": 4695844,
+      "sha256": "8a26d17545358291c111edfdb999f8b5ca5e78ec4a919a620545716bf0e219a3"
+    },
+    {
+      "path": "D:\\ai3\\LiteReality_motion_analysis_extract_20260828_1214\\continous\\assembly-output\\cases\\0007-desk-fan-1bb4d940c799\\meshes\\rotor.obj",
+      "exists": true,
+      "kinds": [
+        "visual_mesh"
+      ],
+      "referenced_by": [
+        "rotor"
+      ],
+      "bytes": 3296004,
+      "sha256": "5882ffb273e245a15bbedbbe0383e620047bbdc9af84b4f0fdf9736094d06064"
+    },
+    {
+      "path": "D:\\ai3\\LiteReality_motion_analysis_extract_20260828_1214\\continous\\assembly-output\\cases\\0007-desk-fan-1bb4d940c799\\materials\\fan.mtl",
+      "exists": true,
+      "kinds": [
+        "material_library"
+      ],
+      "referenced_by": [
+        "D:\\ai3\\LiteReality_motion_analysis_extract_20260828_1214\\continous\\assembly-output\\cases\\0007-desk-fan-1bb4d940c799\\meshes\\base_link.obj",
+        "D:\\ai3\\LiteReality_motion_analysis_extract_20260828_1214\\continous\\assembly-output\\cases\\0007-desk-fan-1bb4d940c799\\meshes\\pedestal.obj",
+        "D:\\ai3\\LiteReality_motion_analysis_extract_20260828_1214\\continous\\assembly-output\\cases\\0007-desk-fan-1bb4d940c799\\meshes\\yaw_carrier.obj",
+        "D:\\ai3\\LiteReality_motion_analysis_extract_20260828_1214\\continous\\assembly-output\\cases\\0007-desk-fan-1bb4d940c799\\meshes\\motor_head.obj",
+        "D:\\ai3\\LiteReality_motion_analysis_extract_20260828_1214\\continous\\assembly-output\\cases\\0007-desk-fan-1bb4d940c799\\meshes\\guard.obj",
+        "D:\\ai3\\LiteReality_motion_analysis_extract_20260828_1214\\continous\\assembly-output\\cases\\0007-desk-fan-1bb4d940c799\\meshes\\rotor.obj"
+      ],
+      "bytes": 176,
+      "sha256": "d8025194ca93f970e6cf9cd31c363eb7762316f20059160e3e3a2c62f2afe2bb"
+    },
+    {
+      "path": "D:\\ai3\\LiteReality_motion_analysis_extract_20260828_1214\\continous\\assembly-output\\cases\\0007-desk-fan-1bb4d940c799\\materials\\source_texture_0.png",
+      "exists": true,
+      "kinds": [
+        "texture"
+      ],
+      "referenced_by": [
+        "D:\\ai3\\LiteReality_motion_analysis_extract_20260828_1214\\continous\\assembly-output\\cases\\0007-desk-fan-1bb4d940c799\\materials\\fan.mtl"
+      ],
+      "bytes": 5991320,
+      "sha256": "8788a917338a6fbd5711dfc725299756669959d15cde2e0286a1a19feacb3c97"
+    }
+  ],
+  "asset_summary": {
+    "unique_files": 8,
+    "referenced_bytes": 19991734,
+    "textures": 1,
+    "material_libraries": 1
+  },
+  "yourdfpy": {
+    "status": "loaded",
+    "strict_validation": true,
+    "errors": [],
+    "full_load_seconds_diagnostic_only": 0.7895608999970136,
+    "actuated_joint_names": [
+      "yaw_joint",
+      "pitch_joint",
+      "rotor_joint"
+    ],
+    "visual_scene_geometry_count": 9,
+    "collision_scene_geometry_count": 6
+  },
+  "loaded_meshes": [
+    {
+      "scene": "visual",
+      "name": "base_link.obj",
+      "vertices": 2278,
+      "triangles": 2833,
+      "uv_present": true
+    },
+    {
+      "scene": "visual",
+      "name": "pedestal.obj",
+      "vertices": 11334,
+      "triangles": 14428,
+      "uv_present": true
+    },
+    {
+      "scene": "visual",
+      "name": "yaw_carrier.obj",
+      "vertices": 130,
+      "triangles": 124,
+      "uv_present": true
+    },
+    {
+      "scene": "visual",
+      "name": "yaw_carrier.obj_1",
+      "vertices": 6790,
+      "triangles": 8593,
+      "uv_present": true
+    },
+    {
+      "scene": "visual",
+      "name": "motor_head.obj",
+      "vertices": 130,
+      "triangles": 124,
+      "uv_present": true
+    },
+    {
+      "scene": "visual",
+      "name": "motor_head.obj_1",
+      "vertices": 13985,
+      "triangles": 16693,
+      "uv_present": true
+    },
+    {
+      "scene": "visual",
+      "name": "guard.obj",
+      "vertices": 28975,
+      "triangles": 32994,
+      "uv_present": true
+    },
+    {
+      "scene": "visual",
+      "name": "rotor.obj",
+      "vertices": 130,
+      "triangles": 124,
+      "uv_present": true
+    },
+    {
+      "scene": "visual",
+      "name": "rotor.obj_1",
+      "vertices": 18995,
+      "triangles": 23343,
+      "uv_present": true
+    },
+    {
+      "scene": "collision",
+      "name": "geometry_0",
+      "vertices": 66,
+      "triangles": 128,
+      "uv_present": false
+    },
+    {
+      "scene": "collision",
+      "name": "geometry_1",
+      "vertices": 8,
+      "triangles": 12,
+      "uv_present": false
+    },
+    {
+      "scene": "collision",
+      "name": "geometry_2",
+      "vertices": 8,
+      "triangles": 12,
+      "uv_present": false
+    },
+    {
+      "scene": "collision",
+      "name": "geometry_3",
+      "vertices": 8,
+      "triangles": 12,
+      "uv_present": false
+    },
+    {
+      "scene": "collision",
+      "name": "node",
+      "vertices": 384,
+      "triangles": 576,
+      "uv_present": false
+    },
+    {
+      "scene": "collision",
+      "name": "geometry_4",
+      "vertices": 66,
+      "triangles": 128,
+      "uv_present": false
+    }
+  ],
+  "forward_kinematics": {
+    "independent_implementation": "NumPy Rz(yaw)Ry(pitch)Rx(roll) joint origins, normalized-axis Rodrigues motion, parent-to-child chain",
+    "seed": 20260908,
+    "random_pose_count": 64,
+    "total_pose_count": 89,
+    "link_transform_comparisons": 1068,
+    "absolute_matrix_tolerance": 1e-08,
+    "maxima": {
+      "visual_matrix_abs_error": 4.89855535823849e-16,
+      "collision_matrix_abs_error": 4.89855535823849e-16,
+      "orthogonality_abs_error": 6.661338147750939e-16,
+      "rotation_determinant_error": 8.881784197001252e-16
+    },
+    "every_driver_moves": {
+      "rotor_joint": true,
+      "pitch_joint": true,
+      "yaw_joint": true
+    },
+    "poses": [
+      {
+        "pose": "zero",
+        "q_radians": {
+          "pitch_joint": 0.0,
+          "rotor_joint": 0.0,
+          "yaw_joint": 0.0
+        },
+        "max_visual_matrix_abs_error": 0.0,
+        "max_collision_matrix_abs_error": 0.0
+      },
+      {
+        "pose": "combined_endpoints_0",
+        "q_radians": {
+          "yaw_joint": -0.6108652381980153,
+          "pitch_joint": -0.2617993877991494,
+          "rotor_joint": -3.141592653589793
+        },
+        "max_visual_matrix_abs_error": 2.220446049250313e-16,
+        "max_collision_matrix_abs_error": 2.220446049250313e-16
+      },
+      {
+        "pose": "combined_endpoints_1",
+        "q_radians": {
+          "yaw_joint": -0.6108652381980153,
+          "pitch_joint": -0.2617993877991494,
+          "rotor_joint": 0.0
+        },
+        "max_visual_matrix_abs_error": 1.3877787807814457e-17,
+        "max_collision_matrix_abs_error": 1.3877787807814457e-17
+      },
+      {
+        "pose": "combined_endpoints_2",
+        "q_radians": {
+          "yaw_joint": -0.6108652381980153,
+          "pitch_joint": -0.2617993877991494,
+          "rotor_joint": 3.141592653589793
+        },
+        "max_visual_matrix_abs_error": 2.220446049250313e-16,
+        "max_collision_matrix_abs_error": 2.220446049250313e-16
+      },
+      {
+        "pose": "combined_endpoints_3",
+        "q_radians": {
+          "yaw_joint": -0.6108652381980153,
+          "pitch_joint": -0.2617993877991494,
+          "rotor_joint": 6.283185307179586
+        },
+        "max_visual_matrix_abs_error": 1.3877787807814457e-17,
+        "max_collision_matrix_abs_error": 1.3877787807814457e-17
+      },
+      {
+        "pose": "combined_endpoints_4",
+        "q_radians": {
+          "yaw_joint": -0.6108652381980153,
+          "pitch_joint": 0.3490658503988659,
+          "rotor_joint": -3.141592653589793
+        },
+        "max_visual_matrix_abs_error": 2.220446049250313e-16,
+        "max_collision_matrix_abs_error": 2.220446049250313e-16
+      },
+      {
+        "pose": "combined_endpoints_5",
+        "q_radians": {
+          "yaw_joint": -0.6108652381980153,
+          "pitch_joint": 0.3490658503988659,
+          "rotor_joint": 0.0
+        },
+        "max_visual_matrix_abs_error": 2.7755575615628914e-17,
+        "max_collision_matrix_abs_error": 2.7755575615628914e-17
+      },
+      {
+        "pose": "combined_endpoints_6",
+        "q_radians": {
+          "yaw_joint": -0.6108652381980153,
+          "pitch_joint": 0.3490658503988659,
+          "rotor_joint": 3.141592653589793
+        },
+        "max_visual_matrix_abs_error": 2.220446049250313e-16,
+        "max_collision_matrix_abs_error": 2.220446049250313e-16
+      },
+      {
+        "pose": "combined_endpoints_7",
+        "q_radians": {
+          "yaw_joint": -0.6108652381980153,
+          "pitch_joint": 0.3490658503988659,
+          "rotor_joint": 6.283185307179586
+        },
+        "max_visual_matrix_abs_error": 5.551115123125783e-17,
+        "max_collision_matrix_abs_error": 5.551115123125783e-17
+      },
+      {
+        "pose": "combined_endpoints_8",
+        "q_radians": {
+          "yaw_joint": 0.6108652381980153,
+          "pitch_joint": -0.2617993877991494,
+          "rotor_joint": -3.141592653589793
+        },
+        "max_visual_matrix_abs_error": 2.220446049250313e-16,
+        "max_collision_matrix_abs_error": 2.220446049250313e-16
+      },
+      {
+        "pose": "combined_endpoints_9",
+        "q_radians": {
+          "yaw_joint": 0.6108652381980153,
+          "pitch_joint": -0.2617993877991494,
+          "rotor_joint": 0.0
+        },
+        "max_visual_matrix_abs_error": 1.3877787807814457e-17,
+        "max_collision_matrix_abs_error": 1.3877787807814457e-17
+      },
+      {
+        "pose": "combined_endpoints_10",
+        "q_radians": {
+          "yaw_joint": 0.6108652381980153,
+          "pitch_joint": -0.2617993877991494,
+          "rotor_joint": 3.141592653589793
+        },
+        "max_visual_matrix_abs_error": 2.220446049250313e-16,
+        "max_collision_matrix_abs_error": 2.220446049250313e-16
+      },
+      {
+        "pose": "combined_endpoints_11",
+        "q_radians": {
+          "yaw_joint": 0.6108652381980153,
+          "pitch_joint": -0.2617993877991494,
+          "rotor_joint": 6.283185307179586
+        },
+        "max_visual_matrix_abs_error": 1.3877787807814457e-17,
+        "max_collision_matrix_abs_error": 1.3877787807814457e-17
+      },
+      {
+        "pose": "combined_endpoints_12",
+        "q_radians": {
+          "yaw_joint": 0.6108652381980153,
+          "pitch_joint": 0.3490658503988659,
+          "rotor_joint": -3.141592653589793
+        },
+        "max_visual_matrix_abs_error": 2.220446049250313e-16,
+        "max_collision_matrix_abs_error": 2.220446049250313e-16
+      },
+      {
+        "pose": "combined_endpoints_13",
+        "q_radians": {
+          "yaw_joint": 0.6108652381980153,
+          "pitch_joint": 0.3490658503988659,
+          "rotor_joint": 0.0
+        },
+        "max_visual_matrix_abs_error": 2.7755575615628914e-17,
+        "max_collision_matrix_abs_error": 2.7755575615628914e-17
+      },
+      {
+        "pose": "combined_endpoints_14",
+        "q_radians": {
+          "yaw_joint": 0.6108652381980153,
+          "pitch_joint": 0.3490658503988659,
+          "rotor_joint": 3.141592653589793
+        },
+        "max_visual_matrix_abs_error": 2.220446049250313e-16,
+        "max_collision_matrix_abs_error": 2.220446049250313e-16
+      },
+      {
+        "pose": "combined_endpoints_15",
+        "q_radians": {
+          "yaw_joint": 0.6108652381980153,
+          "pitch_joint": 0.3490658503988659,
+          "rotor_joint": 6.283185307179586
+        },
+        "max_visual_matrix_abs_error": 2.7755575615628914e-17,
+        "max_collision_matrix_abs_error": 2.7755575615628914e-17
+      },
+      {
+        "pose": "single_pitch_joint_-0.26179939",
+        "q_radians": {
+          "pitch_joint": -0.2617993877991494,
+          "rotor_joint": 0.0,
+          "yaw_joint": 0.0
+        },
+        "max_visual_matrix_abs_error": 2.449277679119245e-16,
+        "max_collision_matrix_abs_error": 2.449277679119245e-16
+      },
+      {
+        "pose": "single_pitch_joint_0.34906585",
+        "q_radians": {
+          "pitch_joint": 0.3490658503988659,
+          "rotor_joint": 0.0,
+          "yaw_joint": 0.0
+        },
+        "max_visual_matrix_abs_error": 2.449277679119245e-16,
+        "max_collision_matrix_abs_error": 2.449277679119245e-16
+      },
+      {
+        "pose": "single_rotor_joint_-6.2831853",
+        "q_radians": {
+          "pitch_joint": 0.0,
+          "rotor_joint": -6.283185307179586,
+          "yaw_joint": 0.0
+        },
+        "max_visual_matrix_abs_error": 4.89855535823849e-16,
+        "max_collision_matrix_abs_error": 4.89855535823849e-16
+      },
+      {
+        "pose": "single_rotor_joint_-1.5707963",
+        "q_radians": {
+          "pitch_joint": 0.0,
+          "rotor_joint": -1.5707963267948966,
+          "yaw_joint": 0.0
+        },
+        "max_visual_matrix_abs_error": 1.1102230246251565e-16,
+        "max_collision_matrix_abs_error": 1.1102230246251565e-16
+      },
+      {
+        "pose": "single_rotor_joint_1.5707963",
+        "q_radians": {
+          "pitch_joint": 0.0,
+          "rotor_joint": 1.5707963267948966,
+          "yaw_joint": 0.0
+        },
+        "max_visual_matrix_abs_error": 1.1102230246251565e-16,
+        "max_collision_matrix_abs_error": 1.1102230246251565e-16
+      },
+      {
+        "pose": "single_rotor_joint_6.2831853",
+        "q_radians": {
+          "pitch_joint": 0.0,
+          "rotor_joint": 6.283185307179586,
+          "yaw_joint": 0.0
+        },
+        "max_visual_matrix_abs_error": 0.0,
+        "max_collision_matrix_abs_error": 0.0
+      },
+      {
+        "pose": "single_yaw_joint_-0.61086524",
+        "q_radians": {
+          "pitch_joint": 0.0,
+          "rotor_joint": 0.0,
+          "yaw_joint": -0.6108652381980153
+        },
+        "max_visual_matrix_abs_error": 2.449277679119245e-16,
+        "max_collision_matrix_abs_error": 2.449277679119245e-16
+      },
+      {
+        "pose": "single_yaw_joint_0.61086524",
+        "q_radians": {
+          "pitch_joint": 0.0,
+          "rotor_joint": 0.0,
+          "yaw_joint": 0.6108652381980153
+        },
+        "max_visual_matrix_abs_error": 2.449277679119245e-16,
+        "max_collision_matrix_abs_error": 2.449277679119245e-16
+      },
+      {
+        "pose": "random_0",
+        "q_radians": {
+          "pitch_joint": 0.27260209638894733,
+          "rotor_joint": 3.73082800862786,
+          "yaw_joint": 0.31907360520633254
+        },
+        "max_visual_matrix_abs_error": 2.220446049250313e-16,
+        "max_collision_matrix_abs_error": 2.220446049250313e-16
+      },
+      {
+        "pose": "random_1",
+        "q_radians": {
+          "pitch_joint": -0.017107732097322442,
+          "rotor_joint": -2.2794413918017185,
+          "yaw_joint": -0.34401981342905413
+        },
+        "max_visual_matrix_abs_error": 1.1102230246251565e-16,
+        "max_collision_matrix_abs_error": 1.1102230246251565e-16
+      },
+      {
+        "pose": "random_2",
+        "q_radians": {
+          "pitch_joint": -0.19665297852129898,
+          "rotor_joint": 1.3995197149899194,
+          "yaw_joint": 0.1741545522798288
+        },
+        "max_visual_matrix_abs_error": 1.3877787807814457e-16,
+        "max_collision_matrix_abs_error": 1.3877787807814457e-16
+      },
+      {
+        "pose": "random_3",
+        "q_radians": {
+          "pitch_joint": 0.05448129168037352,
+          "rotor_joint": -5.437172459558968,
+          "yaw_joint": 0.019042413237260858
+        },
+        "max_visual_matrix_abs_error": 1.1102230246251565e-16,
+        "max_collision_matrix_abs_error": 1.1102230246251565e-16
+      },
+      {
+        "pose": "random_4",
+        "q_radians": {
+          "pitch_joint": 0.14051408173905533,
+          "rotor_joint": -5.432691289117149,
+          "yaw_joint": 0.42080387618663084
+        },
+        "max_visual_matrix_abs_error": 1.1102230246251565e-16,
+        "max_collision_matrix_abs_error": 1.1102230246251565e-16
+      },
+      {
+        "pose": "random_5",
+        "q_radians": {
+          "pitch_joint": -0.03017923244361584,
+          "rotor_joint": -8.169809317927452,
+          "yaw_joint": -0.2529870928245798
+        },
+        "max_visual_matrix_abs_error": 2.220446049250313e-16,
+        "max_collision_matrix_abs_error": 2.220446049250313e-16
+      },
+      {
+        "pose": "random_6",
+        "q_radians": {
+          "pitch_joint": 0.07223547742858683,
+          "rotor_joint": 7.330616639354105,
+          "yaw_joint": -0.4139662867322956
+        },
+        "max_visual_matrix_abs_error": 1.1102230246251565e-16,
+        "max_collision_matrix_abs_error": 1.1102230246251565e-16
+      },
+      {
+        "pose": "random_7",
+        "q_radians": {
+          "pitch_joint": 0.2839880130124776,
+          "rotor_joint": 0.08425572148000349,
+          "yaw_joint": -0.07600412793298161
+        },
+        "max_visual_matrix_abs_error": 1.1102230246251565e-16,
+        "max_collision_matrix_abs_error": 1.1102230246251565e-16
+      },
+      {
+        "pose": "random_8",
+        "q_radians": {
+          "pitch_joint": -0.11657883374133463,
+          "rotor_joint": 6.411398597308349,
+          "yaw_joint": -0.5465021879222263
+        },
+        "max_visual_matrix_abs_error": 1.1102230246251565e-16,
+        "max_collision_matrix_abs_error": 1.1102230246251565e-16
+      },
+      {
+        "pose": "random_9",
+        "q_radians": {
+          "pitch_joint": 0.3201755361410062,
+          "rotor_joint": -3.826112728478579,
+          "yaw_joint": 0.36025967845880447
+        },
+        "max_visual_matrix_abs_error": 1.1102230246251565e-16,
+        "max_collision_matrix_abs_error": 1.1102230246251565e-16
+      },
+      {
+        "pose": "random_10",
+        "q_radians": {
+          "pitch_joint": 0.06285634795025086,
+          "rotor_joint": -2.2424625680828623,
+          "yaw_joint": 0.5413453947009235
+        },
+        "max_visual_matrix_abs_error": 3.3306690738754696e-16,
+        "max_collision_matrix_abs_error": 3.3306690738754696e-16
+      },
+      {
+        "pose": "random_11",
+        "q_radians": {
+          "pitch_joint": 0.27045982577013344,
+          "rotor_joint": -2.5404440690188537,
+          "yaw_joint": -0.10802701779052948
+        },
+        "max_visual_matrix_abs_error": 2.220446049250313e-16,
+        "max_collision_matrix_abs_error": 2.220446049250313e-16
+      },
+      {
+        "pose": "random_12",
+        "q_radians": {
+          "pitch_joint": 0.24591003778386583,
+          "rotor_joint": 0.17463200481153152,
+          "yaw_joint": 0.46882783788346694
+        },
+        "max_visual_matrix_abs_error": 5.551115123125783e-17,
+        "max_collision_matrix_abs_error": 5.551115123125783e-17
+      },
+      {
+        "pose": "random_13",
+        "q_radians": {
+          "pitch_joint": 0.24407545258132596,
+          "rotor_joint": 8.319402374170757,
+          "yaw_joint": 0.2019831647793705
+        },
+        "max_visual_matrix_abs_error": 2.220446049250313e-16,
+        "max_collision_matrix_abs_error": 2.220446049250313e-16
+      },
+      {
+        "pose": "random_14",
+        "q_radians": {
+          "pitch_joint": 0.05951596773072043,
+          "rotor_joint": -3.482836406234423,
+          "yaw_joint": 0.4346851368729139
+        },
+        "max_visual_matrix_abs_error": 3.3306690738754696e-16,
+        "max_collision_matrix_abs_error": 3.3306690738754696e-16
+      },
+      {
+        "pose": "random_15",
+        "q_radians": {
+          "pitch_joint": 0.010698809909034157,
+          "rotor_joint": -11.70120853805749,
+          "yaw_joint": 0.041582008238580936
+        },
+        "max_visual_matrix_abs_error": 1.1102230246251565e-16,
+        "max_collision_matrix_abs_error": 1.1102230246251565e-16
+      },
+      {
+        "pose": "random_16",
+        "q_radians": {
+          "pitch_joint": 0.2887122983034412,
+          "rotor_joint": -11.651451941861778,
+          "yaw_joint": -0.2610704517196052
+        },
+        "max_visual_matrix_abs_error": 1.1102230246251565e-16,
+        "max_collision_matrix_abs_error": 1.1102230246251565e-16
+      },
+      {
+        "pose": "random_17",
+        "q_radians": {
+          "pitch_joint": -0.05218623082471491,
+          "rotor_joint": 4.132308117950458,
+          "yaw_joint": -0.5720879272086278
+        },
+        "max_visual_matrix_abs_error": 2.7755575615628914e-16,
+        "max_collision_matrix_abs_error": 2.7755575615628914e-16
+      },
+      {
+        "pose": "random_18",
+        "q_radians": {
+          "pitch_joint": 0.14024225795540857,
+          "rotor_joint": 7.795452350426384,
+          "yaw_joint": -0.1108407371269029
+        },
+        "max_visual_matrix_abs_error": 1.249000902703301e-16,
+        "max_collision_matrix_abs_error": 1.249000902703301e-16
+      },
+      {
+        "pose": "random_19",
+        "q_radians": {
+          "pitch_joint": 0.140480435960686,
+          "rotor_joint": -9.102064199779385,
+          "yaw_joint": -0.5637109133691156
+        },
+        "max_visual_matrix_abs_error": 4.440892098500626e-16,
+        "max_collision_matrix_abs_error": 4.440892098500626e-16
+      },
+      {
+        "pose": "random_20",
+        "q_radians": {
+          "pitch_joint": -0.12324859938688851,
+          "rotor_joint": -6.3991681193121766,
+          "yaw_joint": -0.09616917095484878
+        },
+        "max_visual_matrix_abs_error": 1.1102230246251565e-16,
+        "max_collision_matrix_abs_error": 1.1102230246251565e-16
+      },
+      {
+        "pose": "random_21",
+        "q_radians": {
+          "pitch_joint": 0.294544304725373,
+          "rotor_joint": 3.4302500194669747,
+          "yaw_joint": -0.47480341962695305
+        },
+        "max_visual_matrix_abs_error": 1.1102230246251565e-16,
+        "max_collision_matrix_abs_error": 1.1102230246251565e-16
+      },
+      {
+        "pose": "random_22",
+        "q_radians": {
+          "pitch_joint": -0.12780138561437002,
+          "rotor_joint": -3.2564474468299114,
+          "yaw_joint": 0.12679313345547993
+        },
+        "max_visual_matrix_abs_error": 4.440892098500626e-16,
+        "max_collision_matrix_abs_error": 4.440892098500626e-16
+      },
+      {
+        "pose": "random_23",
+        "q_radians": {
+          "pitch_joint": 0.18688409897687497,
+          "rotor_joint": 11.548887763517637,
+          "yaw_joint": -0.5500186402163237
+        },
+        "max_visual_matrix_abs_error": 1.1102230246251565e-16,
+        "max_collision_matrix_abs_error": 1.1102230246251565e-16
+      },
+      {
+        "pose": "random_24",
+        "q_radians": {
+          "pitch_joint": 0.09536451535347029,
+          "rotor_joint": -5.612301847763981,
+          "yaw_joint": 0.34534103271197236
+        },
+        "max_visual_matrix_abs_error": 1.1102230246251565e-16,
+        "max_collision_matrix_abs_error": 1.1102230246251565e-16
+      },
+      {
+        "pose": "random_25",
+        "q_radians": {
+          "pitch_joint": -0.1595029762135201,
+          "rotor_joint": -9.725639630233475,
+          "yaw_joint": 0.11011998270013212
+        },
+        "max_visual_matrix_abs_error": 3.3306690738754696e-16,
+        "max_collision_matrix_abs_error": 3.3306690738754696e-16
+      },
+      {
+        "pose": "random_26",
+        "q_radians": {
+          "pitch_joint": 0.3480888946629687,
+          "rotor_joint": 4.132930479192076,
+          "yaw_joint": 0.4195108815933757
+        },
+        "max_visual_matrix_abs_error": 1.1102230246251565e-16,
+        "max_collision_matrix_abs_error": 1.1102230246251565e-16
+      },
+      {
+        "pose": "random_27",
+        "q_radians": {
+          "pitch_joint": 0.269645580475318,
+          "rotor_joint": -11.892608033843311,
+          "yaw_joint": 0.37199281431460285
+        },
+        "max_visual_matrix_abs_error": 5.551115123125783e-17,
+        "max_collision_matrix_abs_error": 5.551115123125783e-17
+      },
+      {
+        "pose": "random_28",
+        "q_radians": {
+          "pitch_joint": 0.125833326569125,
+          "rotor_joint": 0.8831570885041664,
+          "yaw_joint": -0.06779574824219625
+        },
+        "max_visual_matrix_abs_error": 5.551115123125783e-17,
+        "max_collision_matrix_abs_error": 5.551115123125783e-17
+      },
+      {
+        "pose": "random_29",
+        "q_radians": {
+          "pitch_joint": -0.20404526473536447,
+          "rotor_joint": -11.230377861585195,
+          "yaw_joint": 0.18511010894698243
+        },
+        "max_visual_matrix_abs_error": 2.220446049250313e-16,
+        "max_collision_matrix_abs_error": 2.220446049250313e-16
+      },
+      {
+        "pose": "random_30",
+        "q_radians": {
+          "pitch_joint": -0.018583221417530132,
+          "rotor_joint": 0.15384363202753093,
+          "yaw_joint": 0.3011283005813262
+        },
+        "max_visual_matrix_abs_error": 6.938893903907228e-18,
+        "max_collision_matrix_abs_error": 6.938893903907228e-18
+      },
+      {
+        "pose": "random_31",
+        "q_radians": {
+          "pitch_joint": 0.21010450651775947,
+          "rotor_joint": -4.5181652071377805,
+          "yaw_joint": -0.6043944508314923
+        },
+        "max_visual_matrix_abs_error": 1.457167719820518e-16,
+        "max_collision_matrix_abs_error": 1.457167719820518e-16
+      },
+      {
+        "pose": "random_32",
+        "q_radians": {
+          "pitch_joint": 0.3340053929151385,
+          "rotor_joint": 3.3142623928455244,
+          "yaw_joint": -0.3323006250519426
+        },
+        "max_visual_matrix_abs_error": 2.220446049250313e-16,
+        "max_collision_matrix_abs_error": 2.220446049250313e-16
+      },
+      {
+        "pose": "random_33",
+        "q_radians": {
+          "pitch_joint": -0.2170756290381003,
+          "rotor_joint": 12.308945663794475,
+          "yaw_joint": -0.3724788776587316
+        },
+        "max_visual_matrix_abs_error": 2.7755575615628914e-17,
+        "max_collision_matrix_abs_error": 2.7755575615628914e-17
+      },
+      {
+        "pose": "random_34",
+        "q_radians": {
+          "pitch_joint": -0.022573652220700208,
+          "rotor_joint": -8.81433380599827,
+          "yaw_joint": -0.4498344257118345
+        },
+        "max_visual_matrix_abs_error": 2.220446049250313e-16,
+        "max_collision_matrix_abs_error": 2.220446049250313e-16
+      },
+      {
+        "pose": "random_35",
+        "q_radians": {
+          "pitch_joint": 0.3265870190127868,
+          "rotor_joint": -2.884307322084867,
+          "yaw_joint": -0.2791869676565705
+        },
+        "max_visual_matrix_abs_error": 4.440892098500626e-16,
+        "max_collision_matrix_abs_error": 4.440892098500626e-16
+      },
+      {
+        "pose": "random_36",
+        "q_radians": {
+          "pitch_joint": 0.17187294166917533,
+          "rotor_joint": -11.49874855306236,
+          "yaw_joint": 0.4263332338211989
+        },
+        "max_visual_matrix_abs_error": 1.6653345369377348e-16,
+        "max_collision_matrix_abs_error": 1.6653345369377348e-16
+      },
+      {
+        "pose": "random_37",
+        "q_radians": {
+          "pitch_joint": 0.21124495618674283,
+          "rotor_joint": 2.854791348813963,
+          "yaw_joint": -0.1545436277334229
+        },
+        "max_visual_matrix_abs_error": 2.220446049250313e-16,
+        "max_collision_matrix_abs_error": 2.220446049250313e-16
+      },
+      {
+        "pose": "random_38",
+        "q_radians": {
+          "pitch_joint": -0.1831529152187692,
+          "rotor_joint": 8.95132240896756,
+          "yaw_joint": 0.28326408790972457
+        },
+        "max_visual_matrix_abs_error": 4.440892098500626e-16,
+        "max_collision_matrix_abs_error": 4.440892098500626e-16
+      },
+      {
+        "pose": "random_39",
+        "q_radians": {
+          "pitch_joint": 0.1687285692744812,
+          "rotor_joint": 0.37758500862981315,
+          "yaw_joint": 0.01553171203954673
+        },
+        "max_visual_matrix_abs_error": 1.1102230246251565e-16,
+        "max_collision_matrix_abs_error": 1.1102230246251565e-16
+      },
+      {
+        "pose": "random_40",
+        "q_radians": {
+          "pitch_joint": -0.025606849720159863,
+          "rotor_joint": 7.588050999153836,
+          "yaw_joint": 0.5309629261959543
+        },
+        "max_visual_matrix_abs_error": 1.1102230246251565e-16,
+        "max_collision_matrix_abs_error": 1.1102230246251565e-16
+      },
+      {
+        "pose": "random_41",
+        "q_radians": {
+          "pitch_joint": 0.056573648208768534,
+          "rotor_joint": 2.6089035866005883,
+          "yaw_joint": 0.3739675285234694
+        },
+        "max_visual_matrix_abs_error": 3.3306690738754696e-16,
+        "max_collision_matrix_abs_error": 3.3306690738754696e-16
+      },
+      {
+        "pose": "random_42",
+        "q_radians": {
+          "pitch_joint": -0.07572711824973624,
+          "rotor_joint": 6.677224672818689,
+          "yaw_joint": 0.06720372990441192
+        },
+        "max_visual_matrix_abs_error": 1.1102230246251565e-16,
+        "max_collision_matrix_abs_error": 1.1102230246251565e-16
+      },
+      {
+        "pose": "random_43",
+        "q_radians": {
+          "pitch_joint": 0.02554370786278981,
+          "rotor_joint": 10.010287399040642,
+          "yaw_joint": 0.3368288873321237
+        },
+        "max_visual_matrix_abs_error": 4.440892098500626e-16,
+        "max_collision_matrix_abs_error": 4.440892098500626e-16
+      },
+      {
+        "pose": "random_44",
+        "q_radians": {
+          "pitch_joint": 0.03762559301279539,
+          "rotor_joint": 0.06476617890275982,
+          "yaw_joint": -0.5509006659625618
+        },
+        "max_visual_matrix_abs_error": 1.3877787807814457e-17,
+        "max_collision_matrix_abs_error": 1.3877787807814457e-17
+      },
+      {
+        "pose": "random_45",
+        "q_radians": {
+          "pitch_joint": -0.03613670423942167,
+          "rotor_joint": 1.221685957164155,
+          "yaw_joint": 0.32203720945723147
+        },
+        "max_visual_matrix_abs_error": 1.1102230246251565e-16,
+        "max_collision_matrix_abs_error": 1.1102230246251565e-16
+      },
+      {
+        "pose": "random_46",
+        "q_radians": {
+          "pitch_joint": 0.014711312589723191,
+          "rotor_joint": -7.777333757301194,
+          "yaw_joint": -0.1345052575285946
+        },
+        "max_visual_matrix_abs_error": 2.220446049250313e-16,
+        "max_collision_matrix_abs_error": 2.220446049250313e-16
+      },
+      {
+        "pose": "random_47",
+        "q_radians": {
+          "pitch_joint": 0.122144922430938,
+          "rotor_joint": 7.267347943893338,
+          "yaw_joint": 0.11175103681044607
+        },
+        "max_visual_matrix_abs_error": 1.1102230246251565e-16,
+        "max_collision_matrix_abs_error": 1.1102230246251565e-16
+      },
+      {
+        "pose": "random_48",
+        "q_radians": {
+          "pitch_joint": 0.3328549641268464,
+          "rotor_joint": -4.914101066677717,
+          "yaw_joint": -0.43770124114509873
+        },
+        "max_visual_matrix_abs_error": 2.220446049250313e-16,
+        "max_collision_matrix_abs_error": 2.220446049250313e-16
+      },
+      {
+        "pose": "random_49",
+        "q_radians": {
+          "pitch_joint": -0.22422648272124596,
+          "rotor_joint": 12.162337659686287,
+          "yaw_joint": 0.5030799770708703
+        },
+        "max_visual_matrix_abs_error": 2.0816681711721685e-17,
+        "max_collision_matrix_abs_error": 2.0816681711721685e-17
+      },
+      {
+        "pose": "random_50",
+        "q_radians": {
+          "pitch_joint": -0.25764833216103883,
+          "rotor_joint": -8.037268522361892,
+          "yaw_joint": -0.38475865406005305
+        },
+        "max_visual_matrix_abs_error": 1.942890293094024e-16,
+        "max_collision_matrix_abs_error": 1.942890293094024e-16
+      },
+      {
+        "pose": "random_51",
+        "q_radians": {
+          "pitch_joint": -0.21687050310109793,
+          "rotor_joint": 3.129699996342868,
+          "yaw_joint": -0.3999926385484188
+        },
+        "max_visual_matrix_abs_error": 2.220446049250313e-16,
+        "max_collision_matrix_abs_error": 2.220446049250313e-16
+      },
+      {
+        "pose": "random_52",
+        "q_radians": {
+          "pitch_joint": 0.028537869626683865,
+          "rotor_joint": 2.3183997184073917,
+          "yaw_joint": 0.512358320857649
+        },
+        "max_visual_matrix_abs_error": 3.3306690738754696e-16,
+        "max_collision_matrix_abs_error": 3.3306690738754696e-16
+      },
+      {
+        "pose": "random_53",
+        "q_radians": {
+          "pitch_joint": 0.3375022449920631,
+          "rotor_joint": 12.56485586458344,
+          "yaw_joint": -0.0064296360680705655
+        },
+        "max_visual_matrix_abs_error": 1.1102230246251565e-16,
+        "max_collision_matrix_abs_error": 1.1102230246251565e-16
+      },
+      {
+        "pose": "random_54",
+        "q_radians": {
+          "pitch_joint": -0.22950770599461034,
+          "rotor_joint": -12.234045214745224,
+          "yaw_joint": -0.15125518020969997
+        },
+        "max_visual_matrix_abs_error": 1.1102230246251565e-16,
+        "max_collision_matrix_abs_error": 1.1102230246251565e-16
+      },
+      {
+        "pose": "random_55",
+        "q_radians": {
+          "pitch_joint": -0.18989227400079928,
+          "rotor_joint": 6.095059309931479,
+          "yaw_joint": 0.4782269144071296
+        },
+        "max_visual_matrix_abs_error": 1.1102230246251565e-16,
+        "max_collision_matrix_abs_error": 1.1102230246251565e-16
+      },
+      {
+        "pose": "random_56",
+        "q_radians": {
+          "pitch_joint": -0.02210571184329055,
+          "rotor_joint": -1.3362395146283355,
+          "yaw_joint": -0.297288177528594
+        },
+        "max_visual_matrix_abs_error": 1.1102230246251565e-16,
+        "max_collision_matrix_abs_error": 1.1102230246251565e-16
+      },
+      {
+        "pose": "random_57",
+        "q_radians": {
+          "pitch_joint": -0.034899758063492214,
+          "rotor_joint": 11.100249717944681,
+          "yaw_joint": 0.6069592059037188
+        },
+        "max_visual_matrix_abs_error": 1.1102230246251565e-16,
+        "max_collision_matrix_abs_error": 1.1102230246251565e-16
+      },
+      {
+        "pose": "random_58",
+        "q_radians": {
+          "pitch_joint": 0.22282148411610114,
+          "rotor_joint": 0.35087590063327134,
+          "yaw_joint": 0.005597635665383294
+        },
+        "max_visual_matrix_abs_error": 5.551115123125783e-17,
+        "max_collision_matrix_abs_error": 5.551115123125783e-17
+      },
+      {
+        "pose": "random_59",
+        "q_radians": {
+          "pitch_joint": 0.1889651504289478,
+          "rotor_joint": -5.369948162356031,
+          "yaw_joint": 0.16642389354244658
+        },
+        "max_visual_matrix_abs_error": 1.1102230246251565e-16,
+        "max_collision_matrix_abs_error": 1.1102230246251565e-16
+      },
+      {
+        "pose": "random_60",
+        "q_radians": {
+          "pitch_joint": 0.2185936763262667,
+          "rotor_joint": -2.7829409788414203,
+          "yaw_joint": 0.5541752336997723
+        },
+        "max_visual_matrix_abs_error": 3.3306690738754696e-16,
+        "max_collision_matrix_abs_error": 3.3306690738754696e-16
+      },
+      {
+        "pose": "random_61",
+        "q_radians": {
+          "pitch_joint": -0.04778681373390353,
+          "rotor_joint": 0.6988954718343958,
+          "yaw_joint": -0.5959620621281413
+        },
+        "max_visual_matrix_abs_error": 1.1102230246251565e-16,
+        "max_collision_matrix_abs_error": 1.1102230246251565e-16
+      },
+      {
+        "pose": "random_62",
+        "q_radians": {
+          "pitch_joint": 0.20714702136535756,
+          "rotor_joint": -10.704664716069189,
+          "yaw_joint": -0.05102074067670603
+        },
+        "max_visual_matrix_abs_error": 2.220446049250313e-16,
+        "max_collision_matrix_abs_error": 2.220446049250313e-16
+      },
+      {
+        "pose": "random_63",
+        "q_radians": {
+          "pitch_joint": -0.08174949920030997,
+          "rotor_joint": -10.213257889635676,
+          "yaw_joint": 0.2696790405576338
+        },
+        "max_visual_matrix_abs_error": 3.3306690738754696e-16,
+        "max_collision_matrix_abs_error": 3.3306690738754696e-16
+      }
+    ],
+    "continuous_joint_sample_range_rad": [
+      -12.566370614359172,
+      12.566370614359172
+    ]
+  },
+  "total_validation_seconds": 2.0566808999865316
+}

@@ -1,0 +1,130 @@
+<?xml version='1.0' encoding='utf-8'?>
+<robot name="0013-folding-stroller-001">
+  <link name="base_link">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/base_link.obj" />
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/base_link.obj" />
+      </geometry>
+    </collision>
+    <inertial>
+      <origin xyz="-4.470348358e-05 0.003271967173 0.5364951491" rpy="0 0 0" />
+      <mass value="6" />
+      <inertia ixx="0.8882579759924241" iyy="0.6947986909486445" izz="0.5283079353824931" ixy="0" ixz="0" iyz="0" />
+    </inertial>
+  </link>
+  <link name="front_left">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/front_left.obj" />
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/front_left.obj" />
+      </geometry>
+    </collision>
+    <inertial>
+      <origin xyz="4.678964615e-06 7.516145706e-05 -9.698048234e-05" rpy="0 0 0" />
+      <mass value="0.12" />
+      <inertia ixx="0.0003771333398379628" iyy="0.00019741101389880277" izz="0.0001974338497273109" ixy="0" ixz="0" iyz="0" />
+    </inertial>
+  </link>
+  <link name="rear_left">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/rear_left.obj" />
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/rear_left.obj" />
+      </geometry>
+    </collision>
+    <inertial>
+      <origin xyz="0.001730389893 0.0009600892663 -0.002246372402" rpy="0 0 0" />
+      <mass value="0.3" />
+      <inertia ixx="0.002223335142166044" iyy="0.0012890657184436104" izz="0.0011375732481921919" ixy="0" ixz="0" iyz="0" />
+    </inertial>
+  </link>
+  <link name="front_right">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/front_right.obj" />
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/front_right.obj" />
+      </geometry>
+    </collision>
+    <inertial>
+      <origin xyz="-1.088529825e-05 -3.828108311e-05 -2.787262201e-05" rpy="0 0 0" />
+      <mass value="0.12" />
+      <inertia ixx="0.0003771688813369156" iyy="0.0001971464410022272" izz="0.00019731399348402732" ixy="0" ixz="0" iyz="0" />
+    </inertial>
+  </link>
+  <link name="rear_right">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/rear_right.obj" />
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/rear_right.obj" />
+      </geometry>
+    </collision>
+    <inertial>
+      <origin xyz="-0.001775849611 0.001639243215 -0.001275546849" rpy="0 0 0" />
+      <mass value="0.3" />
+      <inertia ixx="0.0022259546254020934" iyy="0.0012887200186856088" izz="0.0011315492151669174" ixy="0" ixz="0" iyz="0" />
+    </inertial>
+  </link>
+  <joint name="front_left_spin" type="continuous">
+    <parent link="base_link" />
+    <child link="front_left" />
+    <origin xyz="-0.1781615317 -0.344410181 0.08061372489" rpy="0 0 0" />
+    <axis xyz="-0.9998825788 0.009704296477 0.01186127588" />
+    <limit effort="10" velocity="30" />
+    <dynamics damping=".01" friction=".001" />
+  </joint>
+  <joint name="rear_left_spin" type="continuous">
+    <parent link="base_link" />
+    <child link="rear_left" />
+    <origin xyz="-0.2472956032 0.2028571218 0.1174329072" rpy="0 0 0" />
+    <axis xyz="-0.9996053576 -0.02337753586 -0.01557733119" />
+    <limit effort="10" velocity="30" />
+    <dynamics damping=".01" friction=".001" />
+  </joint>
+  <joint name="front_right_spin" type="continuous">
+    <parent link="base_link" />
+    <child link="front_right" />
+    <origin xyz="0.1777321696 -0.3424076438 0.08122704178" rpy="0 0 0" />
+    <axis xyz="0.9999306202 0.00858264789 0.00806844607" />
+    <limit effort="10" velocity="30" />
+    <dynamics damping=".01" friction=".001" />
+  </joint>
+  <joint name="rear_right_spin" type="continuous">
+    <parent link="base_link" />
+    <child link="rear_right" />
+    <origin xyz="0.2460700721 0.2025190145 0.1162417829" rpy="0 0 0" />
+    <axis xyz="0.9993863106 -0.02867832035 -0.02011309564" />
+    <limit effort="10" velocity="30" />
+    <dynamics damping=".01" friction=".001" />
+  </joint>
+</robot>

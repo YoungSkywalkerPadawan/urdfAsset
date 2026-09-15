@@ -1,0 +1,110 @@
+{
+  "source_to_m_scale": 0.37851982761558606,
+  "source_floor": [
+    0.0,
+    0.0,
+    -0.5018340945243835
+  ],
+  "joints": [
+    {
+      "name": "upper_left_spin",
+      "parent": "base_link",
+      "child": "upper_left",
+      "type": "continuous",
+      "xyz": [
+        -0.03898754343390465,
+        -0.012475450523197651,
+        0.2701665759086609
+      ],
+      "axis": [
+        -0.9999980330467224,
+        -0.001955244690179825,
+        0.00028524125809781253
+      ],
+      "multiplier": 1,
+      "phase": 0.0
+    },
+    {
+      "name": "upper_right_spin",
+      "parent": "base_link",
+      "child": "upper_right",
+      "type": "continuous",
+      "xyz": [
+        0.03898754343390465,
+        -0.012322989292442799,
+        0.2701443135738373
+      ],
+      "axis": [
+        0.9999980330467224,
+        0.001955244690179825,
+        -0.00028524125809781253
+      ],
+      "multiplier": -1,
+      "phase": 0.0,
+      "mimic": {
+        "joint": "upper_left_spin",
+        "multiplier": -1,
+        "offset": 0
+      }
+    },
+    {
+      "name": "lower_left_spin",
+      "parent": "base_link",
+      "child": "lower_left",
+      "type": "continuous",
+      "xyz": [
+        -0.03898754343390465,
+        0.051734559237957,
+        0.0905100405216217
+      ],
+      "axis": [
+        -0.9999931454658508,
+        0.0036033745855093002,
+        0.000881191692315042
+      ],
+      "multiplier": 1,
+      "phase": 0.0
+    },
+    {
+      "name": "lower_right_spin",
+      "parent": "base_link",
+      "child": "lower_right",
+      "type": "continuous",
+      "xyz": [
+        0.03898754343390465,
+        0.05145358294248581,
+        0.09044133126735687
+      ],
+      "axis": [
+        0.9999931454658508,
+        -0.0036033745855093002,
+        -0.000881191692315042
+      ],
+      "multiplier": -1,
+      "phase": 0.0,
+      "mimic": {
+        "joint": "lower_left_spin",
+        "multiplier": -1,
+        "offset": 0
+      }
+    },
+    {
+      "name": "turret_spin",
+      "parent": "base_link",
+      "child": "objective_turret",
+      "type": "continuous",
+      "xyz": [
+        0.0010825791396200657,
+        -0.028313836082816124,
+        0.23601268231868744
+      ],
+      "axis": [
+        0.0007907000835984945,
+        0.3653961718082428,
+        0.9308517575263977
+      ],
+      "multiplier": 0.65,
+      "phase": 0.0
+    }
+  ]
+}

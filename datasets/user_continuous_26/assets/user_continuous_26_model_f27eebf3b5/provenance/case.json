@@ -1,0 +1,78 @@
+{
+  "id": "0005-casual_music_box_g1_bom",
+  "title": "Hand-cranked music box",
+  "source": "0005-casual_music_box_g1_bom.glb",
+  "nominal_height_m": 0.22,
+  "duration_s": 10,
+  "max_rpm": 18,
+  "camera_direction": [
+    2.0,
+    -4,
+    1.2
+  ],
+  "motion_label": "Crank rotates; mounting plate and box stay fixed",
+  "links": [
+    {
+      "name": "base_link",
+      "mass": 0.6,
+      "clearance_recesses": [
+        {
+          "origin": [
+            0.0002026190024719048,
+            -0.295597151956271,
+            -0.16537779416455756
+          ],
+          "axis": [
+            0.0006700793318758944,
+            -0.9999881258660299,
+            -0.004826916265482372
+          ],
+          "radius": 0.035,
+          "outer_radius": 0.048,
+          "back_plane": 0.024,
+          "front_bound": 0.1
+        }
+      ]
+    },
+    {
+      "name": "crank",
+      "parent": "base_link",
+      "joint_name": "crank_spin",
+      "type": "continuous",
+      "origin": [
+        0.0002026190024719048,
+        -0.295597151956271,
+        -0.16537779416455756
+      ],
+      "axis": [
+        0.0006700793318758944,
+        -0.9999881258660299,
+        -0.004826916265482372
+      ],
+      "mass": 0.04,
+      "mesh_shift_native": [
+        3.350396659379472e-06,
+        -0.00499994062933015,
+        -2.413458132741186e-05
+      ],
+      "cap_color": [
+        0.32,
+        0.19,
+        0.075,
+        1
+      ],
+      "cap_metallic": 0.8,
+      "cap_roughness": 0.3
+    }
+  ],
+  "face_owner_names": [
+    "base_link",
+    "crank"
+  ],
+  "inferences": [
+    "The mounting plate, enclosure, lid and cloud decoration are fixed. The crank arm and end knob are one rotating rigid assembly.",
+    "A tiny clearance pocket and shaft-boundary cap repair the fused crank-to-plate interface; the crank is moved outward by 0.005 native units.",
+    "The internal music mechanism and any free spinning grip bearing are not visible and are not inferred.",
+    "Nominal 0.22 m height and mass/inertia are estimates; preferred real winding direction is unknown."
+  ]
+}

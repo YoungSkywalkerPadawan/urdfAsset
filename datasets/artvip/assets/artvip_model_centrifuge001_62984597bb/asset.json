@@ -1,0 +1,183 @@
+{
+  "summary": {
+    "id": "artvip_model_centrifuge001_62984597bb",
+    "category": "artvip/small_instrument",
+    "robot_name": "Articulated_objects/lab_items/small_instrument/centrifuge001/model_centrifuge001.usd",
+    "joint_count": 2,
+    "link_count": 4,
+    "target_link_count": 3,
+    "family": "Articulated_objects/lab_items/small_instrument/centrifuge001/",
+    "warnings": [],
+    "diagonal": 0.36597170381499117,
+    "dataset": "artvip",
+    "bytes": 1076384,
+    "continuous_joint_count": 2,
+    "training_role": "continuous_supervision"
+  },
+  "source": {
+    "dataset": "X-Humanoid/ArtVIP",
+    "revision": "d22f2095bc9db29fdd4b60f4a3c4f8177e1f5e9e",
+    "license": "Apache-2.0",
+    "url": "https://huggingface.co/datasets/X-Humanoid/ArtVIP",
+    "family": "Articulated_objects/lab_items/small_instrument/centrifuge001/",
+    "label_status": "Authored reference; not manually verified",
+    "up_axis": "Z",
+    "source_meters_per_unit": 1.0,
+    "meters_per_unit_authored": true,
+    "files": [
+      {
+        "path": "/root/continuous-public-data-20260911/raw/artvip/Articulated_objects/lab_items/small_instrument/centrifuge001/model_centrifuge001.usd",
+        "sha256": "30095f144523065c7e17b8d73f06c9f057cfa588f245958d5fc0d885fcf33747",
+        "bytes": 23059
+      },
+      {
+        "path": "/root/continuous-public-data-20260911/raw/artvip/Articulated_objects/lab_items/small_instrument/centrifuge001/D/实验室/实验室/USD/centrifuge001/resource/material.usd",
+        "sha256": "61b7f82444a6c5f806873f35100e009a4e5c758656c4de26d7bc9db01d48407f",
+        "bytes": 2037
+      },
+      {
+        "path": "/root/continuous-public-data-20260911/raw/artvip/Articulated_objects/lab_items/small_instrument/centrifuge001/D/实验室/实验室/USD/centrifuge001/resource/v_0/link_0.usd",
+        "sha256": "7d6aeecdd97dfafb2c93127e3e4fb4090ae9af35b6d0890f8aeff1864d6d8123",
+        "bytes": 1184934
+      }
+    ]
+  },
+  "links": [
+    {
+      "id": "link_002",
+      "name": "/root/E_lid_1",
+      "point_file": null,
+      "bounds": [
+        [
+          -0.08366590360012055,
+          0.044174001263618465,
+          0.0376486
+        ],
+        [
+          0.08753410360012054,
+          0.151473999666214,
+          0.20914859737739563
+        ]
+      ],
+      "faces": 1784,
+      "vertices": 4088,
+      "geometry_sha256": "afdcac1321cfbefb8d510aa8aaeaafe13112519b1e1b8e6bfdae8aa8e04250a0"
+    },
+    {
+      "id": "link_000",
+      "name": "/root/E_body_3",
+      "point_file": "inputs/link_000.npz",
+      "bounds": [
+        [
+          -0.0873621,
+          -0.0877417,
+          0.0007698000025262125
+        ],
+        [
+          0.0912378983549118,
+          0.10085830371932983,
+          0.08266989887943269
+        ]
+      ],
+      "faces": 2232,
+      "vertices": 3786,
+      "geometry_sha256": "bf6fbafe7dedcba44c9d96411d26b1b5754756eb206aa89f6daba0fa6db84e9b"
+    },
+    {
+      "id": "link_003",
+      "name": "/root/E_part001_11",
+      "point_file": "inputs/link_003.npz",
+      "bounds": [
+        [
+          -0.03436589980330467,
+          -0.03474549980330467,
+          0.05168340086426734
+        ],
+        [
+          0.03823409980330467,
+          0.03785449980330467,
+          0.09268340013411044
+        ]
+      ],
+      "faces": 4088,
+      "vertices": 6066,
+      "geometry_sha256": "8a139deda0b834626abc279184db5e86b758762f828f041805a70c016eb6312b"
+    },
+    {
+      "id": "link_001",
+      "name": "/root/E_knob_2",
+      "point_file": "inputs/link_001.npz",
+      "bounds": [
+        [
+          -0.018065899552965163,
+          -0.09063259955296517,
+          0.008869900111758708
+        ],
+        [
+          0.021934099552965165,
+          -0.05063260044703484,
+          0.0138699
+        ]
+      ],
+      "faces": 636,
+      "vertices": 1216,
+      "geometry_sha256": "c01f1dd5c0c12b27b1e2d6f7ab7d62d398d22c26731fa72ab993ea1ff265ca0a"
+    }
+  ],
+  "joints": [
+    {
+      "name": "/root/E_lid_1/RevoluteJoint_centrifuge001_up",
+      "type": "revolute",
+      "parent": "link_000",
+      "child": "link_002",
+      "reference_q": 0.0,
+      "mimic": null
+    },
+    {
+      "name": "/root/E_body_3/FixedJoint",
+      "type": "fixed",
+      "parent": "link_004",
+      "child": "link_000",
+      "reference_q": 0.0,
+      "mimic": null
+    },
+    {
+      "name": "/root/E_part001_11/RevoluteJoint_centrifuge001_middle",
+      "type": "continuous",
+      "parent": "link_000",
+      "child": "link_003",
+      "reference_q": 0.0,
+      "mimic": null
+    },
+    {
+      "name": "/root/E_knob_2/RevoluteJoint_centrifuge001_down",
+      "type": "continuous",
+      "parent": "link_000",
+      "child": "link_001",
+      "reference_q": 0.0,
+      "mimic": null
+    }
+  ],
+  "bounds": [
+    [
+      -0.0873621,
+      -0.09063259955296517,
+      0.0007698000025262125
+    ],
+    [
+      0.0912378983549118,
+      0.151473999666214,
+      0.20914859737739563
+    ]
+  ],
+  "point_pool_size": 8192,
+  "reference_pose": "Authored default pose",
+  "qc": {
+    "finite_geometry": true,
+    "axis_unit": true,
+    "physical_collision_validation": false,
+    "manual_review": false,
+    "omitted_texture_images": true,
+    "warnings": []
+  }
+}

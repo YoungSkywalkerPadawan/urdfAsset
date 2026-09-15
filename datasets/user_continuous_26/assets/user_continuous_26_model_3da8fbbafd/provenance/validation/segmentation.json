@@ -1,0 +1,60 @@
+{
+  "source_sha256": "81495839094e5566398e0258b52f9e208b5a27e08a81c81aa37d22d695727731",
+  "source_triangles": 97882,
+  "assigned_triangles": 97882,
+  "uv_preserved": true,
+  "source_geometry_adjustments": [
+    "The tripod stays fixed. The azimuth head carries the mounting cradle and the telescope pitch joint, so the pitch axis follows the azimuth rotation in the URDF hierarchy.",
+    "Azimuth uses a measured annular face normal, with its center averaged from four horizontal rim-circle sections. Free fits to the short irregular base cylinder produced implausible large tilts and were rejected.",
+    "The pitch axis is the line between the two measured outer trunnion-cap centers. Telescope tube, end rims and its small attached sight-like object form one rigid child link. Its visible caps remain with the cradle.",
+    "The small object above the front tube has an axis nearly parallel to the telescope. It is not reliably identifiable as a rotary adjustment knob, so it stays fixed to the tube.",
+    "Pitch range 0 to 0.15 rad (about 8.6 degrees) is an inferred lift range from the source pose; actual mechanical stops are unknown. Tripod leg adjustment, lock-screw travel and optical behavior are not modeled.",
+    "The azimuth fused interface is separated by local axial recesses of 0.003 and 0.002 source units. Tube width along the pitch axis is reduced by 3% at the cradle interface; only small split openings are capped.",
+    "Nominal height 0.9 m, masses and inertias are estimates. Source turquoise paint, wear, metal bands and decorative tripod geometry are retained.",
+    "The full front mouth is grouped with the tube. Near the pitch trunnion, the fixed cradle inner faces are spread to axial +/-0.080 source units within radius 0.075, fading over another 0.025, to separate the fused fork/tube interface.",
+    "Long fused triangles that still bridged the spread fork are clipped within a local pitch-axis cylinder of radius 0.083 and axial depth 0.150. This acts on actual triangle surfaces and preserves the open cradle cavity."
+  ],
+  "parts": [
+    {
+      "link": "base_link",
+      "selected_source_triangles": 32951,
+      "mesh_vertices": 16300,
+      "mesh_triangles": 32894,
+      "mesh_scale": 1.0,
+      "recess_adjusted_vertices": 126,
+      "recess_max_displacement_native": 0.01066048583425758
+    },
+    {
+      "link": "azimuth_head",
+      "selected_source_triangles": 27356,
+      "mesh_vertices": 23039,
+      "mesh_triangles": 29525,
+      "mesh_scale": 1.0,
+      "recess_adjusted_vertices": 2190,
+      "recess_max_displacement_native": 0.0781889835930883
+    },
+    {
+      "link": "telescope_tube",
+      "selected_source_triangles": 37575,
+      "mesh_vertices": 18653,
+      "mesh_triangles": 37529,
+      "mesh_scale": 1.0,
+      "recess_adjusted_vertices": 0,
+      "recess_max_displacement_native": 0.0
+    }
+  ],
+  "export_inventory": [
+    {
+      "link": "base_link",
+      "triangles": 32894
+    },
+    {
+      "link": "azimuth_head",
+      "triangles": 29525
+    },
+    {
+      "link": "telescope_tube",
+      "triangles": 37529
+    }
+  ]
+}

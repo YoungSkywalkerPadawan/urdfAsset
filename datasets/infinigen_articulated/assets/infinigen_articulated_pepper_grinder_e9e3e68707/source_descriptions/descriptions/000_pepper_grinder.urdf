@@ -1,0 +1,191 @@
+<?xml version="1.0" ?>
+<robot name="object">
+  <link name="world"/>
+  <joint name="world_joint" type="fixed">
+    <origin xyz="0.0 0.0 0.0"/>
+    <parent link="world"/>
+    <child link="link_0"/>
+    <dynamics damping="0.0" friction="0.0"/>
+  </joint>
+  <joint name="Lid Joint_0" type="revolute">
+    <origin xyz="0.00011108443140983582 0.0 0.17949324405881412"/>
+    <parent link="link_0"/>
+    <child link="link_1"/>
+    <dynamics damping="0.11861382287555863" friction="0.0"/>
+    <axis xyz="0.0 0.0 1.0000000149011612"/>
+    <limit lower="-3.141592653589793" upper="3.141592653589793"/>
+  </joint>
+  <link name="link_1">
+    <visual>
+      <geometry>
+        <mesh filename="assets/Lid_0.obj"/>
+      </geometry>
+      <origin xyz="0.0 0.0 0.0852147384813165"/>
+    </visual>
+    <inertial>
+      <mass value="0.0023195179046527088"/>
+      <inertia ixx="7.832167669670823e-12" ixy="0.0" ixz="5.31236392014295e-21" iyy="7.83216736715433e-12" iyz="0.0" izz="7.126841550062834e-12"/>
+      <origin xyz="0.00011108438478184187 8.832547520182195e-11 0.2647079825211741"/>
+    </inertial>
+    <collision>
+      <geometry>
+        <mesh filename="assets/Lid_0_col0.obj"/>
+      </geometry>
+      <origin xyz="0.0 0.0 0.0852147384813165"/>
+    </collision>
+    <visual>
+      <geometry>
+        <mesh filename="assets/Lid_1.obj"/>
+      </geometry>
+      <origin xyz="0.0 0.0 0.04260737144258969"/>
+    </visual>
+    <inertial>
+      <mass value="1.9132530822896405"/>
+      <inertia ixx="7.691185221025181e-07" ixy="7.640027416002623e-15" ixz="0.0" iyy="7.691185317479872e-07" iyz="1.0856860150812996e-15" izz="9.616759631779777e-07"/>
+      <origin xyz="0.0001110843478685849 1.0060219943658098e-10 0.21639412288682702"/>
+    </inertial>
+    <collision>
+      <geometry>
+        <mesh filename="assets/Lid_1_col0.obj"/>
+      </geometry>
+      <origin xyz="0.0 0.0 0.04260737144258969"/>
+    </collision>
+  </link>
+  <link name="link_0">
+    <visual>
+      <geometry>
+        <mesh filename="assets/Full Base_Chamber_0.obj"/>
+      </geometry>
+      <origin xyz="0.00011108256876468658 0.0 0.11464906856417656"/>
+    </visual>
+    <inertial>
+      <mass value="1.061890957376301"/>
+      <inertia ixx="1.7563264739985005e-06" ixy="0.0" ixz="0.0" iyy="1.7563264864065455e-06" iyz="0.0" izz="1.1028044842584545e-06"/>
+      <origin xyz="3.391757920532128e-10 -3.015249169713121e-10 0.10670571548261325"/>
+    </inertial>
+    <collision>
+      <geometry>
+        <mesh filename="assets/Full Base_Chamber_0_col0.obj"/>
+      </geometry>
+      <origin xyz="0.00011108256876468658 0.0 0.11464906856417656"/>
+    </collision>
+    <collision>
+      <geometry>
+        <mesh filename="assets/Full Base_Chamber_0_col1.obj"/>
+      </geometry>
+      <origin xyz="0.00011108256876468658 0.0 0.11464906856417656"/>
+    </collision>
+    <collision>
+      <geometry>
+        <mesh filename="assets/Full Base_Chamber_0_col2.obj"/>
+      </geometry>
+      <origin xyz="0.00011108256876468658 0.0 0.11464906856417656"/>
+    </collision>
+    <visual>
+      <geometry>
+        <mesh filename="assets/Knee_Full Base_0.obj"/>
+      </geometry>
+      <origin xyz="0.0 0.0 0.042199160903692245"/>
+    </visual>
+    <inertial>
+      <mass value="0.12076651556779115"/>
+      <inertia ixx="7.313291389670412e-08" ixy="5.597813030327619e-16" ixz="0.0" iyy="7.313291506061215e-08" iyz="8.31507514618165e-25" izz="1.4177665223069866e-07"/>
+      <origin xyz="-9.185964634101043e-11 6.363520434496319e-10 0.042199160903692245"/>
+    </inertial>
+    <collision>
+      <geometry>
+        <mesh filename="assets/Knee_Full Base_0_col0.obj"/>
+      </geometry>
+      <origin xyz="0.0 0.0 0.042199160903692245"/>
+    </collision>
+    <visual>
+      <geometry>
+        <mesh filename="assets/Foot_Full Base_0.obj"/>
+      </geometry>
+      <origin xyz="0.0 0.0 0.017296714708209038"/>
+    </visual>
+    <inertial>
+      <mass value="0.1189612549148843"/>
+      <inertia ixx="1.2175352364376922e-07" ixy="1.2629690982835946e-16" ixz="1.368301402166901e-24" iyy="1.2175352615235488e-07" iyz="0.0" izz="2.2040701450812699e-07"/>
+      <origin xyz="-1.0561821201353646e-10 7.55396910547857e-10 0.017296714708209034"/>
+    </inertial>
+    <collision>
+      <geometry>
+        <mesh filename="assets/Foot_Full Base_0_col0.obj"/>
+      </geometry>
+      <origin xyz="0.0 0.0 0.017296714708209038"/>
+    </collision>
+    <collision>
+      <geometry>
+        <mesh filename="assets/Foot_Full Base_0_col1.obj"/>
+      </geometry>
+      <origin xyz="0.0 0.0 0.017296714708209038"/>
+    </collision>
+    <collision>
+      <geometry>
+        <mesh filename="assets/Foot_Full Base_0_col2.obj"/>
+      </geometry>
+      <origin xyz="0.0 0.0 0.017296714708209038"/>
+    </collision>
+    <collision>
+      <geometry>
+        <mesh filename="assets/Foot_Full Base_0_col3.obj"/>
+      </geometry>
+      <origin xyz="0.0 0.0 0.017296714708209038"/>
+    </collision>
+    <collision>
+      <geometry>
+        <mesh filename="assets/Foot_Full Base_0_col4.obj"/>
+      </geometry>
+      <origin xyz="0.0 0.0 0.017296714708209038"/>
+    </collision>
+    <collision>
+      <geometry>
+        <mesh filename="assets/Foot_Full Base_0_col5.obj"/>
+      </geometry>
+      <origin xyz="0.0 0.0 0.017296714708209038"/>
+    </collision>
+    <collision>
+      <geometry>
+        <mesh filename="assets/Foot_Full Base_0_col6.obj"/>
+      </geometry>
+      <origin xyz="0.0 0.0 0.017296714708209038"/>
+    </collision>
+    <collision>
+      <geometry>
+        <mesh filename="assets/Foot_Full Base_0_col7.obj"/>
+      </geometry>
+      <origin xyz="0.0 0.0 0.017296714708209038"/>
+    </collision>
+    <collision>
+      <geometry>
+        <mesh filename="assets/Foot_Full Base_0_col8.obj"/>
+      </geometry>
+      <origin xyz="0.0 0.0 0.017296714708209038"/>
+    </collision>
+    <collision>
+      <geometry>
+        <mesh filename="assets/Foot_Full Base_0_col9.obj"/>
+      </geometry>
+      <origin xyz="0.0 0.0 0.017296714708209038"/>
+    </collision>
+    <collision>
+      <geometry>
+        <mesh filename="assets/Foot_Full Base_0_col10.obj"/>
+      </geometry>
+      <origin xyz="0.0 0.0 0.017296714708209038"/>
+    </collision>
+    <collision>
+      <geometry>
+        <mesh filename="assets/Foot_Full Base_0_col11.obj"/>
+      </geometry>
+      <origin xyz="0.0 0.0 0.017296714708209038"/>
+    </collision>
+    <collision>
+      <geometry>
+        <mesh filename="assets/Foot_Full Base_0_col12.obj"/>
+      </geometry>
+      <origin xyz="0.0 0.0 0.017296714708209038"/>
+    </collision>
+  </link>
+</robot>

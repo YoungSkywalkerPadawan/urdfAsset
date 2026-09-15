@@ -1,0 +1,183 @@
+{
+  "summary": {
+    "id": "artvip_model_machine015_0_610a7c5cc6",
+    "category": "artvip/machine",
+    "robot_name": "Articulated_objects/industrial_machinery/machine/machine015/model_machine015_0.usd",
+    "joint_count": 2,
+    "link_count": 4,
+    "target_link_count": 3,
+    "family": "Articulated_objects/industrial_machinery/machine/machine015/",
+    "warnings": [],
+    "diagonal": 1.362355199619323,
+    "dataset": "artvip",
+    "bytes": 394987,
+    "continuous_joint_count": 2,
+    "training_role": "continuous_supervision"
+  },
+  "source": {
+    "dataset": "X-Humanoid/ArtVIP",
+    "revision": "d22f2095bc9db29fdd4b60f4a3c4f8177e1f5e9e",
+    "license": "Apache-2.0",
+    "url": "https://huggingface.co/datasets/X-Humanoid/ArtVIP",
+    "family": "Articulated_objects/industrial_machinery/machine/machine015/",
+    "label_status": "Authored reference; not manually verified",
+    "up_axis": "Z",
+    "source_meters_per_unit": 1.0,
+    "meters_per_unit_authored": true,
+    "files": [
+      {
+        "path": "/root/continuous-public-data-20260911/raw/artvip/Articulated_objects/industrial_machinery/machine/machine015/model_machine015_0.usd",
+        "sha256": "fb1210c5fc50268d84c34f15f48adfbd2fd42952f82a0f64901ef7e5e5ae31f6",
+        "bytes": 21513
+      },
+      {
+        "path": "/root/continuous-public-data-20260911/raw/artvip/Articulated_objects/industrial_machinery/machine/machine015/resource/material.usd",
+        "sha256": "e51fe68cf4998a484f77414bffd8ae8ca9ab0027e09c344cb46624ef32dfb30d",
+        "bytes": 1832
+      },
+      {
+        "path": "/root/continuous-public-data-20260911/raw/artvip/Articulated_objects/industrial_machinery/machine/machine015/resource/v_0/link_0.usd",
+        "sha256": "f1d47c34b8e0c85e331ec779451bcfd34ed6454ca68ba596eb137f44476913f2",
+        "bytes": 93436
+      }
+    ]
+  },
+  "links": [
+    {
+      "id": "link_000",
+      "name": "/root/E_body_1",
+      "point_file": "inputs/link_000.npz",
+      "bounds": [
+        [
+          -0.2845479284486711,
+          -0.4014107122414291,
+          1.296273112322277e-07
+        ],
+        [
+          0.29545192844867113,
+          0.3136141007757127,
+          1.0041671340138674
+        ]
+      ],
+      "faces": 714,
+      "vertices": 2142,
+      "geometry_sha256": "ae2ef02bb343e146854b237a7c7ff4e898857359ead19663e39d55963f549649"
+    },
+    {
+      "id": "link_002",
+      "name": "/root/E_knob_16",
+      "point_file": "inputs/link_002.npz",
+      "bounds": [
+        [
+          0.225216012695653,
+          0.08031294926711768,
+          0.09731776163165938
+        ],
+        [
+          0.26116258053582464,
+          0.10385625073288232,
+          0.13040791163393406
+        ]
+      ],
+      "faces": 110,
+      "vertices": 328,
+      "geometry_sha256": "3bed1a82ce3050ed09b5d7d1b68a945a68ad3352c79421789b4055a8776c01b8"
+    },
+    {
+      "id": "link_001",
+      "name": "/root/E_button_19",
+      "point_file": null,
+      "bounds": [
+        [
+          0.2352635285376388,
+          -0.030626500444054603,
+          0.10406966343137747
+        ],
+        [
+          0.25231570191415553,
+          -0.007026499555945396,
+          0.12610810453645135
+        ]
+      ],
+      "faces": 58,
+      "vertices": 172,
+      "geometry_sha256": "a0607026bfdffcec991a413d779012654cc97d68d9fa67178108d33a14d268fa"
+    },
+    {
+      "id": "link_003",
+      "name": "/root/E_knob_20",
+      "point_file": "inputs/link_003.npz",
+      "bounds": [
+        [
+          0.22521601269565303,
+          0.028435949267117674,
+          0.09731796163165943
+        ],
+        [
+          0.26116258053582464,
+          0.051979250732882315,
+          0.1304081116339341
+        ]
+      ],
+      "faces": 110,
+      "vertices": 328,
+      "geometry_sha256": "34a8252c387f3ecb9bc6bef6c6e3df1fb57b9940bf0e74103e7751e9093a6908"
+    }
+  ],
+  "joints": [
+    {
+      "name": "/root/E_body_1/FixedJoint",
+      "type": "fixed",
+      "parent": "link_004",
+      "child": "link_000",
+      "reference_q": 0.0,
+      "mimic": null
+    },
+    {
+      "name": "/root/E_knob_16/RevoluteJoint_machine015_down",
+      "type": "continuous",
+      "parent": "link_000",
+      "child": "link_002",
+      "reference_q": -1.4006371532224964e-08,
+      "mimic": null
+    },
+    {
+      "name": "/root/E_button_19/PrismaticJoint_machine015_down1",
+      "type": "prismatic",
+      "parent": "link_000",
+      "child": "link_001",
+      "reference_q": 0.0,
+      "mimic": null
+    },
+    {
+      "name": "/root/E_knob_20/RevoluteJoint_machine015_down1",
+      "type": "continuous",
+      "parent": "link_000",
+      "child": "link_003",
+      "reference_q": -1.4006371532224964e-08,
+      "mimic": null
+    }
+  ],
+  "bounds": [
+    [
+      -0.2845479284486711,
+      -0.4014107122414291,
+      1.296273112322277e-07
+    ],
+    [
+      0.29545192844867113,
+      0.3136141007757127,
+      1.0041671340138674
+    ]
+  ],
+  "point_pool_size": 8192,
+  "reference_pose": "Authored default pose",
+  "qc": {
+    "finite_geometry": true,
+    "axis_unit": true,
+    "physical_collision_validation": false,
+    "manual_review": false,
+    "omitted_texture_images": true,
+    "warnings": []
+  }
+}

@@ -1,0 +1,126 @@
+{
+  "summary": {
+    "id": "artvip_model_ceiling_fan001_04b5156f64",
+    "category": "artvip/ceiling_fan",
+    "robot_name": "Articulated_objects/major_appliances/ceiling_fan/ceiling fan001/model_ceiling fan001.usd",
+    "joint_count": 1,
+    "link_count": 2,
+    "target_link_count": 2,
+    "family": "Articulated_objects/major_appliances/ceiling_fan/ceiling fan001/",
+    "warnings": [],
+    "diagonal": 0.9581539726482449,
+    "dataset": "artvip",
+    "bytes": 2168917,
+    "continuous_joint_count": 1,
+    "training_role": "continuous_supervision"
+  },
+  "source": {
+    "dataset": "X-Humanoid/ArtVIP",
+    "revision": "d22f2095bc9db29fdd4b60f4a3c4f8177e1f5e9e",
+    "license": "Apache-2.0",
+    "url": "https://huggingface.co/datasets/X-Humanoid/ArtVIP",
+    "family": "Articulated_objects/major_appliances/ceiling_fan/ceiling fan001/",
+    "label_status": "Authored reference; not manually verified",
+    "up_axis": "Z",
+    "source_meters_per_unit": 1.0,
+    "files": [
+      {
+        "path": "/root/continuous-public-data-20260911/raw/artvip/Articulated_objects/major_appliances/ceiling_fan/ceiling fan001/model_ceiling fan001.usd",
+        "sha256": "bfd3c0a924d8e9beb7c9863de79a63380b9ca07a54ea25c4a631b842558f1090",
+        "bytes": 20485
+      },
+      {
+        "path": "/root/continuous-public-data-20260911/raw/artvip/Articulated_objects/major_appliances/ceiling_fan/ceiling fan001/resource/material.usd",
+        "sha256": "0b46a3530a6d16f380a07f7d2315868f29b985ea3176b405816f3f7afb060f8f",
+        "bytes": 2142
+      },
+      {
+        "path": "/root/continuous-public-data-20260911/raw/artvip/Articulated_objects/major_appliances/ceiling_fan/ceiling fan001/resource/v_0/link_0.usd",
+        "sha256": "70e870870afb9d904052335a651a954ab162eaa715b91482ec29e129631ee7f8",
+        "bytes": 1933287
+      }
+    ]
+  },
+  "links": [
+    {
+      "id": "link_001",
+      "name": "/root/E_body_1",
+      "point_file": "inputs/link_001.npz",
+      "bounds": [
+        [
+          -0.07667556476328327,
+          -0.07333760715987718,
+          0.07114929718944085
+        ],
+        [
+          0.07763536476328328,
+          0.08066880715987719,
+          0.20315890366379058
+        ]
+      ],
+      "faces": 12322,
+      "vertices": 36966,
+      "geometry_sha256": "7f732e4d1b6a7118013bb59422a1426791262d3a1aa0c87aa10edf10c5bb8fe3"
+    },
+    {
+      "id": "link_000",
+      "name": "/root/E_blade_5",
+      "point_file": "inputs/link_000.npz",
+      "bounds": [
+        [
+          -0.33341278261103496,
+          -0.30418877098104624,
+          0.011071661220000974
+        ],
+        [
+          0.34139602181159534,
+          0.3483406184457094,
+          0.07907486436352301
+        ]
+      ],
+      "faces": 9456,
+      "vertices": 28258,
+      "geometry_sha256": "2a381ad0f3d254a0d2f9a6e19f4b321ea11796d95b2c569977bf1c07290ea770"
+    }
+  ],
+  "joints": [
+    {
+      "name": "/root/E_body_1/FixedJoint",
+      "type": "fixed",
+      "parent": "link_002",
+      "child": "link_001",
+      "reference_q": 0,
+      "mimic": null
+    },
+    {
+      "name": "/root/E_blade_5/RevoluteJoint_ceiling_fan001_down",
+      "type": "continuous",
+      "parent": "link_001",
+      "child": "link_000",
+      "reference_q": 0,
+      "mimic": null
+    }
+  ],
+  "bounds": [
+    [
+      -0.33341278261103496,
+      -0.30418877098104624,
+      0.011071661220000974
+    ],
+    [
+      0.34139602181159534,
+      0.3483406184457094,
+      0.20315890366379058
+    ]
+  ],
+  "point_pool_size": 8192,
+  "reference_pose": "Authored default pose",
+  "qc": {
+    "finite_geometry": true,
+    "axis_unit": true,
+    "physical_collision_validation": false,
+    "manual_review": false,
+    "omitted_texture_images": true,
+    "warnings": []
+  }
+}

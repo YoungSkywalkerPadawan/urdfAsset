@@ -1,0 +1,76 @@
+<?xml version='1.0' encoding='utf-8'?>
+<robot name="0021-gs1-tripod-telescope-fantasy-001">
+  <link name="base_link">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/base_link.obj" />
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/base_link.obj" />
+      </geometry>
+    </collision>
+    <inertial>
+      <origin xyz="0.000112272799 -0.0331441015 0.1904389262" rpy="0 0 0" />
+      <mass value="3" />
+      <inertia ixx="0.07256522539676258" iyy="0.0820731582747456" izz="0.08210441443190053" ixy="0" ixz="0" iyz="0" />
+    </inertial>
+  </link>
+  <link name="azimuth_head">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/azimuth_head.obj" />
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/azimuth_head.obj" />
+      </geometry>
+    </collision>
+    <inertial>
+      <origin xyz="0.0001424364746 -0.05312385783 0.1880289763" rpy="0 0 0" />
+      <mass value="0.5" />
+      <inertia ixx="0.008580515782553552" iyy="0.007197834898877005" izz="0.004210168839780722" ixy="0" ixz="0" iyz="0" />
+    </inertial>
+  </link>
+  <link name="telescope_tube">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/telescope_tube.obj" />
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/telescope_tube.obj" />
+      </geometry>
+    </collision>
+    <inertial>
+      <origin xyz="0.0001438893378 -0.06982630491 -0.007199674845" rpy="0 0 0" />
+      <mass value="1.5" />
+      <inertia ixx="0.11965847862942214" iyy="0.018989978295917087" izz="0.10587093981266804" ixy="0" ixz="0" iyz="0" />
+    </inertial>
+  </link>
+  <joint name="azimuth_spin" type="continuous">
+    <parent link="base_link" />
+    <child link="azimuth_head" />
+    <origin xyz="-0.0002034862991 0.02616311051 0.3835594356" rpy="0 0 0" />
+    <axis xyz="0.0004961351515 0.0009168030228 0.9999994636" />
+    <limit effort="10" velocity="30" />
+    <dynamics damping=".01" friction=".001" />
+  </joint>
+  <joint name="tube_pitch" type="revolute">
+    <parent link="azimuth_head" />
+    <child link="telescope_tube" />
+    <origin xyz="0.0002644415945 0.04316552728 0.3425944149" rpy="0 0 0" />
+    <axis xyz="-0.9999971986 0.001511774375 -0.001833561691" />
+    <limit effort="10" velocity="30" lower="0" upper="0.15" />
+    <dynamics damping=".01" friction=".001" />
+  </joint>
+</robot>

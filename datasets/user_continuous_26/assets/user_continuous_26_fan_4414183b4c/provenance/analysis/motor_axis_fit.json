@@ -1,0 +1,476 @@
+{
+  "schema": "fan_motor_axis_fit/v1",
+  "source": "D:\\ai3\\LiteReality_motion_analysis_extract_20260828_1214\\outputs\\fan-assembly\\analysis\\geometry_components.npz",
+  "source_sha256": "d5cc0c466000ddad414f335511693ed26a4eb25623f9f501538deaf7a100428b",
+  "frame": "Blender native XYZ = (scene X, -scene Z, scene Y)",
+  "units": "Uncalibrated source native units; do not label them metres without the builder scale.",
+  "source_evidence": "Generated GLB mesh, not calibrated photographs, CAD or a measured physical motor.",
+  "method": "Exact triangle-edge intersections with Y planes; 3-point RANSAC circle candidates; robust geometric circle refinement; robust X(Y),Z(Y) center-line regression. Fixed random seed 9231.",
+  "circle_roi_x": [
+    -0.085,
+    0.085
+  ],
+  "circle_roi_z": [
+    0.01,
+    0.18
+  ],
+  "circle_ransac_inlier_threshold": 0.0015,
+  "circle_refinement_inlier_threshold": 0.002,
+  "selected_barrel_y": [
+    -0.085,
+    -0.015
+  ],
+  "slice_step": 0.0025,
+  "selection_reason": "Complete forward cylindrical barrel sections; excludes blade roots ahead of -.12 and switch/housing protrusions behind 0. Circle coverage >=23/24 bins, radius .037..05, radial RMS <.001.",
+  "axis_point_blender": [
+    -0.0001386882941298249,
+    -0.04999999999999997,
+    0.10011450553028163
+  ],
+  "axis_direction_blender_positive_rearward": [
+    0.0008106130489312437,
+    0.9999935005031819,
+    0.00351309804557061
+  ],
+  "axis_tilt_from_world_positive_Y_degrees": 0.20657498657467122,
+  "rotor_hub_center_at_y_minus_0_15_blender": [
+    -0.00021975012588406684,
+    -0.15,
+    0.09976319344237278
+  ],
+  "hub_y_status": "Y=-.15 selects a convenient plane inside the rotor region; axial position along the same rotation line is not identifiable from rotational kinematics. X/Z are extrapolated from fitted barrel.",
+  "section_count_selected": 29,
+  "section_center_line_orthogonal_residual_rms": 6.436677168000465e-05,
+  "section_center_line_orthogonal_residual_max": 0.00013389892786360623,
+  "selected_circle_radial_rms_median": 0.0005110592740806065,
+  "selected_circle_radius_median": 0.04540796828120801,
+  "bootstrap_95_percent_interval_direction_components": [
+    [
+      3.756201805504683e-06,
+      0.9999882894593972,
+      0.0019943803148168714
+    ],
+    [
+      0.0013528071509495258,
+      0.9999977531284053,
+      0.004768568641092674
+    ]
+  ],
+  "bootstrap_95_percent_interval_hub_xz": [
+    [
+      -0.00027372554690356535,
+      0.09964285326076619
+    ],
+    [
+      -0.00014902662751294438,
+      0.09991512034515317
+    ]
+  ],
+  "uncertainty_note": "Bootstrap quantifies slice-to-slice fit scatter only; generated shape bias and choice of cylindrical shell dominate physical uncertainty. Tiny nonzero tilt should not be interpreted as a measured real motor inclination.",
+  "confidence": {
+    "source_barrel_axis_line": "high within selected source geometry",
+    "sub_degree_tilt": "moderate; generated shape bias is not calibrated",
+    "real_world_mechanical_axis": "not established"
+  },
+  "sections": [
+    {
+      "y": -0.085,
+      "center_xz": [
+        -0.00017046528248582693,
+        0.09993380563648399
+      ],
+      "radius": 0.045416988427323175,
+      "inlier_count": 77,
+      "section_count": 149,
+      "angular_bins_of_24": 24,
+      "inlier_rms": 0.0005811524518772611,
+      "selected_for_axis": true
+    },
+    {
+      "y": -0.0825,
+      "center_xz": [
+        -0.00018220505030038642,
+        0.09991714664925917
+      ],
+      "radius": 0.04541096829122989,
+      "inlier_count": 80,
+      "section_count": 149,
+      "angular_bins_of_24": 24,
+      "inlier_rms": 0.0005806715480654853,
+      "selected_for_axis": true
+    },
+    {
+      "y": -0.08,
+      "center_xz": [
+        -0.00015051901497845354,
+        0.09995258279093593
+      ],
+      "radius": 0.045373186942599425,
+      "inlier_count": 83,
+      "section_count": 162,
+      "angular_bins_of_24": 24,
+      "inlier_rms": 0.0005490386990574114,
+      "selected_for_axis": true
+    },
+    {
+      "y": -0.0775,
+      "center_xz": [
+        -0.00013423686172755214,
+        0.10008837703037074
+      ],
+      "radius": 0.04539836736660673,
+      "inlier_count": 80,
+      "section_count": 166,
+      "angular_bins_of_24": 24,
+      "inlier_rms": 0.000551862008115568,
+      "selected_for_axis": true
+    },
+    {
+      "y": -0.075,
+      "center_xz": [
+        -0.00012222704237483574,
+        0.10014466156622966
+      ],
+      "radius": 0.04540796828120801,
+      "inlier_count": 78,
+      "section_count": 196,
+      "angular_bins_of_24": 24,
+      "inlier_rms": 0.00054679465010597,
+      "selected_for_axis": true
+    },
+    {
+      "y": -0.0725,
+      "center_xz": [
+        -0.00011724007391287247,
+        0.10009014964271713
+      ],
+      "radius": 0.045417910966259245,
+      "inlier_count": 76,
+      "section_count": 195,
+      "angular_bins_of_24": 24,
+      "inlier_rms": 0.0005221529202530407,
+      "selected_for_axis": true
+    },
+    {
+      "y": -0.06999999999999999,
+      "center_xz": [
+        -0.0001233858206051294,
+        0.1000450729084975
+      ],
+      "radius": 0.045436666846051334,
+      "inlier_count": 74,
+      "section_count": 191,
+      "angular_bins_of_24": 24,
+      "inlier_rms": 0.0005060031251345432,
+      "selected_for_axis": true
+    },
+    {
+      "y": -0.06749999999999999,
+      "center_xz": [
+        -0.00013165867940199762,
+        0.10008102074664174
+      ],
+      "radius": 0.04543187012440257,
+      "inlier_count": 76,
+      "section_count": 196,
+      "angular_bins_of_24": 24,
+      "inlier_rms": 0.0005241149960695037,
+      "selected_for_axis": true
+    },
+    {
+      "y": -0.06499999999999999,
+      "center_xz": [
+        -0.00012136388529769841,
+        0.10001753064419253
+      ],
+      "radius": 0.04143202498733849,
+      "inlier_count": 74,
+      "section_count": 149,
+      "angular_bins_of_24": 24,
+      "inlier_rms": 0.0004948090594024553,
+      "selected_for_axis": true
+    },
+    {
+      "y": -0.062499999999999986,
+      "center_xz": [
+        -0.00014940977440572843,
+        0.10005696800221858
+      ],
+      "radius": 0.045450827122301266,
+      "inlier_count": 72,
+      "section_count": 140,
+      "angular_bins_of_24": 24,
+      "inlier_rms": 0.0004974380288479491,
+      "selected_for_axis": true
+    },
+    {
+      "y": -0.059999999999999984,
+      "center_xz": [
+        -0.00015900467377916256,
+        0.10007884182170208
+      ],
+      "radius": 0.04544778702606848,
+      "inlier_count": 72,
+      "section_count": 140,
+      "angular_bins_of_24": 24,
+      "inlier_rms": 0.0005059467652192662,
+      "selected_for_axis": true
+    },
+    {
+      "y": -0.05749999999999998,
+      "center_xz": [
+        -0.00016265313547433188,
+        0.10010512064251807
+      ],
+      "radius": 0.04543079565419149,
+      "inlier_count": 74,
+      "section_count": 145,
+      "angular_bins_of_24": 24,
+      "inlier_rms": 0.0005253736781740436,
+      "selected_for_axis": true
+    },
+    {
+      "y": -0.05499999999999998,
+      "center_xz": [
+        -0.00015666018875028936,
+        0.10011207470628436
+      ],
+      "radius": 0.04542162755580731,
+      "inlier_count": 74,
+      "section_count": 141,
+      "angular_bins_of_24": 24,
+      "inlier_rms": 0.0005162642568313567,
+      "selected_for_axis": true
+    },
+    {
+      "y": -0.05249999999999998,
+      "center_xz": [
+        -0.0001633502966278005,
+        0.10010051692463096
+      ],
+      "radius": 0.04544612323900521,
+      "inlier_count": 70,
+      "section_count": 140,
+      "angular_bins_of_24": 24,
+      "inlier_rms": 0.0005036623014733644,
+      "selected_for_axis": true
+    },
+    {
+      "y": -0.049999999999999975,
+      "center_xz": [
+        -0.00016637953464306252,
+        0.10012605931412241
+      ],
+      "radius": 0.04544943354690252,
+      "inlier_count": 70,
+      "section_count": 140,
+      "angular_bins_of_24": 24,
+      "inlier_rms": 0.0005125024629407564,
+      "selected_for_axis": true
+    },
+    {
+      "y": -0.04749999999999997,
+      "center_xz": [
+        -0.0001854188421657289,
+        0.10014987845658903
+      ],
+      "radius": 0.04546742589740849,
+      "inlier_count": 72,
+      "section_count": 143,
+      "angular_bins_of_24": 24,
+      "inlier_rms": 0.000502654357640903,
+      "selected_for_axis": true
+    },
+    {
+      "y": -0.04499999999999997,
+      "center_xz": [
+        -0.00021071069264931886,
+        0.10014934588163908
+      ],
+      "radius": 0.04544828136346567,
+      "inlier_count": 77,
+      "section_count": 148,
+      "angular_bins_of_24": 24,
+      "inlier_rms": 0.0004984610734728882,
+      "selected_for_axis": true
+    },
+    {
+      "y": -0.04249999999999997,
+      "center_xz": [
+        -0.00019885383028904151,
+        0.10014688793246473
+      ],
+      "radius": 0.045431923837274894,
+      "inlier_count": 77,
+      "section_count": 150,
+      "angular_bins_of_24": 24,
+      "inlier_rms": 0.0004974402657554031,
+      "selected_for_axis": true
+    },
+    {
+      "y": -0.039999999999999966,
+      "center_xz": [
+        -0.00015363212554569521,
+        0.1001362685613417
+      ],
+      "radius": 0.045395634932373315,
+      "inlier_count": 75,
+      "section_count": 148,
+      "angular_bins_of_24": 24,
+      "inlier_rms": 0.0005256641798675126,
+      "selected_for_axis": true
+    },
+    {
+      "y": -0.037499999999999964,
+      "center_xz": [
+        -0.000141865584554615,
+        0.10011251934720593
+      ],
+      "radius": 0.04539834519986051,
+      "inlier_count": 74,
+      "section_count": 147,
+      "angular_bins_of_24": 24,
+      "inlier_rms": 0.0005093743042595175,
+      "selected_for_axis": true
+    },
+    {
+      "y": -0.03499999999999996,
+      "center_xz": [
+        -0.0001221314042427602,
+        0.10013172031199764
+      ],
+      "radius": 0.045376625535838905,
+      "inlier_count": 76,
+      "section_count": 146,
+      "angular_bins_of_24": 24,
+      "inlier_rms": 0.0005071240960045057,
+      "selected_for_axis": true
+    },
+    {
+      "y": -0.03249999999999996,
+      "center_xz": [
+        -0.00015717834851752753,
+        0.10010735363993999
+      ],
+      "radius": 0.045357865032004625,
+      "inlier_count": 78,
+      "section_count": 149,
+      "angular_bins_of_24": 24,
+      "inlier_rms": 0.0004938197563532705,
+      "selected_for_axis": true
+    },
+    {
+      "y": -0.029999999999999957,
+      "center_xz": [
+        -0.0001329449783822438,
+        0.10020235680236494
+      ],
+      "radius": 0.045405075112158494,
+      "inlier_count": 75,
+      "section_count": 174,
+      "angular_bins_of_24": 24,
+      "inlier_rms": 0.0004453167240778216,
+      "selected_for_axis": true
+    },
+    {
+      "y": -0.027499999999999955,
+      "center_xz": [
+        -0.00013035691205544805,
+        0.10024678863910874
+      ],
+      "radius": 0.04540748371868323,
+      "inlier_count": 74,
+      "section_count": 192,
+      "angular_bins_of_24": 24,
+      "inlier_rms": 0.00046751480572466704,
+      "selected_for_axis": true
+    },
+    {
+      "y": -0.024999999999999953,
+      "center_xz": [
+        -9.043122814740502e-05,
+        0.10027884002265944
+      ],
+      "radius": 0.04539234491634092,
+      "inlier_count": 78,
+      "section_count": 196,
+      "angular_bins_of_24": 24,
+      "inlier_rms": 0.0005670349813133853,
+      "selected_for_axis": true
+    },
+    {
+      "y": -0.02249999999999995,
+      "center_xz": [
+        -0.00011346745534335175,
+        0.10007724864455662
+      ],
+      "radius": 0.041376786789136984,
+      "inlier_count": 76,
+      "section_count": 180,
+      "angular_bins_of_24": 24,
+      "inlier_rms": 0.0005813175585521085,
+      "selected_for_axis": true
+    },
+    {
+      "y": -0.01999999999999995,
+      "center_xz": [
+        -7.232025597792082e-05,
+        0.10031882496108802
+      ],
+      "radius": 0.04529266379560378,
+      "inlier_count": 74,
+      "section_count": 193,
+      "angular_bins_of_24": 24,
+      "inlier_rms": 0.0004771422438630912,
+      "selected_for_axis": true
+    },
+    {
+      "y": -0.017499999999999946,
+      "center_xz": [
+        -5.955053436559974e-05,
+        0.10022988004792298
+      ],
+      "radius": 0.04524113011483443,
+      "inlier_count": 77,
+      "section_count": 183,
+      "angular_bins_of_24": 24,
+      "inlier_rms": 0.0005163173232263689,
+      "selected_for_axis": true
+    },
+    {
+      "y": -0.014999999999999944,
+      "center_xz": [
+        -5.0443032165472385e-05,
+        0.10017943262151863
+      ],
+      "radius": 0.045213576240621556,
+      "inlier_count": 76,
+      "section_count": 209,
+      "angular_bins_of_24": 24,
+      "inlier_rms": 0.0005110592740806065,
+      "selected_for_axis": true
+    }
+  ],
+  "comparison_prior_axis": {
+    "point": [
+      0,
+      0,
+      0.095
+    ],
+    "direction": [
+      0,
+      1,
+      0
+    ],
+    "hub_center_shift_native_units": [
+      -0.00021975012588406684,
+      0.0,
+      0.004763193442372776
+    ]
+  },
+  "limitations": [
+    "Motor body is not perfectly coaxial across housing changes; rear sections near Y=.005..025 center around Z=.1018..1025.",
+    "All fitting is to generated visible surfaces, not a visible internal shaft.",
+    "No mesh, builder or URDF file is modified by this script."
+  ]
+}

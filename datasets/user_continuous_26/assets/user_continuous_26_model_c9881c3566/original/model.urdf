@@ -1,0 +1,76 @@
+<?xml version='1.0' encoding='utf-8'?>
+<robot name="0012-folding-scooter-001">
+  <link name="base_link">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/base_link.obj" />
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/base_link.obj" />
+      </geometry>
+    </collision>
+    <inertial>
+      <origin xyz="-7.195770741e-05 0.01265397668 0.450258404" rpy="0 0 0" />
+      <mass value="3" />
+      <inertia ixx="0.38153770710203094" iyy="0.2680170788694527" izz="0.24501971531984879" ixy="0" ixz="0" iyz="0" />
+    </inertial>
+  </link>
+  <link name="front_wheel">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/front_wheel.obj" />
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/front_wheel.obj" />
+      </geometry>
+    </collision>
+    <inertial>
+      <origin xyz="0.0003787130117 -0.0003008209169 -0.0001526027918" rpy="0 0 0" />
+      <mass value="0.2" />
+      <inertia ixx="0.0010986974252976307" iyy="0.0005787828607364877" izz="0.0005816559157304004" ixy="0" ixz="0" iyz="0" />
+    </inertial>
+  </link>
+  <link name="rear_wheel">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/rear_wheel.obj" />
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/rear_wheel.obj" />
+      </geometry>
+    </collision>
+    <inertial>
+      <origin xyz="-0.0001594023779 -0.001210767776 0.0009397827089" rpy="0 0 0" />
+      <mass value="0.2" />
+      <inertia ixx="0.0009249551122510654" iyy="0.0005174083850870195" izz="0.0004607325791106278" ixy="0" ixz="0" iyz="0" />
+    </inertial>
+  </link>
+  <joint name="front_wheel_spin" type="continuous">
+    <parent link="base_link" />
+    <child link="front_wheel" />
+    <origin xyz="-0.0003591019486 -0.340441674 0.09460029006" rpy="0 0 0" />
+    <axis xyz="0.9999470115 0.006575293839 0.007918336429" />
+    <limit effort="10" velocity="30" />
+    <dynamics damping=".01" friction=".001" />
+  </joint>
+  <joint name="rear_wheel_spin" type="continuous">
+    <parent link="base_link" />
+    <child link="rear_wheel" />
+    <origin xyz="0.0003339888062 0.3277717829 0.09341492504" rpy="0 0 0" />
+    <axis xyz="0.9999384284 -0.006886912975 0.008701638319" />
+    <limit effort="10" velocity="30" />
+    <dynamics damping=".01" friction=".001" />
+  </joint>
+</robot>

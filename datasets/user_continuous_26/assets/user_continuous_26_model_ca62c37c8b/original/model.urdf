@@ -1,0 +1,76 @@
+<?xml version='1.0' encoding='utf-8'?>
+<robot name="0024-rotating-cutting-table">
+  <link name="base_link">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/base_link.obj" />
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/base_link.obj" />
+      </geometry>
+    </collision>
+    <inertial>
+      <origin xyz="0.0003452599049 -0.0004730597138 0.2999999821" rpy="0 0 0" />
+      <mass value="8" />
+      <inertia ixx="0.3501463753159868" iyy="0.4267120478207313" izz="0.2968584803571754" ixy="0" ixz="0" iyz="0" />
+    </inertial>
+  </link>
+  <link name="turntable">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/turntable.obj" />
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/turntable.obj" />
+      </geometry>
+    </collision>
+    <inertial>
+      <origin xyz="-0.0001142174006 0.0002339035273 0.02798157185" rpy="0 0 0" />
+      <mass value="2" />
+      <inertia ixx="0.045452877974037076" iyy="0.045399985122326715" izz="0.08990789829278138" ixy="0" ixz="0" iyz="0" />
+    </inertial>
+  </link>
+  <link name="cutting_roller">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/cutting_roller.obj" />
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/cutting_roller.obj" />
+      </geometry>
+    </collision>
+    <inertial>
+      <origin xyz="3.462936729e-05 1.452863216e-07 -1.975893974e-05" rpy="0 0 0" />
+      <mass value="0.15" />
+      <inertia ixx="0.00010344643711647852" iyy="8.021970108686508e-05" izz="8.016663420668118e-05" ixy="0" ixz="0" iyz="0" />
+    </inertial>
+  </link>
+  <joint name="table_spin" type="continuous">
+    <parent link="base_link" />
+    <child link="turntable" />
+    <origin xyz="7.01740064e-05 -0.0001593522611 0.1469805837" rpy="0 0 0" />
+    <axis xyz="-0.002140089637 -0.0002226952929 0.9999976754" />
+    <limit effort="10" velocity="30" />
+    <dynamics damping=".01" friction=".001" />
+  </joint>
+  <joint name="roller_spin" type="continuous">
+    <parent link="base_link" />
+    <child link="cutting_roller" />
+    <origin xyz="-0.000789599726 0.08262361586 0.2382903099" rpy="0 0 0" />
+    <axis xyz="0.999950707 0.006297699641 -0.007674712688" />
+    <limit effort="10" velocity="30" />
+    <dynamics damping=".01" friction=".001" />
+  </joint>
+</robot>

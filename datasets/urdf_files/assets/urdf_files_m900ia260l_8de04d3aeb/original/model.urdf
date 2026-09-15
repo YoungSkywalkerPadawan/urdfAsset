@@ -1,0 +1,236 @@
+<?xml version='1.0' encoding='utf-8'?>
+<robot name="fanuc_m900ia260l">
+  
+  <link name="base_link">
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <geometry>
+        <mesh filename="resources/8afe8778693e4f54906124d5.stl" />
+      </geometry>
+      <material name="">
+        <color rgba="0.30980392156862746 0.30980392156862746 0.30980392156862746 1.0" />
+      </material>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <geometry>
+        <mesh filename="resources/8afe8778693e4f54906124d5.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="link_1">
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <geometry>
+        <mesh filename="resources/cf2aa0d8e94c12e5b9627a75.stl" />
+      </geometry>
+      <material name="">
+        <color rgba="0.96 0.76 0.13 1.0" />
+      </material>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <geometry>
+        <mesh filename="resources/cf2aa0d8e94c12e5b9627a75.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="link_2">
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <geometry>
+        <mesh filename="resources/9f44bb730cb1c0f2bb629f11.stl" />
+      </geometry>
+      <material name="">
+        <color rgba="0.96 0.76 0.13 1.0" />
+      </material>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <geometry>
+        <mesh filename="resources/9f44bb730cb1c0f2bb629f11.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="link_3">
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <geometry>
+        <mesh filename="resources/f1011c63c9628acdbd698e07.stl" />
+      </geometry>
+      <material name="">
+        <color rgba="0.96 0.76 0.13 1.0" />
+      </material>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <geometry>
+        <mesh filename="resources/f1011c63c9628acdbd698e07.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="link_4">
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <geometry>
+        <mesh filename="resources/5cef3321e6a3c6ebe826ef5e.stl" />
+      </geometry>
+      <material name="">
+        <color rgba="0.96 0.76 0.13 1.0" />
+      </material>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <geometry>
+        <mesh filename="resources/5cef3321e6a3c6ebe826ef5e.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="link_5">
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <geometry>
+        <mesh filename="resources/b37431453a9ba95c6e12ef2b.stl" />
+      </geometry>
+      <material name="">
+        <color rgba="0.96 0.76 0.13 1.0" />
+      </material>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <geometry>
+        <mesh filename="resources/b37431453a9ba95c6e12ef2b.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="link_6">
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <geometry>
+        <mesh filename="resources/3ce6f0adfb38077e4887e8ed.stl" />
+      </geometry>
+      <material name="">
+        <color rgba="0.15 0.15 0.15 1.0" />
+      </material>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <geometry>
+        <mesh filename="resources/3ce6f0adfb38077e4887e8ed.stl" />
+      </geometry>
+    </collision>
+  </link>
+  
+  <joint name="joint_1" type="revolute">
+    <origin rpy="0 0 0" xyz="0 0 0.950" />
+    <parent link="base_link" />
+    <child link="link_1" />
+    <axis xyz="0 0 1" />
+    <limit effort="0" lower="-3.141593" upper="3.141593" velocity="1.745329" />
+  </joint>
+  <joint name="joint_2" type="revolute">
+    <origin rpy="0 0 0" xyz="0.370 0 0" />
+    <parent link="link_1" />
+    <child link="link_2" />
+    <axis xyz="0 1 0" />
+    <limit effort="0" lower="-1.308997" upper="1.308997" velocity="1.832596" />
+  </joint>
+  <joint name="joint_3" type="revolute">
+    <origin rpy="0 0 0" xyz="0 0 1.050" />
+    <parent link="link_2" />
+    <child link="link_3" />
+    <axis xyz="0 -1 0" />
+    <limit effort="0" lower="-2.116665" upper="1.570796" velocity="1.658063" />
+  </joint>
+  <joint name="joint_4" type="revolute">
+    <origin rpy="0 0 0" xyz="0 0 0.200" />
+    <parent link="link_3" />
+    <child link="link_4" />
+    <axis xyz="-1 0 0" />
+    <limit effort="0" lower="-6.283185" upper="6.283185" velocity="2.094395" />
+  </joint>
+  <joint name="joint_5" type="revolute">
+    <origin rpy="0 0 0" xyz="1.705 0 0" />
+    <parent link="link_4" />
+    <child link="link_5" />
+    <axis xyz="0 -1 0" />
+    <limit effort="0" lower="-2.181662" upper="2.181662" velocity="2.094395" />
+  </joint>
+  <joint name="joint_6" type="revolute">
+    <origin rpy="0 0 0" xyz="0.270 0 0" />
+    <parent link="link_5" />
+    <child link="link_6" />
+    <axis xyz="-1 0 0" />
+    <limit effort="0" lower="-6.283185" upper="6.283185" velocity="3.490658" />
+  </joint>
+  
+  <link name="plink_1">
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <geometry>
+        <mesh filename="resources/8bef39cbe4598063c5115d79.stl" />
+      </geometry>
+      <material name="">
+        <color rgba="0.96 0.76 0.13 1.0" />
+      </material>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <geometry>
+        <mesh filename="resources/8bef39cbe4598063c5115d79.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="plink_2">
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <geometry>
+        <mesh filename="resources/15025a82e202f20cf817e679.stl" />
+      </geometry>
+      <material name="">
+        <color rgba="0.96 0.76 0.13 1.0" />
+      </material>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <geometry>
+        <mesh filename="resources/15025a82e202f20cf817e679.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="pjoint_1" type="continuous">
+    <origin rpy="0 0 0" xyz="0 0.17 0" />
+    <parent link="link_2" />
+    <child link="plink_1" />
+    <axis xyz="0 1 0" />
+    <mimic joint="joint_3" multiplier="-1" offset="0" />
+  </joint>
+  <joint name="pjoint_2" type="continuous">
+    <origin rpy="0 0 0" xyz="-0.4 0.096 0" />
+    <parent link="link_3" />
+    <child link="plink_2" />
+    <axis xyz="0 1 0" />
+    <mimic joint="joint_3" multiplier="1" offset="0" />
+  </joint>
+  
+  <link name="base" />
+  <joint name="base_link-base" type="fixed">
+    <origin rpy="0 0 0" xyz="0 0 0.950" />
+    <parent link="base_link" />
+    <child link="base" />
+  </joint>
+  
+  <link name="flange" />
+  <joint name="joint_6-flange" type="fixed">
+    <origin rpy="0 0 0" xyz="0 0 0" />
+    <parent link="link_6" />
+    <child link="flange" />
+  </joint>
+  
+  <link name="tool0" />
+  <joint name="link_6-tool0" type="fixed">
+    <origin rpy="3.141592653589793 -1.5707963267948966 0" xyz="0 0 0" />
+    <parent link="flange" />
+    <child link="tool0" />
+  </joint>
+</robot>

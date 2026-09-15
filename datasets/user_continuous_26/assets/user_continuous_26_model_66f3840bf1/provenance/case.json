@@ -1,0 +1,96 @@
+{
+  "id": "0026-wheat-mill",
+  "title": "Four-sail wheat mill",
+  "source": "0026-wheat-mill.glb",
+  "nominal_height_m": 0.65,
+  "duration_s": 10,
+  "max_rpm": 8,
+  "camera_direction": [
+    3,
+    -4,
+    1.5
+  ],
+  "camera_extent_native": 1.12,
+  "motion_label": "All four sails rotate together on the measured wooden windshaft",
+  "links": [
+    {
+      "name": "base_link",
+      "mass": 4,
+      "clearance_recesses": [
+        {
+          "origin": [
+            -0.018756551136731813,
+            -0.248,
+            0.2033894311036928
+          ],
+          "axis": [
+            -0.1773721904093531,
+            -0.9742897654280216,
+            0.13891925371092043
+          ],
+          "radius": 0.04,
+          "outer_radius": 0.05,
+          "back_plane": -0.003,
+          "front_bound": 0.05
+        }
+      ]
+    },
+    {
+      "name": "sail_rotor",
+      "parent": "base_link",
+      "joint_name": "windshaft_spin",
+      "type": "continuous",
+      "origin": [
+        -0.018756551136731813,
+        -0.248,
+        0.2033894311036928
+      ],
+      "axis": [
+        -0.1773721904093531,
+        -0.9742897654280216,
+        0.13891925371092043
+      ],
+      "mass": 0.4,
+      "mesh_shift_native": [
+        -0.0005321165712280593,
+        -0.002922869296284065,
+        0.0004167577611327613
+      ],
+      "clearance_recesses": [
+        {
+          "origin": [
+            -0.018756551136731813,
+            -0.248,
+            0.2033894311036928
+          ],
+          "axis": [
+            0.1773721904093531,
+            0.9742897654280216,
+            -0.13891925371092043
+          ],
+          "radius": 0.036,
+          "outer_radius": 0.045,
+          "back_plane": -0.001
+        }
+      ],
+      "cap_color": [
+        0.35,
+        0.18,
+        0.085,
+        1
+      ],
+      "cap_roughness": 0.75,
+      "cap_max_sides": 12
+    }
+  ],
+  "face_owner_names": [
+    "base_link",
+    "sail_rotor"
+  ],
+  "inferences": [
+    "The four cloth sails, their wooden spars and front hub form one rigid rotor with one continuous joint. Each sail retains its fixed position relative to the hub.",
+    "The axle connects the measured front hub center to the mean of three exposed rear-shaft section centers. An initial cylinder fit contaminated by the roof was rejected. Tower, roof and rear shaft remain fixed; internal milling gears and roof yaw are not inferred.",
+    "Small local interface recesses and a 0.003-native-unit outward shift separate the generated fused shaft interface. Original sails, thickness irregularities, UVs and materials are preserved.",
+    "Rotation direction and speed are demonstration choices. Nominal 0.65 m height, mass and inertia are estimates; the source GLB remains unchanged."
+  ]
+}

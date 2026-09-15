@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='utf-8'?>
+<robot name="0011-exaggerated-slicer">
+  <link name="base_link">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/base_link.obj" />
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/base_link.obj" />
+      </geometry>
+    </collision>
+    <inertial>
+      <origin xyz="-0.0001598224044 3.412365913e-06 0.25" rpy="0 0 0" />
+      <mass value="2" />
+      <inertia ixx="0.058024154788212844" iyy="0.057930944751121295" izz="0.0326217662060008" ixy="0" ixz="0" iyz="0" />
+    </inertial>
+  </link>
+  <link name="wheel">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/wheel.obj" />
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/wheel.obj" />
+      </geometry>
+    </collision>
+    <inertial>
+      <origin xyz="3.773346543e-05 -0.003088491969 0.0005211345851" rpy="0 0 0" />
+      <mass value="0.15" />
+      <inertia ixx="0.00010363648480521196" iyy="0.0001665001411898584" izz="0.00010451892053870218" ixy="0" ixz="0" iyz="0" />
+    </inertial>
+  </link>
+  <joint name="wheel_spin" type="continuous">
+    <parent link="base_link" />
+    <child link="wheel" />
+    <origin xyz="0.005990942009 0.004811867606 0.1400140822" rpy="0 0 0" />
+    <axis xyz="0.01933838241 -0.9984515905 0.05215796083" />
+    <limit effort="10" velocity="30" />
+    <dynamics damping=".01" friction=".001" />
+  </joint>
+</robot>

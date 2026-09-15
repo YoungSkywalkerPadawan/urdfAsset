@@ -1,0 +1,141 @@
+{
+  "summary": {
+    "id": "infinigen_articulated_pepper_grinder_acf47ae06e",
+    "category": "infinigen_articulated/pepper_grinder",
+    "robot_name": "urdf/pepper_grinder/1481/pepper_grinder.urdf",
+    "joint_count": 1,
+    "link_count": 2,
+    "target_link_count": 2,
+    "family": "pepper_grinder",
+    "warnings": [],
+    "diagonal": 0.22720375579379268,
+    "dataset": "infinigen_articulated",
+    "bytes": 374298,
+    "continuous_joint_count": 0,
+    "training_role": "bounded_rotation_axis_auxiliary"
+  },
+  "source": {
+    "dataset": "princeton-vl/infinigen-articulated",
+    "revision": "58df7d3f885a9b7288b7792f70834afb6337dffa",
+    "license": "CC-BY-4.0",
+    "url": "https://huggingface.co/datasets/princeton-vl/infinigen-articulated",
+    "up_axis": "Z",
+    "family": "pepper_grinder",
+    "reference_pose": "URDF zero clamped to limits; mimic propagated",
+    "resolved_meshes": [
+      {
+        "path": "urdf/pepper_grinder/1481/assets/Lid_0.obj",
+        "sha256": "24afe8db55a641f8bb09df8f1470fe6576a4680c2839c54686d4be610a861730"
+      },
+      {
+        "path": "urdf/pepper_grinder/1481/assets/Lid_1.obj",
+        "sha256": "02f28c10e62d7105287dd3871179a400bb2aaf7f190f4a834de0792728a32d10"
+      },
+      {
+        "path": "urdf/pepper_grinder/1481/assets/Lid_2.obj",
+        "sha256": "8b99b40b5fbe9404d48f68d9fc4dd2c729228a4d905f10ff4aec88533f62f025"
+      },
+      {
+        "path": "urdf/pepper_grinder/1481/assets/Full Base_Chamber_0.obj",
+        "sha256": "78d63a2e4ee8c025121eca379c11b7572343001bf9722be9d5695eb2de4d4442"
+      },
+      {
+        "path": "urdf/pepper_grinder/1481/assets/Knee_Full Base_0.obj",
+        "sha256": "df1ad50085c72fc3c72b9b9990830c6b736e88004222b63e7bd190406af8219b"
+      },
+      {
+        "path": "urdf/pepper_grinder/1481/assets/Foot_Full Base_0.obj",
+        "sha256": "ed16dbba8fe12a3fe853a5e2fb4e0835e399c4475188b62e32432d6005964efe"
+      }
+    ],
+    "files": [
+      {
+        "path": "/root/continuous-public-data-20260911/extracted/infinigen_articulated/urdf/pepper_grinder/1481/pepper_grinder.urdf",
+        "sha256": "183ea93057e94c04bcbf5a3918ebbd1354a8e4b407c82d64649bbcafa269f792",
+        "bytes": 8152
+      }
+    ]
+  },
+  "links": [
+    {
+      "id": "link_001",
+      "name": "link_1",
+      "point_file": "inputs/link_001.npz",
+      "bounds": [
+        [
+          -0.0034729254941940307,
+          -0.03820279718238115,
+          0.17406370950078964
+        ],
+        [
+          0.003473074505805969,
+          0.0034732028176188458,
+          0.19423336091136933
+        ]
+      ],
+      "faces": 36,
+      "vertices": 72,
+      "geometry_sha256": "8f9ac6eea5d15823d5319797ba3600789e4e3fe7ea18736fa132994ec4275c3a"
+    },
+    {
+      "id": "link_000",
+      "name": "link_0",
+      "point_file": "inputs/link_000.npz",
+      "bounds": [
+        [
+          -0.041676,
+          -0.041676,
+          4.2127752304145505e-07
+        ],
+        [
+          0.041676,
+          0.041676,
+          0.17406375965797902
+        ]
+      ],
+      "faces": 3486,
+      "vertices": 4402,
+      "geometry_sha256": "257df485fd249a431ce28ec6590bff7a2169c82b2c340118b990f95904030bac"
+    }
+  ],
+  "joints": [
+    {
+      "name": "world_joint",
+      "type": "fixed",
+      "parent": "link_002",
+      "child": "link_000",
+      "reference_q": 0.0,
+      "mimic": null
+    },
+    {
+      "name": "Lid Joint_0",
+      "type": "revolute",
+      "parent": "link_000",
+      "child": "link_001",
+      "reference_q": 0.0,
+      "mimic": null
+    }
+  ],
+  "bounds": [
+    [
+      -0.041676,
+      -0.041676,
+      4.2127752304145505e-07
+    ],
+    [
+      0.041676,
+      0.041676,
+      0.19423336091136933
+    ]
+  ],
+  "point_pool_size": 8192,
+  "reference_pose": "URDF zero clamped to limits; mimic propagated",
+  "qc": {
+    "finite_geometry": true,
+    "axis_unit": true,
+    "physical_collision_validation": false,
+    "manual_review": false,
+    "omitted_texture_images": true,
+    "warnings": []
+  }
+}

@@ -1,0 +1,173 @@
+{
+  "summary": {
+    "id": "artvip_chemistry_825e99e628",
+    "category": "artvip/small_instrument",
+    "robot_name": "Articulated_objects/lab_items/small_instrument/centrifuge/chemistry.usd",
+    "joint_count": 1,
+    "link_count": 4,
+    "target_link_count": 2,
+    "family": "Articulated_objects/lab_items/small_instrument/centrifuge/",
+    "warnings": [],
+    "diagonal": 0.6848461592732507,
+    "dataset": "artvip",
+    "bytes": 10553296,
+    "continuous_joint_count": 1,
+    "training_role": "continuous_supervision"
+  },
+  "source": {
+    "dataset": "X-Humanoid/ArtVIP",
+    "revision": "d22f2095bc9db29fdd4b60f4a3c4f8177e1f5e9e",
+    "license": "Apache-2.0",
+    "url": "https://huggingface.co/datasets/X-Humanoid/ArtVIP",
+    "family": "Articulated_objects/lab_items/small_instrument/centrifuge/",
+    "label_status": "Authored reference; not manually verified",
+    "up_axis": "Z",
+    "source_meters_per_unit": 1.0,
+    "meters_per_unit_authored": true,
+    "files": [
+      {
+        "path": "/root/continuous-public-data-20260911/raw/artvip/Articulated_objects/lab_items/small_instrument/centrifuge/chemistry.usd",
+        "sha256": "524cc2c3037d8d955c396298bfe5ba7e7e77ec2b0dc0d3a6fcf155860c64d5d8",
+        "bytes": 136591231
+      }
+    ]
+  },
+  "links": [
+    {
+      "id": "link_003",
+      "name": "/root/E_lid_30745",
+      "point_file": null,
+      "bounds": [
+        [
+          -0.14712553185678956,
+          -0.12739726042062294,
+          0.22883011860456165
+        ],
+        [
+          0.15818961312953106,
+          0.13204905669823808,
+          0.3093534251712626
+        ]
+      ],
+      "faces": 113014,
+      "vertices": 56780,
+      "geometry_sha256": "8b62ef3efb309568eef390570d31d25efc0b25a9d82e4312643d37eee2be17a3"
+    },
+    {
+      "id": "link_001",
+      "name": "/root/E_button_31118",
+      "point_file": null,
+      "bounds": [
+        [
+          -0.008343737625774202,
+          -0.006489471943806254,
+          0.30387762671087964
+        ],
+        [
+          0.009656261599365416,
+          0.011510527281333364,
+          0.3108776269269465
+        ]
+      ],
+      "faces": 128,
+      "vertices": 66,
+      "geometry_sha256": "961b8cd771effb2eb30a8346b2b1017f71932f9783d04f2e282b7b6e4de435c7"
+    },
+    {
+      "id": "link_000",
+      "name": "/root/E_body_30738",
+      "point_file": "inputs/link_000.npz",
+      "bounds": [
+        [
+          -0.18303711712360382,
+          -0.13110265135765076,
+          -0.00013307201879797503
+        ],
+        [
+          0.24334672093391418,
+          0.3053414225578308,
+          0.2867516488093299
+        ]
+      ],
+      "faces": 382520,
+      "vertices": 192375,
+      "geometry_sha256": "4703b8f414834de0b1f792b510505dea549062b80721319aedbe8d7cd01af72f"
+    },
+    {
+      "id": "link_002",
+      "name": "/root/E_centrifuge_30739",
+      "point_file": "inputs/link_002.npz",
+      "bounds": [
+        [
+          -0.11591269821613291,
+          -0.11517660320797675,
+          0.188725046813488
+        ],
+        [
+          0.11607661098919944,
+          0.11773721129694172,
+          0.26333434879779816
+        ]
+      ],
+      "faces": 15244,
+      "vertices": 7894,
+      "geometry_sha256": "097c2c52c6072a1c70a5bdfd861fc59907c4d05b1b401cc3a7be15ae4be7c659"
+    }
+  ],
+  "joints": [
+    {
+      "name": "/root/E_lid_30745/RevoluteJointchemistry_up",
+      "type": "revolute",
+      "parent": "link_000",
+      "child": "link_003",
+      "reference_q": 3.4228542728250984e-08,
+      "mimic": null
+    },
+    {
+      "name": "/root/E_button_31118/PrismaticJointchemistry_up1",
+      "type": "prismatic",
+      "parent": "link_003",
+      "child": "link_001",
+      "reference_q": 0.0,
+      "mimic": null
+    },
+    {
+      "name": "/root/E_body_30738/FixedJoint",
+      "type": "fixed",
+      "parent": "link_004",
+      "child": "link_000",
+      "reference_q": 0.0,
+      "mimic": null
+    },
+    {
+      "name": "/root/E_centrifuge_30739/RevoluteJoint_chemistry_01_middle",
+      "type": "continuous",
+      "parent": "link_000",
+      "child": "link_002",
+      "reference_q": 0.0,
+      "mimic": null
+    }
+  ],
+  "bounds": [
+    [
+      -0.18303711712360382,
+      -0.13110265135765076,
+      -0.00013307201879797503
+    ],
+    [
+      0.24334672093391418,
+      0.3053414225578308,
+      0.3108776269269465
+    ]
+  ],
+  "point_pool_size": 8192,
+  "reference_pose": "Authored default pose",
+  "qc": {
+    "finite_geometry": true,
+    "axis_unit": true,
+    "physical_collision_validation": false,
+    "manual_review": false,
+    "omitted_texture_images": true,
+    "warnings": []
+  }
+}

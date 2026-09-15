@@ -1,0 +1,99 @@
+{
+  "coordinates": "metres; X right, Y rearward, Z up",
+  "nominal_height_m": 0.5,
+  "source_to_m_scale": 0.49868610965579063,
+  "actual_dimensions_measured": false,
+  "joints": [
+    {
+      "name": "pedestal_fixed",
+      "parent": "base_link",
+      "child": "pedestal",
+      "type": "fixed",
+      "xyz": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "axis": [
+        0,
+        0,
+        1
+      ],
+      "limits": null
+    },
+    {
+      "name": "yaw_joint",
+      "parent": "pedestal",
+      "child": "yaw_carrier",
+      "type": "revolute",
+      "xyz": [
+        0.0,
+        0.037401460111141205,
+        0.20520392060279846
+      ],
+      "axis": [
+        0,
+        0,
+        1
+      ],
+      "limits": [
+        -0.6108652381980153,
+        0.6108652381980153
+      ]
+    },
+    {
+      "name": "pitch_joint",
+      "parent": "yaw_carrier",
+      "child": "motor_head",
+      "type": "revolute",
+      "xyz": [
+        0.0,
+        0.0,
+        0.0623357892036438
+      ],
+      "axis": [
+        1,
+        0,
+        0
+      ],
+      "limits": [
+        -0.2617993877991494,
+        0.3490658503988659
+      ]
+    },
+    {
+      "name": "guard_fixed",
+      "parent": "motor_head",
+      "child": "guard",
+      "type": "fixed",
+      "xyz": [
+        0.0,
+        -0.1221781000494957,
+        0.02992117404937744
+      ],
+      "axis": [
+        0,
+        0,
+        1
+      ],
+      "limits": null
+    },
+    {
+      "name": "rotor_joint",
+      "parent": "motor_head",
+      "child": "rotor",
+      "type": "continuous",
+      "xyz": [
+        -0.00010958633356494829,
+        -0.11220438033342361,
+        0.03229650855064392
+      ],
+      "axis": [
+        0.0008106130408123136,
+        0.9999935030937195,
+        0.003513097995892167
+      ],
+      "limits": null
+    }
+  ]
+}

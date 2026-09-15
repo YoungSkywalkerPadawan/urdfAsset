@@ -1,0 +1,155 @@
+{
+  "summary": {
+    "id": "artvip_model_microscope_932cb641de",
+    "category": "artvip/microscope",
+    "robot_name": "Articulated_objects/lab_items/microscope/microscope/model_microscope.usd",
+    "joint_count": 1,
+    "link_count": 3,
+    "target_link_count": 2,
+    "family": "Articulated_objects/lab_items/microscope/microscope/",
+    "warnings": [],
+    "diagonal": 0.6954056233615017,
+    "dataset": "artvip",
+    "bytes": 11876111,
+    "continuous_joint_count": 1,
+    "training_role": "continuous_supervision"
+  },
+  "source": {
+    "dataset": "X-Humanoid/ArtVIP",
+    "revision": "d22f2095bc9db29fdd4b60f4a3c4f8177e1f5e9e",
+    "license": "Apache-2.0",
+    "url": "https://huggingface.co/datasets/X-Humanoid/ArtVIP",
+    "family": "Articulated_objects/lab_items/microscope/microscope/",
+    "label_status": "Authored reference; not manually verified",
+    "up_axis": "Z",
+    "source_meters_per_unit": 1.0,
+    "meters_per_unit_authored": true,
+    "files": [
+      {
+        "path": "/root/continuous-public-data-20260911/raw/artvip/Articulated_objects/lab_items/microscope/microscope/model_microscope.usd",
+        "sha256": "5b091f7b824e518eee9097893284594c9eead89c353e92b1808c7edd45f2ec59",
+        "bytes": 13566
+      },
+      {
+        "path": "/root/continuous-public-data-20260911/raw/artvip/Articulated_objects/lab_items/microscope/microscope/resource/material.usd",
+        "sha256": "e739857b761f764a2f1ad1cd22946596b0da2c6271cb005a844b792b1471cbcd",
+        "bytes": 2631
+      },
+      {
+        "path": "/root/continuous-public-data-20260911/raw/artvip/Articulated_objects/lab_items/microscope/microscope/resource/v_0/link_0.usd",
+        "sha256": "468b4a2ef0292d378c06765f5c1cd19c14576c23aadb151c7546a0708a92a8da",
+        "bytes": 12852153
+      }
+    ]
+  },
+  "links": [
+    {
+      "id": "link_000",
+      "name": "/root/E_body_1",
+      "point_file": "inputs/link_000.npz",
+      "bounds": [
+        [
+          -0.09019999951124191,
+          -0.2282000035047531,
+          0.0
+        ],
+        [
+          0.09019999951124191,
+          0.12999999523162842,
+          0.5680999755859375
+        ]
+      ],
+      "faces": 115317,
+      "vertices": 345951,
+      "geometry_sha256": "0d8f76c2131bfc8839abb9f7c23598a21fdeb36f7f16fc49e9dad8ec20838995"
+    },
+    {
+      "id": "link_001",
+      "name": "/root/E_button1_2",
+      "point_file": null,
+      "bounds": [
+        [
+          0.03230640038743019,
+          0.1251149,
+          0.028707899991804363
+        ],
+        [
+          0.05070639986439943,
+          0.1296148998062849,
+          0.04130790000819564
+        ]
+      ],
+      "faces": 300,
+      "vertices": 900,
+      "geometry_sha256": "0dfe7199857523a197a20fc9d847c1a4ad4f42341f78f84672aab0ce9cc3a14d"
+    },
+    {
+      "id": "link_002",
+      "name": "/root/E_lens_3",
+      "point_file": "inputs/link_002.npz",
+      "bounds": [
+        [
+          -0.05483780139474869,
+          -0.13556500098144536,
+          0.263051798046919
+        ],
+        [
+          0.055362201394748685,
+          -0.03017172836257828,
+          0.352583095912719
+        ]
+      ],
+      "faces": 18183,
+      "vertices": 54549,
+      "geometry_sha256": "3dacde229aa1a66f475b37aa39c714c5cca9085a47ad486f883a44ea97c7383d"
+    }
+  ],
+  "joints": [
+    {
+      "name": "/root/E_body_1/FixedJoint",
+      "type": "fixed",
+      "parent": "link_003",
+      "child": "link_000",
+      "reference_q": 0.0,
+      "mimic": null
+    },
+    {
+      "name": "/root/E_button1_2/RevoluteJoint_microscope_down",
+      "type": "revolute",
+      "parent": "link_000",
+      "child": "link_001",
+      "reference_q": 0.0,
+      "mimic": null
+    },
+    {
+      "name": "/root/E_lens_3/RevoluteJoint_microscope_up",
+      "type": "continuous",
+      "parent": "link_000",
+      "child": "link_002",
+      "reference_q": 0.0,
+      "mimic": null
+    }
+  ],
+  "bounds": [
+    [
+      -0.09019999951124191,
+      -0.2282000035047531,
+      0.0
+    ],
+    [
+      0.09019999951124191,
+      0.12999999523162842,
+      0.5680999755859375
+    ]
+  ],
+  "point_pool_size": 8192,
+  "reference_pose": "Authored default pose",
+  "qc": {
+    "finite_geometry": true,
+    "axis_unit": true,
+    "physical_collision_validation": false,
+    "manual_review": false,
+    "omitted_texture_images": true,
+    "warnings": []
+  }
+}

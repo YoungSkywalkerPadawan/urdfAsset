@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='utf-8'?>
+<robot name="0005-casual_music_box_g1_bom">
+  <link name="base_link">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/base_link.obj" />
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/base_link.obj" />
+      </geometry>
+    </collision>
+    <inertial>
+      <origin xyz="5.431473255e-06 0.01907988265 0.1099999994" rpy="0 0 0" />
+      <mass value="0.6" />
+      <inertia ixx="0.004601394690480776" iyy="0.004229952294358919" izz="0.003991347037291781" ixy="0" ixz="0" iyz="0" />
+    </inertial>
+  </link>
+  <link name="crank">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/crank.obj" />
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/crank.obj" />
+      </geometry>
+    </collision>
+    <inertial>
+      <origin xyz="-3.098137677e-05 -0.03185715899 -0.01679729298" rpy="0 0 0" />
+      <mass value="0.04" />
+      <inertia ixx="1.1204502034701616e-05" iyy="7.452028967365373e-06" izz="8.060735830308271e-06" ixy="0" ixz="0" iyz="0" />
+    </inertial>
+  </link>
+  <joint name="crank_spin" type="continuous">
+    <parent link="base_link" />
+    <child link="crank" />
+    <origin xyz="5.074770888e-05 -0.07403490692 0.06858866662" rpy="0 0 0" />
+    <axis xyz="0.0006700793165 -0.9999881387 -0.004826916382" />
+    <limit effort="10" velocity="30" />
+    <dynamics damping=".01" friction=".001" />
+  </joint>
+</robot>

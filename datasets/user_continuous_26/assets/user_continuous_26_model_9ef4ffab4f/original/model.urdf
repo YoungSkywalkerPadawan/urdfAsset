@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='utf-8'?>
+<robot name="0023-perpetual-motion-machine-ce4fab940bc5">
+  <link name="base_link">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/base_link.obj" />
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/base_link.obj" />
+      </geometry>
+    </collision>
+    <inertial>
+      <origin xyz="-2.939999104e-05 -2.178549767e-05 0.1499999911" rpy="0 0 0" />
+      <mass value="0.7" />
+      <inertia ixx="0.009725266700005907" iyy="0.008695830727233641" izz="0.007921098678937052" ixy="0" ixz="0" iyz="0" />
+    </inertial>
+  </link>
+  <link name="inner_orbit_rotor">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/inner_orbit_rotor.obj" />
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/inner_orbit_rotor.obj" />
+      </geometry>
+    </collision>
+    <inertial>
+      <origin xyz="-0.0001964289695 -7.179379463e-05 0.001884583384" rpy="0 0 0" />
+      <mass value="0.15" />
+      <inertia ixx="0.0009539277877716051" iyy="0.0006502209246186163" izz="0.0006551203889367946" ixy="0" ixz="0" iyz="0" />
+    </inertial>
+  </link>
+  <joint name="orbit_spin" type="continuous">
+    <parent link="base_link" />
+    <child link="inner_orbit_rotor" />
+    <origin xyz="0.0002526218595 -0.0003651991719 0.16524674" rpy="0 0 0" />
+    <axis xyz="0.002070997376 -0.003108301898 0.9999930263" />
+    <limit effort="10" velocity="30" />
+    <dynamics damping=".01" friction=".001" />
+  </joint>
+</robot>

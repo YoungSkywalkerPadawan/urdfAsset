@@ -1,0 +1,104 @@
+{
+  "id": "0015-gate-valve-gs1-1",
+  "title": "Gate valve handwheel",
+  "source": "0015-gate-valve-gs1-1.glb",
+  "nominal_height_m": 0.55,
+  "duration_s": 10,
+  "max_rpm": 12,
+  "camera_direction": [
+    1.6,
+    -3,
+    1.6
+  ],
+  "motion_label": "Blue handwheel rotates about the measured valve stem",
+  "face_owner_names": [
+    "base_link",
+    "handwheel"
+  ],
+  "links": [
+    {
+      "name": "base_link",
+      "mass": 8,
+      "cap_color": [
+        0.45,
+        0.46,
+        0.47,
+        1
+      ],
+      "cap_metallic": 0.7,
+      "cap_max_sides": 12,
+      "clearance_recesses": [
+        {
+          "origin": [
+            0.009606572542772921,
+            0.0020352032457356477,
+            0.425
+          ],
+          "axis": [
+            -0.0002587856299546373,
+            -0.0019554279416530754,
+            0.9999980546638891
+          ],
+          "radius": 0.065,
+          "outer_radius": 0.08,
+          "back_plane": -0.002,
+          "front_bound": 0.02
+        }
+      ]
+    },
+    {
+      "name": "handwheel",
+      "parent": "base_link",
+      "joint_name": "handwheel_spin",
+      "type": "continuous",
+      "origin": [
+        0.009606572542772921,
+        0.0020352032457356477,
+        0.425
+      ],
+      "axis": [
+        -0.0002587856299546373,
+        -0.0019554279416530754,
+        0.9999980546638891
+      ],
+      "mass": 0.5,
+      "cap_color": [
+        0.018,
+        0.16,
+        0.21,
+        1
+      ],
+      "cap_metallic": 0.65,
+      "cap_max_sides": 12,
+      "mesh_shift_native": [
+        -1.0351425198185494e-06,
+        -7.821711766612302e-06,
+        0.003999992218655556
+      ],
+      "clearance_recesses": [
+        {
+          "origin": [
+            0.009606572542772921,
+            0.0020352032457356477,
+            0.425
+          ],
+          "axis": [
+            0.0002587856299546373,
+            0.0019554279416530754,
+            -0.9999980546638891
+          ],
+          "radius": 0.065,
+          "outer_radius": 0.08,
+          "back_plane": -0.001
+        }
+      ]
+    }
+  ],
+  "inferences": [
+    "The blue rim, spokes, center hub and top fastener form one rotary link. Valve body, flange bolts and yoke remain fixed.",
+    "Axis is fitted to the visible straight central stem between source z=0.26 and 0.32; the fitted axis is not a preset world axis. Positive direction points upward. Actual opening/closing direction is unknown.",
+    "Continuous rotation demonstrates the handwheel degree of freedom only. Internal gate travel, screw pitch, end stops and fluid behavior cannot be recovered from this exterior GLB and are not modeled.",
+    "The fused hub/yoke boundary is separated at source axial height 0.425, locally recessed by 0.002/0.001 and shifted outward by 0.004 source units. Only small holes are capped to preserve the open spoke windows.",
+    "Nominal height 0.55 m, masses and inertias are estimates. Original worn paint and imperfect wheel/spoke geometry are preserved."
+  ]
+}

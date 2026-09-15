@@ -1,0 +1,164 @@
+{
+  "id": "0021-gs1-tripod-telescope-fantasy-001",
+  "title": "Tripod telescope azimuth and tilt",
+  "source": "0021-gs1-tripod-telescope-fantasy-001.glb",
+  "nominal_height_m": 0.9,
+  "duration_s": 10,
+  "max_rpm": 7,
+  "camera_direction": [
+    2.8,
+    -4,
+    1.4
+  ],
+  "motion_label": "Azimuth carries the cradle and local tube-pitch axis",
+  "face_owner_names": [
+    "base_link",
+    "azimuth_head",
+    "telescope_tube"
+  ],
+  "links": [
+    {
+      "name": "base_link",
+      "mass": 3,
+      "cap_color": [
+        0.22,
+        0.19,
+        0.17,
+        1
+      ],
+      "cap_max_sides": 12,
+      "clearance_recesses": [
+        {
+          "origin": [
+            -0.0002245159814939163,
+            0.028866984910908007,
+            -0.068
+          ],
+          "axis": [
+            0.0004961351310336762,
+            0.000916803047401285,
+            0.9999994566609044
+          ],
+          "radius": 0.1,
+          "outer_radius": 0.12,
+          "back_plane": -0.003,
+          "front_bound": 0.02
+        }
+      ]
+    },
+    {
+      "name": "azimuth_head",
+      "parent": "base_link",
+      "joint_name": "azimuth_spin",
+      "type": "continuous",
+      "origin": [
+        -0.0002245159814939163,
+        0.028866984910908007,
+        -0.068
+      ],
+      "axis": [
+        0.0004961351310336762,
+        0.000916803047401285,
+        0.9999994566609044
+      ],
+      "mass": 0.5,
+      "cap_color": [
+        0.3,
+        0.25,
+        0.22,
+        1
+      ],
+      "cap_max_sides": 12,
+      "clearance_recesses": [
+        {
+          "origin": [
+            -0.0002245159814939163,
+            0.028866984910908007,
+            -0.068
+          ],
+          "axis": [
+            -0.0004961351310336762,
+            -0.000916803047401285,
+            -0.9999994566609044
+          ],
+          "radius": 0.1,
+          "outer_radius": 0.12,
+          "back_plane": -0.002
+        }
+      ],
+      "axial_gaps": [
+        {
+          "origin": [
+            6.725484758324934e-05,
+            0.07649353219298147,
+            0.31000048894997445
+          ],
+          "axis": [
+            -0.9999971762907831,
+            0.0015117743961477435,
+            -0.0018335617348484287
+          ],
+          "half_gap": 0.08,
+          "radial_min": 0.005,
+          "radial_max": 0.075,
+          "outer_transition": 0.025
+        }
+      ],
+      "surface_cutouts": [
+        {
+          "origin": [
+            6.725484758324934e-05,
+            0.07649353219298147,
+            0.31000048894997445
+          ],
+          "axis": [
+            -0.9999971762907831,
+            0.0015117743961477435,
+            -0.0018335617348484287
+          ],
+          "inner_radius": 0,
+          "outer_radius": 0.083,
+          "depth": 0.15
+        }
+      ]
+    },
+    {
+      "name": "telescope_tube",
+      "parent": "azimuth_head",
+      "joint_name": "tube_pitch",
+      "type": "revolute",
+      "origin": [
+        6.725484758324934e-05,
+        0.07649353219298147,
+        0.31000048894997445
+      ],
+      "axis": [
+        -0.9999971762907831,
+        0.0015117743961477435,
+        -0.0018335617348484287
+      ],
+      "lower": 0,
+      "upper": 0.15,
+      "mass": 1.5,
+      "axial_scale": 0.97,
+      "cap_color": [
+        0.28,
+        0.24,
+        0.22,
+        1
+      ],
+      "cap_max_sides": 12
+    }
+  ],
+  "inferences": [
+    "The tripod stays fixed. The azimuth head carries the mounting cradle and the telescope pitch joint, so the pitch axis follows the azimuth rotation in the URDF hierarchy.",
+    "Azimuth uses a measured annular face normal, with its center averaged from four horizontal rim-circle sections. Free fits to the short irregular base cylinder produced implausible large tilts and were rejected.",
+    "The pitch axis is the line between the two measured outer trunnion-cap centers. Telescope tube, end rims and its small attached sight-like object form one rigid child link. Its visible caps remain with the cradle.",
+    "The small object above the front tube has an axis nearly parallel to the telescope. It is not reliably identifiable as a rotary adjustment knob, so it stays fixed to the tube.",
+    "Pitch range 0 to 0.15 rad (about 8.6 degrees) is an inferred lift range from the source pose; actual mechanical stops are unknown. Tripod leg adjustment, lock-screw travel and optical behavior are not modeled.",
+    "The azimuth fused interface is separated by local axial recesses of 0.003 and 0.002 source units. Tube width along the pitch axis is reduced by 3% at the cradle interface; only small split openings are capped.",
+    "Nominal height 0.9 m, masses and inertias are estimates. Source turquoise paint, wear, metal bands and decorative tripod geometry are retained.",
+    "The full front mouth is grouped with the tube. Near the pitch trunnion, the fixed cradle inner faces are spread to axial +/-0.080 source units within radius 0.075, fading over another 0.025, to separate the fused fork/tube interface.",
+    "Long fused triangles that still bridged the spread fork are clipped within a local pitch-axis cylinder of radius 0.083 and axial depth 0.150. This acts on actual triangle surfaces and preserves the open cradle cavity."
+  ]
+}

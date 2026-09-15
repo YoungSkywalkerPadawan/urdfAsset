@@ -1,0 +1,272 @@
+{
+  "frame": "Right-handed world frame, metres; see asset.json for source up-axis",
+  "joints": [
+    {
+      "name": "yaw_joint",
+      "type": "revolute",
+      "parent": "link_003",
+      "child": "link_005",
+      "mimic": null,
+      "source_limits": [
+        -0.6108652381980153,
+        0.6108652381980153
+      ],
+      "reference_q": 0.0,
+      "source_type": "revolute",
+      "label_basis": "User authored URDF, cross-checked against authored joints.json; geometry-derived reference",
+      "parent_world": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "joint_origin_transform": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0374014601
+        ],
+        [
+          -0.0,
+          0.0,
+          1.0,
+          0.205203921
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "source_axis": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "parent_name": "pedestal",
+      "child_name": "yaw_carrier",
+      "origin_world": [
+        0.0,
+        0.0374014601,
+        0.205203921
+      ],
+      "direction_world": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "origin_near_child_center": [
+        0.0,
+        0.0374014601,
+        0.23465253455
+      ],
+      "training_role": "bounded_rotation_axis_auxiliary"
+    },
+    {
+      "name": "pitch_joint",
+      "type": "revolute",
+      "parent": "link_005",
+      "child": "link_002",
+      "mimic": null,
+      "source_limits": [
+        -0.2617993877991494,
+        0.3490658503988659
+      ],
+      "reference_q": 0.0,
+      "source_type": "revolute",
+      "label_basis": "User authored URDF, cross-checked against authored joints.json; geometry-derived reference",
+      "parent_world": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0374014601
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.205203921
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "joint_origin_transform": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          -0.0,
+          0.0,
+          1.0,
+          0.0623357892
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "source_axis": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "parent_name": "yaw_carrier",
+      "child_name": "motor_head",
+      "origin_world": [
+        0.0,
+        0.0374014601,
+        0.2675397102
+      ],
+      "direction_world": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "origin_near_child_center": [
+        3.742055000000022e-05,
+        0.0374014601,
+        0.2675397102
+      ],
+      "training_role": "bounded_rotation_axis_auxiliary"
+    },
+    {
+      "name": "rotor_joint",
+      "type": "continuous",
+      "parent": "link_002",
+      "child": "link_004",
+      "mimic": null,
+      "source_limits": [
+        "-inf",
+        "inf"
+      ],
+      "reference_q": 0.0,
+      "source_type": "continuous",
+      "label_basis": "User authored URDF, cross-checked against authored joints.json; geometry-derived reference",
+      "parent_world": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0374014601
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.2675397102
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "joint_origin_transform": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          -0.000109586334
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          -0.11220438
+        ],
+        [
+          -0.0,
+          0.0,
+          1.0,
+          0.0322965086
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "source_axis": [
+        0.0008106130389761948,
+        0.9999935005033809,
+        0.0035130979912290756
+      ],
+      "parent_name": "motor_head",
+      "child_name": "rotor",
+      "origin_world": [
+        -0.000109586334,
+        -0.07480291990000001,
+        0.2998362188
+      ],
+      "direction_world": [
+        0.0008106130389761948,
+        0.9999935005033809,
+        0.0035130979912290756
+      ],
+      "origin_near_child_center": [
+        -0.00012067622780159632,
+        -0.0884837036891129,
+        0.2997881565535716
+      ],
+      "training_role": "continuous_supervision"
+    }
+  ]
+}

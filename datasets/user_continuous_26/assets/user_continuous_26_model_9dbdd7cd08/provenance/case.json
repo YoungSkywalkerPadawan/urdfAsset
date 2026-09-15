@@ -1,0 +1,92 @@
+{
+  "id": "0006-casual_windmill_g1_bom",
+  "title": "Flower pinwheel",
+  "source": "0006-casual_windmill_g1_bom.glb",
+  "nominal_height_m": 0.4,
+  "duration_s": 10,
+  "max_rpm": 20,
+  "camera_direction": [
+    2.5,
+    -4,
+    1.2
+  ],
+  "motion_label": "Six petals and hub rotate as one rigid rotor",
+  "links": [
+    {
+      "name": "base_link",
+      "mass": 0.5,
+      "vertical_bends": [
+        {
+          "along_axis": 1,
+          "start": 0.02,
+          "end": 0.29,
+          "amount": 0.19,
+          "z_min": -0.36,
+          "z_transition": 0.04
+        }
+      ],
+      "coordinate_shifts": [
+        {
+          "along_axis": 1,
+          "amount": 0.1,
+          "ramp_axis": 2,
+          "start": -0.42,
+          "end": -0.27,
+          "fade_axis": 1,
+          "fade_start": -0.04,
+          "fade_end": 0.15
+        }
+      ]
+    },
+    {
+      "name": "motor_housing",
+      "parent": "base_link",
+      "type": "fixed",
+      "origin": [
+        -0.0029328132741287924,
+        -0.145,
+        0.13412409412967613
+      ],
+      "mass": 0.2
+    },
+    {
+      "name": "rotor",
+      "parent": "motor_housing",
+      "joint_name": "rotor_spin",
+      "type": "continuous",
+      "origin": [
+        -0.0029328132741287924,
+        -0.145,
+        0.13412409412967613
+      ],
+      "axis": [
+        0.002546220260826031,
+        -0.9999608433031978,
+        -0.008475176856024197
+      ],
+      "mass": 0.08,
+      "mesh_shift_native": [
+        2.0369762086608247e-05,
+        -0.007999686746425582,
+        -6.780141484819358e-05
+      ]
+    }
+  ],
+  "face_owner_names": [
+    "base_link",
+    "motor_housing",
+    "rotor"
+  ],
+  "inferences": [
+    "All six petals and the central pink hub are a single rotating rigid body. Rear cylindrical housing and stand are fixed.",
+    "Source GLB has a large unsupported gap between the housing and green support. The rear arm is bent upward by up to 0.19 native units to join the housing; the front portion is moved behind the rotor clearance plane. These are inferred assembly repairs.",
+    "Rotor is moved forward by 0.008 native units to restore the generated shaft interface clearance.",
+    "Nominal 0.4 m height and mass/inertia are estimates; positive spin is a right-hand convention. No motor internals or preferred real spin direction are inferred."
+  ],
+  "required_fixed_contacts": [
+    [
+      "base_link",
+      "motor_housing"
+    ]
+  ]
+}

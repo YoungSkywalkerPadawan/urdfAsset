@@ -1,0 +1,298 @@
+{
+  "id": "0019-gs1-microscope-realistic-001",
+  "title": "Microscope knobs and objective turret",
+  "source": "0019-gs1-microscope-realistic-001.glb",
+  "nominal_height_m": 0.38,
+  "duration_s": 10,
+  "max_rpm": 10,
+  "camera_direction": [
+    2.7,
+    -4,
+    1.25
+  ],
+  "motion_label": "Paired knobs and the tilted objective turret rotate",
+  "face_owner_names": [
+    "base_link",
+    "upper_left",
+    "upper_right",
+    "lower_left",
+    "lower_right",
+    "objective_turret"
+  ],
+  "links": [
+    {
+      "name": "base_link",
+      "mass": 2,
+      "surface_cutouts": [
+        {
+          "origin": [
+            -0.103,
+            -0.03295851203784765,
+            0.21191072638457675
+          ],
+          "axis": [
+            -0.9999980478260235,
+            -0.0019552446312281362,
+            0.0002852412557081124
+          ],
+          "inner_radius": 0,
+          "outer_radius": 0.055,
+          "depth": 0.014
+        },
+        {
+          "origin": [
+            0.103,
+            -0.032555730857515716,
+            0.21185196657119149
+          ],
+          "axis": [
+            0.9999980478260235,
+            0.0019552446312281362,
+            -0.0002852412557081124
+          ],
+          "inner_radius": 0,
+          "outer_radius": 0.055,
+          "depth": 0.014
+        },
+        {
+          "origin": [
+            -0.103,
+            0.13667595308659564,
+            -0.2627183901475135
+          ],
+          "axis": [
+            -0.9999931195724563,
+            0.0036033746612533684,
+            0.0008811916918282142
+          ],
+          "inner_radius": 0,
+          "outer_radius": 0.055,
+          "depth": 0.014
+        },
+        {
+          "origin": [
+            0.103,
+            0.1359336527990341,
+            -0.26289991688501174
+          ],
+          "axis": [
+            0.9999931195724563,
+            -0.0036033746612533684,
+            -0.0008811916918282142
+          ],
+          "inner_radius": 0,
+          "outer_radius": 0.055,
+          "depth": 0.014
+        }
+      ],
+      "clearance_recesses": [
+        {
+          "origin": [
+            0.002860032978921031,
+            -0.07480145976433625,
+            0.12168064340680126
+          ],
+          "axis": [
+            -0.0007907001013026813,
+            -0.365396183953535,
+            -0.9308517623905238
+          ],
+          "radius": 0.13,
+          "outer_radius": 0.15,
+          "back_plane": -0.003,
+          "front_bound": 0.035
+        }
+      ]
+    },
+    {
+      "name": "upper_left",
+      "parent": "base_link",
+      "joint_name": "upper_left_spin",
+      "type": "continuous",
+      "origin": [
+        -0.103,
+        -0.03295851203784765,
+        0.21191072638457675
+      ],
+      "axis": [
+        -0.9999980478260235,
+        -0.0019552446312281362,
+        0.0002852412557081124
+      ],
+      "mass": 0.02,
+      "mesh_scale": 0.98,
+      "mesh_shift_native": [
+        -0.0029999941434780708,
+        -5.865733893684409e-06,
+        8.557237671243372e-07
+      ],
+      "cap_color": [
+        0.08,
+        0.08,
+        0.08,
+        1
+      ],
+      "cap_max_sides": 0,
+      "motion_multiplier": 1
+    },
+    {
+      "name": "upper_right",
+      "parent": "base_link",
+      "joint_name": "upper_right_spin",
+      "type": "continuous",
+      "origin": [
+        0.103,
+        -0.032555730857515716,
+        0.21185196657119149
+      ],
+      "axis": [
+        0.9999980478260235,
+        0.0019552446312281362,
+        -0.0002852412557081124
+      ],
+      "mass": 0.02,
+      "mesh_scale": 0.98,
+      "mesh_shift_native": [
+        0.0029999941434780708,
+        5.865733893684409e-06,
+        -8.557237671243372e-07
+      ],
+      "cap_color": [
+        0.08,
+        0.08,
+        0.08,
+        1
+      ],
+      "cap_max_sides": 0,
+      "motion_multiplier": -1,
+      "mimic": {
+        "joint": "upper_left_spin",
+        "multiplier": -1,
+        "offset": 0
+      }
+    },
+    {
+      "name": "lower_left",
+      "parent": "base_link",
+      "joint_name": "lower_left_spin",
+      "type": "continuous",
+      "origin": [
+        -0.103,
+        0.13667595308659564,
+        -0.2627183901475135
+      ],
+      "axis": [
+        -0.9999931195724563,
+        0.0036033746612533684,
+        0.0008811916918282142
+      ],
+      "mass": 0.02,
+      "mesh_scale": 0.98,
+      "mesh_shift_native": [
+        -0.002999979358717369,
+        1.0810123983760106e-05,
+        2.6435750754846425e-06
+      ],
+      "cap_color": [
+        0.08,
+        0.08,
+        0.08,
+        1
+      ],
+      "cap_max_sides": 0,
+      "motion_multiplier": 1
+    },
+    {
+      "name": "lower_right",
+      "parent": "base_link",
+      "joint_name": "lower_right_spin",
+      "type": "continuous",
+      "origin": [
+        0.103,
+        0.1359336527990341,
+        -0.26289991688501174
+      ],
+      "axis": [
+        0.9999931195724563,
+        -0.0036033746612533684,
+        -0.0008811916918282142
+      ],
+      "mass": 0.02,
+      "mesh_scale": 0.98,
+      "mesh_shift_native": [
+        0.002999979358717369,
+        -1.0810123983760106e-05,
+        -2.6435750754846425e-06
+      ],
+      "cap_color": [
+        0.08,
+        0.08,
+        0.08,
+        1
+      ],
+      "cap_max_sides": 0,
+      "motion_multiplier": -1,
+      "mimic": {
+        "joint": "lower_left_spin",
+        "multiplier": -1,
+        "offset": 0
+      }
+    },
+    {
+      "name": "objective_turret",
+      "parent": "base_link",
+      "joint_name": "turret_spin",
+      "type": "continuous",
+      "origin": [
+        0.002860032978921031,
+        -0.07480145976433625,
+        0.12168064340680126
+      ],
+      "axis": [
+        0.0007907001013026813,
+        0.365396183953535,
+        0.9308517623905238
+      ],
+      "mass": 0.08,
+      "motion_multiplier": 0.65,
+      "mesh_shift_native": [
+        -4.744200607816088e-06,
+        -0.00219237710372121,
+        -0.005585110574343143
+      ],
+      "cap_color": [
+        0.08,
+        0.08,
+        0.085,
+        1
+      ],
+      "cap_max_sides": 12,
+      "clearance_recesses": [
+        {
+          "origin": [
+            0.002860032978921031,
+            -0.07480145976433625,
+            0.12168064340680126
+          ],
+          "axis": [
+            0.0007907001013026813,
+            0.365396183953535,
+            0.9308517623905238
+          ],
+          "radius": 0.13,
+          "outer_radius": 0.15,
+          "back_plane": -0.007
+        }
+      ]
+    }
+  ],
+  "inferences": [
+    "Four large adjustment knobs and the objective turret receive continuous joints. The light outer turret rim, black lower plate and all attached silver objective bodies form one rigid link; the upper microscope tube and support remain fixed.",
+    "Each knob pair uses the line between independently fitted cylinder centers as its common shaft axis. The right-hand knob mimics its left partner with negative angle because both local axes point outward.",
+    "The turret axis comes from a measured mounting-plane normal, with its origin refined by an outer-rim circle. It is inclined approximately 21.4 degrees from vertical toward positive source Y, not assigned a preset world Z axis.",
+    "The two knob pairs and turret are independent drivers. Turret demo speed is 0.65 times the knob speed; actual focus lead, optical indexing detents and gear ratios are unknown.",
+    "Knobs are reduced 2%, shifted outward 0.003 source units and separated by local radius 0.055, depth 0.014 source-unit cavities. The turret is shifted outward along its underside by 0.006 source units, with its fused interface separated locally.",
+    "The stage, mirror/illumination assembly, eyepiece, focus supports and base remain fixed. Focus translation, optical behavior and small unverified adjustment screws are not modeled.",
+    "Nominal height 0.38 m, masses and inertias are estimates. Original textures and generated-surface imperfections remain."
+  ]
+}

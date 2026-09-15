@@ -1,0 +1,105 @@
+{
+  "id": "0010-escape_vault_handle_g1_bom",
+  "title": "Vault handwheel",
+  "source": "0010-escape_vault_handle_g1_bom.glb",
+  "nominal_height_m": 0.5,
+  "duration_s": 10,
+  "max_rpm": 12,
+  "camera_direction": [
+    1.5,
+    -4,
+    1.1
+  ],
+  "motion_label": "Three-spoke handwheel turns; mounting panel stays fixed",
+  "links": [
+    {
+      "name": "base_link",
+      "mass": 3,
+      "cap_color": [
+        0.012,
+        0.014,
+        0.016,
+        1
+      ],
+      "cap_metallic": 0.7,
+      "clearance_recesses": [
+        {
+          "origin": [
+            -0.007713216831332267,
+            -0.20000000000000004,
+            -0.001206768650875364
+          ],
+          "axis": [
+            -0.021887232598084894,
+            -0.9997584394329228,
+            -0.002002955776954404
+          ],
+          "radius": 0.436,
+          "outer_radius": 0.45,
+          "back_plane": 0.018,
+          "front_bound": 0.1
+        }
+      ]
+    },
+    {
+      "name": "handwheel",
+      "parent": "base_link",
+      "joint_name": "handwheel_spin",
+      "type": "continuous",
+      "origin": [
+        -0.007713216831332267,
+        -0.20000000000000004,
+        -0.001206768650875364
+      ],
+      "axis": [
+        -0.021887232598084894,
+        -0.9997584394329228,
+        -0.002002955776954404
+      ],
+      "mass": 0.5,
+      "mesh_shift_native": [
+        -0.00017509786078467917,
+        -0.007998067515463381,
+        -1.602364621563523e-05
+      ],
+      "cap_color": [
+        0.28,
+        0.16,
+        0.034,
+        1
+      ],
+      "cap_metallic": 0.8,
+      "cap_max_sides": 12,
+      "clearance_recesses": [
+        {
+          "origin": [
+            -0.007713216831332267,
+            -0.20000000000000004,
+            -0.001206768650875364
+          ],
+          "axis": [
+            0.021887232598084894,
+            0.9997584394329228,
+            0.002002955776954404
+          ],
+          "radius": 0.44,
+          "outer_radius": 0.46,
+          "back_plane": -0.022
+        }
+      ],
+      "extra_cap_mesh": "analysis/handwheel_back_cap.npz"
+    }
+  ],
+  "face_owner_names": [
+    "base_link",
+    "handwheel"
+  ],
+  "inferences": [
+    "The gold rim, three spokes and central hub form one rigid handwheel. Black mounting plate, bolts and rear housing remain fixed.",
+    "Axis is measured from the rear spindle. Positive direction points out of the front handwheel; real operating direction is not known.",
+    "Continuous spin demonstrates the visible degree of freedom. Internal bolts, gears and locking stops are not visible and are not reconstructed.",
+    "The fused handwheel/plate interface is repaired by flattening the fixed side at axial +0.018 and moving side at +0.022 source units, plus a 0.008 outward wheel offset. Existing upper faces and textures are retained.",
+    "Small segmentation holes are capped. The handwheel back is triangulated from planar cut-boundary polygons while preserving their interior holes; this avoids the solid sheets produced by naive hole filling. Source rear-shell holes and texture damage remain visible limitations.",
+    "Nominal 0.5 m height, masses and inertias are estimates."
+  ]
+}

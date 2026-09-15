@@ -1,0 +1,155 @@
+{
+  "summary": {
+    "id": "artvip_model_AGV_1_73d10afdaf",
+    "category": "artvip/agv",
+    "robot_name": "Articulated_objects/industrial_machinery/agv/AGV_01/model_AGV_1.usd",
+    "joint_count": 2,
+    "link_count": 3,
+    "target_link_count": 3,
+    "family": "Articulated_objects/industrial_machinery/agv/AGV_01/",
+    "warnings": [],
+    "diagonal": 1.4469700082692427,
+    "dataset": "artvip",
+    "bytes": 5175625,
+    "continuous_joint_count": 2,
+    "training_role": "continuous_supervision"
+  },
+  "source": {
+    "dataset": "X-Humanoid/ArtVIP",
+    "revision": "d22f2095bc9db29fdd4b60f4a3c4f8177e1f5e9e",
+    "license": "Apache-2.0",
+    "url": "https://huggingface.co/datasets/X-Humanoid/ArtVIP",
+    "family": "Articulated_objects/industrial_machinery/agv/AGV_01/",
+    "label_status": "Authored reference; not manually verified",
+    "up_axis": "Z",
+    "source_meters_per_unit": 1.0,
+    "meters_per_unit_authored": true,
+    "files": [
+      {
+        "path": "/root/continuous-public-data-20260911/raw/artvip/Articulated_objects/industrial_machinery/agv/AGV_01/model_AGV_1.usd",
+        "sha256": "36242156fd97c3e9e39904fc289dbeeebc25e3892bb0ced18a37c62707545641",
+        "bytes": 29297
+      },
+      {
+        "path": "/root/continuous-public-data-20260911/raw/artvip/Articulated_objects/industrial_machinery/agv/AGV_01/resource/material.usd",
+        "sha256": "b2256f5f324dadd50cf0d0822248ac4edf5b46b864bbbe4040d08ae0ab190093",
+        "bytes": 1948
+      },
+      {
+        "path": "/root/continuous-public-data-20260911/raw/artvip/Articulated_objects/industrial_machinery/agv/AGV_01/resource/v_0/link_0.usd",
+        "sha256": "dabd4b7580bbefb3cb6a02f92b3d9e20f50d20af4600f3c8d5c89e29445bc85f",
+        "bytes": 4914137
+      }
+    ]
+  },
+  "links": [
+    {
+      "id": "link_000",
+      "name": "/root/E_body_1",
+      "point_file": "inputs/link_000.npz",
+      "bounds": [
+        [
+          -0.37507809046325685,
+          -0.5713072164985656,
+          0.010990393872642501
+        ],
+        [
+          0.3971218979019165,
+          0.5938927785423279,
+          0.3119904003695488
+        ]
+      ],
+      "faces": 47099,
+      "vertices": 133512,
+      "geometry_sha256": "6583454ad9cb0bb0db3f5df51e5085a876d1511a0cb5eb14f50eb21c1e452436"
+    },
+    {
+      "id": "link_001",
+      "name": "/root/E_wheel1_4",
+      "point_file": "inputs/link_001.npz",
+      "bounds": [
+        [
+          0.3565331870496633,
+          -0.10643156845113434,
+          -4.977705596903581e-06
+        ],
+        [
+          0.41075813504877107,
+          0.14469231944804117,
+          0.25113420802456343
+        ]
+      ],
+      "faces": 3252,
+      "vertices": 9756,
+      "geometry_sha256": "d7f09ae06f384ae313384337f85f02f6ed1408af70541569a76b78ffe162f329"
+    },
+    {
+      "id": "link_002",
+      "name": "/root/E_wheel2_7",
+      "point_file": "inputs/link_002.npz",
+      "bounds": [
+        [
+          -0.3884227333703503,
+          -0.10794120879140068,
+          4.5212040569564405e-05
+        ],
+        [
+          -0.33420331308965356,
+          0.14309826503061576,
+          0.2510851879594304
+        ]
+      ],
+      "faces": 3252,
+      "vertices": 9756,
+      "geometry_sha256": "54140bdbda40dfe29222576f9c3b70fb0dd7bce81d05c85e460a290b013d6d4f"
+    }
+  ],
+  "joints": [
+    {
+      "name": "/root/E_body_1/FixedJoint",
+      "type": "fixed",
+      "parent": "link_003",
+      "child": "link_000",
+      "reference_q": 0.0,
+      "mimic": null
+    },
+    {
+      "name": "/root/E_wheel1_4/RevoluteJoint_AGV_1_right",
+      "type": "continuous",
+      "parent": "link_000",
+      "child": "link_001",
+      "reference_q": 0.0,
+      "mimic": null
+    },
+    {
+      "name": "/root/E_wheel2_7/RevoluteJoint_AGV_1_left",
+      "type": "continuous",
+      "parent": "link_000",
+      "child": "link_002",
+      "reference_q": 0.0,
+      "mimic": null
+    }
+  ],
+  "bounds": [
+    [
+      -0.3884227333703503,
+      -0.5713072164985656,
+      -4.977705596903581e-06
+    ],
+    [
+      0.41075813504877107,
+      0.5938927785423279,
+      0.3119904003695488
+    ]
+  ],
+  "point_pool_size": 8192,
+  "reference_pose": "Authored default pose",
+  "qc": {
+    "finite_geometry": true,
+    "axis_unit": true,
+    "physical_collision_validation": false,
+    "manual_review": false,
+    "omitted_texture_images": true,
+    "warnings": []
+  }
+}

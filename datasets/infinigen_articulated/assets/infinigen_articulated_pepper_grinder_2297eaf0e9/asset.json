@@ -1,0 +1,141 @@
+{
+  "summary": {
+    "id": "infinigen_articulated_pepper_grinder_2297eaf0e9",
+    "category": "infinigen_articulated/pepper_grinder",
+    "robot_name": "urdf/pepper_grinder/1146/pepper_grinder.urdf",
+    "joint_count": 1,
+    "link_count": 2,
+    "target_link_count": 2,
+    "family": "pepper_grinder",
+    "warnings": [],
+    "diagonal": 0.23734736315576474,
+    "dataset": "infinigen_articulated",
+    "bytes": 370212,
+    "continuous_joint_count": 0,
+    "training_role": "bounded_rotation_axis_auxiliary"
+  },
+  "source": {
+    "dataset": "princeton-vl/infinigen-articulated",
+    "revision": "58df7d3f885a9b7288b7792f70834afb6337dffa",
+    "license": "CC-BY-4.0",
+    "url": "https://huggingface.co/datasets/princeton-vl/infinigen-articulated",
+    "up_axis": "Z",
+    "family": "pepper_grinder",
+    "reference_pose": "URDF zero clamped to limits; mimic propagated",
+    "resolved_meshes": [
+      {
+        "path": "urdf/pepper_grinder/1146/assets/Lid_0.obj",
+        "sha256": "39703be92ac978af1b2d9e885f583df01896be33139d6d06f2e8b877e0460401"
+      },
+      {
+        "path": "urdf/pepper_grinder/1146/assets/Lid_1.obj",
+        "sha256": "f6d16137b5c0dc9ea8f3200a9ee65be747579216e967c63d639cd9713974c750"
+      },
+      {
+        "path": "urdf/pepper_grinder/1146/assets/Lid_2.obj",
+        "sha256": "f7d829303929a652d55fcb2d26b1edcd037e69621caa0e792a4437dad5206f72"
+      },
+      {
+        "path": "urdf/pepper_grinder/1146/assets/Chamber_Full Base_0.obj",
+        "sha256": "7440dab13e021d9126735308c8826140200be96d1c0e0fd4bc7f23a100a7d1b8"
+      },
+      {
+        "path": "urdf/pepper_grinder/1146/assets/Full Base_Knee_0.obj",
+        "sha256": "ae6a105fa7a4abbcda6ca76be48c587fc979723b831ece2bcdebf840974f2b81"
+      },
+      {
+        "path": "urdf/pepper_grinder/1146/assets/Foot_Full Base_0.obj",
+        "sha256": "96f34c98bf114b57b217c509274e34df5d46e6f039b50efa44abdba137280cc6"
+      }
+    ],
+    "files": [
+      {
+        "path": "/root/continuous-public-data-20260911/extracted/infinigen_articulated/urdf/pepper_grinder/1146/pepper_grinder.urdf",
+        "sha256": "b71528e3348e11ea541802ffb9a6bea40ee095883a6f6648b1ca622a6e6120c3",
+        "bytes": 7721
+      }
+    ]
+  },
+  "links": [
+    {
+      "id": "link_001",
+      "name": "link_1",
+      "point_file": "inputs/link_001.npz",
+      "bounds": [
+        [
+          -0.0037664451112747192,
+          -0.04150850478297472,
+          0.1815450758061409
+        ],
+        [
+          0.0037815548887252808,
+          0.003774,
+          0.19981841731834413
+        ]
+      ],
+      "faces": 36,
+      "vertices": 72,
+      "geometry_sha256": "45d650ab9e8c453671f72d0d903820c4dcf64a4a8ac4577ce7cddd18f8dbba3b"
+    },
+    {
+      "id": "link_000",
+      "name": "link_0",
+      "point_file": "inputs/link_000.npz",
+      "bounds": [
+        [
+          -0.045282,
+          -0.045282,
+          1.3614970445670338e-07
+        ],
+        [
+          0.04529717648005486,
+          0.045282,
+          0.18154541872167587
+        ]
+      ],
+      "faces": 3486,
+      "vertices": 4282,
+      "geometry_sha256": "77855c742440c1accf8ec94c3aeae5c87e05ba093dcc217abd06e3b88f44c36b"
+    }
+  ],
+  "joints": [
+    {
+      "name": "world_joint",
+      "type": "fixed",
+      "parent": "link_002",
+      "child": "link_000",
+      "reference_q": 0.0,
+      "mimic": null
+    },
+    {
+      "name": "Lid Joint_0",
+      "type": "revolute",
+      "parent": "link_000",
+      "child": "link_001",
+      "reference_q": 0.0,
+      "mimic": null
+    }
+  ],
+  "bounds": [
+    [
+      -0.045282,
+      -0.045282,
+      1.3614970445670338e-07
+    ],
+    [
+      0.04529717648005486,
+      0.045282,
+      0.19981841731834413
+    ]
+  ],
+  "point_pool_size": 8192,
+  "reference_pose": "URDF zero clamped to limits; mimic propagated",
+  "qc": {
+    "finite_geometry": true,
+    "axis_unit": true,
+    "physical_collision_validation": false,
+    "manual_review": false,
+    "omitted_texture_images": true,
+    "warnings": []
+  }
+}

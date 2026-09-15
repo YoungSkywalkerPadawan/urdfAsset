@@ -1,0 +1,58 @@
+{
+  "source_sha256": "62fd5f7861652f7e50b464e5b9860f2976c9d804461f1d623d3ee87167c2a1d6",
+  "source_triangles": 95231,
+  "assigned_triangles": 94927,
+  "uv_preserved": true,
+  "source_geometry_adjustments": [
+    "This continuous-motion case articulates the two wheels. Steering, folding latch, brake and telescoping handle remain fixed; their other degrees of freedom are not demonstrated.",
+    "Each axle follows the measured thin wheel plane; outer tire bands determine centers and nominal radii. Positive axes point toward the same side of the scooter.",
+    "The rear wheel speed is scaled by the fitted radius ratio to match the front wheel peripheral speed. This is an in-place wheel-drive preview without vehicle translation or contact dynamics.",
+    "Wheels are reduced by 4% and compressed a further 15% along their axles to recover fork clearance. Small segmentation holes of at most 12 edges are capped; spoke openings remain. Tires, hubs and disconnected spokes are grouped despite belonging to separate source components.",
+    "Nominal 0.9 m height, masses and inertias are estimates. The source GLB remains unchanged and original materials/UVs are retained.",
+    "A small number of front-wheel vertices extending beyond radius 0.106 source units are clamped to that envelope before scaling to clear the fixed fender. This is a geometric repair, not a recovered tire dimension.",
+    "Disconnected thin front-edge fragments outside the wheel hub are omitted from the derived mesh; their count is recorded in the axis report. The main tire, spokes and fender are retained. This cleanup avoids thin detached sheets rotating around the tire."
+  ],
+  "parts": [
+    {
+      "link": "base_link",
+      "selected_source_triangles": 71260,
+      "mesh_vertices": 35795,
+      "mesh_triangles": 71224,
+      "mesh_scale": 1.0,
+      "recess_adjusted_vertices": 0,
+      "recess_max_displacement_native": 0.0
+    },
+    {
+      "link": "front_wheel",
+      "selected_source_triangles": 13030,
+      "mesh_vertices": 6535,
+      "mesh_triangles": 13048,
+      "mesh_scale": 0.96,
+      "recess_adjusted_vertices": 51,
+      "recess_max_displacement_native": 0.0016360735977377493
+    },
+    {
+      "link": "rear_wheel",
+      "selected_source_triangles": 10637,
+      "mesh_vertices": 5392,
+      "mesh_triangles": 10633,
+      "mesh_scale": 0.96,
+      "recess_adjusted_vertices": 0,
+      "recess_max_displacement_native": 0.0
+    }
+  ],
+  "export_inventory": [
+    {
+      "link": "base_link",
+      "triangles": 71224
+    },
+    {
+      "link": "front_wheel",
+      "triangles": 13048
+    },
+    {
+      "link": "rear_wheel",
+      "triangles": 10633
+    }
+  ]
+}

@@ -1,0 +1,100 @@
+{
+  "id": "0025-stand-mixer-c0c754aeec9a",
+  "title": "Tilted-head stand mixer",
+  "source": "0025-stand-mixer-c0c754aeec9a.glb",
+  "nominal_height_m": 0.42,
+  "duration_s": 10,
+  "max_rpm": 16,
+  "camera_direction": [
+    -3,
+    -4,
+    1.8
+  ],
+  "motion_label": "Whisk cage spins around the actual tilted output shaft; bowl stays fixed",
+  "links": [
+    {
+      "name": "base_link",
+      "mass": 6,
+      "surface_cutouts": [
+        {
+          "origin": [
+            -0.08910173797545695,
+            0.000648713695312352,
+            0.203
+          ],
+          "axis": [
+            0.3929754122338032,
+            0.04027556127521755,
+            0.9186665360965527
+          ],
+          "inner_radius": 0.007,
+          "outer_radius": 0.044,
+          "depth": 0.06
+        }
+      ]
+    },
+    {
+      "name": "whisk_rotor",
+      "parent": "base_link",
+      "joint_name": "whisk_spin",
+      "type": "continuous",
+      "origin": [
+        -0.08910173797545695,
+        0.000648713695312352,
+        0.203
+      ],
+      "axis": [
+        0.3929754122338032,
+        0.04027556127521755,
+        0.9186665360965527
+      ],
+      "mass": 0.25,
+      "mesh_scale": 0.84,
+      "axial_scale": 0.92,
+      "cap_color": [
+        0.57,
+        0.56,
+        0.57,
+        1
+      ],
+      "cap_metallic": 0.9,
+      "cap_roughness": 0.18,
+      "cap_max_sides": 12,
+      "component_offsets": [
+        {
+          "components": [
+            62
+          ],
+          "translation": [
+            -0.045,
+            0.074,
+            0
+          ]
+        },
+        {
+          "components": [
+            66
+          ],
+          "translation": [
+            -0.045,
+            -0.074,
+            0
+          ]
+        }
+      ]
+    }
+  ],
+  "face_owner_names": [
+    "base_link",
+    "whisk_rotor"
+  ],
+  "inferences": [
+    "The source head is raised and its output shaft is tilted. The whisk and its coupling form one continuous rotor around the measured shaft, while the bowl, base, head and controls stay fixed.",
+    "No planetary orbit, gear ratio, head tilt range or hidden linkage is inferred. The animation is an in-place shaft and cage demonstration, not mixing food or simulating contact.",
+    "The whisk retains original wire surfaces and UVs; only small holes are capped, preserving cage openings. A reviewed inside-bowl region excludes the reflective bowl wall.",
+    "The whisk is scaled to 84% around its joint and shortened a further 8% along the shaft to clear the bowl rim throughout rotation in the generated raised-head pose. The original 90% trial still struck the inner rim. A small coupling recess separates the fused head interface; these are explicit geometric repairs.",
+    "Nominal 0.42 m height, masses and inertias are estimates; the original GLB remains unchanged.",
+    "Two detached source coupling caps (components 62 and 66) are moved 0.045 native units toward the shaft and 0.074 inward from either side; they remain in the same rotating rigid body. This is a documented placement repair.",
+    "Residual collisions after the bowl cleared were at the output coupling, not the cage. The fixed annular coupling recess has radius 0.044 and depth 0.060 native units, preserving the central 0.007-radius pin region. Further cage shrink trials were rejected."
+  ]
+}

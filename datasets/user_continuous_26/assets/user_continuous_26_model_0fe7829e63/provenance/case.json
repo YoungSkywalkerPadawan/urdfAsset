@@ -1,0 +1,98 @@
+{
+  "id": "0016-gs1-adjustable-wrench-stylized-001",
+  "title": "Adjustable wrench thumbworm",
+  "source": "0016-gs1-adjustable-wrench-stylized-001.glb",
+  "nominal_height_m": 0.0335,
+  "duration_s": 10,
+  "max_rpm": 12,
+  "camera_direction": [
+    0.35,
+    -2.4,
+    4
+  ],
+  "motion_label": "Adjustment worm rotates; wrench body and jaw stay fixed",
+  "face_owner_names": [
+    "base_link",
+    "adjustment_worm"
+  ],
+  "links": [
+    {
+      "name": "base_link",
+      "mass": 0.4,
+      "surface_cutouts": [
+        {
+          "origin": [
+            -0.2035173578672822,
+            -0.01869712110625692,
+            -0.0013528874052253796
+          ],
+          "axis": [
+            -0.01824473550658868,
+            0.9996656242365866,
+            0.018324010095240432
+          ],
+          "inner_radius": 0,
+          "outer_radius": 0.047,
+          "depth": 0.115
+        }
+      ]
+    },
+    {
+      "name": "adjustment_worm",
+      "parent": "base_link",
+      "joint_name": "worm_spin",
+      "type": "continuous",
+      "origin": [
+        -0.2035173578672822,
+        -0.01869712110625692,
+        -0.0013528874052253796
+      ],
+      "axis": [
+        -0.01824473550658868,
+        0.9996656242365866,
+        0.018324010095240432
+      ],
+      "mass": 0.025,
+      "mesh_scale": 0.94,
+      "axial_scale": 0.9,
+      "cap_color": [
+        0.35,
+        0.37,
+        0.39,
+        1
+      ],
+      "cap_metallic": 0.8,
+      "cap_max_sides": 0,
+      "radial_limits": [
+        {
+          "origin": [
+            -0.2035173578672822,
+            -0.01869712110625692,
+            -0.0013528874052253796
+          ],
+          "axis": [
+            -0.01824473550658868,
+            0.9996656242365866,
+            0.018324010095240432
+          ],
+          "radius": 0.046
+        }
+      ]
+    }
+  ],
+  "detail_view": {
+    "target_m": [
+      -0.065,
+      -0.006,
+      0.0165
+    ],
+    "ortho_scale_m": 0.088
+  },
+  "inferences": [
+    "Only the visible adjustment worm receives a continuous rotary joint. Handle, fixed jaw, sliding-jaw geometry and guide remain in the fixed link for this continuous-rotation preview. Jaw translation and worm/rack coupling are not simulated.",
+    "The worm axis is fitted freely to a reviewed central cylindrical ROI, with the local Y direction used only as the initialization. Source threaded surfaces are irregular and this is an approximate geometric shaft axis, not a measured manufacturing datum.",
+    "The fused worm is selected by a radial/axial envelope and connected surface regions. It is reduced 6% and compressed another 10% axially. A local radius 0.047, depth 0.115 source-unit cylindrical cavity is clipped from surrounding actual triangles; this preserves an empty window. Cut edges remain open.",
+    "All split boundary loops on the solid worm are capped with estimated silver metal; this inferred surface completion repairs openings exposed by rotation. Original helical surface imperfections remain; no replacement screw is generated.",
+    "Nominal thickness 0.0335 m implies approximately 0.32 m overall length. Scale, masses and inertias are estimates. Camera zooms into the small worm while it turns."
+  ]
+}

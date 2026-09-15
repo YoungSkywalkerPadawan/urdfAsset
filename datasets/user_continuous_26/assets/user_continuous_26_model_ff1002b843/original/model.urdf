@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='utf-8'?>
+<robot name="0002-carousel-d14eb7e4f7bb">
+  <link name="base_link">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/base_link.obj" />
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/base_link.obj" />
+      </geometry>
+    </collision>
+    <inertial>
+      <origin xyz="0.0001182258129 -0.007409587502 0.06699766219" rpy="0 0 0" />
+      <mass value="3" />
+      <inertia ixx="0.08156414229366526" iyy="0.07407758328296166" izz="0.14666435209968132" ixy="0" ixz="0" iyz="0" />
+    </inertial>
+  </link>
+  <link name="carousel">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/carousel.obj" />
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/carousel.obj" />
+      </geometry>
+    </collision>
+    <inertial>
+      <origin xyz="0.0001191943884 0.0007414966822 0.2540053427" rpy="0 0 0" />
+      <mass value="1.5" />
+      <inertia ixx="0.06533413866769644" iyy="0.06527161887796007" izz="0.06375906348498361" ixy="0" ixz="0" iyz="0" />
+    </inertial>
+  </link>
+  <joint name="carousel_spin" type="continuous">
+    <parent link="base_link" />
+    <child link="carousel" />
+    <origin xyz="0.0002383398823 -0.0006954137352 0.07357130945" rpy="0 0 0" />
+    <axis xyz="-0.001228043227 0.002365655266 0.9999964237" />
+    <limit effort="10" velocity="30" />
+    <dynamics damping=".01" friction=".001" />
+  </joint>
+</robot>

@@ -1,0 +1,211 @@
+{
+  "summary": {
+    "id": "artvip_model_microscope001_06b144ab77",
+    "category": "artvip/microscope",
+    "robot_name": "Articulated_objects/lab_items/microscope/microscope001/model_microscope001.usd",
+    "joint_count": 3,
+    "link_count": 5,
+    "target_link_count": 4,
+    "family": "Articulated_objects/lab_items/microscope/microscope001/",
+    "warnings": [],
+    "diagonal": 1.0962701087164506,
+    "dataset": "artvip",
+    "bytes": 22880833,
+    "continuous_joint_count": 3,
+    "training_role": "continuous_supervision"
+  },
+  "source": {
+    "dataset": "X-Humanoid/ArtVIP",
+    "revision": "d22f2095bc9db29fdd4b60f4a3c4f8177e1f5e9e",
+    "license": "Apache-2.0",
+    "url": "https://huggingface.co/datasets/X-Humanoid/ArtVIP",
+    "family": "Articulated_objects/lab_items/microscope/microscope001/",
+    "label_status": "Authored reference; not manually verified",
+    "up_axis": "Z",
+    "source_meters_per_unit": 1.0,
+    "meters_per_unit_authored": true,
+    "files": [
+      {
+        "path": "/root/continuous-public-data-20260911/raw/artvip/Articulated_objects/lab_items/microscope/microscope001/model_microscope001.usd",
+        "sha256": "19c3505103ff51ba6df6801908b30b3cfee7ff599bfa1fee02a1da97e5474fbf",
+        "bytes": 29909
+      },
+      {
+        "path": "/root/continuous-public-data-20260911/raw/artvip/Articulated_objects/lab_items/microscope/microscope001/resource/material.usd",
+        "sha256": "f52f542746e69f141c72c1ecbd09dfd4cbcfe53149e3ced4f6017dfd5cc60263",
+        "bytes": 3901
+      },
+      {
+        "path": "/root/continuous-public-data-20260911/raw/artvip/Articulated_objects/lab_items/microscope/microscope001/resource/v_0/link_0.usd",
+        "sha256": "b8d41615814ed922fec220a98e18f5f67686ce3727c2662a3e620666f475a23a",
+        "bytes": 29775007
+      }
+    ]
+  },
+  "links": [
+    {
+      "id": "link_000",
+      "name": "/root/E_body_1",
+      "point_file": "inputs/link_000.npz",
+      "bounds": [
+        [
+          -0.1762533016961361,
+          -0.2778852548252375,
+          -5.205292067063556e-06
+        ],
+        [
+          0.19540246432693664,
+          0.263746778338241,
+          0.8776706366326026
+        ]
+      ],
+      "faces": 342945,
+      "vertices": 1028773,
+      "geometry_sha256": "c9a292dc594d42780db65273b4970cb03f2feca0d279fea11015a247655d0247"
+    },
+    {
+      "id": "link_003",
+      "name": "/root/E_lens001_51",
+      "point_file": "inputs/link_003.npz",
+      "bounds": [
+        [
+          -0.07547890048875808,
+          -0.18640837286129958,
+          0.3551825644120137
+        ],
+        [
+          0.11872110116825105,
+          0.0017330633542003149,
+          0.5247840761350401
+        ]
+      ],
+      "faces": 24028,
+      "vertices": 70188,
+      "geometry_sha256": "acc22b1200602335b9cb894d6b328a12cbe639f2308d93620809b3ca87d76b09"
+    },
+    {
+      "id": "link_004",
+      "name": "/root/E_lens002_56",
+      "point_file": null,
+      "bounds": [
+        [
+          -0.031451899865889546,
+          -0.22295749907016754,
+          0.1847948999538064
+        ],
+        [
+          0.07044810212192536,
+          -0.12105749894499777,
+          0.19729490014007092
+        ]
+      ],
+      "faces": 812,
+      "vertices": 2436,
+      "geometry_sha256": "02d54c7765c9f752901413bfcbae347874004cb6bda894c3ba2e35736b283c85"
+    },
+    {
+      "id": "link_002",
+      "name": "/root/E_knob_57",
+      "point_file": "inputs/link_002.npz",
+      "bounds": [
+        [
+          -0.04853890014603138,
+          0.06184730059604644,
+          0.5539851989032746
+        ],
+        [
+          -0.02953889982565641,
+          0.1573473004172325,
+          0.6490851994039536
+        ]
+      ],
+      "faces": 2964,
+      "vertices": 8892,
+      "geometry_sha256": "32e2ef791564c7bce3df5e06fed2bef87e3d97f21b448c213bb000711f0ae149"
+    },
+    {
+      "id": "link_001",
+      "name": "/root/E_knob001_58",
+      "point_file": "inputs/link_001.npz",
+      "bounds": [
+        [
+          -0.0865323999797903,
+          0.09317440081062317,
+          0.4484913006586313
+        ],
+        [
+          -0.0305324006377697,
+          0.14757439966919422,
+          0.5025913000268221
+        ]
+      ],
+      "faces": 1586,
+      "vertices": 4758,
+      "geometry_sha256": "bf498c01e7c41aaad72fd402775c85897b6cbc3be7981a51548f66663c2cef9d"
+    }
+  ],
+  "joints": [
+    {
+      "name": "/root/E_body_1/FixedJoint",
+      "type": "fixed",
+      "parent": "link_005",
+      "child": "link_000",
+      "reference_q": 0.0,
+      "mimic": null
+    },
+    {
+      "name": "/root/E_lens001_51/RevoluteJoint_microscope001_up",
+      "type": "continuous",
+      "parent": "link_000",
+      "child": "link_003",
+      "reference_q": 0.0,
+      "mimic": null
+    },
+    {
+      "name": "/root/E_lens002_56/RevoluteJoint_microscope001_down",
+      "type": "revolute",
+      "parent": "link_000",
+      "child": "link_004",
+      "reference_q": 0.0,
+      "mimic": null
+    },
+    {
+      "name": "/root/E_knob_57/RevoluteJoint_microscope001_up1",
+      "type": "continuous",
+      "parent": "link_000",
+      "child": "link_002",
+      "reference_q": 0.0,
+      "mimic": null
+    },
+    {
+      "name": "/root/E_knob001_58/RevoluteJoint_microscope001_up2",
+      "type": "continuous",
+      "parent": "link_000",
+      "child": "link_001",
+      "reference_q": 0.0,
+      "mimic": null
+    }
+  ],
+  "bounds": [
+    [
+      -0.1762533016961361,
+      -0.2778852548252375,
+      -5.205292067063556e-06
+    ],
+    [
+      0.19540246432693664,
+      0.263746778338241,
+      0.8776706366326026
+    ]
+  ],
+  "point_pool_size": 8192,
+  "reference_pose": "Authored default pose",
+  "qc": {
+    "finite_geometry": true,
+    "axis_unit": true,
+    "physical_collision_validation": false,
+    "manual_review": false,
+    "omitted_texture_images": true,
+    "warnings": []
+  }
+}

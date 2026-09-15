@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='utf-8'?>
+<robot name="0009-escape_cipher_dial_g1_bom">
+  <link name="base_link">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/base_link.obj" />
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/base_link.obj" />
+      </geometry>
+    </collision>
+    <inertial>
+      <origin xyz="0.000468801707 -1.079589128e-05 0.06073708087" rpy="0 0 0" />
+      <mass value="0.7" />
+      <inertia ixx="0.0037128424737370765" iyy="0.003387107736577116" izz="0.005378420146979985" ixy="0" ixz="0" iyz="0" />
+    </inertial>
+  </link>
+  <link name="dial">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/dial.obj" />
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/dial.obj" />
+      </geometry>
+    </collision>
+    <inertial>
+      <origin xyz="0.0001013055444 0.00178937614 0.02001075447" rpy="0 0 0" />
+      <mass value="0.12" />
+      <inertia ixx="0.0002704459626250988" iyy="0.0002538853687097853" izz="0.0004941654954988639" ixy="0" ixz="0" iyz="0" />
+    </inertial>
+  </link>
+  <joint name="dial_spin" type="continuous">
+    <parent link="base_link" />
+    <child link="dial" />
+    <origin xyz="-0.0004319411237 -0.006369569805 0.1211160943" rpy="0 0 0" />
+    <axis xyz="0.002746656071 -0.01466587931 0.9998886585" />
+    <limit effort="10" velocity="30" />
+    <dynamics damping=".01" friction=".001" />
+  </joint>
+</robot>

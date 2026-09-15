@@ -1,0 +1,141 @@
+{
+  "summary": {
+    "id": "infinigen_articulated_pepper_grinder_c331d5ad2c",
+    "category": "infinigen_articulated/pepper_grinder",
+    "robot_name": "urdf/pepper_grinder/1489/pepper_grinder.urdf",
+    "joint_count": 1,
+    "link_count": 2,
+    "target_link_count": 2,
+    "family": "pepper_grinder",
+    "warnings": [],
+    "diagonal": 0.24471332674042548,
+    "dataset": "infinigen_articulated",
+    "bytes": 371826,
+    "continuous_joint_count": 0,
+    "training_role": "bounded_rotation_axis_auxiliary"
+  },
+  "source": {
+    "dataset": "princeton-vl/infinigen-articulated",
+    "revision": "58df7d3f885a9b7288b7792f70834afb6337dffa",
+    "license": "CC-BY-4.0",
+    "url": "https://huggingface.co/datasets/princeton-vl/infinigen-articulated",
+    "up_axis": "Z",
+    "family": "pepper_grinder",
+    "reference_pose": "URDF zero clamped to limits; mimic propagated",
+    "resolved_meshes": [
+      {
+        "path": "urdf/pepper_grinder/1489/assets/Lid_0.obj",
+        "sha256": "e893e000c2e4d42dea82d57fb7d88ce892f7e4d532794f693c6e1f8cfa95d964"
+      },
+      {
+        "path": "urdf/pepper_grinder/1489/assets/Lid_1.obj",
+        "sha256": "90fb00ab86a8a1fe2c576570db16f1f1e410565544dd7bc71b33fb84a628c733"
+      },
+      {
+        "path": "urdf/pepper_grinder/1489/assets/Lid_2.obj",
+        "sha256": "3f3747666b7ce6e4f4f89364b6f6c37bd5c93cfd4123efd47c23149b77fa715c"
+      },
+      {
+        "path": "urdf/pepper_grinder/1489/assets/Chamber_Full Base_0.obj",
+        "sha256": "5c93247e68f3934c97ee0aee9ee8c1e17e2f722c62a7417b81deccc99da55c6f"
+      },
+      {
+        "path": "urdf/pepper_grinder/1489/assets/Knee_Full Base_0.obj",
+        "sha256": "16ccaa3f99b3cf3de0a2313e9d3479a569f3c2923ae765a22ec3c3da7820e243"
+      },
+      {
+        "path": "urdf/pepper_grinder/1489/assets/Foot_Full Base_0.obj",
+        "sha256": "217b3099a03d1d3d4b433e5dc233e3904d7316c70015a32631007ca6d74ecd31"
+      }
+    ],
+    "files": [
+      {
+        "path": "/root/continuous-public-data-20260911/extracted/infinigen_articulated/urdf/pepper_grinder/1489/pepper_grinder.urdf",
+        "sha256": "a6efea624bf491aa47eedfe51727105743b910cd4925b648e731349a783ae58f",
+        "bytes": 7228
+      }
+    ]
+  },
+  "links": [
+    {
+      "id": "link_001",
+      "name": "link_1",
+      "point_file": "inputs/link_001.npz",
+      "bounds": [
+        [
+          -0.002483,
+          -0.027315453578710555,
+          0.2000648158788681
+        ],
+        [
+          0.002483,
+          0.002483,
+          0.22974030441093446
+        ]
+      ],
+      "faces": 36,
+      "vertices": 72,
+      "geometry_sha256": "c57d284dd1c9af7926ea9d6265717c4920fb8e9e259ef13e60b648b618f14ce0"
+    },
+    {
+      "id": "link_000",
+      "name": "link_0",
+      "point_file": "inputs/link_000.npz",
+      "bounds": [
+        [
+          -0.029799,
+          -0.029799,
+          -3.517132401466283e-07
+        ],
+        [
+          0.029799,
+          0.029799,
+          0.20006475687384606
+        ]
+      ],
+      "faces": 3486,
+      "vertices": 4264,
+      "geometry_sha256": "e50602f702bdde88b444ba9081f456fac67311bbc143e055f9fcf626ecb387c4"
+    }
+  ],
+  "joints": [
+    {
+      "name": "world_joint",
+      "type": "fixed",
+      "parent": "link_002",
+      "child": "link_000",
+      "reference_q": 0.0,
+      "mimic": null
+    },
+    {
+      "name": "Lid Joint_0",
+      "type": "revolute",
+      "parent": "link_000",
+      "child": "link_001",
+      "reference_q": 0.0,
+      "mimic": null
+    }
+  ],
+  "bounds": [
+    [
+      -0.029799,
+      -0.029799,
+      -3.517132401466283e-07
+    ],
+    [
+      0.029799,
+      0.029799,
+      0.22974030441093446
+    ]
+  ],
+  "point_pool_size": 8192,
+  "reference_pose": "URDF zero clamped to limits; mimic propagated",
+  "qc": {
+    "finite_geometry": true,
+    "axis_unit": true,
+    "physical_collision_validation": false,
+    "manual_review": false,
+    "omitted_texture_images": true,
+    "warnings": []
+  }
+}

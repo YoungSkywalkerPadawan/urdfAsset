@@ -1,0 +1,102 @@
+{
+  "id": "0009-escape_cipher_dial_g1_bom",
+  "title": "Cipher dial",
+  "source": "0009-escape_cipher_dial_g1_bom.glb",
+  "nominal_height_m": 0.16,
+  "duration_s": 10,
+  "max_rpm": 12,
+  "camera_direction": [
+    1.8,
+    -3,
+    2.1
+  ],
+  "motion_label": "Ticked dial and center knob rotate as one rigid body",
+  "links": [
+    {
+      "name": "base_link",
+      "mass": 0.7,
+      "cap_color": [
+        0.043,
+        0.04,
+        0.029,
+        1
+      ],
+      "cap_metallic": 0.6,
+      "clearance_recesses": [
+        {
+          "origin": [
+            -0.0019588545458325436,
+            -0.028886022310223265,
+            0.187
+          ],
+          "axis": [
+            0.0027466559763879685,
+            -0.014665879247776369,
+            0.9998886777370954
+          ],
+          "radius": 0.41,
+          "outer_radius": 0.43,
+          "back_plane": -0.004
+        }
+      ]
+    },
+    {
+      "name": "dial",
+      "parent": "base_link",
+      "joint_name": "dial_spin",
+      "type": "continuous",
+      "origin": [
+        -0.0019588545458325436,
+        -0.028886022310223265,
+        0.187
+      ],
+      "axis": [
+        0.0027466559763879685,
+        -0.014665879247776369,
+        0.9998886777370954
+      ],
+      "mass": 0.12,
+      "mesh_scale": 0.98,
+      "mesh_shift_native": [
+        1.647993585832781e-05,
+        -8.799527548665821e-05,
+        0.005999332066422573
+      ],
+      "cap_color": [
+        0.043,
+        0.04,
+        0.029,
+        1
+      ],
+      "cap_metallic": 0.6,
+      "clearance_recesses": [
+        {
+          "origin": [
+            -0.0019588545458325436,
+            -0.028886022310223265,
+            0.187
+          ],
+          "axis": [
+            -0.0027466559763879685,
+            0.014665879247776369,
+            -0.9998886777370954
+          ],
+          "radius": 0.41,
+          "outer_radius": 0.43,
+          "back_plane": -0.002
+        }
+      ]
+    }
+  ],
+  "face_owner_names": [
+    "base_link",
+    "dial"
+  ],
+  "inferences": [
+    "The ticked dial and central knob form one rigid rotor. The lower mounting flange and dark housing remain fixed. Hidden lock tumblers and detents are not reconstructed.",
+    "Axis follows the central cylindrical knob. A 17-degree-inconsistent short-sidewall cylinder candidate was rejected; it is retained in the fit report. Positive direction points outward. The real dialing direction is not inferable from the static GLB.",
+    "Rotor is reduced by 2% and raised 0.006 source units to repair the fused interface. Split boundaries are capped with bronze-colored material.",
+    "Nominal height 0.16 m and mass/inertia are estimates.",
+    "The jagged triangle cut is flattened locally on each side of the interface: the fixed flange stops at axial -0.004 and the rotor starts at +0.002 source units before its 0.006 offset. This removes residual fused triangles without changing the visible upper dial."
+  ]
+}

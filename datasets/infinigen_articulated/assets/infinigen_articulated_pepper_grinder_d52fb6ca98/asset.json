@@ -1,0 +1,141 @@
+{
+  "summary": {
+    "id": "infinigen_articulated_pepper_grinder_d52fb6ca98",
+    "category": "infinigen_articulated/pepper_grinder",
+    "robot_name": "urdf/pepper_grinder/1025/pepper_grinder.urdf",
+    "joint_count": 1,
+    "link_count": 2,
+    "target_link_count": 2,
+    "family": "pepper_grinder",
+    "warnings": [],
+    "diagonal": 0.23389132680247388,
+    "dataset": "infinigen_articulated",
+    "bytes": 361765,
+    "continuous_joint_count": 0,
+    "training_role": "bounded_rotation_axis_auxiliary"
+  },
+  "source": {
+    "dataset": "princeton-vl/infinigen-articulated",
+    "revision": "58df7d3f885a9b7288b7792f70834afb6337dffa",
+    "license": "CC-BY-4.0",
+    "url": "https://huggingface.co/datasets/princeton-vl/infinigen-articulated",
+    "up_axis": "Z",
+    "family": "pepper_grinder",
+    "reference_pose": "URDF zero clamped to limits; mimic propagated",
+    "resolved_meshes": [
+      {
+        "path": "urdf/pepper_grinder/1025/assets/Lid_0.obj",
+        "sha256": "ebd5d61f48063117ca7c124fb04153d966b7fa2c7defcefbbc7f41143a631c88"
+      },
+      {
+        "path": "urdf/pepper_grinder/1025/assets/Lid_1.obj",
+        "sha256": "3f96540237c7a17af2b188474f57972fda8df524497ef372e02ad0cbfb13fd14"
+      },
+      {
+        "path": "urdf/pepper_grinder/1025/assets/Lid_2.obj",
+        "sha256": "7793b20604b4af8372cf5864e970d5e8649dae4d3d14424ce2c46ba1a5a71381"
+      },
+      {
+        "path": "urdf/pepper_grinder/1025/assets/Full Base_Chamber_0.obj",
+        "sha256": "456f08358c2925729770da4b6d34a51bbf4ba41e6adddd27aeb654db4db0c13e"
+      },
+      {
+        "path": "urdf/pepper_grinder/1025/assets/Knee_Full Base_0.obj",
+        "sha256": "33f22109d0996843919f1059c1be29ac3fe70a6ddd87f63b023da4f5152506af"
+      },
+      {
+        "path": "urdf/pepper_grinder/1025/assets/Foot_Full Base_0.obj",
+        "sha256": "962e3fb624197804beeb746f846dccf6b73de1761af66c8bf4820cca6881c388"
+      }
+    ],
+    "files": [
+      {
+        "path": "/root/continuous-public-data-20260911/extracted/infinigen_articulated/urdf/pepper_grinder/1025/pepper_grinder.urdf",
+        "sha256": "cf80b6eb7af58af9dc1fa1e8546e7174602e03fcab5b21fcefbd6c21d62dbc71",
+        "bytes": 7397
+      }
+    ]
+  },
+  "links": [
+    {
+      "id": "link_001",
+      "name": "link_1",
+      "point_file": "inputs/link_001.npz",
+      "bounds": [
+        [
+          -0.003261,
+          -0.03587641078406572,
+          0.19102355211544036
+        ],
+        [
+          0.003261,
+          0.003261589215934276,
+          0.20603590775871278
+        ]
+      ],
+      "faces": 36,
+      "vertices": 72,
+      "geometry_sha256": "a54d602c3fcb5ad7afa721455d950c3e7fda1e4d75a0f5ed4bb4e2fee489ebe2"
+    },
+    {
+      "id": "link_000",
+      "name": "link_0",
+      "point_file": "inputs/link_000.npz",
+      "bounds": [
+        [
+          -0.039138,
+          -0.039138,
+          -2.2596889734209646e-07
+        ],
+        [
+          0.039138,
+          0.039138,
+          0.19102368289780616
+        ]
+      ],
+      "faces": 3486,
+      "vertices": 4050,
+      "geometry_sha256": "b731cdf2a66aaeca73e9da3caf86afa14cec365decb72c3ac9466beaca2a057d"
+    }
+  ],
+  "joints": [
+    {
+      "name": "world_joint",
+      "type": "fixed",
+      "parent": "link_002",
+      "child": "link_000",
+      "reference_q": 0.0,
+      "mimic": null
+    },
+    {
+      "name": "Lid Joint_0",
+      "type": "revolute",
+      "parent": "link_000",
+      "child": "link_001",
+      "reference_q": 0.0,
+      "mimic": null
+    }
+  ],
+  "bounds": [
+    [
+      -0.039138,
+      -0.039138,
+      -2.2596889734209646e-07
+    ],
+    [
+      0.039138,
+      0.039138,
+      0.20603590775871278
+    ]
+  ],
+  "point_pool_size": 8192,
+  "reference_pose": "URDF zero clamped to limits; mimic propagated",
+  "qc": {
+    "finite_geometry": true,
+    "axis_unit": true,
+    "physical_collision_validation": false,
+    "manual_review": false,
+    "omitted_texture_images": true,
+    "warnings": []
+  }
+}

@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='utf-8'?>
+<robot name="0001-antique-globe">
+  <link name="base_link">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/base_link.obj" />
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/base_link.obj" />
+      </geometry>
+    </collision>
+    <inertial>
+      <origin xyz="-0.02271361649 -0.002351086587 0.25" rpy="0 0 0" />
+      <mass value="1.2" />
+      <inertia ixx="0.030108737481879543" iyy="0.034818775058215574" izz="0.014927512540095124" ixy="0" ixz="0" iyz="0" />
+    </inertial>
+  </link>
+  <link name="globe">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/globe.obj" />
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/globe.obj" />
+      </geometry>
+    </collision>
+    <inertial>
+      <origin xyz="-0.0008669123054 -7.306039333e-05 0.00181453675" rpy="0 0 0" />
+      <mass value="0.4" />
+      <inertia ixx="0.006322399466802627" iyy="0.00659930495383539" izz="0.006308774666502852" ixy="0" ixz="0" iyz="0" />
+    </inertial>
+  </link>
+  <joint name="globe_spin" type="continuous">
+    <parent link="base_link" />
+    <child link="globe" />
+    <origin xyz="0.01434406731 4.148988592e-05 0.3128258288" rpy="0 0 0" />
+    <axis xyz="-0.4339226782 0.0005779301864 0.900949955" />
+    <limit effort="10" velocity="30" />
+    <dynamics damping=".01" friction=".001" />
+  </joint>
+</robot>

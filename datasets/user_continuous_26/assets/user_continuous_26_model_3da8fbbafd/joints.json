@@ -1,0 +1,183 @@
+{
+  "frame": "Right-handed world frame, metres; see asset.json for source up-axis",
+  "joints": [
+    {
+      "name": "azimuth_spin",
+      "type": "continuous",
+      "parent": "link_001",
+      "child": "link_000",
+      "mimic": null,
+      "source_limits": [
+        "-inf",
+        "inf"
+      ],
+      "reference_q": 0.0,
+      "source_type": "continuous",
+      "label_basis": "User authored URDF, cross-checked against authored joints.json; geometry-derived reference",
+      "parent_world": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "joint_origin_transform": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          -0.0002034862991
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.02616311051
+        ],
+        [
+          -0.0,
+          0.0,
+          1.0,
+          0.3835594356
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "source_axis": [
+        0.0004961351480572789,
+        0.0009168030164382311,
+        0.9999994566609245
+      ],
+      "parent_name": "base_link",
+      "child_name": "azimuth_head",
+      "origin_world": [
+        -0.0002034862991,
+        0.02616311051,
+        0.3835594356
+      ],
+      "direction_world": [
+        0.0004961351480572789,
+        0.0009168030164382311,
+        0.9999994566609245
+      ],
+      "origin_near_child_center": [
+        -0.00011022269453027563,
+        0.026335451361738153,
+        0.5715395741996471
+      ],
+      "training_role": "continuous_supervision"
+    },
+    {
+      "name": "tube_pitch",
+      "type": "revolute",
+      "parent": "link_000",
+      "child": "link_002",
+      "mimic": null,
+      "source_limits": [
+        0.0,
+        0.15
+      ],
+      "reference_q": 0.0,
+      "source_type": "revolute",
+      "label_basis": "User authored URDF, cross-checked against authored joints.json; geometry-derived reference",
+      "parent_world": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          -0.0002034862991
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.02616311051
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.3835594356
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "joint_origin_transform": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0002644415945
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.04316552728
+        ],
+        [
+          -0.0,
+          0.0,
+          1.0,
+          0.3425944149
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "source_axis": [
+        -0.9999971762910215,
+        0.0015117743412737636,
+        -0.0018335616500949972
+      ],
+      "parent_name": "azimuth_head",
+      "child_name": "telescope_tube",
+      "origin_world": [
+        6.095529539999997e-05,
+        0.06932863779,
+        0.7261538505
+      ],
+      "direction_world": [
+        -0.9999971762910216,
+        0.0015117743412737638,
+        -0.0018335616500949974
+      ],
+      "origin_near_child_center": [
+        0.00029720412539422346,
+        0.06932828063407215,
+        0.7261542836780177
+      ],
+      "training_role": "bounded_rotation_axis_auxiliary"
+    }
+  ]
+}

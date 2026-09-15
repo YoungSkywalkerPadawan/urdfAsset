@@ -1,0 +1,183 @@
+{
+  "summary": {
+    "id": "artvip_model_oven_44798b58fa",
+    "category": "artvip/oven",
+    "robot_name": "Articulated_objects/small_appliances/oven/oven_1/model_oven.usd",
+    "joint_count": 2,
+    "link_count": 4,
+    "target_link_count": 3,
+    "family": "Articulated_objects/small_appliances/oven/oven_1/",
+    "warnings": [],
+    "diagonal": 0.47797957317849116,
+    "dataset": "artvip",
+    "bytes": 6881614,
+    "continuous_joint_count": 2,
+    "training_role": "continuous_supervision"
+  },
+  "source": {
+    "dataset": "X-Humanoid/ArtVIP",
+    "revision": "d22f2095bc9db29fdd4b60f4a3c4f8177e1f5e9e",
+    "license": "Apache-2.0",
+    "url": "https://huggingface.co/datasets/X-Humanoid/ArtVIP",
+    "family": "Articulated_objects/small_appliances/oven/oven_1/",
+    "label_status": "Authored reference; not manually verified",
+    "up_axis": "Z",
+    "source_meters_per_unit": 1.0,
+    "meters_per_unit_authored": true,
+    "files": [
+      {
+        "path": "/root/continuous-public-data-20260911/raw/artvip/Articulated_objects/small_appliances/oven/oven_1/model_oven.usd",
+        "sha256": "7654c64cd688c76daf7d5c05431293986bb839d24bb72027c81fa03e1392302c",
+        "bytes": 47908823
+      },
+      {
+        "path": "/root/continuous-public-data-20260911/raw/artvip/Articulated_objects/small_appliances/oven/oven_1/resource/material.usd",
+        "sha256": "eee127083f2c97d1c6a929acc853ea2149b9a0f7765f37536ab25bd931a5f99f",
+        "bytes": 2602
+      },
+      {
+        "path": "/root/continuous-public-data-20260911/raw/artvip/Articulated_objects/small_appliances/oven/oven_1/resource/v_69323/link_0.usd",
+        "sha256": "de481cb39f7f021a37f828ce3c3c5713ce0237f40fdfa482197b7404c7c0f15a",
+        "bytes": 7563333
+      }
+    ]
+  },
+  "links": [
+    {
+      "id": "link_000",
+      "name": "/root/E_body_203",
+      "point_file": "inputs/link_000.npz",
+      "bounds": [
+        [
+          -0.17959986192359925,
+          -0.10764399953917266,
+          -0.012524999678134918
+        ],
+        [
+          0.18111962514743804,
+          0.1063775006070849,
+          0.19200571847743989
+        ]
+      ],
+      "faces": 69128,
+      "vertices": 207160,
+      "geometry_sha256": "2c7873236f342fcb682f96d86f1864f6a53617ba07083f038bfd326ad068cb7b"
+    },
+    {
+      "id": "link_001",
+      "name": "/root/E_door_197",
+      "point_file": null,
+      "bounds": [
+        [
+          -0.17206019121894836,
+          -0.1313473600067457,
+          0.01757769989310503
+        ],
+        [
+          0.11674684327354432,
+          -0.09945365997699498,
+          0.18611832945137025
+        ]
+      ],
+      "faces": 4572,
+      "vertices": 13600,
+      "geometry_sha256": "579c81382e8e80e117f89a0f065baa0dabcbc7d59acb5e2dd87aaa447b937cf2"
+    },
+    {
+      "id": "link_003",
+      "name": "/root/E_knob2_237",
+      "point_file": "inputs/link_003.npz",
+      "bounds": [
+        [
+          0.1303626692665577,
+          -0.12442489966472388,
+          0.04857061038336753
+        ],
+        [
+          0.1651477704567671,
+          -0.10622910011281968,
+          0.08335572088680267
+        ]
+      ],
+      "faces": 1760,
+      "vertices": 5280,
+      "geometry_sha256": "96eba4d25bfe2adfc4590c52b230e301ec603e07d635dabdcb9103ba051e0a93"
+    },
+    {
+      "id": "link_002",
+      "name": "/root/E_knob1_77",
+      "point_file": "inputs/link_002.npz",
+      "bounds": [
+        [
+          0.1303626692665577,
+          -0.12442489966472388,
+          0.12219361038336754
+        ],
+        [
+          0.1651477704567671,
+          -0.10622910011281968,
+          0.15697872088680268
+        ]
+      ],
+      "faces": 1760,
+      "vertices": 5280,
+      "geometry_sha256": "79da24788eb619ae6ad62f836f13bca9c84d0bca83f0a2545b528bdd6be9e980"
+    }
+  ],
+  "joints": [
+    {
+      "name": "/root/E_body_203/FixedJoint",
+      "type": "fixed",
+      "parent": "link_004",
+      "child": "link_000",
+      "reference_q": 0.0,
+      "mimic": null
+    },
+    {
+      "name": "/root/E_door_197/RevoluteJoint",
+      "type": "revolute",
+      "parent": "link_004",
+      "child": "link_001",
+      "reference_q": 0.0,
+      "mimic": null
+    },
+    {
+      "name": "/root/E_knob2_237/RevoluteJoint",
+      "type": "continuous",
+      "parent": "link_000",
+      "child": "link_003",
+      "reference_q": 0.0,
+      "mimic": null
+    },
+    {
+      "name": "/root/E_knob1_77/RevoluteJoint",
+      "type": "continuous",
+      "parent": "link_000",
+      "child": "link_002",
+      "reference_q": 0.0,
+      "mimic": null
+    }
+  ],
+  "bounds": [
+    [
+      -0.17959986192359925,
+      -0.1313473600067457,
+      -0.012524999678134918
+    ],
+    [
+      0.18111962514743804,
+      0.1063775006070849,
+      0.19200571847743989
+    ]
+  ],
+  "point_pool_size": 8192,
+  "reference_pose": "Authored default pose",
+  "qc": {
+    "finite_geometry": true,
+    "axis_unit": true,
+    "physical_collision_validation": false,
+    "manual_review": false,
+    "omitted_texture_images": true,
+    "warnings": []
+  }
+}

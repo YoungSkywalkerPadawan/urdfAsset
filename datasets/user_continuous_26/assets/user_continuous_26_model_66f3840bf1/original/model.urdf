@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='utf-8'?>
+<robot name="0026-wheat-mill">
+  <link name="base_link">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/base_link.obj" />
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/base_link.obj" />
+      </geometry>
+    </collision>
+    <inertial>
+      <origin xyz="0.01500906795 5.622953176e-05 0.2731510103" rpy="0 0 0" />
+      <mass value="4" />
+      <inertia ixx="0.15353937929214231" iyy="0.1521382800867658" izz="0.10671372760773086" ixy="0" ixz="0" iyz="0" />
+    </inertial>
+  </link>
+  <link name="sail_rotor">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/sail_rotor.obj" />
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/sail_rotor.obj" />
+      </geometry>
+    </collision>
+    <inertial>
+      <origin xyz="-0.002627357841 -0.02329725772 -0.003292664886" rpy="0 0 0" />
+      <mass value="0.4" />
+      <inertia ixx="0.005242481100732318" iyy="0.011324891428980818" izz="0.0062232952032787265" ixy="0" ixz="0" iyz="0" />
+    </inertial>
+  </link>
+  <joint name="windshaft_spin" type="continuous">
+    <parent link="base_link" />
+    <child link="sail_rotor" />
+    <origin xyz="-0.01215090603 -0.1606598496 0.4566101134" rpy="0 0 0" />
+    <axis xyz="-0.1773721874 -0.9742897749 0.1389192492" />
+    <limit effort="10" velocity="30" />
+    <dynamics damping=".01" friction=".001" />
+  </joint>
+</robot>

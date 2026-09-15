@@ -1,0 +1,72 @@
+{
+  "id": "0003-casual_capsule_machine_g1_bom",
+  "title": "Capsule machine",
+  "source": "0003-casual_capsule_machine_g1_bom.glb",
+  "nominal_height_m": 0.45,
+  "duration_s": 10,
+  "max_rpm": 15,
+  "camera_direction": [
+    1.4,
+    -4,
+    0.7
+  ],
+  "motion_label": "Front handle and circular knob rotate together",
+  "links": [
+    {
+      "name": "base_link",
+      "mass": 2,
+      "clearance_recesses": [
+        {
+          "origin": [
+            -0.00034788333183287477,
+            -0.351373119759481,
+            -0.28918843710261677
+          ],
+          "axis": [
+            0.009251225400711223,
+            -0.999622467117078,
+            0.02587156862951253
+          ],
+          "radius": 0.107,
+          "outer_radius": 0.122,
+          "back_plane": -0.061,
+          "front_bound": 0.12
+        }
+      ]
+    },
+    {
+      "name": "knob",
+      "parent": "base_link",
+      "joint_name": "knob_spin",
+      "type": "continuous",
+      "origin": [
+        -0.00034788333183287477,
+        -0.351373119759481,
+        -0.28918843710261677
+      ],
+      "axis": [
+        0.009251225400711223,
+        -0.999622467117078,
+        0.02587156862951253
+      ],
+      "mass": 0.1,
+      "mesh_scale": 0.97,
+      "mesh_shift_native": [
+        0.00011101470480853467,
+        -0.011995469605404936,
+        0.0003104588235541504
+      ]
+    }
+  ],
+  "face_owner_names": [
+    "base_link",
+    "knob"
+  ],
+  "inferences": [
+    "Only the visible knob and its integral grip are articulated. Internal capsule metering, ratchet and transmission are not visible and are not reconstructed.",
+    "Continuous rotation is a kinematic demonstration; the real mechanism may impose stops or one-way operation.",
+    "Nominal 0.45 m height and inertia are estimates. The inferred positive direction points out of the knob face.",
+    "Knob is reduced by 3% and offset outward by 0.012 native units to recover clearance in the generated mesh. The source materials are preserved, including the appearance of the upper container.",
+    "A local circular recess is formed in the fixed housing behind the knob to remove the fused source interface. This clearance pocket is an inferred repair, not an observed internal mechanism."
+  ]
+}

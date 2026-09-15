@@ -1,0 +1,137 @@
+{
+  "summary": {
+    "id": "infinigen_articulated_pepper_grinder_8739e39885",
+    "category": "infinigen_articulated/pepper_grinder",
+    "robot_name": "urdf/pepper_grinder/1450/pepper_grinder.urdf",
+    "joint_count": 1,
+    "link_count": 2,
+    "target_link_count": 2,
+    "family": "pepper_grinder",
+    "warnings": [],
+    "diagonal": 0.33927277901524205,
+    "dataset": "infinigen_articulated",
+    "bytes": 472301,
+    "continuous_joint_count": 0,
+    "training_role": "bounded_rotation_axis_auxiliary"
+  },
+  "source": {
+    "dataset": "princeton-vl/infinigen-articulated",
+    "revision": "58df7d3f885a9b7288b7792f70834afb6337dffa",
+    "license": "CC-BY-4.0",
+    "url": "https://huggingface.co/datasets/princeton-vl/infinigen-articulated",
+    "up_axis": "Z",
+    "family": "pepper_grinder",
+    "reference_pose": "URDF zero clamped to limits; mimic propagated",
+    "resolved_meshes": [
+      {
+        "path": "urdf/pepper_grinder/1450/assets/Lid_0.obj",
+        "sha256": "3efc1b5d23ac9866017b2f2406d276032f10e90e2f581902c884acba2489ea25"
+      },
+      {
+        "path": "urdf/pepper_grinder/1450/assets/Lid_1.obj",
+        "sha256": "701d514cf950d80010815af1305d37400633db2b0f506552ede4caca8c27a786"
+      },
+      {
+        "path": "urdf/pepper_grinder/1450/assets/Full Base_Chamber_0.obj",
+        "sha256": "c5b4467c38e49cfef9233c5e68015d0d984446c1217f64a359024d583dc0a8a5"
+      },
+      {
+        "path": "urdf/pepper_grinder/1450/assets/Knee_Full Base_0.obj",
+        "sha256": "4c1d77c90d2fa3ddda9d0e56422f3b667fd7faeb129868612153e864f0bd0dc9"
+      },
+      {
+        "path": "urdf/pepper_grinder/1450/assets/Full Base_Foot_0.obj",
+        "sha256": "1c9d228be7d8a092dbab1bfcb3d3a7474deeb9d96485892b216849a3dfd6e1ab"
+      }
+    ],
+    "files": [
+      {
+        "path": "/root/continuous-public-data-20260911/extracted/infinigen_articulated/urdf/pepper_grinder/1450/pepper_grinder.urdf",
+        "sha256": "c14ac8caae8724fc84c200a3fecbcb63d099a94d832598a23baa13860e839378",
+        "bytes": 7265
+      }
+    ]
+  },
+  "links": [
+    {
+      "id": "link_001",
+      "name": "link_1",
+      "point_file": "inputs/link_001.npz",
+      "bounds": [
+        [
+          -0.051320881143331526,
+          -0.051397,
+          0.22104034275054932
+        ],
+        [
+          0.05147311885666847,
+          0.051397,
+          0.30654994489192966
+        ]
+      ],
+      "faces": 1018,
+      "vertices": 2092,
+      "geometry_sha256": "0a9a76b98a96f8f67f06e5c8166070cb7336dd4cd16c0e282c50241ba281e0a1"
+    },
+    {
+      "id": "link_000",
+      "name": "link_0",
+      "point_file": "inputs/link_000.npz",
+      "bounds": [
+        [
+          -0.03766388114333153,
+          -0.037778,
+          1.0276389121946505e-07
+        ],
+        [
+          0.037816118856668475,
+          0.037778,
+          0.2210404884967804
+        ]
+      ],
+      "faces": 3486,
+      "vertices": 4210,
+      "geometry_sha256": "57b4fcad35373f04c8a15a8ce63de58147bc8102853df80dc087823434f9b174"
+    }
+  ],
+  "joints": [
+    {
+      "name": "world_joint",
+      "type": "fixed",
+      "parent": "link_002",
+      "child": "link_000",
+      "reference_q": 0.0,
+      "mimic": null
+    },
+    {
+      "name": "Lid Joint_0",
+      "type": "revolute",
+      "parent": "link_000",
+      "child": "link_001",
+      "reference_q": 0.0,
+      "mimic": null
+    }
+  ],
+  "bounds": [
+    [
+      -0.051320881143331526,
+      -0.051397,
+      1.0276389121946505e-07
+    ],
+    [
+      0.05147311885666847,
+      0.051397,
+      0.30654994489192966
+    ]
+  ],
+  "point_pool_size": 8192,
+  "reference_pose": "URDF zero clamped to limits; mimic propagated",
+  "qc": {
+    "finite_geometry": true,
+    "axis_unit": true,
+    "physical_collision_validation": false,
+    "manual_review": false,
+    "omitted_texture_images": true,
+    "warnings": []
+  }
+}

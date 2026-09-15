@@ -1,0 +1,595 @@
+{
+  "id": "0008-desktop-ferris-wheel-gs1-1",
+  "title": "Desktop Ferris wheel",
+  "source": "0008-desktop-ferris-wheel-gs1-1.glb",
+  "nominal_height_m": 0.5,
+  "duration_s": 10,
+  "max_rpm": 9,
+  "camera_direction": [
+    1.8,
+    -4,
+    1.0
+  ],
+  "motion_label": "Wheel turns; ten hanging cabins remain upright",
+  "links": [
+    {
+      "name": "base_link",
+      "mass": 1.4,
+      "clearance_recesses": [
+        {
+          "origin": [
+            -0.0003193656898477642,
+            0.06,
+            0.16749805732759332
+          ],
+          "axis": [
+            -0.0023975634338703703,
+            0.999992300001654,
+            -0.0031067067745115173
+          ],
+          "radius": 0.185,
+          "outer_radius": 0.23,
+          "radial_min": 0.04,
+          "inner_transition": 0.025,
+          "back_plane": -0.115,
+          "front_bound": -0.04
+        },
+        {
+          "origin": [
+            -0.0003193656898477642,
+            0.06,
+            0.16749805732759332
+          ],
+          "axis": [
+            0.0023975634338703703,
+            -0.999992300001654,
+            0.0031067067745115173
+          ],
+          "radius": 0.3,
+          "outer_radius": 0.36,
+          "radial_min": 0.04,
+          "inner_transition": 0.025,
+          "back_plane": -0.125,
+          "front_bound": -0.048
+        }
+      ]
+    },
+    {
+      "name": "wheel",
+      "parent": "base_link",
+      "joint_name": "wheel_spin",
+      "type": "continuous",
+      "origin": [
+        -0.0003193656898477642,
+        0.06,
+        0.16749805732759332
+      ],
+      "axis": [
+        0.0023975634338703703,
+        -0.999992300001654,
+        0.0031067067745115173
+      ],
+      "mass": 0.4,
+      "axial_gaps": [
+        {
+          "origin": [
+            -0.0003193656898477642,
+            0.06,
+            0.16749805732759332
+          ],
+          "axis": [
+            0.0023975634338703703,
+            -0.999992300001654,
+            0.0031067067745115173
+          ],
+          "half_gap": 0.047,
+          "radial_min": 0.058,
+          "exempt_axes": [
+            [
+              -0.31593040128548944,
+              0.06,
+              0.18646233528852463
+            ],
+            [
+              -0.2846155862013499,
+              0.06,
+              -0.006689417952050765
+            ],
+            [
+              -0.11755909770727158,
+              0.06,
+              -0.1316248513609171
+            ],
+            [
+              0.08757077654202779,
+              0.06,
+              -0.15566851198673248
+            ],
+            [
+              0.2672414879004161,
+              0.06,
+              -0.038929847379525505
+            ],
+            [
+              0.34143640100955963,
+              0.06,
+              0.138175830245018
+            ],
+            [
+              0.2972502460082372,
+              0.06,
+              0.3276167859633764
+            ],
+            [
+              0.12954088548819223,
+              0.06,
+              0.46698901057243347
+            ],
+            [
+              -0.07921327153841655,
+              0.06,
+              0.47666098674138385
+            ],
+            [
+              -0.24229413767655691,
+              0.06,
+              0.3883203665415446
+            ]
+          ],
+          "exempt_radius": 0.006,
+          "exempt_transition": 0.008
+        }
+      ],
+      "radial_clearances": [
+        {
+          "origin": [
+            -0.0003193656898477642,
+            0.06,
+            0.16749805732759332
+          ],
+          "axis": [
+            0.0023975634338703703,
+            -0.999992300001654,
+            0.0031067067745115173
+          ],
+          "radius": 0.036
+        }
+      ]
+    },
+    {
+      "name": "cabin_01",
+      "parent": "wheel",
+      "joint_name": "cabin_01_hang",
+      "type": "continuous",
+      "origin": [
+        -0.31593040128548944,
+        0.06,
+        0.18646233528852463
+      ],
+      "axis": [
+        0.0023975634338703703,
+        -0.999992300001654,
+        0.0031067067745115173
+      ],
+      "motion_multiplier": -1,
+      "mimic": {
+        "joint": "wheel_spin",
+        "multiplier": -1
+      },
+      "mass": 0.025,
+      "mesh_scale": 0.9,
+      "axial_scale": 0.6,
+      "cap_color": [
+        5.077052561215497e-06,
+        0.000367136331283805,
+        0.14198031728274624,
+        1
+      ],
+      "cap_max_sides": 12,
+      "mesh_shift_native": [
+        -1.0687440213326474e-05,
+        0.0044575913066883825,
+        -1.384853574419477e-05
+      ]
+    },
+    {
+      "name": "cabin_02",
+      "parent": "wheel",
+      "joint_name": "cabin_02_hang",
+      "type": "continuous",
+      "origin": [
+        -0.2846155862013499,
+        0.06,
+        -0.006689417952050765
+      ],
+      "axis": [
+        0.0023975634338703703,
+        -0.999992300001654,
+        0.0031067067745115173
+      ],
+      "motion_multiplier": -1,
+      "mimic": {
+        "joint": "wheel_spin",
+        "multiplier": -1
+      },
+      "mass": 0.025,
+      "mesh_scale": 0.9,
+      "axial_scale": 0.6,
+      "cap_color": [
+        0.0,
+        0.000367136331283805,
+        0.13902248020332653,
+        1
+      ],
+      "cap_max_sides": 12,
+      "mesh_shift_native": [
+        -1.5162411657829854e-05,
+        0.006324043273720094,
+        -1.964709936340281e-05
+      ]
+    },
+    {
+      "name": "cabin_03",
+      "parent": "wheel",
+      "joint_name": "cabin_03_hang",
+      "type": "continuous",
+      "origin": [
+        -0.11755909770727158,
+        0.06,
+        -0.1316248513609171
+      ],
+      "axis": [
+        0.0023975634338703703,
+        -0.999992300001654,
+        0.0031067067745115173
+      ],
+      "motion_multiplier": -1,
+      "mimic": {
+        "joint": "wheel_spin",
+        "multiplier": -1
+      },
+      "mass": 0.025,
+      "mesh_scale": 0.9,
+      "axial_scale": 0.6,
+      "cap_color": [
+        0.22331043694287706,
+        0.0006381829066742541,
+        0.0009923743624850676,
+        1
+      ],
+      "cap_max_sides": 12,
+      "mesh_shift_native": [
+        -2.0892984523636226e-05,
+        0.00871419014510194,
+        -2.7072642017468456e-05
+      ]
+    },
+    {
+      "name": "cabin_04",
+      "parent": "wheel",
+      "joint_name": "cabin_04_hang",
+      "type": "continuous",
+      "origin": [
+        0.08757077654202779,
+        0.06,
+        -0.15566851198673248
+      ],
+      "axis": [
+        0.0023975634338703703,
+        -0.999992300001654,
+        0.0031067067745115173
+      ],
+      "motion_multiplier": -1,
+      "mimic": {
+        "joint": "wheel_spin",
+        "multiplier": -1
+      },
+      "mass": 0.025,
+      "mesh_scale": 0.9,
+      "axial_scale": 0.6,
+      "cap_color": [
+        0.23489528791762052,
+        0.0008046585621626175,
+        0.0009923743624850676,
+        1
+      ],
+      "cap_max_sides": 12,
+      "mesh_shift_native": [
+        -2.2234916598082886e-05,
+        0.009273892433940095,
+        -2.8811486299009642e-05
+      ]
+    },
+    {
+      "name": "cabin_05",
+      "parent": "wheel",
+      "joint_name": "cabin_05_hang",
+      "type": "continuous",
+      "origin": [
+        0.2672414879004161,
+        0.06,
+        -0.038929847379525505
+      ],
+      "axis": [
+        0.0023975634338703703,
+        -0.999992300001654,
+        0.0031067067745115173
+      ],
+      "motion_multiplier": -1,
+      "mimic": {
+        "joint": "wheel_spin",
+        "multiplier": -1
+      },
+      "mass": 0.025,
+      "mesh_scale": 0.9,
+      "axial_scale": 0.6,
+      "cap_color": [
+        0.7969166701251805,
+        0.13035230411902696,
+        0.01188133579806544,
+        1
+      ],
+      "cap_max_sides": 12,
+      "mesh_shift_native": [
+        -3.6542806123125512e-06,
+        0.00152415257203804,
+        -4.735131581445078e-06
+      ]
+    },
+    {
+      "name": "cabin_06",
+      "parent": "wheel",
+      "joint_name": "cabin_06_hang",
+      "type": "continuous",
+      "origin": [
+        0.34143640100955963,
+        0.06,
+        0.138175830245018
+      ],
+      "axis": [
+        0.0023975634338703703,
+        -0.999992300001654,
+        0.0031067067745115173
+      ],
+      "motion_multiplier": -1,
+      "mimic": {
+        "joint": "wheel_spin",
+        "multiplier": -1
+      },
+      "mass": 0.025,
+      "mesh_scale": 0.9,
+      "axial_scale": 0.6,
+      "cap_color": [
+        0.9743003331909739,
+        0.694080643678321,
+        0.0,
+        1
+      ],
+      "cap_max_sides": 12,
+      "mesh_shift_native": [
+        -9.11035464185653e-06,
+        0.0037998095747707435,
+        -1.1804985046159328e-05
+      ]
+    },
+    {
+      "name": "cabin_07",
+      "parent": "wheel",
+      "joint_name": "cabin_07_hang",
+      "type": "continuous",
+      "origin": [
+        0.2972502460082372,
+        0.06,
+        0.3276167859633764
+      ],
+      "axis": [
+        0.0023975634338703703,
+        -0.999992300001654,
+        0.0031067067745115173
+      ],
+      "motion_multiplier": -1,
+      "mimic": {
+        "joint": "wheel_spin",
+        "multiplier": -1
+      },
+      "mass": 0.025,
+      "mesh_scale": 0.9,
+      "axial_scale": 0.6,
+      "cap_color": [
+        0.9743003331909739,
+        0.6870309357671782,
+        5.077052561215497e-06,
+        1
+      ],
+      "cap_max_sides": 12,
+      "mesh_shift_native": [
+        -5.711653871875798e-06,
+        0.0023822560068536822,
+        -7.401027863015394e-06
+      ]
+    },
+    {
+      "name": "cabin_08",
+      "parent": "wheel",
+      "joint_name": "cabin_08_hang",
+      "type": "continuous",
+      "origin": [
+        0.12954088548819223,
+        0.06,
+        0.46698901057243347
+      ],
+      "axis": [
+        0.0023975634338703703,
+        -0.999992300001654,
+        0.0031067067745115173
+      ],
+      "motion_multiplier": -1,
+      "mimic": {
+        "joint": "wheel_spin",
+        "multiplier": -1
+      },
+      "mass": 0.025,
+      "mesh_scale": 0.9,
+      "axial_scale": 0.6,
+      "cap_color": [
+        0.00010718737628693815,
+        0.11129942002596888,
+        0.0025858258929290683,
+        1
+      ],
+      "cap_max_sides": 12,
+      "mesh_shift_native": [
+        -1.5066368162098207e-06,
+        0.0006283984789827617,
+        -1.95226484418455e-06
+      ]
+    },
+    {
+      "name": "cabin_09",
+      "parent": "wheel",
+      "joint_name": "cabin_09_hang",
+      "type": "continuous",
+      "origin": [
+        -0.07921327153841655,
+        0.06,
+        0.47666098674138385
+      ],
+      "axis": [
+        0.0023975634338703703,
+        -0.999992300001654,
+        0.0031067067745115173
+      ],
+      "motion_multiplier": -1,
+      "mimic": {
+        "joint": "wheel_spin",
+        "multiplier": -1
+      },
+      "mass": 0.025,
+      "mesh_scale": 0.9,
+      "axial_scale": 0.6,
+      "cap_color": [
+        0.00010718737628693815,
+        0.10871115526730132,
+        0.0025858258929290683,
+        1
+      ],
+      "cap_max_sides": 12,
+      "mesh_shift_native": [
+        -1.8657072577712743e-06,
+        0.0007781620563075989,
+        -2.4175399470522237e-06
+      ]
+    },
+    {
+      "name": "cabin_10",
+      "parent": "wheel",
+      "joint_name": "cabin_10_hang",
+      "type": "continuous",
+      "origin": [
+        -0.24229413767655691,
+        0.06,
+        0.3883203665415446
+      ],
+      "axis": [
+        0.0023975634338703703,
+        -0.999992300001654,
+        0.0031067067745115173
+      ],
+      "motion_multiplier": -1,
+      "mimic": {
+        "joint": "wheel_spin",
+        "multiplier": -1
+      },
+      "mass": 0.025,
+      "mesh_scale": 0.9,
+      "axial_scale": 0.6,
+      "cap_color": [
+        0.020951133147956078,
+        0.004559755190911315,
+        0.005521746049476707,
+        1
+      ],
+      "cap_max_sides": 12,
+      "mesh_shift_native": [
+        -3.6453116997140588e-06,
+        0.001520411756086655,
+        -4.7235098736995775e-06
+      ]
+    },
+    {
+      "name": "front_axle_cap",
+      "parent": "base_link",
+      "type": "fixed",
+      "origin": [
+        -0.0003193656898477642,
+        0.06,
+        0.16749805732759332
+      ],
+      "mass": 0.015,
+      "mesh_shift_native": [
+        9.590253735481481e-05,
+        -0.03999969200006616,
+        0.0001242682709804607
+      ]
+    },
+    {
+      "name": "inner_support_front",
+      "parent": "base_link",
+      "type": "fixed",
+      "origin": [
+        -0.0003193656898477642,
+        0.06,
+        0.16749805732759332
+      ],
+      "mass": 0.015,
+      "mesh_shift_native": [
+        0.00019180507470962962,
+        -0.07999938400013232,
+        0.0002485365419609214
+      ]
+    },
+    {
+      "name": "inner_support_rear",
+      "parent": "base_link",
+      "type": "fixed",
+      "origin": [
+        -0.0003193656898477642,
+        0.06,
+        0.16749805732759332
+      ],
+      "mass": 0.015,
+      "mesh_shift_native": [
+        -0.00015584162320157407,
+        0.06499949950010751,
+        -0.00020193594034324862
+      ]
+    }
+  ],
+  "face_owner_names": [
+    "base_link",
+    "wheel",
+    "cabin_01",
+    "cabin_02",
+    "cabin_03",
+    "cabin_04",
+    "cabin_05",
+    "cabin_06",
+    "cabin_07",
+    "cabin_08",
+    "cabin_09",
+    "cabin_10",
+    "front_axle_cap",
+    "inner_support_front",
+    "inner_support_rear"
+  ],
+  "inferences": [
+    "Ten cabin hinges use axes parallel to the measured central spindle. Each is a -1 URDF mimic of wheel_spin, with the same coupling saved in the trajectory.",
+    "Counter-rotation represents gravity-aligned suspension through prescribed kinematics; no pendulum dynamics or gravity simulation is claimed.",
+    "Cabin pivots are estimated from their upper painted arches and nearby suspension pins. Hidden bearings and exact linkages are unknown.",
+    "To correct collisions in the fused generated mesh, cabins are scaled to 90% about their hinges, compressed a further 40% along the axle and centered between the wheel frames. Small segmentation holes of at most 12 edges are capped; existing window openings remain.",
+    "Wheel frames are separated about an axial half-gap of 0.047 source units, except at suspension pins. Shaft radial clearance is 0.036 source units. Pin annuli, unintended cross-cavity sheets and disconnected front text shards are omitted; counts are recorded in analysis/axis_fit.json.",
+    "The rear sun plate and front axle cap are fixed. Original inner support rods are reassigned to fixed links and shifted by 0.080 and 0.065 source units toward the front and back respectively; the front cap moves forward 0.040. Outer support upper portions are locally moved away from the swept wheel. These are inferred mechanical clearance repairs, not recovered CAD dimensions.",
+    "Original UVs and textures are retained. Incomplete source cabin surfaces and low-detail base lettering remain limitations.",
+    "Nominal 0.5 m height, masses and inertias are estimates."
+  ]
+}
