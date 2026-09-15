@@ -18,7 +18,7 @@ jobs:
         shell: bash
         run: |
           python3 - <<'PY'
-          import base64, hashlib, json, os, pathlib, shutil, sys, urllib.request
+          import base64, concurrent.futures, hashlib, json, os, pathlib, shutil, sys, time, urllib.request
           oid = '88308cc2a4cc6177c59e32c2de51e881e6b961737295e5082d7ed01cca221908'
           size = 937374668
           upstream = 'https://huggingface.co/datasets/Caoza/PhysX-Mobility/resolve/d0768ee9e1415f6be8db78d6389ba018b85134c0/PhysX-Mobility.zip?download=true'
@@ -37,8 +37,33 @@ jobs:
                   return hashlib.file_digest(stream, 'sha256').hexdigest()
           try:
               path = pathlib.Path(os.environ['RUNNER_TEMP']) / 'PhysX-Mobility.zip'
-              with urllib.request.urlopen(upstream, timeout=120) as source, path.open('wb') as destination:
-                  shutil.copyfileobj(source, destination, length=1024*1024)
+              block = 64 * 1024 * 1024
+              with path.open('wb') as destination:
+                  destination.truncate(size)
+              def fetch(index):
+                  start, end = index*block, min(size-1, (index+1)*block-1)
+                  for attempt in range(3):
+                      try:
+                          request = urllib.request.Request(upstream, headers={'Range': f'bytes={start}-{end}'})
+                          with urllib.request.urlopen(request, timeout=120) as source, path.open('r+b') as destination:
+                              if source.status != 206 or source.headers.get('Content-Range') != f'bytes {start}-{end}/{size}':
+                                  raise RuntimeError('Upstream range response mismatch')
+                              destination.seek(start); received=0
+                              while chunk := source.read(1024*1024):
+                                  received += len(chunk)
+                                  if received > end-start+1:
+                                      raise RuntimeError('Unexpected range length')
+                                  destination.write(chunk)
+                              if received != end-start+1:
+                                  raise RuntimeError('Incomplete range')
+                          print('UPSTREAM_CHUNK_VERIFIED_LENGTH', index, received, flush=True)
+                          return
+                      except Exception:
+                          if attempt == 2:
+                              raise
+                          time.sleep(3)
+              with concurrent.futures.ThreadPoolExecutor(max_workers=16) as pool:
+                  list(pool.map(fetch, range((size+block-1)//block)))
               if path.stat().st_size != size or digest(path) != oid:
                   raise RuntimeError('Upstream archive checksum mismatch')
               print('UPSTREAM_ARCHIVE_VERIFIED', oid, size, flush=True)
