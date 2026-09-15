@@ -1,0 +1,72 @@
+name: Import verified PhysX-Mobility archive
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  import-archive:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Download fixed upstream archive, upload to LFS, and verify download
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TARGET_REPOSITORY: ${{ github.repository }}
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          import base64, hashlib, json, os, pathlib, shutil, sys, urllib.request
+          oid = '88308cc2a4cc6177c59e32c2de51e881e6b961737295e5082d7ed01cca221908'
+          size = 937374668
+          upstream = 'https://huggingface.co/datasets/Caoza/PhysX-Mobility/resolve/d0768ee9e1415f6be8db78d6389ba018b85134c0/PhysX-Mobility.zip?download=true'
+          endpoint = 'https://github.com/' + os.environ['TARGET_REPOSITORY'] + '.git/info/lfs/objects/batch'
+          authorization = 'Basic ' + base64.b64encode(('x-access-token:' + os.environ['GH_TOKEN']).encode()).decode()
+          def batch(operation):
+              body = json.dumps({'operation': operation, 'transfers': ['basic'], 'objects': [{'oid': oid, 'size': size}]}).encode()
+              request = urllib.request.Request(endpoint, data=body, headers={'Authorization': authorization, 'Content-Type': 'application/vnd.git-lfs+json', 'Accept': 'application/vnd.git-lfs+json'})
+              with urllib.request.urlopen(request, timeout=90) as response:
+                  result = json.load(response)['objects'][0]
+              if result.get('error'):
+                  raise RuntimeError('LFS batch rejected object')
+              return result.get('actions', {})
+          def digest(path):
+              with path.open('rb') as stream:
+                  return hashlib.file_digest(stream, 'sha256').hexdigest()
+          try:
+              path = pathlib.Path(os.environ['RUNNER_TEMP']) / 'PhysX-Mobility.zip'
+              with urllib.request.urlopen(upstream, timeout=120) as source, path.open('wb') as destination:
+                  shutil.copyfileobj(source, destination, length=1024*1024)
+              if path.stat().st_size != size or digest(path) != oid:
+                  raise RuntimeError('Upstream archive checksum mismatch')
+              print('UPSTREAM_ARCHIVE_VERIFIED', oid, size, flush=True)
+              actions = batch('upload')
+              if 'upload' in actions:
+                  action = actions['upload']
+                  headers = dict(action.get('header', {})); headers['Content-Length'] = str(size)
+                  with path.open('rb') as stream:
+                      request = urllib.request.Request(action['href'], data=stream, headers=headers, method='PUT')
+                      with urllib.request.urlopen(request, timeout=600) as response:
+                          if response.status not in (200, 201, 202, 204):
+                              raise RuntimeError('Object upload failed')
+                  if 'verify' in actions:
+                      action = actions['verify']
+                      headers = dict(action.get('header', {})); headers['Content-Type'] = 'application/vnd.git-lfs+json'
+                      request = urllib.request.Request(action['href'], data=json.dumps({'oid':oid,'size':size}).encode(), headers=headers)
+                      with urllib.request.urlopen(request, timeout=90) as response:
+                          response.read()
+              action = batch('download')['download']
+              request = urllib.request.Request(action['href'], headers=action.get('header', {}))
+              verified, received = hashlib.sha256(), 0
+              with urllib.request.urlopen(request, timeout=600) as response:
+                  while chunk := response.read(1024*1024):
+                      verified.update(chunk); received += len(chunk)
+              if received != size or verified.hexdigest() != oid:
+                  raise RuntimeError('Downloaded LFS content checksum mismatch')
+              print('ARCHIVE_UPLOAD_AND_DOWNLOAD_VERIFIED', oid, received, flush=True)
+          except Exception as error:
+              print('IMPORT_FAILED', type(error).__name__, 'Signed URLs and credentials suppressed', flush=True)
+              sys.exit(1)
+          PY
