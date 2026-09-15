@@ -1,0 +1,3410 @@
+<?xml version='1.0' encoding='utf-8'?>
+<robot name="scene">
+  <link name="l_world">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+  </link>
+  <link name="l_104">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="./../partseg/12977/objs/original-111.obj" scale="1 1 1" />
+      </geometry>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+    </visual>
+  </link>
+  <link name="l_105">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="./../partseg/12977/objs/original-112.obj" scale="1 1 1" />
+      </geometry>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+    </visual>
+  </link>
+  <link name="l_106">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="./../partseg/12977/objs/original-110.obj" scale="1 1 1" />
+      </geometry>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+    </visual>
+    <visual>
+      <geometry>
+        <mesh filename="./../partseg/12977/objs/original-108.obj" scale="1 1 1" />
+      </geometry>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+    </visual>
+    <visual>
+      <geometry>
+        <mesh filename="./../partseg/12977/objs/original-109.obj" scale="1 1 1" />
+      </geometry>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+    </visual>
+  </link>
+  <joint name="joint_fixed_104_105" type="fixed">
+    <parent link="l_104" />
+    <child link="l_105" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint>
+  <joint name="joint_fixed_105_106" type="fixed">
+    <parent link="l_105" />
+    <child link="l_106" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint>
+  <joint name="joint_fixed_world104" type="fixed">
+    <parent link="l_world" />
+    <child link="l_104" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint>
+  <link name="l_0">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="./../partseg/12977/objs/original-75.obj" scale="1 1 1" />
+      </geometry>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+    </visual>
+  </link>
+  <link name="abstract_104_0">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+  </link>
+  <joint name="joint_fixed_abstract_104_0" type="fixed">
+    <parent link="abstract_104_0" />
+    <child link="l_0" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint>
+  <joint name="joint_prismatic_l_104_abstract_104_0" type="prismatic">
+    <parent link="l_104" />
+    <child link="abstract_104_0" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <axis xyz="0.019525552247552026 -0.9840309795428137 -0.176923102249081" />
+    <limit lower="0.0" upper="0.02" effort="2000.0" velocity="2.0" />
+  </joint>
+  <link name="l_1">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="./../partseg/12977/objs/original-76.obj" scale="1 1 1" />
+      </geometry>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+    </visual>
+  </link>
+  <link name="abstract_104_1">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+  </link>
+  <joint name="joint_fixed_abstract_104_1" type="fixed">
+    <parent link="abstract_104_1" />
+    <child link="l_1" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint>
+  <joint name="joint_prismatic_l_104_abstract_104_1" type="prismatic">
+    <parent link="l_104" />
+    <child link="abstract_104_1" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <axis xyz="0.019525552247552026 -0.9840309795428137 -0.176923102249081" />
+    <limit lower="0.0" upper="0.02" effort="2000.0" velocity="2.0" />
+  </joint>
+  <link name="l_2">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="./../partseg/12977/objs/original-77.obj" scale="1 1 1" />
+      </geometry>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+    </visual>
+  </link>
+  <link name="abstract_104_2">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+  </link>
+  <joint name="joint_fixed_abstract_104_2" type="fixed">
+    <parent link="abstract_104_2" />
+    <child link="l_2" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint>
+  <joint name="joint_prismatic_l_104_abstract_104_2" type="prismatic">
+    <parent link="l_104" />
+    <child link="abstract_104_2" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <axis xyz="0.019525552247552026 -0.9840309795428137 -0.176923102249081" />
+    <limit lower="0.0" upper="0.02" effort="2000.0" velocity="2.0" />
+  </joint>
+  <link name="l_3">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="./../partseg/12977/objs/original-25.obj" scale="1 1 1" />
+      </geometry>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+    </visual>
+  </link>
+  <link name="abstract_104_3">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+  </link>
+  <joint name="joint_fixed_abstract_104_3" type="fixed">
+    <parent link="abstract_104_3" />
+    <child link="l_3" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint>
+  <joint name="joint_prismatic_l_104_abstract_104_3" type="prismatic">
+    <parent link="l_104" />
+    <child link="abstract_104_3" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <axis xyz="0.019525552247552026 -0.9840309795428137 -0.176923102249081" />
+    <limit lower="0.0" upper="0.02" effort="2000.0" velocity="2.0" />
+  </joint>
+  <link name="l_4">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="./../partseg/12977/objs/original-102.obj" scale="1 1 1" />
+      </geometry>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+    </visual>
+  </link>
+  <link name="abstract_104_4">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+  </link>
+  <joint name="joint_fixed_abstract_104_4" type="fixed">
+    <parent link="abstract_104_4" />
+    <child link="l_4" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint>
+  <joint name="joint_prismatic_l_104_abstract_104_4" type="prismatic">
+    <parent link="l_104" />
+    <child link="abstract_104_4" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <axis xyz="0.019525552247552026 -0.9840309795428137 -0.176923102249081" />
+    <limit lower="0.0" upper="0.02" effort="2000.0" velocity="2.0" />
+  </joint>
+  <link name="l_5">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="./../partseg/12977/objs/original-101.obj" scale="1 1 1" />
+      </geometry>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+    </visual>
+  </link>
+  <link name="abstract_104_5">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+  </link>
+  <joint name="joint_fixed_abstract_104_5" type="fixed">
+    <parent link="abstract_104_5" />
+    <child link="l_5" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint>
+  <joint name="joint_prismatic_l_104_abstract_104_5" type="prismatic">
+    <parent link="l_104" />
+    <child link="abstract_104_5" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <axis xyz="0.019525552247552026 -0.9840309795428137 -0.176923102249081" />
+    <limit lower="0.0" upper="0.02" effort="2000.0" velocity="2.0" />
+  </joint>
+  <link name="l_6">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="./../partseg/12977/objs/original-100.obj" scale="1 1 1" />
+      </geometry>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+    </visual>
+  </link>
+  <link name="abstract_104_6">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+  </link>
+  <joint name="joint_fixed_abstract_104_6" type="fixed">
+    <parent link="abstract_104_6" />
+    <child link="l_6" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint>
+  <joint name="joint_prismatic_l_104_abstract_104_6" type="prismatic">
+    <parent link="l_104" />
+    <child link="abstract_104_6" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <axis xyz="0.019525552247552026 -0.9840309795428137 -0.176923102249081" />
+    <limit lower="0.0" upper="0.02" effort="2000.0" velocity="2.0" />
+  </joint>
+  <link name="l_7">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="./../partseg/12977/objs/original-99.obj" scale="1 1 1" />
+      </geometry>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+    </visual>
+  </link>
+  <link name="abstract_104_7">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+  </link>
+  <joint name="joint_fixed_abstract_104_7" type="fixed">
+    <parent link="abstract_104_7" />
+    <child link="l_7" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint>
+  <joint name="joint_prismatic_l_104_abstract_104_7" type="prismatic">
+    <parent link="l_104" />
+    <child link="abstract_104_7" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <axis xyz="0.019525552247552026 -0.9840309795428137 -0.176923102249081" />
+    <limit lower="0.0" upper="0.02" effort="2000.0" velocity="2.0" />
+  </joint>
+  <link name="l_8">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="./../partseg/12977/objs/original-97.obj" scale="1 1 1" />
+      </geometry>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+    </visual>
+  </link>
+  <link name="abstract_104_8">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+  </link>
+  <joint name="joint_fixed_abstract_104_8" type="fixed">
+    <parent link="abstract_104_8" />
+    <child link="l_8" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint>
+  <joint name="joint_prismatic_l_104_abstract_104_8" type="prismatic">
+    <parent link="l_104" />
+    <child link="abstract_104_8" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <axis xyz="0.019525552247552026 -0.9840309795428137 -0.176923102249081" />
+    <limit lower="0.0" upper="0.02" effort="2000.0" velocity="2.0" />
+  </joint>
+  <link name="l_9">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="./../partseg/12977/objs/original-98.obj" scale="1 1 1" />
+      </geometry>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+    </visual>
+  </link>
+  <link name="abstract_104_9">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+  </link>
+  <joint name="joint_fixed_abstract_104_9" type="fixed">
+    <parent link="abstract_104_9" />
+    <child link="l_9" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint>
+  <joint name="joint_prismatic_l_104_abstract_104_9" type="prismatic">
+    <parent link="l_104" />
+    <child link="abstract_104_9" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <axis xyz="0.019525552247552026 -0.9840309795428137 -0.176923102249081" />
+    <limit lower="0.0" upper="0.02" effort="2000.0" velocity="2.0" />
+  </joint>
+  <link name="l_10">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="./../partseg/12977/objs/original-96.obj" scale="1 1 1" />
+      </geometry>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+    </visual>
+  </link>
+  <link name="abstract_104_10">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+  </link>
+  <joint name="joint_fixed_abstract_104_10" type="fixed">
+    <parent link="abstract_104_10" />
+    <child link="l_10" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint>
+  <joint name="joint_prismatic_l_104_abstract_104_10" type="prismatic">
+    <parent link="l_104" />
+    <child link="abstract_104_10" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <axis xyz="0.019525552247552026 -0.9840309795428137 -0.176923102249081" />
+    <limit lower="0.0" upper="0.02" effort="2000.0" velocity="2.0" />
+  </joint>
+  <link name="l_11">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="./../partseg/12977/objs/original-95.obj" scale="1 1 1" />
+      </geometry>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+    </visual>
+  </link>
+  <link name="abstract_104_11">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+  </link>
+  <joint name="joint_fixed_abstract_104_11" type="fixed">
+    <parent link="abstract_104_11" />
+    <child link="l_11" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint>
+  <joint name="joint_prismatic_l_104_abstract_104_11" type="prismatic">
+    <parent link="l_104" />
+    <child link="abstract_104_11" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <axis xyz="0.019525552247552026 -0.9840309795428137 -0.176923102249081" />
+    <limit lower="0.0" upper="0.02" effort="2000.0" velocity="2.0" />
+  </joint>
+  <link name="l_12">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="./../partseg/12977/objs/original-94.obj" scale="1 1 1" />
+      </geometry>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+    </visual>
+  </link>
+  <link name="abstract_104_12">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+  </link>
+  <joint name="joint_fixed_abstract_104_12" type="fixed">
+    <parent link="abstract_104_12" />
+    <child link="l_12" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint>
+  <joint name="joint_prismatic_l_104_abstract_104_12" type="prismatic">
+    <parent link="l_104" />
+    <child link="abstract_104_12" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <axis xyz="0.019525552247552026 -0.9840309795428137 -0.176923102249081" />
+    <limit lower="0.0" upper="0.02" effort="2000.0" velocity="2.0" />
+  </joint>
+  <link name="l_13">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="./../partseg/12977/objs/original-93.obj" scale="1 1 1" />
+      </geometry>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+    </visual>
+  </link>
+  <link name="abstract_104_13">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+  </link>
+  <joint name="joint_fixed_abstract_104_13" type="fixed">
+    <parent link="abstract_104_13" />
+    <child link="l_13" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint>
+  <joint name="joint_prismatic_l_104_abstract_104_13" type="prismatic">
+    <parent link="l_104" />
+    <child link="abstract_104_13" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <axis xyz="0.019525552247552026 -0.9840309795428137 -0.176923102249081" />
+    <limit lower="0.0" upper="0.02" effort="2000.0" velocity="2.0" />
+  </joint>
+  <link name="l_14">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="./../partseg/12977/objs/original-92.obj" scale="1 1 1" />
+      </geometry>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+    </visual>
+  </link>
+  <link name="abstract_104_14">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+  </link>
+  <joint name="joint_fixed_abstract_104_14" type="fixed">
+    <parent link="abstract_104_14" />
+    <child link="l_14" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint>
+  <joint name="joint_prismatic_l_104_abstract_104_14" type="prismatic">
+    <parent link="l_104" />
+    <child link="abstract_104_14" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <axis xyz="0.019525552247552026 -0.9840309795428137 -0.176923102249081" />
+    <limit lower="0.0" upper="0.02" effort="2000.0" velocity="2.0" />
+  </joint>
+  <link name="l_15">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="./../partseg/12977/objs/original-91.obj" scale="1 1 1" />
+      </geometry>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+    </visual>
+  </link>
+  <link name="abstract_104_15">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+  </link>
+  <joint name="joint_fixed_abstract_104_15" type="fixed">
+    <parent link="abstract_104_15" />
+    <child link="l_15" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint>
+  <joint name="joint_prismatic_l_104_abstract_104_15" type="prismatic">
+    <parent link="l_104" />
+    <child link="abstract_104_15" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <axis xyz="0.019525552247552026 -0.9840309795428137 -0.176923102249081" />
+    <limit lower="0.0" upper="0.02" effort="2000.0" velocity="2.0" />
+  </joint>
+  <link name="l_16">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="./../partseg/12977/objs/original-5.obj" scale="1 1 1" />
+      </geometry>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+    </visual>
+  </link>
+  <link name="abstract_104_16">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+  </link>
+  <joint name="joint_fixed_abstract_104_16" type="fixed">
+    <parent link="abstract_104_16" />
+    <child link="l_16" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint>
+  <joint name="joint_prismatic_l_104_abstract_104_16" type="prismatic">
+    <parent link="l_104" />
+    <child link="abstract_104_16" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <axis xyz="0.019525552247552026 -0.9840309795428137 -0.176923102249081" />
+    <limit lower="0.0" upper="0.02" effort="2000.0" velocity="2.0" />
+  </joint>
+  <link name="l_17">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="./../partseg/12977/objs/original-50.obj" scale="1 1 1" />
+      </geometry>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+    </visual>
+  </link>
+  <link name="abstract_104_17">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+  </link>
+  <joint name="joint_fixed_abstract_104_17" type="fixed">
+    <parent link="abstract_104_17" />
+    <child link="l_17" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint>
+  <joint name="joint_prismatic_l_104_abstract_104_17" type="prismatic">
+    <parent link="l_104" />
+    <child link="abstract_104_17" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <axis xyz="0.019525552247552026 -0.9840309795428137 -0.176923102249081" />
+    <limit lower="0.0" upper="0.02" effort="2000.0" velocity="2.0" />
+  </joint>
+  <link name="l_18">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="./../partseg/12977/objs/original-51.obj" scale="1 1 1" />
+      </geometry>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+    </visual>
+  </link>
+  <link name="abstract_104_18">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+  </link>
+  <joint name="joint_fixed_abstract_104_18" type="fixed">
+    <parent link="abstract_104_18" />
+    <child link="l_18" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint>
+  <joint name="joint_prismatic_l_104_abstract_104_18" type="prismatic">
+    <parent link="l_104" />
+    <child link="abstract_104_18" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <axis xyz="0.019525552247552026 -0.9840309795428137 -0.176923102249081" />
+    <limit lower="0.0" upper="0.02" effort="2000.0" velocity="2.0" />
+  </joint>
+  <link name="l_19">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="./../partseg/12977/objs/original-49.obj" scale="1 1 1" />
+      </geometry>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+    </visual>
+  </link>
+  <link name="abstract_104_19">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+  </link>
+  <joint name="joint_fixed_abstract_104_19" type="fixed">
+    <parent link="abstract_104_19" />
+    <child link="l_19" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint>
+  <joint name="joint_prismatic_l_104_abstract_104_19" type="prismatic">
+    <parent link="l_104" />
+    <child link="abstract_104_19" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <axis xyz="0.019525552247552026 -0.9840309795428137 -0.176923102249081" />
+    <limit lower="0.0" upper="0.02" effort="2000.0" velocity="2.0" />
+  </joint>
+  <link name="l_20">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="./../partseg/12977/objs/original-48.obj" scale="1 1 1" />
+      </geometry>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+    </visual>
+  </link>
+  <link name="abstract_104_20">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+  </link>
+  <joint name="joint_fixed_abstract_104_20" type="fixed">
+    <parent link="abstract_104_20" />
+    <child link="l_20" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint>
+  <joint name="joint_prismatic_l_104_abstract_104_20" type="prismatic">
+    <parent link="l_104" />
+    <child link="abstract_104_20" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <axis xyz="0.019525552247552026 -0.9840309795428137 -0.176923102249081" />
+    <limit lower="0.0" upper="0.02" effort="2000.0" velocity="2.0" />
+  </joint>
+  <link name="l_21">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="./../partseg/12977/objs/original-62.obj" scale="1 1 1" />
+      </geometry>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+    </visual>
+  </link>
+  <link name="abstract_104_21">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+  </link>
+  <joint name="joint_fixed_abstract_104_21" type="fixed">
+    <parent link="abstract_104_21" />
+    <child link="l_21" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint>
+  <joint name="joint_prismatic_l_104_abstract_104_21" type="prismatic">
+    <parent link="l_104" />
+    <child link="abstract_104_21" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <axis xyz="0.019525552247552026 -0.9840309795428137 -0.176923102249081" />
+    <limit lower="0.0" upper="0.02" effort="2000.0" velocity="2.0" />
+  </joint>
+  <link name="l_22">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="./../partseg/12977/objs/original-63.obj" scale="1 1 1" />
+      </geometry>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+    </visual>
+  </link>
+  <link name="abstract_104_22">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+  </link>
+  <joint name="joint_fixed_abstract_104_22" type="fixed">
+    <parent link="abstract_104_22" />
+    <child link="l_22" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint>
+  <joint name="joint_prismatic_l_104_abstract_104_22" type="prismatic">
+    <parent link="l_104" />
+    <child link="abstract_104_22" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <axis xyz="0.019525552247552026 -0.9840309795428137 -0.176923102249081" />
+    <limit lower="0.0" upper="0.02" effort="2000.0" velocity="2.0" />
+  </joint>
+  <link name="l_23">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="./../partseg/12977/objs/original-79.obj" scale="1 1 1" />
+      </geometry>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+    </visual>
+  </link>
+  <link name="abstract_104_23">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+  </link>
+  <joint name="joint_fixed_abstract_104_23" type="fixed">
+    <parent link="abstract_104_23" />
+    <child link="l_23" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint>
+  <joint name="joint_prismatic_l_104_abstract_104_23" type="prismatic">
+    <parent link="l_104" />
+    <child link="abstract_104_23" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <axis xyz="0.019525552247552026 -0.9840309795428137 -0.176923102249081" />
+    <limit lower="0.0" upper="0.02" effort="2000.0" velocity="2.0" />
+  </joint>
+  <link name="l_24">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="./../partseg/12977/objs/original-78.obj" scale="1 1 1" />
+      </geometry>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+    </visual>
+  </link>
+  <link name="abstract_104_24">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+  </link>
+  <joint name="joint_fixed_abstract_104_24" type="fixed">
+    <parent link="abstract_104_24" />
+    <child link="l_24" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint>
+  <joint name="joint_prismatic_l_104_abstract_104_24" type="prismatic">
+    <parent link="l_104" />
+    <child link="abstract_104_24" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <axis xyz="0.019525552247552026 -0.9840309795428137 -0.176923102249081" />
+    <limit lower="0.0" upper="0.02" effort="2000.0" velocity="2.0" />
+  </joint>
+  <link name="l_25">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="./../partseg/12977/objs/original-60.obj" scale="1 1 1" />
+      </geometry>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+    </visual>
+  </link>
+  <link name="abstract_104_25">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+  </link>
+  <joint name="joint_fixed_abstract_104_25" type="fixed">
+    <parent link="abstract_104_25" />
+    <child link="l_25" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint>
+  <joint name="joint_prismatic_l_104_abstract_104_25" type="prismatic">
+    <parent link="l_104" />
+    <child link="abstract_104_25" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <axis xyz="0.019525552247552026 -0.9840309795428137 -0.176923102249081" />
+    <limit lower="0.0" upper="0.02" effort="2000.0" velocity="2.0" />
+  </joint>
+  <link name="l_26">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="./../partseg/12977/objs/original-61.obj" scale="1 1 1" />
+      </geometry>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+    </visual>
+  </link>
+  <link name="abstract_104_26">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+  </link>
+  <joint name="joint_fixed_abstract_104_26" type="fixed">
+    <parent link="abstract_104_26" />
+    <child link="l_26" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint>
+  <joint name="joint_prismatic_l_104_abstract_104_26" type="prismatic">
+    <parent link="l_104" />
+    <child link="abstract_104_26" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <axis xyz="0.019525552247552026 -0.9840309795428137 -0.176923102249081" />
+    <limit lower="0.0" upper="0.02" effort="2000.0" velocity="2.0" />
+  </joint>
+  <link name="l_27">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="./../partseg/12977/objs/original-43.obj" scale="1 1 1" />
+      </geometry>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+    </visual>
+  </link>
+  <link name="abstract_104_27">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+  </link>
+  <joint name="joint_fixed_abstract_104_27" type="fixed">
+    <parent link="abstract_104_27" />
+    <child link="l_27" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint>
+  <joint name="joint_prismatic_l_104_abstract_104_27" type="prismatic">
+    <parent link="l_104" />
+    <child link="abstract_104_27" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <axis xyz="0.019525552247552026 -0.9840309795428137 -0.176923102249081" />
+    <limit lower="0.0" upper="0.02" effort="2000.0" velocity="2.0" />
+  </joint>
+  <link name="l_28">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="./../partseg/12977/objs/original-40.obj" scale="1 1 1" />
+      </geometry>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+    </visual>
+  </link>
+  <link name="abstract_104_28">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+  </link>
+  <joint name="joint_fixed_abstract_104_28" type="fixed">
+    <parent link="abstract_104_28" />
+    <child link="l_28" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint>
+  <joint name="joint_prismatic_l_104_abstract_104_28" type="prismatic">
+    <parent link="l_104" />
+    <child link="abstract_104_28" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <axis xyz="0.019525552247552026 -0.9840309795428137 -0.176923102249081" />
+    <limit lower="0.0" upper="0.02" effort="2000.0" velocity="2.0" />
+  </joint>
+  <link name="l_29">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="./../partseg/12977/objs/original-52.obj" scale="1 1 1" />
+      </geometry>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+    </visual>
+  </link>
+  <link name="abstract_104_29">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+  </link>
+  <joint name="joint_fixed_abstract_104_29" type="fixed">
+    <parent link="abstract_104_29" />
+    <child link="l_29" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint>
+  <joint name="joint_prismatic_l_104_abstract_104_29" type="prismatic">
+    <parent link="l_104" />
+    <child link="abstract_104_29" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <axis xyz="0.019525552247552026 -0.9840309795428137 -0.176923102249081" />
+    <limit lower="0.0" upper="0.02" effort="2000.0" velocity="2.0" />
+  </joint>
+  <link name="l_30">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="./../partseg/12977/objs/original-47.obj" scale="1 1 1" />
+      </geometry>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+    </visual>
+  </link>
+  <link name="abstract_104_30">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+  </link>
+  <joint name="joint_fixed_abstract_104_30" type="fixed">
+    <parent link="abstract_104_30" />
+    <child link="l_30" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint>
+  <joint name="joint_prismatic_l_104_abstract_104_30" type="prismatic">
+    <parent link="l_104" />
+    <child link="abstract_104_30" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <axis xyz="0.019525552247552026 -0.9840309795428137 -0.176923102249081" />
+    <limit lower="0.0" upper="0.02" effort="2000.0" velocity="2.0" />
+  </joint>
+  <link name="l_31">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="./../partseg/12977/objs/original-81.obj" scale="1 1 1" />
+      </geometry>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+    </visual>
+  </link>
+  <link name="abstract_104_31">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+  </link>
+  <joint name="joint_fixed_abstract_104_31" type="fixed">
+    <parent link="abstract_104_31" />
+    <child link="l_31" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint>
+  <joint name="joint_prismatic_l_104_abstract_104_31" type="prismatic">
+    <parent link="l_104" />
+    <child link="abstract_104_31" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <axis xyz="0.019525552247552026 -0.9840309795428137 -0.176923102249081" />
+    <limit lower="0.0" upper="0.02" effort="2000.0" velocity="2.0" />
+  </joint>
+  <link name="l_32">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="./../partseg/12977/objs/original-103.obj" scale="1 1 1" />
+      </geometry>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+    </visual>
+  </link>
+  <link name="abstract_104_32">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+  </link>
+  <joint name="joint_fixed_abstract_104_32" type="fixed">
+    <parent link="abstract_104_32" />
+    <child link="l_32" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint>
+  <joint name="joint_prismatic_l_104_abstract_104_32" type="prismatic">
+    <parent link="l_104" />
+    <child link="abstract_104_32" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <axis xyz="0.019525552247552026 -0.9840309795428137 -0.176923102249081" />
+    <limit lower="0.0" upper="0.02" effort="2000.0" velocity="2.0" />
+  </joint>
+  <link name="l_33">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="./../partseg/12977/objs/original-83.obj" scale="1 1 1" />
+      </geometry>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+    </visual>
+  </link>
+  <link name="abstract_104_33">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+  </link>
+  <joint name="joint_fixed_abstract_104_33" type="fixed">
+    <parent link="abstract_104_33" />
+    <child link="l_33" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint>
+  <joint name="joint_prismatic_l_104_abstract_104_33" type="prismatic">
+    <parent link="l_104" />
+    <child link="abstract_104_33" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <axis xyz="0.019525552247552026 -0.9840309795428137 -0.176923102249081" />
+    <limit lower="0.0" upper="0.02" effort="2000.0" velocity="2.0" />
+  </joint>
+  <link name="l_34">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="./../partseg/12977/objs/original-84.obj" scale="1 1 1" />
+      </geometry>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+    </visual>
+  </link>
+  <link name="abstract_104_34">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+  </link>
+  <joint name="joint_fixed_abstract_104_34" type="fixed">
+    <parent link="abstract_104_34" />
+    <child link="l_34" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint>
+  <joint name="joint_prismatic_l_104_abstract_104_34" type="prismatic">
+    <parent link="l_104" />
+    <child link="abstract_104_34" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <axis xyz="0.019525552247552026 -0.9840309795428137 -0.176923102249081" />
+    <limit lower="0.0" upper="0.02" effort="2000.0" velocity="2.0" />
+  </joint>
+  <link name="l_35">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="./../partseg/12977/objs/original-106.obj" scale="1 1 1" />
+      </geometry>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+    </visual>
+  </link>
+  <link name="abstract_104_35">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+  </link>
+  <joint name="joint_fixed_abstract_104_35" type="fixed">
+    <parent link="abstract_104_35" />
+    <child link="l_35" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint>
+  <joint name="joint_prismatic_l_104_abstract_104_35" type="prismatic">
+    <parent link="l_104" />
+    <child link="abstract_104_35" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <axis xyz="0.019525552247552026 -0.9840309795428137 -0.176923102249081" />
+    <limit lower="0.0" upper="0.02" effort="2000.0" velocity="2.0" />
+  </joint>
+  <link name="l_36">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="./../partseg/12977/objs/original-23.obj" scale="1 1 1" />
+      </geometry>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+    </visual>
+  </link>
+  <link name="abstract_104_36">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+  </link>
+  <joint name="joint_fixed_abstract_104_36" type="fixed">
+    <parent link="abstract_104_36" />
+    <child link="l_36" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint>
+  <joint name="joint_prismatic_l_104_abstract_104_36" type="prismatic">
+    <parent link="l_104" />
+    <child link="abstract_104_36" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <axis xyz="0.019525552247552026 -0.9840309795428137 -0.176923102249081" />
+    <limit lower="0.0" upper="0.02" effort="2000.0" velocity="2.0" />
+  </joint>
+  <link name="l_37">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="./../partseg/12977/objs/original-104.obj" scale="1 1 1" />
+      </geometry>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+    </visual>
+  </link>
+  <link name="abstract_104_37">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+  </link>
+  <joint name="joint_fixed_abstract_104_37" type="fixed">
+    <parent link="abstract_104_37" />
+    <child link="l_37" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint>
+  <joint name="joint_prismatic_l_104_abstract_104_37" type="prismatic">
+    <parent link="l_104" />
+    <child link="abstract_104_37" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <axis xyz="0.019525552247552026 -0.9840309795428137 -0.176923102249081" />
+    <limit lower="0.0" upper="0.02" effort="2000.0" velocity="2.0" />
+  </joint>
+  <link name="l_38">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="./../partseg/12977/objs/original-105.obj" scale="1 1 1" />
+      </geometry>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+    </visual>
+  </link>
+  <link name="abstract_104_38">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+  </link>
+  <joint name="joint_fixed_abstract_104_38" type="fixed">
+    <parent link="abstract_104_38" />
+    <child link="l_38" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint>
+  <joint name="joint_prismatic_l_104_abstract_104_38" type="prismatic">
+    <parent link="l_104" />
+    <child link="abstract_104_38" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <axis xyz="0.019525552247552026 -0.9840309795428137 -0.176923102249081" />
+    <limit lower="0.0" upper="0.02" effort="2000.0" velocity="2.0" />
+  </joint>
+  <link name="l_39">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="./../partseg/12977/objs/original-33.obj" scale="1 1 1" />
+      </geometry>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+    </visual>
+  </link>
+  <link name="abstract_104_39">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+  </link>
+  <joint name="joint_fixed_abstract_104_39" type="fixed">
+    <parent link="abstract_104_39" />
+    <child link="l_39" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint>
+  <joint name="joint_prismatic_l_104_abstract_104_39" type="prismatic">
+    <parent link="l_104" />
+    <child link="abstract_104_39" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <axis xyz="0.019525552247552026 -0.9840309795428137 -0.176923102249081" />
+    <limit lower="0.0" upper="0.02" effort="2000.0" velocity="2.0" />
+  </joint>
+  <link name="l_40">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="./../partseg/12977/objs/original-28.obj" scale="1 1 1" />
+      </geometry>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+    </visual>
+  </link>
+  <link name="abstract_104_40">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+  </link>
+  <joint name="joint_fixed_abstract_104_40" type="fixed">
+    <parent link="abstract_104_40" />
+    <child link="l_40" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint>
+  <joint name="joint_prismatic_l_104_abstract_104_40" type="prismatic">
+    <parent link="l_104" />
+    <child link="abstract_104_40" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <axis xyz="0.019525552247552026 -0.9840309795428137 -0.176923102249081" />
+    <limit lower="0.0" upper="0.02" effort="2000.0" velocity="2.0" />
+  </joint>
+  <link name="l_41">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="./../partseg/12977/objs/original-36.obj" scale="1 1 1" />
+      </geometry>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+    </visual>
+  </link>
+  <link name="abstract_104_41">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+  </link>
+  <joint name="joint_fixed_abstract_104_41" type="fixed">
+    <parent link="abstract_104_41" />
+    <child link="l_41" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint>
+  <joint name="joint_prismatic_l_104_abstract_104_41" type="prismatic">
+    <parent link="l_104" />
+    <child link="abstract_104_41" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <axis xyz="0.019525552247552026 -0.9840309795428137 -0.176923102249081" />
+    <limit lower="0.0" upper="0.02" effort="2000.0" velocity="2.0" />
+  </joint>
+  <link name="l_42">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="./../partseg/12977/objs/original-35.obj" scale="1 1 1" />
+      </geometry>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+    </visual>
+  </link>
+  <link name="abstract_104_42">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+  </link>
+  <joint name="joint_fixed_abstract_104_42" type="fixed">
+    <parent link="abstract_104_42" />
+    <child link="l_42" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint>
+  <joint name="joint_prismatic_l_104_abstract_104_42" type="prismatic">
+    <parent link="l_104" />
+    <child link="abstract_104_42" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <axis xyz="0.019525552247552026 -0.9840309795428137 -0.176923102249081" />
+    <limit lower="0.0" upper="0.02" effort="2000.0" velocity="2.0" />
+  </joint>
+  <link name="l_43">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="./../partseg/12977/objs/original-55.obj" scale="1 1 1" />
+      </geometry>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+    </visual>
+  </link>
+  <link name="abstract_104_43">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+  </link>
+  <joint name="joint_fixed_abstract_104_43" type="fixed">
+    <parent link="abstract_104_43" />
+    <child link="l_43" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint>
+  <joint name="joint_prismatic_l_104_abstract_104_43" type="prismatic">
+    <parent link="l_104" />
+    <child link="abstract_104_43" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <axis xyz="0.019525552247552026 -0.9840309795428137 -0.176923102249081" />
+    <limit lower="0.0" upper="0.02" effort="2000.0" velocity="2.0" />
+  </joint>
+  <link name="l_44">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="./../partseg/12977/objs/original-59.obj" scale="1 1 1" />
+      </geometry>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+    </visual>
+  </link>
+  <link name="abstract_104_44">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+  </link>
+  <joint name="joint_fixed_abstract_104_44" type="fixed">
+    <parent link="abstract_104_44" />
+    <child link="l_44" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint>
+  <joint name="joint_prismatic_l_104_abstract_104_44" type="prismatic">
+    <parent link="l_104" />
+    <child link="abstract_104_44" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <axis xyz="0.019525552247552026 -0.9840309795428137 -0.176923102249081" />
+    <limit lower="0.0" upper="0.02" effort="2000.0" velocity="2.0" />
+  </joint>
+  <link name="l_45">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="./../partseg/12977/objs/original-58.obj" scale="1 1 1" />
+      </geometry>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+    </visual>
+  </link>
+  <link name="abstract_104_45">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+  </link>
+  <joint name="joint_fixed_abstract_104_45" type="fixed">
+    <parent link="abstract_104_45" />
+    <child link="l_45" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint>
+  <joint name="joint_prismatic_l_104_abstract_104_45" type="prismatic">
+    <parent link="l_104" />
+    <child link="abstract_104_45" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <axis xyz="0.019525552247552026 -0.9840309795428137 -0.176923102249081" />
+    <limit lower="0.0" upper="0.02" effort="2000.0" velocity="2.0" />
+  </joint>
+  <link name="l_46">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="./../partseg/12977/objs/original-54.obj" scale="1 1 1" />
+      </geometry>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+    </visual>
+  </link>
+  <link name="abstract_104_46">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+  </link>
+  <joint name="joint_fixed_abstract_104_46" type="fixed">
+    <parent link="abstract_104_46" />
+    <child link="l_46" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint>
+  <joint name="joint_prismatic_l_104_abstract_104_46" type="prismatic">
+    <parent link="l_104" />
+    <child link="abstract_104_46" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <axis xyz="0.019525552247552026 -0.9840309795428137 -0.176923102249081" />
+    <limit lower="0.0" upper="0.02" effort="2000.0" velocity="2.0" />
+  </joint>
+  <link name="l_47">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="./../partseg/12977/objs/original-56.obj" scale="1 1 1" />
+      </geometry>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+    </visual>
+  </link>
+  <link name="abstract_104_47">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+  </link>
+  <joint name="joint_fixed_abstract_104_47" type="fixed">
+    <parent link="abstract_104_47" />
+    <child link="l_47" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint>
+  <joint name="joint_prismatic_l_104_abstract_104_47" type="prismatic">
+    <parent link="l_104" />
+    <child link="abstract_104_47" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <axis xyz="0.019525552247552026 -0.9840309795428137 -0.176923102249081" />
+    <limit lower="0.0" upper="0.02" effort="2000.0" velocity="2.0" />
+  </joint>
+  <link name="l_48">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="./../partseg/12977/objs/original-53.obj" scale="1 1 1" />
+      </geometry>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+    </visual>
+  </link>
+  <link name="abstract_104_48">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+  </link>
+  <joint name="joint_fixed_abstract_104_48" type="fixed">
+    <parent link="abstract_104_48" />
+    <child link="l_48" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint>
+  <joint name="joint_prismatic_l_104_abstract_104_48" type="prismatic">
+    <parent link="l_104" />
+    <child link="abstract_104_48" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <axis xyz="0.019525552247552026 -0.9840309795428137 -0.176923102249081" />
+    <limit lower="0.0" upper="0.02" effort="2000.0" velocity="2.0" />
+  </joint>
+  <link name="l_49">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="./../partseg/12977/objs/original-67.obj" scale="1 1 1" />
+      </geometry>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+    </visual>
+  </link>
+  <link name="abstract_104_49">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+  </link>
+  <joint name="joint_fixed_abstract_104_49" type="fixed">
+    <parent link="abstract_104_49" />
+    <child link="l_49" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint>
+  <joint name="joint_prismatic_l_104_abstract_104_49" type="prismatic">
+    <parent link="l_104" />
+    <child link="abstract_104_49" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <axis xyz="0.019525552247552026 -0.9840309795428137 -0.176923102249081" />
+    <limit lower="0.0" upper="0.02" effort="2000.0" velocity="2.0" />
+  </joint>
+  <link name="l_50">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="./../partseg/12977/objs/original-18.obj" scale="1 1 1" />
+      </geometry>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+    </visual>
+  </link>
+  <link name="abstract_104_50">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+  </link>
+  <joint name="joint_fixed_abstract_104_50" type="fixed">
+    <parent link="abstract_104_50" />
+    <child link="l_50" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint>
+  <joint name="joint_prismatic_l_104_abstract_104_50" type="prismatic">
+    <parent link="l_104" />
+    <child link="abstract_104_50" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <axis xyz="0.019525552247552026 -0.9840309795428137 -0.176923102249081" />
+    <limit lower="0.0" upper="0.02" effort="2000.0" velocity="2.0" />
+  </joint>
+  <link name="l_51">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="./../partseg/12977/objs/original-57.obj" scale="1 1 1" />
+      </geometry>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+    </visual>
+  </link>
+  <link name="abstract_104_51">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+  </link>
+  <joint name="joint_fixed_abstract_104_51" type="fixed">
+    <parent link="abstract_104_51" />
+    <child link="l_51" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint>
+  <joint name="joint_prismatic_l_104_abstract_104_51" type="prismatic">
+    <parent link="l_104" />
+    <child link="abstract_104_51" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <axis xyz="0.019525552247552026 -0.9840309795428137 -0.176923102249081" />
+    <limit lower="0.0" upper="0.02" effort="2000.0" velocity="2.0" />
+  </joint>
+  <link name="l_52">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="./../partseg/12977/objs/original-19.obj" scale="1 1 1" />
+      </geometry>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+    </visual>
+  </link>
+  <link name="abstract_104_52">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+  </link>
+  <joint name="joint_fixed_abstract_104_52" type="fixed">
+    <parent link="abstract_104_52" />
+    <child link="l_52" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint>
+  <joint name="joint_prismatic_l_104_abstract_104_52" type="prismatic">
+    <parent link="l_104" />
+    <child link="abstract_104_52" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <axis xyz="0.019525552247552026 -0.9840309795428137 -0.176923102249081" />
+    <limit lower="0.0" upper="0.02" effort="2000.0" velocity="2.0" />
+  </joint>
+  <link name="l_53">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="./../partseg/12977/objs/original-20.obj" scale="1 1 1" />
+      </geometry>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+    </visual>
+  </link>
+  <link name="abstract_104_53">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+  </link>
+  <joint name="joint_fixed_abstract_104_53" type="fixed">
+    <parent link="abstract_104_53" />
+    <child link="l_53" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint>
+  <joint name="joint_prismatic_l_104_abstract_104_53" type="prismatic">
+    <parent link="l_104" />
+    <child link="abstract_104_53" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <axis xyz="0.019525552247552026 -0.9840309795428137 -0.176923102249081" />
+    <limit lower="0.0" upper="0.02" effort="2000.0" velocity="2.0" />
+  </joint>
+  <link name="l_54">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="./../partseg/12977/objs/original-15.obj" scale="1 1 1" />
+      </geometry>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+    </visual>
+  </link>
+  <link name="abstract_104_54">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+  </link>
+  <joint name="joint_fixed_abstract_104_54" type="fixed">
+    <parent link="abstract_104_54" />
+    <child link="l_54" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint>
+  <joint name="joint_prismatic_l_104_abstract_104_54" type="prismatic">
+    <parent link="l_104" />
+    <child link="abstract_104_54" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <axis xyz="0.019525552247552026 -0.9840309795428137 -0.176923102249081" />
+    <limit lower="0.0" upper="0.02" effort="2000.0" velocity="2.0" />
+  </joint>
+  <link name="l_55">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="./../partseg/12977/objs/original-46.obj" scale="1 1 1" />
+      </geometry>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+    </visual>
+  </link>
+  <link name="abstract_104_55">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+  </link>
+  <joint name="joint_fixed_abstract_104_55" type="fixed">
+    <parent link="abstract_104_55" />
+    <child link="l_55" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint>
+  <joint name="joint_prismatic_l_104_abstract_104_55" type="prismatic">
+    <parent link="l_104" />
+    <child link="abstract_104_55" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <axis xyz="0.019525552247552026 -0.9840309795428137 -0.176923102249081" />
+    <limit lower="0.0" upper="0.02" effort="2000.0" velocity="2.0" />
+  </joint>
+  <link name="l_56">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="./../partseg/12977/objs/original-13.obj" scale="1 1 1" />
+      </geometry>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+    </visual>
+  </link>
+  <link name="abstract_104_56">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+  </link>
+  <joint name="joint_fixed_abstract_104_56" type="fixed">
+    <parent link="abstract_104_56" />
+    <child link="l_56" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint>
+  <joint name="joint_prismatic_l_104_abstract_104_56" type="prismatic">
+    <parent link="l_104" />
+    <child link="abstract_104_56" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <axis xyz="0.019525552247552026 -0.9840309795428137 -0.176923102249081" />
+    <limit lower="0.0" upper="0.02" effort="2000.0" velocity="2.0" />
+  </joint>
+  <link name="l_57">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="./../partseg/12977/objs/original-11.obj" scale="1 1 1" />
+      </geometry>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+    </visual>
+  </link>
+  <link name="abstract_104_57">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+  </link>
+  <joint name="joint_fixed_abstract_104_57" type="fixed">
+    <parent link="abstract_104_57" />
+    <child link="l_57" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint>
+  <joint name="joint_prismatic_l_104_abstract_104_57" type="prismatic">
+    <parent link="l_104" />
+    <child link="abstract_104_57" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <axis xyz="0.019525552247552026 -0.9840309795428137 -0.176923102249081" />
+    <limit lower="0.0" upper="0.02" effort="2000.0" velocity="2.0" />
+  </joint>
+  <link name="l_58">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="./../partseg/12977/objs/original-17.obj" scale="1 1 1" />
+      </geometry>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+    </visual>
+  </link>
+  <link name="abstract_104_58">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+  </link>
+  <joint name="joint_fixed_abstract_104_58" type="fixed">
+    <parent link="abstract_104_58" />
+    <child link="l_58" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint>
+  <joint name="joint_prismatic_l_104_abstract_104_58" type="prismatic">
+    <parent link="l_104" />
+    <child link="abstract_104_58" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <axis xyz="0.019525552247552026 -0.9840309795428137 -0.176923102249081" />
+    <limit lower="0.0" upper="0.02" effort="2000.0" velocity="2.0" />
+  </joint>
+  <link name="l_59">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="./../partseg/12977/objs/original-8.obj" scale="1 1 1" />
+      </geometry>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+    </visual>
+  </link>
+  <link name="abstract_104_59">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+  </link>
+  <joint name="joint_fixed_abstract_104_59" type="fixed">
+    <parent link="abstract_104_59" />
+    <child link="l_59" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint>
+  <joint name="joint_prismatic_l_104_abstract_104_59" type="prismatic">
+    <parent link="l_104" />
+    <child link="abstract_104_59" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <axis xyz="0.019525552247552026 -0.9840309795428137 -0.176923102249081" />
+    <limit lower="0.0" upper="0.02" effort="2000.0" velocity="2.0" />
+  </joint>
+  <link name="l_60">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="./../partseg/12977/objs/original-6.obj" scale="1 1 1" />
+      </geometry>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+    </visual>
+  </link>
+  <link name="abstract_104_60">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+  </link>
+  <joint name="joint_fixed_abstract_104_60" type="fixed">
+    <parent link="abstract_104_60" />
+    <child link="l_60" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint>
+  <joint name="joint_prismatic_l_104_abstract_104_60" type="prismatic">
+    <parent link="l_104" />
+    <child link="abstract_104_60" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <axis xyz="0.019525552247552026 -0.9840309795428137 -0.176923102249081" />
+    <limit lower="0.0" upper="0.02" effort="2000.0" velocity="2.0" />
+  </joint>
+  <link name="l_61">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="./../partseg/12977/objs/original-4.obj" scale="1 1 1" />
+      </geometry>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+    </visual>
+  </link>
+  <link name="abstract_104_61">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+  </link>
+  <joint name="joint_fixed_abstract_104_61" type="fixed">
+    <parent link="abstract_104_61" />
+    <child link="l_61" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint>
+  <joint name="joint_prismatic_l_104_abstract_104_61" type="prismatic">
+    <parent link="l_104" />
+    <child link="abstract_104_61" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <axis xyz="0.019525552247552026 -0.9840309795428137 -0.176923102249081" />
+    <limit lower="0.0" upper="0.02" effort="2000.0" velocity="2.0" />
+  </joint>
+  <link name="l_62">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="./../partseg/12977/objs/original-89.obj" scale="1 1 1" />
+      </geometry>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+    </visual>
+  </link>
+  <link name="abstract_104_62">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+  </link>
+  <joint name="joint_fixed_abstract_104_62" type="fixed">
+    <parent link="abstract_104_62" />
+    <child link="l_62" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint>
+  <joint name="joint_prismatic_l_104_abstract_104_62" type="prismatic">
+    <parent link="l_104" />
+    <child link="abstract_104_62" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <axis xyz="0.019525552247552026 -0.9840309795428137 -0.176923102249081" />
+    <limit lower="0.0" upper="0.02" effort="2000.0" velocity="2.0" />
+  </joint>
+  <link name="l_63">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="./../partseg/12977/objs/original-88.obj" scale="1 1 1" />
+      </geometry>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+    </visual>
+  </link>
+  <link name="abstract_104_63">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+  </link>
+  <joint name="joint_fixed_abstract_104_63" type="fixed">
+    <parent link="abstract_104_63" />
+    <child link="l_63" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint>
+  <joint name="joint_prismatic_l_104_abstract_104_63" type="prismatic">
+    <parent link="l_104" />
+    <child link="abstract_104_63" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <axis xyz="0.019525552247552026 -0.9840309795428137 -0.176923102249081" />
+    <limit lower="0.0" upper="0.02" effort="2000.0" velocity="2.0" />
+  </joint>
+  <link name="l_64">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="./../partseg/12977/objs/original-87.obj" scale="1 1 1" />
+      </geometry>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+    </visual>
+  </link>
+  <link name="abstract_104_64">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+  </link>
+  <joint name="joint_fixed_abstract_104_64" type="fixed">
+    <parent link="abstract_104_64" />
+    <child link="l_64" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint>
+  <joint name="joint_prismatic_l_104_abstract_104_64" type="prismatic">
+    <parent link="l_104" />
+    <child link="abstract_104_64" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <axis xyz="0.019525552247552026 -0.9840309795428137 -0.176923102249081" />
+    <limit lower="0.0" upper="0.02" effort="2000.0" velocity="2.0" />
+  </joint>
+  <link name="l_65">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="./../partseg/12977/objs/original-12.obj" scale="1 1 1" />
+      </geometry>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+    </visual>
+  </link>
+  <link name="abstract_104_65">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+  </link>
+  <joint name="joint_fixed_abstract_104_65" type="fixed">
+    <parent link="abstract_104_65" />
+    <child link="l_65" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint>
+  <joint name="joint_prismatic_l_104_abstract_104_65" type="prismatic">
+    <parent link="l_104" />
+    <child link="abstract_104_65" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <axis xyz="0.019525552247552026 -0.9840309795428137 -0.176923102249081" />
+    <limit lower="0.0" upper="0.02" effort="2000.0" velocity="2.0" />
+  </joint>
+  <link name="l_66">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="./../partseg/12977/objs/original-82.obj" scale="1 1 1" />
+      </geometry>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+    </visual>
+  </link>
+  <link name="abstract_104_66">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+  </link>
+  <joint name="joint_fixed_abstract_104_66" type="fixed">
+    <parent link="abstract_104_66" />
+    <child link="l_66" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint>
+  <joint name="joint_prismatic_l_104_abstract_104_66" type="prismatic">
+    <parent link="l_104" />
+    <child link="abstract_104_66" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <axis xyz="0.019525552247552026 -0.9840309795428137 -0.176923102249081" />
+    <limit lower="0.0" upper="0.02" effort="2000.0" velocity="2.0" />
+  </joint>
+  <link name="l_67">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="./../partseg/12977/objs/original-38.obj" scale="1 1 1" />
+      </geometry>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+    </visual>
+  </link>
+  <link name="abstract_104_67">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+  </link>
+  <joint name="joint_fixed_abstract_104_67" type="fixed">
+    <parent link="abstract_104_67" />
+    <child link="l_67" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint>
+  <joint name="joint_prismatic_l_104_abstract_104_67" type="prismatic">
+    <parent link="l_104" />
+    <child link="abstract_104_67" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <axis xyz="0.019525552247552026 -0.9840309795428137 -0.176923102249081" />
+    <limit lower="0.0" upper="0.02" effort="2000.0" velocity="2.0" />
+  </joint>
+  <link name="l_68">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="./../partseg/12977/objs/original-37.obj" scale="1 1 1" />
+      </geometry>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+    </visual>
+  </link>
+  <link name="abstract_104_68">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+  </link>
+  <joint name="joint_fixed_abstract_104_68" type="fixed">
+    <parent link="abstract_104_68" />
+    <child link="l_68" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint>
+  <joint name="joint_prismatic_l_104_abstract_104_68" type="prismatic">
+    <parent link="l_104" />
+    <child link="abstract_104_68" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <axis xyz="0.019525552247552026 -0.9840309795428137 -0.176923102249081" />
+    <limit lower="0.0" upper="0.02" effort="2000.0" velocity="2.0" />
+  </joint>
+  <link name="l_69">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="./../partseg/12977/objs/original-3.obj" scale="1 1 1" />
+      </geometry>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+    </visual>
+  </link>
+  <link name="abstract_104_69">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+  </link>
+  <joint name="joint_fixed_abstract_104_69" type="fixed">
+    <parent link="abstract_104_69" />
+    <child link="l_69" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint>
+  <joint name="joint_prismatic_l_104_abstract_104_69" type="prismatic">
+    <parent link="l_104" />
+    <child link="abstract_104_69" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <axis xyz="0.019525552247552026 -0.9840309795428137 -0.176923102249081" />
+    <limit lower="0.0" upper="0.02" effort="2000.0" velocity="2.0" />
+  </joint>
+  <link name="l_70">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="./../partseg/12977/objs/original-21.obj" scale="1 1 1" />
+      </geometry>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+    </visual>
+  </link>
+  <link name="abstract_104_70">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+  </link>
+  <joint name="joint_fixed_abstract_104_70" type="fixed">
+    <parent link="abstract_104_70" />
+    <child link="l_70" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint>
+  <joint name="joint_prismatic_l_104_abstract_104_70" type="prismatic">
+    <parent link="l_104" />
+    <child link="abstract_104_70" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <axis xyz="0.019525552247552026 -0.9840309795428137 -0.176923102249081" />
+    <limit lower="0.0" upper="0.02" effort="2000.0" velocity="2.0" />
+  </joint>
+  <link name="l_71">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="./../partseg/12977/objs/original-22.obj" scale="1 1 1" />
+      </geometry>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+    </visual>
+  </link>
+  <link name="abstract_104_71">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+  </link>
+  <joint name="joint_fixed_abstract_104_71" type="fixed">
+    <parent link="abstract_104_71" />
+    <child link="l_71" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint>
+  <joint name="joint_prismatic_l_104_abstract_104_71" type="prismatic">
+    <parent link="l_104" />
+    <child link="abstract_104_71" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <axis xyz="0.019525552247552026 -0.9840309795428137 -0.176923102249081" />
+    <limit lower="0.0" upper="0.02" effort="2000.0" velocity="2.0" />
+  </joint>
+  <link name="l_72">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="./../partseg/12977/objs/original-64.obj" scale="1 1 1" />
+      </geometry>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+    </visual>
+  </link>
+  <link name="abstract_104_72">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+  </link>
+  <joint name="joint_fixed_abstract_104_72" type="fixed">
+    <parent link="abstract_104_72" />
+    <child link="l_72" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint>
+  <joint name="joint_prismatic_l_104_abstract_104_72" type="prismatic">
+    <parent link="l_104" />
+    <child link="abstract_104_72" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <axis xyz="0.019525552247552026 -0.9840309795428137 -0.176923102249081" />
+    <limit lower="0.0" upper="0.02" effort="2000.0" velocity="2.0" />
+  </joint>
+  <link name="l_73">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="./../partseg/12977/objs/original-86.obj" scale="1 1 1" />
+      </geometry>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+    </visual>
+  </link>
+  <link name="abstract_104_73">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+  </link>
+  <joint name="joint_fixed_abstract_104_73" type="fixed">
+    <parent link="abstract_104_73" />
+    <child link="l_73" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint>
+  <joint name="joint_prismatic_l_104_abstract_104_73" type="prismatic">
+    <parent link="l_104" />
+    <child link="abstract_104_73" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <axis xyz="0.019525552247552026 -0.9840309795428137 -0.176923102249081" />
+    <limit lower="0.0" upper="0.02" effort="2000.0" velocity="2.0" />
+  </joint>
+  <link name="l_74">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="./../partseg/12977/objs/original-9.obj" scale="1 1 1" />
+      </geometry>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+    </visual>
+  </link>
+  <link name="abstract_104_74">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+  </link>
+  <joint name="joint_fixed_abstract_104_74" type="fixed">
+    <parent link="abstract_104_74" />
+    <child link="l_74" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint>
+  <joint name="joint_prismatic_l_104_abstract_104_74" type="prismatic">
+    <parent link="l_104" />
+    <child link="abstract_104_74" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <axis xyz="0.019525552247552026 -0.9840309795428137 -0.176923102249081" />
+    <limit lower="0.0" upper="0.02" effort="2000.0" velocity="2.0" />
+  </joint>
+  <link name="l_75">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="./../partseg/12977/objs/original-24.obj" scale="1 1 1" />
+      </geometry>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+    </visual>
+  </link>
+  <link name="abstract_104_75">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+  </link>
+  <joint name="joint_fixed_abstract_104_75" type="fixed">
+    <parent link="abstract_104_75" />
+    <child link="l_75" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint>
+  <joint name="joint_prismatic_l_104_abstract_104_75" type="prismatic">
+    <parent link="l_104" />
+    <child link="abstract_104_75" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <axis xyz="0.019525552247552026 -0.9840309795428137 -0.176923102249081" />
+    <limit lower="0.0" upper="0.02" effort="2000.0" velocity="2.0" />
+  </joint>
+  <link name="l_76">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="./../partseg/12977/objs/original-10.obj" scale="1 1 1" />
+      </geometry>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+    </visual>
+  </link>
+  <link name="abstract_104_76">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+  </link>
+  <joint name="joint_fixed_abstract_104_76" type="fixed">
+    <parent link="abstract_104_76" />
+    <child link="l_76" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint>
+  <joint name="joint_prismatic_l_104_abstract_104_76" type="prismatic">
+    <parent link="l_104" />
+    <child link="abstract_104_76" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <axis xyz="0.019525552247552026 -0.9840309795428137 -0.176923102249081" />
+    <limit lower="0.0" upper="0.02" effort="2000.0" velocity="2.0" />
+  </joint>
+  <link name="l_77">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="./../partseg/12977/objs/original-16.obj" scale="1 1 1" />
+      </geometry>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+    </visual>
+  </link>
+  <link name="abstract_104_77">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+  </link>
+  <joint name="joint_fixed_abstract_104_77" type="fixed">
+    <parent link="abstract_104_77" />
+    <child link="l_77" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint>
+  <joint name="joint_prismatic_l_104_abstract_104_77" type="prismatic">
+    <parent link="l_104" />
+    <child link="abstract_104_77" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <axis xyz="0.019525552247552026 -0.9840309795428137 -0.176923102249081" />
+    <limit lower="0.0" upper="0.02" effort="2000.0" velocity="2.0" />
+  </joint>
+  <link name="l_78">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="./../partseg/12977/objs/original-14.obj" scale="1 1 1" />
+      </geometry>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+    </visual>
+  </link>
+  <link name="abstract_104_78">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+  </link>
+  <joint name="joint_fixed_abstract_104_78" type="fixed">
+    <parent link="abstract_104_78" />
+    <child link="l_78" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint>
+  <joint name="joint_prismatic_l_104_abstract_104_78" type="prismatic">
+    <parent link="l_104" />
+    <child link="abstract_104_78" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <axis xyz="0.019525552247552026 -0.9840309795428137 -0.176923102249081" />
+    <limit lower="0.0" upper="0.02" effort="2000.0" velocity="2.0" />
+  </joint>
+  <link name="l_79">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="./../partseg/12977/objs/original-72.obj" scale="1 1 1" />
+      </geometry>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+    </visual>
+  </link>
+  <link name="abstract_104_79">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+  </link>
+  <joint name="joint_fixed_abstract_104_79" type="fixed">
+    <parent link="abstract_104_79" />
+    <child link="l_79" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint>
+  <joint name="joint_prismatic_l_104_abstract_104_79" type="prismatic">
+    <parent link="l_104" />
+    <child link="abstract_104_79" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <axis xyz="0.019525552247552026 -0.9840309795428137 -0.176923102249081" />
+    <limit lower="0.0" upper="0.02" effort="2000.0" velocity="2.0" />
+  </joint>
+  <link name="l_80">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="./../partseg/12977/objs/original-26.obj" scale="1 1 1" />
+      </geometry>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+    </visual>
+  </link>
+  <link name="abstract_104_80">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+  </link>
+  <joint name="joint_fixed_abstract_104_80" type="fixed">
+    <parent link="abstract_104_80" />
+    <child link="l_80" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint>
+  <joint name="joint_prismatic_l_104_abstract_104_80" type="prismatic">
+    <parent link="l_104" />
+    <child link="abstract_104_80" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <axis xyz="0.019525552247552026 -0.9840309795428137 -0.176923102249081" />
+    <limit lower="0.0" upper="0.02" effort="2000.0" velocity="2.0" />
+  </joint>
+  <link name="l_81">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="./../partseg/12977/objs/original-69.obj" scale="1 1 1" />
+      </geometry>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+    </visual>
+  </link>
+  <link name="abstract_104_81">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+  </link>
+  <joint name="joint_fixed_abstract_104_81" type="fixed">
+    <parent link="abstract_104_81" />
+    <child link="l_81" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint>
+  <joint name="joint_prismatic_l_104_abstract_104_81" type="prismatic">
+    <parent link="l_104" />
+    <child link="abstract_104_81" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <axis xyz="0.019525552247552026 -0.9840309795428137 -0.176923102249081" />
+    <limit lower="0.0" upper="0.02" effort="2000.0" velocity="2.0" />
+  </joint>
+  <link name="l_82">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="./../partseg/12977/objs/original-70.obj" scale="1 1 1" />
+      </geometry>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+    </visual>
+  </link>
+  <link name="abstract_104_82">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+  </link>
+  <joint name="joint_fixed_abstract_104_82" type="fixed">
+    <parent link="abstract_104_82" />
+    <child link="l_82" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint>
+  <joint name="joint_prismatic_l_104_abstract_104_82" type="prismatic">
+    <parent link="l_104" />
+    <child link="abstract_104_82" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <axis xyz="0.019525552247552026 -0.9840309795428137 -0.176923102249081" />
+    <limit lower="0.0" upper="0.02" effort="2000.0" velocity="2.0" />
+  </joint>
+  <link name="l_83">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="./../partseg/12977/objs/original-71.obj" scale="1 1 1" />
+      </geometry>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+    </visual>
+  </link>
+  <link name="abstract_104_83">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+  </link>
+  <joint name="joint_fixed_abstract_104_83" type="fixed">
+    <parent link="abstract_104_83" />
+    <child link="l_83" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint>
+  <joint name="joint_prismatic_l_104_abstract_104_83" type="prismatic">
+    <parent link="l_104" />
+    <child link="abstract_104_83" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <axis xyz="0.019525552247552026 -0.9840309795428137 -0.176923102249081" />
+    <limit lower="0.0" upper="0.02" effort="2000.0" velocity="2.0" />
+  </joint>
+  <link name="l_84">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="./../partseg/12977/objs/original-85.obj" scale="1 1 1" />
+      </geometry>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+    </visual>
+  </link>
+  <link name="abstract_104_84">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+  </link>
+  <joint name="joint_fixed_abstract_104_84" type="fixed">
+    <parent link="abstract_104_84" />
+    <child link="l_84" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint>
+  <joint name="joint_prismatic_l_104_abstract_104_84" type="prismatic">
+    <parent link="l_104" />
+    <child link="abstract_104_84" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <axis xyz="0.019525552247552026 -0.9840309795428137 -0.176923102249081" />
+    <limit lower="0.0" upper="0.02" effort="2000.0" velocity="2.0" />
+  </joint>
+  <link name="l_85">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="./../partseg/12977/objs/original-73.obj" scale="1 1 1" />
+      </geometry>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+    </visual>
+  </link>
+  <link name="abstract_104_85">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+  </link>
+  <joint name="joint_fixed_abstract_104_85" type="fixed">
+    <parent link="abstract_104_85" />
+    <child link="l_85" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint>
+  <joint name="joint_prismatic_l_104_abstract_104_85" type="prismatic">
+    <parent link="l_104" />
+    <child link="abstract_104_85" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <axis xyz="0.019525552247552026 -0.9840309795428137 -0.176923102249081" />
+    <limit lower="0.0" upper="0.02" effort="2000.0" velocity="2.0" />
+  </joint>
+  <link name="l_86">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="./../partseg/12977/objs/original-74.obj" scale="1 1 1" />
+      </geometry>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+    </visual>
+  </link>
+  <link name="abstract_104_86">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+  </link>
+  <joint name="joint_fixed_abstract_104_86" type="fixed">
+    <parent link="abstract_104_86" />
+    <child link="l_86" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint>
+  <joint name="joint_prismatic_l_104_abstract_104_86" type="prismatic">
+    <parent link="l_104" />
+    <child link="abstract_104_86" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <axis xyz="0.019525552247552026 -0.9840309795428137 -0.176923102249081" />
+    <limit lower="0.0" upper="0.02" effort="2000.0" velocity="2.0" />
+  </joint>
+  <link name="l_87">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="./../partseg/12977/objs/original-80.obj" scale="1 1 1" />
+      </geometry>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+    </visual>
+  </link>
+  <link name="abstract_104_87">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+  </link>
+  <joint name="joint_fixed_abstract_104_87" type="fixed">
+    <parent link="abstract_104_87" />
+    <child link="l_87" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint>
+  <joint name="joint_prismatic_l_104_abstract_104_87" type="prismatic">
+    <parent link="l_104" />
+    <child link="abstract_104_87" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <axis xyz="0.019525552247552026 -0.9840309795428137 -0.176923102249081" />
+    <limit lower="0.0" upper="0.02" effort="2000.0" velocity="2.0" />
+  </joint>
+  <link name="l_88">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="./../partseg/12977/objs/original-45.obj" scale="1 1 1" />
+      </geometry>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+    </visual>
+  </link>
+  <link name="abstract_104_88">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+  </link>
+  <joint name="joint_fixed_abstract_104_88" type="fixed">
+    <parent link="abstract_104_88" />
+    <child link="l_88" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint>
+  <joint name="joint_prismatic_l_104_abstract_104_88" type="prismatic">
+    <parent link="l_104" />
+    <child link="abstract_104_88" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <axis xyz="0.019525552247552026 -0.9840309795428137 -0.176923102249081" />
+    <limit lower="0.0" upper="0.02" effort="2000.0" velocity="2.0" />
+  </joint>
+  <link name="l_89">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="./../partseg/12977/objs/original-44.obj" scale="1 1 1" />
+      </geometry>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+    </visual>
+  </link>
+  <link name="abstract_104_89">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+  </link>
+  <joint name="joint_fixed_abstract_104_89" type="fixed">
+    <parent link="abstract_104_89" />
+    <child link="l_89" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint>
+  <joint name="joint_prismatic_l_104_abstract_104_89" type="prismatic">
+    <parent link="l_104" />
+    <child link="abstract_104_89" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <axis xyz="0.019525552247552026 -0.9840309795428137 -0.176923102249081" />
+    <limit lower="0.0" upper="0.02" effort="2000.0" velocity="2.0" />
+  </joint>
+  <link name="l_90">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="./../partseg/12977/objs/original-42.obj" scale="1 1 1" />
+      </geometry>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+    </visual>
+  </link>
+  <link name="abstract_104_90">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+  </link>
+  <joint name="joint_fixed_abstract_104_90" type="fixed">
+    <parent link="abstract_104_90" />
+    <child link="l_90" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint>
+  <joint name="joint_prismatic_l_104_abstract_104_90" type="prismatic">
+    <parent link="l_104" />
+    <child link="abstract_104_90" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <axis xyz="0.019525552247552026 -0.9840309795428137 -0.176923102249081" />
+    <limit lower="0.0" upper="0.02" effort="2000.0" velocity="2.0" />
+  </joint>
+  <link name="l_91">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="./../partseg/12977/objs/original-41.obj" scale="1 1 1" />
+      </geometry>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+    </visual>
+  </link>
+  <link name="abstract_104_91">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+  </link>
+  <joint name="joint_fixed_abstract_104_91" type="fixed">
+    <parent link="abstract_104_91" />
+    <child link="l_91" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint>
+  <joint name="joint_prismatic_l_104_abstract_104_91" type="prismatic">
+    <parent link="l_104" />
+    <child link="abstract_104_91" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <axis xyz="0.019525552247552026 -0.9840309795428137 -0.176923102249081" />
+    <limit lower="0.0" upper="0.02" effort="2000.0" velocity="2.0" />
+  </joint>
+  <link name="l_92">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="./../partseg/12977/objs/original-39.obj" scale="1 1 1" />
+      </geometry>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+    </visual>
+  </link>
+  <link name="abstract_104_92">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+  </link>
+  <joint name="joint_fixed_abstract_104_92" type="fixed">
+    <parent link="abstract_104_92" />
+    <child link="l_92" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint>
+  <joint name="joint_prismatic_l_104_abstract_104_92" type="prismatic">
+    <parent link="l_104" />
+    <child link="abstract_104_92" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <axis xyz="0.019525552247552026 -0.9840309795428137 -0.176923102249081" />
+    <limit lower="0.0" upper="0.02" effort="2000.0" velocity="2.0" />
+  </joint>
+  <link name="l_93">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="./../partseg/12977/objs/original-90.obj" scale="1 1 1" />
+      </geometry>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+    </visual>
+  </link>
+  <link name="abstract_104_93">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+  </link>
+  <joint name="joint_fixed_abstract_104_93" type="fixed">
+    <parent link="abstract_104_93" />
+    <child link="l_93" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint>
+  <joint name="joint_prismatic_l_104_abstract_104_93" type="prismatic">
+    <parent link="l_104" />
+    <child link="abstract_104_93" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <axis xyz="0.019525552247552026 -0.9840309795428137 -0.176923102249081" />
+    <limit lower="0.0" upper="0.02" effort="2000.0" velocity="2.0" />
+  </joint>
+  <link name="l_94">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="./../partseg/12977/objs/original-34.obj" scale="1 1 1" />
+      </geometry>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+    </visual>
+  </link>
+  <link name="abstract_104_94">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+  </link>
+  <joint name="joint_fixed_abstract_104_94" type="fixed">
+    <parent link="abstract_104_94" />
+    <child link="l_94" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint>
+  <joint name="joint_prismatic_l_104_abstract_104_94" type="prismatic">
+    <parent link="l_104" />
+    <child link="abstract_104_94" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <axis xyz="0.019525552247552026 -0.9840309795428137 -0.176923102249081" />
+    <limit lower="0.0" upper="0.02" effort="2000.0" velocity="2.0" />
+  </joint>
+  <link name="l_95">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="./../partseg/12977/objs/original-32.obj" scale="1 1 1" />
+      </geometry>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+    </visual>
+  </link>
+  <link name="abstract_104_95">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+  </link>
+  <joint name="joint_fixed_abstract_104_95" type="fixed">
+    <parent link="abstract_104_95" />
+    <child link="l_95" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint>
+  <joint name="joint_prismatic_l_104_abstract_104_95" type="prismatic">
+    <parent link="l_104" />
+    <child link="abstract_104_95" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <axis xyz="0.019525552247552026 -0.9840309795428137 -0.176923102249081" />
+    <limit lower="0.0" upper="0.02" effort="2000.0" velocity="2.0" />
+  </joint>
+  <link name="l_96">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="./../partseg/12977/objs/original-31.obj" scale="1 1 1" />
+      </geometry>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+    </visual>
+  </link>
+  <link name="abstract_104_96">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+  </link>
+  <joint name="joint_fixed_abstract_104_96" type="fixed">
+    <parent link="abstract_104_96" />
+    <child link="l_96" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint>
+  <joint name="joint_prismatic_l_104_abstract_104_96" type="prismatic">
+    <parent link="l_104" />
+    <child link="abstract_104_96" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <axis xyz="0.019525552247552026 -0.9840309795428137 -0.176923102249081" />
+    <limit lower="0.0" upper="0.02" effort="2000.0" velocity="2.0" />
+  </joint>
+  <link name="l_97">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="./../partseg/12977/objs/original-30.obj" scale="1 1 1" />
+      </geometry>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+    </visual>
+  </link>
+  <link name="abstract_104_97">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+  </link>
+  <joint name="joint_fixed_abstract_104_97" type="fixed">
+    <parent link="abstract_104_97" />
+    <child link="l_97" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint>
+  <joint name="joint_prismatic_l_104_abstract_104_97" type="prismatic">
+    <parent link="l_104" />
+    <child link="abstract_104_97" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <axis xyz="0.019525552247552026 -0.9840309795428137 -0.176923102249081" />
+    <limit lower="0.0" upper="0.02" effort="2000.0" velocity="2.0" />
+  </joint>
+  <link name="l_98">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="./../partseg/12977/objs/original-29.obj" scale="1 1 1" />
+      </geometry>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+    </visual>
+  </link>
+  <link name="abstract_104_98">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+  </link>
+  <joint name="joint_fixed_abstract_104_98" type="fixed">
+    <parent link="abstract_104_98" />
+    <child link="l_98" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint>
+  <joint name="joint_prismatic_l_104_abstract_104_98" type="prismatic">
+    <parent link="l_104" />
+    <child link="abstract_104_98" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <axis xyz="0.019525552247552026 -0.9840309795428137 -0.176923102249081" />
+    <limit lower="0.0" upper="0.02" effort="2000.0" velocity="2.0" />
+  </joint>
+  <link name="l_99">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="./../partseg/12977/objs/original-27.obj" scale="1 1 1" />
+      </geometry>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+    </visual>
+  </link>
+  <link name="abstract_104_99">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+  </link>
+  <joint name="joint_fixed_abstract_104_99" type="fixed">
+    <parent link="abstract_104_99" />
+    <child link="l_99" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint>
+  <joint name="joint_prismatic_l_104_abstract_104_99" type="prismatic">
+    <parent link="l_104" />
+    <child link="abstract_104_99" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <axis xyz="0.019525552247552026 -0.9840309795428137 -0.176923102249081" />
+    <limit lower="0.0" upper="0.02" effort="2000.0" velocity="2.0" />
+  </joint>
+  <link name="l_100">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="./../partseg/12977/objs/original-7.obj" scale="1 1 1" />
+      </geometry>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+    </visual>
+    <visual>
+      <geometry>
+        <mesh filename="./../partseg/12977/objs/original-2.obj" scale="1 1 1" />
+      </geometry>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+    </visual>
+  </link>
+  <link name="abstract_104_100">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+  </link>
+  <joint name="joint_fixed_abstract_104_100" type="fixed">
+    <parent link="abstract_104_100" />
+    <child link="l_100" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint>
+  <joint name="joint_prismatic_l_104_abstract_104_100" type="prismatic">
+    <parent link="l_104" />
+    <child link="abstract_104_100" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <axis xyz="0.019525552247552026 -0.9840309795428137 -0.176923102249081" />
+    <limit lower="0.0" upper="0.02" effort="2000.0" velocity="2.0" />
+  </joint>
+  <link name="l_101">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="./../partseg/12977/objs/original-65.obj" scale="1 1 1" />
+      </geometry>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+    </visual>
+  </link>
+  <link name="abstract_104_101">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+  </link>
+  <joint name="joint_fixed_abstract_104_101" type="fixed">
+    <parent link="abstract_104_101" />
+    <child link="l_101" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint>
+  <joint name="joint_prismatic_l_104_abstract_104_101" type="prismatic">
+    <parent link="l_104" />
+    <child link="abstract_104_101" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <axis xyz="0.019525552247552026 -0.9840309795428137 -0.176923102249081" />
+    <limit lower="0.0" upper="0.02" effort="2000.0" velocity="2.0" />
+  </joint>
+  <link name="l_102">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="./../partseg/12977/objs/original-66.obj" scale="1 1 1" />
+      </geometry>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+    </visual>
+  </link>
+  <link name="abstract_104_102">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+  </link>
+  <joint name="joint_fixed_abstract_104_102" type="fixed">
+    <parent link="abstract_104_102" />
+    <child link="l_102" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint>
+  <joint name="joint_prismatic_l_104_abstract_104_102" type="prismatic">
+    <parent link="l_104" />
+    <child link="abstract_104_102" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <axis xyz="0.019525552247552026 -0.9840309795428137 -0.176923102249081" />
+    <limit lower="0.0" upper="0.02" effort="2000.0" velocity="2.0" />
+  </joint>
+  <link name="l_103">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="./../partseg/12977/objs/original-68.obj" scale="1 1 1" />
+      </geometry>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+    </visual>
+  </link>
+  <link name="abstract_104_103">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="1.0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+  </link>
+  <joint name="joint_fixed_abstract_104_103" type="fixed">
+    <parent link="abstract_104_103" />
+    <child link="l_103" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint>
+  <joint name="joint_prismatic_l_104_abstract_104_103" type="prismatic">
+    <parent link="l_104" />
+    <child link="abstract_104_103" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <axis xyz="0.019525552247552026 -0.9840309795428137 -0.176923102249081" />
+    <limit lower="0.0" upper="0.02" effort="2000.0" velocity="2.0" />
+  </joint>
+</robot>

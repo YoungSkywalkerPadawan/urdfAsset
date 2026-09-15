@@ -1,8 +1,10 @@
 # URDF 资产库
 
-按来源收录已有的 **1,330 个装配资产或 CAD 部件对**，用于查找、三维预览、父子部件关节轴测试与训练数据读取。这里保存的是数据与参考标注，不是模型预测结果，也不是各公开数据集的全量镜像。
+按来源收录 **3,354 个装配资产或 CAD 部件对**：1,330 个已标准化的 GLB/点云资产，以及 2,024 个 PhysX-Mobility 原生 URDF case。用于查找、关节轴测试与训练数据准备，保留各来源的原始标注与许可。
 
 ## 数据目录
+
+下表为已有的 1,330 个标准化 GLB/点云资产：
 
 | 来源 | 资产 / CAD 对 | continuous 轴 | 有限旋转辅助轴 | 冻结评估可用 continuous 轴 | 完整原始 URDF |
 |---|---:|---:|---:|---:|---:|
@@ -14,6 +16,10 @@
 | [Infinigen-Articulated](datasets/infinigen_articulated/README.md) | 500 | 0 | 500 | 0 | 500 |
 | [自有 26 个物体](datasets/user_continuous_26/README.md) | 26 | 65 | 4 | 65 | 26 |
 | 合计 | **1330** | **1558** | **597** | **1550** | **925** |
+
+另收录 **[PhysX-Mobility：2,024 个原生 URDF case](datasets/physx_mobility/README.md)**，包括全部分件网格、材质纹理和属性 JSON。原始包与近 30 万个解压文件已逐一核对；按需解压单个 case，避免长期占用数 GB 空间。[原生 URDF 索引](native_catalog.json) 可直接查找 ID、类型、类别和描述入口；`tools/catalog.py` 同时查询这两类资产。
+
+PhysX-Mobility 原始标注为 fixed 14,096、revolute 2,633、prismatic 7,250、floating 13、continuous 0。它未加入原有 1,550 条 continuous 基准，也尚未转换为下面的 GLB 动画预览格式。下载后使用 `python tools/physx_mobility.py extract --case 100013 --output exports/physx_100013` 提取一个保留原路径的 URDF case。
 
 “完整原始 URDF”指已附带并检查相对路径引用的网格文件；不表示通过了物理仿真验收。其中 559 个由上游 URDF 补齐网格、材质与纹理，并将资源引用改为仓库内相对路径，关节与局部坐标语义保留，修改及校验记录见 `original/PORTABILITY.json`。另外 402 个资产的原生格式为 USD/CAD；3 个 URDF files 资产在上游缺少依赖，具体文件列在该来源说明中。所有 1330 个资产均保留可直接读取的已分件 `scene.glb`、参考轴和点云。
 
@@ -121,7 +127,7 @@ python -m unittest discover -s tools -p "test_*.py" -v
 
 校验结果见 [IMPORT_REPORT.json](IMPORT_REPORT.json)，文件校验清单见 [FILES.sha256.jsonl](FILES.sha256.jsonl)。清单记录实际文件内容，而非 LFS 指针；清单自身、校验报告、Git 元数据与本地导出不参与清单，避免循环依赖。允许只取一个来源时，使用 `--source <来源>` 校验该来源。
 
-来源、版本、修改记录与条款保留在每个 `asset.json` 和各来源说明中。Fusion 部分是 **Fusion 360 Gallery Dataset 的经筛选派生子集**，仅限非商业研究并适用所附原许可；GRScenes 为 CC-BY-NC-SA-4.0；Articraft / Infinigen 为 CC-BY-4.0；ArtVIP 数据卡声明 Apache-2.0；URDF files 随各上游资产条款；自有资产未额外授予第三方再分发许可。不能用一个统一许可替代这些来源条款。
+来源、版本、修改记录与条款保留在各来源说明中。Fusion 部分是 **Fusion 360 Gallery Dataset 的经筛选派生子集**，仅限非商业研究并适用所附原许可；PhysX-Mobility 为 CC-BY-NC-4.0，基于 PartNet-Mobility；GRScenes 为 CC-BY-NC-SA-4.0；Articraft / Infinigen 为 CC-BY-4.0；ArtVIP 数据卡声明 Apache-2.0；URDF files 随各上游资产条款；自有资产未额外授予第三方再分发许可。不能用一个统一许可替代这些来源条款。
 
 数据标签来自生成、作者/CAD 标注或自有几何整理，未全部经过实物测量或机械验收。轴线方向正负等价、轴上原点可沿轴移动；评估时应使用轴线误差，避免对原点直接做唯一点误差。
 
