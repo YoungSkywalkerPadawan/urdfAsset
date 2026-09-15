@@ -1,0 +1,591 @@
+<robot name="retrofit_legacy_turntable">
+  <material name="walnut">
+    <color rgba="0.46 0.3 0.18 1" />
+    </material>
+  <material name="brushed_aluminum">
+    <color rgba="0.76 0.78 0.8 1" />
+    </material>
+  <material name="dark_steel">
+    <color rgba="0.23 0.24 0.26 1" />
+    </material>
+  <material name="black_rubber">
+    <color rgba="0.08 0.08 0.09 1" />
+    </material>
+  <material name="smoked_paint">
+    <color rgba="0.15 0.16 0.17 1" />
+    </material>
+  <material name="fastener_steel">
+    <color rgba="0.66 0.68 0.71 1" />
+    </material>
+  <material name="phenolic">
+    <color rgba="0.1 0.1 0.11 1" />
+    </material>
+  <link name="plinth">
+    <inertial>
+      <origin xyz="0 0 0.029" rpy="0 0 0" />
+      <mass value="11.5" />
+      <inertia ixx="0.128631" ixy="0" ixz="0" iyy="0.207215" iyz="0" izz="0.326983" />
+      </inertial>
+    <visual name="plinth_body">
+      <origin xyz="0 0 0.029" rpy="0 0 0" />
+      <geometry>
+        <box size="0.46 0.36 0.058" />
+        </geometry>
+      <material name="walnut">
+        <color rgba="0.46 0.3 0.18 1" />
+        </material>
+      </visual>
+    <visual name="top_deck">
+      <origin xyz="0 0 0.061" rpy="0 0 0" />
+      <geometry>
+        <box size="0.452 0.352 0.006" />
+        </geometry>
+      <material name="smoked_paint">
+        <color rgba="0.15 0.16 0.17 1" />
+        </material>
+      </visual>
+    <visual name="rear_service_band">
+      <origin xyz="0 0.172 0.05" rpy="0 0 0" />
+      <geometry>
+        <box size="0.452 0.016 0.02" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.23 0.24 0.26 1" />
+        </material>
+      </visual>
+    <visual name="speed_selector_escutcheon">
+      <origin xyz="-0.158 -0.144 0.064" rpy="0 0 0" />
+      <geometry>
+        <box size="0.088 0.028 0.006" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.23 0.24 0.26 1" />
+        </material>
+      </visual>
+    <visual name="foot_00">
+      <origin xyz="-0.185 -0.135 -0.005" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.022" length="0.01" />
+        </geometry>
+      <material name="black_rubber">
+        <color rgba="0.08 0.08 0.09 1" />
+        </material>
+      </visual>
+    <visual name="foot_01">
+      <origin xyz="-0.185 0.135 -0.005" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.022" length="0.01" />
+        </geometry>
+      <material name="black_rubber">
+        <color rgba="0.08 0.08 0.09 1" />
+        </material>
+      </visual>
+    <visual name="foot_02">
+      <origin xyz="0.185 -0.135 -0.005" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.022" length="0.01" />
+        </geometry>
+      <material name="black_rubber">
+        <color rgba="0.08 0.08 0.09 1" />
+        </material>
+      </visual>
+    <visual name="foot_03">
+      <origin xyz="0.185 0.135 -0.005" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.022" length="0.01" />
+        </geometry>
+      <material name="black_rubber">
+        <color rgba="0.08 0.08 0.09 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="bearing_support">
+    <inertial>
+      <origin xyz="0 0 -0.003" rpy="0 0 0" />
+      <mass value="0.9" />
+      <inertia ixx="0.0006582" ixy="0" ixz="0" iyy="0.0006582" iyz="0" izz="0.001215" />
+      </inertial>
+    <visual name="bearing_plate">
+      <origin xyz="0 0 0.002" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/bearing_adapter_plate.obj" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.23 0.24 0.26 1" />
+        </material>
+      </visual>
+    <visual name="bearing_bolt_00">
+      <origin xyz="-0.029 -0.029 0.0055" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0045" length="0.003" />
+        </geometry>
+      <material name="fastener_steel">
+        <color rgba="0.66 0.68 0.71 1" />
+        </material>
+      </visual>
+    <visual name="bearing_bolt_01">
+      <origin xyz="-0.029 0.029 0.0055" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0045" length="0.003" />
+        </geometry>
+      <material name="fastener_steel">
+        <color rgba="0.66 0.68 0.71 1" />
+        </material>
+      </visual>
+    <visual name="bearing_bolt_02">
+      <origin xyz="0.029 -0.029 0.0055" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0045" length="0.003" />
+        </geometry>
+      <material name="fastener_steel">
+        <color rgba="0.66 0.68 0.71 1" />
+        </material>
+      </visual>
+    <visual name="bearing_bolt_03">
+      <origin xyz="0.029 0.029 0.0055" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0045" length="0.003" />
+        </geometry>
+      <material name="fastener_steel">
+        <color rgba="0.66 0.68 0.71 1" />
+        </material>
+      </visual>
+    <visual name="bearing_barrel">
+      <origin xyz="0 0 0.006" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.004" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.23 0.24 0.26 1" />
+        </material>
+      </visual>
+    <visual name="thrust_collar">
+      <origin xyz="0 0 0.009" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.026" length="0.002" />
+        </geometry>
+      <material name="brushed_aluminum">
+        <color rgba="0.76 0.78 0.8 1" />
+        </material>
+      </visual>
+    <visual name="bearing_skirt">
+      <origin xyz="0 0 0.005" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.01" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.23 0.24 0.26 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="platter">
+    <inertial>
+      <origin xyz="0 0 0.0155" rpy="0 0 0" />
+      <mass value="2.2" />
+      <inertia ixx="0.0130511" ixy="0" ixz="0" iyy="0.0130511" iyz="0" izz="0.0257499" />
+      </inertial>
+    <visual name="hub_flange">
+      <origin xyz="0 0 0.0025" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.034" length="0.005" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.23 0.24 0.26 1" />
+        </material>
+      </visual>
+    <visual name="platter_body">
+      <origin xyz="0 0 0.016" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.146" length="0.022" />
+        </geometry>
+      <material name="brushed_aluminum">
+        <color rgba="0.76 0.78 0.8 1" />
+        </material>
+      </visual>
+    <visual name="strobe_ring">
+      <origin xyz="0 0 0.009" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.153" length="0.008" />
+        </geometry>
+      <material name="brushed_aluminum">
+        <color rgba="0.76 0.78 0.8 1" />
+        </material>
+      </visual>
+    <visual name="record_mat">
+      <origin xyz="0 0 0.0285" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.142" length="0.003" />
+        </geometry>
+      <material name="black_rubber">
+        <color rgba="0.08 0.08 0.09 1" />
+        </material>
+      </visual>
+    <visual name="spindle_pin">
+      <origin xyz="0 0 0.039" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.003" length="0.018" />
+        </geometry>
+      <material name="fastener_steel">
+        <color rgba="0.66 0.68 0.71 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="tonearm_pedestal">
+    <inertial>
+      <origin xyz="0 0 0.018" rpy="0 0 0" />
+      <mass value="0.65" />
+      <inertia ixx="0.000650217" ixy="0" ixz="0" iyy="0.000525417" iyz="0" izz="0.0010023" />
+      </inertial>
+    <visual name="armboard">
+      <origin xyz="0 0 0.002" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/tonearm_adapter_plate.obj" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.23 0.24 0.26 1" />
+        </material>
+      </visual>
+    <visual name="armboard_bolt_00">
+      <origin xyz="-0.026 -0.038 0.0055" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0045" length="0.003" />
+        </geometry>
+      <material name="fastener_steel">
+        <color rgba="0.66 0.68 0.71 1" />
+        </material>
+      </visual>
+    <visual name="armboard_bolt_01">
+      <origin xyz="-0.026 0.038 0.0055" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0045" length="0.003" />
+        </geometry>
+      <material name="fastener_steel">
+        <color rgba="0.66 0.68 0.71 1" />
+        </material>
+      </visual>
+    <visual name="armboard_bolt_02">
+      <origin xyz="0.026 -0.038 0.0055" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0045" length="0.003" />
+        </geometry>
+      <material name="fastener_steel">
+        <color rgba="0.66 0.68 0.71 1" />
+        </material>
+      </visual>
+    <visual name="armboard_bolt_03">
+      <origin xyz="0.026 0.038 0.0055" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0045" length="0.003" />
+        </geometry>
+      <material name="fastener_steel">
+        <color rgba="0.66 0.68 0.71 1" />
+        </material>
+      </visual>
+    <visual name="pivot_column">
+      <origin xyz="0 0 0.019" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.03" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.23 0.24 0.26 1" />
+        </material>
+      </visual>
+    <visual name="pivot_collar">
+      <origin xyz="0 0 0.035" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.024" length="0.002" />
+        </geometry>
+      <material name="brushed_aluminum">
+        <color rgba="0.76 0.78 0.8 1" />
+        </material>
+      </visual>
+    <visual name="rear_brace">
+      <origin xyz="-0.012 0 0.012" rpy="0 0 0" />
+      <geometry>
+        <box size="0.016 0.04 0.016" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.23 0.24 0.26 1" />
+        </material>
+      </visual>
+    <visual name="side_web_upper">
+      <origin xyz="-0.006 0.018 0.014" rpy="0 0 0" />
+      <geometry>
+        <box size="0.022 0.012 0.02" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.23 0.24 0.26 1" />
+        </material>
+      </visual>
+    <visual name="side_web_lower">
+      <origin xyz="-0.006 -0.018 0.014" rpy="0 0 0" />
+      <geometry>
+        <box size="0.022 0.012 0.02" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.23 0.24 0.26 1" />
+        </material>
+      </visual>
+    <visual name="rest_post">
+      <origin xyz="0.024 -0.028 0.013" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.003" length="0.018" />
+        </geometry>
+      <material name="fastener_steel">
+        <color rgba="0.66 0.68 0.71 1" />
+        </material>
+      </visual>
+    <visual name="rest_cradle">
+      <origin xyz="0.024 -0.028 0.024" rpy="0 0 0" />
+      <geometry>
+        <box size="0.01 0.004 0.004" />
+        </geometry>
+      <material name="phenolic">
+        <color rgba="0.1 0.1 0.11 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="tonearm_stage">
+    <inertial>
+      <origin xyz="0.11 0 0.011" rpy="0 0 0" />
+      <mass value="0.28" />
+      <inertia ixx="0.000102293" ixy="0" ixz="0" iyy="0.00211829" iyz="0" izz="0.002184" />
+      </inertial>
+    <visual name="stage_base">
+      <origin xyz="0 0 0.003" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.026" length="0.006" />
+        </geometry>
+      <material name="brushed_aluminum">
+        <color rgba="0.76 0.78 0.8 1" />
+        </material>
+      </visual>
+    <visual name="pivot_cap">
+      <origin xyz="0 0 0.008" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.01" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.23 0.24 0.26 1" />
+        </material>
+      </visual>
+    <visual name="arm_tube">
+      <geometry>
+        <mesh filename="assets/meshes/tonearm_tube.obj" />
+        </geometry>
+      <material name="brushed_aluminum">
+        <color rgba="0.76 0.78 0.8 1" />
+        </material>
+      </visual>
+    <visual name="headshell">
+      <origin xyz="0.224 0.016 0.009" rpy="0 0 0" />
+      <geometry>
+        <box size="0.022 0.018 0.004" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.23 0.24 0.26 1" />
+        </material>
+      </visual>
+    <visual name="cartridge">
+      <origin xyz="0.228 0.019 0.0045" rpy="0 0 0" />
+      <geometry>
+        <box size="0.012 0.01 0.005" />
+        </geometry>
+      <material name="phenolic">
+        <color rgba="0.1 0.1 0.11 1" />
+        </material>
+      </visual>
+    <visual name="counter_stub">
+      <origin xyz="-0.021 0 0.011" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.004" length="0.042" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.23 0.24 0.26 1" />
+        </material>
+      </visual>
+    <visual name="counterweight">
+      <origin xyz="-0.053 0 0.011" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.011" length="0.022" />
+        </geometry>
+      <material name="fastener_steel">
+        <color rgba="0.66 0.68 0.71 1" />
+        </material>
+      </visual>
+    <visual name="anti_skate_bar">
+      <origin xyz="-0.004 0.018 0.013" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0025" length="0.018" />
+        </geometry>
+      <material name="fastener_steel">
+        <color rgba="0.66 0.68 0.71 1" />
+        </material>
+      </visual>
+    <visual name="anti_skate_weight">
+      <origin xyz="-0.004 0.031 0.013" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0035" length="0.008" />
+        </geometry>
+      <material name="fastener_steel">
+        <color rgba="0.66 0.68 0.71 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="motor_hatch">
+    <inertial>
+      <origin xyz="0 0 -0.007" rpy="0 0 0" />
+      <mass value="0.22" />
+      <inertia ixx="0.000205718" ixy="0" ixz="0" iyy="0.000313427" iyz="0" izz="0.000511958" />
+      </inertial>
+    <visual name="motor_panel">
+      <origin xyz="0 0 -0.002" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/motor_service_hatch.obj" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.23 0.24 0.26 1" />
+        </material>
+      </visual>
+    <visual name="motor_hatch_bolt_00">
+      <origin xyz="-0.047 -0.032 -0.0055" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.004" length="0.003" />
+        </geometry>
+      <material name="fastener_steel">
+        <color rgba="0.66 0.68 0.71 1" />
+        </material>
+      </visual>
+    <visual name="motor_hatch_bolt_01">
+      <origin xyz="-0.047 0.032 -0.0055" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.004" length="0.003" />
+        </geometry>
+      <material name="fastener_steel">
+        <color rgba="0.66 0.68 0.71 1" />
+        </material>
+      </visual>
+    <visual name="motor_hatch_bolt_02">
+      <origin xyz="0.047 -0.032 -0.0055" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.004" length="0.003" />
+        </geometry>
+      <material name="fastener_steel">
+        <color rgba="0.66 0.68 0.71 1" />
+        </material>
+      </visual>
+    <visual name="motor_hatch_bolt_03">
+      <origin xyz="0.047 0.032 -0.0055" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.004" length="0.003" />
+        </geometry>
+      <material name="fastener_steel">
+        <color rgba="0.66 0.68 0.71 1" />
+        </material>
+      </visual>
+    <visual name="motor_stiffener">
+      <origin xyz="0 0 -0.01" rpy="0 0 0" />
+      <geometry>
+        <box size="0.09 0.014 0.012" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.23 0.24 0.26 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="signal_hatch">
+    <inertial>
+      <origin xyz="0 0 -0.007" rpy="0 0 0" />
+      <mass value="0.2" />
+      <inertia ixx="0.000251333" ixy="0" ixz="0" iyy="0.000156867" iyz="0" izz="0.000401667" />
+      </inertial>
+    <visual name="signal_panel">
+      <origin xyz="0 0 -0.002" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/signal_service_hatch.obj" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.23 0.24 0.26 1" />
+        </material>
+      </visual>
+    <visual name="signal_hatch_bolt_00">
+      <origin xyz="-0.033 -0.042 -0.0055" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.004" length="0.003" />
+        </geometry>
+      <material name="fastener_steel">
+        <color rgba="0.66 0.68 0.71 1" />
+        </material>
+      </visual>
+    <visual name="signal_hatch_bolt_01">
+      <origin xyz="-0.033 0.042 -0.0055" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.004" length="0.003" />
+        </geometry>
+      <material name="fastener_steel">
+        <color rgba="0.66 0.68 0.71 1" />
+        </material>
+      </visual>
+    <visual name="signal_hatch_bolt_02">
+      <origin xyz="0.033 -0.042 -0.0055" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.004" length="0.003" />
+        </geometry>
+      <material name="fastener_steel">
+        <color rgba="0.66 0.68 0.71 1" />
+        </material>
+      </visual>
+    <visual name="signal_hatch_bolt_03">
+      <origin xyz="0.033 0.042 -0.0055" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.004" length="0.003" />
+        </geometry>
+      <material name="fastener_steel">
+        <color rgba="0.66 0.68 0.71 1" />
+        </material>
+      </visual>
+    <visual name="signal_stiffener">
+      <origin xyz="0 0 -0.01" rpy="0 0 0" />
+      <geometry>
+        <box size="0.066 0.014 0.012" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.23 0.24 0.26 1" />
+        </material>
+      </visual>
+    </link>
+  <joint name="plinth_to_bearing_support" type="fixed">
+    <origin xyz="-0.04 0 0.064" rpy="0 0 0" />
+    <parent link="plinth" />
+    <child link="bearing_support" />
+    </joint>
+  <joint name="bearing_to_platter" type="continuous">
+    <origin xyz="0 0 0.01" rpy="0 0 0" />
+    <parent link="bearing_support" />
+    <child link="platter" />
+    <axis xyz="0 0 1" />
+    <limit effort="8" velocity="20" />
+    </joint>
+  <joint name="plinth_to_tonearm_pedestal" type="fixed">
+    <origin xyz="0.166 0.098 0.064" rpy="0 0 0" />
+    <parent link="plinth" />
+    <child link="tonearm_pedestal" />
+    </joint>
+  <joint name="pedestal_to_tonearm_stage" type="revolute">
+    <origin xyz="0 0 0.036" rpy="0 0 -2.94028" />
+    <parent link="tonearm_pedestal" />
+    <child link="tonearm_stage" />
+    <axis xyz="0 0 1" />
+    <limit effort="2.5" velocity="1.5" lower="-0.25" upper="0.55" />
+    </joint>
+  <joint name="plinth_to_motor_hatch" type="fixed">
+    <origin xyz="-0.06 0.02 0" rpy="0 0 0" />
+    <parent link="plinth" />
+    <child link="motor_hatch" />
+    </joint>
+  <joint name="plinth_to_signal_hatch" type="fixed">
+    <origin xyz="0.125 0.078 0" rpy="0 0 0" />
+    <parent link="plinth" />
+    <child link="signal_hatch" />
+    </joint>
+  </robot>

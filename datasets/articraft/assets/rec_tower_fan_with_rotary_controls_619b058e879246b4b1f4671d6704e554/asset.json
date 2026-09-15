@@ -1,0 +1,175 @@
+{
+  "summary": {
+    "id": "rec_tower_fan_with_rotary_controls_619b058e879246b4b1f4671d6704e554",
+    "category": "fan",
+    "robot_name": "tower_fan",
+    "joint_count": 1,
+    "link_count": 5,
+    "target_link_count": 2,
+    "family": "rec_tower_fan_with_rotary_controls",
+    "warnings": [],
+    "diagonal": 1.1023901305799142,
+    "bytes": 3576056
+  },
+  "source": {
+    "dataset": "camvsl/Articraft-10K",
+    "revision": "3c79d5a05bb7cb6bf7bfee5e090176636ee3ac65",
+    "license": "CC-BY-4.0",
+    "url": "https://huggingface.co/datasets/camvsl/Articraft-10K/blob/3c79d5a05bb7cb6bf7bfee5e090176636ee3ac65/rec_tower_fan_with_rotary_controls_619b058e879246b4b1f4671d6704e554.tar.gz",
+    "archive_sha256": "7462a489c16edb90eeec3806fd26c481fa97090eda1bdc2694a2871f9900ffac",
+    "archive": "rec_tower_fan_with_rotary_controls_619b058e879246b4b1f4671d6704e554.tar.gz",
+    "label_status": "Original generated URDF reference; not manually verified or physically validated"
+  },
+  "links": [
+    {
+      "id": "link_000",
+      "name": "pedestal",
+      "point_file": null,
+      "faces": 384,
+      "vertices": 198,
+      "bounds": [
+        [
+          -0.17,
+          -0.17,
+          0.0
+        ],
+        [
+          0.17,
+          0.17,
+          0.066
+        ]
+      ]
+    },
+    {
+      "id": "link_001",
+      "name": "body",
+      "point_file": "inputs/link_001.npz",
+      "faces": 2344,
+      "vertices": 2302,
+      "bounds": [
+        [
+          -0.074,
+          -0.066,
+          0.066
+        ],
+        [
+          0.074,
+          0.066,
+          0.964
+        ]
+      ]
+    },
+    {
+      "id": "link_002",
+      "name": "blower",
+      "point_file": "inputs/link_002.npz",
+      "faces": 4317,
+      "vertices": 2170,
+      "bounds": [
+        [
+          -0.034,
+          -0.021988999999999998,
+          0.13
+        ],
+        [
+          0.034,
+          0.045989,
+          0.892
+        ]
+      ]
+    },
+    {
+      "id": "link_003",
+      "name": "knob_0",
+      "point_file": null,
+      "faces": 1332,
+      "vertices": 1406,
+      "bounds": [
+        [
+          -0.04578,
+          -0.014526999999999998,
+          0.964
+        ],
+        [
+          -0.011,
+          0.022527,
+          0.992
+        ]
+      ]
+    },
+    {
+      "id": "link_004",
+      "name": "knob_1",
+      "point_file": null,
+      "faces": 1332,
+      "vertices": 1406,
+      "bounds": [
+        [
+          0.01022,
+          -0.014526999999999998,
+          0.964
+        ],
+        [
+          0.045,
+          0.022527,
+          0.992
+        ]
+      ]
+    }
+  ],
+  "joints": [
+    {
+      "name": "pedestal_to_body",
+      "type": "revolute",
+      "parent": "link_000",
+      "child": "link_001",
+      "reference_q": 0.0,
+      "mimic": null
+    },
+    {
+      "name": "body_to_blower",
+      "type": "continuous",
+      "parent": "link_001",
+      "child": "link_002",
+      "reference_q": 0.0,
+      "mimic": null
+    },
+    {
+      "name": "body_to_knob_0",
+      "type": "revolute",
+      "parent": "link_001",
+      "child": "link_003",
+      "reference_q": 0.0,
+      "mimic": null
+    },
+    {
+      "name": "body_to_knob_1",
+      "type": "revolute",
+      "parent": "link_001",
+      "child": "link_004",
+      "reference_q": 0.0,
+      "mimic": null
+    }
+  ],
+  "bounds": [
+    [
+      -0.17,
+      -0.17,
+      0.0
+    ],
+    [
+      0.17,
+      0.17,
+      0.992
+    ]
+  ],
+  "point_pool_size": 65536,
+  "reference_pose": "Zero position clamped to limits; mimic values propagated",
+  "qc": {
+    "finite_geometry": true,
+    "tree_valid": true,
+    "axis_unit": true,
+    "physical_collision_validation": false,
+    "visual_tessellation": "32 cylinder segments, icosphere subdivision 2"
+  }
+}

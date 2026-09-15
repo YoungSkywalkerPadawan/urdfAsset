@@ -1,0 +1,148 @@
+{
+  "summary": {
+    "id": "rec_box_fan_with_control_knob_0001",
+    "category": "fan",
+    "robot_name": "box_fan",
+    "joint_count": 1,
+    "link_count": 4,
+    "target_link_count": 2,
+    "family": "rec_box_fan_with_control_knob",
+    "warnings": [],
+    "diagonal": 0.8492562877198074,
+    "bytes": 3485605
+  },
+  "source": {
+    "dataset": "camvsl/Articraft-10K",
+    "revision": "3c79d5a05bb7cb6bf7bfee5e090176636ee3ac65",
+    "license": "CC-BY-4.0",
+    "url": "https://huggingface.co/datasets/camvsl/Articraft-10K/blob/3c79d5a05bb7cb6bf7bfee5e090176636ee3ac65/rec_box_fan_with_control_knob_0001.tar.gz",
+    "archive_sha256": "19f516366f180d50b17a2757746626c0b9261c94d5abae7f988c4bea67323607",
+    "archive": "rec_box_fan_with_control_knob_0001.tar.gz",
+    "label_status": "Original generated URDF reference; not manually verified or physically validated"
+  },
+  "links": [
+    {
+      "id": "link_000",
+      "name": "housing",
+      "point_file": "inputs/link_000.npz",
+      "faces": 7720,
+      "vertices": 4006,
+      "bounds": [
+        [
+          -0.26,
+          -0.095,
+          -0.292
+        ],
+        [
+          0.26,
+          0.095,
+          0.35200018806800687
+        ]
+      ]
+    },
+    {
+      "id": "link_001",
+      "name": "control_pod",
+      "point_file": null,
+      "faces": 152,
+      "vertices": 82,
+      "bounds": [
+        [
+          0.118,
+          -0.045,
+          0.27
+        ],
+        [
+          0.192,
+          0.045,
+          0.30200000000000005
+        ]
+      ]
+    },
+    {
+      "id": "link_002",
+      "name": "rotor",
+      "point_file": "inputs/link_002.npz",
+      "faces": 544,
+      "vertices": 288,
+      "bounds": [
+        [
+          -0.1630046897187773,
+          0.002999926535945157,
+          -0.16785986420483087
+        ],
+        [
+          0.1786750575421327,
+          0.051000080810451556,
+          0.172
+        ]
+      ]
+    },
+    {
+      "id": "link_003",
+      "name": "knob",
+      "point_file": null,
+      "faces": 268,
+      "vertices": 140,
+      "bounds": [
+        [
+          0.136,
+          -0.019,
+          0.30200000000000005
+        ],
+        [
+          0.174,
+          0.019,
+          0.3340000000000001
+        ]
+      ]
+    }
+  ],
+  "joints": [
+    {
+      "name": "control_pod_mount",
+      "type": "fixed",
+      "parent": "link_000",
+      "child": "link_001",
+      "reference_q": 0.0,
+      "mimic": null
+    },
+    {
+      "name": "blade_spin",
+      "type": "continuous",
+      "parent": "link_000",
+      "child": "link_002",
+      "reference_q": 0.0,
+      "mimic": null
+    },
+    {
+      "name": "speed_knob",
+      "type": "revolute",
+      "parent": "link_001",
+      "child": "link_003",
+      "reference_q": 0.0,
+      "mimic": null
+    }
+  ],
+  "bounds": [
+    [
+      -0.26,
+      -0.095,
+      -0.292
+    ],
+    [
+      0.26,
+      0.095,
+      0.35200018806800687
+    ]
+  ],
+  "point_pool_size": 65536,
+  "reference_pose": "Zero position clamped to limits; mimic values propagated",
+  "qc": {
+    "finite_geometry": true,
+    "tree_valid": true,
+    "axis_unit": true,
+    "physical_collision_validation": false,
+    "visual_tessellation": "32 cylinder segments, icosphere subdivision 2"
+  }
+}

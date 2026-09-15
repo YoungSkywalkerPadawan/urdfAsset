@@ -1,0 +1,202 @@
+{
+  "summary": {
+    "id": "rec_bicycle_crankset_and_pedal_assembly_ffab53b53ce24dcfbf35adeb3cacb72c",
+    "category": "crank",
+    "robot_name": "single_speed_urban_crankset",
+    "joint_count": 3,
+    "link_count": 6,
+    "target_link_count": 6,
+    "family": "rec_bicycle_crankset_and_pedal_assembly",
+    "warnings": [],
+    "diagonal": 0.5593646648689923,
+    "bytes": 9741447
+  },
+  "source": {
+    "dataset": "camvsl/Articraft-10K",
+    "revision": "3c79d5a05bb7cb6bf7bfee5e090176636ee3ac65",
+    "license": "CC-BY-4.0",
+    "url": "https://huggingface.co/datasets/camvsl/Articraft-10K/blob/3c79d5a05bb7cb6bf7bfee5e090176636ee3ac65/rec_bicycle_crankset_and_pedal_assembly_ffab53b53ce24dcfbf35adeb3cacb72c.tar.gz",
+    "archive_sha256": "5e0da71d224ab5b72205618b9ced197f8477f9ad477623418a984f2dadd6adf2",
+    "archive": "rec_bicycle_crankset_and_pedal_assembly_ffab53b53ce24dcfbf35adeb3cacb72c.tar.gz",
+    "label_status": "Original generated URDF reference; not manually verified or physically validated"
+  },
+  "links": [
+    {
+      "id": "link_000",
+      "name": "bottom_bracket_shell",
+      "point_file": "inputs/link_000.npz",
+      "faces": 1536,
+      "vertices": 772,
+      "bounds": [
+        [
+          -0.0235,
+          -0.03500008632030981,
+          -0.02350000550964912
+        ],
+        [
+          0.0235,
+          0.03500008632030981,
+          0.02350000550964912
+        ]
+      ]
+    },
+    {
+      "id": "link_001",
+      "name": "spindle",
+      "point_file": "inputs/link_001.npz",
+      "faces": 128,
+      "vertices": 66,
+      "bounds": [
+        [
+          -0.009,
+          -0.03600003305860306,
+          -0.009000132235323003
+        ],
+        [
+          0.009,
+          0.03600003305860306,
+          0.009000132235323003
+        ]
+      ]
+    },
+    {
+      "id": "link_002",
+      "name": "right_crank",
+      "point_file": "inputs/link_002.npz",
+      "faces": 3186,
+      "vertices": 1615,
+      "bounds": [
+        [
+          -0.097,
+          -0.071,
+          -0.096774
+        ],
+        [
+          0.18100000000000002,
+          -0.026809179896899682,
+          0.096774
+        ]
+      ]
+    },
+    {
+      "id": "link_003",
+      "name": "left_crank",
+      "point_file": "inputs/link_003.npz",
+      "faces": 1182,
+      "vertices": 602,
+      "bounds": [
+        [
+          -0.18100000000000002,
+          0.035999933882368856,
+          -0.018000033058724496
+        ],
+        [
+          0.018,
+          0.071,
+          0.018000033058724496
+        ]
+      ]
+    },
+    {
+      "id": "link_004",
+      "name": "right_pedal",
+      "point_file": "inputs/link_004.npz",
+      "faces": 316,
+      "vertices": 172,
+      "bounds": [
+        [
+          0.12400000000000001,
+          -0.14900000000000002,
+          -0.008000022039176649
+        ],
+        [
+          0.21600000000000003,
+          -0.06699998163408243,
+          0.011
+        ]
+      ]
+    },
+    {
+      "id": "link_005",
+      "name": "left_pedal",
+      "point_file": "inputs/link_005.npz",
+      "faces": 316,
+      "vertices": 172,
+      "bounds": [
+        [
+          -0.21600000000000003,
+          0.06699998163408243,
+          -0.008000022039176649
+        ],
+        [
+          -0.12400000000000001,
+          0.14900000000000002,
+          0.011
+        ]
+      ]
+    }
+  ],
+  "joints": [
+    {
+      "name": "shell_to_spindle",
+      "type": "continuous",
+      "parent": "link_000",
+      "child": "link_001",
+      "reference_q": 0.0,
+      "mimic": null
+    },
+    {
+      "name": "spindle_to_right_crank",
+      "type": "fixed",
+      "parent": "link_001",
+      "child": "link_002",
+      "reference_q": 0.0,
+      "mimic": null
+    },
+    {
+      "name": "spindle_to_left_crank",
+      "type": "fixed",
+      "parent": "link_001",
+      "child": "link_003",
+      "reference_q": 0.0,
+      "mimic": null
+    },
+    {
+      "name": "right_pedal_spin",
+      "type": "continuous",
+      "parent": "link_002",
+      "child": "link_004",
+      "reference_q": 0.0,
+      "mimic": null
+    },
+    {
+      "name": "left_pedal_spin",
+      "type": "continuous",
+      "parent": "link_003",
+      "child": "link_005",
+      "reference_q": 0.0,
+      "mimic": null
+    }
+  ],
+  "bounds": [
+    [
+      -0.21600000000000003,
+      -0.14900000000000002,
+      -0.096774
+    ],
+    [
+      0.21600000000000003,
+      0.14900000000000002,
+      0.096774
+    ]
+  ],
+  "point_pool_size": 65536,
+  "reference_pose": "Zero position clamped to limits; mimic values propagated",
+  "qc": {
+    "finite_geometry": true,
+    "tree_valid": true,
+    "axis_unit": true,
+    "physical_collision_validation": false,
+    "visual_tessellation": "32 cylinder segments, icosphere subdivision 2"
+  }
+}

@@ -1,0 +1,337 @@
+{
+  "summary": {
+    "id": "rec_clock_tower_with_rotating_hour_and_minute_hands_ff8fd9f39e6e4434a5dab47a43a785fd",
+    "category": "clock",
+    "robot_name": "japanese_pagoda_clock_tower",
+    "joint_count": 2,
+    "link_count": 11,
+    "target_link_count": 3,
+    "family": "rec_clock_tower_with_rotating_hour_and_minute_hands",
+    "warnings": [],
+    "diagonal": 14.331535158523666,
+    "bytes": 4811386
+  },
+  "source": {
+    "dataset": "camvsl/Articraft-10K",
+    "revision": "3c79d5a05bb7cb6bf7bfee5e090176636ee3ac65",
+    "license": "CC-BY-4.0",
+    "url": "https://huggingface.co/datasets/camvsl/Articraft-10K/blob/3c79d5a05bb7cb6bf7bfee5e090176636ee3ac65/rec_clock_tower_with_rotating_hour_and_minute_hands_ff8fd9f39e6e4434a5dab47a43a785fd.tar.gz",
+    "archive_sha256": "4d42fbbf3d52da3896963da024932f647aa1ccb1c50ba2ff89667647bf27fa68",
+    "archive": "rec_clock_tower_with_rotating_hour_and_minute_hands_ff8fd9f39e6e4434a5dab47a43a785fd.tar.gz",
+    "label_status": "Original generated URDF reference; not manually verified or physically validated"
+  },
+  "links": [
+    {
+      "id": "link_000",
+      "name": "tower_shaft",
+      "point_file": null,
+      "faces": 84,
+      "vertices": 56,
+      "bounds": [
+        [
+          -1.9,
+          -1.9,
+          0.0
+        ],
+        [
+          1.9,
+          1.9,
+          6.05
+        ]
+      ]
+    },
+    {
+      "id": "link_001",
+      "name": "first_stage",
+      "point_file": null,
+      "faces": 84,
+      "vertices": 48,
+      "bounds": [
+        [
+          -1.56,
+          -1.56,
+          6.05
+        ],
+        [
+          1.56,
+          1.56,
+          7.3
+        ]
+      ]
+    },
+    {
+      "id": "link_002",
+      "name": "first_roof",
+      "point_file": null,
+      "faces": 280,
+      "vertices": 160,
+      "bounds": [
+        [
+          -2.3,
+          -2.3,
+          7.3
+        ],
+        [
+          2.3,
+          2.3,
+          8.45
+        ]
+      ]
+    },
+    {
+      "id": "link_003",
+      "name": "second_stage",
+      "point_file": null,
+      "faces": 84,
+      "vertices": 48,
+      "bounds": [
+        [
+          -1.144,
+          -1.144,
+          8.45
+        ],
+        [
+          1.144,
+          1.144,
+          9.37
+        ]
+      ]
+    },
+    {
+      "id": "link_004",
+      "name": "second_roof",
+      "point_file": null,
+      "faces": 280,
+      "vertices": 160,
+      "bounds": [
+        [
+          -1.675,
+          -1.675,
+          9.37
+        ],
+        [
+          1.675,
+          1.675,
+          10.319999999999999
+        ]
+      ]
+    },
+    {
+      "id": "link_005",
+      "name": "third_stage",
+      "point_file": null,
+      "faces": 84,
+      "vertices": 48,
+      "bounds": [
+        [
+          -0.806,
+          -0.806,
+          10.319999999999999
+        ],
+        [
+          0.806,
+          0.806,
+          11.069999999999999
+        ]
+      ]
+    },
+    {
+      "id": "link_006",
+      "name": "third_roof",
+      "point_file": null,
+      "faces": 280,
+      "vertices": 160,
+      "bounds": [
+        [
+          -1.225,
+          -1.225,
+          11.069999999999999
+        ],
+        [
+          1.225,
+          1.225,
+          11.889999999999999
+        ]
+      ]
+    },
+    {
+      "id": "link_007",
+      "name": "finial",
+      "point_file": null,
+      "faces": 896,
+      "vertices": 456,
+      "bounds": [
+        [
+          -0.14,
+          -0.14,
+          11.889999999999999
+        ],
+        [
+          0.14,
+          0.14,
+          12.77
+        ]
+      ]
+    },
+    {
+      "id": "link_008",
+      "name": "clock_dial",
+      "point_file": "inputs/link_008.npz",
+      "faces": 432,
+      "vertices": 230,
+      "bounds": [
+        [
+          -0.62,
+          1.5599977226130384,
+          6.04999988980803
+        ],
+        [
+          0.62,
+          1.6200022773869618,
+          7.29000011019197
+        ]
+      ]
+    },
+    {
+      "id": "link_009",
+      "name": "hour_hand",
+      "point_file": "inputs/link_009.npz",
+      "faces": 280,
+      "vertices": 148,
+      "bounds": [
+        [
+          -0.046,
+          1.619999897150291,
+          6.56
+        ],
+        [
+          0.046,
+          1.6300001689674213,
+          7.01
+        ]
+      ]
+    },
+    {
+      "id": "link_010",
+      "name": "minute_hand",
+      "point_file": "inputs/link_010.npz",
+      "faces": 280,
+      "vertices": 148,
+      "bounds": [
+        [
+          -0.14,
+          1.6299999412287522,
+          6.637999992653806
+        ],
+        [
+          0.48,
+          1.6440001175425498,
+          6.702000007346194
+        ]
+      ]
+    }
+  ],
+  "joints": [
+    {
+      "name": "shaft_to_first_stage",
+      "type": "fixed",
+      "parent": "link_000",
+      "child": "link_001",
+      "reference_q": 0.0,
+      "mimic": null
+    },
+    {
+      "name": "first_stage_to_first_roof",
+      "type": "fixed",
+      "parent": "link_001",
+      "child": "link_002",
+      "reference_q": 0.0,
+      "mimic": null
+    },
+    {
+      "name": "first_roof_to_second_stage",
+      "type": "fixed",
+      "parent": "link_002",
+      "child": "link_003",
+      "reference_q": 0.0,
+      "mimic": null
+    },
+    {
+      "name": "second_stage_to_second_roof",
+      "type": "fixed",
+      "parent": "link_003",
+      "child": "link_004",
+      "reference_q": 0.0,
+      "mimic": null
+    },
+    {
+      "name": "second_roof_to_third_stage",
+      "type": "fixed",
+      "parent": "link_004",
+      "child": "link_005",
+      "reference_q": 0.0,
+      "mimic": null
+    },
+    {
+      "name": "third_stage_to_third_roof",
+      "type": "fixed",
+      "parent": "link_005",
+      "child": "link_006",
+      "reference_q": 0.0,
+      "mimic": null
+    },
+    {
+      "name": "third_roof_to_finial",
+      "type": "fixed",
+      "parent": "link_006",
+      "child": "link_007",
+      "reference_q": 0.0,
+      "mimic": null
+    },
+    {
+      "name": "first_stage_to_clock_dial",
+      "type": "fixed",
+      "parent": "link_001",
+      "child": "link_008",
+      "reference_q": 0.0,
+      "mimic": null
+    },
+    {
+      "name": "dial_to_hour_hand",
+      "type": "continuous",
+      "parent": "link_008",
+      "child": "link_009",
+      "reference_q": 0.0,
+      "mimic": null
+    },
+    {
+      "name": "dial_to_minute_hand",
+      "type": "continuous",
+      "parent": "link_008",
+      "child": "link_010",
+      "reference_q": 0.0,
+      "mimic": null
+    }
+  ],
+  "bounds": [
+    [
+      -2.3,
+      -2.3,
+      0.0
+    ],
+    [
+      2.3,
+      2.3,
+      12.77
+    ]
+  ],
+  "point_pool_size": 65536,
+  "reference_pose": "Zero position clamped to limits; mimic values propagated",
+  "qc": {
+    "finite_geometry": true,
+    "tree_valid": true,
+    "axis_unit": true,
+    "physical_collision_validation": false,
+    "visual_tessellation": "32 cylinder segments, icosphere subdivision 2"
+  }
+}

@@ -1,0 +1,94 @@
+{
+  "summary": {
+    "id": "rec_graphics_card_with_cooling_fans_6b578a4bcb04462796ae053915388353",
+    "category": "fan",
+    "robot_name": "mini_itx_graphics_card",
+    "joint_count": 1,
+    "link_count": 2,
+    "target_link_count": 2,
+    "family": "rec_graphics_card_with_cooling_fans",
+    "warnings": [],
+    "diagonal": 0.21752928400792385,
+    "bytes": 3666127
+  },
+  "source": {
+    "dataset": "camvsl/Articraft-10K",
+    "revision": "3c79d5a05bb7cb6bf7bfee5e090176636ee3ac65",
+    "license": "CC-BY-4.0",
+    "url": "https://huggingface.co/datasets/camvsl/Articraft-10K/blob/3c79d5a05bb7cb6bf7bfee5e090176636ee3ac65/rec_graphics_card_with_cooling_fans_6b578a4bcb04462796ae053915388353.tar.gz",
+    "archive_sha256": "8316d3242a3c8af64989b8593dcbae8cf059cf41299e585b6f3812dbe7efdb5c",
+    "archive": "rec_graphics_card_with_cooling_fans_6b578a4bcb04462796ae053915388353.tar.gz",
+    "label_status": "Original generated URDF reference; not manually verified or physically validated"
+  },
+  "links": [
+    {
+      "id": "link_000",
+      "name": "card_body",
+      "point_file": "inputs/link_000.npz",
+      "faces": 2404,
+      "vertices": 1266,
+      "bounds": [
+        [
+          -0.0883,
+          -0.058,
+          -0.0010000000000000009
+        ],
+        [
+          0.08699899999999999,
+          0.0575,
+          0.056
+        ]
+      ]
+    },
+    {
+      "id": "link_001",
+      "name": "fan_rotor",
+      "point_file": "inputs/link_001.npz",
+      "faces": 8726,
+      "vertices": 4365,
+      "bounds": [
+        [
+          -0.026732999999999996,
+          -0.037584,
+          0.038193
+        ],
+        [
+          0.0495,
+          0.038704,
+          0.047969
+        ]
+      ]
+    }
+  ],
+  "joints": [
+    {
+      "name": "fan_spin",
+      "type": "continuous",
+      "parent": "link_000",
+      "child": "link_001",
+      "reference_q": 0.0,
+      "mimic": null
+    }
+  ],
+  "bounds": [
+    [
+      -0.0883,
+      -0.058,
+      -0.0010000000000000009
+    ],
+    [
+      0.08699899999999999,
+      0.0575,
+      0.056
+    ]
+  ],
+  "point_pool_size": 65536,
+  "reference_pose": "Zero position clamped to limits; mimic values propagated",
+  "qc": {
+    "finite_geometry": true,
+    "tree_valid": true,
+    "axis_unit": true,
+    "physical_collision_validation": false,
+    "visual_tessellation": "32 cylinder segments, icosphere subdivision 2"
+  }
+}

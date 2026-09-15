@@ -1,0 +1,169 @@
+<robot name="corporate_helicopter">
+  <material name="fuselage_paint">
+    <color rgba="0.88 0.9 0.94 1" />
+    </material>
+  <material name="trim_gray">
+    <color rgba="0.35 0.38 0.42 1" />
+    </material>
+  <material name="rotor_dark">
+    <color rgba="0.1 0.11 0.13 1" />
+    </material>
+  <material name="tire_black">
+    <color rgba="0.06 0.06 0.07 1" />
+    </material>
+  <link name="fuselage">
+    <visual name="body_shell">
+      <geometry>
+        <mesh filename="assets/meshes/fuselage_shell.obj" />
+        </geometry>
+      <material name="fuselage_paint">
+        <color rgba="0.88 0.9 0.94 1" />
+        </material>
+      </visual>
+    <visual name="landing_wheels">
+      <geometry>
+        <mesh filename="assets/meshes/landing_wheels.obj" />
+        </geometry>
+      <material name="tire_black">
+        <color rgba="0.06 0.06 0.07 1" />
+        </material>
+      </visual>
+    <collision name="body_shell">
+      <geometry>
+        <mesh filename="assets/meshes/fuselage_shell.obj" />
+        </geometry>
+      </collision>
+    <collision name="landing_wheels">
+      <geometry>
+        <mesh filename="assets/meshes/landing_wheels.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="main_rotor">
+    <visual name="rotor_hub">
+      <geometry>
+        <mesh filename="assets/meshes/main_rotor_hub.obj" />
+        </geometry>
+      <material name="trim_gray">
+        <color rgba="0.35 0.38 0.42 1" />
+        </material>
+      </visual>
+    <visual name="rotor_blades">
+      <geometry>
+        <mesh filename="assets/meshes/main_rotor_blades.obj" />
+        </geometry>
+      <material name="rotor_dark">
+        <color rgba="0.1 0.11 0.13 1" />
+        </material>
+      </visual>
+    <collision name="rotor_hub">
+      <geometry>
+        <mesh filename="assets/meshes/main_rotor_hub.obj" />
+        </geometry>
+      </collision>
+    <collision name="rotor_blades">
+      <geometry>
+        <mesh filename="assets/meshes/main_rotor_blades.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="tail_rotor">
+    <visual name="tail_rotor_hub">
+      <geometry>
+        <mesh filename="assets/meshes/tail_rotor_hub.obj" />
+        </geometry>
+      <material name="trim_gray">
+        <color rgba="0.35 0.38 0.42 1" />
+        </material>
+      </visual>
+    <visual name="tail_rotor_blades">
+      <geometry>
+        <mesh filename="assets/meshes/tail_rotor_blades.obj" />
+        </geometry>
+      <material name="rotor_dark">
+        <color rgba="0.1 0.11 0.13 1" />
+        </material>
+      </visual>
+    <collision name="tail_rotor_hub">
+      <geometry>
+        <mesh filename="assets/meshes/tail_rotor_hub.obj" />
+        </geometry>
+      </collision>
+    <collision name="tail_rotor_blades">
+      <geometry>
+        <mesh filename="assets/meshes/tail_rotor_blades.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="passenger_door">
+    <visual name="door_panel">
+      <geometry>
+        <mesh filename="assets/meshes/passenger_door.obj" />
+        </geometry>
+      <material name="fuselage_paint">
+        <color rgba="0.88 0.9 0.94 1" />
+        </material>
+      </visual>
+    <collision name="door_panel">
+      <geometry>
+        <mesh filename="assets/meshes/passenger_door.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="baggage_hatch">
+    <visual name="hatch_panel">
+      <geometry>
+        <mesh filename="assets/meshes/baggage_hatch_panel.obj" />
+        </geometry>
+      <material name="fuselage_paint">
+        <color rgba="0.88 0.9 0.94 1" />
+        </material>
+      </visual>
+    <visual name="hatch_hinges">
+      <geometry>
+        <mesh filename="assets/meshes/baggage_hatch_hinges.obj" />
+        </geometry>
+      <material name="trim_gray">
+        <color rgba="0.35 0.38 0.42 1" />
+        </material>
+      </visual>
+    <collision name="hatch_panel">
+      <geometry>
+        <mesh filename="assets/meshes/baggage_hatch_panel.obj" />
+        </geometry>
+      </collision>
+    <collision name="hatch_hinges">
+      <geometry>
+        <mesh filename="assets/meshes/baggage_hatch_hinges.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="fuselage_to_main_rotor" type="continuous">
+    <origin xyz="0 0 1.1" rpy="0 0 0" />
+    <parent link="fuselage" />
+    <child link="main_rotor" />
+    <axis xyz="0 0 1" />
+    <limit effort="120" velocity="40" />
+    </joint>
+  <joint name="fuselage_to_tail_rotor" type="continuous">
+    <origin xyz="4.93 0.47 0.52" rpy="0 0 0" />
+    <parent link="fuselage" />
+    <child link="tail_rotor" />
+    <axis xyz="0 1 0" />
+    <limit effort="60" velocity="55" />
+    </joint>
+  <joint name="fuselage_to_baggage_hatch" type="revolute">
+    <origin xyz="0.77 0 0.8" rpy="0 0 0" />
+    <parent link="fuselage" />
+    <child link="baggage_hatch" />
+    <axis xyz="0 -1 0" />
+    <limit effort="25" velocity="1.2" lower="0" upper="1.35" />
+    </joint>
+  <joint name="fuselage_to_passenger_door" type="revolute">
+    <origin xyz="-0.69 0.9195 -0.04" rpy="0 0 0" />
+    <parent link="fuselage" />
+    <child link="passenger_door" />
+    <axis xyz="0 0 1" />
+    <limit effort="20" velocity="1.4" lower="0" upper="1.45" />
+    </joint>
+  </robot>

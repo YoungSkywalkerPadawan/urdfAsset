@@ -1,0 +1,215 @@
+<robot name="premium_desktop_pencil_sharpener">
+  <material name="body_color">
+    <color rgba="0.22 0.24 0.27 1" />
+    </material>
+  <material name="drawer_color">
+    <color rgba="0.17 0.18 0.2 1" />
+    </material>
+  <material name="metal">
+    <color rgba="0.78 0.79 0.8 1" />
+    </material>
+  <material name="arm_color">
+    <color rgba="0.1 0.1 0.11 1" />
+    </material>
+  <link name="body">
+    <visual name="left_wall">
+      <origin xyz="-0.0049 -0.0436 0.059" rpy="0 0 0" />
+      <geometry>
+        <box size="0.1278 0.0048 0.118" />
+        </geometry>
+      <material name="body_color">
+        <color rgba="0.22 0.24 0.27 1" />
+        </material>
+      </visual>
+    <visual name="right_wall">
+      <origin xyz="-0.0049 0.0436 0.059" rpy="0 0 0" />
+      <geometry>
+        <box size="0.1278 0.0048 0.118" />
+        </geometry>
+      <material name="body_color">
+        <color rgba="0.22 0.24 0.27 1" />
+        </material>
+      </visual>
+    <visual name="back_wall">
+      <origin xyz="-0.0656 0 0.059" rpy="0 0 0" />
+      <geometry>
+        <box size="0.0048 0.092 0.118" />
+        </geometry>
+      <material name="body_color">
+        <color rgba="0.22 0.24 0.27 1" />
+        </material>
+      </visual>
+    <visual name="top_shell">
+      <origin xyz="0.0016 0 0.1156" rpy="0 0 0" />
+      <geometry>
+        <box size="0.1328 0.092 0.0048" />
+        </geometry>
+      <material name="body_color">
+        <color rgba="0.22 0.24 0.27 1" />
+        </material>
+      </visual>
+    <visual name="rear_floor">
+      <origin xyz="-0.0377 0 0.003" rpy="0 0 0" />
+      <geometry>
+        <box size="0.0534 0.0848 0.006" />
+        </geometry>
+      <material name="body_color">
+        <color rgba="0.22 0.24 0.27 1" />
+        </material>
+      </visual>
+    <visual name="front_sill">
+      <origin xyz="0.0635 0 0.0054" rpy="0 0 0" />
+      <geometry>
+        <box size="0.009 0.092 0.0108" />
+        </geometry>
+      <material name="body_color">
+        <color rgba="0.22 0.24 0.27 1" />
+        </material>
+      </visual>
+    <visual name="jamb_0">
+      <origin xyz="0.0635 -0.04225 0.03" rpy="0 0 0" />
+      <geometry>
+        <box size="0.009 0.0075 0.0408" />
+        </geometry>
+      <material name="body_color">
+        <color rgba="0.22 0.24 0.27 1" />
+        </material>
+      </visual>
+    <visual name="jamb_1">
+      <origin xyz="0.0635 0.04225 0.03" rpy="0 0 0" />
+      <geometry>
+        <box size="0.009 0.0075 0.0408" />
+        </geometry>
+      <material name="body_color">
+        <color rgba="0.22 0.24 0.27 1" />
+        </material>
+      </visual>
+    <visual name="front_panel">
+      <geometry>
+        <mesh filename="assets/meshes/sharpener_front_panel.obj" />
+        </geometry>
+      <material name="body_color">
+        <color rgba="0.22 0.24 0.27 1" />
+        </material>
+      </visual>
+    <collision name="left_wall">
+      <origin xyz="-0.0049 -0.0436 0.059" rpy="0 0 0" />
+      <geometry>
+        <box size="0.1278 0.0048 0.118" />
+        </geometry>
+      </collision>
+    <collision name="right_wall">
+      <origin xyz="-0.0049 0.0436 0.059" rpy="0 0 0" />
+      <geometry>
+        <box size="0.1278 0.0048 0.118" />
+        </geometry>
+      </collision>
+    <collision name="back_wall">
+      <origin xyz="-0.0656 0 0.059" rpy="0 0 0" />
+      <geometry>
+        <box size="0.0048 0.092 0.118" />
+        </geometry>
+      </collision>
+    <collision name="top_shell">
+      <origin xyz="0.0016 0 0.1156" rpy="0 0 0" />
+      <geometry>
+        <box size="0.1328 0.092 0.0048" />
+        </geometry>
+      </collision>
+    <collision name="rear_floor">
+      <origin xyz="-0.0377 0 0.003" rpy="0 0 0" />
+      <geometry>
+        <box size="0.0534 0.0848 0.006" />
+        </geometry>
+      </collision>
+    <collision name="front_sill">
+      <origin xyz="0.0635 0 0.0054" rpy="0 0 0" />
+      <geometry>
+        <box size="0.009 0.092 0.0108" />
+        </geometry>
+      </collision>
+    <collision name="jamb_0">
+      <origin xyz="0.0635 -0.04225 0.03" rpy="0 0 0" />
+      <geometry>
+        <box size="0.009 0.0075 0.0408" />
+        </geometry>
+      </collision>
+    <collision name="jamb_1">
+      <origin xyz="0.0635 0.04225 0.03" rpy="0 0 0" />
+      <geometry>
+        <box size="0.009 0.0075 0.0408" />
+        </geometry>
+      </collision>
+    <collision name="front_panel">
+      <geometry>
+        <mesh filename="assets/meshes/sharpener_front_panel.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="drawer">
+    <visual name="bin">
+      <geometry>
+        <mesh filename="assets/meshes/sharpener_drawer.obj" />
+        </geometry>
+      <material name="drawer_color">
+        <color rgba="0.17 0.18 0.2 1" />
+        </material>
+      </visual>
+    <collision name="bin">
+      <geometry>
+        <mesh filename="assets/meshes/sharpener_drawer.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="crank_hub">
+    <visual name="hub">
+      <geometry>
+        <mesh filename="assets/meshes/sharpener_crank_hub.obj" />
+        </geometry>
+      <material name="metal">
+        <color rgba="0.78 0.79 0.8 1" />
+        </material>
+      </visual>
+    <collision name="hub">
+      <geometry>
+        <mesh filename="assets/meshes/sharpener_crank_hub.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="crank_arm">
+    <visual name="arm">
+      <geometry>
+        <mesh filename="assets/meshes/sharpener_crank_arm.obj" />
+        </geometry>
+      <material name="arm_color">
+        <color rgba="0.1 0.1 0.11 1" />
+        </material>
+      </visual>
+    <collision name="arm">
+      <geometry>
+        <mesh filename="assets/meshes/sharpener_crank_arm.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="drawer_slide" type="prismatic">
+    <origin xyz="0.0305 0 0.01" rpy="0 0 0" />
+    <parent link="body" />
+    <child link="drawer" />
+    <axis xyz="1 0 0" />
+    <limit effort="12" velocity="0.18" lower="0" upper="0.04" />
+    </joint>
+  <joint name="hub_spin" type="continuous">
+    <origin xyz="0.014 0.046 0.073" rpy="0 0 0" />
+    <parent link="body" />
+    <child link="crank_hub" />
+    <axis xyz="0 1 0" />
+    <limit effort="3" velocity="8" />
+    </joint>
+  <joint name="arm_fold" type="revolute">
+    <origin xyz="0.021 0.01 0" rpy="0 0 0" />
+    <parent link="crank_hub" />
+    <child link="crank_arm" />
+    <axis xyz="0 1 0" />
+    <limit effort="4" velocity="2.2" lower="0" upper="1.35" />
+    </joint>
+  </robot>

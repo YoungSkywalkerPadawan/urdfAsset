@@ -1,0 +1,229 @@
+{
+  "summary": {
+    "id": "rec_clamp_meter_with_hinged_jaw_and_rotary_selector_7b21fc68b2cf41da8cfae7bd25b50ced",
+    "category": "rotary",
+    "robot_name": "power_clamp_meter",
+    "joint_count": 1,
+    "link_count": 7,
+    "target_link_count": 2,
+    "family": "rec_clamp_meter_with_hinged_jaw_and_rotary_selector",
+    "warnings": [],
+    "diagonal": 0.34661521029666315,
+    "bytes": 3392893
+  },
+  "source": {
+    "dataset": "camvsl/Articraft-10K",
+    "revision": "3c79d5a05bb7cb6bf7bfee5e090176636ee3ac65",
+    "license": "CC-BY-4.0",
+    "url": "https://huggingface.co/datasets/camvsl/Articraft-10K/blob/3c79d5a05bb7cb6bf7bfee5e090176636ee3ac65/rec_clamp_meter_with_hinged_jaw_and_rotary_selector_7b21fc68b2cf41da8cfae7bd25b50ced.tar.gz",
+    "archive_sha256": "c167402188779e00360fa52f536a8b594da2aa83c58303090e31e3dc59fb1b64",
+    "archive": "rec_clamp_meter_with_hinged_jaw_and_rotary_selector_7b21fc68b2cf41da8cfae7bd25b50ced.tar.gz",
+    "label_status": "Original generated URDF reference; not manually verified or physically validated"
+  },
+  "links": [
+    {
+      "id": "link_000",
+      "name": "body",
+      "point_file": "inputs/link_000.npz",
+      "faces": 2002,
+      "vertices": 2104,
+      "bounds": [
+        [
+          -0.056,
+          -0.03,
+          -0.115
+        ],
+        [
+          0.056,
+          0.03,
+          0.156
+        ]
+      ]
+    },
+    {
+      "id": "link_001",
+      "name": "jaw",
+      "point_file": null,
+      "faces": 444,
+      "vertices": 476,
+      "bounds": [
+        [
+          -0.045957,
+          -0.03,
+          0.156
+        ],
+        [
+          0.052000000000000005,
+          0.03,
+          0.200997
+        ]
+      ]
+    },
+    {
+      "id": "link_002",
+      "name": "selector_knob",
+      "point_file": "inputs/link_002.npz",
+      "faces": 1004,
+      "vertices": 1012,
+      "bounds": [
+        [
+          -0.028,
+          0.03,
+          -0.065991
+        ],
+        [
+          0.028,
+          0.048,
+          -0.010009
+        ]
+      ]
+    },
+    {
+      "id": "link_003",
+      "name": "mode_button_0",
+      "point_file": null,
+      "faces": 24,
+      "vertices": 16,
+      "bounds": [
+        [
+          -0.026,
+          0.024,
+          0.009000000000000001
+        ],
+        [
+          -0.009999999999999998,
+          0.0325,
+          0.019
+        ]
+      ]
+    },
+    {
+      "id": "link_004",
+      "name": "mode_button_1",
+      "point_file": null,
+      "faces": 24,
+      "vertices": 16,
+      "bounds": [
+        [
+          0.009999999999999998,
+          0.024,
+          0.009000000000000001
+        ],
+        [
+          0.026,
+          0.0325,
+          0.019
+        ]
+      ]
+    },
+    {
+      "id": "link_005",
+      "name": "display",
+      "point_file": null,
+      "faces": 12,
+      "vertices": 8,
+      "bounds": [
+        [
+          -0.031,
+          0.024,
+          0.03899999999999999
+        ],
+        [
+          0.031,
+          0.028,
+          0.081
+        ]
+      ]
+    },
+    {
+      "id": "link_006",
+      "name": "kickstand",
+      "point_file": null,
+      "faces": 826,
+      "vertices": 852,
+      "bounds": [
+        [
+          -0.038,
+          -0.04,
+          -0.076999
+        ],
+        [
+          0.038,
+          -0.03,
+          0.04000000000000001
+        ]
+      ]
+    }
+  ],
+  "joints": [
+    {
+      "name": "body_to_jaw",
+      "type": "revolute",
+      "parent": "link_000",
+      "child": "link_001",
+      "reference_q": 0.0,
+      "mimic": null
+    },
+    {
+      "name": "body_to_selector_knob",
+      "type": "continuous",
+      "parent": "link_000",
+      "child": "link_002",
+      "reference_q": 0.0,
+      "mimic": null
+    },
+    {
+      "name": "body_to_mode_button_0",
+      "type": "prismatic",
+      "parent": "link_000",
+      "child": "link_003",
+      "reference_q": 0.0,
+      "mimic": null
+    },
+    {
+      "name": "body_to_mode_button_1",
+      "type": "prismatic",
+      "parent": "link_000",
+      "child": "link_004",
+      "reference_q": 0.0,
+      "mimic": null
+    },
+    {
+      "name": "body_to_display",
+      "type": "fixed",
+      "parent": "link_000",
+      "child": "link_005",
+      "reference_q": 0.0,
+      "mimic": null
+    },
+    {
+      "name": "body_to_kickstand",
+      "type": "revolute",
+      "parent": "link_000",
+      "child": "link_006",
+      "reference_q": 0.0,
+      "mimic": null
+    }
+  ],
+  "bounds": [
+    [
+      -0.056,
+      -0.04,
+      -0.115
+    ],
+    [
+      0.056,
+      0.048,
+      0.200997
+    ]
+  ],
+  "point_pool_size": 65536,
+  "reference_pose": "Zero position clamped to limits; mimic values propagated",
+  "qc": {
+    "finite_geometry": true,
+    "tree_valid": true,
+    "axis_unit": true,
+    "physical_collision_validation": false,
+    "visual_tessellation": "32 cylinder segments, icosphere subdivision 2"
+  }
+}

@@ -1,0 +1,148 @@
+{
+  "summary": {
+    "id": "rec_ceiling_fan_a1738b0b930e41c7aae7d334105fc22b",
+    "category": "fan",
+    "robot_name": "ceiling_fan_with_light_kit",
+    "joint_count": 1,
+    "link_count": 4,
+    "target_link_count": 2,
+    "family": "rec_ceiling_fan",
+    "warnings": [],
+    "diagonal": 1.9030422097187834,
+    "bytes": 3397422
+  },
+  "source": {
+    "dataset": "camvsl/Articraft-10K",
+    "revision": "3c79d5a05bb7cb6bf7bfee5e090176636ee3ac65",
+    "license": "CC-BY-4.0",
+    "url": "https://huggingface.co/datasets/camvsl/Articraft-10K/blob/3c79d5a05bb7cb6bf7bfee5e090176636ee3ac65/rec_ceiling_fan_a1738b0b930e41c7aae7d334105fc22b.tar.gz",
+    "archive_sha256": "c02459bf9cdfea7f586a9232455fceb7af3733a0822faced3fea67f86f60706e",
+    "archive": "rec_ceiling_fan_a1738b0b930e41c7aae7d334105fc22b.tar.gz",
+    "label_status": "Original generated URDF reference; not manually verified or physically validated"
+  },
+  "links": [
+    {
+      "id": "link_000",
+      "name": "canopy",
+      "point_file": null,
+      "faces": 908,
+      "vertices": 460,
+      "bounds": [
+        [
+          -0.085,
+          -0.085,
+          -0.126
+        ],
+        [
+          0.085,
+          0.085,
+          0.008
+        ]
+      ]
+    },
+    {
+      "id": "link_001",
+      "name": "downrod",
+      "point_file": "inputs/link_001.npz",
+      "faces": 256,
+      "vertices": 132,
+      "bounds": [
+        [
+          -0.018,
+          -0.018,
+          -0.446
+        ],
+        [
+          0.018,
+          0.018,
+          -0.126
+        ]
+      ]
+    },
+    {
+      "id": "link_002",
+      "name": "rotor_assembly",
+      "point_file": "inputs/link_002.npz",
+      "faces": 3560,
+      "vertices": 1844,
+      "bounds": [
+        [
+          -0.5366269017483452,
+          -0.6154341751384885,
+          -0.8150000000000001
+        ],
+        [
+          0.634,
+          0.6154347491887202,
+          -0.446
+        ]
+      ]
+    },
+    {
+      "id": "link_003",
+      "name": "diffuser_cover",
+      "point_file": null,
+      "faces": 2240,
+      "vertices": 1128,
+      "bounds": [
+        [
+          -0.10600001652937574,
+          -0.106,
+          -0.85
+        ],
+        [
+          0.10600001652937574,
+          0.106,
+          -0.6774999742875946
+        ]
+      ]
+    }
+  ],
+  "joints": [
+    {
+      "name": "canopy_to_downrod",
+      "type": "fixed",
+      "parent": "link_000",
+      "child": "link_001",
+      "reference_q": 0.0,
+      "mimic": null
+    },
+    {
+      "name": "fan_spin",
+      "type": "continuous",
+      "parent": "link_001",
+      "child": "link_002",
+      "reference_q": 0.0,
+      "mimic": null
+    },
+    {
+      "name": "diffuser_hinge",
+      "type": "revolute",
+      "parent": "link_002",
+      "child": "link_003",
+      "reference_q": 0.0,
+      "mimic": null
+    }
+  ],
+  "bounds": [
+    [
+      -0.5366269017483452,
+      -0.6154341751384885,
+      -0.85
+    ],
+    [
+      0.634,
+      0.6154347491887202,
+      0.008
+    ]
+  ],
+  "point_pool_size": 65536,
+  "reference_pose": "Zero position clamped to limits; mimic values propagated",
+  "qc": {
+    "finite_geometry": true,
+    "tree_valid": true,
+    "axis_unit": true,
+    "physical_collision_validation": false,
+    "visual_tessellation": "32 cylinder segments, icosphere subdivision 2"
+  }
+}

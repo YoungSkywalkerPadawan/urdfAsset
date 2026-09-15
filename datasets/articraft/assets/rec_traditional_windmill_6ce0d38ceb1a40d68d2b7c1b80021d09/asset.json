@@ -1,0 +1,94 @@
+{
+  "summary": {
+    "id": "rec_traditional_windmill_6ce0d38ceb1a40d68d2b7c1b80021d09",
+    "category": "windmill",
+    "robot_name": "traditional_tower_windmill",
+    "joint_count": 1,
+    "link_count": 2,
+    "target_link_count": 2,
+    "family": "rec_traditional_windmill",
+    "warnings": [],
+    "diagonal": 11.144999649600253,
+    "bytes": 3476489
+  },
+  "source": {
+    "dataset": "camvsl/Articraft-10K",
+    "revision": "3c79d5a05bb7cb6bf7bfee5e090176636ee3ac65",
+    "license": "CC-BY-4.0",
+    "url": "https://huggingface.co/datasets/camvsl/Articraft-10K/blob/3c79d5a05bb7cb6bf7bfee5e090176636ee3ac65/rec_traditional_windmill_6ce0d38ceb1a40d68d2b7c1b80021d09.tar.gz",
+    "archive_sha256": "c0391f3464a64ffff3b26183365a8a808874b8b9886f5f35725b3037ea342ccf",
+    "archive": "rec_traditional_windmill_6ce0d38ceb1a40d68d2b7c1b80021d09.tar.gz",
+    "label_status": "Original generated URDF reference; not manually verified or physically validated"
+  },
+  "links": [
+    {
+      "id": "link_000",
+      "name": "tower",
+      "point_file": "inputs/link_000.npz",
+      "faces": 6944,
+      "vertices": 3635,
+      "bounds": [
+        [
+          -1.55,
+          -1.55,
+          0.0
+        ],
+        [
+          1.55,
+          1.55,
+          6.385000000000001
+        ]
+      ]
+    },
+    {
+      "id": "link_001",
+      "name": "sail_rotor",
+      "point_file": "inputs/link_001.npz",
+      "faces": 688,
+      "vertices": 406,
+      "bounds": [
+        [
+          -3.150000330577834,
+          -2.340001138692368,
+          2.029999761182464
+        ],
+        [
+          3.150000330577834,
+          -1.0299994122895446,
+          8.33
+        ]
+      ]
+    }
+  ],
+  "joints": [
+    {
+      "name": "tower_to_sail_rotor",
+      "type": "continuous",
+      "parent": "link_000",
+      "child": "link_001",
+      "reference_q": 0.0,
+      "mimic": null
+    }
+  ],
+  "bounds": [
+    [
+      -3.150000330577834,
+      -2.340001138692368,
+      0.0
+    ],
+    [
+      3.150000330577834,
+      1.55,
+      8.33
+    ]
+  ],
+  "point_pool_size": 65536,
+  "reference_pose": "Zero position clamped to limits; mimic values propagated",
+  "qc": {
+    "finite_geometry": true,
+    "tree_valid": true,
+    "axis_unit": true,
+    "physical_collision_validation": false,
+    "visual_tessellation": "32 cylinder segments, icosphere subdivision 2"
+  }
+}

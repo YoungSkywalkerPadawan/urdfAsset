@@ -1,0 +1,50 @@
+<robot name="desk_fan">
+  <link name="base">
+    <visual name="base_pad">
+      <origin xyz="0 0 0.01" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.12" length="0.02" />
+        </geometry>
+      </visual>
+    <visual name="column">
+      <origin xyz="0 0 0.06" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.02" length="0.08" />
+        </geometry>
+      </visual>
+    <visual name="yoke">
+      <origin xyz="0 0 0.1" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/yoke.obj" />
+        </geometry>
+      </visual>
+    </link>
+  <link name="head">
+    <visual name="head_mesh">
+      <geometry>
+        <mesh filename="assets/meshes/head_mesh.obj" />
+        </geometry>
+      </visual>
+    </link>
+  <link name="rotor">
+    <visual name="rotor_mesh">
+      <geometry>
+        <mesh filename="assets/meshes/rotor_geom.obj" />
+        </geometry>
+      </visual>
+    </link>
+  <joint name="base_to_head" type="revolute">
+    <origin xyz="0 0 0.25" rpy="0 0 0" />
+    <parent link="base" />
+    <child link="head" />
+    <axis xyz="1 0 0" />
+    <limit effort="1" velocity="1" lower="-0.5" upper="0.5" />
+    </joint>
+  <joint name="head_to_rotor" type="continuous">
+    <origin xyz="0 0 0.06" rpy="0 0 0" />
+    <parent link="head" />
+    <child link="rotor" />
+    <axis xyz="0 0 1" />
+    <limit effort="1" velocity="10" />
+    </joint>
+  </robot>

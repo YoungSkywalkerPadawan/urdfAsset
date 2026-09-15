@@ -1,0 +1,175 @@
+{
+  "summary": {
+    "id": "rec_single_rotor_helicopter_b09545d61bf440b4a9932233d61c0b0f",
+    "category": "rotor",
+    "robot_name": "executive_helicopter",
+    "joint_count": 2,
+    "link_count": 5,
+    "target_link_count": 3,
+    "family": "rec_single_rotor_helicopter",
+    "warnings": [],
+    "diagonal": 9.730375339957206,
+    "bytes": 5270457
+  },
+  "source": {
+    "dataset": "camvsl/Articraft-10K",
+    "revision": "3c79d5a05bb7cb6bf7bfee5e090176636ee3ac65",
+    "license": "CC-BY-4.0",
+    "url": "https://huggingface.co/datasets/camvsl/Articraft-10K/blob/3c79d5a05bb7cb6bf7bfee5e090176636ee3ac65/rec_single_rotor_helicopter_b09545d61bf440b4a9932233d61c0b0f.tar.gz",
+    "archive_sha256": "52e3bdc63e456702cc483672f857213b28c1dca54153b015f448438f4961e7fa",
+    "archive": "rec_single_rotor_helicopter_b09545d61bf440b4a9932233d61c0b0f.tar.gz",
+    "label_status": "Original generated URDF reference; not manually verified or physically validated"
+  },
+  "links": [
+    {
+      "id": "link_000",
+      "name": "fuselage",
+      "point_file": "inputs/link_000.npz",
+      "faces": 10812,
+      "vertices": 5512,
+      "bounds": [
+        [
+          -4.62,
+          -1.0800004040520892,
+          -2.0202479650288652e-07
+        ],
+        [
+          2.05,
+          1.0800004040520892,
+          2.06
+        ]
+      ]
+    },
+    {
+      "id": "link_001",
+      "name": "main_rotor",
+      "point_file": "inputs/link_001.npz",
+      "faces": 512,
+      "vertices": 264,
+      "bounds": [
+        [
+          -2.88,
+          -2.8000001469093148,
+          2.06
+        ],
+        [
+          2.7199999999999998,
+          2.8000001469093148,
+          2.39
+        ]
+      ]
+    },
+    {
+      "id": "link_002",
+      "name": "tail_rotor",
+      "point_file": "inputs/link_002.npz",
+      "faces": 152,
+      "vertices": 82,
+      "bounds": [
+        [
+          -4.87,
+          0.07999985307199825,
+          1.4100000000000001
+        ],
+        [
+          -4.05,
+          0.14000014692800175,
+          2.23
+        ]
+      ]
+    },
+    {
+      "id": "link_003",
+      "name": "right_door",
+      "point_file": null,
+      "faces": 292,
+      "vertices": 156,
+      "bounds": [
+        [
+          -0.020000000000000018,
+          -1.0400000587710791,
+          0.8
+        ],
+        [
+          0.96,
+          -0.956,
+          1.78
+        ]
+      ]
+    },
+    {
+      "id": "link_004",
+      "name": "right_hatch",
+      "point_file": null,
+      "faces": 152,
+      "vertices": 82,
+      "bounds": [
+        [
+          -1.96,
+          -0.7510000514247027,
+          0.78
+        ],
+        [
+          -1.3,
+          -0.7,
+          1.46
+        ]
+      ]
+    }
+  ],
+  "joints": [
+    {
+      "name": "mast_spin",
+      "type": "continuous",
+      "parent": "link_000",
+      "child": "link_001",
+      "reference_q": 0.0,
+      "mimic": null
+    },
+    {
+      "name": "tail_spin",
+      "type": "continuous",
+      "parent": "link_000",
+      "child": "link_002",
+      "reference_q": 0.0,
+      "mimic": null
+    },
+    {
+      "name": "door_hinge",
+      "type": "revolute",
+      "parent": "link_000",
+      "child": "link_003",
+      "reference_q": 0.0,
+      "mimic": null
+    },
+    {
+      "name": "hatch_hinge",
+      "type": "revolute",
+      "parent": "link_000",
+      "child": "link_004",
+      "reference_q": 0.0,
+      "mimic": null
+    }
+  ],
+  "bounds": [
+    [
+      -4.87,
+      -2.8000001469093148,
+      -2.0202479650288652e-07
+    ],
+    [
+      2.7199999999999998,
+      2.8000001469093148,
+      2.39
+    ]
+  ],
+  "point_pool_size": 65536,
+  "reference_pose": "Zero position clamped to limits; mimic values propagated",
+  "qc": {
+    "finite_geometry": true,
+    "tree_valid": true,
+    "axis_unit": true,
+    "physical_collision_validation": false,
+    "visual_tessellation": "32 cylinder segments, icosphere subdivision 2"
+  }
+}

@@ -1,0 +1,116 @@
+<robot name="wheelie_bin">
+  <material name="molded_deep_green">
+    <color rgba="0.02 0.26 0.1 1" />
+    </material>
+  <material name="dark_reinforced_green">
+    <color rgba="0.01 0.18 0.07 1" />
+    </material>
+  <material name="black_rubber">
+    <color rgba="0.005 0.005 0.004 1" />
+    </material>
+  <material name="dark_gray_rim">
+    <color rgba="0.12 0.13 0.12 1" />
+    </material>
+  <material name="dull_steel">
+    <color rgba="0.48 0.47 0.43 1" />
+    </material>
+  <link name="body">
+    <visual name="body_shell">
+      <geometry>
+        <mesh filename="assets/meshes/body_shell.obj" />
+        </geometry>
+      <material name="molded_deep_green">
+        <color rgba="0.02 0.26 0.1 1" />
+        </material>
+      </visual>
+    <visual name="rear_axle">
+      <origin xyz="-0.235 0 0.125" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.019" length="0.87" />
+        </geometry>
+      <material name="dull_steel">
+        <color rgba="0.48 0.47 0.43 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="lid">
+    <visual name="lid_panel">
+      <geometry>
+        <mesh filename="assets/meshes/lid_panel.obj" />
+        </geometry>
+      <material name="dark_reinforced_green">
+        <color rgba="0.01 0.18 0.07 1" />
+        </material>
+      </visual>
+    <visual name="hinge_barrel">
+      <origin xyz="0 0 0.03" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.024" length="0.58" />
+        </geometry>
+      <material name="dark_reinforced_green">
+        <color rgba="0.01 0.18 0.07 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="wheel_0">
+    <visual name="tire">
+      <origin xyz="0 0 0" rpy="0 0 1.5708" />
+      <geometry>
+        <mesh filename="assets/meshes/wheel_tire.obj" />
+        </geometry>
+      <material name="black_rubber">
+        <color rgba="0.005 0.005 0.004 1" />
+        </material>
+      </visual>
+    <visual name="rim">
+      <origin xyz="0 0 0" rpy="0 0 1.5708" />
+      <geometry>
+        <mesh filename="assets/meshes/wheel_rim.obj" />
+        </geometry>
+      <material name="dark_gray_rim">
+        <color rgba="0.12 0.13 0.12 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="wheel_1">
+    <visual name="tire">
+      <origin xyz="0 0 0" rpy="0 0 1.5708" />
+      <geometry>
+        <mesh filename="assets/meshes/wheel_tire.obj" />
+        </geometry>
+      <material name="black_rubber">
+        <color rgba="0.005 0.005 0.004 1" />
+        </material>
+      </visual>
+    <visual name="rim">
+      <origin xyz="0 0 0" rpy="0 0 1.5708" />
+      <geometry>
+        <mesh filename="assets/meshes/wheel_rim.obj" />
+        </geometry>
+      <material name="dark_gray_rim">
+        <color rgba="0.12 0.13 0.12 1" />
+        </material>
+      </visual>
+    </link>
+  <joint name="body_to_lid" type="revolute">
+    <origin xyz="-0.36 0 1.005" rpy="0 0 0" />
+    <parent link="body" />
+    <child link="lid" />
+    <axis xyz="0 -1 0" />
+    <limit effort="8" velocity="2.2" lower="0" upper="1.75" />
+    </joint>
+  <joint name="body_to_wheel_0" type="continuous">
+    <origin xyz="-0.235 0.37 0.125" rpy="0 0 0" />
+    <parent link="body" />
+    <child link="wheel_0" />
+    <axis xyz="0 1 0" />
+    <limit effort="3" velocity="12" />
+    </joint>
+  <joint name="body_to_wheel_1" type="continuous">
+    <origin xyz="-0.235 -0.37 0.125" rpy="0 0 0" />
+    <parent link="body" />
+    <child link="wheel_1" />
+    <axis xyz="0 1 0" />
+    <limit effort="3" velocity="12" />
+    </joint>
+  </robot>

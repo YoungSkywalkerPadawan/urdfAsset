@@ -1,0 +1,304 @@
+<robot name="tilt_head_stand_mixer">
+  <material name="body_enamel">
+    <color rgba="0.79 0.16 0.18 1" />
+    </material>
+  <material name="steel">
+    <color rgba="0.88 0.89 0.9 1" />
+    </material>
+  <material name="dark_trim">
+    <color rgba="0.12 0.12 0.13 1" />
+    </material>
+  <material name="shadow_trim">
+    <color rgba="0.22 0.22 0.24 1" />
+    </material>
+  <link name="base">
+    <inertial>
+      <origin xyz="0.01 0 0.155" rpy="0 0 0" />
+      <mass value="10" />
+      <inertia ixx="0.128083" ixy="0" ixz="0" iyy="0.188083" iyz="0" izz="0.156" />
+      </inertial>
+    <visual name="pedestal">
+      <origin xyz="0.06 0 0.0225" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/base_pedestal.obj" />
+        </geometry>
+      <material name="body_enamel">
+        <color rgba="0.79 0.16 0.18 1" />
+        </material>
+      </visual>
+    <visual name="deck">
+      <origin xyz="0.1 0 0.054" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/base_deck.obj" />
+        </geometry>
+      <material name="body_enamel">
+        <color rgba="0.79 0.16 0.18 1" />
+        </material>
+      </visual>
+    <visual name="rear_column">
+      <geometry>
+        <mesh filename="assets/meshes/rear_column.obj" />
+        </geometry>
+      <material name="body_enamel">
+        <color rgba="0.79 0.16 0.18 1" />
+        </material>
+      </visual>
+    <visual name="hinge_saddle">
+      <origin xyz="-0.055 0 0.266" rpy="0 0 0" />
+      <geometry>
+        <box size="0.075 0.12 0.022" />
+        </geometry>
+      <material name="body_enamel">
+        <color rgba="0.79 0.16 0.18 1" />
+        </material>
+      </visual>
+    <visual name="selector_boss">
+      <origin xyz="-0.02 0.064 0.185" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.022" length="0.024" />
+        </geometry>
+      <material name="shadow_trim">
+        <color rgba="0.22 0.22 0.24 1" />
+        </material>
+      </visual>
+    <visual name="lock_rail">
+      <origin xyz="-0.086 0.04 0.273" rpy="0 0 0" />
+      <geometry>
+        <box size="0.06 0.02 0.008" />
+        </geometry>
+      <material name="shadow_trim">
+        <color rgba="0.22 0.22 0.24 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="bowl">
+    <inertial>
+      <origin xyz="0 0 0.09" rpy="0 0 0" />
+      <mass value="1.2" />
+      <inertia ixx="0.00493" ixy="0" ixz="0" iyy="0.00808" iyz="0" izz="0.00653" />
+      </inertial>
+    <visual name="left_runner">
+      <origin xyz="0 -0.036 0.004" rpy="0 0 0" />
+      <geometry>
+        <box size="0.11 0.015 0.008" />
+        </geometry>
+      <material name="shadow_trim">
+        <color rgba="0.22 0.22 0.24 1" />
+        </material>
+      </visual>
+    <visual name="right_runner">
+      <origin xyz="0 0.036 0.004" rpy="0 0 0" />
+      <geometry>
+        <box size="0.11 0.015 0.008" />
+        </geometry>
+      <material name="shadow_trim">
+        <color rgba="0.22 0.22 0.24 1" />
+        </material>
+      </visual>
+    <visual name="carriage_plate">
+      <origin xyz="0 0 0.013" rpy="0 0 0" />
+      <geometry>
+        <box size="0.126 0.095 0.01" />
+        </geometry>
+      <material name="dark_trim">
+        <color rgba="0.12 0.12 0.13 1" />
+        </material>
+      </visual>
+    <visual name="bowl_mount">
+      <origin xyz="0 0 0.028" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.031" length="0.02" />
+        </geometry>
+      <material name="steel">
+        <color rgba="0.88 0.89 0.9 1" />
+        </material>
+      </visual>
+    <visual name="bowl_shell">
+      <origin xyz="0 0 0.038" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/mixer_bowl_shell.obj" />
+        </geometry>
+      <material name="steel">
+        <color rgba="0.88 0.89 0.9 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="head">
+    <inertial>
+      <origin xyz="0.175 0 0.026" rpy="0 0 0" />
+      <mass value="4.8" />
+      <inertia ixx="0.0218" ixy="0" ixz="0" iyy="0.05512" iyz="0" izz="0.0538" />
+      </inertial>
+    <visual name="head_shell">
+      <geometry>
+        <mesh filename="assets/meshes/mixer_head_shell.obj" />
+        </geometry>
+      <material name="body_enamel">
+        <color rgba="0.79 0.16 0.18 1" />
+        </material>
+      </visual>
+    <visual name="rear_cheek">
+      <origin xyz="0.012 0 0.016" rpy="0 0 0" />
+      <geometry>
+        <box size="0.055 0.086 0.056" />
+        </geometry>
+      <material name="body_enamel">
+        <color rgba="0.79 0.16 0.18 1" />
+        </material>
+      </visual>
+    <visual name="hinge_barrel">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.022" length="0.11" />
+        </geometry>
+      <material name="shadow_trim">
+        <color rgba="0.22 0.22 0.24 1" />
+        </material>
+      </visual>
+    <visual name="hub_neck">
+      <origin xyz="0.14 0 -0.008" rpy="0 0 0" />
+      <geometry>
+        <box size="0.058 0.066 0.042" />
+        </geometry>
+      <material name="shadow_trim">
+        <color rgba="0.22 0.22 0.24 1" />
+        </material>
+      </visual>
+    <visual name="hub_housing">
+      <origin xyz="0.158 0 -0.01" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.026" length="0.048" />
+        </geometry>
+      <material name="shadow_trim">
+        <color rgba="0.22 0.22 0.24 1" />
+        </material>
+      </visual>
+    <visual name="chin_fairing">
+      <origin xyz="0.265 0 -0.01" rpy="0 0 0" />
+      <geometry>
+        <box size="0.07 0.09 0.028" />
+        </geometry>
+      <material name="body_enamel">
+        <color rgba="0.79 0.16 0.18 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="hook">
+    <inertial>
+      <origin xyz="0 0 -0.095" rpy="0 0 0" />
+      <mass value="0.35" />
+      <inertia ixx="0.0011601" ixy="0" ixz="0" iyy="0.0011601" iyz="0" izz="0.000214375" />
+      </inertial>
+    <visual name="hook_body">
+      <geometry>
+        <mesh filename="assets/meshes/dough_hook.obj" />
+        </geometry>
+      <material name="steel">
+        <color rgba="0.88 0.89 0.9 1" />
+        </material>
+      </visual>
+    <visual name="hook_tip">
+      <origin xyz="-0.005 0 -0.151" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.006" />
+        </geometry>
+      <material name="steel">
+        <color rgba="0.88 0.89 0.9 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="speed_selector">
+    <inertial>
+      <origin xyz="0.006 0 0.006" rpy="0 0 0" />
+      <mass value="0.05" />
+      <inertia ixx="3e-06" ixy="0" ixz="0" iyy="5.21667e-06" iyz="0" izz="3.41667e-06" />
+      </inertial>
+    <visual name="selector_knob">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.016" length="0.01" />
+        </geometry>
+      <material name="dark_trim">
+        <color rgba="0.12 0.12 0.13 1" />
+        </material>
+      </visual>
+    <visual name="selector_tab">
+      <origin xyz="0.01 0 0.012" rpy="0 0 0" />
+      <geometry>
+        <box size="0.02 0.006 0.008" />
+        </geometry>
+      <material name="dark_trim">
+        <color rgba="0.12 0.12 0.13 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="head_lock">
+    <inertial>
+      <origin xyz="0.015 0 0.007" rpy="0 0 0" />
+      <mass value="0.04" />
+      <inertia ixx="1.93333e-06" ixy="0" ixz="0" iyy="3.85333e-06" iyz="0" izz="4.08e-06" />
+      </inertial>
+    <visual name="lock_stem">
+      <origin xyz="0.009 0 0.003" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.01 0.006" />
+        </geometry>
+      <material name="dark_trim">
+        <color rgba="0.12 0.12 0.13 1" />
+        </material>
+      </visual>
+    <visual name="lock_tab">
+      <origin xyz="0.014 0 0.01" rpy="0 0 0" />
+      <geometry>
+        <box size="0.024 0.018 0.008" />
+        </geometry>
+      <material name="dark_trim">
+        <color rgba="0.12 0.12 0.13 1" />
+        </material>
+      </visual>
+    <visual name="lock_nose">
+      <origin xyz="0.025 0 0.003" rpy="0 0 0" />
+      <geometry>
+        <box size="0.01 0.006 0.006" />
+        </geometry>
+      <material name="dark_trim">
+        <color rgba="0.12 0.12 0.13 1" />
+        </material>
+      </visual>
+    </link>
+  <joint name="base_to_bowl" type="prismatic">
+    <origin xyz="0.095 0 0.063" rpy="0 0 0" />
+    <parent link="base" />
+    <child link="bowl" />
+    <axis xyz="1 0 0" />
+    <limit effort="80" velocity="0.12" lower="0" upper="0.035" />
+    </joint>
+  <joint name="base_to_head" type="revolute">
+    <origin xyz="-0.055 0 0.315" rpy="0 0 0" />
+    <parent link="base" />
+    <child link="head" />
+    <axis xyz="0 -1 0" />
+    <limit effort="18" velocity="1" lower="0" upper="1.1" />
+    </joint>
+  <joint name="head_to_hook" type="continuous">
+    <origin xyz="0.158 0 -0.034" rpy="0 0 0" />
+    <parent link="head" />
+    <child link="hook" />
+    <axis xyz="0 0 1" />
+    <limit effort="8" velocity="20" />
+    </joint>
+  <joint name="base_to_speed_selector" type="revolute">
+    <origin xyz="-0.015 0.081 0.185" rpy="0 0 0" />
+    <parent link="base" />
+    <child link="speed_selector" />
+    <axis xyz="0 1 0" />
+    <limit effort="1" velocity="2" lower="-0.55" upper="0.55" />
+    </joint>
+  <joint name="base_to_head_lock" type="prismatic">
+    <origin xyz="-0.112 0.04 0.277" rpy="0 0 0" />
+    <parent link="base" />
+    <child link="head_lock" />
+    <axis xyz="1 0 0" />
+    <limit effort="1" velocity="0.08" lower="0" upper="0.014" />
+    </joint>
+  </robot>

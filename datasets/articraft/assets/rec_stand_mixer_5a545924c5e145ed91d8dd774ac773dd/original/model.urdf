@@ -1,0 +1,240 @@
+<robot name="high_end_stand_mixer">
+  <link name="base">
+    <visual name="flared_base_shell">
+      <geometry>
+        <mesh filename="assets/meshes/flared_base_shell.obj" />
+        </geometry>
+      <material name="warm_ivory_enamel">
+        <color rgba="0.86 0.8 0.67 1" />
+        </material>
+      </visual>
+    <visual name="slide_rail_0">
+      <origin xyz="0.17 -0.125 0.1225" rpy="0 0 0" />
+      <geometry>
+        <box size="0.38 0.034 0.025" />
+        </geometry>
+      <material name="polished_chrome">
+        <color rgba="0.92 0.9 0.86 1" />
+        </material>
+      </visual>
+    <visual name="slide_rail_1">
+      <origin xyz="0.17 0.125 0.1225" rpy="0 0 0" />
+      <geometry>
+        <box size="0.38 0.034 0.025" />
+        </geometry>
+      <material name="polished_chrome">
+        <color rgba="0.92 0.9 0.86 1" />
+        </material>
+      </visual>
+    <visual name="speed_boss">
+      <origin xyz="-0.25 -0.145 0.27" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.05" length="0.02" />
+        </geometry>
+      <material name="polished_chrome">
+        <color rgba="0.92 0.9 0.86 1" />
+        </material>
+      </visual>
+    <visual name="lock_boss">
+      <origin xyz="-0.15 0.105 0.43" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.03" length="0.022" />
+        </geometry>
+      <material name="polished_chrome">
+        <color rgba="0.92 0.9 0.86 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="bowl_cradle">
+    <visual name="slider_plate">
+      <origin xyz="0 0 0.0125" rpy="0 0 0" />
+      <geometry>
+        <box size="0.36 0.28 0.025" />
+        </geometry>
+      <material name="charcoal_enamel">
+        <color rgba="0.05 0.055 0.06 1" />
+        </material>
+      </visual>
+    <visual name="bowl_socket">
+      <geometry>
+        <mesh filename="assets/meshes/bowl_socket.obj" />
+        </geometry>
+      <material name="polished_chrome">
+        <color rgba="0.92 0.9 0.86 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="bowl">
+    <visual name="bowl_shell">
+      <geometry>
+        <mesh filename="assets/meshes/deep_bowl_shell.obj" />
+        </geometry>
+      <material name="brushed_stainless">
+        <color rgba="0.72 0.72 0.7 1" />
+        </material>
+      </visual>
+    <visual name="bowl_foot_pad">
+      <origin xyz="0 0 0.0025" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.105" length="0.006" />
+        </geometry>
+      <material name="brushed_stainless">
+        <color rgba="0.72 0.72 0.7 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="head">
+    <visual name="long_head_shell">
+      <geometry>
+        <mesh filename="assets/meshes/long_head_shell.obj" />
+        </geometry>
+      <material name="warm_ivory_enamel">
+        <color rgba="0.86 0.8 0.67 1" />
+        </material>
+      </visual>
+    <visual name="hinge_barrel">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.034" length="0.185" />
+        </geometry>
+      <material name="polished_chrome">
+        <color rgba="0.92 0.9 0.86 1" />
+        </material>
+      </visual>
+    <visual name="hinge_pin">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.355" />
+        </geometry>
+      <material name="polished_chrome">
+        <color rgba="0.92 0.9 0.86 1" />
+        </material>
+      </visual>
+    <visual name="hinge_cap_0">
+      <origin xyz="0 -0.1805 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.044" length="0.006" />
+        </geometry>
+      <material name="polished_chrome">
+        <color rgba="0.92 0.9 0.86 1" />
+        </material>
+      </visual>
+    <visual name="hinge_cap_1">
+      <origin xyz="0 0.1805 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.044" length="0.006" />
+        </geometry>
+      <material name="polished_chrome">
+        <color rgba="0.92 0.9 0.86 1" />
+        </material>
+      </visual>
+    <visual name="trim_band">
+      <origin xyz="0.145 0 0.04" rpy="0 0 0" />
+      <geometry>
+        <box size="0.028 0.286 0.145" />
+        </geometry>
+      <material name="polished_chrome">
+        <color rgba="0.92 0.9 0.86 1" />
+        </material>
+      </visual>
+    <visual name="drive_socket_face">
+      <origin xyz="0.45 0 -0.103" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.058" length="0.014" />
+        </geometry>
+      <material name="polished_chrome">
+        <color rgba="0.92 0.9 0.86 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="paddle">
+    <visual name="paddle_frame">
+      <geometry>
+        <mesh filename="assets/meshes/flat_paddle_attachment.obj" />
+        </geometry>
+      <material name="polished_chrome">
+        <color rgba="0.92 0.9 0.86 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="speed_knob">
+    <visual name="knob_disk">
+      <origin xyz="0 -0.0225 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.045" length="0.045" />
+        </geometry>
+      <material name="black_bakelite">
+        <color rgba="0.015 0.014 0.013 1" />
+        </material>
+      </visual>
+    <visual name="knob_pointer">
+      <origin xyz="0 -0.049 0.03" rpy="0 0 0" />
+      <geometry>
+        <box size="0.014 0.008 0.034" />
+        </geometry>
+      <material name="polished_chrome">
+        <color rgba="0.92 0.9 0.86 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="head_lock">
+    <visual name="plunger_stem">
+      <origin xyz="0.0225 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.045" />
+        </geometry>
+      <material name="black_bakelite">
+        <color rgba="0.015 0.014 0.013 1" />
+        </material>
+      </visual>
+    <visual name="plunger_cap">
+      <origin xyz="0.052 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.026" length="0.014" />
+        </geometry>
+      <material name="red_lock_marker">
+        <color rgba="0.72 0.04 0.035 1" />
+        </material>
+      </visual>
+    </link>
+  <joint name="base_to_cradle" type="prismatic">
+    <origin xyz="0.17 0 0.135" rpy="0 0 0" />
+    <parent link="base" />
+    <child link="bowl_cradle" />
+    <axis xyz="1 0 0" />
+    <limit effort="60" velocity="0.12" lower="-0.03" upper="0.03" />
+    </joint>
+  <joint name="cradle_to_bowl" type="fixed">
+    <origin xyz="0 0 0.0575" rpy="0 0 0" />
+    <parent link="bowl_cradle" />
+    <child link="bowl" />
+    </joint>
+  <joint name="base_to_head" type="revolute">
+    <origin xyz="-0.25 0 0.66" rpy="0 0 0" />
+    <parent link="base" />
+    <child link="head" />
+    <axis xyz="0 -1 0" />
+    <limit effort="30" velocity="1" lower="0" upper="0.72" />
+    </joint>
+  <joint name="head_to_paddle" type="continuous">
+    <origin xyz="0.45 0 -0.103" rpy="0 0 0" />
+    <parent link="head" />
+    <child link="paddle" />
+    <axis xyz="0 0 1" />
+    <limit effort="2.5" velocity="20" />
+    </joint>
+  <joint name="base_to_speed_knob" type="revolute">
+    <origin xyz="-0.25 -0.155 0.27" rpy="0 0 0" />
+    <parent link="base" />
+    <child link="speed_knob" />
+    <axis xyz="0 -1 0" />
+    <limit effort="1.2" velocity="4" lower="0" upper="1.75" />
+    </joint>
+  <joint name="base_to_head_lock" type="prismatic">
+    <origin xyz="-0.139 0.105 0.43" rpy="0 0 0" />
+    <parent link="base" />
+    <child link="head_lock" />
+    <axis xyz="1 0 0" />
+    <limit effort="8" velocity="0.05" lower="0" upper="0.024" />
+    </joint>
+  </robot>

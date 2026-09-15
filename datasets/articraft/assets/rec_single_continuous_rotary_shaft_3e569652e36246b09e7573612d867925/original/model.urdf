@@ -1,0 +1,173 @@
+<robot name="rotary_spindle_module">
+  <material name="module_gray">
+    <color rgba="0.3 0.32 0.35 1" />
+    </material>
+  <material name="dark_bearing">
+    <color rgba="0.12 0.13 0.14 1" />
+    </material>
+  <material name="machined_steel">
+    <color rgba="0.74 0.76 0.79 1" />
+    </material>
+  <link name="foot">
+    <inertial>
+      <origin xyz="0 0 0.009" rpy="0 0 0" />
+      <mass value="5.5" />
+      <inertia ixx="0.00789433" ixy="0" ixz="0" iyy="0.0287943" iyz="0" izz="0.0363917" />
+      </inertial>
+    <visual name="foot_plate">
+      <geometry>
+        <mesh filename="assets/meshes/spindle_foot.obj" />
+        </geometry>
+      <material name="module_gray" />
+      </visual>
+    </link>
+  <link name="left_block">
+    <inertial>
+      <origin xyz="0 0 0.037" rpy="0 0 0" />
+      <mass value="0.8" />
+      <inertia ixx="0.000750133" ixy="0" ixz="0" iyy="0.000442133" iyz="0" izz="0.000462133" />
+      </inertial>
+    <visual name="pad">
+      <origin xyz="0 0 0.006" rpy="0 0 0" />
+      <geometry>
+        <box size="0.034 0.076 0.012" />
+        </geometry>
+      <material name="module_gray" />
+      </visual>
+    <visual name="upper_cheek_pos_y">
+      <origin xyz="0 0.031 0.037" rpy="0 0 0" />
+      <geometry>
+        <box size="0.034 0.014 0.074" />
+        </geometry>
+      <material name="module_gray" />
+      </visual>
+    <visual name="upper_cheek_neg_y">
+      <origin xyz="0 -0.031 0.037" rpy="0 0 0" />
+      <geometry>
+        <box size="0.034 0.014 0.074" />
+        </geometry>
+      <material name="module_gray" />
+      </visual>
+    <visual name="top_bridge">
+      <origin xyz="0 0 0.069" rpy="0 0 0" />
+      <geometry>
+        <box size="0.034 0.076 0.01" />
+        </geometry>
+      <material name="module_gray" />
+      </visual>
+    <visual name="contact_pad_pos_y">
+      <origin xyz="0 0.022 0.042" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.004" length="0.03" />
+        </geometry>
+      <material name="dark_bearing" />
+      </visual>
+    <visual name="contact_pad_neg_y">
+      <origin xyz="0 -0.022 0.042" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.004" length="0.03" />
+        </geometry>
+      <material name="dark_bearing" />
+      </visual>
+    </link>
+  <link name="right_block">
+    <inertial>
+      <origin xyz="0 0 0.037" rpy="0 0 0" />
+      <mass value="0.8" />
+      <inertia ixx="0.000750133" ixy="0" ixz="0" iyy="0.000442133" iyz="0" izz="0.000462133" />
+      </inertial>
+    <visual name="pad">
+      <origin xyz="0 0 0.006" rpy="0 0 0" />
+      <geometry>
+        <box size="0.034 0.076 0.012" />
+        </geometry>
+      <material name="module_gray" />
+      </visual>
+    <visual name="upper_cheek_pos_y">
+      <origin xyz="0 0.031 0.037" rpy="0 0 0" />
+      <geometry>
+        <box size="0.034 0.014 0.074" />
+        </geometry>
+      <material name="module_gray" />
+      </visual>
+    <visual name="upper_cheek_neg_y">
+      <origin xyz="0 -0.031 0.037" rpy="0 0 0" />
+      <geometry>
+        <box size="0.034 0.014 0.074" />
+        </geometry>
+      <material name="module_gray" />
+      </visual>
+    <visual name="top_bridge">
+      <origin xyz="0 0 0.069" rpy="0 0 0" />
+      <geometry>
+        <box size="0.034 0.076 0.01" />
+        </geometry>
+      <material name="module_gray" />
+      </visual>
+    <visual name="contact_pad_pos_y">
+      <origin xyz="0 0.022 0.042" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.004" length="0.03" />
+        </geometry>
+      <material name="dark_bearing" />
+      </visual>
+    <visual name="contact_pad_neg_y">
+      <origin xyz="0 -0.022 0.042" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.004" length="0.03" />
+        </geometry>
+      <material name="dark_bearing" />
+      </visual>
+    </link>
+  <link name="spindle">
+    <inertial>
+      <mass value="1.3" />
+      <inertia ixx="0.001755" ixy="0" ixz="0" iyy="0.00521083" iyz="0" izz="0.00521083" />
+      </inertial>
+    <visual name="shaft">
+      <origin xyz="0 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.2" />
+        </geometry>
+      <material name="machined_steel" />
+      </visual>
+    <visual name="flange">
+      <origin xyz="-0.094 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.032" length="0.012" />
+        </geometry>
+      <material name="machined_steel" />
+      </visual>
+    <visual name="clamp_hub">
+      <origin xyz="0.008 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.024" length="0.026" />
+        </geometry>
+      <material name="machined_steel" />
+      </visual>
+    <visual name="clamp_ear">
+      <origin xyz="0.008 0.03 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.026 0.014 0.02" />
+        </geometry>
+      <material name="machined_steel" />
+      </visual>
+    </link>
+  <joint name="foot_to_left_block" type="fixed">
+    <origin xyz="-0.06 0 0.018" rpy="0 0 0" />
+    <parent link="foot" />
+    <child link="left_block" />
+    </joint>
+  <joint name="foot_to_right_block" type="fixed">
+    <origin xyz="0.06 0 0.018" rpy="0 0 0" />
+    <parent link="foot" />
+    <child link="right_block" />
+    </joint>
+  <joint name="foot_to_spindle" type="continuous">
+    <origin xyz="0 0 0.06" rpy="0 0 0" />
+    <parent link="foot" />
+    <child link="spindle" />
+    <axis xyz="1 0 0" />
+    <limit effort="24" velocity="18" />
+    </joint>
+  </robot>

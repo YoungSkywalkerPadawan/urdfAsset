@@ -1,0 +1,121 @@
+{
+  "summary": {
+    "id": "rec_traditional_windmill_b7e9f597b4914a899df82c98be4f2429",
+    "category": "windmill",
+    "robot_name": "rugged_traditional_windmill",
+    "joint_count": 1,
+    "link_count": 3,
+    "target_link_count": 2,
+    "family": "rec_traditional_windmill",
+    "warnings": [],
+    "diagonal": 6.668426530912494,
+    "bytes": 3747315
+  },
+  "source": {
+    "dataset": "camvsl/Articraft-10K",
+    "revision": "3c79d5a05bb7cb6bf7bfee5e090176636ee3ac65",
+    "license": "CC-BY-4.0",
+    "url": "https://huggingface.co/datasets/camvsl/Articraft-10K/blob/3c79d5a05bb7cb6bf7bfee5e090176636ee3ac65/rec_traditional_windmill_b7e9f597b4914a899df82c98be4f2429.tar.gz",
+    "archive_sha256": "76d0bf27bca68f58310cd5eccfdce9373be70bc71a9dbb49dfcfd6897e3408cd",
+    "archive": "rec_traditional_windmill_b7e9f597b4914a899df82c98be4f2429.tar.gz",
+    "label_status": "Original generated URDF reference; not manually verified or physically validated"
+  },
+  "links": [
+    {
+      "id": "link_000",
+      "name": "tower",
+      "point_file": null,
+      "faces": 7692,
+      "vertices": 4141,
+      "bounds": [
+        [
+          -1.074802307403538,
+          -1.074802307403538,
+          0.0
+        ],
+        [
+          1.074802307403538,
+          1.074802307403538,
+          3.2
+        ]
+      ]
+    },
+    {
+      "id": "link_001",
+      "name": "cap",
+      "point_file": "inputs/link_001.npz",
+      "faces": 7056,
+      "vertices": 3744,
+      "bounds": [
+        [
+          -0.5910479098530941,
+          -0.6916989801907734,
+          3.2
+        ],
+        [
+          0.5910479098530941,
+          1.4875,
+          4.121420068861657
+        ]
+      ]
+    },
+    {
+      "id": "link_002",
+      "name": "rotor",
+      "point_file": "inputs/link_002.npz",
+      "faces": 1936,
+      "vertices": 1078,
+      "bounds": [
+        [
+          -1.640000336473037,
+          -0.9259999999999999,
+          1.929998451369594
+        ],
+        [
+          1.6400012121574818,
+          -0.49999979797452887,
+          5.210000875684527
+        ]
+      ]
+    }
+  ],
+  "joints": [
+    {
+      "name": "cap_yaw",
+      "type": "revolute",
+      "parent": "link_000",
+      "child": "link_001",
+      "reference_q": 0.0,
+      "mimic": null
+    },
+    {
+      "name": "rotor_spin",
+      "type": "continuous",
+      "parent": "link_001",
+      "child": "link_002",
+      "reference_q": 0.0,
+      "mimic": null
+    }
+  ],
+  "bounds": [
+    [
+      -1.640000336473037,
+      -1.074802307403538,
+      0.0
+    ],
+    [
+      1.6400012121574818,
+      1.4875,
+      5.210000875684527
+    ]
+  ],
+  "point_pool_size": 65536,
+  "reference_pose": "Zero position clamped to limits; mimic values propagated",
+  "qc": {
+    "finite_geometry": true,
+    "tree_valid": true,
+    "axis_unit": true,
+    "physical_collision_validation": false,
+    "visual_tessellation": "32 cylinder segments, icosphere subdivision 2"
+  }
+}

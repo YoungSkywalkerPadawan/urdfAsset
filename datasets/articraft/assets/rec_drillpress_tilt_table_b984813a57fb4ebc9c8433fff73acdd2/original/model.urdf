@@ -1,0 +1,468 @@
+<robot name="gang_drill_press">
+  <material name="cast_iron">
+    <color rgba="0.3 0.32 0.34 1" />
+    </material>
+  <material name="machine_green">
+    <color rgba="0.18 0.34 0.26 1" />
+    </material>
+  <material name="table_grey">
+    <color rgba="0.38 0.4 0.42 1" />
+    </material>
+  <material name="steel">
+    <color rgba="0.76 0.78 0.8 1" />
+    </material>
+  <material name="dark_steel">
+    <color rgba="0.2 0.2 0.22 1" />
+    </material>
+  <material name="bakelite">
+    <color rgba="0.08 0.08 0.09 1" />
+    </material>
+  <link name="frame">
+    <inertial>
+      <origin xyz="0 0 0.81" rpy="0 0 0" />
+      <mass value="220" />
+      <inertia ixx="52.6973" ixy="0" ixz="0" iyy="58.1533" iyz="0" izz="14.6227" />
+      </inertial>
+    <visual name="base_plinth">
+      <origin xyz="0 0 0.04" rpy="0 0 0" />
+      <geometry>
+        <box size="0.74 0.5 0.08" />
+        </geometry>
+      <material name="cast_iron">
+        <color rgba="0.3 0.32 0.34 1" />
+        </material>
+      </visual>
+    <visual name="pedestal">
+      <origin xyz="0 0 0.18" rpy="0 0 0" />
+      <geometry>
+        <box size="0.44 0.3 0.2" />
+        </geometry>
+      <material name="cast_iron">
+        <color rgba="0.3 0.32 0.34 1" />
+        </material>
+      </visual>
+    <visual name="column">
+      <origin xyz="0 0 0.91" rpy="0 0 0" />
+      <geometry>
+        <box size="0.28 0.22 1.26" />
+        </geometry>
+      <material name="machine_green">
+        <color rgba="0.18 0.34 0.26 1" />
+        </material>
+      </visual>
+    <visual name="feed_rack">
+      <origin xyz="0 0.117 1.05" rpy="0 0 0" />
+      <geometry>
+        <box size="0.04 0.014 0.62" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.2 0.2 0.22 1" />
+        </material>
+      </visual>
+    <visual name="column_cap">
+      <origin xyz="0 0 1.57" rpy="0 0 0" />
+      <geometry>
+        <box size="0.34 0.1 0.1" />
+        </geometry>
+      <material name="cast_iron">
+        <color rgba="0.3 0.32 0.34 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="head">
+    <inertial>
+      <origin xyz="0 0.16 0.26" rpy="0 0 0" />
+      <mass value="48" />
+      <inertia ixx="1.7872" ixy="0" ixz="0" iyy="4.3216" iyz="0" izz="3.9456" />
+      </inertial>
+    <visual name="front_carriage">
+      <origin xyz="0 0.267 0.18" rpy="0 0 0" />
+      <geometry>
+        <box size="0.84 0.284 0.36" />
+        </geometry>
+      <material name="machine_green">
+        <color rgba="0.18 0.34 0.26 1" />
+        </material>
+      </visual>
+    <visual name="left_slide_cheek">
+      <origin xyz="-0.195 0.15 0.18" rpy="0 0 0" />
+      <geometry>
+        <box size="0.11 0.36 0.36" />
+        </geometry>
+      <material name="machine_green">
+        <color rgba="0.18 0.34 0.26 1" />
+        </material>
+      </visual>
+    <visual name="right_slide_cheek">
+      <origin xyz="0.195 0.15 0.18" rpy="0 0 0" />
+      <geometry>
+        <box size="0.11 0.36 0.36" />
+        </geometry>
+      <material name="machine_green">
+        <color rgba="0.18 0.34 0.26 1" />
+        </material>
+      </visual>
+    <visual name="drive_cover">
+      <origin xyz="0 0.23 0.43" rpy="0 0 0" />
+      <geometry>
+        <box size="0.84 0.24 0.14" />
+        </geometry>
+      <material name="machine_green">
+        <color rgba="0.18 0.34 0.26 1" />
+        </material>
+      </visual>
+    <visual name="feed_hub">
+      <origin xyz="0.438 0.18 0.23" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.045" length="0.036" />
+        </geometry>
+      <material name="cast_iron">
+        <color rgba="0.3 0.32 0.34 1" />
+        </material>
+      </visual>
+    <visual name="feed_handle_0">
+      <origin xyz="0.456 0.18 0.32" rpy="-0 0 0" />
+      <geometry>
+        <cylinder radius="0.009" length="0.18" />
+        </geometry>
+      <material name="steel">
+        <color rgba="0.76 0.78 0.8 1" />
+        </material>
+      </visual>
+    <visual name="feed_knob_0">
+      <origin xyz="0.456 0.18 0.41" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.018" />
+        </geometry>
+      <material name="bakelite">
+        <color rgba="0.08 0.08 0.09 1" />
+        </material>
+      </visual>
+    <visual name="feed_handle_1">
+      <origin xyz="0.456 0.257942 0.185" rpy="-2.0944 0 0" />
+      <geometry>
+        <cylinder radius="0.009" length="0.18" />
+        </geometry>
+      <material name="steel">
+        <color rgba="0.76 0.78 0.8 1" />
+        </material>
+      </visual>
+    <visual name="feed_knob_1">
+      <origin xyz="0.456 0.335885 0.14" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.018" />
+        </geometry>
+      <material name="bakelite">
+        <color rgba="0.08 0.08 0.09 1" />
+        </material>
+      </visual>
+    <visual name="feed_handle_2">
+      <origin xyz="0.456 0.102058 0.185" rpy="-4.18879 0 0" />
+      <geometry>
+        <cylinder radius="0.009" length="0.18" />
+        </geometry>
+      <material name="steel">
+        <color rgba="0.76 0.78 0.8 1" />
+        </material>
+      </visual>
+    <visual name="feed_knob_2">
+      <origin xyz="0.456 0.0241154 0.14" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.018" />
+        </geometry>
+      <material name="bakelite">
+        <color rgba="0.08 0.08 0.09 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="spindle_left">
+    <inertial>
+      <origin xyz="0 0 -0.145" rpy="0 0 0" />
+      <mass value="2" />
+      <inertia ixx="0.0148333" ixy="0" ixz="0" iyy="0.0148333" iyz="0" izz="0.00163333" />
+      </inertial>
+    <visual name="spindle_collar">
+      <origin xyz="0 0 -0.015" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.02" length="0.03" />
+        </geometry>
+      <material name="steel">
+        <color rgba="0.76 0.78 0.8 1" />
+        </material>
+      </visual>
+    <visual name="spindle_shaft">
+      <origin xyz="0 0 -0.085" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.11" />
+        </geometry>
+      <material name="steel">
+        <color rgba="0.76 0.78 0.8 1" />
+        </material>
+      </visual>
+    <visual name="chuck_body">
+      <origin xyz="0 0 -0.17" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.028" length="0.06" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.2 0.2 0.22 1" />
+        </material>
+      </visual>
+    <visual name="chuck_nose">
+      <origin xyz="0 0 -0.22" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.02" length="0.04" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.2 0.2 0.22 1" />
+        </material>
+      </visual>
+    <visual name="tool_stub">
+      <origin xyz="0 0 -0.2525" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0045" length="0.025" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.2 0.2 0.22 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="spindle_center">
+    <inertial>
+      <origin xyz="0 0 -0.145" rpy="0 0 0" />
+      <mass value="2" />
+      <inertia ixx="0.0148333" ixy="0" ixz="0" iyy="0.0148333" iyz="0" izz="0.00163333" />
+      </inertial>
+    <visual name="spindle_collar">
+      <origin xyz="0 0 -0.015" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.02" length="0.03" />
+        </geometry>
+      <material name="steel">
+        <color rgba="0.76 0.78 0.8 1" />
+        </material>
+      </visual>
+    <visual name="spindle_shaft">
+      <origin xyz="0 0 -0.085" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.11" />
+        </geometry>
+      <material name="steel">
+        <color rgba="0.76 0.78 0.8 1" />
+        </material>
+      </visual>
+    <visual name="chuck_body">
+      <origin xyz="0 0 -0.17" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.028" length="0.06" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.2 0.2 0.22 1" />
+        </material>
+      </visual>
+    <visual name="chuck_nose">
+      <origin xyz="0 0 -0.22" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.02" length="0.04" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.2 0.2 0.22 1" />
+        </material>
+      </visual>
+    <visual name="tool_stub">
+      <origin xyz="0 0 -0.2525" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0045" length="0.025" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.2 0.2 0.22 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="spindle_right">
+    <inertial>
+      <origin xyz="0 0 -0.145" rpy="0 0 0" />
+      <mass value="2" />
+      <inertia ixx="0.0148333" ixy="0" ixz="0" iyy="0.0148333" iyz="0" izz="0.00163333" />
+      </inertial>
+    <visual name="spindle_collar">
+      <origin xyz="0 0 -0.015" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.02" length="0.03" />
+        </geometry>
+      <material name="steel">
+        <color rgba="0.76 0.78 0.8 1" />
+        </material>
+      </visual>
+    <visual name="spindle_shaft">
+      <origin xyz="0 0 -0.085" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.11" />
+        </geometry>
+      <material name="steel">
+        <color rgba="0.76 0.78 0.8 1" />
+        </material>
+      </visual>
+    <visual name="chuck_body">
+      <origin xyz="0 0 -0.17" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.028" length="0.06" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.2 0.2 0.22 1" />
+        </material>
+      </visual>
+    <visual name="chuck_nose">
+      <origin xyz="0 0 -0.22" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.02" length="0.04" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.2 0.2 0.22 1" />
+        </material>
+      </visual>
+    <visual name="tool_stub">
+      <origin xyz="0 0 -0.2525" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0045" length="0.025" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.2 0.2 0.22 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="table_bracket">
+    <inertial>
+      <origin xyz="0 -0.15 -0.03" rpy="0 0 0" />
+      <mass value="34" />
+      <inertia ixx="0.47175" ixy="0" ixz="0" iyy="0.663" iyz="0" izz="0.80835" />
+      </inertial>
+    <visual name="support_arm">
+      <origin xyz="0 -0.18 -0.08" rpy="0 0 0" />
+      <geometry>
+        <box size="0.3 0.14 0.1" />
+        </geometry>
+      <material name="cast_iron">
+        <color rgba="0.3 0.32 0.34 1" />
+        </material>
+      </visual>
+    <visual name="left_column_clamp">
+      <origin xyz="-0.19 -0.19 -0.03" rpy="0 0 0" />
+      <geometry>
+        <box size="0.1 0.2 0.22" />
+        </geometry>
+      <material name="cast_iron">
+        <color rgba="0.3 0.32 0.34 1" />
+        </material>
+      </visual>
+    <visual name="right_column_clamp">
+      <origin xyz="0.19 -0.19 -0.03" rpy="0 0 0" />
+      <geometry>
+        <box size="0.1 0.2 0.22" />
+        </geometry>
+      <material name="cast_iron">
+        <color rgba="0.3 0.32 0.34 1" />
+        </material>
+      </visual>
+    <visual name="left_ear">
+      <origin xyz="-0.125 -0.07 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.14 0.12" />
+        </geometry>
+      <material name="cast_iron">
+        <color rgba="0.3 0.32 0.34 1" />
+        </material>
+      </visual>
+    <visual name="right_ear">
+      <origin xyz="0.125 -0.07 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.14 0.12" />
+        </geometry>
+      <material name="cast_iron">
+        <color rgba="0.3 0.32 0.34 1" />
+        </material>
+      </visual>
+    <visual name="rear_tie_bar">
+      <origin xyz="0 -0.12 -0.04" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.028" length="0.29" />
+        </geometry>
+      <material name="cast_iron">
+        <color rgba="0.3 0.32 0.34 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="table">
+    <inertial>
+      <origin xyz="0 0 0.11" rpy="0 0 0" />
+      <mass value="28" />
+      <inertia ixx="0.497233" ixy="0" ixz="0" iyy="0.497233" iyz="0" izz="0.875" />
+      </inertial>
+    <visual name="trunnion_barrel">
+      <origin xyz="0 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.022" length="0.22" />
+        </geometry>
+      <material name="table_grey">
+        <color rgba="0.38 0.4 0.42 1" />
+        </material>
+      </visual>
+    <visual name="support_post">
+      <origin xyz="0 0 0.075" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.05" length="0.15" />
+        </geometry>
+      <material name="table_grey">
+        <color rgba="0.38 0.4 0.42 1" />
+        </material>
+      </visual>
+    <visual name="table_top">
+      <origin xyz="0 0 0.165" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.25" length="0.03" />
+        </geometry>
+      <material name="table_grey">
+        <color rgba="0.38 0.4 0.42 1" />
+        </material>
+      </visual>
+    </link>
+  <joint name="head_to_spindle_left" type="continuous">
+    <origin xyz="-0.24 0.27 0" rpy="0 0 0" />
+    <parent link="head" />
+    <child link="spindle_left" />
+    <axis xyz="0 0 1" />
+    <limit effort="18" velocity="30" />
+    </joint>
+  <joint name="head_to_spindle_center" type="continuous">
+    <origin xyz="0 0.27 0" rpy="0 0 0" />
+    <parent link="head" />
+    <child link="spindle_center" />
+    <axis xyz="0 0 1" />
+    <limit effort="18" velocity="30" />
+    </joint>
+  <joint name="head_to_spindle_right" type="continuous">
+    <origin xyz="0.24 0.27 0" rpy="0 0 0" />
+    <parent link="head" />
+    <child link="spindle_right" />
+    <axis xyz="0 0 1" />
+    <limit effort="18" velocity="30" />
+    </joint>
+  <joint name="frame_to_head_feed" type="prismatic">
+    <origin xyz="0 0 1.08" rpy="0 0 0" />
+    <parent link="frame" />
+    <child link="head" />
+    <axis xyz="0 0 -1" />
+    <limit effort="900" velocity="0.15" lower="0" upper="0.1" />
+    </joint>
+  <joint name="frame_to_table_bracket" type="fixed">
+    <origin xyz="0 0.38 0.52" rpy="0 0 0" />
+    <parent link="frame" />
+    <child link="table_bracket" />
+    </joint>
+  <joint name="table_bracket_to_table" type="revolute">
+    <parent link="table_bracket" />
+    <child link="table" />
+    <axis xyz="1 0 0" />
+    <limit effort="120" velocity="0.7" lower="-0.65" upper="0.65" />
+    </joint>
+  </robot>

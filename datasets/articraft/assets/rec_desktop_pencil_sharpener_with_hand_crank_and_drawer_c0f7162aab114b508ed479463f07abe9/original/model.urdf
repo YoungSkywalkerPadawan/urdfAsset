@@ -1,0 +1,198 @@
+<robot name="vintage_desktop_pencil_sharpener">
+  <material name="dark_green_enamel">
+    <color rgba="0.07 0.18 0.13 1" />
+    </material>
+  <material name="aged_brass">
+    <color rgba="0.72 0.55 0.28 1" />
+    </material>
+  <material name="blackened_steel">
+    <color rgba="0.025 0.025 0.022 1" />
+    </material>
+  <material name="brushed_steel">
+    <color rgba="0.58 0.6 0.57 1" />
+    </material>
+  <material name="dark_wood">
+    <color rgba="0.4 0.2 0.08 1" />
+    </material>
+  <link name="body">
+    <visual name="housing">
+      <geometry>
+        <mesh filename="assets/meshes/housing.obj" />
+        </geometry>
+      <material name="dark_green_enamel">
+        <color rgba="0.07 0.18 0.13 1" />
+        </material>
+      </visual>
+    <visual name="guide_rail_0">
+      <origin xyz="-0.066 0.022 0.112" rpy="0 0 0" />
+      <geometry>
+        <box size="0.014 0.004 0.064" />
+        </geometry>
+      <material name="dark_green_enamel">
+        <color rgba="0.07 0.18 0.13 1" />
+        </material>
+      </visual>
+    <visual name="guide_rail_1">
+      <origin xyz="-0.066 0.046 0.112" rpy="0 0 0" />
+      <geometry>
+        <box size="0.014 0.004 0.064" />
+        </geometry>
+      <material name="dark_green_enamel">
+        <color rgba="0.07 0.18 0.13 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="drawer">
+    <visual name="drawer_face">
+      <origin xyz="-0.0115 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.01 0.084 0.052" />
+        </geometry>
+      <material name="aged_brass">
+        <color rgba="0.72 0.55 0.28 1" />
+        </material>
+      </visual>
+    <visual name="tray_floor">
+      <origin xyz="0.04 0 -0.021" rpy="0 0 0" />
+      <geometry>
+        <box size="0.094 0.068 0.006" />
+        </geometry>
+      <material name="blackened_steel">
+        <color rgba="0.025 0.025 0.022 1" />
+        </material>
+      </visual>
+    <visual name="tray_side_0">
+      <origin xyz="0.04 0.0335 -0.008" rpy="0 0 0" />
+      <geometry>
+        <box size="0.094 0.006 0.032" />
+        </geometry>
+      <material name="blackened_steel">
+        <color rgba="0.025 0.025 0.022 1" />
+        </material>
+      </visual>
+    <visual name="tray_side_1">
+      <origin xyz="0.04 -0.0335 -0.008" rpy="0 0 0" />
+      <geometry>
+        <box size="0.094 0.006 0.032" />
+        </geometry>
+      <material name="blackened_steel">
+        <color rgba="0.025 0.025 0.022 1" />
+        </material>
+      </visual>
+    <visual name="tray_back">
+      <origin xyz="0.087 0 -0.008" rpy="0 0 0" />
+      <geometry>
+        <box size="0.006 0.068 0.032" />
+        </geometry>
+      <material name="blackened_steel">
+        <color rgba="0.025 0.025 0.022 1" />
+        </material>
+      </visual>
+    <visual name="drawer_pull">
+      <origin xyz="-0.012 0 -0.002" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0065" length="0.012" />
+        </geometry>
+      <material name="blackened_steel">
+        <color rgba="0.025 0.025 0.022 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="selector">
+    <visual name="slot_tongue">
+      <origin xyz="0.01 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.01 0.007 0.018" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.58 0.6 0.57 1" />
+        </material>
+      </visual>
+    <visual name="slider_stem">
+      <origin xyz="0.0015 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.007 0.007 0.01" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.58 0.6 0.57 1" />
+        </material>
+      </visual>
+    <visual name="slider_thumb">
+      <origin xyz="-0.006 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.008 0.02 0.016" />
+        </geometry>
+      <material name="aged_brass">
+        <color rgba="0.72 0.55 0.28 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="crank">
+    <visual name="side_axle">
+      <origin xyz="0 0.0225 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0088" length="0.045" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.58 0.6 0.57 1" />
+        </material>
+      </visual>
+    <visual name="hub_disk">
+      <origin xyz="0 0.005 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.017" length="0.01" />
+        </geometry>
+      <material name="aged_brass">
+        <color rgba="0.72 0.55 0.28 1" />
+        </material>
+      </visual>
+    <visual name="crank_arm">
+      <origin xyz="0.0175 0.012 -0.0225" rpy="0 0.909753 0" />
+      <geometry>
+        <box size="0.0570088 0.008 0.01" />
+        </geometry>
+      <material name="aged_brass">
+        <color rgba="0.72 0.55 0.28 1" />
+        </material>
+      </visual>
+    <visual name="handle_pin">
+      <origin xyz="0.035 0.016 -0.045" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.018" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.58 0.6 0.57 1" />
+        </material>
+      </visual>
+    <visual name="wood_handle">
+      <origin xyz="0.035 0.036 -0.045" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.034" />
+        </geometry>
+      <material name="dark_wood">
+        <color rgba="0.4 0.2 0.08 1" />
+        </material>
+      </visual>
+    </link>
+  <joint name="body_to_drawer" type="prismatic">
+    <origin xyz="-0.066 0 0.047" rpy="0 0 0" />
+    <parent link="body" />
+    <child link="drawer" />
+    <axis xyz="-1 0 0" />
+    <limit effort="20" velocity="0.18" lower="0" upper="0.055" />
+    </joint>
+  <joint name="body_to_selector" type="prismatic">
+    <origin xyz="-0.071 0.034 0.112" rpy="0 0 0" />
+    <parent link="body" />
+    <child link="selector" />
+    <axis xyz="0 0 1" />
+    <limit effort="4" velocity="0.05" lower="-0.014" upper="0.014" />
+    </joint>
+  <joint name="body_to_crank" type="continuous">
+    <origin xyz="0.03 0.057 0.096" rpy="0 0 0" />
+    <parent link="body" />
+    <child link="crank" />
+    <axis xyz="0 1 0" />
+    <limit effort="2" velocity="8" />
+    </joint>
+  </robot>

@@ -1,0 +1,148 @@
+{
+  "summary": {
+    "id": "rec_desktop_pencil_sharpener_with_hand_crank_and_drawer_a3ec2256cef74317b57cecf3596e35d3",
+    "category": "crank",
+    "robot_name": "schoolhouse_pencil_sharpener",
+    "joint_count": 1,
+    "link_count": 4,
+    "target_link_count": 2,
+    "family": "rec_desktop_pencil_sharpener_with_hand_crank_and_drawer",
+    "warnings": [],
+    "diagonal": 0.3041632279070314,
+    "bytes": 3461456
+  },
+  "source": {
+    "dataset": "camvsl/Articraft-10K",
+    "revision": "3c79d5a05bb7cb6bf7bfee5e090176636ee3ac65",
+    "license": "CC-BY-4.0",
+    "url": "https://huggingface.co/datasets/camvsl/Articraft-10K/blob/3c79d5a05bb7cb6bf7bfee5e090176636ee3ac65/rec_desktop_pencil_sharpener_with_hand_crank_and_drawer_a3ec2256cef74317b57cecf3596e35d3.tar.gz",
+    "archive_sha256": "a4876c88a4d837d49c0e8dfc19fe9691eae7ffb3088baca515620f77c261cebb",
+    "archive": "rec_desktop_pencil_sharpener_with_hand_crank_and_drawer_a3ec2256cef74317b57cecf3596e35d3.tar.gz",
+    "label_status": "Original generated URDF reference; not manually verified or physically validated"
+  },
+  "links": [
+    {
+      "id": "link_000",
+      "name": "body",
+      "point_file": "inputs/link_000.npz",
+      "faces": 6102,
+      "vertices": 3169,
+      "bounds": [
+        [
+          -0.058,
+          -0.065,
+          0.0
+        ],
+        [
+          0.0605000293856071,
+          0.059,
+          0.188
+        ]
+      ]
+    },
+    {
+      "id": "link_001",
+      "name": "drawer",
+      "point_file": null,
+      "faces": 188,
+      "vertices": 106,
+      "bounds": [
+        [
+          -0.041,
+          -0.07050002571241887,
+          0.009500000000000001
+        ],
+        [
+          0.041,
+          0.047999999999999994,
+          0.0525
+        ]
+      ]
+    },
+    {
+      "id": "link_002",
+      "name": "crank",
+      "point_file": "inputs/link_002.npz",
+      "faces": 524,
+      "vertices": 272,
+      "bounds": [
+        [
+          0.05899998163410941,
+          -0.016,
+          0.02549995224839101
+        ],
+        [
+          0.14300003122215568,
+          0.016,
+          0.12100001836591757
+        ]
+      ]
+    },
+    {
+      "id": "link_003",
+      "name": "dust_flap",
+      "point_file": null,
+      "faces": 152,
+      "vertices": 82,
+      "bounds": [
+        [
+          -0.026,
+          -0.06575,
+          0.08900000000000001
+        ],
+        [
+          0.026,
+          -0.056999999999999995,
+          0.14200002938561385
+        ]
+      ]
+    }
+  ],
+  "joints": [
+    {
+      "name": "body_to_drawer",
+      "type": "prismatic",
+      "parent": "link_000",
+      "child": "link_001",
+      "reference_q": 0.0,
+      "mimic": null
+    },
+    {
+      "name": "body_to_crank",
+      "type": "continuous",
+      "parent": "link_000",
+      "child": "link_002",
+      "reference_q": 0.0,
+      "mimic": null
+    },
+    {
+      "name": "body_to_dust_flap",
+      "type": "revolute",
+      "parent": "link_000",
+      "child": "link_003",
+      "reference_q": 0.0,
+      "mimic": null
+    }
+  ],
+  "bounds": [
+    [
+      -0.058,
+      -0.07050002571241887,
+      0.0
+    ],
+    [
+      0.14300003122215568,
+      0.059,
+      0.188
+    ]
+  ],
+  "point_pool_size": 65536,
+  "reference_pose": "Zero position clamped to limits; mimic values propagated",
+  "qc": {
+    "finite_geometry": true,
+    "tree_valid": true,
+    "axis_unit": true,
+    "physical_collision_validation": false,
+    "visual_tessellation": "32 cylinder segments, icosphere subdivision 2"
+  }
+}

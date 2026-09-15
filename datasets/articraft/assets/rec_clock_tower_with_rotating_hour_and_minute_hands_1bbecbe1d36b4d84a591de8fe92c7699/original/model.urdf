@@ -1,0 +1,649 @@
+<robot name="railway_station_clock_tower">
+  <material name="masonry">
+    <color rgba="0.66 0.64 0.6 1" />
+    </material>
+  <material name="trim_stone">
+    <color rgba="0.77 0.75 0.71 1" />
+    </material>
+  <material name="dark_clock">
+    <color rgba="0.15 0.15 0.16 1" />
+    </material>
+  <material name="clock_face">
+    <color rgba="0.93 0.92 0.86 1" />
+    </material>
+  <material name="hour_metal">
+    <color rgba="0.18 0.18 0.19 1" />
+    </material>
+  <material name="minute_metal">
+    <color rgba="0.1 0.1 0.11 1" />
+    </material>
+  <material name="lantern_glass">
+    <color rgba="0.73 0.85 0.93 0.35" />
+    </material>
+  <material name="lantern_copper">
+    <color rgba="0.4 0.29 0.21 1" />
+    </material>
+  <link name="tower">
+    <inertial>
+      <origin xyz="0 0 10.8" rpy="0 0 0" />
+      <mass value="180000" />
+      <inertia ixx="7.6128e+06" ixy="0" ixz="0" iyy="7.6128e+06" iyz="0" izz="1.2288e+06" />
+      </inertial>
+    <visual name="foundation_plinth">
+      <origin xyz="0 0 0.8" rpy="0 0 0" />
+      <geometry>
+        <box size="6.4 6.4 1.6" />
+        </geometry>
+      <material name="masonry">
+        <color rgba="0.66 0.64 0.6 1" />
+        </material>
+      </visual>
+    <visual name="water_table">
+      <origin xyz="0 0 1.8" rpy="0 0 0" />
+      <geometry>
+        <box size="5.6 5.6 0.4" />
+        </geometry>
+      <material name="trim_stone">
+        <color rgba="0.77 0.75 0.71 1" />
+        </material>
+      </visual>
+    <visual name="shaft">
+      <origin xyz="0 0 7.4" rpy="0 0 0" />
+      <geometry>
+        <box size="4.2 4.2 10.8" />
+        </geometry>
+      <material name="masonry">
+        <color rgba="0.66 0.64 0.6 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="-1.93 -1.93 7.4" rpy="0 0 0" />
+      <geometry>
+        <box size="0.34 0.34 10.8" />
+        </geometry>
+      <material name="trim_stone">
+        <color rgba="0.77 0.75 0.71 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="-1.93 1.93 7.4" rpy="0 0 0" />
+      <geometry>
+        <box size="0.34 0.34 10.8" />
+        </geometry>
+      <material name="trim_stone">
+        <color rgba="0.77 0.75 0.71 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="1.93 -1.93 7.4" rpy="0 0 0" />
+      <geometry>
+        <box size="0.34 0.34 10.8" />
+        </geometry>
+      <material name="trim_stone">
+        <color rgba="0.77 0.75 0.71 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="1.93 1.93 7.4" rpy="0 0 0" />
+      <geometry>
+        <box size="0.34 0.34 10.8" />
+        </geometry>
+      <material name="trim_stone">
+        <color rgba="0.77 0.75 0.71 1" />
+        </material>
+      </visual>
+    <visual name="clock_stage">
+      <origin xyz="0 0 14.2" rpy="0 0 0" />
+      <geometry>
+        <box size="4.8 4.8 2.8" />
+        </geometry>
+      <material name="masonry">
+        <color rgba="0.66 0.64 0.6 1" />
+        </material>
+      </visual>
+    <visual name="lower_clock_cornice">
+      <origin xyz="0 0 12.96" rpy="0 0 0" />
+      <geometry>
+        <box size="5.2 5.2 0.32" />
+        </geometry>
+      <material name="trim_stone">
+        <color rgba="0.77 0.75 0.71 1" />
+        </material>
+      </visual>
+    <visual name="upper_clock_cornice">
+      <origin xyz="0 0 15.85" rpy="0 0 0" />
+      <geometry>
+        <box size="5.4 5.4 0.5" />
+        </geometry>
+      <material name="trim_stone">
+        <color rgba="0.77 0.75 0.71 1" />
+        </material>
+      </visual>
+    <visual name="lantern_base_ring">
+      <origin xyz="0 0 16.325" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="1.55" length="0.45" />
+        </geometry>
+      <material name="lantern_copper">
+        <color rgba="0.4 0.29 0.21 1" />
+        </material>
+      </visual>
+    <visual name="lantern_glazing">
+      <origin xyz="0 0 17.65" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="1.28" length="2.2" />
+        </geometry>
+      <material name="lantern_glass">
+        <color rgba="0.73 0.85 0.93 0.35" />
+        </material>
+      </visual>
+    <visual name="lantern_cap_ring">
+      <origin xyz="0 0 18.95" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="1.45" length="0.4" />
+        </geometry>
+      <material name="lantern_copper">
+        <color rgba="0.4 0.29 0.21 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="1.23 0 17.65" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.05" length="2.2" />
+        </geometry>
+      <material name="lantern_copper">
+        <color rgba="0.4 0.29 0.21 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="0.869741 0.869741 17.65" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.05" length="2.2" />
+        </geometry>
+      <material name="lantern_copper">
+        <color rgba="0.4 0.29 0.21 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="7.53158e-17 1.23 17.65" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.05" length="2.2" />
+        </geometry>
+      <material name="lantern_copper">
+        <color rgba="0.4 0.29 0.21 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="-0.869741 0.869741 17.65" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.05" length="2.2" />
+        </geometry>
+      <material name="lantern_copper">
+        <color rgba="0.4 0.29 0.21 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="-1.23 1.50632e-16 17.65" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.05" length="2.2" />
+        </geometry>
+      <material name="lantern_copper">
+        <color rgba="0.4 0.29 0.21 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="-0.869741 -0.869741 17.65" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.05" length="2.2" />
+        </geometry>
+      <material name="lantern_copper">
+        <color rgba="0.4 0.29 0.21 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="-2.25947e-16 -1.23 17.65" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.05" length="2.2" />
+        </geometry>
+      <material name="lantern_copper">
+        <color rgba="0.4 0.29 0.21 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="0.869741 -0.869741 17.65" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.05" length="2.2" />
+        </geometry>
+      <material name="lantern_copper">
+        <color rgba="0.4 0.29 0.21 1" />
+        </material>
+      </visual>
+    <visual name="lantern_dome">
+      <origin xyz="0 0 19.15" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/lantern_dome.obj" />
+        </geometry>
+      <material name="lantern_copper">
+        <color rgba="0.4 0.29 0.21 1" />
+        </material>
+      </visual>
+    <visual name="spire">
+      <origin xyz="0 0 20.05" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.12" length="1.1" />
+        </geometry>
+      <material name="lantern_copper">
+        <color rgba="0.4 0.29 0.21 1" />
+        </material>
+      </visual>
+    <visual name="finial">
+      <origin xyz="0 0 20.69" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.2" length="0.22" />
+        </geometry>
+      <material name="lantern_copper">
+        <color rgba="0.4 0.29 0.21 1" />
+        </material>
+      </visual>
+    <visual name="north_dial_face">
+      <origin xyz="0 2.41 14.2" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="1.02" length="0.02" />
+        </geometry>
+      <material name="clock_face">
+        <color rgba="0.93 0.92 0.86 1" />
+        </material>
+      </visual>
+    <visual name="north_dial_bezel">
+      <origin xyz="0 2.455 14.2" rpy="-1.5708 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/dial_bezel.obj" />
+        </geometry>
+      <material name="dark_clock">
+        <color rgba="0.15 0.15 0.16 1" />
+        </material>
+      </visual>
+    <visual name="south_dial_face">
+      <origin xyz="0 -2.41 14.2" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="1.02" length="0.02" />
+        </geometry>
+      <material name="clock_face">
+        <color rgba="0.93 0.92 0.86 1" />
+        </material>
+      </visual>
+    <visual name="south_dial_bezel">
+      <origin xyz="0 -2.455 14.2" rpy="1.5708 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/dial_bezel.obj" />
+        </geometry>
+      <material name="dark_clock">
+        <color rgba="0.15 0.15 0.16 1" />
+        </material>
+      </visual>
+    <visual name="east_dial_face">
+      <origin xyz="2.41 0 14.2" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="1.02" length="0.02" />
+        </geometry>
+      <material name="clock_face">
+        <color rgba="0.93 0.92 0.86 1" />
+        </material>
+      </visual>
+    <visual name="east_dial_bezel">
+      <origin xyz="2.455 0 14.2" rpy="0 1.5708 0" />
+      <geometry>
+        <mesh filename="assets/meshes/dial_bezel.obj" />
+        </geometry>
+      <material name="dark_clock">
+        <color rgba="0.15 0.15 0.16 1" />
+        </material>
+      </visual>
+    <visual name="west_dial_face">
+      <origin xyz="-2.41 0 14.2" rpy="0 -1.5708 0" />
+      <geometry>
+        <cylinder radius="1.02" length="0.02" />
+        </geometry>
+      <material name="clock_face">
+        <color rgba="0.93 0.92 0.86 1" />
+        </material>
+      </visual>
+    <visual name="west_dial_bezel">
+      <origin xyz="-2.455 0 14.2" rpy="0 -1.5708 0" />
+      <geometry>
+        <mesh filename="assets/meshes/dial_bezel.obj" />
+        </geometry>
+      <material name="dark_clock">
+        <color rgba="0.15 0.15 0.16 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="north_hour_hand">
+    <inertial>
+      <origin xyz="0 0.23 0.015" rpy="0 0 0" />
+      <mass value="0.18" />
+      <inertia ixx="0.0100995" ixy="0" ixz="0" iyy="0.0007395" iyz="0" izz="0.010812" />
+      </inertial>
+    <visual name="hub">
+      <origin xyz="0 0 0.009" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.11" length="0.018" />
+        </geometry>
+      <material name="hour_metal">
+        <color rgba="0.18 0.18 0.19 1" />
+        </material>
+      </visual>
+    <visual name="blade">
+      <origin xyz="0 0 0.004" rpy="0 0 3.14159" />
+      <geometry>
+        <mesh filename="assets/meshes/hour_blade.obj" />
+        </geometry>
+      <material name="hour_metal">
+        <color rgba="0.18 0.18 0.19 1" />
+        </material>
+      </visual>
+    <visual name="tip">
+      <origin xyz="-7.10295e-17 -0.58 0.009" rpy="0 0 3.14159" />
+      <geometry>
+        <box size="0.07 0.05 0.01" />
+        </geometry>
+      <material name="hour_metal">
+        <color rgba="0.18 0.18 0.19 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="north_minute_hand">
+    <inertial>
+      <origin xyz="0 0.32 0.024" rpy="0 0 0" />
+      <mass value="0.14" />
+      <inertia ixx="0.0157173" ixy="0" ixz="0" iyy="0.000317333" iyz="0" izz="0.0159973" />
+      </inertial>
+    <visual name="hub">
+      <origin xyz="0 0 0.027" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.085" length="0.018" />
+        </geometry>
+      <material name="minute_metal">
+        <color rgba="0.1 0.1 0.11 1" />
+        </material>
+      </visual>
+    <visual name="blade">
+      <origin xyz="0 0 0.024" rpy="0 0 3.14159" />
+      <geometry>
+        <mesh filename="assets/meshes/minute_blade.obj" />
+        </geometry>
+      <material name="minute_metal">
+        <color rgba="0.1 0.1 0.11 1" />
+        </material>
+      </visual>
+    <visual name="tip">
+      <origin xyz="-1.04095e-16 -0.85 0.029" rpy="0 0 3.14159" />
+      <geometry>
+        <box size="0.05 0.05 0.01" />
+        </geometry>
+      <material name="minute_metal">
+        <color rgba="0.1 0.1 0.11 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="south_hour_hand">
+    <inertial>
+      <origin xyz="0 0.23 0.015" rpy="0 0 0" />
+      <mass value="0.18" />
+      <inertia ixx="0.0100995" ixy="0" ixz="0" iyy="0.0007395" iyz="0" izz="0.010812" />
+      </inertial>
+    <visual name="hub">
+      <origin xyz="0 0 0.009" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.11" length="0.018" />
+        </geometry>
+      <material name="hour_metal">
+        <color rgba="0.18 0.18 0.19 1" />
+        </material>
+      </visual>
+    <visual name="blade">
+      <origin xyz="0 0 0.004" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/hour_blade.obj" />
+        </geometry>
+      <material name="hour_metal">
+        <color rgba="0.18 0.18 0.19 1" />
+        </material>
+      </visual>
+    <visual name="tip">
+      <origin xyz="0 0.58 0.009" rpy="0 0 0" />
+      <geometry>
+        <box size="0.07 0.05 0.01" />
+        </geometry>
+      <material name="hour_metal">
+        <color rgba="0.18 0.18 0.19 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="south_minute_hand">
+    <inertial>
+      <origin xyz="0 0.32 0.024" rpy="0 0 0" />
+      <mass value="0.14" />
+      <inertia ixx="0.0157173" ixy="0" ixz="0" iyy="0.000317333" iyz="0" izz="0.0159973" />
+      </inertial>
+    <visual name="hub">
+      <origin xyz="0 0 0.027" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.085" length="0.018" />
+        </geometry>
+      <material name="minute_metal">
+        <color rgba="0.1 0.1 0.11 1" />
+        </material>
+      </visual>
+    <visual name="blade">
+      <origin xyz="0 0 0.024" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/minute_blade.obj" />
+        </geometry>
+      <material name="minute_metal">
+        <color rgba="0.1 0.1 0.11 1" />
+        </material>
+      </visual>
+    <visual name="tip">
+      <origin xyz="0 0.85 0.029" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.05 0.01" />
+        </geometry>
+      <material name="minute_metal">
+        <color rgba="0.1 0.1 0.11 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="east_hour_hand">
+    <inertial>
+      <origin xyz="0 0.23 0.015" rpy="0 0 0" />
+      <mass value="0.18" />
+      <inertia ixx="0.0100995" ixy="0" ixz="0" iyy="0.0007395" iyz="0" izz="0.010812" />
+      </inertial>
+    <visual name="hub">
+      <origin xyz="0 0 0.009" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.11" length="0.018" />
+        </geometry>
+      <material name="hour_metal">
+        <color rgba="0.18 0.18 0.19 1" />
+        </material>
+      </visual>
+    <visual name="blade">
+      <origin xyz="0 0 0.004" rpy="0 0 1.5708" />
+      <geometry>
+        <mesh filename="assets/meshes/hour_blade.obj" />
+        </geometry>
+      <material name="hour_metal">
+        <color rgba="0.18 0.18 0.19 1" />
+        </material>
+      </visual>
+    <visual name="tip">
+      <origin xyz="-0.58 3.55148e-17 0.009" rpy="0 0 1.5708" />
+      <geometry>
+        <box size="0.07 0.05 0.01" />
+        </geometry>
+      <material name="hour_metal">
+        <color rgba="0.18 0.18 0.19 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="east_minute_hand">
+    <inertial>
+      <origin xyz="0 0.32 0.024" rpy="0 0 0" />
+      <mass value="0.14" />
+      <inertia ixx="0.0157173" ixy="0" ixz="0" iyy="0.000317333" iyz="0" izz="0.0159973" />
+      </inertial>
+    <visual name="hub">
+      <origin xyz="0 0 0.027" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.085" length="0.018" />
+        </geometry>
+      <material name="minute_metal">
+        <color rgba="0.1 0.1 0.11 1" />
+        </material>
+      </visual>
+    <visual name="blade">
+      <origin xyz="0 0 0.024" rpy="0 0 1.5708" />
+      <geometry>
+        <mesh filename="assets/meshes/minute_blade.obj" />
+        </geometry>
+      <material name="minute_metal">
+        <color rgba="0.1 0.1 0.11 1" />
+        </material>
+      </visual>
+    <visual name="tip">
+      <origin xyz="-0.85 5.20475e-17 0.029" rpy="0 0 1.5708" />
+      <geometry>
+        <box size="0.05 0.05 0.01" />
+        </geometry>
+      <material name="minute_metal">
+        <color rgba="0.1 0.1 0.11 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="west_hour_hand">
+    <inertial>
+      <origin xyz="0 0.23 0.015" rpy="0 0 0" />
+      <mass value="0.18" />
+      <inertia ixx="0.0100995" ixy="0" ixz="0" iyy="0.0007395" iyz="0" izz="0.010812" />
+      </inertial>
+    <visual name="hub">
+      <origin xyz="0 0 0.009" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.11" length="0.018" />
+        </geometry>
+      <material name="hour_metal">
+        <color rgba="0.18 0.18 0.19 1" />
+        </material>
+      </visual>
+    <visual name="blade">
+      <origin xyz="0 0 0.004" rpy="0 0 -1.5708" />
+      <geometry>
+        <mesh filename="assets/meshes/hour_blade.obj" />
+        </geometry>
+      <material name="hour_metal">
+        <color rgba="0.18 0.18 0.19 1" />
+        </material>
+      </visual>
+    <visual name="tip">
+      <origin xyz="0.58 3.55148e-17 0.009" rpy="0 0 -1.5708" />
+      <geometry>
+        <box size="0.07 0.05 0.01" />
+        </geometry>
+      <material name="hour_metal">
+        <color rgba="0.18 0.18 0.19 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="west_minute_hand">
+    <inertial>
+      <origin xyz="0 0.32 0.024" rpy="0 0 0" />
+      <mass value="0.14" />
+      <inertia ixx="0.0157173" ixy="0" ixz="0" iyy="0.000317333" iyz="0" izz="0.0159973" />
+      </inertial>
+    <visual name="hub">
+      <origin xyz="0 0 0.027" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.085" length="0.018" />
+        </geometry>
+      <material name="minute_metal">
+        <color rgba="0.1 0.1 0.11 1" />
+        </material>
+      </visual>
+    <visual name="blade">
+      <origin xyz="0 0 0.024" rpy="0 0 -1.5708" />
+      <geometry>
+        <mesh filename="assets/meshes/minute_blade.obj" />
+        </geometry>
+      <material name="minute_metal">
+        <color rgba="0.1 0.1 0.11 1" />
+        </material>
+      </visual>
+    <visual name="tip">
+      <origin xyz="0.85 5.20475e-17 0.029" rpy="0 0 -1.5708" />
+      <geometry>
+        <box size="0.05 0.05 0.01" />
+        </geometry>
+      <material name="minute_metal">
+        <color rgba="0.1 0.1 0.11 1" />
+        </material>
+      </visual>
+    </link>
+  <joint name="north_hour_spin" type="continuous">
+    <origin xyz="0 2.42 14.2" rpy="-1.5708 0 0" />
+    <parent link="tower" />
+    <child link="north_hour_hand" />
+    <axis xyz="0 0 1" />
+    <limit effort="6" velocity="0.35" />
+    </joint>
+  <joint name="north_minute_spin" type="continuous">
+    <origin xyz="0 2.42 14.2" rpy="-1.5708 0 0" />
+    <parent link="tower" />
+    <child link="north_minute_hand" />
+    <axis xyz="0 0 1" />
+    <limit effort="6" velocity="1.5" />
+    </joint>
+  <joint name="south_hour_spin" type="continuous">
+    <origin xyz="0 -2.42 14.2" rpy="1.5708 0 0" />
+    <parent link="tower" />
+    <child link="south_hour_hand" />
+    <axis xyz="0 0 1" />
+    <limit effort="6" velocity="0.35" />
+    </joint>
+  <joint name="south_minute_spin" type="continuous">
+    <origin xyz="0 -2.42 14.2" rpy="1.5708 0 0" />
+    <parent link="tower" />
+    <child link="south_minute_hand" />
+    <axis xyz="0 0 1" />
+    <limit effort="6" velocity="1.5" />
+    </joint>
+  <joint name="east_hour_spin" type="continuous">
+    <origin xyz="2.42 0 14.2" rpy="0 1.5708 0" />
+    <parent link="tower" />
+    <child link="east_hour_hand" />
+    <axis xyz="0 0 1" />
+    <limit effort="6" velocity="0.35" />
+    </joint>
+  <joint name="east_minute_spin" type="continuous">
+    <origin xyz="2.42 0 14.2" rpy="0 1.5708 0" />
+    <parent link="tower" />
+    <child link="east_minute_hand" />
+    <axis xyz="0 0 1" />
+    <limit effort="6" velocity="1.5" />
+    </joint>
+  <joint name="west_hour_spin" type="continuous">
+    <origin xyz="-2.42 0 14.2" rpy="0 -1.5708 0" />
+    <parent link="tower" />
+    <child link="west_hour_hand" />
+    <axis xyz="0 0 1" />
+    <limit effort="6" velocity="0.35" />
+    </joint>
+  <joint name="west_minute_spin" type="continuous">
+    <origin xyz="-2.42 0 14.2" rpy="0 -1.5708 0" />
+    <parent link="tower" />
+    <child link="west_minute_hand" />
+    <axis xyz="0 0 1" />
+    <limit effort="6" velocity="1.5" />
+    </joint>
+  </robot>

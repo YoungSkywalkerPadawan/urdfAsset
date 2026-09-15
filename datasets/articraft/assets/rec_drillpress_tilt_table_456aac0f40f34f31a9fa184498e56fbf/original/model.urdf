@@ -1,0 +1,393 @@
+<robot name="compact_drill_press">
+  <material name="cast_gray">
+    <color rgba="0.28 0.3 0.33 1" />
+    </material>
+  <material name="table_gray">
+    <color rgba="0.34 0.35 0.37 1" />
+    </material>
+  <material name="steel">
+    <color rgba="0.72 0.74 0.77 1" />
+    </material>
+  <material name="handle_black">
+    <color rgba="0.1 0.1 0.11 1" />
+    </material>
+  <link name="frame">
+    <visual name="base">
+      <origin xyz="0 0 0.015" rpy="0 0 0" />
+      <geometry>
+        <box size="0.3 0.22 0.03" />
+        </geometry>
+      <material name="cast_gray">
+        <color rgba="0.28 0.3 0.33 1" />
+        </material>
+      </visual>
+    <visual name="column">
+      <origin xyz="-0.09 0 0.31" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.025" length="0.56" />
+        </geometry>
+      <material name="steel">
+        <color rgba="0.72 0.74 0.77 1" />
+        </material>
+      </visual>
+    <visual name="rear_web">
+      <origin xyz="-0.07 0 0.12" rpy="0 0 0" />
+      <geometry>
+        <box size="0.06 0.03 0.18" />
+        </geometry>
+      <material name="cast_gray">
+        <color rgba="0.28 0.3 0.33 1" />
+        </material>
+      </visual>
+    <visual name="table_arm">
+      <origin xyz="-0.045 0 0.24" rpy="0 0 0" />
+      <geometry>
+        <box size="0.09 0.05 0.03" />
+        </geometry>
+      <material name="cast_gray">
+        <color rgba="0.28 0.3 0.33 1" />
+        </material>
+      </visual>
+    <visual name="yoke_bridge">
+      <origin xyz="0.009 0 0.229" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.14 0.018" />
+        </geometry>
+      <material name="cast_gray">
+        <color rgba="0.28 0.3 0.33 1" />
+        </material>
+      </visual>
+    <visual name="yoke_ear_0">
+      <origin xyz="0.024 0.067 0.25" rpy="0 0 0" />
+      <geometry>
+        <box size="0.016 0.012 0.028" />
+        </geometry>
+      <material name="cast_gray">
+        <color rgba="0.28 0.3 0.33 1" />
+        </material>
+      </visual>
+    <visual name="yoke_ear_1">
+      <origin xyz="0.024 -0.067 0.25" rpy="0 0 0" />
+      <geometry>
+        <box size="0.016 0.012 0.028" />
+        </geometry>
+      <material name="cast_gray">
+        <color rgba="0.28 0.3 0.33 1" />
+        </material>
+      </visual>
+    <collision name="base">
+      <origin xyz="0 0 0.015" rpy="0 0 0" />
+      <geometry>
+        <box size="0.3 0.22 0.03" />
+        </geometry>
+      </collision>
+    <collision name="column">
+      <origin xyz="-0.09 0 0.31" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.025" length="0.56" />
+        </geometry>
+      </collision>
+    <collision name="rear_web">
+      <origin xyz="-0.07 0 0.12" rpy="0 0 0" />
+      <geometry>
+        <box size="0.06 0.03 0.18" />
+        </geometry>
+      </collision>
+    <collision name="table_arm">
+      <origin xyz="-0.045 0 0.24" rpy="0 0 0" />
+      <geometry>
+        <box size="0.09 0.05 0.03" />
+        </geometry>
+      </collision>
+    <collision name="yoke_bridge">
+      <origin xyz="0.009 0 0.229" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.14 0.018" />
+        </geometry>
+      </collision>
+    <collision name="yoke_ear_0">
+      <origin xyz="0.024 0.067 0.25" rpy="0 0 0" />
+      <geometry>
+        <box size="0.016 0.012 0.028" />
+        </geometry>
+      </collision>
+    <collision name="yoke_ear_1">
+      <origin xyz="0.024 -0.067 0.25" rpy="0 0 0" />
+      <geometry>
+        <box size="0.016 0.012 0.028" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="head">
+    <visual name="casting">
+      <geometry>
+        <mesh filename="assets/meshes/head_casting_v4.obj" />
+        </geometry>
+      <material name="cast_gray">
+        <color rgba="0.28 0.3 0.33 1" />
+        </material>
+      </visual>
+    <visual name="quill_housing">
+      <origin xyz="0.15 0 -0.02" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.03" length="0.05" />
+        </geometry>
+      <material name="cast_gray">
+        <color rgba="0.28 0.3 0.33 1" />
+        </material>
+      </visual>
+    <visual name="spindle_nose">
+      <origin xyz="0.15 0 -0.072" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.016" length="0.055" />
+        </geometry>
+      <material name="steel">
+        <color rgba="0.72 0.74 0.77 1" />
+        </material>
+      </visual>
+    <visual name="feed_boss">
+      <origin xyz="0.125 0.07 0.015" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.013" length="0.036" />
+        </geometry>
+      <material name="cast_gray">
+        <color rgba="0.28 0.3 0.33 1" />
+        </material>
+      </visual>
+    <collision name="casting">
+      <geometry>
+        <mesh filename="assets/meshes/head_casting_v4.obj" />
+        </geometry>
+      </collision>
+    <collision name="quill_housing">
+      <origin xyz="0.15 0 -0.02" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.03" length="0.05" />
+        </geometry>
+      </collision>
+    <collision name="spindle_nose">
+      <origin xyz="0.15 0 -0.072" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.016" length="0.055" />
+        </geometry>
+      </collision>
+    <collision name="feed_boss">
+      <origin xyz="0.125 0.07 0.015" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.013" length="0.036" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="feed_handle">
+    <visual name="hub">
+      <origin xyz="0 0 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.011" length="0.02" />
+        </geometry>
+      <material name="handle_black">
+        <color rgba="0.1 0.1 0.11 1" />
+        </material>
+      </visual>
+    <visual name="spoke_0">
+      <origin xyz="0.036 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.004" length="0.072" />
+        </geometry>
+      <material name="handle_black">
+        <color rgba="0.1 0.1 0.11 1" />
+        </material>
+      </visual>
+    <visual name="grip_0">
+      <origin xyz="0.078 0 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.02" />
+        </geometry>
+      <material name="steel">
+        <color rgba="0.72 0.74 0.77 1" />
+        </material>
+      </visual>
+    <visual name="spoke_1">
+      <origin xyz="-0.018 0 0.0311769" rpy="0 -0.523599 0" />
+      <geometry>
+        <cylinder radius="0.004" length="0.072" />
+        </geometry>
+      <material name="handle_black">
+        <color rgba="0.1 0.1 0.11 1" />
+        </material>
+      </visual>
+    <visual name="grip_1">
+      <origin xyz="-0.039 0 0.06755" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.02" />
+        </geometry>
+      <material name="steel">
+        <color rgba="0.72 0.74 0.77 1" />
+        </material>
+      </visual>
+    <visual name="spoke_2">
+      <origin xyz="-0.018 0 -0.0311769" rpy="0 -2.61799 0" />
+      <geometry>
+        <cylinder radius="0.004" length="0.072" />
+        </geometry>
+      <material name="handle_black">
+        <color rgba="0.1 0.1 0.11 1" />
+        </material>
+      </visual>
+    <visual name="grip_2">
+      <origin xyz="-0.039 0 -0.06755" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.02" />
+        </geometry>
+      <material name="steel">
+        <color rgba="0.72 0.74 0.77 1" />
+        </material>
+      </visual>
+    <collision name="hub">
+      <origin xyz="0 0 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.011" length="0.02" />
+        </geometry>
+      </collision>
+    <collision name="spoke_0">
+      <origin xyz="0.036 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.004" length="0.072" />
+        </geometry>
+      </collision>
+    <collision name="grip_0">
+      <origin xyz="0.078 0 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.02" />
+        </geometry>
+      </collision>
+    <collision name="spoke_1">
+      <origin xyz="-0.018 0 0.0311769" rpy="0 -0.523599 0" />
+      <geometry>
+        <cylinder radius="0.004" length="0.072" />
+        </geometry>
+      </collision>
+    <collision name="grip_1">
+      <origin xyz="-0.039 0 0.06755" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.02" />
+        </geometry>
+      </collision>
+    <collision name="spoke_2">
+      <origin xyz="-0.018 0 -0.0311769" rpy="0 -2.61799 0" />
+      <geometry>
+        <cylinder radius="0.004" length="0.072" />
+        </geometry>
+      </collision>
+    <collision name="grip_2">
+      <origin xyz="-0.039 0 -0.06755" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.02" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="depth_stop">
+    <visual name="slider">
+      <geometry>
+        <box size="0.02 0.018 0.05" />
+        </geometry>
+      <material name="steel">
+        <color rgba="0.72 0.74 0.77 1" />
+        </material>
+      </visual>
+    <visual name="thumb_pad">
+      <origin xyz="0.014 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.012 0.028 0.014" />
+        </geometry>
+      <material name="handle_black">
+        <color rgba="0.1 0.1 0.11 1" />
+        </material>
+      </visual>
+    <collision name="slider">
+      <geometry>
+        <box size="0.02 0.018 0.05" />
+        </geometry>
+      </collision>
+    <collision name="thumb_pad">
+      <origin xyz="0.014 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.012 0.028 0.014" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="table">
+    <visual name="table_top">
+      <origin xyz="0.05 0 0.028" rpy="0 0 0" />
+      <geometry>
+        <box size="0.16 0.16 0.012" />
+        </geometry>
+      <material name="table_gray">
+        <color rgba="0.34 0.35 0.37 1" />
+        </material>
+      </visual>
+    <visual name="table_rib">
+      <origin xyz="0 0 0.013" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.08 0.026" />
+        </geometry>
+      <material name="cast_gray">
+        <color rgba="0.28 0.3 0.33 1" />
+        </material>
+      </visual>
+    <visual name="trunnion">
+      <origin xyz="0 0 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.122" />
+        </geometry>
+      <material name="steel">
+        <color rgba="0.72 0.74 0.77 1" />
+        </material>
+      </visual>
+    <collision name="table_top">
+      <origin xyz="0.05 0 0.028" rpy="0 0 0" />
+      <geometry>
+        <box size="0.16 0.16 0.012" />
+        </geometry>
+      </collision>
+    <collision name="table_rib">
+      <origin xyz="0 0 0.013" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.08 0.026" />
+        </geometry>
+      </collision>
+    <collision name="trunnion">
+      <origin xyz="0 0 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.122" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="frame_to_head" type="prismatic">
+    <origin xyz="-0.09 0 0.4" rpy="0 0 0" />
+    <parent link="frame" />
+    <child link="head" />
+    <axis xyz="0 0 1" />
+    <limit effort="120" velocity="0.12" lower="0" upper="0.08" />
+    </joint>
+  <joint name="frame_to_table" type="revolute">
+    <origin xyz="0.03 0 0.25" rpy="0 0 0" />
+    <parent link="frame" />
+    <child link="table" />
+    <axis xyz="0 -1 0" />
+    <limit effort="40" velocity="1" lower="-0.610865" upper="0.610865" />
+    </joint>
+  <joint name="head_to_feed_handle" type="continuous">
+    <origin xyz="0.125 0.098 0.015" rpy="0 0 0" />
+    <parent link="head" />
+    <child link="feed_handle" />
+    <axis xyz="0 1 0" />
+    <limit effort="8" velocity="10" />
+    </joint>
+  <joint name="head_to_depth_stop" type="prismatic">
+    <origin xyz="0.16 0 0.05" rpy="0 0 0" />
+    <parent link="head" />
+    <child link="depth_stop" />
+    <axis xyz="0 0 1" />
+    <limit effort="3" velocity="0.08" lower="-0.01" upper="0.02" />
+    </joint>
+  </robot>

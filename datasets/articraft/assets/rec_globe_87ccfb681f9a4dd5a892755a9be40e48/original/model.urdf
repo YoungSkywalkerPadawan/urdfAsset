@@ -1,0 +1,767 @@
+<robot name="celestial_globe_turntable_cradle">
+  <link name="base">
+    <visual name="lower_plinth">
+      <origin xyz="0 0 0.0275" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.3" length="0.055" />
+        </geometry>
+      <material name="dark_walnut">
+        <color rgba="0.18 0.1 0.045 1" />
+        </material>
+      </visual>
+    <visual name="bearing_pad">
+      <origin xyz="0 0 0.0775" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.16" length="0.045" />
+        </geometry>
+      <material name="blackened_steel">
+        <color rgba="0.03 0.035 0.038 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="cradle">
+    <visual name="turntable_plate">
+      <origin xyz="0 0 0.0175" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.255" length="0.035" />
+        </geometry>
+      <material name="dark_walnut">
+        <color rgba="0.18 0.1 0.045 1" />
+        </material>
+      </visual>
+    <visual name="central_boss">
+      <origin xyz="0 0 0.0525" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.085" length="0.035" />
+        </geometry>
+      <material name="brass">
+        <color rgba="0.82 0.57 0.23 1" />
+        </material>
+      </visual>
+    <visual name="post_0">
+      <origin xyz="-0.225 0 0.294" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.522" />
+        </geometry>
+      <material name="brass">
+        <color rgba="0.82 0.57 0.23 1" />
+        </material>
+      </visual>
+    <visual name="post_1">
+      <origin xyz="0.225 0 0.294" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.522" />
+        </geometry>
+      <material name="brass">
+        <color rgba="0.82 0.57 0.23 1" />
+        </material>
+      </visual>
+    <visual name="top_bridge">
+      <origin xyz="0 0 0.565" rpy="0 0 0" />
+      <geometry>
+        <box size="0.49 0.055 0.026" />
+        </geometry>
+      <material name="brass">
+        <color rgba="0.82 0.57 0.23 1" />
+        </material>
+      </visual>
+    <visual name="top_pivot_pin">
+      <origin xyz="0 0 0.5425" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.029" />
+        </geometry>
+      <material name="blackened_steel">
+        <color rgba="0.03 0.035 0.038 1" />
+        </material>
+      </visual>
+    <visual name="bottom_pivot_pin">
+      <origin xyz="0 0 0.0925" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.119" />
+        </geometry>
+      <material name="blackened_steel">
+        <color rgba="0.03 0.035 0.038 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="globe">
+    <visual name="globe_shell">
+      <geometry>
+        <sphere radius="0.18" />
+        </geometry>
+      <material name="celestial_blue">
+        <color rgba="0.015 0.045 0.16 1" />
+        </material>
+      </visual>
+    <visual name="polar_spindle">
+      <geometry>
+        <cylinder radius="0.007" length="0.376" />
+        </geometry>
+      <material name="blackened_steel">
+        <color rgba="0.03 0.035 0.038 1" />
+        </material>
+      </visual>
+    <visual name="top_polar_cap">
+      <origin xyz="0 0 0.182" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.026" length="0.012" />
+        </geometry>
+      <material name="brass">
+        <color rgba="0.82 0.57 0.23 1" />
+        </material>
+      </visual>
+    <visual name="bottom_polar_cap">
+      <origin xyz="0 0 -0.182" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.026" length="0.012" />
+        </geometry>
+      <material name="brass">
+        <color rgba="0.82 0.57 0.23 1" />
+        </material>
+      </visual>
+    <visual name="equator_band_0">
+      <origin xyz="0.174592 0.0347285 0" rpy="0 1.5708 1.76715" />
+      <geometry>
+        <cylinder radius="0.0022" length="0.0708178" />
+        </geometry>
+      <material name="antique_gold">
+        <color rgba="0.92 0.72 0.34 1" />
+        </material>
+      </visual>
+    <visual name="equator_band_1">
+      <origin xyz="0.148012 0.0988985 0" rpy="0 1.5708 2.15984" />
+      <geometry>
+        <cylinder radius="0.0022" length="0.0708178" />
+        </geometry>
+      <material name="antique_gold">
+        <color rgba="0.92 0.72 0.34 1" />
+        </material>
+      </visual>
+    <visual name="equator_band_2">
+      <origin xyz="0.0988985 0.148012 0" rpy="0 1.5708 2.55254" />
+      <geometry>
+        <cylinder radius="0.0022" length="0.0708178" />
+        </geometry>
+      <material name="antique_gold">
+        <color rgba="0.92 0.72 0.34 1" />
+        </material>
+      </visual>
+    <visual name="equator_band_3">
+      <origin xyz="0.0347285 0.174592 0" rpy="0 1.5708 2.94524" />
+      <geometry>
+        <cylinder radius="0.0022" length="0.0708178" />
+        </geometry>
+      <material name="antique_gold">
+        <color rgba="0.92 0.72 0.34 1" />
+        </material>
+      </visual>
+    <visual name="equator_band_4">
+      <origin xyz="-0.0347285 0.174592 0" rpy="0 1.5708 -2.94524" />
+      <geometry>
+        <cylinder radius="0.0022" length="0.0708178" />
+        </geometry>
+      <material name="antique_gold">
+        <color rgba="0.92 0.72 0.34 1" />
+        </material>
+      </visual>
+    <visual name="equator_band_5">
+      <origin xyz="-0.0988985 0.148012 0" rpy="0 1.5708 -2.55254" />
+      <geometry>
+        <cylinder radius="0.0022" length="0.0708178" />
+        </geometry>
+      <material name="antique_gold">
+        <color rgba="0.92 0.72 0.34 1" />
+        </material>
+      </visual>
+    <visual name="equator_band_6">
+      <origin xyz="-0.148012 0.0988985 0" rpy="0 1.5708 -2.15984" />
+      <geometry>
+        <cylinder radius="0.0022" length="0.0708178" />
+        </geometry>
+      <material name="antique_gold">
+        <color rgba="0.92 0.72 0.34 1" />
+        </material>
+      </visual>
+    <visual name="equator_band_7">
+      <origin xyz="-0.174592 0.0347285 0" rpy="0 1.5708 -1.76715" />
+      <geometry>
+        <cylinder radius="0.0022" length="0.0708178" />
+        </geometry>
+      <material name="antique_gold">
+        <color rgba="0.92 0.72 0.34 1" />
+        </material>
+      </visual>
+    <visual name="equator_band_8">
+      <origin xyz="-0.174592 -0.0347285 0" rpy="0 1.5708 -1.37445" />
+      <geometry>
+        <cylinder radius="0.0022" length="0.0708178" />
+        </geometry>
+      <material name="antique_gold">
+        <color rgba="0.92 0.72 0.34 1" />
+        </material>
+      </visual>
+    <visual name="equator_band_9">
+      <origin xyz="-0.148012 -0.0988985 0" rpy="0 1.5708 -0.981748" />
+      <geometry>
+        <cylinder radius="0.0022" length="0.0708178" />
+        </geometry>
+      <material name="antique_gold">
+        <color rgba="0.92 0.72 0.34 1" />
+        </material>
+      </visual>
+    <visual name="equator_band_10">
+      <origin xyz="-0.0988985 -0.148012 0" rpy="0 1.5708 -0.589049" />
+      <geometry>
+        <cylinder radius="0.0022" length="0.0708178" />
+        </geometry>
+      <material name="antique_gold">
+        <color rgba="0.92 0.72 0.34 1" />
+        </material>
+      </visual>
+    <visual name="equator_band_11">
+      <origin xyz="-0.0347285 -0.174592 0" rpy="0 1.5708 -0.19635" />
+      <geometry>
+        <cylinder radius="0.0022" length="0.0708178" />
+        </geometry>
+      <material name="antique_gold">
+        <color rgba="0.92 0.72 0.34 1" />
+        </material>
+      </visual>
+    <visual name="equator_band_12">
+      <origin xyz="0.0347285 -0.174592 0" rpy="0 1.5708 0.19635" />
+      <geometry>
+        <cylinder radius="0.0022" length="0.0708178" />
+        </geometry>
+      <material name="antique_gold">
+        <color rgba="0.92 0.72 0.34 1" />
+        </material>
+      </visual>
+    <visual name="equator_band_13">
+      <origin xyz="0.0988985 -0.148012 0" rpy="0 1.5708 0.589049" />
+      <geometry>
+        <cylinder radius="0.0022" length="0.0708178" />
+        </geometry>
+      <material name="antique_gold">
+        <color rgba="0.92 0.72 0.34 1" />
+        </material>
+      </visual>
+    <visual name="equator_band_14">
+      <origin xyz="0.148012 -0.0988985 0" rpy="0 1.5708 0.981748" />
+      <geometry>
+        <cylinder radius="0.0022" length="0.0708178" />
+        </geometry>
+      <material name="antique_gold">
+        <color rgba="0.92 0.72 0.34 1" />
+        </material>
+      </visual>
+    <visual name="equator_band_15">
+      <origin xyz="0.174592 -0.0347285 0" rpy="0 1.5708 1.37445" />
+      <geometry>
+        <cylinder radius="0.0022" length="0.0708178" />
+        </geometry>
+      <material name="antique_gold">
+        <color rgba="0.92 0.72 0.34 1" />
+        </material>
+      </visual>
+    <visual name="meridian_band_0_0">
+      <origin xyz="0.174592 0 0.0347285" rpy="0 0.19635 3.14159" />
+      <geometry>
+        <cylinder radius="0.0022" length="0.0708178" />
+        </geometry>
+      <material name="antique_gold">
+        <color rgba="0.92 0.72 0.34 1" />
+        </material>
+      </visual>
+    <visual name="meridian_band_0_1">
+      <origin xyz="0.148012 0 0.0988985" rpy="0 0.589049 3.14159" />
+      <geometry>
+        <cylinder radius="0.0022" length="0.0708178" />
+        </geometry>
+      <material name="antique_gold">
+        <color rgba="0.92 0.72 0.34 1" />
+        </material>
+      </visual>
+    <visual name="meridian_band_0_2">
+      <origin xyz="0.0988985 0 0.148012" rpy="0 0.981748 3.14159" />
+      <geometry>
+        <cylinder radius="0.0022" length="0.0708178" />
+        </geometry>
+      <material name="antique_gold">
+        <color rgba="0.92 0.72 0.34 1" />
+        </material>
+      </visual>
+    <visual name="meridian_band_0_3">
+      <origin xyz="0.0347285 0 0.174592" rpy="0 1.37445 3.14159" />
+      <geometry>
+        <cylinder radius="0.0022" length="0.0708178" />
+        </geometry>
+      <material name="antique_gold">
+        <color rgba="0.92 0.72 0.34 1" />
+        </material>
+      </visual>
+    <visual name="meridian_band_0_4">
+      <origin xyz="-0.0347285 0 0.174592" rpy="0 1.76715 3.14159" />
+      <geometry>
+        <cylinder radius="0.0022" length="0.0708178" />
+        </geometry>
+      <material name="antique_gold">
+        <color rgba="0.92 0.72 0.34 1" />
+        </material>
+      </visual>
+    <visual name="meridian_band_0_5">
+      <origin xyz="-0.0988985 0 0.148012" rpy="0 2.15984 3.14159" />
+      <geometry>
+        <cylinder radius="0.0022" length="0.0708178" />
+        </geometry>
+      <material name="antique_gold">
+        <color rgba="0.92 0.72 0.34 1" />
+        </material>
+      </visual>
+    <visual name="meridian_band_0_6">
+      <origin xyz="-0.148012 0 0.0988985" rpy="0 2.55254 3.14159" />
+      <geometry>
+        <cylinder radius="0.0022" length="0.0708178" />
+        </geometry>
+      <material name="antique_gold">
+        <color rgba="0.92 0.72 0.34 1" />
+        </material>
+      </visual>
+    <visual name="meridian_band_0_7">
+      <origin xyz="-0.174592 0 0.0347285" rpy="0 2.94524 3.14159" />
+      <geometry>
+        <cylinder radius="0.0022" length="0.0708178" />
+        </geometry>
+      <material name="antique_gold">
+        <color rgba="0.92 0.72 0.34 1" />
+        </material>
+      </visual>
+    <visual name="meridian_band_0_8">
+      <origin xyz="-0.174592 0 -0.0347285" rpy="0 2.94524 0" />
+      <geometry>
+        <cylinder radius="0.0022" length="0.0708178" />
+        </geometry>
+      <material name="antique_gold">
+        <color rgba="0.92 0.72 0.34 1" />
+        </material>
+      </visual>
+    <visual name="meridian_band_0_9">
+      <origin xyz="-0.148012 0 -0.0988985" rpy="0 2.55254 0" />
+      <geometry>
+        <cylinder radius="0.0022" length="0.0708178" />
+        </geometry>
+      <material name="antique_gold">
+        <color rgba="0.92 0.72 0.34 1" />
+        </material>
+      </visual>
+    <visual name="meridian_band_0_10">
+      <origin xyz="-0.0988985 0 -0.148012" rpy="0 2.15984 0" />
+      <geometry>
+        <cylinder radius="0.0022" length="0.0708178" />
+        </geometry>
+      <material name="antique_gold">
+        <color rgba="0.92 0.72 0.34 1" />
+        </material>
+      </visual>
+    <visual name="meridian_band_0_11">
+      <origin xyz="-0.0347285 0 -0.174592" rpy="0 1.76715 0" />
+      <geometry>
+        <cylinder radius="0.0022" length="0.0708178" />
+        </geometry>
+      <material name="antique_gold">
+        <color rgba="0.92 0.72 0.34 1" />
+        </material>
+      </visual>
+    <visual name="meridian_band_0_12">
+      <origin xyz="0.0347285 0 -0.174592" rpy="0 1.37445 0" />
+      <geometry>
+        <cylinder radius="0.0022" length="0.0708178" />
+        </geometry>
+      <material name="antique_gold">
+        <color rgba="0.92 0.72 0.34 1" />
+        </material>
+      </visual>
+    <visual name="meridian_band_0_13">
+      <origin xyz="0.0988985 0 -0.148012" rpy="0 0.981748 0" />
+      <geometry>
+        <cylinder radius="0.0022" length="0.0708178" />
+        </geometry>
+      <material name="antique_gold">
+        <color rgba="0.92 0.72 0.34 1" />
+        </material>
+      </visual>
+    <visual name="meridian_band_0_14">
+      <origin xyz="0.148012 0 -0.0988985" rpy="0 0.589049 0" />
+      <geometry>
+        <cylinder radius="0.0022" length="0.0708178" />
+        </geometry>
+      <material name="antique_gold">
+        <color rgba="0.92 0.72 0.34 1" />
+        </material>
+      </visual>
+    <visual name="meridian_band_0_15">
+      <origin xyz="0.174592 0 -0.0347285" rpy="0 0.19635 0" />
+      <geometry>
+        <cylinder radius="0.0022" length="0.0708178" />
+        </geometry>
+      <material name="antique_gold">
+        <color rgba="0.92 0.72 0.34 1" />
+        </material>
+      </visual>
+    <visual name="meridian_band_90_0">
+      <origin xyz="0 0.174592 0.0347285" rpy="0 0.19635 -1.5708" />
+      <geometry>
+        <cylinder radius="0.0022" length="0.0708178" />
+        </geometry>
+      <material name="antique_gold">
+        <color rgba="0.92 0.72 0.34 1" />
+        </material>
+      </visual>
+    <visual name="meridian_band_90_1">
+      <origin xyz="0 0.148012 0.0988985" rpy="0 0.589049 -1.5708" />
+      <geometry>
+        <cylinder radius="0.0022" length="0.0708178" />
+        </geometry>
+      <material name="antique_gold">
+        <color rgba="0.92 0.72 0.34 1" />
+        </material>
+      </visual>
+    <visual name="meridian_band_90_2">
+      <origin xyz="0 0.0988985 0.148012" rpy="0 0.981748 -1.5708" />
+      <geometry>
+        <cylinder radius="0.0022" length="0.0708178" />
+        </geometry>
+      <material name="antique_gold">
+        <color rgba="0.92 0.72 0.34 1" />
+        </material>
+      </visual>
+    <visual name="meridian_band_90_3">
+      <origin xyz="0 0.0347285 0.174592" rpy="0 1.37445 -1.5708" />
+      <geometry>
+        <cylinder radius="0.0022" length="0.0708178" />
+        </geometry>
+      <material name="antique_gold">
+        <color rgba="0.92 0.72 0.34 1" />
+        </material>
+      </visual>
+    <visual name="meridian_band_90_4">
+      <origin xyz="0 -0.0347285 0.174592" rpy="0 1.76715 -1.5708" />
+      <geometry>
+        <cylinder radius="0.0022" length="0.0708178" />
+        </geometry>
+      <material name="antique_gold">
+        <color rgba="0.92 0.72 0.34 1" />
+        </material>
+      </visual>
+    <visual name="meridian_band_90_5">
+      <origin xyz="0 -0.0988985 0.148012" rpy="0 2.15984 -1.5708" />
+      <geometry>
+        <cylinder radius="0.0022" length="0.0708178" />
+        </geometry>
+      <material name="antique_gold">
+        <color rgba="0.92 0.72 0.34 1" />
+        </material>
+      </visual>
+    <visual name="meridian_band_90_6">
+      <origin xyz="0 -0.148012 0.0988985" rpy="0 2.55254 -1.5708" />
+      <geometry>
+        <cylinder radius="0.0022" length="0.0708178" />
+        </geometry>
+      <material name="antique_gold">
+        <color rgba="0.92 0.72 0.34 1" />
+        </material>
+      </visual>
+    <visual name="meridian_band_90_7">
+      <origin xyz="0 -0.174592 0.0347285" rpy="0 2.94524 -1.5708" />
+      <geometry>
+        <cylinder radius="0.0022" length="0.0708178" />
+        </geometry>
+      <material name="antique_gold">
+        <color rgba="0.92 0.72 0.34 1" />
+        </material>
+      </visual>
+    <visual name="meridian_band_90_8">
+      <origin xyz="0 -0.174592 -0.0347285" rpy="0 2.94524 1.5708" />
+      <geometry>
+        <cylinder radius="0.0022" length="0.0708178" />
+        </geometry>
+      <material name="antique_gold">
+        <color rgba="0.92 0.72 0.34 1" />
+        </material>
+      </visual>
+    <visual name="meridian_band_90_9">
+      <origin xyz="0 -0.148012 -0.0988985" rpy="0 2.55254 1.5708" />
+      <geometry>
+        <cylinder radius="0.0022" length="0.0708178" />
+        </geometry>
+      <material name="antique_gold">
+        <color rgba="0.92 0.72 0.34 1" />
+        </material>
+      </visual>
+    <visual name="meridian_band_90_10">
+      <origin xyz="0 -0.0988985 -0.148012" rpy="0 2.15984 1.5708" />
+      <geometry>
+        <cylinder radius="0.0022" length="0.0708178" />
+        </geometry>
+      <material name="antique_gold">
+        <color rgba="0.92 0.72 0.34 1" />
+        </material>
+      </visual>
+    <visual name="meridian_band_90_11">
+      <origin xyz="0 -0.0347285 -0.174592" rpy="0 1.76715 1.5708" />
+      <geometry>
+        <cylinder radius="0.0022" length="0.0708178" />
+        </geometry>
+      <material name="antique_gold">
+        <color rgba="0.92 0.72 0.34 1" />
+        </material>
+      </visual>
+    <visual name="meridian_band_90_12">
+      <origin xyz="0 0.0347285 -0.174592" rpy="0 1.37445 1.5708" />
+      <geometry>
+        <cylinder radius="0.0022" length="0.0708178" />
+        </geometry>
+      <material name="antique_gold">
+        <color rgba="0.92 0.72 0.34 1" />
+        </material>
+      </visual>
+    <visual name="meridian_band_90_13">
+      <origin xyz="0 0.0988985 -0.148012" rpy="0 0.981748 1.5708" />
+      <geometry>
+        <cylinder radius="0.0022" length="0.0708178" />
+        </geometry>
+      <material name="antique_gold">
+        <color rgba="0.92 0.72 0.34 1" />
+        </material>
+      </visual>
+    <visual name="meridian_band_90_14">
+      <origin xyz="0 0.148012 -0.0988985" rpy="0 0.589049 1.5708" />
+      <geometry>
+        <cylinder radius="0.0022" length="0.0708178" />
+        </geometry>
+      <material name="antique_gold">
+        <color rgba="0.92 0.72 0.34 1" />
+        </material>
+      </visual>
+    <visual name="meridian_band_90_15">
+      <origin xyz="0 0.174592 -0.0347285" rpy="0 0.19635 1.5708" />
+      <geometry>
+        <cylinder radius="0.0022" length="0.0708178" />
+        </geometry>
+      <material name="antique_gold">
+        <color rgba="0.92 0.72 0.34 1" />
+        </material>
+      </visual>
+    <visual name="star_0">
+      <origin xyz="0.156857 0.0509658 0.0804411" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.0052" />
+        </geometry>
+      <material name="parchment_stars">
+        <color rgba="0.98 0.93 0.74 1" />
+        </material>
+      </visual>
+    <visual name="star_1">
+      <origin xyz="0.118226 0.0957375 0.102612" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.0052" />
+        </geometry>
+      <material name="parchment_stars">
+        <color rgba="0.98 0.93 0.74 1" />
+        </material>
+      </visual>
+    <visual name="star_2">
+      <origin xyz="0.0950498 0.146364 0.0567046" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.0052" />
+        </geometry>
+      <material name="parchment_stars">
+        <color rgba="0.98 0.93 0.74 1" />
+        </material>
+      </visual>
+    <visual name="star_3">
+      <origin xyz="0.0532503 0.174174 -0.022363" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.0052" />
+        </geometry>
+      <material name="parchment_stars">
+        <color rgba="0.98 0.93 0.74 1" />
+        </material>
+      </visual>
+    <visual name="star_4">
+      <origin xyz="0.126437 0.113845 -0.0687403" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.0052" />
+        </geometry>
+      <material name="parchment_stars">
+        <color rgba="0.98 0.93 0.74 1" />
+        </material>
+      </visual>
+    <visual name="star_5">
+      <origin xyz="0.14701 -0.106809 0.0255383" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.0052" />
+        </geometry>
+      <material name="parchment_stars">
+        <color rgba="0.98 0.93 0.74 1" />
+        </material>
+      </visual>
+    <visual name="star_6">
+      <origin xyz="0.0895101 -0.143246 0.0716992" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.0052" />
+        </geometry>
+      <material name="parchment_stars">
+        <color rgba="0.98 0.93 0.74 1" />
+        </material>
+      </visual>
+    <visual name="star_7">
+      <origin xyz="0.0189786 -0.13504 0.122785" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.0052" />
+        </geometry>
+      <material name="parchment_stars">
+        <color rgba="0.98 0.93 0.74 1" />
+        </material>
+      </visual>
+    <visual name="star_8">
+      <origin xyz="-0.0353826 -0.153259 -0.0945095" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.0052" />
+        </geometry>
+      <material name="parchment_stars">
+        <color rgba="0.98 0.93 0.74 1" />
+        </material>
+      </visual>
+    <visual name="star_9">
+      <origin xyz="-0.10622 -0.146199 -0.0318644" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.0052" />
+        </geometry>
+      <material name="parchment_stars">
+        <color rgba="0.98 0.93 0.74 1" />
+        </material>
+      </visual>
+    <visual name="star_10">
+      <origin xyz="-0.15348 -0.0850753 0.0536502" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.0052" />
+        </geometry>
+      <material name="parchment_stars">
+        <color rgba="0.98 0.93 0.74 1" />
+        </material>
+      </visual>
+    <visual name="star_11">
+      <origin xyz="-0.108413 0.0576443 0.136367" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.0052" />
+        </geometry>
+      <material name="parchment_stars">
+        <color rgba="0.98 0.93 0.74 1" />
+        </material>
+      </visual>
+    <visual name="star_12">
+      <origin xyz="-0.108908 0.0820678 -0.122785" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.0052" />
+        </geometry>
+      <material name="parchment_stars">
+        <color rgba="0.98 0.93 0.74 1" />
+        </material>
+      </visual>
+    <visual name="star_13">
+      <origin xyz="-0.0860956 0.161922 0.00640406" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.0052" />
+        </geometry>
+      <material name="parchment_stars">
+        <color rgba="0.98 0.93 0.74 1" />
+        </material>
+      </visual>
+    <visual name="constellation_0">
+      <origin xyz="0.137541 0.0733516 0.0915265" rpy="0 1.21209 2.28269" />
+      <geometry>
+        <cylinder radius="0.0018" length="0.0631536" />
+        </geometry>
+      <material name="parchment_stars">
+        <color rgba="0.98 0.93 0.74 1" />
+        </material>
+      </visual>
+    <visual name="constellation_1">
+      <origin xyz="0.106638 0.121051 0.0796583" rpy="0 2.2603 2.00011" />
+      <geometry>
+        <cylinder radius="0.0018" length="0.072164" />
+        </geometry>
+      <material name="parchment_stars">
+        <color rgba="0.98 0.93 0.74 1" />
+        </material>
+      </visual>
+    <visual name="constellation_2">
+      <origin xyz="0.07415 0.160269 0.0171708" rpy="0 2.57586 2.55452" />
+      <geometry>
+        <cylinder radius="0.0018" length="0.0936605" />
+        </geometry>
+      <material name="parchment_stars">
+        <color rgba="0.98 0.93 0.74 1" />
+        </material>
+      </visual>
+    <visual name="constellation_3">
+      <origin xyz="0.11826 -0.125027 0.0486187" rpy="0 0.974912 -2.57677" />
+      <geometry>
+        <cylinder radius="0.0018" length="0.0822479" />
+        </geometry>
+      <material name="parchment_stars">
+        <color rgba="0.98 0.93 0.74 1" />
+        </material>
+      </visual>
+    <visual name="constellation_4">
+      <origin xyz="0.0542443 -0.139143 0.0972423" rpy="0 0.947134 3.02577" />
+      <geometry>
+        <cylinder radius="0.0018" length="0.0874748" />
+        </geometry>
+      <material name="parchment_stars">
+        <color rgba="0.98 0.93 0.74 1" />
+        </material>
+      </visual>
+    <visual name="constellation_5">
+      <origin xyz="-0.0708013 -0.149729 -0.063187" rpy="0 0.849147 3.04226" />
+      <geometry>
+        <cylinder radius="0.0018" length="0.0948271" />
+        </geometry>
+      <material name="parchment_stars">
+        <color rgba="0.98 0.93 0.74 1" />
+        </material>
+      </visual>
+    <visual name="constellation_6">
+      <origin xyz="-0.12985 -0.115637 0.0108929" rpy="0 0.734752 2.22897" />
+      <geometry>
+        <cylinder radius="0.0018" length="0.115249" />
+        </geometry>
+      <material name="parchment_stars">
+        <color rgba="0.98 0.93 0.74 1" />
+        </material>
+      </visual>
+    <visual name="constellation_7">
+      <origin xyz="-0.0975016 0.121995 -0.0581907" rpy="0 0.571329 1.29254" />
+      <geometry>
+        <cylinder radius="0.0018" length="0.153581" />
+        </geometry>
+      <material name="parchment_stars">
+        <color rgba="0.98 0.93 0.74 1" />
+        </material>
+      </visual>
+    </link>
+  <joint name="base_to_cradle" type="continuous">
+    <origin xyz="0 0 0.1" rpy="0 0 0" />
+    <parent link="base" />
+    <child link="cradle" />
+    <axis xyz="0 0 1" />
+    <limit effort="4" velocity="1.2" />
+    </joint>
+  <joint name="cradle_to_globe" type="continuous">
+    <origin xyz="0 0 0.34" rpy="0 0 0" />
+    <parent link="cradle" />
+    <child link="globe" />
+    <axis xyz="0 0 1" />
+    <limit effort="1" velocity="4" />
+    </joint>
+  </robot>

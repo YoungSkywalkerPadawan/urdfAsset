@@ -1,0 +1,202 @@
+<robot name="civilian_helicopter">
+  <material name="body_paint">
+    <color rgba="0.93 0.94 0.95 1" />
+    </material>
+  <material name="accent_blue">
+    <color rgba="0.12 0.34 0.58 1" />
+    </material>
+  <material name="canopy_glass">
+    <color rgba="0.35 0.5 0.58 0.35" />
+    </material>
+  <material name="metal_dark">
+    <color rgba="0.19 0.2 0.22 1" />
+    </material>
+  <material name="metal_mid">
+    <color rgba="0.45 0.47 0.5 1" />
+    </material>
+  <link name="airframe">
+    <inertial>
+      <origin xyz="-1.95 0 1.1" rpy="0 0 0" />
+      <mass value="750" />
+      <inertia ixx="505" ixy="0" ixz="0" iyy="3025" iyz="0" izz="2925" />
+      </inertial>
+    <visual name="fuselage_lower">
+      <geometry>
+        <mesh filename="assets/meshes/fuselage_lower.obj" />
+        </geometry>
+      <material name="body_paint">
+        <color rgba="0.93 0.94 0.95 1" />
+        </material>
+      </visual>
+    <visual name="canopy_shell">
+      <geometry>
+        <mesh filename="assets/meshes/canopy_shell.obj" />
+        </geometry>
+      <material name="canopy_glass">
+        <color rgba="0.35 0.5 0.58 0.35" />
+        </material>
+      </visual>
+    <visual name="accent_stripe">
+      <origin xyz="-0.05 0 0.96" rpy="0 0 0" />
+      <geometry>
+        <box size="1.2 0.12 0.06" />
+        </geometry>
+      <material name="accent_blue">
+        <color rgba="0.12 0.34 0.58 1" />
+        </material>
+      </visual>
+    <visual name="tail_boom">
+      <origin xyz="-3.55 0 1.2" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.12" length="3" />
+        </geometry>
+      <material name="body_paint">
+        <color rgba="0.93 0.94 0.95 1" />
+        </material>
+      </visual>
+    <visual name="vertical_fin">
+      <geometry>
+        <mesh filename="assets/meshes/vertical_fin.obj" />
+        </geometry>
+      <material name="body_paint">
+        <color rgba="0.93 0.94 0.95 1" />
+        </material>
+      </visual>
+    <visual name="horizontal_stabilizer">
+      <origin xyz="-4.42 0 1.08" rpy="0 0 0" />
+      <geometry>
+        <box size="0.78 0.9 0.05" />
+        </geometry>
+      <material name="body_paint">
+        <color rgba="0.93 0.94 0.95 1" />
+        </material>
+      </visual>
+    <visual name="tail_gearbox">
+      <origin xyz="-5 0.19 1.33" rpy="0 0 0" />
+      <geometry>
+        <box size="0.24 0.315 0.22" />
+        </geometry>
+      <material name="body_paint">
+        <color rgba="0.93 0.94 0.95 1" />
+        </material>
+      </visual>
+    <visual name="mast_pylon">
+      <origin xyz="0 0 1.87" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.17" length="0.18" />
+        </geometry>
+      <material name="body_paint">
+        <color rgba="0.93 0.94 0.95 1" />
+        </material>
+      </visual>
+    <visual name="landing_gear">
+      <geometry>
+        <mesh filename="assets/meshes/landing_gear.obj" />
+        </geometry>
+      <material name="metal_dark">
+        <color rgba="0.19 0.2 0.22 1" />
+        </material>
+      </visual>
+    <visual name="door_hinge_upper">
+      <origin xyz="-0.55 -0.59 1.38" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.026" length="0.14" />
+        </geometry>
+      <material name="metal_mid">
+        <color rgba="0.45 0.47 0.5 1" />
+        </material>
+      </visual>
+    <visual name="door_hinge_lower">
+      <origin xyz="-0.55 -0.596 0.92" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.026" length="0.14" />
+        </geometry>
+      <material name="metal_mid">
+        <color rgba="0.45 0.47 0.5 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="main_rotor">
+    <inertial>
+      <mass value="34" />
+      <inertia ixx="90.3808" ixy="0" ixz="0" iyy="90.3808" iyz="0" izz="179.562" />
+      </inertial>
+    <visual name="main_rotor_assembly">
+      <geometry>
+        <mesh filename="assets/meshes/main_rotor_assembly.obj" />
+        </geometry>
+      <material name="metal_dark">
+        <color rgba="0.19 0.2 0.22 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="tail_rotor">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 1.5708 0" />
+      <mass value="5" />
+      <inertia ixx="0.398292" ixy="0" ixz="0" iyy="0.398292" iyz="0" izz="0.75625" />
+      </inertial>
+    <visual name="tail_rotor_assembly">
+      <geometry>
+        <mesh filename="assets/meshes/tail_rotor_assembly.obj" />
+        </geometry>
+      <material name="metal_dark">
+        <color rgba="0.19 0.2 0.22 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="baggage_door">
+    <inertial>
+      <origin xyz="-0.31 -0.02 0" rpy="0 0 0" />
+      <mass value="8" />
+      <inertia ixx="0.327733" ixy="0" ixz="0" iyy="0.599733" iyz="0" izz="0.274133" />
+      </inertial>
+    <visual name="door_panel">
+      <geometry>
+        <mesh filename="assets/meshes/baggage_door.obj" />
+        </geometry>
+      <material name="body_paint">
+        <color rgba="0.93 0.94 0.95 1" />
+        </material>
+      </visual>
+    <visual name="hinge_barrel">
+      <origin xyz="0 -0.012 0" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.015" length="0.66" />
+        </geometry>
+      <material name="metal_mid">
+        <color rgba="0.45 0.47 0.5 1" />
+        </material>
+      </visual>
+    <visual name="door_handle">
+      <origin xyz="-0.46 -0.03 0.02" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.015 0.06" />
+        </geometry>
+      <material name="metal_mid">
+        <color rgba="0.45 0.47 0.5 1" />
+        </material>
+      </visual>
+    </link>
+  <joint name="airframe_to_main_rotor" type="continuous">
+    <origin xyz="0 0 1.96" rpy="0 0 0" />
+    <parent link="airframe" />
+    <child link="main_rotor" />
+    <axis xyz="0 0 1" />
+    <limit effort="80" velocity="60" />
+    </joint>
+  <joint name="airframe_to_tail_rotor" type="continuous">
+    <origin xyz="-5.04 0.4575 1.46" rpy="0 0 0" />
+    <parent link="airframe" />
+    <child link="tail_rotor" />
+    <axis xyz="0 1 0" />
+    <limit effort="20" velocity="90" />
+    </joint>
+  <joint name="airframe_to_baggage_door" type="revolute">
+    <origin xyz="-0.55 -0.625 1.15" rpy="0 0 0" />
+    <parent link="airframe" />
+    <child link="baggage_door" />
+    <axis xyz="0 0 1" />
+    <limit effort="12" velocity="1.2" lower="0" upper="1.65806" />
+    </joint>
+  </robot>

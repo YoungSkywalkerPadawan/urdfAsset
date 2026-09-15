@@ -1,0 +1,121 @@
+{
+  "summary": {
+    "id": "rec_globe_dd09f51da481436e8a10f6b573d84744",
+    "category": "globe",
+    "robot_name": "wall_mounted_globe",
+    "joint_count": 1,
+    "link_count": 3,
+    "target_link_count": 2,
+    "family": "rec_globe",
+    "warnings": [],
+    "diagonal": 1.201191579224563,
+    "bytes": 4233660
+  },
+  "source": {
+    "dataset": "camvsl/Articraft-10K",
+    "revision": "3c79d5a05bb7cb6bf7bfee5e090176636ee3ac65",
+    "license": "CC-BY-4.0",
+    "url": "https://huggingface.co/datasets/camvsl/Articraft-10K/blob/3c79d5a05bb7cb6bf7bfee5e090176636ee3ac65/rec_globe_dd09f51da481436e8a10f6b573d84744.tar.gz",
+    "archive_sha256": "822cdbc86a27093fbebecd27616e6c961ff0359b75b0971fbb509df612226df7",
+    "archive": "rec_globe_dd09f51da481436e8a10f6b573d84744.tar.gz",
+    "label_status": "Original generated URDF reference; not manually verified or physically validated"
+  },
+  "links": [
+    {
+      "id": "link_000",
+      "name": "wall_arm",
+      "point_file": null,
+      "faces": 828,
+      "vertices": 436,
+      "bounds": [
+        [
+          -0.47750000000000004,
+          -0.14,
+          -0.17
+        ],
+        [
+          0.04,
+          0.14,
+          0.17
+        ]
+      ]
+    },
+    {
+      "id": "link_001",
+      "name": "meridian_ring",
+      "point_file": "inputs/link_001.npz",
+      "faces": 8904,
+      "vertices": 4482,
+      "bounds": [
+        [
+          -0.033,
+          -0.09000008080990511,
+          -0.264
+        ],
+        [
+          0.519,
+          0.09000008080990511,
+          0.264
+        ]
+      ]
+    },
+    {
+      "id": "link_002",
+      "name": "globe",
+      "point_file": "inputs/link_002.npz",
+      "faces": 14168,
+      "vertices": 8011,
+      "bounds": [
+        [
+          0.04819999999999999,
+          -0.2068,
+          -0.2061
+        ],
+        [
+          0.4618,
+          0.2068,
+          0.2061
+        ]
+      ]
+    }
+  ],
+  "joints": [
+    {
+      "name": "arm_to_ring",
+      "type": "revolute",
+      "parent": "link_000",
+      "child": "link_001",
+      "reference_q": 0.0,
+      "mimic": null
+    },
+    {
+      "name": "ring_to_globe",
+      "type": "continuous",
+      "parent": "link_001",
+      "child": "link_002",
+      "reference_q": 0.0,
+      "mimic": null
+    }
+  ],
+  "bounds": [
+    [
+      -0.47750000000000004,
+      -0.2068,
+      -0.264
+    ],
+    [
+      0.519,
+      0.2068,
+      0.264
+    ]
+  ],
+  "point_pool_size": 65536,
+  "reference_pose": "Zero position clamped to limits; mimic values propagated",
+  "qc": {
+    "finite_geometry": true,
+    "tree_valid": true,
+    "axis_unit": true,
+    "physical_collision_validation": false,
+    "visual_tessellation": "32 cylinder segments, icosphere subdivision 2"
+  }
+}

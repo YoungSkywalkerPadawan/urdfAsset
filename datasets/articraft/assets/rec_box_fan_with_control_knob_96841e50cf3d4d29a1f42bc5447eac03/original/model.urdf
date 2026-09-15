@@ -1,0 +1,441 @@
+<robot name="wall_mount_oscillating_box_fan">
+  <material name="bracket_steel">
+    <color rgba="0.16 0.17 0.18 1" />
+    </material>
+  <material name="housing_white">
+    <color rgba="0.9 0.91 0.89 1" />
+    </material>
+  <material name="grille_silver">
+    <color rgba="0.72 0.74 0.76 1" />
+    </material>
+  <material name="fan_blade_white">
+    <color rgba="0.94 0.95 0.95 1" />
+    </material>
+  <material name="fan_hub_gray">
+    <color rgba="0.28 0.29 0.31 1" />
+    </material>
+  <material name="knob_black">
+    <color rgba="0.08 0.08 0.09 1" />
+    </material>
+  <material name="knob_indicator">
+    <color rgba="0.78 0.15 0.1 1" />
+    </material>
+  <link name="wall_bracket">
+    <inertial>
+      <origin xyz="0.04 0 0" rpy="0 0 0" />
+      <mass value="2.5" />
+      <inertia ixx="0.01875" ixy="0" ixz="0" iyy="0.0155208" iyz="0" izz="0.0102708" />
+      </inertial>
+    <visual name="wall_plate">
+      <origin xyz="-0.01 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.02 0.18 0.24" />
+        </geometry>
+      <material name="bracket_steel">
+        <color rgba="0.16 0.17 0.18 1" />
+        </material>
+      </visual>
+    <visual name="support_arm">
+      <origin xyz="0.05 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.1 0.05 0.09" />
+        </geometry>
+      <material name="bracket_steel">
+        <color rgba="0.16 0.17 0.18 1" />
+        </material>
+      </visual>
+    <visual name="pivot_block">
+      <origin xyz="0.085 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.1 0.12" />
+        </geometry>
+      <material name="bracket_steel">
+        <color rgba="0.16 0.17 0.18 1" />
+        </material>
+      </visual>
+    <visual name="pivot_collar">
+      <origin xyz="0.107 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.04" length="0.014" />
+        </geometry>
+      <material name="bracket_steel">
+        <color rgba="0.16 0.17 0.18 1" />
+        </material>
+      </visual>
+    <visual name="upper_wall_fastener">
+      <origin xyz="-0.003 0 0.07" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.009" length="0.006" />
+        </geometry>
+      <material name="grille_silver">
+        <color rgba="0.72 0.74 0.76 1" />
+        </material>
+      </visual>
+    <visual name="lower_wall_fastener">
+      <origin xyz="-0.003 0 -0.07" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.009" length="0.006" />
+        </geometry>
+      <material name="grille_silver">
+        <color rgba="0.72 0.74 0.76 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="housing">
+    <inertial>
+      <origin xyz="0.095 0 0" rpy="0 0 0" />
+      <mass value="3.4" />
+      <inertia ixx="0.109707" ixy="0" ixz="0" iyy="0.0630417" iyz="0" izz="0.0630417" />
+      </inertial>
+    <visual name="pivot_disk">
+      <origin xyz="0.009 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.045" length="0.018" />
+        </geometry>
+      <material name="bracket_steel">
+        <color rgba="0.16 0.17 0.18 1" />
+        </material>
+      </visual>
+    <visual name="pivot_neck">
+      <origin xyz="0.032 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.03" length="0.028" />
+        </geometry>
+      <material name="bracket_steel">
+        <color rgba="0.16 0.17 0.18 1" />
+        </material>
+      </visual>
+    <visual name="motor_pod">
+      <origin xyz="0.069 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.072" length="0.048" />
+        </geometry>
+      <material name="bracket_steel">
+        <color rgba="0.16 0.17 0.18 1" />
+        </material>
+      </visual>
+    <visual name="right_side_wall">
+      <origin xyz="0.0975 0.205 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.135 0.03 0.44" />
+        </geometry>
+      <material name="housing_white">
+        <color rgba="0.9 0.91 0.89 1" />
+        </material>
+      </visual>
+    <visual name="left_side_wall">
+      <origin xyz="0.0975 -0.205 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.135 0.03 0.44" />
+        </geometry>
+      <material name="housing_white">
+        <color rgba="0.9 0.91 0.89 1" />
+        </material>
+      </visual>
+    <visual name="top_wall">
+      <origin xyz="0.0975 0 0.205" rpy="0 0 0" />
+      <geometry>
+        <box size="0.135 0.38 0.03" />
+        </geometry>
+      <material name="housing_white">
+        <color rgba="0.9 0.91 0.89 1" />
+        </material>
+      </visual>
+    <visual name="bottom_wall">
+      <origin xyz="0.0975 0 -0.205" rpy="0 0 0" />
+      <geometry>
+        <box size="0.135 0.38 0.03" />
+        </geometry>
+      <material name="housing_white">
+        <color rgba="0.9 0.91 0.89 1" />
+        </material>
+      </visual>
+    <visual name="right_motor_strut">
+      <origin xyz="0.068 0.115 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.23 0.02" />
+        </geometry>
+      <material name="bracket_steel">
+        <color rgba="0.16 0.17 0.18 1" />
+        </material>
+      </visual>
+    <visual name="left_motor_strut">
+      <origin xyz="0.068 -0.115 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.23 0.02" />
+        </geometry>
+      <material name="bracket_steel">
+        <color rgba="0.16 0.17 0.18 1" />
+        </material>
+      </visual>
+    <visual name="top_motor_strut">
+      <origin xyz="0.068 0 0.115" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.02 0.23" />
+        </geometry>
+      <material name="bracket_steel">
+        <color rgba="0.16 0.17 0.18 1" />
+        </material>
+      </visual>
+    <visual name="bottom_motor_strut">
+      <origin xyz="0.068 0 -0.115" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.02 0.23" />
+        </geometry>
+      <material name="bracket_steel">
+        <color rgba="0.16 0.17 0.18 1" />
+        </material>
+      </visual>
+    <visual name="control_pad">
+      <origin xyz="0.159 -0.182 -0.182" rpy="0 0 0" />
+      <geometry>
+        <box size="0.012 0.07 0.07" />
+        </geometry>
+      <material name="housing_white">
+        <color rgba="0.9 0.91 0.89 1" />
+        </material>
+      </visual>
+    <visual name="grille_frame_left">
+      <origin xyz="0.158 -0.186 0" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.004" length="0.372" />
+        </geometry>
+      <material name="grille_silver">
+        <color rgba="0.72 0.74 0.76 1" />
+        </material>
+      </visual>
+    <visual name="grille_frame_right">
+      <origin xyz="0.158 0.186 0" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.004" length="0.372" />
+        </geometry>
+      <material name="grille_silver">
+        <color rgba="0.72 0.74 0.76 1" />
+        </material>
+      </visual>
+    <visual name="grille_frame_bottom">
+      <origin xyz="0.158 0 -0.186" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.004" length="0.372" />
+        </geometry>
+      <material name="grille_silver">
+        <color rgba="0.72 0.74 0.76 1" />
+        </material>
+      </visual>
+    <visual name="grille_frame_top">
+      <origin xyz="0.158 0 0.186" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.004" length="0.372" />
+        </geometry>
+      <material name="grille_silver">
+        <color rgba="0.72 0.74 0.76 1" />
+        </material>
+      </visual>
+    <visual name="grille_v_0">
+      <origin xyz="0.158 -0.124 0" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0028" length="0.372" />
+        </geometry>
+      <material name="grille_silver">
+        <color rgba="0.72 0.74 0.76 1" />
+        </material>
+      </visual>
+    <visual name="grille_v_1">
+      <origin xyz="0.158 -0.062 0" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0028" length="0.372" />
+        </geometry>
+      <material name="grille_silver">
+        <color rgba="0.72 0.74 0.76 1" />
+        </material>
+      </visual>
+    <visual name="grille_v_center">
+      <origin xyz="0.158 0 0" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0028" length="0.372" />
+        </geometry>
+      <material name="grille_silver">
+        <color rgba="0.72 0.74 0.76 1" />
+        </material>
+      </visual>
+    <visual name="grille_v_3">
+      <origin xyz="0.158 0.062 0" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0028" length="0.372" />
+        </geometry>
+      <material name="grille_silver">
+        <color rgba="0.72 0.74 0.76 1" />
+        </material>
+      </visual>
+    <visual name="grille_v_4">
+      <origin xyz="0.158 0.124 0" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0028" length="0.372" />
+        </geometry>
+      <material name="grille_silver">
+        <color rgba="0.72 0.74 0.76 1" />
+        </material>
+      </visual>
+    <visual name="grille_h_0">
+      <origin xyz="0.158 0 -0.124" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0028" length="0.372" />
+        </geometry>
+      <material name="grille_silver">
+        <color rgba="0.72 0.74 0.76 1" />
+        </material>
+      </visual>
+    <visual name="grille_h_1">
+      <origin xyz="0.158 0 -0.062" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0028" length="0.372" />
+        </geometry>
+      <material name="grille_silver">
+        <color rgba="0.72 0.74 0.76 1" />
+        </material>
+      </visual>
+    <visual name="grille_h_2">
+      <origin xyz="0.158 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0028" length="0.372" />
+        </geometry>
+      <material name="grille_silver">
+        <color rgba="0.72 0.74 0.76 1" />
+        </material>
+      </visual>
+    <visual name="grille_h_3">
+      <origin xyz="0.158 0 0.062" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0028" length="0.372" />
+        </geometry>
+      <material name="grille_silver">
+        <color rgba="0.72 0.74 0.76 1" />
+        </material>
+      </visual>
+    <visual name="grille_h_4">
+      <origin xyz="0.158 0 0.124" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0028" length="0.372" />
+        </geometry>
+      <material name="grille_silver">
+        <color rgba="0.72 0.74 0.76 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="propeller">
+    <inertial>
+      <origin xyz="0.02 0 0" rpy="0 0 0" />
+      <mass value="0.45" />
+      <inertia ixx="0.00867" ixy="0" ixz="0" iyy="0.00447" iyz="0" izz="0.00447" />
+      </inertial>
+    <visual name="hub_shell">
+      <origin xyz="0.021 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.046" length="0.042" />
+        </geometry>
+      <material name="fan_hub_gray">
+        <color rgba="0.28 0.29 0.31 1" />
+        </material>
+      </visual>
+    <visual name="hub_cap">
+      <origin xyz="0.05 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.054" length="0.016" />
+        </geometry>
+      <material name="fan_hub_gray">
+        <color rgba="0.28 0.29 0.31 1" />
+        </material>
+      </visual>
+    <visual name="blade_y_pos">
+      <origin xyz="0.018 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/fan_blade.obj" />
+        </geometry>
+      <material name="fan_blade_white">
+        <color rgba="0.94 0.95 0.95 1" />
+        </material>
+      </visual>
+    <visual name="blade_y_neg">
+      <origin xyz="0.018 0 0" rpy="3.14159 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/fan_blade.obj" />
+        </geometry>
+      <material name="fan_blade_white">
+        <color rgba="0.94 0.95 0.95 1" />
+        </material>
+      </visual>
+    <visual name="blade_z_pos">
+      <origin xyz="0.018 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/fan_blade.obj" />
+        </geometry>
+      <material name="fan_blade_white">
+        <color rgba="0.94 0.95 0.95 1" />
+        </material>
+      </visual>
+    <visual name="blade_z_neg">
+      <origin xyz="0.018 0 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/fan_blade.obj" />
+        </geometry>
+      <material name="fan_blade_white">
+        <color rgba="0.94 0.95 0.95 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="selector_knob">
+    <inertial>
+      <origin xyz="0.015 0 0" rpy="0 0 0" />
+      <mass value="0.05" />
+      <inertia ixx="1.33333e-05" ixy="0" ixz="0" iyy="1.04167e-05" iyz="0" izz="1.04167e-05" />
+      </inertial>
+    <visual name="selector_base">
+      <origin xyz="0.004 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.013" length="0.008" />
+        </geometry>
+      <material name="knob_black">
+        <color rgba="0.08 0.08 0.09 1" />
+        </material>
+      </visual>
+    <visual name="selector_dial">
+      <origin xyz="0.016 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.019" length="0.016" />
+        </geometry>
+      <material name="knob_black">
+        <color rgba="0.08 0.08 0.09 1" />
+        </material>
+      </visual>
+    <visual name="selector_indicator">
+      <origin xyz="0.025 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.004 0.003 0.012" />
+        </geometry>
+      <material name="knob_indicator">
+        <color rgba="0.78 0.15 0.1 1" />
+        </material>
+      </visual>
+    </link>
+  <joint name="bracket_to_housing_pan" type="revolute">
+    <origin xyz="0.114 0 0" rpy="0 0 0" />
+    <parent link="wall_bracket" />
+    <child link="housing" />
+    <axis xyz="0 0 1" />
+    <limit effort="10" velocity="0.9" lower="-0.8" upper="0.8" />
+    </joint>
+  <joint name="housing_to_propeller" type="continuous">
+    <origin xyz="0.092 0 0" rpy="0 0 0" />
+    <parent link="housing" />
+    <child link="propeller" />
+    <axis xyz="1 0 0" />
+    <limit effort="2" velocity="35" />
+    </joint>
+  <joint name="housing_to_selector_knob" type="revolute">
+    <origin xyz="0.165 -0.182 -0.182" rpy="0 0 0" />
+    <parent link="housing" />
+    <child link="selector_knob" />
+    <axis xyz="1 0 0" />
+    <limit effort="0.2" velocity="4" lower="0" upper="2.6" />
+    </joint>
+  </robot>

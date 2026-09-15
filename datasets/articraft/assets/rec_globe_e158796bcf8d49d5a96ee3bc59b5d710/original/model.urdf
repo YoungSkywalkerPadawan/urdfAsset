@@ -1,0 +1,457 @@
+<robot name="celestial_globe_cradle">
+  <material name="dark_walnut">
+    <color rgba="0.28 0.16 0.08 1" />
+    </material>
+  <material name="satin_brass">
+    <color rgba="0.82 0.62 0.28 1" />
+    </material>
+  <material name="aged_brass">
+    <color rgba="0.57 0.43 0.2 1" />
+    </material>
+  <material name="night_sky_blue">
+    <color rgba="0.02 0.07 0.22 1" />
+    </material>
+  <material name="warm_star_ink">
+    <color rgba="1 0.92 0.72 1" />
+    </material>
+  <material name="bearing_black">
+    <color rgba="0.03 0.03 0.03 1" />
+    </material>
+  <link name="base">
+    <inertial>
+      <origin xyz="0 0 0.055" rpy="0 0 0" />
+      <mass value="2" />
+      <inertia ixx="0.0944667" ixy="0" ixz="0" iyy="0.0944667" iyz="0" izz="0.1849" />
+      </inertial>
+    <visual name="round_plinth">
+      <origin xyz="0 0 0.0375" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.43" length="0.075" />
+        </geometry>
+      <material name="dark_walnut">
+        <color rgba="0.28 0.16 0.08 1" />
+        </material>
+      </visual>
+    <visual name="fixed_bearing_ring">
+      <origin xyz="0 0 0.083" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/fixed_bearing_ring_mesh.obj" />
+        </geometry>
+      <material name="satin_brass">
+        <color rgba="0.82 0.62 0.28 1" />
+        </material>
+      </visual>
+    <visual name="center_bearing">
+      <origin xyz="0 0 0.0775" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.055" length="0.035" />
+        </geometry>
+      <material name="bearing_black">
+        <color rgba="0.03 0.03 0.03 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="cradle">
+    <inertial>
+      <origin xyz="0 0 0.43" rpy="0 0 0" />
+      <mass value="1.2" />
+      <inertia ixx="0.11284" ixy="0" ixz="0" iyy="0.11284" iyz="0" izz="0.07776" />
+      </inertial>
+    <visual name="rotating_plate">
+      <origin xyz="0 0 0.025" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.35" length="0.05" />
+        </geometry>
+      <material name="satin_brass">
+        <color rgba="0.82 0.62 0.28 1" />
+        </material>
+      </visual>
+    <visual name="turntable_spigot">
+      <origin xyz="0 0 -0.002" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.028" length="0.045" />
+        </geometry>
+      <material name="bearing_black">
+        <color rgba="0.03 0.03 0.03 1" />
+        </material>
+      </visual>
+    <visual name="post_0">
+      <origin xyz="-0.32 0 0.446" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.019" length="0.792" />
+        </geometry>
+      <material name="satin_brass">
+        <color rgba="0.82 0.62 0.28 1" />
+        </material>
+      </visual>
+    <visual name="post_foot_0">
+      <origin xyz="-0.32 0 0.07" rpy="0 0 0" />
+      <geometry>
+        <box size="0.075 0.06 0.04" />
+        </geometry>
+      <material name="aged_brass">
+        <color rgba="0.57 0.43 0.2 1" />
+        </material>
+      </visual>
+    <visual name="top_knuckle_0">
+      <origin xyz="-0.32 0 0.842" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.027" length="0.035" />
+        </geometry>
+      <material name="aged_brass">
+        <color rgba="0.57 0.43 0.2 1" />
+        </material>
+      </visual>
+    <visual name="post_1">
+      <origin xyz="0.32 0 0.446" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.019" length="0.792" />
+        </geometry>
+      <material name="satin_brass">
+        <color rgba="0.82 0.62 0.28 1" />
+        </material>
+      </visual>
+    <visual name="post_foot_1">
+      <origin xyz="0.32 0 0.07" rpy="0 0 0" />
+      <geometry>
+        <box size="0.075 0.06 0.04" />
+        </geometry>
+      <material name="aged_brass">
+        <color rgba="0.57 0.43 0.2 1" />
+        </material>
+      </visual>
+    <visual name="top_knuckle_1">
+      <origin xyz="0.32 0 0.842" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.027" length="0.035" />
+        </geometry>
+      <material name="aged_brass">
+        <color rgba="0.57 0.43 0.2 1" />
+        </material>
+      </visual>
+    <visual name="top_crossbar">
+      <origin xyz="0 0 0.842" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.02" length="0.7" />
+        </geometry>
+      <material name="satin_brass">
+        <color rgba="0.82 0.62 0.28 1" />
+        </material>
+      </visual>
+    <visual name="bottom_pivot">
+      <origin xyz="0 0 0.1485" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.02" length="0.197" />
+        </geometry>
+      <material name="satin_brass">
+        <color rgba="0.82 0.62 0.28 1" />
+        </material>
+      </visual>
+    <visual name="top_pivot">
+      <origin xyz="0 0 0.819" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.015" length="0.055" />
+        </geometry>
+      <material name="satin_brass">
+        <color rgba="0.82 0.62 0.28 1" />
+        </material>
+      </visual>
+    <visual name="lower_pivot_boss">
+      <origin xyz="0 0 0.061" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.06" length="0.018" />
+        </geometry>
+      <material name="aged_brass">
+        <color rgba="0.57 0.43 0.2 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="globe">
+    <inertial>
+      <mass value="0.7" />
+      <inertia ixx="0.0175" ixy="0" ixz="0" iyy="0.0175" iyz="0" izz="0.0175" />
+      </inertial>
+    <visual name="globe_sphere">
+      <geometry>
+        <sphere radius="0.25" />
+        </geometry>
+      <material name="night_sky_blue">
+        <color rgba="0.02 0.07 0.22 1" />
+        </material>
+      </visual>
+    <visual name="equator_band">
+      <geometry>
+        <mesh filename="assets/meshes/equator_band.obj" />
+        </geometry>
+      <material name="satin_brass">
+        <color rgba="0.82 0.62 0.28 1" />
+        </material>
+      </visual>
+    <visual name="ecliptic_band">
+      <origin xyz="0 0 0" rpy="0.410152 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/ecliptic_band.obj" />
+        </geometry>
+      <material name="aged_brass">
+        <color rgba="0.57 0.43 0.2 1" />
+        </material>
+      </visual>
+    <visual name="meridian_0">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/meridian_band.obj" />
+        </geometry>
+      <material name="satin_brass">
+        <color rgba="0.82 0.62 0.28 1" />
+        </material>
+      </visual>
+    <visual name="meridian_1">
+      <origin xyz="0 0 0" rpy="1.5708 0 1.0472" />
+      <geometry>
+        <mesh filename="assets/meshes/meridian_band.obj" />
+        </geometry>
+      <material name="satin_brass">
+        <color rgba="0.82 0.62 0.28 1" />
+        </material>
+      </visual>
+    <visual name="meridian_2">
+      <origin xyz="0 0 0" rpy="1.5708 0 2.0944" />
+      <geometry>
+        <mesh filename="assets/meshes/meridian_band.obj" />
+        </geometry>
+      <material name="satin_brass">
+        <color rgba="0.82 0.62 0.28 1" />
+        </material>
+      </visual>
+    <visual name="latitude_30_south">
+      <origin xyz="0 0 -0.125" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/latitude_30_band.obj" />
+        </geometry>
+      <material name="aged_brass">
+        <color rgba="0.57 0.43 0.2 1" />
+        </material>
+      </visual>
+    <visual name="latitude_30_north">
+      <origin xyz="0 0 0.125" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/latitude_30_band.obj" />
+        </geometry>
+      <material name="aged_brass">
+        <color rgba="0.57 0.43 0.2 1" />
+        </material>
+      </visual>
+    <visual name="latitude_60_south">
+      <origin xyz="0 0 -0.216506" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/latitude_60_band.obj" />
+        </geometry>
+      <material name="aged_brass">
+        <color rgba="0.57 0.43 0.2 1" />
+        </material>
+      </visual>
+    <visual name="latitude_60_north">
+      <origin xyz="0 0 0.216506" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/latitude_60_band.obj" />
+        </geometry>
+      <material name="aged_brass">
+        <color rgba="0.57 0.43 0.2 1" />
+        </material>
+      </visual>
+    <visual name="top_socket">
+      <origin xyz="0 0 0.267" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.033" length="0.035" />
+        </geometry>
+      <material name="satin_brass">
+        <color rgba="0.82 0.62 0.28 1" />
+        </material>
+      </visual>
+    <visual name="bottom_socket">
+      <origin xyz="0 0 -0.267" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.033" length="0.035" />
+        </geometry>
+      <material name="satin_brass">
+        <color rgba="0.82 0.62 0.28 1" />
+        </material>
+      </visual>
+    <visual name="star_0">
+      <origin xyz="-0.114195 -0.197791 0.1065" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.008" />
+        </geometry>
+      <material name="warm_star_ink">
+        <color rgba="1 0.92 0.72 1" />
+        </material>
+      </visual>
+    <visual name="star_1">
+      <origin xyz="-0.00836423 -0.23952 -0.0778723" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.006" />
+        </geometry>
+      <material name="warm_star_ink">
+        <color rgba="1 0.92 0.72 1" />
+        </material>
+      </visual>
+    <visual name="star_2">
+      <origin xyz="0.0631665 -0.156343 0.187272" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.006" />
+        </geometry>
+      <material name="warm_star_ink">
+        <color rgba="1 0.92 0.72 1" />
+        </material>
+      </visual>
+    <visual name="star_3">
+      <origin xyz="0.192573 -0.161588 0.0175786" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.006" />
+        </geometry>
+      <material name="warm_star_ink">
+        <color rgba="1 0.92 0.72 1" />
+        </material>
+      </visual>
+    <visual name="star_4">
+      <origin xyz="0.195975 -0.0561948 -0.148122" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.008" />
+        </geometry>
+      <material name="warm_star_ink">
+        <color rgba="1 0.92 0.72 1" />
+        </material>
+      </visual>
+    <visual name="star_5">
+      <origin xyz="0.199417 0.0423874 0.148122" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.006" />
+        </geometry>
+      <material name="warm_star_ink">
+        <color rgba="1 0.92 0.72 1" />
+        </material>
+      </visual>
+    <visual name="star_6">
+      <origin xyz="0.196646 0.153637 -0.0350716" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.006" />
+        </geometry>
+      <material name="warm_star_ink">
+        <color rgba="1 0.92 0.72 1" />
+        </material>
+      </visual>
+    <visual name="star_7">
+      <origin xyz="0.0656204 0.128787 0.206426" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.006" />
+        </geometry>
+      <material name="warm_star_ink">
+        <color rgba="1 0.92 0.72 1" />
+        </material>
+      </visual>
+    <visual name="star_8">
+      <origin xyz="0.00761641 0.218105 -0.126" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.008" />
+        </geometry>
+      <material name="warm_star_ink">
+        <color rgba="1 0.92 0.72 1" />
+        </material>
+      </visual>
+    <visual name="star_9">
+      <origin xyz="-0.104173 0.223399 0.0523937" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.006" />
+        </geometry>
+      <material name="warm_star_ink">
+        <color rgba="1 0.92 0.72 1" />
+        </material>
+      </visual>
+    <visual name="star_10">
+      <origin xyz="-0.137944 0.107774 -0.181274" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.006" />
+        </geometry>
+      <material name="warm_star_ink">
+        <color rgba="1 0.92 0.72 1" />
+        </material>
+      </visual>
+    <visual name="star_11">
+      <origin xyz="-0.204352 0.0434364 0.140917" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.006" />
+        </geometry>
+      <material name="warm_star_ink">
+        <color rgba="1 0.92 0.72 1" />
+        </material>
+      </visual>
+    <visual name="star_12">
+      <origin xyz="-0.120025 -0.0585399 -0.213708" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.008" />
+        </geometry>
+      <material name="warm_star_ink">
+        <color rgba="1 0.92 0.72 1" />
+        </material>
+      </visual>
+    <visual name="star_13">
+      <origin xyz="-0.0791627 -0.0879191 0.222503" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.006" />
+        </geometry>
+      <material name="warm_star_ink">
+        <color rgba="1 0.92 0.72 1" />
+        </material>
+      </visual>
+    <visual name="star_14">
+      <origin xyz="0.220337 0.117155 0.0350716" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.006" />
+        </geometry>
+      <material name="warm_star_ink">
+        <color rgba="1 0.92 0.72 1" />
+        </material>
+      </visual>
+    <visual name="star_15">
+      <origin xyz="0.0644028 0.224599 0.0944009" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.006" />
+        </geometry>
+      <material name="warm_star_ink">
+        <color rgba="1 0.92 0.72 1" />
+        </material>
+      </visual>
+    <visual name="star_16">
+      <origin xyz="-0.0607323 0.243584 -0.0219632" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.008" />
+        </geometry>
+      <material name="warm_star_ink">
+        <color rgba="1 0.92 0.72 1" />
+        </material>
+      </visual>
+    <visual name="star_17">
+      <origin xyz="0.0934822 -0.0131381 0.23365" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.006" />
+        </geometry>
+      <material name="warm_star_ink">
+        <color rgba="1 0.92 0.72 1" />
+        </material>
+      </visual>
+    </link>
+  <joint name="cradle_turn" type="continuous">
+    <origin xyz="0 0 0.095" rpy="0 0 0" />
+    <parent link="base" />
+    <child link="cradle" />
+    <axis xyz="0 0 1" />
+    <limit effort="4" velocity="1.5" />
+    </joint>
+  <joint name="globe_spin" type="continuous">
+    <origin xyz="0 0 0.52" rpy="0 0 0" />
+    <parent link="cradle" />
+    <child link="globe" />
+    <axis xyz="0 0 1" />
+    <limit effort="1" velocity="3" />
+    </joint>
+  </robot>

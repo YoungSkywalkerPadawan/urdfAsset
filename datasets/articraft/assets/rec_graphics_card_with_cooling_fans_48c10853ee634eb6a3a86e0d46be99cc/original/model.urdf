@@ -1,0 +1,385 @@
+<robot name="dual_slot_graphics_card">
+  <material name="solder_mask_green">
+    <color rgba="0.02 0.3 0.12 1" />
+    </material>
+  <material name="matte_black">
+    <color rgba="0.005 0.005 0.006 1" />
+    </material>
+  <material name="dark_plastic">
+    <color rgba="0.025 0.027 0.03 1" />
+    </material>
+  <material name="fan_black">
+    <color rgba="0.008 0.009 0.011 1" />
+    </material>
+  <material name="brushed_aluminum">
+    <color rgba="0.64 0.66 0.65 1" />
+    </material>
+  <material name="nickel_bracket">
+    <color rgba="0.72 0.73 0.7 1" />
+    </material>
+  <material name="edge_contact_gold">
+    <color rgba="1 0.68 0.18 1" />
+    </material>
+  <material name="port_shadow_black">
+    <color rgba="0 0 0 1" />
+    </material>
+  <link name="card">
+    <visual name="pcb">
+      <geometry>
+        <box size="0.27 0.112 0.002" />
+        </geometry>
+      <material name="solder_mask_green">
+        <color rgba="0.02 0.3 0.12 1" />
+        </material>
+      </visual>
+    <visual name="pcie_fingers">
+      <origin xyz="0.024 -0.059 0.0016" rpy="0 0 0" />
+      <geometry>
+        <box size="0.152 0.01 0.0012" />
+        </geometry>
+      <material name="edge_contact_gold">
+        <color rgba="1 0.68 0.18 1" />
+        </material>
+      </visual>
+    <visual name="power_socket">
+      <origin xyz="0.113 0.044 0.006" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.014 0.01" />
+        </geometry>
+      <material name="dark_plastic">
+        <color rgba="0.025 0.027 0.03 1" />
+        </material>
+      </visual>
+    <visual name="bracket_plate">
+      <origin xyz="-0.137 0 0.024" rpy="0 0 0" />
+      <geometry>
+        <box size="0.004 0.132 0.052" />
+        </geometry>
+      <material name="nickel_bracket">
+        <color rgba="0.72 0.73 0.7 1" />
+        </material>
+      </visual>
+    <visual name="bracket_flange">
+      <origin xyz="-0.132 0 0.024" rpy="0 0 0" />
+      <geometry>
+        <box size="0.012 0.006 0.052" />
+        </geometry>
+      <material name="nickel_bracket">
+        <color rgba="0.72 0.73 0.7 1" />
+        </material>
+      </visual>
+    <visual name="screw_ear">
+      <origin xyz="-0.137 0.074 0.044" rpy="0 0 0" />
+      <geometry>
+        <box size="0.004 0.02 0.01" />
+        </geometry>
+      <material name="nickel_bracket">
+        <color rgba="0.72 0.73 0.7 1" />
+        </material>
+      </visual>
+    <visual name="display_port_0">
+      <origin xyz="-0.1394 -0.039 0.018" rpy="0 0 0" />
+      <geometry>
+        <box size="0.0008 0.018 0.008" />
+        </geometry>
+      <material name="port_shadow_black">
+        <color rgba="0 0 0 1" />
+        </material>
+      </visual>
+    <visual name="display_port_1">
+      <origin xyz="-0.1394 -0.014 0.018" rpy="0 0 0" />
+      <geometry>
+        <box size="0.0008 0.018 0.008" />
+        </geometry>
+      <material name="port_shadow_black">
+        <color rgba="0 0 0 1" />
+        </material>
+      </visual>
+    <visual name="display_port_2">
+      <origin xyz="-0.1394 0.014 0.018" rpy="0 0 0" />
+      <geometry>
+        <box size="0.0008 0.018 0.008" />
+        </geometry>
+      <material name="port_shadow_black">
+        <color rgba="0 0 0 1" />
+        </material>
+      </visual>
+    <visual name="display_port_3">
+      <origin xyz="-0.1394 0.041 0.026" rpy="0 0 0" />
+      <geometry>
+        <box size="0.0008 0.02 0.018" />
+        </geometry>
+      <material name="port_shadow_black">
+        <color rgba="0 0 0 1" />
+        </material>
+      </visual>
+    <visual name="heatsink_base">
+      <origin xyz="0.02 0 0.005" rpy="0 0 0" />
+      <geometry>
+        <box size="0.222 0.094 0.008" />
+        </geometry>
+      <material name="brushed_aluminum">
+        <color rgba="0.64 0.66 0.65 1" />
+        </material>
+      </visual>
+    <visual name="cooling_fin_0">
+      <origin xyz="0.02 -0.039 0.019" rpy="0 0 0" />
+      <geometry>
+        <box size="0.212 0.0023 0.02" />
+        </geometry>
+      <material name="brushed_aluminum">
+        <color rgba="0.64 0.66 0.65 1" />
+        </material>
+      </visual>
+    <visual name="cooling_fin_1">
+      <origin xyz="0.02 -0.03 0.019" rpy="0 0 0" />
+      <geometry>
+        <box size="0.212 0.0023 0.02" />
+        </geometry>
+      <material name="brushed_aluminum">
+        <color rgba="0.64 0.66 0.65 1" />
+        </material>
+      </visual>
+    <visual name="cooling_fin_2">
+      <origin xyz="0.02 -0.021 0.019" rpy="0 0 0" />
+      <geometry>
+        <box size="0.212 0.0023 0.02" />
+        </geometry>
+      <material name="brushed_aluminum">
+        <color rgba="0.64 0.66 0.65 1" />
+        </material>
+      </visual>
+    <visual name="cooling_fin_3">
+      <origin xyz="0.02 -0.012 0.019" rpy="0 0 0" />
+      <geometry>
+        <box size="0.212 0.0023 0.02" />
+        </geometry>
+      <material name="brushed_aluminum">
+        <color rgba="0.64 0.66 0.65 1" />
+        </material>
+      </visual>
+    <visual name="cooling_fin_4">
+      <origin xyz="0.02 -0.003 0.019" rpy="0 0 0" />
+      <geometry>
+        <box size="0.212 0.0023 0.02" />
+        </geometry>
+      <material name="brushed_aluminum">
+        <color rgba="0.64 0.66 0.65 1" />
+        </material>
+      </visual>
+    <visual name="cooling_fin_5">
+      <origin xyz="0.02 0.006 0.019" rpy="0 0 0" />
+      <geometry>
+        <box size="0.212 0.0023 0.02" />
+        </geometry>
+      <material name="brushed_aluminum">
+        <color rgba="0.64 0.66 0.65 1" />
+        </material>
+      </visual>
+    <visual name="cooling_fin_6">
+      <origin xyz="0.02 0.015 0.019" rpy="0 0 0" />
+      <geometry>
+        <box size="0.212 0.0023 0.02" />
+        </geometry>
+      <material name="brushed_aluminum">
+        <color rgba="0.64 0.66 0.65 1" />
+        </material>
+      </visual>
+    <visual name="cooling_fin_7">
+      <origin xyz="0.02 0.024 0.019" rpy="0 0 0" />
+      <geometry>
+        <box size="0.212 0.0023 0.02" />
+        </geometry>
+      <material name="brushed_aluminum">
+        <color rgba="0.64 0.66 0.65 1" />
+        </material>
+      </visual>
+    <visual name="cooling_fin_8">
+      <origin xyz="0.02 0.033 0.019" rpy="0 0 0" />
+      <geometry>
+        <box size="0.212 0.0023 0.02" />
+        </geometry>
+      <material name="brushed_aluminum">
+        <color rgba="0.64 0.66 0.65 1" />
+        </material>
+      </visual>
+    <visual name="cooling_fin_9">
+      <origin xyz="0.02 0.042 0.019" rpy="0 0 0" />
+      <geometry>
+        <box size="0.212 0.0023 0.02" />
+        </geometry>
+      <material name="brushed_aluminum">
+        <color rgba="0.64 0.66 0.65 1" />
+        </material>
+      </visual>
+    <visual name="shroud_face">
+      <origin xyz="0.02 0 0.032" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/gpu_shroud_face.obj" />
+        </geometry>
+      <material name="matte_black">
+        <color rgba="0.005 0.005 0.006 1" />
+        </material>
+      </visual>
+    <visual name="shroud_rail_0">
+      <origin xyz="0.02 -0.051 0.021" rpy="0 0 0" />
+      <geometry>
+        <box size="0.232 0.004 0.024" />
+        </geometry>
+      <material name="matte_black">
+        <color rgba="0.005 0.005 0.006 1" />
+        </material>
+      </visual>
+    <visual name="shroud_rail_1">
+      <origin xyz="0.02 0.051 0.021" rpy="0 0 0" />
+      <geometry>
+        <box size="0.232 0.004 0.024" />
+        </geometry>
+      <material name="matte_black">
+        <color rgba="0.005 0.005 0.006 1" />
+        </material>
+      </visual>
+    <visual name="shroud_end_0">
+      <origin xyz="-0.101 0 0.021" rpy="0 0 0" />
+      <geometry>
+        <box size="0.004 0.1 0.024" />
+        </geometry>
+      <material name="matte_black">
+        <color rgba="0.005 0.005 0.006 1" />
+        </material>
+      </visual>
+    <visual name="shroud_end_1">
+      <origin xyz="0.141 0 0.021" rpy="0 0 0" />
+      <geometry>
+        <box size="0.004 0.1 0.024" />
+        </geometry>
+      <material name="matte_black">
+        <color rgba="0.005 0.005 0.006 1" />
+        </material>
+      </visual>
+    <visual name="fan_frame_0">
+      <origin xyz="-0.042 0 0.038" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/gpu_fan_frame.obj" />
+        </geometry>
+      <material name="matte_black">
+        <color rgba="0.005 0.005 0.006 1" />
+        </material>
+      </visual>
+    <visual name="fan_spoke_x_0">
+      <origin xyz="-0.042 0 0.034" rpy="0 0 0" />
+      <geometry>
+        <box size="0.081 0.004 0.004" />
+        </geometry>
+      <material name="dark_plastic">
+        <color rgba="0.025 0.027 0.03 1" />
+        </material>
+      </visual>
+    <visual name="fan_spoke_y_0">
+      <origin xyz="-0.042 0 0.034" rpy="0 0 0" />
+      <geometry>
+        <box size="0.004 0.081 0.004" />
+        </geometry>
+      <material name="dark_plastic">
+        <color rgba="0.025 0.027 0.03 1" />
+        </material>
+      </visual>
+    <visual name="fan_bearing_0">
+      <origin xyz="-0.042 0 0.034" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.004" />
+        </geometry>
+      <material name="dark_plastic">
+        <color rgba="0.025 0.027 0.03 1" />
+        </material>
+      </visual>
+    <visual name="fan_axle_0">
+      <origin xyz="-0.042 0 0.041" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.004" length="0.014" />
+        </geometry>
+      <material name="dark_plastic">
+        <color rgba="0.025 0.027 0.03 1" />
+        </material>
+      </visual>
+    <visual name="fan_frame_1">
+      <origin xyz="0.082 0 0.038" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/gpu_fan_frame.obj" />
+        </geometry>
+      <material name="matte_black">
+        <color rgba="0.005 0.005 0.006 1" />
+        </material>
+      </visual>
+    <visual name="fan_spoke_x_1">
+      <origin xyz="0.082 0 0.034" rpy="0 0 0" />
+      <geometry>
+        <box size="0.081 0.004 0.004" />
+        </geometry>
+      <material name="dark_plastic">
+        <color rgba="0.025 0.027 0.03 1" />
+        </material>
+      </visual>
+    <visual name="fan_spoke_y_1">
+      <origin xyz="0.082 0 0.034" rpy="0 0 0" />
+      <geometry>
+        <box size="0.004 0.081 0.004" />
+        </geometry>
+      <material name="dark_plastic">
+        <color rgba="0.025 0.027 0.03 1" />
+        </material>
+      </visual>
+    <visual name="fan_bearing_1">
+      <origin xyz="0.082 0 0.034" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.004" />
+        </geometry>
+      <material name="dark_plastic">
+        <color rgba="0.025 0.027 0.03 1" />
+        </material>
+      </visual>
+    <visual name="fan_axle_1">
+      <origin xyz="0.082 0 0.041" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.004" length="0.014" />
+        </geometry>
+      <material name="dark_plastic">
+        <color rgba="0.025 0.027 0.03 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="fan_0">
+    <visual name="rotor">
+      <geometry>
+        <mesh filename="assets/meshes/gpu_axial_rotor.obj" />
+        </geometry>
+      <material name="fan_black">
+        <color rgba="0.008 0.009 0.011 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="fan_1">
+    <visual name="rotor">
+      <geometry>
+        <mesh filename="assets/meshes/gpu_axial_rotor.obj" />
+        </geometry>
+      <material name="fan_black">
+        <color rgba="0.008 0.009 0.011 1" />
+        </material>
+      </visual>
+    </link>
+  <joint name="fan_spin_0" type="continuous">
+    <origin xyz="-0.042 0 0.044" rpy="0 0 0" />
+    <parent link="card" />
+    <child link="fan_0" />
+    <axis xyz="0 0 1" />
+    <limit effort="0.05" velocity="150" />
+    </joint>
+  <joint name="fan_spin_1" type="continuous">
+    <origin xyz="0.082 0 0.044" rpy="0 0 0" />
+    <parent link="card" />
+    <child link="fan_1" />
+    <axis xyz="0 0 1" />
+    <limit effort="0.05" velocity="150" />
+    </joint>
+  </robot>

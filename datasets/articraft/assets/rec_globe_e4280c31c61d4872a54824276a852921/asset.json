@@ -1,0 +1,121 @@
+{
+  "summary": {
+    "id": "rec_globe_e4280c31c61d4872a54824276a852921",
+    "category": "globe",
+    "robot_name": "executive_floor_globe",
+    "joint_count": 2,
+    "link_count": 3,
+    "target_link_count": 3,
+    "family": "rec_globe",
+    "warnings": [],
+    "diagonal": 1.371069939156278,
+    "bytes": 5269127
+  },
+  "source": {
+    "dataset": "camvsl/Articraft-10K",
+    "revision": "3c79d5a05bb7cb6bf7bfee5e090176636ee3ac65",
+    "license": "CC-BY-4.0",
+    "url": "https://huggingface.co/datasets/camvsl/Articraft-10K/blob/3c79d5a05bb7cb6bf7bfee5e090176636ee3ac65/rec_globe_e4280c31c61d4872a54824276a852921.tar.gz",
+    "archive_sha256": "40e4c119b8bbc59e46d4fa3e59d3b43d94573e93130ff6482ed28e1ffdc9772f",
+    "archive": "rec_globe_e4280c31c61d4872a54824276a852921.tar.gz",
+    "label_status": "Original generated URDF reference; not manually verified or physically validated"
+  },
+  "links": [
+    {
+      "id": "link_000",
+      "name": "stand",
+      "point_file": "inputs/link_000.npz",
+      "faces": 3008,
+      "vertices": 1577,
+      "bounds": [
+        [
+          -0.187,
+          -0.30046799999999996,
+          0.0
+        ],
+        [
+          0.34199999999999997,
+          0.30046799999999996,
+          0.514
+        ]
+      ]
+    },
+    {
+      "id": "link_001",
+      "name": "upper_support",
+      "point_file": "inputs/link_001.npz",
+      "faces": 8776,
+      "vertices": 4416,
+      "bounds": [
+        [
+          -0.275831,
+          -0.042,
+          0.472
+        ],
+        [
+          0.275831,
+          0.042,
+          1.0662989999999999
+        ]
+      ]
+    },
+    {
+      "id": "link_002",
+      "name": "globe",
+      "point_file": "inputs/link_002.npz",
+      "faces": 448,
+      "vertices": 228,
+      "bounds": [
+        [
+          -0.21,
+          -0.21,
+          0.5800000000000001
+        ],
+        [
+          0.21,
+          0.21,
+          1.0
+        ]
+      ]
+    }
+  ],
+  "joints": [
+    {
+      "name": "collar_turn",
+      "type": "continuous",
+      "parent": "link_000",
+      "child": "link_001",
+      "reference_q": 0.0,
+      "mimic": null
+    },
+    {
+      "name": "globe_spin",
+      "type": "continuous",
+      "parent": "link_001",
+      "child": "link_002",
+      "reference_q": 0.0,
+      "mimic": null
+    }
+  ],
+  "bounds": [
+    [
+      -0.275831,
+      -0.30046799999999996,
+      0.0
+    ],
+    [
+      0.34199999999999997,
+      0.30046799999999996,
+      1.0662989999999999
+    ]
+  ],
+  "point_pool_size": 65536,
+  "reference_pose": "Zero position clamped to limits; mimic values propagated",
+  "qc": {
+    "finite_geometry": true,
+    "tree_valid": true,
+    "axis_unit": true,
+    "physical_collision_validation": false,
+    "visual_tessellation": "32 cylinder segments, icosphere subdivision 2"
+  }
+}

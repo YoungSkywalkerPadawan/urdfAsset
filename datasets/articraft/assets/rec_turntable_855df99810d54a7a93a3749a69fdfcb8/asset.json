@@ -1,0 +1,121 @@
+{
+  "summary": {
+    "id": "rec_turntable_855df99810d54a7a93a3749a69fdfcb8",
+    "category": "turntable",
+    "robot_name": "precision_calibration_turntable",
+    "joint_count": 1,
+    "link_count": 3,
+    "target_link_count": 2,
+    "family": "rec_turntable",
+    "warnings": [],
+    "diagonal": 0.6971105417413537,
+    "bytes": 3335974
+  },
+  "source": {
+    "dataset": "camvsl/Articraft-10K",
+    "revision": "3c79d5a05bb7cb6bf7bfee5e090176636ee3ac65",
+    "license": "CC-BY-4.0",
+    "url": "https://huggingface.co/datasets/camvsl/Articraft-10K/blob/3c79d5a05bb7cb6bf7bfee5e090176636ee3ac65/rec_turntable_855df99810d54a7a93a3749a69fdfcb8.tar.gz",
+    "archive_sha256": "02b4980e0c4ee22254e6ea3f091ecb6a725a942d80d8c7eb2001ab9532556679",
+    "archive": "rec_turntable_855df99810d54a7a93a3749a69fdfcb8.tar.gz",
+    "label_status": "Original generated URDF reference; not manually verified or physically validated"
+  },
+  "links": [
+    {
+      "id": "link_000",
+      "name": "plinth",
+      "point_file": "inputs/link_000.npz",
+      "faces": 1328,
+      "vertices": 700,
+      "bounds": [
+        [
+          -0.235,
+          -0.1825,
+          0.0
+        ],
+        [
+          0.235,
+          0.1825,
+          0.098
+        ]
+      ]
+    },
+    {
+      "id": "link_001",
+      "name": "platter",
+      "point_file": "inputs/link_001.npz",
+      "faces": 780,
+      "vertices": 404,
+      "bounds": [
+        [
+          -0.207,
+          -0.152,
+          0.051
+        ],
+        [
+          0.097,
+          0.152,
+          0.102
+        ]
+      ]
+    },
+    {
+      "id": "link_002",
+      "name": "tonearm_stage",
+      "point_file": null,
+      "faces": 3480,
+      "vertices": 1756,
+      "bounds": [
+        [
+          0.10984407797736334,
+          0.03443527512011598,
+          0.074
+        ],
+        [
+          0.19136238892504207,
+          0.3204543702144225,
+          0.11000004040516169
+        ]
+      ]
+    }
+  ],
+  "joints": [
+    {
+      "name": "plinth_to_platter",
+      "type": "continuous",
+      "parent": "link_000",
+      "child": "link_001",
+      "reference_q": 0.0,
+      "mimic": null
+    },
+    {
+      "name": "plinth_to_tonearm_stage",
+      "type": "revolute",
+      "parent": "link_000",
+      "child": "link_002",
+      "reference_q": 0.0,
+      "mimic": null
+    }
+  ],
+  "bounds": [
+    [
+      -0.235,
+      -0.1825,
+      0.0
+    ],
+    [
+      0.235,
+      0.3204543702144225,
+      0.11000004040516169
+    ]
+  ],
+  "point_pool_size": 65536,
+  "reference_pose": "Zero position clamped to limits; mimic values propagated",
+  "qc": {
+    "finite_geometry": true,
+    "tree_valid": true,
+    "axis_unit": true,
+    "physical_collision_validation": false,
+    "visual_tessellation": "32 cylinder segments, icosphere subdivision 2"
+  }
+}

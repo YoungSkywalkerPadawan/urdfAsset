@@ -1,0 +1,675 @@
+<robot name="traditional_windmill">
+  <material name="masonry">
+    <color rgba="0.78 0.75 0.69 1" />
+    </material>
+  <material name="cap_green">
+    <color rgba="0.23 0.31 0.24 1" />
+    </material>
+  <material name="timber">
+    <color rgba="0.46 0.33 0.2 1" />
+    </material>
+  <material name="dark_timber">
+    <color rgba="0.28 0.2 0.12 1" />
+    </material>
+  <material name="iron">
+    <color rgba="0.23 0.24 0.26 1" />
+    </material>
+  <material name="white_trim">
+    <color rgba="0.9 0.91 0.89 1" />
+    </material>
+  <link name="tower">
+    <inertial>
+      <origin xyz="0 0 5.95" rpy="0 0 0" />
+      <mass value="26000" />
+      <inertia ixx="354911" ixy="0" ixz="0" iyy="354911" iyz="0" izz="96179.2" />
+      </inertial>
+    <visual name="tower_shell">
+      <geometry>
+        <mesh filename="assets/meshes/windmill_tower_shell.obj" />
+        </geometry>
+      <material name="masonry">
+        <color rgba="0.78 0.75 0.69 1" />
+        </material>
+      </visual>
+    <visual name="base_plinth">
+      <origin xyz="0 0 0.12" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="2.86" length="0.24" />
+        </geometry>
+      <material name="dark_timber">
+        <color rgba="0.28 0.2 0.12 1" />
+        </material>
+      </visual>
+    <visual name="cap_track_ring">
+      <origin xyz="0 0 11.67" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="1.86" length="0.18" />
+        </geometry>
+      <material name="dark_timber">
+        <color rgba="0.28 0.2 0.12 1" />
+        </material>
+      </visual>
+    <visual name="front_door">
+      <origin xyz="2.14 0 1.14" rpy="0 0 0" />
+      <geometry>
+        <box size="0.95 0.34 2.28" />
+        </geometry>
+      <material name="dark_timber">
+        <color rgba="0.28 0.2 0.12 1" />
+        </material>
+      </visual>
+    <visual name="door_trim">
+      <origin xyz="2.44 0 1.16" rpy="0 0 0" />
+      <geometry>
+        <box size="0.18 1.3 1.9" />
+        </geometry>
+      <material name="white_trim">
+        <color rgba="0.9 0.91 0.89 1" />
+        </material>
+      </visual>
+    <visual name="front_trim_spine">
+      <origin xyz="2.18 0 5.26" rpy="0 0 0" />
+      <geometry>
+        <box size="0.18 0.4 8.2" />
+        </geometry>
+      <material name="white_trim">
+        <color rgba="0.9 0.91 0.89 1" />
+        </material>
+      </visual>
+    <visual name="window_frame_0">
+      <origin xyz="1.9 0 3.1" rpy="0 0 0" />
+      <geometry>
+        <box size="0.52 0.84 1.02" />
+        </geometry>
+      <material name="white_trim">
+        <color rgba="0.9 0.91 0.89 1" />
+        </material>
+      </visual>
+    <visual name="window_dark_0">
+      <origin xyz="1.88 0 3.1" rpy="0 0 0" />
+      <geometry>
+        <box size="0.34 0.6048 0.72" />
+        </geometry>
+      <material name="iron">
+        <color rgba="0.23 0.24 0.26 1" />
+        </material>
+      </visual>
+    <visual name="window_frame_1">
+      <origin xyz="1.84 0 5.75" rpy="0 0 0" />
+      <geometry>
+        <box size="0.52 0.76 1.02" />
+        </geometry>
+      <material name="white_trim">
+        <color rgba="0.9 0.91 0.89 1" />
+        </material>
+      </visual>
+    <visual name="window_dark_1">
+      <origin xyz="1.82 0 5.75" rpy="0 0 0" />
+      <geometry>
+        <box size="0.34 0.5472 0.72" />
+        </geometry>
+      <material name="iron">
+        <color rgba="0.23 0.24 0.26 1" />
+        </material>
+      </visual>
+    <visual name="window_frame_2">
+      <origin xyz="1.82 0 8.55" rpy="0 0 0" />
+      <geometry>
+        <box size="0.52 0.68 1.02" />
+        </geometry>
+      <material name="white_trim">
+        <color rgba="0.9 0.91 0.89 1" />
+        </material>
+      </visual>
+    <visual name="window_dark_2">
+      <origin xyz="1.8 0 8.55" rpy="0 0 0" />
+      <geometry>
+        <box size="0.34 0.4896 0.72" />
+        </geometry>
+      <material name="iron">
+        <color rgba="0.23 0.24 0.26 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="cap">
+    <inertial>
+      <origin xyz="0 0 1.18" rpy="0 0 0" />
+      <mass value="3800" />
+      <inertia ixx="7235.83" ixy="0" ixz="0" iyy="9363.83" iyz="0" izz="11273.3" />
+      </inertial>
+    <visual name="cap_base_ring">
+      <origin xyz="0 0 0.09" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="1.66" length="0.18" />
+        </geometry>
+      <material name="dark_timber">
+        <color rgba="0.28 0.2 0.12 1" />
+        </material>
+      </visual>
+    <visual name="cap_shell">
+      <origin xyz="0 0 0.08" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/windmill_cap_shell.obj" />
+        </geometry>
+      <material name="cap_green">
+        <color rgba="0.23 0.31 0.24 1" />
+        </material>
+      </visual>
+    <visual name="roof_saddle">
+      <origin xyz="0.2 0 0.9" rpy="0 0 0" />
+      <geometry>
+        <box size="1.38 2.18 0.56" />
+        </geometry>
+      <material name="cap_green">
+        <color rgba="0.23 0.31 0.24 1" />
+        </material>
+      </visual>
+    <visual name="front_bearing_top">
+      <origin xyz="1.6 0 1.36" rpy="0 0 0" />
+      <geometry>
+        <box size="1.02 1.08 0.2" />
+        </geometry>
+      <material name="dark_timber">
+        <color rgba="0.28 0.2 0.12 1" />
+        </material>
+      </visual>
+    <visual name="front_bearing_bottom">
+      <origin xyz="1.6 0 0.88" rpy="0 0 0" />
+      <geometry>
+        <box size="1.02 1.08 0.2" />
+        </geometry>
+      <material name="dark_timber">
+        <color rgba="0.28 0.2 0.12 1" />
+        </material>
+      </visual>
+    <visual name="front_bearing_left_cheek">
+      <origin xyz="1.6 0.43 1.12" rpy="0 0 0" />
+      <geometry>
+        <box size="1.02 0.22 0.48" />
+        </geometry>
+      <material name="dark_timber">
+        <color rgba="0.28 0.2 0.12 1" />
+        </material>
+      </visual>
+    <visual name="front_bearing_right_cheek">
+      <origin xyz="1.6 -0.43 1.12" rpy="0 0 0" />
+      <geometry>
+        <box size="1.02 0.22 0.48" />
+        </geometry>
+      <material name="dark_timber">
+        <color rgba="0.28 0.2 0.12 1" />
+        </material>
+      </visual>
+    <visual name="front_bearing_left_stanchion">
+      <origin xyz="2 0.58 1.12" rpy="0 0 0" />
+      <geometry>
+        <box size="0.24 0.12 0.72" />
+        </geometry>
+      <material name="dark_timber">
+        <color rgba="0.28 0.2 0.12 1" />
+        </material>
+      </visual>
+    <visual name="front_bearing_right_stanchion">
+      <origin xyz="2 -0.58 1.12" rpy="0 0 0" />
+      <geometry>
+        <box size="0.24 0.12 0.72" />
+        </geometry>
+      <material name="dark_timber">
+        <color rgba="0.28 0.2 0.12 1" />
+        </material>
+      </visual>
+    <visual name="front_bearing_upper_brow">
+      <origin xyz="2 0 1.56" rpy="0 0 0" />
+      <geometry>
+        <box size="0.36 0.58 0.1" />
+        </geometry>
+      <material name="dark_timber">
+        <color rgba="0.28 0.2 0.12 1" />
+        </material>
+      </visual>
+    <visual name="front_bearing_lower_brow">
+      <origin xyz="2 0 0.68" rpy="0 0 0" />
+      <geometry>
+        <box size="0.36 0.58 0.1" />
+        </geometry>
+      <material name="dark_timber">
+        <color rgba="0.28 0.2 0.12 1" />
+        </material>
+      </visual>
+    <visual name="service_ring">
+      <origin xyz="1.8 0 1.12" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/windmill_service_ring.obj" />
+        </geometry>
+      <material name="iron">
+        <color rgba="0.23 0.24 0.26 1" />
+        </material>
+      </visual>
+    <visual name="service_ring_brace_upper">
+      <origin xyz="1.8 0 1.46" rpy="0.785398 0 0" />
+      <geometry>
+        <box size="0.12 0.82 0.12" />
+        </geometry>
+      <material name="iron">
+        <color rgba="0.23 0.24 0.26 1" />
+        </material>
+      </visual>
+    <visual name="service_ring_brace_lower">
+      <origin xyz="1.8 0 0.78" rpy="-0.785398 0 0" />
+      <geometry>
+        <box size="0.12 0.82 0.12" />
+        </geometry>
+      <material name="iron">
+        <color rgba="0.23 0.24 0.26 1" />
+        </material>
+      </visual>
+    <visual name="front_bearing_housing">
+      <origin xyz="1.28 0 1.12" rpy="0 0 0" />
+      <geometry>
+        <box size="0.16 0.92 0.16" />
+        </geometry>
+      <material name="dark_timber">
+        <color rgba="0.28 0.2 0.12 1" />
+        </material>
+      </visual>
+    <visual name="front_bearing_ring">
+      <origin xyz="1.98 0 1.12" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/windmill_front_bearing_ring.obj" />
+        </geometry>
+      <material name="iron">
+        <color rgba="0.23 0.24 0.26 1" />
+        </material>
+      </visual>
+    <visual name="tail_beam">
+      <origin xyz="-1.2 0 0.98" rpy="0 0 0" />
+      <geometry>
+        <box size="2.2 0.24 0.18" />
+        </geometry>
+      <material name="timber">
+        <color rgba="0.46 0.33 0.2 1" />
+        </material>
+      </visual>
+    <visual name="tail_post">
+      <origin xyz="-2.08 0 1.12" rpy="0 0 0" />
+      <geometry>
+        <box size="1.1 0.18 1.44" />
+        </geometry>
+      <material name="timber">
+        <color rgba="0.46 0.33 0.2 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="hub">
+    <inertial>
+      <origin xyz="0.22 0 0" rpy="0 1.5708 0" />
+      <mass value="1600" />
+      <inertia ixx="449.493" ixy="0" ixz="0" iyy="449.493" iyz="0" izz="216.32" />
+      </inertial>
+    <visual name="windshaft">
+      <origin xyz="0.22 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.14" length="1.44" />
+        </geometry>
+      <material name="iron">
+        <color rgba="0.23 0.24 0.26 1" />
+        </material>
+      </visual>
+    <visual name="hub_barrel">
+      <origin xyz="0.18 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.34" length="0.58" />
+        </geometry>
+      <material name="dark_timber">
+        <color rgba="0.28 0.2 0.12 1" />
+        </material>
+      </visual>
+    <visual name="hub_face">
+      <origin xyz="0.56 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.49" length="0.16" />
+        </geometry>
+      <material name="iron">
+        <color rgba="0.23 0.24 0.26 1" />
+        </material>
+      </visual>
+    <visual name="blade_stock_0">
+      <origin xyz="0.44 0 2.1" rpy="0 0 0" />
+      <geometry>
+        <box size="0.12 0.16 4.2" />
+        </geometry>
+      <material name="dark_timber">
+        <color rgba="0.28 0.2 0.12 1" />
+        </material>
+      </visual>
+    <visual name="blade_rail_front_0">
+      <origin xyz="0.43 0.32 2.35" rpy="0 0 0" />
+      <geometry>
+        <box size="0.08 0.1 3" />
+        </geometry>
+      <material name="timber">
+        <color rgba="0.46 0.33 0.2 1" />
+        </material>
+      </visual>
+    <visual name="blade_rail_rear_0">
+      <origin xyz="0.43 -0.32 2.35" rpy="0 0 0" />
+      <geometry>
+        <box size="0.08 0.1 3" />
+        </geometry>
+      <material name="timber">
+        <color rgba="0.46 0.33 0.2 1" />
+        </material>
+      </visual>
+    <visual name="blade_rung_0_0">
+      <origin xyz="0.43 0 0.92" rpy="0 0 0" />
+      <geometry>
+        <box size="0.06 0.74 0.08" />
+        </geometry>
+      <material name="white_trim">
+        <color rgba="0.9 0.91 0.89 1" />
+        </material>
+      </visual>
+    <visual name="blade_rung_0_1">
+      <origin xyz="0.43 0 1.5" rpy="0 0 0" />
+      <geometry>
+        <box size="0.06 0.74 0.08" />
+        </geometry>
+      <material name="white_trim">
+        <color rgba="0.9 0.91 0.89 1" />
+        </material>
+      </visual>
+    <visual name="blade_rung_0_2">
+      <origin xyz="0.43 0 2.08" rpy="0 0 0" />
+      <geometry>
+        <box size="0.06 0.74 0.08" />
+        </geometry>
+      <material name="white_trim">
+        <color rgba="0.9 0.91 0.89 1" />
+        </material>
+      </visual>
+    <visual name="blade_rung_0_3">
+      <origin xyz="0.43 0 2.66" rpy="0 0 0" />
+      <geometry>
+        <box size="0.06 0.74 0.08" />
+        </geometry>
+      <material name="white_trim">
+        <color rgba="0.9 0.91 0.89 1" />
+        </material>
+      </visual>
+    <visual name="blade_rung_0_4">
+      <origin xyz="0.43 0 3.24" rpy="0 0 0" />
+      <geometry>
+        <box size="0.06 0.74 0.08" />
+        </geometry>
+      <material name="white_trim">
+        <color rgba="0.9 0.91 0.89 1" />
+        </material>
+      </visual>
+    <visual name="blade_rung_0_5">
+      <origin xyz="0.43 0 3.82" rpy="0 0 0" />
+      <geometry>
+        <box size="0.06 0.74 0.08" />
+        </geometry>
+      <material name="white_trim">
+        <color rgba="0.9 0.91 0.89 1" />
+        </material>
+      </visual>
+    <visual name="blade_stock_1">
+      <origin xyz="0.44 -2.1 1.28588e-16" rpy="1.5708 0 0" />
+      <geometry>
+        <box size="0.12 0.16 4.2" />
+        </geometry>
+      <material name="dark_timber">
+        <color rgba="0.28 0.2 0.12 1" />
+        </material>
+      </visual>
+    <visual name="blade_rail_front_1">
+      <origin xyz="0.43 -2.35 0.32" rpy="1.5708 0 0" />
+      <geometry>
+        <box size="0.08 0.1 3" />
+        </geometry>
+      <material name="timber">
+        <color rgba="0.46 0.33 0.2 1" />
+        </material>
+      </visual>
+    <visual name="blade_rail_rear_1">
+      <origin xyz="0.43 -2.35 -0.32" rpy="1.5708 0 0" />
+      <geometry>
+        <box size="0.08 0.1 3" />
+        </geometry>
+      <material name="timber">
+        <color rgba="0.46 0.33 0.2 1" />
+        </material>
+      </visual>
+    <visual name="blade_rung_1_0">
+      <origin xyz="0.43 -0.92 5.63338e-17" rpy="1.5708 0 0" />
+      <geometry>
+        <box size="0.06 0.74 0.08" />
+        </geometry>
+      <material name="white_trim">
+        <color rgba="0.9 0.91 0.89 1" />
+        </material>
+      </visual>
+    <visual name="blade_rung_1_1">
+      <origin xyz="0.43 -1.5 9.18485e-17" rpy="1.5708 0 0" />
+      <geometry>
+        <box size="0.06 0.74 0.08" />
+        </geometry>
+      <material name="white_trim">
+        <color rgba="0.9 0.91 0.89 1" />
+        </material>
+      </visual>
+    <visual name="blade_rung_1_2">
+      <origin xyz="0.43 -2.08 1.27363e-16" rpy="1.5708 0 0" />
+      <geometry>
+        <box size="0.06 0.74 0.08" />
+        </geometry>
+      <material name="white_trim">
+        <color rgba="0.9 0.91 0.89 1" />
+        </material>
+      </visual>
+    <visual name="blade_rung_1_3">
+      <origin xyz="0.43 -2.66 1.62878e-16" rpy="1.5708 0 0" />
+      <geometry>
+        <box size="0.06 0.74 0.08" />
+        </geometry>
+      <material name="white_trim">
+        <color rgba="0.9 0.91 0.89 1" />
+        </material>
+      </visual>
+    <visual name="blade_rung_1_4">
+      <origin xyz="0.43 -3.24 1.98393e-16" rpy="1.5708 0 0" />
+      <geometry>
+        <box size="0.06 0.74 0.08" />
+        </geometry>
+      <material name="white_trim">
+        <color rgba="0.9 0.91 0.89 1" />
+        </material>
+      </visual>
+    <visual name="blade_rung_1_5">
+      <origin xyz="0.43 -3.82 2.33908e-16" rpy="1.5708 0 0" />
+      <geometry>
+        <box size="0.06 0.74 0.08" />
+        </geometry>
+      <material name="white_trim">
+        <color rgba="0.9 0.91 0.89 1" />
+        </material>
+      </visual>
+    <visual name="blade_stock_2">
+      <origin xyz="0.44 -2.57176e-16 -2.1" rpy="3.14159 0 0" />
+      <geometry>
+        <box size="0.12 0.16 4.2" />
+        </geometry>
+      <material name="dark_timber">
+        <color rgba="0.28 0.2 0.12 1" />
+        </material>
+      </visual>
+    <visual name="blade_rail_front_2">
+      <origin xyz="0.43 -0.32 -2.35" rpy="3.14159 0 0" />
+      <geometry>
+        <box size="0.08 0.1 3" />
+        </geometry>
+      <material name="timber">
+        <color rgba="0.46 0.33 0.2 1" />
+        </material>
+      </visual>
+    <visual name="blade_rail_rear_2">
+      <origin xyz="0.43 0.32 -2.35" rpy="3.14159 0 0" />
+      <geometry>
+        <box size="0.08 0.1 3" />
+        </geometry>
+      <material name="timber">
+        <color rgba="0.46 0.33 0.2 1" />
+        </material>
+      </visual>
+    <visual name="blade_rung_2_0">
+      <origin xyz="0.43 -1.12668e-16 -0.92" rpy="3.14159 0 0" />
+      <geometry>
+        <box size="0.06 0.74 0.08" />
+        </geometry>
+      <material name="white_trim">
+        <color rgba="0.9 0.91 0.89 1" />
+        </material>
+      </visual>
+    <visual name="blade_rung_2_1">
+      <origin xyz="0.43 -1.83697e-16 -1.5" rpy="3.14159 0 0" />
+      <geometry>
+        <box size="0.06 0.74 0.08" />
+        </geometry>
+      <material name="white_trim">
+        <color rgba="0.9 0.91 0.89 1" />
+        </material>
+      </visual>
+    <visual name="blade_rung_2_2">
+      <origin xyz="0.43 -2.54727e-16 -2.08" rpy="3.14159 0 0" />
+      <geometry>
+        <box size="0.06 0.74 0.08" />
+        </geometry>
+      <material name="white_trim">
+        <color rgba="0.9 0.91 0.89 1" />
+        </material>
+      </visual>
+    <visual name="blade_rung_2_3">
+      <origin xyz="0.43 -3.25756e-16 -2.66" rpy="3.14159 0 0" />
+      <geometry>
+        <box size="0.06 0.74 0.08" />
+        </geometry>
+      <material name="white_trim">
+        <color rgba="0.9 0.91 0.89 1" />
+        </material>
+      </visual>
+    <visual name="blade_rung_2_4">
+      <origin xyz="0.43 -3.96786e-16 -3.24" rpy="3.14159 0 0" />
+      <geometry>
+        <box size="0.06 0.74 0.08" />
+        </geometry>
+      <material name="white_trim">
+        <color rgba="0.9 0.91 0.89 1" />
+        </material>
+      </visual>
+    <visual name="blade_rung_2_5">
+      <origin xyz="0.43 -4.67815e-16 -3.82" rpy="3.14159 0 0" />
+      <geometry>
+        <box size="0.06 0.74 0.08" />
+        </geometry>
+      <material name="white_trim">
+        <color rgba="0.9 0.91 0.89 1" />
+        </material>
+      </visual>
+    <visual name="blade_stock_3">
+      <origin xyz="0.44 2.1 -3.85764e-16" rpy="4.71239 0 0" />
+      <geometry>
+        <box size="0.12 0.16 4.2" />
+        </geometry>
+      <material name="dark_timber">
+        <color rgba="0.28 0.2 0.12 1" />
+        </material>
+      </visual>
+    <visual name="blade_rail_front_3">
+      <origin xyz="0.43 2.35 -0.32" rpy="4.71239 0 0" />
+      <geometry>
+        <box size="0.08 0.1 3" />
+        </geometry>
+      <material name="timber">
+        <color rgba="0.46 0.33 0.2 1" />
+        </material>
+      </visual>
+    <visual name="blade_rail_rear_3">
+      <origin xyz="0.43 2.35 0.32" rpy="4.71239 0 0" />
+      <geometry>
+        <box size="0.08 0.1 3" />
+        </geometry>
+      <material name="timber">
+        <color rgba="0.46 0.33 0.2 1" />
+        </material>
+      </visual>
+    <visual name="blade_rung_3_0">
+      <origin xyz="0.43 0.92 -1.69001e-16" rpy="4.71239 0 0" />
+      <geometry>
+        <box size="0.06 0.74 0.08" />
+        </geometry>
+      <material name="white_trim">
+        <color rgba="0.9 0.91 0.89 1" />
+        </material>
+      </visual>
+    <visual name="blade_rung_3_1">
+      <origin xyz="0.43 1.5 -2.75546e-16" rpy="4.71239 0 0" />
+      <geometry>
+        <box size="0.06 0.74 0.08" />
+        </geometry>
+      <material name="white_trim">
+        <color rgba="0.9 0.91 0.89 1" />
+        </material>
+      </visual>
+    <visual name="blade_rung_3_2">
+      <origin xyz="0.43 2.08 -3.8209e-16" rpy="4.71239 0 0" />
+      <geometry>
+        <box size="0.06 0.74 0.08" />
+        </geometry>
+      <material name="white_trim">
+        <color rgba="0.9 0.91 0.89 1" />
+        </material>
+      </visual>
+    <visual name="blade_rung_3_3">
+      <origin xyz="0.43 2.66 -4.88634e-16" rpy="4.71239 0 0" />
+      <geometry>
+        <box size="0.06 0.74 0.08" />
+        </geometry>
+      <material name="white_trim">
+        <color rgba="0.9 0.91 0.89 1" />
+        </material>
+      </visual>
+    <visual name="blade_rung_3_4">
+      <origin xyz="0.43 3.24 -5.95178e-16" rpy="4.71239 0 0" />
+      <geometry>
+        <box size="0.06 0.74 0.08" />
+        </geometry>
+      <material name="white_trim">
+        <color rgba="0.9 0.91 0.89 1" />
+        </material>
+      </visual>
+    <visual name="blade_rung_3_5">
+      <origin xyz="0.43 3.82 -7.01723e-16" rpy="4.71239 0 0" />
+      <geometry>
+        <box size="0.06 0.74 0.08" />
+        </geometry>
+      <material name="white_trim">
+        <color rgba="0.9 0.91 0.89 1" />
+        </material>
+      </visual>
+    </link>
+  <joint name="tower_to_cap" type="continuous">
+    <origin xyz="0 0 11.76" rpy="0 0 0" />
+    <parent link="tower" />
+    <child link="cap" />
+    <axis xyz="0 0 1" />
+    <limit effort="30000" velocity="0.35" />
+    </joint>
+  <joint name="cap_to_hub" type="continuous">
+    <origin xyz="2.32 0 1.12" rpy="0 0 0" />
+    <parent link="cap" />
+    <child link="hub" />
+    <axis xyz="1 0 0" />
+    <limit effort="18000" velocity="1.6" />
+    </joint>
+  </robot>

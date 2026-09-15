@@ -1,0 +1,154 @@
+{
+  "summary": {
+    "id": "rec_gear_assemblies_0ab342c2068446c49edc6b63a1fec3e1",
+    "category": "gear",
+    "robot_name": "right_angle_transfer_gearbox",
+    "joint_count": 3,
+    "link_count": 4,
+    "target_link_count": 4,
+    "family": "rec_gear_assemblies",
+    "warnings": [],
+    "diagonal": 1.0421078722284114,
+    "bytes": 6831202
+  },
+  "source": {
+    "dataset": "camvsl/Articraft-10K",
+    "revision": "3c79d5a05bb7cb6bf7bfee5e090176636ee3ac65",
+    "license": "CC-BY-4.0",
+    "url": "https://huggingface.co/datasets/camvsl/Articraft-10K/blob/3c79d5a05bb7cb6bf7bfee5e090176636ee3ac65/rec_gear_assemblies_0ab342c2068446c49edc6b63a1fec3e1.tar.gz",
+    "archive_sha256": "b48e8f612a9b67dafa0728ee1e96fc9ceab2ac6fcc681c172d02714020949f83",
+    "archive": "rec_gear_assemblies_0ab342c2068446c49edc6b63a1fec3e1.tar.gz",
+    "label_status": "Original generated URDF reference; not manually verified or physically validated"
+  },
+  "links": [
+    {
+      "id": "link_000",
+      "name": "housing",
+      "point_file": "inputs/link_000.npz",
+      "faces": 8192,
+      "vertices": 4480,
+      "bounds": [
+        [
+          -0.35250000000000004,
+          -0.237,
+          -0.02
+        ],
+        [
+          0.35250000000000004,
+          0.2495,
+          0.369
+        ]
+      ]
+    },
+    {
+      "id": "link_001",
+      "name": "input_shaft",
+      "point_file": "inputs/link_001.npz",
+      "faces": 1088,
+      "vertices": 550,
+      "bounds": [
+        [
+          -0.227878,
+          -0.10300000000000001,
+          0.03249999999999999
+        ],
+        [
+          -0.132122,
+          -0.006999999999999999,
+          0.4375
+        ]
+      ]
+    },
+    {
+      "id": "link_002",
+      "name": "layshaft",
+      "point_file": "inputs/link_002.npz",
+      "faces": 1984,
+      "vertices": 998,
+      "bounds": [
+        [
+          -0.3450000661153644,
+          -0.059906,
+          0.08212200000032299
+        ],
+        [
+          0.3450000661153644,
+          0.059906,
+          0.23690608264671068
+        ]
+      ]
+    },
+    {
+      "id": "link_003",
+      "name": "output_shaft",
+      "point_file": "inputs/link_003.npz",
+      "faces": 1664,
+      "vertices": 840,
+      "bounds": [
+        [
+          -0.36500006611512825,
+          0.060072000000000014,
+          0.1010719173533974
+        ],
+        [
+          0.4350001322351139,
+          0.211928,
+          0.2529280826466026
+        ]
+      ]
+    }
+  ],
+  "joints": [
+    {
+      "name": "housing_to_input",
+      "type": "continuous",
+      "parent": "link_000",
+      "child": "link_001",
+      "reference_q": 0.0,
+      "mimic": null
+    },
+    {
+      "name": "housing_to_layshaft",
+      "type": "continuous",
+      "parent": "link_000",
+      "child": "link_002",
+      "reference_q": 0.0,
+      "mimic": {
+        "joint": "housing_to_input",
+        "multiplier": "-1"
+      }
+    },
+    {
+      "name": "housing_to_output",
+      "type": "continuous",
+      "parent": "link_000",
+      "child": "link_003",
+      "reference_q": 0.0,
+      "mimic": {
+        "joint": "housing_to_input",
+        "multiplier": "0.777778"
+      }
+    }
+  ],
+  "bounds": [
+    [
+      -0.36500006611512825,
+      -0.237,
+      -0.02
+    ],
+    [
+      0.4350001322351139,
+      0.2495,
+      0.4375
+    ]
+  ],
+  "point_pool_size": 65536,
+  "reference_pose": "Zero position clamped to limits; mimic values propagated",
+  "qc": {
+    "finite_geometry": true,
+    "tree_valid": true,
+    "axis_unit": true,
+    "physical_collision_validation": false,
+    "visual_tessellation": "32 cylinder segments, icosphere subdivision 2"
+  }
+}

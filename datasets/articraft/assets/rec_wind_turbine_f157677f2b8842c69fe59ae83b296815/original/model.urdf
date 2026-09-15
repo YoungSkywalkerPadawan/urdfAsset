@@ -1,0 +1,144 @@
+<robot name="cost_optimized_wind_turbine">
+  <material name="powder_coated_steel">
+    <color rgba="0.86 0.88 0.84 1" />
+    </material>
+  <material name="poured_concrete">
+    <color rgba="0.55 0.55 0.51 1" />
+    </material>
+  <material name="molded_off_white">
+    <color rgba="0.92 0.93 0.88 1" />
+    </material>
+  <material name="dark_seal">
+    <color rgba="0.08 0.09 0.09 1" />
+    </material>
+  <material name="galvanized_steel">
+    <color rgba="0.55 0.58 0.6 1" />
+    </material>
+  <material name="gelcoat_blade_white">
+    <color rgba="0.96 0.97 0.93 1" />
+    </material>
+  <link name="tower">
+    <visual name="tower_shell">
+      <geometry>
+        <mesh filename="assets/meshes/tower_shell.obj" />
+        </geometry>
+      <material name="powder_coated_steel">
+        <color rgba="0.86 0.88 0.84 1" />
+        </material>
+      </visual>
+    <visual name="concrete_skirt">
+      <origin xyz="0 0 0.03" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="1.46" length="0.06" />
+        </geometry>
+      <material name="poured_concrete">
+        <color rgba="0.55 0.55 0.51 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="nacelle">
+    <visual name="nacelle_body">
+      <origin xyz="0.55 0 0.66" rpy="0 1.5708 0" />
+      <geometry>
+        <mesh filename="assets/meshes/nacelle_body.obj" />
+        </geometry>
+      <material name="molded_off_white">
+        <color rgba="0.92 0.93 0.88 1" />
+        </material>
+      </visual>
+    <visual name="yaw_bearing">
+      <origin xyz="0 0 0.125" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.43" length="0.25" />
+        </geometry>
+      <material name="galvanized_steel">
+        <color rgba="0.55 0.58 0.6 1" />
+        </material>
+      </visual>
+    <visual name="bearing_top">
+      <origin xyz="-0.535 0 0.85" rpy="0 0 0" />
+      <geometry>
+        <box size="0.18 0.58 0.09" />
+        </geometry>
+      <material name="galvanized_steel">
+        <color rgba="0.55 0.58 0.6 1" />
+        </material>
+      </visual>
+    <visual name="bearing_bottom">
+      <origin xyz="-0.535 0 0.505" rpy="0 0 0" />
+      <geometry>
+        <box size="0.18 0.58 0.09" />
+        </geometry>
+      <material name="galvanized_steel">
+        <color rgba="0.55 0.58 0.6 1" />
+        </material>
+      </visual>
+    <visual name="bearing_side_0">
+      <origin xyz="-0.535 0.19 0.66" rpy="0 0 0" />
+      <geometry>
+        <box size="0.18 0.09 0.36" />
+        </geometry>
+      <material name="galvanized_steel">
+        <color rgba="0.55 0.58 0.6 1" />
+        </material>
+      </visual>
+    <visual name="bearing_side_1">
+      <origin xyz="-0.535 -0.19 0.66" rpy="0 0 0" />
+      <geometry>
+        <box size="0.18 0.09 0.36" />
+        </geometry>
+      <material name="galvanized_steel">
+        <color rgba="0.55 0.58 0.6 1" />
+        </material>
+      </visual>
+    <visual name="access_panel_seam">
+      <origin xyz="0.44 -0.456 0.68" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.68 0.38" />
+        </geometry>
+      <material name="dark_seal">
+        <color rgba="0.08 0.09 0.09 1" />
+        </material>
+      </visual>
+    <visual name="clamp_band">
+      <origin xyz="-0.27 0 0.315" rpy="0 0 0" />
+      <geometry>
+        <box size="0.055 0.96 0.09" />
+        </geometry>
+      <material name="galvanized_steel">
+        <color rgba="0.55 0.58 0.6 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="rotor">
+    <visual name="rotor_shell">
+      <geometry>
+        <mesh filename="assets/meshes/rotor_shell.obj" />
+        </geometry>
+      <material name="gelcoat_blade_white">
+        <color rgba="0.96 0.97 0.93 1" />
+        </material>
+      </visual>
+    <visual name="rotor_shaft">
+      <origin xyz="0.33 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.11" length="0.32" />
+        </geometry>
+      <material name="galvanized_steel">
+        <color rgba="0.55 0.58 0.6 1" />
+        </material>
+      </visual>
+    </link>
+  <joint name="tower_to_nacelle" type="fixed">
+    <origin xyz="0 0 10.05" rpy="0 0 0" />
+    <parent link="tower" />
+    <child link="nacelle" />
+    </joint>
+  <joint name="nacelle_to_rotor" type="continuous">
+    <origin xyz="-0.95 0 0.66" rpy="0 0 0" />
+    <parent link="nacelle" />
+    <child link="rotor" />
+    <axis xyz="1 0 0" />
+    <limit effort="4500" velocity="1.8" />
+    </joint>
+  </robot>

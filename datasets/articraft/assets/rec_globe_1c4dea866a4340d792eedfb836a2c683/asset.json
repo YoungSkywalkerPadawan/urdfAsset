@@ -1,0 +1,121 @@
+{
+  "summary": {
+    "id": "rec_globe_1c4dea866a4340d792eedfb836a2c683",
+    "category": "globe",
+    "robot_name": "tabletop_globe_with_date_ring",
+    "joint_count": 2,
+    "link_count": 3,
+    "target_link_count": 3,
+    "family": "rec_globe",
+    "warnings": [],
+    "diagonal": 0.7722804283419333,
+    "bytes": 5655730
+  },
+  "source": {
+    "dataset": "camvsl/Articraft-10K",
+    "revision": "3c79d5a05bb7cb6bf7bfee5e090176636ee3ac65",
+    "license": "CC-BY-4.0",
+    "url": "https://huggingface.co/datasets/camvsl/Articraft-10K/blob/3c79d5a05bb7cb6bf7bfee5e090176636ee3ac65/rec_globe_1c4dea866a4340d792eedfb836a2c683.tar.gz",
+    "archive_sha256": "eb779b179d6477e5a05e146f37b6887e2c0b1701343cd5a3e3f2ac18115e39f7",
+    "archive": "rec_globe_1c4dea866a4340d792eedfb836a2c683.tar.gz",
+    "label_status": "Original generated URDF reference; not manually verified or physically validated"
+  },
+  "links": [
+    {
+      "id": "link_000",
+      "name": "stand",
+      "point_file": "inputs/link_000.npz",
+      "faces": 3608,
+      "vertices": 1844,
+      "bounds": [
+        [
+          -0.19,
+          -0.1942,
+          0.0
+        ],
+        [
+          0.2125,
+          0.1942,
+          0.5325
+        ]
+      ]
+    },
+    {
+      "id": "link_001",
+      "name": "globe",
+      "point_file": "inputs/link_001.npz",
+      "faces": 16828,
+      "vertices": 9537,
+      "bounds": [
+        [
+          -0.1517,
+          -0.1517,
+          0.16
+        ],
+        [
+          0.1517,
+          0.1517,
+          0.48
+        ]
+      ]
+    },
+    {
+      "id": "link_002",
+      "name": "date_ring",
+      "point_file": "inputs/link_002.npz",
+      "faces": 1248,
+      "vertices": 672,
+      "bounds": [
+        [
+          -0.182,
+          -0.182,
+          0.316
+        ],
+        [
+          0.182,
+          0.182,
+          0.32495
+        ]
+      ]
+    }
+  ],
+  "joints": [
+    {
+      "name": "globe_axis",
+      "type": "continuous",
+      "parent": "link_000",
+      "child": "link_001",
+      "reference_q": 0.0,
+      "mimic": null
+    },
+    {
+      "name": "date_ring_axis",
+      "type": "continuous",
+      "parent": "link_000",
+      "child": "link_002",
+      "reference_q": 0.0,
+      "mimic": null
+    }
+  ],
+  "bounds": [
+    [
+      -0.19,
+      -0.1942,
+      0.0
+    ],
+    [
+      0.2125,
+      0.1942,
+      0.5325
+    ]
+  ],
+  "point_pool_size": 65536,
+  "reference_pose": "Zero position clamped to limits; mimic values propagated",
+  "qc": {
+    "finite_geometry": true,
+    "tree_valid": true,
+    "axis_unit": true,
+    "physical_collision_validation": false,
+    "visual_tessellation": "32 cylinder segments, icosphere subdivision 2"
+  }
+}

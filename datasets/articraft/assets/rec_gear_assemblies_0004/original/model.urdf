@@ -1,0 +1,261 @@
+<robot name="right_angle_gear_assembly">
+  <material name="steel">
+    <color rgba="0.58 0.6 0.63 1" />
+    </material>
+  <material name="dark_steel">
+    <color rgba="0.33 0.35 0.38 1" />
+    </material>
+  <material name="cast_iron">
+    <color rgba="0.23 0.25 0.28 1" />
+    </material>
+  <material name="brass">
+    <color rgba="0.72 0.59 0.24 1" />
+    </material>
+  <link name="base">
+    <inertial>
+      <origin xyz="0.08 0.005 0.075" rpy="0 0 0" />
+      <mass value="8" />
+      <inertia ixx="0.0262667" ixy="0" ixz="0" iyy="0.0534" iyz="0" izz="0.0496667" />
+      </inertial>
+    <visual name="base_plate">
+      <origin xyz="0.08 0.015 0.005" rpy="0 0 0" />
+      <geometry>
+        <box size="0.24 0.13 0.01" />
+        </geometry>
+      <material name="cast_iron">
+        <color rgba="0.23 0.25 0.28 1" />
+        </material>
+      </visual>
+    <visual name="upright_wall">
+      <origin xyz="0 -0.035 0.085" rpy="0 0 0" />
+      <geometry>
+        <box size="0.06 0.012 0.15" />
+        </geometry>
+      <material name="cast_iron">
+        <color rgba="0.23 0.25 0.28 1" />
+        </material>
+      </visual>
+    <visual name="top_arm">
+      <origin xyz="0 -0.021 0.132" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/top_arm.obj" />
+        </geometry>
+      <material name="cast_iron">
+        <color rgba="0.23 0.25 0.28 1" />
+        </material>
+      </visual>
+    <visual name="input_lower_block">
+      <origin xyz="0 0 0.035" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/input_lower_block.obj" />
+        </geometry>
+      <material name="cast_iron">
+        <color rgba="0.23 0.25 0.28 1" />
+        </material>
+      </visual>
+    <visual name="input_upper_block">
+      <origin xyz="0 0 0.132" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/input_upper_block.obj" />
+        </geometry>
+      <material name="cast_iron">
+        <color rgba="0.23 0.25 0.28 1" />
+        </material>
+      </visual>
+    <visual name="output_inner_block">
+      <origin xyz="0.052 0 0.07" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/output_inner_block.obj" />
+        </geometry>
+      <material name="cast_iron">
+        <color rgba="0.23 0.25 0.28 1" />
+        </material>
+      </visual>
+    <visual name="output_inner_pedestal">
+      <origin xyz="0.052 0 0.031" rpy="0 0 0" />
+      <geometry>
+        <box size="0.028 0.028 0.042" />
+        </geometry>
+      <material name="cast_iron">
+        <color rgba="0.23 0.25 0.28 1" />
+        </material>
+      </visual>
+    <visual name="output_outer_block">
+      <origin xyz="0.158 0 0.07" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/output_outer_block.obj" />
+        </geometry>
+      <material name="cast_iron">
+        <color rgba="0.23 0.25 0.28 1" />
+        </material>
+      </visual>
+    <visual name="output_outer_pedestal">
+      <origin xyz="0.158 0 0.031" rpy="0 0 0" />
+      <geometry>
+        <box size="0.028 0.028 0.042" />
+        </geometry>
+      <material name="cast_iron">
+        <color rgba="0.23 0.25 0.28 1" />
+        </material>
+      </visual>
+    <visual name="reduction_inner_block">
+      <origin xyz="0.084 0.054 0.07" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/reduction_inner_block.obj" />
+        </geometry>
+      <material name="cast_iron">
+        <color rgba="0.23 0.25 0.28 1" />
+        </material>
+      </visual>
+    <visual name="reduction_inner_pedestal">
+      <origin xyz="0.084 0.054 0.0315" rpy="0 0 0" />
+      <geometry>
+        <box size="0.026 0.026 0.043" />
+        </geometry>
+      <material name="cast_iron">
+        <color rgba="0.23 0.25 0.28 1" />
+        </material>
+      </visual>
+    <visual name="reduction_outer_block">
+      <origin xyz="0.146 0.054 0.07" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/reduction_outer_block.obj" />
+        </geometry>
+      <material name="cast_iron">
+        <color rgba="0.23 0.25 0.28 1" />
+        </material>
+      </visual>
+    <visual name="reduction_outer_pedestal">
+      <origin xyz="0.146 0.054 0.0315" rpy="0 0 0" />
+      <geometry>
+        <box size="0.026 0.026 0.043" />
+        </geometry>
+      <material name="cast_iron">
+        <color rgba="0.23 0.25 0.28 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="input_shaft">
+    <inertial>
+      <origin xyz="0 0 0.055" rpy="0 0 0" />
+      <mass value="0.8" />
+      <inertia ixx="0.00359147" ixy="0" ixz="0" iyy="0.00359147" iyz="0" izz="0.0001296" />
+      </inertial>
+    <visual name="input_shaft_shell">
+      <origin xyz="0 0 0.055" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.005" length="0.23" />
+        </geometry>
+      <material name="steel">
+        <color rgba="0.58 0.6 0.63 1" />
+        </material>
+      </visual>
+    <visual name="input_collar">
+      <origin xyz="0 0 0.118" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.013" length="0.012" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.33 0.35 0.38 1" />
+        </material>
+      </visual>
+    <visual name="input_drive_hub">
+      <origin xyz="0 0 0.146" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.012" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.33 0.35 0.38 1" />
+        </material>
+      </visual>
+    <visual name="input_bevel_gear">
+      <origin xyz="0 0 0.002" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/input_bevel.obj" />
+        </geometry>
+      <material name="brass">
+        <color rgba="0.72 0.59 0.24 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="output_shaft">
+    <inertial>
+      <origin xyz="0.0975 0 0" rpy="0 1.5708 0" />
+      <mass value="0.9" />
+      <inertia ixx="0.00213188" ixy="0" ixz="0" iyy="0.00213188" iyz="0" izz="0.00018" />
+      </inertial>
+    <visual name="output_shaft_shell">
+      <origin xyz="0.0975 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.005" length="0.165" />
+        </geometry>
+      <material name="steel">
+        <color rgba="0.58 0.6 0.63 1" />
+        </material>
+      </visual>
+    <visual name="output_bevel_gear">
+      <origin xyz="0.002 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <mesh filename="assets/meshes/output_bevel.obj" />
+        </geometry>
+      <material name="brass">
+        <color rgba="0.72 0.59 0.24 1" />
+        </material>
+      </visual>
+    <visual name="output_spur_pinion">
+      <origin xyz="0.108 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <mesh filename="assets/meshes/output_pinion.obj" />
+        </geometry>
+      <material name="brass">
+        <color rgba="0.72 0.59 0.24 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="reduction_shaft">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 1.5708 0" />
+      <mass value="0.75" />
+      <inertia ixx="0.001143" ixy="0" ixz="0" iyy="0.001143" iyz="0" izz="0.000486" />
+      </inertial>
+    <visual name="reduction_shaft_shell">
+      <origin xyz="0 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.005" length="0.12" />
+        </geometry>
+      <material name="steel">
+        <color rgba="0.58 0.6 0.63 1" />
+        </material>
+      </visual>
+    <visual name="reduction_spur_gear">
+      <origin xyz="0 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <mesh filename="assets/meshes/reduction_spur.obj" />
+        </geometry>
+      <material name="brass">
+        <color rgba="0.72 0.59 0.24 1" />
+        </material>
+      </visual>
+    </link>
+  <joint name="input_spin" type="continuous">
+    <origin xyz="0 0 0.07" rpy="0 0 0" />
+    <parent link="base" />
+    <child link="input_shaft" />
+    <axis xyz="0 0 1" />
+    <limit effort="12" velocity="10" />
+    </joint>
+  <joint name="output_spin" type="continuous">
+    <origin xyz="0 0 0.07" rpy="0 0 0" />
+    <parent link="base" />
+    <child link="output_shaft" />
+    <axis xyz="1 0 0" />
+    <limit effort="12" velocity="10" />
+    </joint>
+  <joint name="reduction_spin" type="continuous">
+    <origin xyz="0.108 0.054 0.07" rpy="0 0 0" />
+    <parent link="base" />
+    <child link="reduction_shaft" />
+    <axis xyz="1 0 0" />
+    <limit effort="9" velocity="8" />
+    </joint>
+  </robot>

@@ -1,0 +1,570 @@
+<robot name="traditional_windmill">
+  <material name="whitewashed_masonry">
+    <color rgba="0.86 0.82 0.72 1" />
+    </material>
+  <material name="weathered_dark_wood">
+    <color rgba="0.27 0.16 0.08 1" />
+    </material>
+  <material name="warm_oak">
+    <color rgba="0.55 0.34 0.16 1" />
+    </material>
+  <material name="aged_thatch">
+    <color rgba="0.5 0.36 0.18 1" />
+    </material>
+  <material name="blackened_iron">
+    <color rgba="0.07 0.07 0.065 1" />
+    </material>
+  <material name="dark_glass">
+    <color rgba="0.04 0.06 0.08 1" />
+    </material>
+  <link name="tower">
+    <visual name="tapered_tower">
+      <geometry>
+        <mesh filename="assets/meshes/tapered_tower.obj" />
+        </geometry>
+      <material name="whitewashed_masonry">
+        <color rgba="0.86 0.82 0.72 1" />
+        </material>
+      </visual>
+    <visual name="cap_curb">
+      <origin xyz="0 0 2.315" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.35" length="0.07" />
+        </geometry>
+      <material name="weathered_dark_wood">
+        <color rgba="0.27 0.16 0.08 1" />
+        </material>
+      </visual>
+    <visual name="yaw_bearing_plate">
+      <origin xyz="0 0 2.3125" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.215" length="0.075" />
+        </geometry>
+      <material name="blackened_iron">
+        <color rgba="0.07 0.07 0.065 1" />
+        </material>
+      </visual>
+    <visual name="arched_door">
+      <origin xyz="0.505 0 0.27" rpy="0 0 0" />
+      <geometry>
+        <box size="0.04 0.245 0.5" />
+        </geometry>
+      <material name="weathered_dark_wood">
+        <color rgba="0.27 0.16 0.08 1" />
+        </material>
+      </visual>
+    <visual name="small_window_0">
+      <origin xyz="0.41 -0.165 1" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.15 0.19" />
+        </geometry>
+      <material name="dark_glass">
+        <color rgba="0.04 0.06 0.08 1" />
+        </material>
+      </visual>
+    <visual name="small_window_1">
+      <origin xyz="0.37 0.16 1.5" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.15 0.19" />
+        </geometry>
+      <material name="dark_glass">
+        <color rgba="0.04 0.06 0.08 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="cap">
+    <visual name="turntable">
+      <origin xyz="0 0 0.045" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.225" length="0.09" />
+        </geometry>
+      <material name="blackened_iron">
+        <color rgba="0.07 0.07 0.065 1" />
+        </material>
+      </visual>
+    <visual name="cap_house">
+      <origin xyz="0.035 0 0.235" rpy="0 0 0" />
+      <geometry>
+        <box size="0.7 0.5 0.35" />
+        </geometry>
+      <material name="warm_oak">
+        <color rgba="0.55 0.34 0.16 1" />
+        </material>
+      </visual>
+    <visual name="roof_panel_0">
+      <origin xyz="0.005 0.13 0.435" rpy="0.38 0 0" />
+      <geometry>
+        <box size="0.78 0.33 0.06" />
+        </geometry>
+      <material name="aged_thatch">
+        <color rgba="0.5 0.36 0.18 1" />
+        </material>
+      </visual>
+    <visual name="roof_panel_1">
+      <origin xyz="0.005 -0.13 0.435" rpy="-0.38 0 0" />
+      <geometry>
+        <box size="0.78 0.33 0.06" />
+        </geometry>
+      <material name="aged_thatch">
+        <color rgba="0.5 0.36 0.18 1" />
+        </material>
+      </visual>
+    <visual name="front_boss">
+      <origin xyz="0.38 0 0.24" rpy="0 0 0" />
+      <geometry>
+        <box size="0.1 0.18 0.18" />
+        </geometry>
+      <material name="weathered_dark_wood">
+        <color rgba="0.27 0.16 0.08 1" />
+        </material>
+      </visual>
+    <visual name="shaft_bearing">
+      <origin xyz="0.35 0 0.24" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.062" length="0.14" />
+        </geometry>
+      <material name="blackened_iron">
+        <color rgba="0.07 0.07 0.065 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="sail_hub">
+    <visual name="hub_drum">
+      <origin xyz="0.02 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.115" length="0.1" />
+        </geometry>
+      <material name="weathered_dark_wood">
+        <color rgba="0.27 0.16 0.08 1" />
+        </material>
+      </visual>
+    <visual name="front_strap">
+      <origin xyz="0.065 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.145" length="0.035" />
+        </geometry>
+      <material name="blackened_iron">
+        <color rgba="0.07 0.07 0.065 1" />
+        </material>
+      </visual>
+    <visual name="nose_cap">
+      <origin xyz="0.12 0 0" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.07" />
+        </geometry>
+      <material name="blackened_iron">
+        <color rgba="0.07 0.07 0.065 1" />
+        </material>
+      </visual>
+    <visual name="blade_0_spar">
+      <origin xyz="0.04 0 0.5625" rpy="-0 0 0" />
+      <geometry>
+        <box size="0.034 0.026 0.955" />
+        </geometry>
+      <material name="warm_oak">
+        <color rgba="0.55 0.34 0.16 1" />
+        </material>
+      </visual>
+    <visual name="blade_0_rail_a">
+      <origin xyz="0.04 -0.09 0.615" rpy="-0 0 0" />
+      <geometry>
+        <box size="0.026 0.018 0.77" />
+        </geometry>
+      <material name="warm_oak">
+        <color rgba="0.55 0.34 0.16 1" />
+        </material>
+      </visual>
+    <visual name="blade_0_rail_b">
+      <origin xyz="0.04 0.09 0.615" rpy="-0 0 0" />
+      <geometry>
+        <box size="0.026 0.018 0.77" />
+        </geometry>
+      <material name="warm_oak">
+        <color rgba="0.55 0.34 0.16 1" />
+        </material>
+      </visual>
+    <visual name="blade_0_batten_0">
+      <origin xyz="0.042 0 0.26" rpy="-1.5708 0 0" />
+      <geometry>
+        <box size="0.024 0.016 0.14" />
+        </geometry>
+      <material name="warm_oak">
+        <color rgba="0.55 0.34 0.16 1" />
+        </material>
+      </visual>
+    <visual name="blade_0_batten_1">
+      <origin xyz="0.042 0 0.43" rpy="-1.5708 0 0" />
+      <geometry>
+        <box size="0.024 0.016 0.1525" />
+        </geometry>
+      <material name="warm_oak">
+        <color rgba="0.55 0.34 0.16 1" />
+        </material>
+      </visual>
+    <visual name="blade_0_batten_2">
+      <origin xyz="0.042 0 0.6" rpy="-1.5708 0 0" />
+      <geometry>
+        <box size="0.024 0.016 0.165" />
+        </geometry>
+      <material name="warm_oak">
+        <color rgba="0.55 0.34 0.16 1" />
+        </material>
+      </visual>
+    <visual name="blade_0_batten_3">
+      <origin xyz="0.042 0 0.77" rpy="-1.5708 0 0" />
+      <geometry>
+        <box size="0.024 0.016 0.1775" />
+        </geometry>
+      <material name="warm_oak">
+        <color rgba="0.55 0.34 0.16 1" />
+        </material>
+      </visual>
+    <visual name="blade_0_batten_4">
+      <origin xyz="0.042 0 0.94" rpy="-1.5708 0 0" />
+      <geometry>
+        <box size="0.024 0.016 0.19" />
+        </geometry>
+      <material name="warm_oak">
+        <color rgba="0.55 0.34 0.16 1" />
+        </material>
+      </visual>
+    <visual name="blade_0_brace_0">
+      <origin xyz="0.044 0 0.4225" rpy="-0.589884 0 0" />
+      <geometry>
+        <box size="0.02 0.014 0.294824" />
+        </geometry>
+      <material name="warm_oak">
+        <color rgba="0.55 0.34 0.16 1" />
+        </material>
+      </visual>
+    <visual name="blade_0_brace_1">
+      <origin xyz="0.044 -0.006 0.6675" rpy="0.622947 0 0" />
+      <geometry>
+        <box size="0.02 0.014 0.301664" />
+        </geometry>
+      <material name="warm_oak">
+        <color rgba="0.55 0.34 0.16 1" />
+        </material>
+      </visual>
+    <visual name="blade_0_brace_2">
+      <origin xyz="0.044 0.003 0.8925" rpy="-0.757836 0 0" />
+      <geometry>
+        <box size="0.02 0.014 0.282243" />
+        </geometry>
+      <material name="warm_oak">
+        <color rgba="0.55 0.34 0.16 1" />
+        </material>
+      </visual>
+    <visual name="blade_1_spar">
+      <origin xyz="0.04 0.5625 3.44432e-17" rpy="-1.5708 0 0" />
+      <geometry>
+        <box size="0.034 0.026 0.955" />
+        </geometry>
+      <material name="warm_oak">
+        <color rgba="0.55 0.34 0.16 1" />
+        </material>
+      </visual>
+    <visual name="blade_1_rail_a">
+      <origin xyz="0.04 0.615 0.09" rpy="-1.5708 0 0" />
+      <geometry>
+        <box size="0.026 0.018 0.77" />
+        </geometry>
+      <material name="warm_oak">
+        <color rgba="0.55 0.34 0.16 1" />
+        </material>
+      </visual>
+    <visual name="blade_1_rail_b">
+      <origin xyz="0.04 0.615 -0.09" rpy="-1.5708 0 0" />
+      <geometry>
+        <box size="0.026 0.018 0.77" />
+        </geometry>
+      <material name="warm_oak">
+        <color rgba="0.55 0.34 0.16 1" />
+        </material>
+      </visual>
+    <visual name="blade_1_batten_0">
+      <origin xyz="0.042 0.26 1.38778e-17" rpy="-3.14159 0 0" />
+      <geometry>
+        <box size="0.024 0.016 0.14" />
+        </geometry>
+      <material name="warm_oak">
+        <color rgba="0.55 0.34 0.16 1" />
+        </material>
+      </visual>
+    <visual name="blade_1_batten_1">
+      <origin xyz="0.042 0.43 2.77556e-17" rpy="-3.14159 0 0" />
+      <geometry>
+        <box size="0.024 0.016 0.1525" />
+        </geometry>
+      <material name="warm_oak">
+        <color rgba="0.55 0.34 0.16 1" />
+        </material>
+      </visual>
+    <visual name="blade_1_batten_2">
+      <origin xyz="0.042 0.6 4.16334e-17" rpy="-3.14159 0 0" />
+      <geometry>
+        <box size="0.024 0.016 0.165" />
+        </geometry>
+      <material name="warm_oak">
+        <color rgba="0.55 0.34 0.16 1" />
+        </material>
+      </visual>
+    <visual name="blade_1_batten_3">
+      <origin xyz="0.042 0.77 4.16334e-17" rpy="-3.14159 0 0" />
+      <geometry>
+        <box size="0.024 0.016 0.1775" />
+        </geometry>
+      <material name="warm_oak">
+        <color rgba="0.55 0.34 0.16 1" />
+        </material>
+      </visual>
+    <visual name="blade_1_batten_4">
+      <origin xyz="0.042 0.94 5.55112e-17" rpy="-3.14159 0 0" />
+      <geometry>
+        <box size="0.024 0.016 0.19" />
+        </geometry>
+      <material name="warm_oak">
+        <color rgba="0.55 0.34 0.16 1" />
+        </material>
+      </visual>
+    <visual name="blade_1_brace_0">
+      <origin xyz="0.044 0.4225 2.08167e-17" rpy="-2.16068 0 0" />
+      <geometry>
+        <box size="0.02 0.014 0.294824" />
+        </geometry>
+      <material name="warm_oak">
+        <color rgba="0.55 0.34 0.16 1" />
+        </material>
+      </visual>
+    <visual name="blade_1_brace_1">
+      <origin xyz="0.044 0.6675 0.006" rpy="-0.947849 0 0" />
+      <geometry>
+        <box size="0.02 0.014 0.301664" />
+        </geometry>
+      <material name="warm_oak">
+        <color rgba="0.55 0.34 0.16 1" />
+        </material>
+      </visual>
+    <visual name="blade_1_brace_2">
+      <origin xyz="0.044 0.8925 -0.003" rpy="-2.32863 0 0" />
+      <geometry>
+        <box size="0.02 0.014 0.282243" />
+        </geometry>
+      <material name="warm_oak">
+        <color rgba="0.55 0.34 0.16 1" />
+        </material>
+      </visual>
+    <visual name="blade_2_spar">
+      <origin xyz="0.04 6.88864e-17 -0.5625" rpy="-3.14159 0 0" />
+      <geometry>
+        <box size="0.034 0.026 0.955" />
+        </geometry>
+      <material name="warm_oak">
+        <color rgba="0.55 0.34 0.16 1" />
+        </material>
+      </visual>
+    <visual name="blade_2_rail_a">
+      <origin xyz="0.04 0.09 -0.615" rpy="-3.14159 0 0" />
+      <geometry>
+        <box size="0.026 0.018 0.77" />
+        </geometry>
+      <material name="warm_oak">
+        <color rgba="0.55 0.34 0.16 1" />
+        </material>
+      </visual>
+    <visual name="blade_2_rail_b">
+      <origin xyz="0.04 -0.09 -0.615" rpy="-3.14159 0 0" />
+      <geometry>
+        <box size="0.026 0.018 0.77" />
+        </geometry>
+      <material name="warm_oak">
+        <color rgba="0.55 0.34 0.16 1" />
+        </material>
+      </visual>
+    <visual name="blade_2_batten_0">
+      <origin xyz="0.042 2.77556e-17 -0.26" rpy="1.5708 0 0" />
+      <geometry>
+        <box size="0.024 0.016 0.14" />
+        </geometry>
+      <material name="warm_oak">
+        <color rgba="0.55 0.34 0.16 1" />
+        </material>
+      </visual>
+    <visual name="blade_2_batten_1">
+      <origin xyz="0.042 5.55112e-17 -0.43" rpy="1.5708 0 0" />
+      <geometry>
+        <box size="0.024 0.016 0.1525" />
+        </geometry>
+      <material name="warm_oak">
+        <color rgba="0.55 0.34 0.16 1" />
+        </material>
+      </visual>
+    <visual name="blade_2_batten_2">
+      <origin xyz="0.042 6.93889e-17 -0.6" rpy="1.5708 0 0" />
+      <geometry>
+        <box size="0.024 0.016 0.165" />
+        </geometry>
+      <material name="warm_oak">
+        <color rgba="0.55 0.34 0.16 1" />
+        </material>
+      </visual>
+    <visual name="blade_2_batten_3">
+      <origin xyz="0.042 9.71445e-17 -0.77" rpy="1.5708 0 0" />
+      <geometry>
+        <box size="0.024 0.016 0.1775" />
+        </geometry>
+      <material name="warm_oak">
+        <color rgba="0.55 0.34 0.16 1" />
+        </material>
+      </visual>
+    <visual name="blade_2_batten_4">
+      <origin xyz="0.042 1.11022e-16 -0.94" rpy="1.5708 0 0" />
+      <geometry>
+        <box size="0.024 0.016 0.19" />
+        </geometry>
+      <material name="warm_oak">
+        <color rgba="0.55 0.34 0.16 1" />
+        </material>
+      </visual>
+    <visual name="blade_2_brace_0">
+      <origin xyz="0.044 5.55112e-17 -0.4225" rpy="2.55171 0 0" />
+      <geometry>
+        <box size="0.02 0.014 0.294824" />
+        </geometry>
+      <material name="warm_oak">
+        <color rgba="0.55 0.34 0.16 1" />
+        </material>
+      </visual>
+    <visual name="blade_2_brace_1">
+      <origin xyz="0.044 0.006 -0.6675" rpy="-2.51865 0 0" />
+      <geometry>
+        <box size="0.02 0.014 0.301664" />
+        </geometry>
+      <material name="warm_oak">
+        <color rgba="0.55 0.34 0.16 1" />
+        </material>
+      </visual>
+    <visual name="blade_2_brace_2">
+      <origin xyz="0.044 -0.003 -0.8925" rpy="2.38376 0 0" />
+      <geometry>
+        <box size="0.02 0.014 0.282243" />
+        </geometry>
+      <material name="warm_oak">
+        <color rgba="0.55 0.34 0.16 1" />
+        </material>
+      </visual>
+    <visual name="blade_3_spar">
+      <origin xyz="0.04 -0.5625 -1.0333e-16" rpy="1.5708 0 0" />
+      <geometry>
+        <box size="0.034 0.026 0.955" />
+        </geometry>
+      <material name="warm_oak">
+        <color rgba="0.55 0.34 0.16 1" />
+        </material>
+      </visual>
+    <visual name="blade_3_rail_a">
+      <origin xyz="0.04 -0.615 -0.09" rpy="1.5708 0 0" />
+      <geometry>
+        <box size="0.026 0.018 0.77" />
+        </geometry>
+      <material name="warm_oak">
+        <color rgba="0.55 0.34 0.16 1" />
+        </material>
+      </visual>
+    <visual name="blade_3_rail_b">
+      <origin xyz="0.04 -0.615 0.09" rpy="1.5708 0 0" />
+      <geometry>
+        <box size="0.026 0.018 0.77" />
+        </geometry>
+      <material name="warm_oak">
+        <color rgba="0.55 0.34 0.16 1" />
+        </material>
+      </visual>
+    <visual name="blade_3_batten_0">
+      <origin xyz="0.042 -0.26 -4.16334e-17" rpy="-0 0 0" />
+      <geometry>
+        <box size="0.024 0.016 0.14" />
+        </geometry>
+      <material name="warm_oak">
+        <color rgba="0.55 0.34 0.16 1" />
+        </material>
+      </visual>
+    <visual name="blade_3_batten_1">
+      <origin xyz="0.042 -0.43 -8.32667e-17" rpy="-0 0 0" />
+      <geometry>
+        <box size="0.024 0.016 0.1525" />
+        </geometry>
+      <material name="warm_oak">
+        <color rgba="0.55 0.34 0.16 1" />
+        </material>
+      </visual>
+    <visual name="blade_3_batten_2">
+      <origin xyz="0.042 -0.6 -1.11022e-16" rpy="-0 0 0" />
+      <geometry>
+        <box size="0.024 0.016 0.165" />
+        </geometry>
+      <material name="warm_oak">
+        <color rgba="0.55 0.34 0.16 1" />
+        </material>
+      </visual>
+    <visual name="blade_3_batten_3">
+      <origin xyz="0.042 -0.77 -1.38778e-16" rpy="-0 0 0" />
+      <geometry>
+        <box size="0.024 0.016 0.1775" />
+        </geometry>
+      <material name="warm_oak">
+        <color rgba="0.55 0.34 0.16 1" />
+        </material>
+      </visual>
+    <visual name="blade_3_batten_4">
+      <origin xyz="0.042 -0.94 -1.66533e-16" rpy="-0 0 0" />
+      <geometry>
+        <box size="0.024 0.016 0.19" />
+        </geometry>
+      <material name="warm_oak">
+        <color rgba="0.55 0.34 0.16 1" />
+        </material>
+      </visual>
+    <visual name="blade_3_brace_0">
+      <origin xyz="0.044 -0.4225 -7.63278e-17" rpy="0.980912 0 0" />
+      <geometry>
+        <box size="0.02 0.014 0.294824" />
+        </geometry>
+      <material name="warm_oak">
+        <color rgba="0.55 0.34 0.16 1" />
+        </material>
+      </visual>
+    <visual name="blade_3_brace_1">
+      <origin xyz="0.044 -0.6675 -0.006" rpy="2.19374 0 0" />
+      <geometry>
+        <box size="0.02 0.014 0.301664" />
+        </geometry>
+      <material name="warm_oak">
+        <color rgba="0.55 0.34 0.16 1" />
+        </material>
+      </visual>
+    <visual name="blade_3_brace_2">
+      <origin xyz="0.044 -0.8925 0.003" rpy="0.81296 0 0" />
+      <geometry>
+        <box size="0.02 0.014 0.282243" />
+        </geometry>
+      <material name="warm_oak">
+        <color rgba="0.55 0.34 0.16 1" />
+        </material>
+      </visual>
+    </link>
+  <joint name="tower_to_cap" type="continuous">
+    <origin xyz="0 0 2.35" rpy="0 0 0" />
+    <parent link="tower" />
+    <child link="cap" />
+    <axis xyz="0 0 1" />
+    <limit effort="30" velocity="1" />
+    </joint>
+  <joint name="cap_to_sail_hub" type="continuous">
+    <origin xyz="0.455 0 0.24" rpy="0 0 0" />
+    <parent link="cap" />
+    <child link="sail_hub" />
+    <axis xyz="1 0 0" />
+    <limit effort="12" velocity="5" />
+    </joint>
+  </robot>

@@ -1,0 +1,140 @@
+<robot name="cost_optimized_turntable">
+  <material name="plinth_abs">
+    <color rgba="0.14 0.14 0.15 1" />
+    </material>
+  <material name="platter_metal">
+    <color rgba="0.68 0.69 0.72 1" />
+    </material>
+  <material name="mat_rubber">
+    <color rgba="0.08 0.08 0.09 1" />
+    </material>
+  <material name="tonearm_finish">
+    <color rgba="0.6 0.62 0.66 1" />
+    </material>
+  <material name="cartridge_dark">
+    <color rgba="0.1 0.1 0.1 1" />
+    </material>
+  <link name="plinth">
+    <inertial>
+      <origin xyz="0 0 0.021" rpy="0 0 0" />
+      <mass value="4.2" />
+      <inertia ixx="0.0459774" ixy="0" ixz="0" iyy="0.0714924" iyz="0" izz="0.116235" />
+      </inertial>
+    <visual name="plinth_shell">
+      <origin xyz="0 0 0.021" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/plinth_shell.obj" />
+        </geometry>
+      <material name="plinth_abs" />
+      </visual>
+    <visual name="bearing_pad">
+      <origin xyz="-0.045 0 0.044" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.028" length="0.004" />
+        </geometry>
+      <material name="plinth_abs" />
+      </visual>
+    <visual name="bearing_collar">
+      <origin xyz="-0.045 0 0.044" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.016" length="0.004" />
+        </geometry>
+      <material name="plinth_abs" />
+      </visual>
+    <visual name="spindle_post">
+      <origin xyz="-0.045 0 0.045" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.003" length="0.012" />
+        </geometry>
+      <material name="platter_metal" />
+      </visual>
+    <visual name="tonearm_pedestal">
+      <origin xyz="0.165 0.05 0.051" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.024" length="0.018" />
+        </geometry>
+      <material name="plinth_abs" />
+      </visual>
+    </link>
+  <link name="platter">
+    <inertial>
+      <origin xyz="0 0 0.00825" rpy="0 0 0" />
+      <mass value="1.4" />
+      <inertia ixx="0.00811816" ixy="0" ixz="0" iyy="0.00811816" iyz="0" izz="0.0161728" />
+      </inertial>
+    <visual name="platter_hub">
+      <geometry>
+        <mesh filename="assets/meshes/platter_body.obj" />
+        </geometry>
+      <material name="platter_metal" />
+      </visual>
+    <visual name="platter_mat">
+      <geometry>
+        <mesh filename="assets/meshes/platter_mat.obj" />
+        </geometry>
+      <material name="mat_rubber" />
+      </visual>
+    </link>
+  <link name="tonearm">
+    <inertial>
+      <origin xyz="-0.0823576 -0.0210293 0.018" rpy="0 0 0" />
+      <mass value="0.32" />
+      <inertia ixx="0.000109333" ixy="0" ixz="0" iyy="0.00177667" iyz="0" izz="0.00180067" />
+      </inertial>
+    <visual name="tonearm_base">
+      <geometry>
+        <mesh filename="assets/meshes/tonearm_base.obj" />
+        </geometry>
+      <material name="tonearm_finish" />
+      </visual>
+    <visual name="pivot_housing">
+      <origin xyz="0 0 0.013" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.015" length="0.016" />
+        </geometry>
+      <material name="tonearm_finish" />
+      </visual>
+    <visual name="arm_tube">
+      <origin xyz="-0.0993135 -0.0253589 0.018" rpy="0 1.5708 3.39159" />
+      <geometry>
+        <cylinder radius="0.006" length="0.205" />
+        </geometry>
+      <material name="tonearm_finish" />
+      </visual>
+    <visual name="headshell">
+      <origin xyz="-0.203472 -0.0519548 0.014" rpy="0 0 3.39159" />
+      <geometry>
+        <box size="0.024 0.018 0.006" />
+        </geometry>
+      <material name="tonearm_finish" />
+      </visual>
+    <visual name="cartridge_body">
+      <origin xyz="-0.21413 -0.0546763 0.015" rpy="0 0 3.39159" />
+      <geometry>
+        <box size="0.014 0.014 0.01" />
+        </geometry>
+      <material name="cartridge_dark" />
+      </visual>
+    <visual name="counterweight">
+      <origin xyz="0.0193782 0.00494808 0.019" rpy="0 1.5708 3.39159" />
+      <geometry>
+        <cylinder radius="0.014" length="0.03" />
+        </geometry>
+      <material name="tonearm_finish" />
+      </visual>
+    </link>
+  <joint name="platter_spin" type="continuous">
+    <origin xyz="-0.045 0 0.046" rpy="0 0 0" />
+    <parent link="plinth" />
+    <child link="platter" />
+    <axis xyz="0 0 1" />
+    <limit effort="0.5" velocity="12" />
+    </joint>
+  <joint name="tonearm_swivel" type="revolute">
+    <origin xyz="0.165 0.05 0.06" rpy="0 0 0" />
+    <parent link="plinth" />
+    <child link="tonearm" />
+    <axis xyz="0 0 1" />
+    <limit effort="1" velocity="1" lower="-0.3" upper="0.35" />
+    </joint>
+  </robot>

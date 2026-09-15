@@ -1,0 +1,736 @@
+<robot name="manual_wheelchair">
+  <material name="frame_paint">
+    <color rgba="0.19 0.21 0.24 1" />
+    </material>
+  <material name="upholstery">
+    <color rgba="0.11 0.12 0.14 1" />
+    </material>
+  <material name="tire_rubber">
+    <color rgba="0.05 0.05 0.05 1" />
+    </material>
+  <material name="rim_metal">
+    <color rgba="0.78 0.8 0.83 1" />
+    </material>
+  <material name="dark_metal">
+    <color rgba="0.37 0.38 0.4 1" />
+    </material>
+  <material name="footplate_finish">
+    <color rgba="0.28 0.29 0.31 1" />
+    </material>
+  <link name="chair_frame">
+    <inertial>
+      <origin xyz="0 0.12 0.1" rpy="0 0 0" />
+      <mass value="18" />
+      <inertia ixx="2.7222" ixy="0" ixz="0" iyy="1.9392" iyz="0" izz="2.3382" />
+      </inertial>
+    <visual name="left_side_frame">
+      <geometry>
+        <mesh filename="assets/meshes/left_side_frame.obj" />
+        </geometry>
+      <material name="frame_paint">
+        <color rgba="0.19 0.21 0.24 1" />
+        </material>
+      </visual>
+    <visual name="right_side_frame">
+      <geometry>
+        <mesh filename="assets/meshes/right_side_frame.obj" />
+        </geometry>
+      <material name="frame_paint">
+        <color rgba="0.19 0.21 0.24 1" />
+        </material>
+      </visual>
+    <visual name="left_rear_strut">
+      <geometry>
+        <mesh filename="assets/meshes/left_rear_strut.obj" />
+        </geometry>
+      <material name="frame_paint">
+        <color rgba="0.19 0.21 0.24 1" />
+        </material>
+      </visual>
+    <visual name="right_rear_strut">
+      <geometry>
+        <mesh filename="assets/meshes/right_rear_strut.obj" />
+        </geometry>
+      <material name="frame_paint">
+        <color rgba="0.19 0.21 0.24 1" />
+        </material>
+      </visual>
+    <visual name="left_hanger">
+      <geometry>
+        <mesh filename="assets/meshes/left_hanger.obj" />
+        </geometry>
+      <material name="frame_paint">
+        <color rgba="0.19 0.21 0.24 1" />
+        </material>
+      </visual>
+    <visual name="right_hanger">
+      <geometry>
+        <mesh filename="assets/meshes/right_hanger.obj" />
+        </geometry>
+      <material name="frame_paint">
+        <color rgba="0.19 0.21 0.24 1" />
+        </material>
+      </visual>
+    <visual name="seat_sling">
+      <origin xyz="0 0.045 0.195" rpy="0 0 0" />
+      <geometry>
+        <box size="0.43 0.37 0.02" />
+        </geometry>
+      <material name="upholstery">
+        <color rgba="0.11 0.12 0.14 1" />
+        </material>
+      </visual>
+    <visual name="backrest_panel">
+      <origin xyz="0 -0.205 0.3" rpy="0 0 0" />
+      <geometry>
+        <box size="0.492 0.04 0.32" />
+        </geometry>
+      <material name="upholstery">
+        <color rgba="0.11 0.12 0.14 1" />
+        </material>
+      </visual>
+    <visual name="backrest_crossbar">
+      <origin xyz="0 -0.165 0.218" rpy="0 0 0" />
+      <geometry>
+        <box size="0.486 0.04 0.04" />
+        </geometry>
+      <material name="frame_paint">
+        <color rgba="0.19 0.21 0.24 1" />
+        </material>
+      </visual>
+    <visual name="front_seat_crossbar">
+      <origin xyz="0 0.105 0.195" rpy="0 0 0" />
+      <geometry>
+        <box size="0.402 0.028 0.03" />
+        </geometry>
+      <material name="frame_paint">
+        <color rgba="0.19 0.21 0.24 1" />
+        </material>
+      </visual>
+    <visual name="legrest_crossbar">
+      <origin xyz="0 0.278 0.115" rpy="0 0 0" />
+      <geometry>
+        <box size="0.444 0.04 0.034" />
+        </geometry>
+      <material name="frame_paint">
+        <color rgba="0.19 0.21 0.24 1" />
+        </material>
+      </visual>
+    <visual name="left_axle_block">
+      <origin xyz="0.286 -0.012 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.09 0.11 0.1" />
+        </geometry>
+      <material name="dark_metal">
+        <color rgba="0.37 0.38 0.4 1" />
+        </material>
+      </visual>
+    <visual name="right_axle_block">
+      <origin xyz="-0.286 -0.012 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.09 0.11 0.1" />
+        </geometry>
+      <material name="dark_metal">
+        <color rgba="0.37 0.38 0.4 1" />
+        </material>
+      </visual>
+    <visual name="left_caster_receiver">
+      <origin xyz="0.23 0.422 -0.001" rpy="0 0 0" />
+      <geometry>
+        <box size="0.1 0.07 0.036" />
+        </geometry>
+      <material name="dark_metal">
+        <color rgba="0.37 0.38 0.4 1" />
+        </material>
+      </visual>
+    <visual name="right_caster_receiver">
+      <origin xyz="-0.23 0.422 -0.001" rpy="0 0 0" />
+      <geometry>
+        <box size="0.1 0.07 0.036" />
+        </geometry>
+      <material name="dark_metal">
+        <color rgba="0.37 0.38 0.4 1" />
+        </material>
+      </visual>
+    <visual name="left_footplate">
+      <origin xyz="0.092 0.458 -0.148" rpy="0 0 0" />
+      <geometry>
+        <box size="0.118 0.105 0.018" />
+        </geometry>
+      <material name="footplate_finish">
+        <color rgba="0.28 0.29 0.31 1" />
+        </material>
+      </visual>
+    <visual name="right_footplate">
+      <origin xyz="-0.092 0.458 -0.148" rpy="0 0 0" />
+      <geometry>
+        <box size="0.118 0.105 0.018" />
+        </geometry>
+      <material name="footplate_finish">
+        <color rgba="0.28 0.29 0.31 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="left_rear_wheel">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 1.5708 0" />
+      <mass value="4.8" />
+      <inertia ixx="0.114246" ixy="0" ixz="0" iyy="0.114246" iyz="0" izz="0.227674" />
+      </inertial>
+    <visual name="tire">
+      <geometry>
+        <mesh filename="assets/meshes/left_rear_wheel_tire.obj" />
+        </geometry>
+      <material name="tire_rubber">
+        <color rgba="0.05 0.05 0.05 1" />
+        </material>
+      </visual>
+    <visual name="rim">
+      <geometry>
+        <mesh filename="assets/meshes/left_rear_wheel_rim.obj" />
+        </geometry>
+      <material name="rim_metal">
+        <color rgba="0.78 0.8 0.83 1" />
+        </material>
+      </visual>
+    <visual name="handrim">
+      <origin xyz="0.03 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/left_rear_wheel_handrim.obj" />
+        </geometry>
+      <material name="rim_metal">
+        <color rgba="0.78 0.8 0.83 1" />
+        </material>
+      </visual>
+    <visual name="hub">
+      <origin xyz="0 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.03" length="0.072" />
+        </geometry>
+      <material name="dark_metal">
+        <color rgba="0.37 0.38 0.4 1" />
+        </material>
+      </visual>
+    <visual name="axle_sleeve">
+      <origin xyz="0 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.017" length="0.072" />
+        </geometry>
+      <material name="rim_metal">
+        <color rgba="0.78 0.8 0.83 1" />
+        </material>
+      </visual>
+    <visual name="spoke_0">
+      <origin xyz="0 0.135876 0.0508969" rpy="0 1.137 1.5708" />
+      <geometry>
+        <cylinder radius="0.0032" length="0.242184" />
+        </geometry>
+      <material name="rim_metal">
+        <color rgba="0.78 0.8 0.83 1" />
+        </material>
+      </visual>
+    <visual name="spoke_1">
+      <origin xyz="0 0.0600893 0.132068" rpy="0 0.351604 1.5708" />
+      <geometry>
+        <cylinder radius="0.0032" length="0.242184" />
+        </geometry>
+      <material name="rim_metal">
+        <color rgba="0.78 0.8 0.83 1" />
+        </material>
+      </visual>
+    <visual name="spoke_2">
+      <origin xyz="0 -0.0508969 0.135876" rpy="0 0.433794 -1.5708" />
+      <geometry>
+        <cylinder radius="0.0032" length="0.242184" />
+        </geometry>
+      <material name="rim_metal">
+        <color rgba="0.78 0.8 0.83 1" />
+        </material>
+      </visual>
+    <visual name="spoke_3">
+      <origin xyz="0 -0.132068 0.0600893" rpy="0 1.21919 -1.5708" />
+      <geometry>
+        <cylinder radius="0.0032" length="0.242184" />
+        </geometry>
+      <material name="rim_metal">
+        <color rgba="0.78 0.8 0.83 1" />
+        </material>
+      </visual>
+    <visual name="spoke_4">
+      <origin xyz="0 -0.135876 -0.0508969" rpy="0 2.00459 -1.5708" />
+      <geometry>
+        <cylinder radius="0.0032" length="0.242184" />
+        </geometry>
+      <material name="rim_metal">
+        <color rgba="0.78 0.8 0.83 1" />
+        </material>
+      </visual>
+    <visual name="spoke_5">
+      <origin xyz="0 -0.0600893 -0.132068" rpy="0 2.78999 -1.5708" />
+      <geometry>
+        <cylinder radius="0.0032" length="0.242184" />
+        </geometry>
+      <material name="rim_metal">
+        <color rgba="0.78 0.8 0.83 1" />
+        </material>
+      </visual>
+    <visual name="spoke_6">
+      <origin xyz="0 0.0508969 -0.135876" rpy="0 2.7078 1.5708" />
+      <geometry>
+        <cylinder radius="0.0032" length="0.242184" />
+        </geometry>
+      <material name="rim_metal">
+        <color rgba="0.78 0.8 0.83 1" />
+        </material>
+      </visual>
+    <visual name="spoke_7">
+      <origin xyz="0 0.132068 -0.0600893" rpy="0 1.9224 1.5708" />
+      <geometry>
+        <cylinder radius="0.0032" length="0.242184" />
+        </geometry>
+      <material name="rim_metal">
+        <color rgba="0.78 0.8 0.83 1" />
+        </material>
+      </visual>
+    <visual name="handrim_strut_0">
+      <origin xyz="0.02 0.196576 0.196576" rpy="0 1.11327 0.514806" />
+      <geometry>
+        <cylinder radius="0.003" length="0.0256125" />
+        </geometry>
+      <material name="rim_metal">
+        <color rgba="0.78 0.8 0.83 1" />
+        </material>
+      </visual>
+    <visual name="handrim_strut_1">
+      <origin xyz="0.02 -0.196576 0.196576" rpy="0 1.11327 -0.514806" />
+      <geometry>
+        <cylinder radius="0.003" length="0.0256125" />
+        </geometry>
+      <material name="rim_metal">
+        <color rgba="0.78 0.8 0.83 1" />
+        </material>
+      </visual>
+    <visual name="handrim_strut_2">
+      <origin xyz="0.02 -0.196576 -0.196576" rpy="0 2.02832 -0.514806" />
+      <geometry>
+        <cylinder radius="0.003" length="0.0256125" />
+        </geometry>
+      <material name="rim_metal">
+        <color rgba="0.78 0.8 0.83 1" />
+        </material>
+      </visual>
+    <visual name="handrim_strut_3">
+      <origin xyz="0.02 0.196576 -0.196576" rpy="0 2.02832 0.514806" />
+      <geometry>
+        <cylinder radius="0.003" length="0.0256125" />
+        </geometry>
+      <material name="rim_metal">
+        <color rgba="0.78 0.8 0.83 1" />
+        </material>
+      </visual>
+    <visual name="quick_release_button">
+      <origin xyz="0.044 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.034" />
+        </geometry>
+      <material name="dark_metal">
+        <color rgba="0.37 0.38 0.4 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="right_rear_wheel">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 1.5708 0" />
+      <mass value="4.8" />
+      <inertia ixx="0.114246" ixy="0" ixz="0" iyy="0.114246" iyz="0" izz="0.227674" />
+      </inertial>
+    <visual name="tire">
+      <geometry>
+        <mesh filename="assets/meshes/right_rear_wheel_tire.obj" />
+        </geometry>
+      <material name="tire_rubber">
+        <color rgba="0.05 0.05 0.05 1" />
+        </material>
+      </visual>
+    <visual name="rim">
+      <geometry>
+        <mesh filename="assets/meshes/right_rear_wheel_rim.obj" />
+        </geometry>
+      <material name="rim_metal">
+        <color rgba="0.78 0.8 0.83 1" />
+        </material>
+      </visual>
+    <visual name="handrim">
+      <origin xyz="-0.03 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/right_rear_wheel_handrim.obj" />
+        </geometry>
+      <material name="rim_metal">
+        <color rgba="0.78 0.8 0.83 1" />
+        </material>
+      </visual>
+    <visual name="hub">
+      <origin xyz="0 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.03" length="0.072" />
+        </geometry>
+      <material name="dark_metal">
+        <color rgba="0.37 0.38 0.4 1" />
+        </material>
+      </visual>
+    <visual name="axle_sleeve">
+      <origin xyz="0 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.017" length="0.072" />
+        </geometry>
+      <material name="rim_metal">
+        <color rgba="0.78 0.8 0.83 1" />
+        </material>
+      </visual>
+    <visual name="spoke_0">
+      <origin xyz="0 0.135876 0.0508969" rpy="0 1.137 1.5708" />
+      <geometry>
+        <cylinder radius="0.0032" length="0.242184" />
+        </geometry>
+      <material name="rim_metal">
+        <color rgba="0.78 0.8 0.83 1" />
+        </material>
+      </visual>
+    <visual name="spoke_1">
+      <origin xyz="0 0.0600893 0.132068" rpy="0 0.351604 1.5708" />
+      <geometry>
+        <cylinder radius="0.0032" length="0.242184" />
+        </geometry>
+      <material name="rim_metal">
+        <color rgba="0.78 0.8 0.83 1" />
+        </material>
+      </visual>
+    <visual name="spoke_2">
+      <origin xyz="0 -0.0508969 0.135876" rpy="0 0.433794 -1.5708" />
+      <geometry>
+        <cylinder radius="0.0032" length="0.242184" />
+        </geometry>
+      <material name="rim_metal">
+        <color rgba="0.78 0.8 0.83 1" />
+        </material>
+      </visual>
+    <visual name="spoke_3">
+      <origin xyz="0 -0.132068 0.0600893" rpy="0 1.21919 -1.5708" />
+      <geometry>
+        <cylinder radius="0.0032" length="0.242184" />
+        </geometry>
+      <material name="rim_metal">
+        <color rgba="0.78 0.8 0.83 1" />
+        </material>
+      </visual>
+    <visual name="spoke_4">
+      <origin xyz="0 -0.135876 -0.0508969" rpy="0 2.00459 -1.5708" />
+      <geometry>
+        <cylinder radius="0.0032" length="0.242184" />
+        </geometry>
+      <material name="rim_metal">
+        <color rgba="0.78 0.8 0.83 1" />
+        </material>
+      </visual>
+    <visual name="spoke_5">
+      <origin xyz="0 -0.0600893 -0.132068" rpy="0 2.78999 -1.5708" />
+      <geometry>
+        <cylinder radius="0.0032" length="0.242184" />
+        </geometry>
+      <material name="rim_metal">
+        <color rgba="0.78 0.8 0.83 1" />
+        </material>
+      </visual>
+    <visual name="spoke_6">
+      <origin xyz="0 0.0508969 -0.135876" rpy="0 2.7078 1.5708" />
+      <geometry>
+        <cylinder radius="0.0032" length="0.242184" />
+        </geometry>
+      <material name="rim_metal">
+        <color rgba="0.78 0.8 0.83 1" />
+        </material>
+      </visual>
+    <visual name="spoke_7">
+      <origin xyz="0 0.132068 -0.0600893" rpy="0 1.9224 1.5708" />
+      <geometry>
+        <cylinder radius="0.0032" length="0.242184" />
+        </geometry>
+      <material name="rim_metal">
+        <color rgba="0.78 0.8 0.83 1" />
+        </material>
+      </visual>
+    <visual name="handrim_strut_0">
+      <origin xyz="-0.02 0.196576 0.196576" rpy="0 1.11327 2.62679" />
+      <geometry>
+        <cylinder radius="0.003" length="0.0256125" />
+        </geometry>
+      <material name="rim_metal">
+        <color rgba="0.78 0.8 0.83 1" />
+        </material>
+      </visual>
+    <visual name="handrim_strut_1">
+      <origin xyz="-0.02 -0.196576 0.196576" rpy="0 1.11327 -2.62679" />
+      <geometry>
+        <cylinder radius="0.003" length="0.0256125" />
+        </geometry>
+      <material name="rim_metal">
+        <color rgba="0.78 0.8 0.83 1" />
+        </material>
+      </visual>
+    <visual name="handrim_strut_2">
+      <origin xyz="-0.02 -0.196576 -0.196576" rpy="0 2.02832 -2.62679" />
+      <geometry>
+        <cylinder radius="0.003" length="0.0256125" />
+        </geometry>
+      <material name="rim_metal">
+        <color rgba="0.78 0.8 0.83 1" />
+        </material>
+      </visual>
+    <visual name="handrim_strut_3">
+      <origin xyz="-0.02 0.196576 -0.196576" rpy="0 2.02832 2.62679" />
+      <geometry>
+        <cylinder radius="0.003" length="0.0256125" />
+        </geometry>
+      <material name="rim_metal">
+        <color rgba="0.78 0.8 0.83 1" />
+        </material>
+      </visual>
+    <visual name="quick_release_button">
+      <origin xyz="-0.044 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.034" />
+        </geometry>
+      <material name="dark_metal">
+        <color rgba="0.37 0.38 0.4 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="left_caster_swivel">
+    <inertial>
+      <origin xyz="0 -0.014 -0.126" rpy="0 0 0" />
+      <mass value="1.2" />
+      <inertia ixx="0.0081" ixy="0" ixz="0" iyy="0.0081" iyz="0" izz="0.00162" />
+      </inertial>
+    <visual name="stem">
+      <origin xyz="0 0 -0.084" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.102" />
+        </geometry>
+      <material name="dark_metal">
+        <color rgba="0.37 0.38 0.4 1" />
+        </material>
+      </visual>
+    <visual name="top_collar">
+      <origin xyz="0 0 -0.044" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.026" length="0.024" />
+        </geometry>
+      <material name="dark_metal">
+        <color rgba="0.37 0.38 0.4 1" />
+        </material>
+      </visual>
+    <visual name="fork_crown">
+      <origin xyz="0 -0.004 -0.094" rpy="0 0 0" />
+      <geometry>
+        <box size="0.082 0.05 0.032" />
+        </geometry>
+      <material name="dark_metal">
+        <color rgba="0.37 0.38 0.4 1" />
+        </material>
+      </visual>
+    <visual name="outer_fork_leg">
+      <origin xyz="0.034 -0.028 -0.162" rpy="0 0 0" />
+      <geometry>
+        <box size="0.016 0.058 0.17" />
+        </geometry>
+      <material name="dark_metal">
+        <color rgba="0.37 0.38 0.4 1" />
+        </material>
+      </visual>
+    <visual name="inner_fork_leg">
+      <origin xyz="-0.034 -0.028 -0.162" rpy="0 0 0" />
+      <geometry>
+        <box size="0.016 0.058 0.17" />
+        </geometry>
+      <material name="dark_metal">
+        <color rgba="0.37 0.38 0.4 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="right_caster_swivel">
+    <inertial>
+      <origin xyz="0 -0.014 -0.126" rpy="0 0 0" />
+      <mass value="1.2" />
+      <inertia ixx="0.0081" ixy="0" ixz="0" iyy="0.0081" iyz="0" izz="0.00162" />
+      </inertial>
+    <visual name="stem">
+      <origin xyz="0 0 -0.084" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.102" />
+        </geometry>
+      <material name="dark_metal">
+        <color rgba="0.37 0.38 0.4 1" />
+        </material>
+      </visual>
+    <visual name="top_collar">
+      <origin xyz="0 0 -0.044" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.026" length="0.024" />
+        </geometry>
+      <material name="dark_metal">
+        <color rgba="0.37 0.38 0.4 1" />
+        </material>
+      </visual>
+    <visual name="fork_crown">
+      <origin xyz="0 -0.004 -0.094" rpy="0 0 0" />
+      <geometry>
+        <box size="0.082 0.05 0.032" />
+        </geometry>
+      <material name="dark_metal">
+        <color rgba="0.37 0.38 0.4 1" />
+        </material>
+      </visual>
+    <visual name="outer_fork_leg">
+      <origin xyz="0.034 -0.028 -0.162" rpy="0 0 0" />
+      <geometry>
+        <box size="0.016 0.058 0.17" />
+        </geometry>
+      <material name="dark_metal">
+        <color rgba="0.37 0.38 0.4 1" />
+        </material>
+      </visual>
+    <visual name="inner_fork_leg">
+      <origin xyz="-0.034 -0.028 -0.162" rpy="0 0 0" />
+      <geometry>
+        <box size="0.016 0.058 0.17" />
+        </geometry>
+      <material name="dark_metal">
+        <color rgba="0.37 0.38 0.4 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="left_caster_wheel">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 1.5708 0" />
+      <mass value="0.8" />
+      <inertia ixx="0.0012128" ixy="0" ixz="0" iyy="0.0012128" iyz="0" izz="0.0021904" />
+      </inertial>
+    <visual name="tire">
+      <geometry>
+        <mesh filename="assets/meshes/left_caster_wheel_tire.obj" />
+        </geometry>
+      <material name="tire_rubber">
+        <color rgba="0.05 0.05 0.05 1" />
+        </material>
+      </visual>
+    <visual name="rim">
+      <geometry>
+        <mesh filename="assets/meshes/left_caster_wheel_rim.obj" />
+        </geometry>
+      <material name="rim_metal">
+        <color rgba="0.78 0.8 0.83 1" />
+        </material>
+      </visual>
+    <visual name="wheel_disc">
+      <origin xyz="0 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.048" length="0.014" />
+        </geometry>
+      <material name="rim_metal">
+        <color rgba="0.78 0.8 0.83 1" />
+        </material>
+      </visual>
+    <visual name="hub">
+      <origin xyz="0 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.052" />
+        </geometry>
+      <material name="dark_metal">
+        <color rgba="0.37 0.38 0.4 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="right_caster_wheel">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 1.5708 0" />
+      <mass value="0.8" />
+      <inertia ixx="0.0012128" ixy="0" ixz="0" iyy="0.0012128" iyz="0" izz="0.0021904" />
+      </inertial>
+    <visual name="tire">
+      <geometry>
+        <mesh filename="assets/meshes/right_caster_wheel_tire.obj" />
+        </geometry>
+      <material name="tire_rubber">
+        <color rgba="0.05 0.05 0.05 1" />
+        </material>
+      </visual>
+    <visual name="rim">
+      <geometry>
+        <mesh filename="assets/meshes/right_caster_wheel_rim.obj" />
+        </geometry>
+      <material name="rim_metal">
+        <color rgba="0.78 0.8 0.83 1" />
+        </material>
+      </visual>
+    <visual name="wheel_disc">
+      <origin xyz="0 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.048" length="0.014" />
+        </geometry>
+      <material name="rim_metal">
+        <color rgba="0.78 0.8 0.83 1" />
+        </material>
+      </visual>
+    <visual name="hub">
+      <origin xyz="0 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.052" />
+        </geometry>
+      <material name="dark_metal">
+        <color rgba="0.37 0.38 0.4 1" />
+        </material>
+      </visual>
+    </link>
+  <joint name="left_rear_wheel_spin_joint" type="continuous">
+    <origin xyz="0.367 0 0" rpy="0 0 0" />
+    <parent link="chair_frame" />
+    <child link="left_rear_wheel" />
+    <axis xyz="1 0 0" />
+    <limit effort="18" velocity="25" />
+    </joint>
+  <joint name="right_rear_wheel_spin_joint" type="continuous">
+    <origin xyz="-0.367 0 0" rpy="0 0 0" />
+    <parent link="chair_frame" />
+    <child link="right_rear_wheel" />
+    <axis xyz="1 0 0" />
+    <limit effort="18" velocity="25" />
+    </joint>
+  <joint name="left_caster_swivel_joint" type="revolute">
+    <origin xyz="0.236 0.424 0.013" rpy="0 0 0" />
+    <parent link="chair_frame" />
+    <child link="left_caster_swivel" />
+    <axis xyz="0 0 1" />
+    <limit effort="6" velocity="6" lower="-1.2" upper="1.2" />
+    </joint>
+  <joint name="right_caster_swivel_joint" type="revolute">
+    <origin xyz="-0.236 0.424 0.013" rpy="0 0 0" />
+    <parent link="chair_frame" />
+    <child link="right_caster_swivel" />
+    <axis xyz="0 0 1" />
+    <limit effort="6" velocity="6" lower="-1.2" upper="1.2" />
+    </joint>
+  <joint name="left_caster_wheel_spin_joint" type="continuous">
+    <origin xyz="0 -0.028 -0.234" rpy="0 0 0" />
+    <parent link="left_caster_swivel" />
+    <child link="left_caster_wheel" />
+    <axis xyz="1 0 0" />
+    <limit effort="3" velocity="20" />
+    </joint>
+  <joint name="right_caster_wheel_spin_joint" type="continuous">
+    <origin xyz="0 -0.028 -0.234" rpy="0 0 0" />
+    <parent link="right_caster_swivel" />
+    <child link="right_caster_wheel" />
+    <axis xyz="1 0 0" />
+    <limit effort="3" velocity="20" />
+    </joint>
+  </robot>

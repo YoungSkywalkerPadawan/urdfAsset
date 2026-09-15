@@ -1,0 +1,775 @@
+<robot name="modern_clock_tower">
+  <material name="concrete">
+    <color rgba="0.63 0.63 0.62 1" />
+    </material>
+  <material name="steel">
+    <color rgba="0.34 0.37 0.4 1" />
+    </material>
+  <material name="dark_steel">
+    <color rgba="0.16 0.18 0.2 1" />
+    </material>
+  <material name="glass">
+    <color rgba="0.58 0.78 0.88 0.28" />
+    </material>
+  <material name="dial_white">
+    <color rgba="0.96 0.97 0.98 1" />
+    </material>
+  <material name="marker_black">
+    <color rgba="0.11 0.12 0.13 1" />
+    </material>
+  <material name="minute_steel">
+    <color rgba="0.78 0.81 0.83 1" />
+    </material>
+  <material name="hour_graphite">
+    <color rgba="0.09 0.1 0.11 1" />
+    </material>
+  <link name="tower">
+    <inertial>
+      <origin xyz="0 0 8.1" rpy="0 0 0" />
+      <mass value="6000" />
+      <inertia ixx="141800" ixy="0" ixz="0" iyy="141800" iyz="0" izz="21160" />
+      </inertial>
+    <visual name="base_plinth">
+      <origin xyz="0 0 0.425" rpy="0 0 0" />
+      <geometry>
+        <box size="4.6 4.6 0.85" />
+        </geometry>
+      <material name="concrete">
+        <color rgba="0.63 0.63 0.62 1" />
+        </material>
+      </visual>
+    <visual name="upper_podium">
+      <origin xyz="0 0 1.075" rpy="0 0 0" />
+      <geometry>
+        <box size="3.4 3.4 0.45" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.16 0.18 0.2 1" />
+        </material>
+      </visual>
+    <visual name="column_nx_ny">
+      <origin xyz="-1.05 -1.05 7.5" rpy="0 0 0" />
+      <geometry>
+        <box size="0.2 0.2 12.4" />
+        </geometry>
+      <material name="steel">
+        <color rgba="0.34 0.37 0.4 1" />
+        </material>
+      </visual>
+    <visual name="column_nx_py">
+      <origin xyz="-1.05 1.05 7.5" rpy="0 0 0" />
+      <geometry>
+        <box size="0.2 0.2 12.4" />
+        </geometry>
+      <material name="steel">
+        <color rgba="0.34 0.37 0.4 1" />
+        </material>
+      </visual>
+    <visual name="column_px_ny">
+      <origin xyz="1.05 -1.05 7.5" rpy="0 0 0" />
+      <geometry>
+        <box size="0.2 0.2 12.4" />
+        </geometry>
+      <material name="steel">
+        <color rgba="0.34 0.37 0.4 1" />
+        </material>
+      </visual>
+    <visual name="column_px_py">
+      <origin xyz="1.05 1.05 7.5" rpy="0 0 0" />
+      <geometry>
+        <box size="0.2 0.2 12.4" />
+        </geometry>
+      <material name="steel">
+        <color rgba="0.34 0.37 0.4 1" />
+        </material>
+      </visual>
+    <visual name="north_glass">
+      <origin xyz="0 1.05 7.35" rpy="0 0 0" />
+      <geometry>
+        <box size="1.9 0.04 12.1" />
+        </geometry>
+      <material name="glass">
+        <color rgba="0.58 0.78 0.88 0.28" />
+        </material>
+      </visual>
+    <visual name="south_glass">
+      <origin xyz="0 -1.05 7.35" rpy="0 0 0" />
+      <geometry>
+        <box size="1.9 0.04 12.1" />
+        </geometry>
+      <material name="glass">
+        <color rgba="0.58 0.78 0.88 0.28" />
+        </material>
+      </visual>
+    <visual name="east_glass">
+      <origin xyz="1.05 0 7.35" rpy="0 0 0" />
+      <geometry>
+        <box size="0.04 1.9 12.1" />
+        </geometry>
+      <material name="glass">
+        <color rgba="0.58 0.78 0.88 0.28" />
+        </material>
+      </visual>
+    <visual name="west_glass">
+      <origin xyz="-1.05 0 7.35" rpy="0 0 0" />
+      <geometry>
+        <box size="0.04 1.9 12.1" />
+        </geometry>
+      <material name="glass">
+        <color rgba="0.58 0.78 0.88 0.28" />
+        </material>
+      </visual>
+    <visual name="roof_cap">
+      <origin xyz="0 0 13.81" rpy="0 0 0" />
+      <geometry>
+        <box size="2.55 2.55 0.22" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.16 0.18 0.2 1" />
+        </material>
+      </visual>
+    <visual name="lantern_glass">
+      <origin xyz="0 0 14.37" rpy="0 0 0" />
+      <geometry>
+        <box size="1.5 1.5 0.9" />
+        </geometry>
+      <material name="glass">
+        <color rgba="0.58 0.78 0.88 0.28" />
+        </material>
+      </visual>
+    <visual name="lantern_post_nx_ny">
+      <origin xyz="-0.69 -0.69 14.37" rpy="0 0 0" />
+      <geometry>
+        <box size="0.12 0.12 0.9" />
+        </geometry>
+      <material name="steel">
+        <color rgba="0.34 0.37 0.4 1" />
+        </material>
+      </visual>
+    <visual name="lantern_post_nx_py">
+      <origin xyz="-0.69 0.69 14.37" rpy="0 0 0" />
+      <geometry>
+        <box size="0.12 0.12 0.9" />
+        </geometry>
+      <material name="steel">
+        <color rgba="0.34 0.37 0.4 1" />
+        </material>
+      </visual>
+    <visual name="lantern_post_px_ny">
+      <origin xyz="0.69 -0.69 14.37" rpy="0 0 0" />
+      <geometry>
+        <box size="0.12 0.12 0.9" />
+        </geometry>
+      <material name="steel">
+        <color rgba="0.34 0.37 0.4 1" />
+        </material>
+      </visual>
+    <visual name="lantern_post_px_py">
+      <origin xyz="0.69 0.69 14.37" rpy="0 0 0" />
+      <geometry>
+        <box size="0.12 0.12 0.9" />
+        </geometry>
+      <material name="steel">
+        <color rgba="0.34 0.37 0.4 1" />
+        </material>
+      </visual>
+    <visual name="lantern_cap">
+      <origin xyz="0 0 14.88" rpy="0 0 0" />
+      <geometry>
+        <box size="1.86 1.86 0.12" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.16 0.18 0.2 1" />
+        </material>
+      </visual>
+    <visual name="spire">
+      <origin xyz="0 0 15.54" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.06" length="1.2" />
+        </geometry>
+      <material name="steel">
+        <color rgba="0.34 0.37 0.4 1" />
+        </material>
+      </visual>
+    <visual name="north_bezel">
+      <origin xyz="0 1.07 10.9" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.9" length="0.1" />
+        </geometry>
+      <material name="steel">
+        <color rgba="0.34 0.37 0.4 1" />
+        </material>
+      </visual>
+    <visual name="north_dial">
+      <origin xyz="0 1.105 10.9" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.79" length="0.018" />
+        </geometry>
+      <material name="dial_white">
+        <color rgba="0.96 0.97 0.98 1" />
+        </material>
+      </visual>
+    <visual name="north_axle_cap">
+      <origin xyz="0 1.092 10.9" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.1" length="0.03" />
+        </geometry>
+      <material name="steel">
+        <color rgba="0.34 0.37 0.4 1" />
+        </material>
+      </visual>
+    <visual name="north_marker_12">
+      <origin xyz="0 1.105 11.46" rpy="0 0 0" />
+      <geometry>
+        <box size="0.1 0.02 0.24" />
+        </geometry>
+      <material name="marker_black">
+        <color rgba="0.11 0.12 0.13 1" />
+        </material>
+      </visual>
+    <visual name="north_marker_6">
+      <origin xyz="0 1.105 10.34" rpy="0 0 0" />
+      <geometry>
+        <box size="0.1 0.02 0.24" />
+        </geometry>
+      <material name="marker_black">
+        <color rgba="0.11 0.12 0.13 1" />
+        </material>
+      </visual>
+    <visual name="north_marker_3">
+      <origin xyz="0.56 1.105 10.9" rpy="0 0 0" />
+      <geometry>
+        <box size="0.24 0.02 0.1" />
+        </geometry>
+      <material name="marker_black">
+        <color rgba="0.11 0.12 0.13 1" />
+        </material>
+      </visual>
+    <visual name="north_marker_9">
+      <origin xyz="-0.56 1.105 10.9" rpy="0 0 0" />
+      <geometry>
+        <box size="0.24 0.02 0.1" />
+        </geometry>
+      <material name="marker_black">
+        <color rgba="0.11 0.12 0.13 1" />
+        </material>
+      </visual>
+    <visual name="east_bezel">
+      <origin xyz="1.07 0 10.9" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.9" length="0.1" />
+        </geometry>
+      <material name="steel">
+        <color rgba="0.34 0.37 0.4 1" />
+        </material>
+      </visual>
+    <visual name="east_dial">
+      <origin xyz="1.105 0 10.9" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.79" length="0.018" />
+        </geometry>
+      <material name="dial_white">
+        <color rgba="0.96 0.97 0.98 1" />
+        </material>
+      </visual>
+    <visual name="east_axle_cap">
+      <origin xyz="1.092 0 10.9" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.1" length="0.03" />
+        </geometry>
+      <material name="steel">
+        <color rgba="0.34 0.37 0.4 1" />
+        </material>
+      </visual>
+    <visual name="east_marker_12">
+      <origin xyz="1.105 0 11.46" rpy="0 0 0" />
+      <geometry>
+        <box size="0.02 0.1 0.24" />
+        </geometry>
+      <material name="marker_black">
+        <color rgba="0.11 0.12 0.13 1" />
+        </material>
+      </visual>
+    <visual name="east_marker_6">
+      <origin xyz="1.105 0 10.34" rpy="0 0 0" />
+      <geometry>
+        <box size="0.02 0.1 0.24" />
+        </geometry>
+      <material name="marker_black">
+        <color rgba="0.11 0.12 0.13 1" />
+        </material>
+      </visual>
+    <visual name="east_marker_3">
+      <origin xyz="1.105 -0.56 10.9" rpy="0 0 0" />
+      <geometry>
+        <box size="0.02 0.24 0.1" />
+        </geometry>
+      <material name="marker_black">
+        <color rgba="0.11 0.12 0.13 1" />
+        </material>
+      </visual>
+    <visual name="east_marker_9">
+      <origin xyz="1.105 0.56 10.9" rpy="0 0 0" />
+      <geometry>
+        <box size="0.02 0.24 0.1" />
+        </geometry>
+      <material name="marker_black">
+        <color rgba="0.11 0.12 0.13 1" />
+        </material>
+      </visual>
+    <visual name="south_bezel">
+      <origin xyz="0 -1.07 10.9" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.9" length="0.1" />
+        </geometry>
+      <material name="steel">
+        <color rgba="0.34 0.37 0.4 1" />
+        </material>
+      </visual>
+    <visual name="south_dial">
+      <origin xyz="0 -1.105 10.9" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.79" length="0.018" />
+        </geometry>
+      <material name="dial_white">
+        <color rgba="0.96 0.97 0.98 1" />
+        </material>
+      </visual>
+    <visual name="south_axle_cap">
+      <origin xyz="0 -1.092 10.9" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.1" length="0.03" />
+        </geometry>
+      <material name="steel">
+        <color rgba="0.34 0.37 0.4 1" />
+        </material>
+      </visual>
+    <visual name="south_marker_12">
+      <origin xyz="0 -1.105 11.46" rpy="0 0 0" />
+      <geometry>
+        <box size="0.1 0.02 0.24" />
+        </geometry>
+      <material name="marker_black">
+        <color rgba="0.11 0.12 0.13 1" />
+        </material>
+      </visual>
+    <visual name="south_marker_6">
+      <origin xyz="0 -1.105 10.34" rpy="0 0 0" />
+      <geometry>
+        <box size="0.1 0.02 0.24" />
+        </geometry>
+      <material name="marker_black">
+        <color rgba="0.11 0.12 0.13 1" />
+        </material>
+      </visual>
+    <visual name="south_marker_3">
+      <origin xyz="0.56 -1.105 10.9" rpy="0 0 0" />
+      <geometry>
+        <box size="0.24 0.02 0.1" />
+        </geometry>
+      <material name="marker_black">
+        <color rgba="0.11 0.12 0.13 1" />
+        </material>
+      </visual>
+    <visual name="south_marker_9">
+      <origin xyz="-0.56 -1.105 10.9" rpy="0 0 0" />
+      <geometry>
+        <box size="0.24 0.02 0.1" />
+        </geometry>
+      <material name="marker_black">
+        <color rgba="0.11 0.12 0.13 1" />
+        </material>
+      </visual>
+    <visual name="west_bezel">
+      <origin xyz="-1.07 0 10.9" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.9" length="0.1" />
+        </geometry>
+      <material name="steel">
+        <color rgba="0.34 0.37 0.4 1" />
+        </material>
+      </visual>
+    <visual name="west_dial">
+      <origin xyz="-1.105 0 10.9" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.79" length="0.018" />
+        </geometry>
+      <material name="dial_white">
+        <color rgba="0.96 0.97 0.98 1" />
+        </material>
+      </visual>
+    <visual name="west_axle_cap">
+      <origin xyz="-1.092 0 10.9" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.1" length="0.03" />
+        </geometry>
+      <material name="steel">
+        <color rgba="0.34 0.37 0.4 1" />
+        </material>
+      </visual>
+    <visual name="west_marker_12">
+      <origin xyz="-1.105 0 11.46" rpy="0 0 0" />
+      <geometry>
+        <box size="0.02 0.1 0.24" />
+        </geometry>
+      <material name="marker_black">
+        <color rgba="0.11 0.12 0.13 1" />
+        </material>
+      </visual>
+    <visual name="west_marker_6">
+      <origin xyz="-1.105 0 10.34" rpy="0 0 0" />
+      <geometry>
+        <box size="0.02 0.1 0.24" />
+        </geometry>
+      <material name="marker_black">
+        <color rgba="0.11 0.12 0.13 1" />
+        </material>
+      </visual>
+    <visual name="west_marker_3">
+      <origin xyz="-1.105 -0.56 10.9" rpy="0 0 0" />
+      <geometry>
+        <box size="0.02 0.24 0.1" />
+        </geometry>
+      <material name="marker_black">
+        <color rgba="0.11 0.12 0.13 1" />
+        </material>
+      </visual>
+    <visual name="west_marker_9">
+      <origin xyz="-1.105 0.56 10.9" rpy="0 0 0" />
+      <geometry>
+        <box size="0.02 0.24 0.1" />
+        </geometry>
+      <material name="marker_black">
+        <color rgba="0.11 0.12 0.13 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="north_hour_hand">
+    <inertial>
+      <origin xyz="0 0 0.14" rpy="0 0 0" />
+      <mass value="8" />
+      <inertia ixx="0.344067" ixy="0" ixz="0" iyy="0.344067" iyz="0" izz="0.0533333" />
+      </inertial>
+    <visual name="pointer">
+      <origin xyz="0 0 0.19" rpy="0 0 0" />
+      <geometry>
+        <box size="0.09 0.014 0.46" />
+        </geometry>
+      <material name="hour_graphite">
+        <color rgba="0.09 0.1 0.11 1" />
+        </material>
+      </visual>
+    <visual name="counterweight">
+      <origin xyz="0 0 -0.125" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.014 0.15" />
+        </geometry>
+      <material name="hour_graphite">
+        <color rgba="0.09 0.1 0.11 1" />
+        </material>
+      </visual>
+    <visual name="hub">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.08" length="0.016" />
+        </geometry>
+      <material name="hour_graphite">
+        <color rgba="0.09 0.1 0.11 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="north_minute_hand">
+    <inertial>
+      <origin xyz="0 0 0.14" rpy="0 0 0" />
+      <mass value="8" />
+      <inertia ixx="0.615733" ixy="0" ixz="0" iyy="0.615733" iyz="0" izz="0.0533333" />
+      </inertial>
+    <visual name="pointer">
+      <origin xyz="0 0 0.3" rpy="0 0 0" />
+      <geometry>
+        <box size="0.06 0.012 0.68" />
+        </geometry>
+      <material name="minute_steel">
+        <color rgba="0.78 0.81 0.83 1" />
+        </material>
+      </visual>
+    <visual name="counterweight">
+      <origin xyz="0 0 -0.14" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.012 0.18" />
+        </geometry>
+      <material name="minute_steel">
+        <color rgba="0.78 0.81 0.83 1" />
+        </material>
+      </visual>
+    <visual name="hub">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.065" length="0.014" />
+        </geometry>
+      <material name="minute_steel">
+        <color rgba="0.78 0.81 0.83 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="east_hour_hand">
+    <inertial>
+      <origin xyz="0 0 0.14" rpy="0 0 0" />
+      <mass value="8" />
+      <inertia ixx="0.344067" ixy="0" ixz="0" iyy="0.344067" iyz="0" izz="0.0533333" />
+      </inertial>
+    <visual name="pointer">
+      <origin xyz="0 0 0.19" rpy="0 0 0" />
+      <geometry>
+        <box size="0.014 0.09 0.46" />
+        </geometry>
+      <material name="hour_graphite">
+        <color rgba="0.09 0.1 0.11 1" />
+        </material>
+      </visual>
+    <visual name="counterweight">
+      <origin xyz="0 0 -0.125" rpy="0 0 0" />
+      <geometry>
+        <box size="0.014 0.05 0.15" />
+        </geometry>
+      <material name="hour_graphite">
+        <color rgba="0.09 0.1 0.11 1" />
+        </material>
+      </visual>
+    <visual name="hub">
+      <origin xyz="0 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.08" length="0.016" />
+        </geometry>
+      <material name="hour_graphite">
+        <color rgba="0.09 0.1 0.11 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="east_minute_hand">
+    <inertial>
+      <origin xyz="0 0 0.14" rpy="0 0 0" />
+      <mass value="8" />
+      <inertia ixx="0.615733" ixy="0" ixz="0" iyy="0.615733" iyz="0" izz="0.0533333" />
+      </inertial>
+    <visual name="pointer">
+      <origin xyz="0 0 0.3" rpy="0 0 0" />
+      <geometry>
+        <box size="0.012 0.06 0.68" />
+        </geometry>
+      <material name="minute_steel">
+        <color rgba="0.78 0.81 0.83 1" />
+        </material>
+      </visual>
+    <visual name="counterweight">
+      <origin xyz="0 0 -0.14" rpy="0 0 0" />
+      <geometry>
+        <box size="0.012 0.03 0.18" />
+        </geometry>
+      <material name="minute_steel">
+        <color rgba="0.78 0.81 0.83 1" />
+        </material>
+      </visual>
+    <visual name="hub">
+      <origin xyz="0 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.065" length="0.014" />
+        </geometry>
+      <material name="minute_steel">
+        <color rgba="0.78 0.81 0.83 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="south_hour_hand">
+    <inertial>
+      <origin xyz="0 0 0.14" rpy="0 0 0" />
+      <mass value="8" />
+      <inertia ixx="0.344067" ixy="0" ixz="0" iyy="0.344067" iyz="0" izz="0.0533333" />
+      </inertial>
+    <visual name="pointer">
+      <origin xyz="0 0 0.19" rpy="0 0 0" />
+      <geometry>
+        <box size="0.09 0.014 0.46" />
+        </geometry>
+      <material name="hour_graphite">
+        <color rgba="0.09 0.1 0.11 1" />
+        </material>
+      </visual>
+    <visual name="counterweight">
+      <origin xyz="0 0 -0.125" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.014 0.15" />
+        </geometry>
+      <material name="hour_graphite">
+        <color rgba="0.09 0.1 0.11 1" />
+        </material>
+      </visual>
+    <visual name="hub">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.08" length="0.016" />
+        </geometry>
+      <material name="hour_graphite">
+        <color rgba="0.09 0.1 0.11 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="south_minute_hand">
+    <inertial>
+      <origin xyz="0 0 0.14" rpy="0 0 0" />
+      <mass value="8" />
+      <inertia ixx="0.615733" ixy="0" ixz="0" iyy="0.615733" iyz="0" izz="0.0533333" />
+      </inertial>
+    <visual name="pointer">
+      <origin xyz="0 0 0.3" rpy="0 0 0" />
+      <geometry>
+        <box size="0.06 0.012 0.68" />
+        </geometry>
+      <material name="minute_steel">
+        <color rgba="0.78 0.81 0.83 1" />
+        </material>
+      </visual>
+    <visual name="counterweight">
+      <origin xyz="0 0 -0.14" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.012 0.18" />
+        </geometry>
+      <material name="minute_steel">
+        <color rgba="0.78 0.81 0.83 1" />
+        </material>
+      </visual>
+    <visual name="hub">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.065" length="0.014" />
+        </geometry>
+      <material name="minute_steel">
+        <color rgba="0.78 0.81 0.83 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="west_hour_hand">
+    <inertial>
+      <origin xyz="0 0 0.14" rpy="0 0 0" />
+      <mass value="8" />
+      <inertia ixx="0.344067" ixy="0" ixz="0" iyy="0.344067" iyz="0" izz="0.0533333" />
+      </inertial>
+    <visual name="pointer">
+      <origin xyz="0 0 0.19" rpy="0 0 0" />
+      <geometry>
+        <box size="0.014 0.09 0.46" />
+        </geometry>
+      <material name="hour_graphite">
+        <color rgba="0.09 0.1 0.11 1" />
+        </material>
+      </visual>
+    <visual name="counterweight">
+      <origin xyz="0 0 -0.125" rpy="0 0 0" />
+      <geometry>
+        <box size="0.014 0.05 0.15" />
+        </geometry>
+      <material name="hour_graphite">
+        <color rgba="0.09 0.1 0.11 1" />
+        </material>
+      </visual>
+    <visual name="hub">
+      <origin xyz="0 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.08" length="0.016" />
+        </geometry>
+      <material name="hour_graphite">
+        <color rgba="0.09 0.1 0.11 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="west_minute_hand">
+    <inertial>
+      <origin xyz="0 0 0.14" rpy="0 0 0" />
+      <mass value="8" />
+      <inertia ixx="0.615733" ixy="0" ixz="0" iyy="0.615733" iyz="0" izz="0.0533333" />
+      </inertial>
+    <visual name="pointer">
+      <origin xyz="0 0 0.3" rpy="0 0 0" />
+      <geometry>
+        <box size="0.012 0.06 0.68" />
+        </geometry>
+      <material name="minute_steel">
+        <color rgba="0.78 0.81 0.83 1" />
+        </material>
+      </visual>
+    <visual name="counterweight">
+      <origin xyz="0 0 -0.14" rpy="0 0 0" />
+      <geometry>
+        <box size="0.012 0.03 0.18" />
+        </geometry>
+      <material name="minute_steel">
+        <color rgba="0.78 0.81 0.83 1" />
+        </material>
+      </visual>
+    <visual name="hub">
+      <origin xyz="0 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.065" length="0.014" />
+        </geometry>
+      <material name="minute_steel">
+        <color rgba="0.78 0.81 0.83 1" />
+        </material>
+      </visual>
+    </link>
+  <joint name="north_hour_rotation" type="continuous">
+    <origin xyz="0 1.128 10.9" rpy="0 0 0" />
+    <parent link="tower" />
+    <child link="north_hour_hand" />
+    <axis xyz="0 1 0" />
+    <limit effort="12" velocity="2.5" />
+    </joint>
+  <joint name="north_minute_rotation" type="continuous">
+    <origin xyz="0 1.143 10.9" rpy="0 0 0" />
+    <parent link="tower" />
+    <child link="north_minute_hand" />
+    <axis xyz="0 1 0" />
+    <limit effort="12" velocity="6" />
+    </joint>
+  <joint name="east_hour_rotation" type="continuous">
+    <origin xyz="1.128 0 10.9" rpy="0 0 0" />
+    <parent link="tower" />
+    <child link="east_hour_hand" />
+    <axis xyz="1 0 0" />
+    <limit effort="12" velocity="2.5" />
+    </joint>
+  <joint name="east_minute_rotation" type="continuous">
+    <origin xyz="1.143 0 10.9" rpy="0 0 0" />
+    <parent link="tower" />
+    <child link="east_minute_hand" />
+    <axis xyz="1 0 0" />
+    <limit effort="12" velocity="6" />
+    </joint>
+  <joint name="south_hour_rotation" type="continuous">
+    <origin xyz="0 -1.128 10.9" rpy="0 0 0" />
+    <parent link="tower" />
+    <child link="south_hour_hand" />
+    <axis xyz="0 -1 0" />
+    <limit effort="12" velocity="2.5" />
+    </joint>
+  <joint name="south_minute_rotation" type="continuous">
+    <origin xyz="0 -1.143 10.9" rpy="0 0 0" />
+    <parent link="tower" />
+    <child link="south_minute_hand" />
+    <axis xyz="0 -1 0" />
+    <limit effort="12" velocity="6" />
+    </joint>
+  <joint name="west_hour_rotation" type="continuous">
+    <origin xyz="-1.128 0 10.9" rpy="0 0 0" />
+    <parent link="tower" />
+    <child link="west_hour_hand" />
+    <axis xyz="-1 0 0" />
+    <limit effort="12" velocity="2.5" />
+    </joint>
+  <joint name="west_minute_rotation" type="continuous">
+    <origin xyz="-1.143 0 10.9" rpy="0 0 0" />
+    <parent link="tower" />
+    <child link="west_minute_hand" />
+    <axis xyz="-1 0 0" />
+    <limit effort="12" velocity="6" />
+    </joint>
+  </robot>

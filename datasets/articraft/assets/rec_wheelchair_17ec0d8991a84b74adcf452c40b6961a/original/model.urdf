@@ -1,0 +1,666 @@
+<robot name="manual_wheelchair">
+  <material name="black_rubber">
+    <color rgba="0.025 0.025 0.026 1" />
+    </material>
+  <material name="satin_metal">
+    <color rgba="0.72 0.74 0.76 1" />
+    </material>
+  <material name="dark_metal">
+    <color rgba="0.18 0.19 0.2 1" />
+    </material>
+  <material name="blue_vinyl">
+    <color rgba="0.05 0.16 0.42 1" />
+    </material>
+  <material name="black_plastic">
+    <color rgba="0.055 0.055 0.06 1" />
+    </material>
+  <link name="frame">
+    <visual name="left_lower_rail">
+      <origin xyz="0.0975 0.245 0.2725" rpy="0 1.68656 0" />
+      <geometry>
+        <cylinder radius="0.015" length="0.649346" />
+        </geometry>
+      <material name="satin_metal">
+        <color rgba="0.72 0.74 0.76 1" />
+        </material>
+      </visual>
+    <visual name="left_seat_rail">
+      <origin xyz="0.0225 0.245 0.43" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.015" length="0.495" />
+        </geometry>
+      <material name="satin_metal">
+        <color rgba="0.72 0.74 0.76 1" />
+        </material>
+      </visual>
+    <visual name="left_front_strut">
+      <origin xyz="0.345 0.245 0.3325" rpy="0 2.4859 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.246018" />
+        </geometry>
+      <material name="satin_metal">
+        <color rgba="0.72 0.74 0.76 1" />
+        </material>
+      </visual>
+    <visual name="left_back_cane">
+      <origin xyz="-0.235 0.245 0.6425" rpy="0 0.0300661 3.14159" />
+      <geometry>
+        <cylinder radius="0.014" length="0.665301" />
+        </geometry>
+      <material name="satin_metal">
+        <color rgba="0.72 0.74 0.76 1" />
+        </material>
+      </visual>
+    <visual name="left_push_handle_bar">
+      <origin xyz="-0.315 0.245 0.975" rpy="0 1.5708 3.14159" />
+      <geometry>
+        <cylinder radius="0.014" length="0.14" />
+        </geometry>
+      <material name="satin_metal">
+        <color rgba="0.72 0.74 0.76 1" />
+        </material>
+      </visual>
+    <visual name="left_push_grip">
+      <origin xyz="-0.43 0.245 0.975" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.019" length="0.1" />
+        </geometry>
+      <material name="black_rubber">
+        <color rgba="0.025 0.025 0.026 1" />
+        </material>
+      </visual>
+    <visual name="left_rear_brace">
+      <origin xyz="-0.1425 0.245 0.365" rpy="0 2.1588 3.14159" />
+      <geometry>
+        <cylinder radius="0.012" length="0.198305" />
+        </geometry>
+      <material name="satin_metal">
+        <color rgba="0.72 0.74 0.76 1" />
+        </material>
+      </visual>
+    <visual name="left_footrest_hanger">
+      <origin xyz="0.4425 0.19355 0.2315" rpy="0 2.2908 -0.428936" />
+      <geometry>
+        <cylinder radius="0.013" length="0.329093" />
+        </geometry>
+      <material name="satin_metal">
+        <color rgba="0.72 0.74 0.76 1" />
+        </material>
+      </visual>
+    <visual name="left_caster_socket">
+      <origin xyz="0.42 0.245 0.22" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.021" length="0.03" />
+        </geometry>
+      <material name="dark_metal">
+        <color rgba="0.18 0.19 0.2 1" />
+        </material>
+      </visual>
+    <visual name="left_foot_plate">
+      <origin xyz="0.59 0.1421 0.11" rpy="0 0.1 0" />
+      <geometry>
+        <box size="0.165 0.145 0.026" />
+        </geometry>
+      <material name="black_plastic">
+        <color rgba="0.055 0.055 0.06 1" />
+        </material>
+      </visual>
+    <visual name="right_lower_rail">
+      <origin xyz="0.0975 -0.245 0.2725" rpy="0 1.68656 0" />
+      <geometry>
+        <cylinder radius="0.015" length="0.649346" />
+        </geometry>
+      <material name="satin_metal">
+        <color rgba="0.72 0.74 0.76 1" />
+        </material>
+      </visual>
+    <visual name="right_seat_rail">
+      <origin xyz="0.0225 -0.245 0.43" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.015" length="0.495" />
+        </geometry>
+      <material name="satin_metal">
+        <color rgba="0.72 0.74 0.76 1" />
+        </material>
+      </visual>
+    <visual name="right_front_strut">
+      <origin xyz="0.345 -0.245 0.3325" rpy="0 2.4859 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.246018" />
+        </geometry>
+      <material name="satin_metal">
+        <color rgba="0.72 0.74 0.76 1" />
+        </material>
+      </visual>
+    <visual name="right_back_cane">
+      <origin xyz="-0.235 -0.245 0.6425" rpy="0 0.0300661 3.14159" />
+      <geometry>
+        <cylinder radius="0.014" length="0.665301" />
+        </geometry>
+      <material name="satin_metal">
+        <color rgba="0.72 0.74 0.76 1" />
+        </material>
+      </visual>
+    <visual name="right_push_handle_bar">
+      <origin xyz="-0.315 -0.245 0.975" rpy="0 1.5708 3.14159" />
+      <geometry>
+        <cylinder radius="0.014" length="0.14" />
+        </geometry>
+      <material name="satin_metal">
+        <color rgba="0.72 0.74 0.76 1" />
+        </material>
+      </visual>
+    <visual name="right_push_grip">
+      <origin xyz="-0.43 -0.245 0.975" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.019" length="0.1" />
+        </geometry>
+      <material name="black_rubber">
+        <color rgba="0.025 0.025 0.026 1" />
+        </material>
+      </visual>
+    <visual name="right_rear_brace">
+      <origin xyz="-0.1425 -0.245 0.365" rpy="0 2.1588 3.14159" />
+      <geometry>
+        <cylinder radius="0.012" length="0.198305" />
+        </geometry>
+      <material name="satin_metal">
+        <color rgba="0.72 0.74 0.76 1" />
+        </material>
+      </visual>
+    <visual name="right_footrest_hanger">
+      <origin xyz="0.4425 -0.19355 0.2315" rpy="0 2.2908 0.428936" />
+      <geometry>
+        <cylinder radius="0.013" length="0.329093" />
+        </geometry>
+      <material name="satin_metal">
+        <color rgba="0.72 0.74 0.76 1" />
+        </material>
+      </visual>
+    <visual name="right_caster_socket">
+      <origin xyz="0.42 -0.245 0.22" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.021" length="0.03" />
+        </geometry>
+      <material name="dark_metal">
+        <color rgba="0.18 0.19 0.2 1" />
+        </material>
+      </visual>
+    <visual name="right_foot_plate">
+      <origin xyz="0.59 -0.1421 0.11" rpy="0 0.1 0" />
+      <geometry>
+        <box size="0.165 0.145 0.026" />
+        </geometry>
+      <material name="black_plastic">
+        <color rgba="0.055 0.055 0.06 1" />
+        </material>
+      </visual>
+    <visual name="rear_axle_tube">
+      <origin xyz="-0.225 0 0.31" rpy="0 1.5708 1.5708" />
+      <geometry>
+        <cylinder radius="0.018" length="0.54" />
+        </geometry>
+      <material name="satin_metal">
+        <color rgba="0.72 0.74 0.76 1" />
+        </material>
+      </visual>
+    <visual name="front_seat_tube">
+      <origin xyz="0.27 0 0.43" rpy="0 1.5708 1.5708" />
+      <geometry>
+        <cylinder radius="0.014" length="0.54" />
+        </geometry>
+      <material name="satin_metal">
+        <color rgba="0.72 0.74 0.76 1" />
+        </material>
+      </visual>
+    <visual name="mid_cross_tube">
+      <origin xyz="0.03 0 0.405" rpy="0 1.5708 1.5708" />
+      <geometry>
+        <cylinder radius="0.012" length="0.54" />
+        </geometry>
+      <material name="satin_metal">
+        <color rgba="0.72 0.74 0.76 1" />
+        </material>
+      </visual>
+    <visual name="back_cross_tube">
+      <origin xyz="-0.25 0 0.785" rpy="0 1.5708 1.5708" />
+      <geometry>
+        <cylinder radius="0.012" length="0.54" />
+        </geometry>
+      <material name="satin_metal">
+        <color rgba="0.72 0.74 0.76 1" />
+        </material>
+      </visual>
+    <visual name="folding_brace_0">
+      <origin xyz="0.06 0 0.375" rpy="0 1.43533 0.773351" />
+      <geometry>
+        <cylinder radius="0.01" length="0.592368" />
+        </geometry>
+      <material name="satin_metal">
+        <color rgba="0.72 0.74 0.76 1" />
+        </material>
+      </visual>
+    <visual name="folding_brace_1">
+      <origin xyz="0.06 0 0.375" rpy="0 1.43533 -0.773351" />
+      <geometry>
+        <cylinder radius="0.01" length="0.592368" />
+        </geometry>
+      <material name="satin_metal">
+        <color rgba="0.72 0.74 0.76 1" />
+        </material>
+      </visual>
+    <visual name="left_axle_collar">
+      <origin xyz="-0.225 0.2785 0.31" rpy="0 1.5708 1.5708" />
+      <geometry>
+        <cylinder radius="0.022" length="0.041" />
+        </geometry>
+      <material name="dark_metal">
+        <color rgba="0.18 0.19 0.2 1" />
+        </material>
+      </visual>
+    <visual name="right_axle_collar">
+      <origin xyz="-0.225 -0.2785 0.31" rpy="0 1.5708 -1.5708" />
+      <geometry>
+        <cylinder radius="0.022" length="0.041" />
+        </geometry>
+      <material name="dark_metal">
+        <color rgba="0.18 0.19 0.2 1" />
+        </material>
+      </visual>
+    <visual name="seat_cushion">
+      <origin xyz="0.03 0 0.455" rpy="0 0 0" />
+      <geometry>
+        <box size="0.48 0.455 0.055" />
+        </geometry>
+      <material name="blue_vinyl">
+        <color rgba="0.05 0.16 0.42 1" />
+        </material>
+      </visual>
+    <visual name="backrest_pad">
+      <origin xyz="-0.27 0 0.715" rpy="0 -0.08 0" />
+      <geometry>
+        <box size="0.06 0.455 0.5" />
+        </geometry>
+      <material name="blue_vinyl">
+        <color rgba="0.05 0.16 0.42 1" />
+        </material>
+      </visual>
+    <visual name="backrest_base_band">
+      <origin xyz="-0.245 0 0.475" rpy="0 0 0" />
+      <geometry>
+        <box size="0.06 0.47 0.04" />
+        </geometry>
+      <material name="black_plastic">
+        <color rgba="0.055 0.055 0.06 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="left_rear_wheel">
+    <visual name="rim_spokes">
+      <geometry>
+        <mesh filename="assets/meshes/left_rear_wheel_rim.obj" />
+        </geometry>
+      <material name="satin_metal">
+        <color rgba="0.72 0.74 0.76 1" />
+        </material>
+      </visual>
+    <visual name="tire">
+      <geometry>
+        <mesh filename="assets/meshes/left_rear_wheel_tire.obj" />
+        </geometry>
+      <material name="black_rubber">
+        <color rgba="0.025 0.025 0.026 1" />
+        </material>
+      </visual>
+    <visual name="handrim">
+      <geometry>
+        <mesh filename="assets/meshes/left_rear_wheel_handrim.obj" />
+        </geometry>
+      <material name="satin_metal">
+        <color rgba="0.72 0.74 0.76 1" />
+        </material>
+      </visual>
+    <visual name="handrim_standoff_0">
+      <origin xyz="0.0215 0.1515 0" rpy="0 1.5708 -1.77" />
+      <geometry>
+        <cylinder radius="0.004" length="0.217297" />
+        </geometry>
+      <material name="satin_metal">
+        <color rgba="0.72 0.74 0.76 1" />
+        </material>
+      </visual>
+    <visual name="handrim_standoff_1">
+      <origin xyz="0.0215 0.07575 0.131203" rpy="0 2.5847 -1.95454" />
+      <geometry>
+        <cylinder radius="0.004" length="0.217297" />
+        </geometry>
+      <material name="satin_metal">
+        <color rgba="0.72 0.74 0.76 1" />
+        </material>
+      </visual>
+    <visual name="handrim_standoff_2">
+      <origin xyz="0.0215 -0.07575 0.131203" rpy="0 2.5847 1.95454" />
+      <geometry>
+        <cylinder radius="0.004" length="0.217297" />
+        </geometry>
+      <material name="satin_metal">
+        <color rgba="0.72 0.74 0.76 1" />
+        </material>
+      </visual>
+    <visual name="handrim_standoff_3">
+      <origin xyz="0.0215 -0.1515 1.85534e-17" rpy="0 1.5708 1.77" />
+      <geometry>
+        <cylinder radius="0.004" length="0.217297" />
+        </geometry>
+      <material name="satin_metal">
+        <color rgba="0.72 0.74 0.76 1" />
+        </material>
+      </visual>
+    <visual name="handrim_standoff_4">
+      <origin xyz="0.0215 -0.07575 -0.131203" rpy="0 0.556896 1.95454" />
+      <geometry>
+        <cylinder radius="0.004" length="0.217297" />
+        </geometry>
+      <material name="satin_metal">
+        <color rgba="0.72 0.74 0.76 1" />
+        </material>
+      </visual>
+    <visual name="handrim_standoff_5">
+      <origin xyz="0.0215 0.07575 -0.131203" rpy="0 0.556896 -1.95454" />
+      <geometry>
+        <cylinder radius="0.004" length="0.217297" />
+        </geometry>
+      <material name="satin_metal">
+        <color rgba="0.72 0.74 0.76 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="right_rear_wheel">
+    <visual name="rim_spokes">
+      <geometry>
+        <mesh filename="assets/meshes/right_rear_wheel_rim.obj" />
+        </geometry>
+      <material name="satin_metal">
+        <color rgba="0.72 0.74 0.76 1" />
+        </material>
+      </visual>
+    <visual name="tire">
+      <geometry>
+        <mesh filename="assets/meshes/right_rear_wheel_tire.obj" />
+        </geometry>
+      <material name="black_rubber">
+        <color rgba="0.025 0.025 0.026 1" />
+        </material>
+      </visual>
+    <visual name="handrim">
+      <geometry>
+        <mesh filename="assets/meshes/right_rear_wheel_handrim.obj" />
+        </geometry>
+      <material name="satin_metal">
+        <color rgba="0.72 0.74 0.76 1" />
+        </material>
+      </visual>
+    <visual name="handrim_standoff_0">
+      <origin xyz="-0.0215 0.1515 0" rpy="0 1.5708 -1.3716" />
+      <geometry>
+        <cylinder radius="0.004" length="0.217297" />
+        </geometry>
+      <material name="satin_metal">
+        <color rgba="0.72 0.74 0.76 1" />
+        </material>
+      </visual>
+    <visual name="handrim_standoff_1">
+      <origin xyz="-0.0215 0.07575 0.131203" rpy="0 2.5847 -1.18706" />
+      <geometry>
+        <cylinder radius="0.004" length="0.217297" />
+        </geometry>
+      <material name="satin_metal">
+        <color rgba="0.72 0.74 0.76 1" />
+        </material>
+      </visual>
+    <visual name="handrim_standoff_2">
+      <origin xyz="-0.0215 -0.07575 0.131203" rpy="0 2.5847 1.18706" />
+      <geometry>
+        <cylinder radius="0.004" length="0.217297" />
+        </geometry>
+      <material name="satin_metal">
+        <color rgba="0.72 0.74 0.76 1" />
+        </material>
+      </visual>
+    <visual name="handrim_standoff_3">
+      <origin xyz="-0.0215 -0.1515 1.85534e-17" rpy="0 1.5708 1.3716" />
+      <geometry>
+        <cylinder radius="0.004" length="0.217297" />
+        </geometry>
+      <material name="satin_metal">
+        <color rgba="0.72 0.74 0.76 1" />
+        </material>
+      </visual>
+    <visual name="handrim_standoff_4">
+      <origin xyz="-0.0215 -0.07575 -0.131203" rpy="0 0.556896 1.18706" />
+      <geometry>
+        <cylinder radius="0.004" length="0.217297" />
+        </geometry>
+      <material name="satin_metal">
+        <color rgba="0.72 0.74 0.76 1" />
+        </material>
+      </visual>
+    <visual name="handrim_standoff_5">
+      <origin xyz="-0.0215 0.07575 -0.131203" rpy="0 0.556896 -1.18706" />
+      <geometry>
+        <cylinder radius="0.004" length="0.217297" />
+        </geometry>
+      <material name="satin_metal">
+        <color rgba="0.72 0.74 0.76 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="left_caster">
+    <visual name="swivel_stem">
+      <origin xyz="0 0 -0.026" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.017" length="0.052" />
+        </geometry>
+      <material name="satin_metal">
+        <color rgba="0.72 0.74 0.76 1" />
+        </material>
+      </visual>
+    <visual name="bearing_cap">
+      <origin xyz="0 0 -0.01" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.032" length="0.02" />
+        </geometry>
+      <material name="dark_metal">
+        <color rgba="0.18 0.19 0.2 1" />
+        </material>
+      </visual>
+    <visual name="fork_crown">
+      <origin xyz="-0.026 0 -0.039" rpy="0 0 0" />
+      <geometry>
+        <box size="0.078 0.08 0.026" />
+        </geometry>
+      <material name="dark_metal">
+        <color rgba="0.18 0.19 0.2 1" />
+        </material>
+      </visual>
+    <visual name="outer_fork_plate">
+      <origin xyz="-0.04 0.02 -0.11" rpy="0 0 0" />
+      <geometry>
+        <box size="0.034 0.008 0.116" />
+        </geometry>
+      <material name="satin_metal">
+        <color rgba="0.72 0.74 0.76 1" />
+        </material>
+      </visual>
+    <visual name="outer_axle_cap">
+      <origin xyz="-0.04 0.0236 -0.132" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.006" />
+        </geometry>
+      <material name="dark_metal">
+        <color rgba="0.18 0.19 0.2 1" />
+        </material>
+      </visual>
+    <visual name="inner_fork_plate">
+      <origin xyz="-0.04 -0.02 -0.11" rpy="0 0 0" />
+      <geometry>
+        <box size="0.034 0.008 0.116" />
+        </geometry>
+      <material name="satin_metal">
+        <color rgba="0.72 0.74 0.76 1" />
+        </material>
+      </visual>
+    <visual name="inner_axle_cap">
+      <origin xyz="-0.04 -0.0236 -0.132" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.006" />
+        </geometry>
+      <material name="dark_metal">
+        <color rgba="0.18 0.19 0.2 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="right_caster">
+    <visual name="swivel_stem">
+      <origin xyz="0 0 -0.026" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.017" length="0.052" />
+        </geometry>
+      <material name="satin_metal">
+        <color rgba="0.72 0.74 0.76 1" />
+        </material>
+      </visual>
+    <visual name="bearing_cap">
+      <origin xyz="0 0 -0.01" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.032" length="0.02" />
+        </geometry>
+      <material name="dark_metal">
+        <color rgba="0.18 0.19 0.2 1" />
+        </material>
+      </visual>
+    <visual name="fork_crown">
+      <origin xyz="-0.026 0 -0.039" rpy="0 0 0" />
+      <geometry>
+        <box size="0.078 0.08 0.026" />
+        </geometry>
+      <material name="dark_metal">
+        <color rgba="0.18 0.19 0.2 1" />
+        </material>
+      </visual>
+    <visual name="outer_fork_plate">
+      <origin xyz="-0.04 0.02 -0.11" rpy="0 0 0" />
+      <geometry>
+        <box size="0.034 0.008 0.116" />
+        </geometry>
+      <material name="satin_metal">
+        <color rgba="0.72 0.74 0.76 1" />
+        </material>
+      </visual>
+    <visual name="outer_axle_cap">
+      <origin xyz="-0.04 0.0236 -0.132" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.006" />
+        </geometry>
+      <material name="dark_metal">
+        <color rgba="0.18 0.19 0.2 1" />
+        </material>
+      </visual>
+    <visual name="inner_fork_plate">
+      <origin xyz="-0.04 -0.02 -0.11" rpy="0 0 0" />
+      <geometry>
+        <box size="0.034 0.008 0.116" />
+        </geometry>
+      <material name="satin_metal">
+        <color rgba="0.72 0.74 0.76 1" />
+        </material>
+      </visual>
+    <visual name="inner_axle_cap">
+      <origin xyz="-0.04 -0.0236 -0.132" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.006" />
+        </geometry>
+      <material name="dark_metal">
+        <color rgba="0.18 0.19 0.2 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="left_caster_wheel">
+    <visual name="rim">
+      <geometry>
+        <mesh filename="assets/meshes/left_caster_wheel_rim.obj" />
+        </geometry>
+      <material name="satin_metal">
+        <color rgba="0.72 0.74 0.76 1" />
+        </material>
+      </visual>
+    <visual name="tire">
+      <geometry>
+        <mesh filename="assets/meshes/left_caster_wheel_tire.obj" />
+        </geometry>
+      <material name="black_rubber">
+        <color rgba="0.025 0.025 0.026 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="right_caster_wheel">
+    <visual name="rim">
+      <geometry>
+        <mesh filename="assets/meshes/right_caster_wheel_rim.obj" />
+        </geometry>
+      <material name="satin_metal">
+        <color rgba="0.72 0.74 0.76 1" />
+        </material>
+      </visual>
+    <visual name="tire">
+      <geometry>
+        <mesh filename="assets/meshes/right_caster_wheel_tire.obj" />
+        </geometry>
+      <material name="black_rubber">
+        <color rgba="0.025 0.025 0.026 1" />
+        </material>
+      </visual>
+    </link>
+  <joint name="left_rear_spin" type="continuous">
+    <origin xyz="-0.225 0.375 0.31" rpy="0 0 1.5708" />
+    <parent link="frame" />
+    <child link="left_rear_wheel" />
+    <axis xyz="1 0 0" />
+    <limit effort="6" velocity="18" />
+    </joint>
+  <joint name="right_rear_spin" type="continuous">
+    <origin xyz="-0.225 -0.375 0.31" rpy="0 0 1.5708" />
+    <parent link="frame" />
+    <child link="right_rear_wheel" />
+    <axis xyz="1 0 0" />
+    <limit effort="6" velocity="18" />
+    </joint>
+  <joint name="left_caster_swivel" type="continuous">
+    <origin xyz="0.42 0.245 0.205" rpy="0 0 0" />
+    <parent link="frame" />
+    <child link="left_caster" />
+    <axis xyz="0 0 1" />
+    <limit effort="2" velocity="8" />
+    </joint>
+  <joint name="right_caster_swivel" type="continuous">
+    <origin xyz="0.42 -0.245 0.205" rpy="0 0 0" />
+    <parent link="frame" />
+    <child link="right_caster" />
+    <axis xyz="0 0 1" />
+    <limit effort="2" velocity="8" />
+    </joint>
+  <joint name="left_caster_spin" type="continuous">
+    <origin xyz="-0.04 0 -0.132" rpy="0 0 1.5708" />
+    <parent link="left_caster" />
+    <child link="left_caster_wheel" />
+    <axis xyz="1 0 0" />
+    <limit effort="6" velocity="18" />
+    </joint>
+  <joint name="right_caster_spin" type="continuous">
+    <origin xyz="-0.04 0 -0.132" rpy="0 0 1.5708" />
+    <parent link="right_caster" />
+    <child link="right_caster_wheel" />
+    <axis xyz="1 0 0" />
+    <limit effort="6" velocity="18" />
+    </joint>
+  </robot>

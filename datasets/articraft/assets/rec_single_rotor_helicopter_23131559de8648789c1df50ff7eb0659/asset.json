@@ -1,0 +1,256 @@
+{
+  "summary": {
+    "id": "rec_single_rotor_helicopter_23131559de8648789c1df50ff7eb0659",
+    "category": "rotor",
+    "robot_name": "cargo_helicopter",
+    "joint_count": 2,
+    "link_count": 8,
+    "target_link_count": 3,
+    "family": "rec_single_rotor_helicopter",
+    "warnings": [],
+    "diagonal": 11.965864378555668,
+    "bytes": 8422988
+  },
+  "source": {
+    "dataset": "camvsl/Articraft-10K",
+    "revision": "3c79d5a05bb7cb6bf7bfee5e090176636ee3ac65",
+    "license": "CC-BY-4.0",
+    "url": "https://huggingface.co/datasets/camvsl/Articraft-10K/blob/3c79d5a05bb7cb6bf7bfee5e090176636ee3ac65/rec_single_rotor_helicopter_23131559de8648789c1df50ff7eb0659.tar.gz",
+    "archive_sha256": "e16c01638db3e5d9984afd1b320c6620d85c5e49d9744985240eda5073a1e042",
+    "archive": "rec_single_rotor_helicopter_23131559de8648789c1df50ff7eb0659.tar.gz",
+    "label_status": "Original generated URDF reference; not manually verified or physically validated"
+  },
+  "links": [
+    {
+      "id": "link_000",
+      "name": "fuselage",
+      "point_file": "inputs/link_000.npz",
+      "faces": 20326,
+      "vertices": 11453,
+      "bounds": [
+        [
+          -5.45,
+          -0.975,
+          -0.25
+        ],
+        [
+          2.12,
+          1.02,
+          2.13
+        ]
+      ]
+    },
+    {
+      "id": "link_001",
+      "name": "port_gear",
+      "point_file": null,
+      "faces": 27468,
+      "vertices": 13712,
+      "bounds": [
+        [
+          -0.3800001123977824,
+          -1.425000110195411,
+          -1.079894
+        ],
+        [
+          0.30000011239778246,
+          -0.975,
+          0.030000000000000002
+        ]
+      ]
+    },
+    {
+      "id": "link_002",
+      "name": "starboard_gear",
+      "point_file": null,
+      "faces": 27468,
+      "vertices": 13712,
+      "bounds": [
+        [
+          -0.3800001123977824,
+          0.975,
+          -1.079894
+        ],
+        [
+          0.30000011239778246,
+          1.425000110195411,
+          0.030000000000000002
+        ]
+      ]
+    },
+    {
+      "id": "link_003",
+      "name": "nose_gear",
+      "point_file": null,
+      "faces": 51012,
+      "vertices": 25446,
+      "bounds": [
+        [
+          0.75999992506837,
+          -0.19000011019561341,
+          -1.289919
+        ],
+        [
+          1.28000007493163,
+          0.19000011019561341,
+          -0.25
+        ]
+      ]
+    },
+    {
+      "id": "link_004",
+      "name": "cargo_door",
+      "point_file": null,
+      "faces": 72,
+      "vertices": 48,
+      "bounds": [
+        [
+          -0.6100000000000001,
+          0.975,
+          0.05999999999999994
+        ],
+        [
+          0.51,
+          1.045,
+          1.65
+        ]
+      ]
+    },
+    {
+      "id": "link_005",
+      "name": "roof_hatch",
+      "point_file": null,
+      "faces": 176,
+      "vertices": 98,
+      "bounds": [
+        [
+          -0.8400000000000001,
+          -0.37000008080801616,
+          1.96
+        ],
+        [
+          -0.158,
+          0.37000008080801616,
+          2.0470013590857397
+        ]
+      ]
+    },
+    {
+      "id": "link_006",
+      "name": "main_rotor",
+      "point_file": "inputs/link_006.npz",
+      "faces": 1600,
+      "vertices": 1540,
+      "bounds": [
+        [
+          -3.159999999988522,
+          -3.259999999978007,
+          2.13
+        ],
+        [
+          3.36,
+          3.259999999978007,
+          2.35
+        ]
+      ]
+    },
+    {
+      "id": "link_007",
+      "name": "tail_rotor",
+      "point_file": "inputs/link_007.npz",
+      "faces": 176,
+      "vertices": 98,
+      "bounds": [
+        [
+          -5.99,
+          0.23999987143822615,
+          0.9700000000000001
+        ],
+        [
+          -4.6899999999999995,
+          0.3600001285617738,
+          2.27
+        ]
+      ]
+    }
+  ],
+  "joints": [
+    {
+      "name": "port_gear_mount",
+      "type": "fixed",
+      "parent": "link_000",
+      "child": "link_001",
+      "reference_q": 0.0,
+      "mimic": null
+    },
+    {
+      "name": "starboard_gear_mount",
+      "type": "fixed",
+      "parent": "link_000",
+      "child": "link_002",
+      "reference_q": 0.0,
+      "mimic": null
+    },
+    {
+      "name": "nose_gear_mount",
+      "type": "fixed",
+      "parent": "link_000",
+      "child": "link_003",
+      "reference_q": 0.0,
+      "mimic": null
+    },
+    {
+      "name": "cargo_door_slide",
+      "type": "prismatic",
+      "parent": "link_000",
+      "child": "link_004",
+      "reference_q": 0.0,
+      "mimic": null
+    },
+    {
+      "name": "roof_hatch_hinge",
+      "type": "revolute",
+      "parent": "link_000",
+      "child": "link_005",
+      "reference_q": 0.0,
+      "mimic": null
+    },
+    {
+      "name": "main_rotor_spin",
+      "type": "continuous",
+      "parent": "link_000",
+      "child": "link_006",
+      "reference_q": 0.0,
+      "mimic": null
+    },
+    {
+      "name": "tail_rotor_spin",
+      "type": "continuous",
+      "parent": "link_000",
+      "child": "link_007",
+      "reference_q": 0.0,
+      "mimic": null
+    }
+  ],
+  "bounds": [
+    [
+      -5.99,
+      -3.259999999978007,
+      -1.289919
+    ],
+    [
+      3.36,
+      3.259999999978007,
+      2.35
+    ]
+  ],
+  "point_pool_size": 65536,
+  "reference_pose": "Zero position clamped to limits; mimic values propagated",
+  "qc": {
+    "finite_geometry": true,
+    "tree_valid": true,
+    "axis_unit": true,
+    "physical_collision_validation": false,
+    "visual_tessellation": "32 cylinder segments, icosphere subdivision 2"
+  }
+}

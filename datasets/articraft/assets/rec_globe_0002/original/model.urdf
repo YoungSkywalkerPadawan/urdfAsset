@@ -1,0 +1,254 @@
+<robot name="desktop_world_globe">
+  <material name="dark_wood">
+    <color rgba="0.3 0.2 0.12 1" />
+    </material>
+  <material name="warm_brass">
+    <color rgba="0.76 0.63 0.31 1" />
+    </material>
+  <material name="satin_brass">
+    <color rgba="0.84 0.73 0.43 1" />
+    </material>
+  <material name="ocean_blue">
+    <color rgba="0.17 0.41 0.71 1" />
+    </material>
+  <material name="land_green">
+    <color rgba="0.45 0.58 0.27 1" />
+    </material>
+  <material name="dark_metal">
+    <color rgba="0.22 0.22 0.24 1" />
+    </material>
+  <link name="base">
+    <inertial>
+      <origin xyz="0 0 0.045" rpy="0 0 0" />
+      <mass value="1.8" />
+      <inertia ixx="0.00486" ixy="0" ixz="0" iyy="0.00486" iyz="0" izz="0.00729" />
+      </inertial>
+    <visual name="foot_disk">
+      <origin xyz="0 0 0.009" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.09" length="0.018" />
+        </geometry>
+      <material name="dark_wood">
+        <color rgba="0.3 0.2 0.12 1" />
+        </material>
+      </visual>
+    <visual name="foot_step">
+      <origin xyz="0 0 0.023" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.062" length="0.01" />
+        </geometry>
+      <material name="dark_wood">
+        <color rgba="0.3 0.2 0.12 1" />
+        </material>
+      </visual>
+    <visual name="center_column">
+      <origin xyz="0 -0.02 0.054" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.017" length="0.052" />
+        </geometry>
+      <material name="dark_wood">
+        <color rgba="0.3 0.2 0.12 1" />
+        </material>
+      </visual>
+    <visual name="crown_hub">
+      <origin xyz="0 -0.02 0.058" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.016" length="0.026" />
+        </geometry>
+      <material name="warm_brass">
+        <color rgba="0.76 0.63 0.31 1" />
+        </material>
+      </visual>
+    <visual name="left_yoke_shoulder">
+      <origin xyz="-0.044 -0.014 0.035" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.009" length="0.014" />
+        </geometry>
+      <material name="warm_brass">
+        <color rgba="0.76 0.63 0.31 1" />
+        </material>
+      </visual>
+    <visual name="right_yoke_shoulder">
+      <origin xyz="0.044 -0.014 0.035" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.009" length="0.014" />
+        </geometry>
+      <material name="warm_brass">
+        <color rgba="0.76 0.63 0.31 1" />
+        </material>
+      </visual>
+    <visual name="left_yoke_arm">
+      <geometry>
+        <mesh filename="assets/meshes/left_yoke_arm.obj" />
+        </geometry>
+      <material name="warm_brass">
+        <color rgba="0.76 0.63 0.31 1" />
+        </material>
+      </visual>
+    <visual name="right_yoke_arm">
+      <geometry>
+        <mesh filename="assets/meshes/right_yoke_arm.obj" />
+        </geometry>
+      <material name="warm_brass">
+        <color rgba="0.76 0.63 0.31 1" />
+        </material>
+      </visual>
+    <visual name="left_pivot_cap">
+      <origin xyz="-0.091 0 0.146" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.004" />
+        </geometry>
+      <material name="satin_brass">
+        <color rgba="0.84 0.73 0.43 1" />
+        </material>
+      </visual>
+    <visual name="right_pivot_cap">
+      <origin xyz="0.091 0 0.146" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.004" />
+        </geometry>
+      <material name="satin_brass">
+        <color rgba="0.84 0.73 0.43 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="meridian">
+    <inertial>
+      <mass value="0.45" />
+      <inertia ixx="0.000896512" ixy="0" ixz="0" iyy="0.000896512" iyz="0" izz="0.00178222" />
+      </inertial>
+    <visual name="meridian_ring">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/meridian_ring.obj" />
+        </geometry>
+      <material name="warm_brass">
+        <color rgba="0.76 0.63 0.31 1" />
+        </material>
+      </visual>
+    <visual name="left_trunnion">
+      <origin xyz="-0.08 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0045" length="0.018" />
+        </geometry>
+      <material name="satin_brass">
+        <color rgba="0.84 0.73 0.43 1" />
+        </material>
+      </visual>
+    <visual name="right_trunnion">
+      <origin xyz="0.08 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0045" length="0.018" />
+        </geometry>
+      <material name="satin_brass">
+        <color rgba="0.84 0.73 0.43 1" />
+        </material>
+      </visual>
+    <visual name="north_support">
+      <origin xyz="0.0265168 0 0.0609845" rpy="0 0.410152 0" />
+      <geometry>
+        <cylinder radius="0.0026" length="0.009" />
+        </geometry>
+      <material name="warm_brass">
+        <color rgba="0.76 0.63 0.31 1" />
+        </material>
+      </visual>
+    <visual name="south_support">
+      <origin xyz="-0.0265168 -0 -0.0609845" rpy="0 0.410152 0" />
+      <geometry>
+        <cylinder radius="0.0026" length="0.009" />
+        </geometry>
+      <material name="warm_brass">
+        <color rgba="0.76 0.63 0.31 1" />
+        </material>
+      </visual>
+    <visual name="north_cap">
+      <origin xyz="0.0239249 0 0.0550236" rpy="0 0.410152 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.004" />
+        </geometry>
+      <material name="satin_brass">
+        <color rgba="0.84 0.73 0.43 1" />
+        </material>
+      </visual>
+    <visual name="south_cap">
+      <origin xyz="-0.0239249 -0 -0.0550236" rpy="0 0.410152 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.004" />
+        </geometry>
+      <material name="satin_brass">
+        <color rgba="0.84 0.73 0.43 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="globe">
+    <inertial>
+      <mass value="0.38" />
+      <inertia ixx="0.0004598" ixy="0" ixz="0" iyy="0.0004598" iyz="0" izz="0.0004598" />
+      </inertial>
+    <visual name="ocean_sphere">
+      <geometry>
+        <sphere radius="0.055" />
+        </geometry>
+      <material name="ocean_blue">
+        <color rgba="0.17 0.41 0.71 1" />
+        </material>
+      </visual>
+    <visual name="americas">
+      <geometry>
+        <mesh filename="assets/meshes/americas.obj" />
+        </geometry>
+      <material name="land_green">
+        <color rgba="0.45 0.58 0.27 1" />
+        </material>
+      </visual>
+    <visual name="eurasia_africa">
+      <geometry>
+        <mesh filename="assets/meshes/eurasia_africa.obj" />
+        </geometry>
+      <material name="land_green">
+        <color rgba="0.45 0.58 0.27 1" />
+        </material>
+      </visual>
+    <visual name="australia">
+      <geometry>
+        <mesh filename="assets/meshes/australia.obj" />
+        </geometry>
+      <material name="land_green">
+        <color rgba="0.45 0.58 0.27 1" />
+        </material>
+      </visual>
+    <visual name="north_button">
+      <origin xyz="0 0 0.0565" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0045" length="0.003" />
+        </geometry>
+      <material name="dark_metal">
+        <color rgba="0.22 0.22 0.24 1" />
+        </material>
+      </visual>
+    <visual name="south_button">
+      <origin xyz="0 0 -0.0565" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0045" length="0.003" />
+        </geometry>
+      <material name="dark_metal">
+        <color rgba="0.22 0.22 0.24 1" />
+        </material>
+      </visual>
+    </link>
+  <joint name="base_to_meridian" type="revolute">
+    <origin xyz="0 0 0.146" rpy="0.314159 0 0" />
+    <parent link="base" />
+    <child link="meridian" />
+    <axis xyz="1 0 0" />
+    <limit effort="2" velocity="1.5" lower="-0.523599" upper="0.523599" />
+    </joint>
+  <joint name="meridian_to_globe" type="continuous">
+    <origin xyz="0 0 0" rpy="0 0.410152 0" />
+    <parent link="meridian" />
+    <child link="globe" />
+    <axis xyz="0 0 1" />
+    <limit effort="0.4" velocity="4" />
+    </joint>
+  </robot>

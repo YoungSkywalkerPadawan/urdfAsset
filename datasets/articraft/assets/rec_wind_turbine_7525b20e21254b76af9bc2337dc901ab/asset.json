@@ -1,0 +1,256 @@
+{
+  "summary": {
+    "id": "rec_wind_turbine_7525b20e21254b76af9bc2337dc901ab",
+    "category": "turbine",
+    "robot_name": "industrial_safety_wind_turbine",
+    "joint_count": 1,
+    "link_count": 8,
+    "target_link_count": 2,
+    "family": "rec_wind_turbine",
+    "warnings": [],
+    "diagonal": 12.894086188902179,
+    "bytes": 3582849
+  },
+  "source": {
+    "dataset": "camvsl/Articraft-10K",
+    "revision": "3c79d5a05bb7cb6bf7bfee5e090176636ee3ac65",
+    "license": "CC-BY-4.0",
+    "url": "https://huggingface.co/datasets/camvsl/Articraft-10K/blob/3c79d5a05bb7cb6bf7bfee5e090176636ee3ac65/rec_wind_turbine_7525b20e21254b76af9bc2337dc901ab.tar.gz",
+    "archive_sha256": "8474ba1cad6d22841eb1a5422cfc6970bf2864963d1df6b83def0bf414f3f61c",
+    "archive": "rec_wind_turbine_7525b20e21254b76af9bc2337dc901ab.tar.gz",
+    "label_status": "Original generated URDF reference; not manually verified or physically validated"
+  },
+  "links": [
+    {
+      "id": "link_000",
+      "name": "tower",
+      "point_file": null,
+      "faces": 3492,
+      "vertices": 1798,
+      "bounds": [
+        [
+          -1.3,
+          -1.3,
+          0.0
+        ],
+        [
+          1.3,
+          1.3,
+          8.25
+        ]
+      ]
+    },
+    {
+      "id": "link_001",
+      "name": "nacelle",
+      "point_file": "inputs/link_001.npz",
+      "faces": 2504,
+      "vertices": 1349,
+      "bounds": [
+        [
+          -0.845,
+          -0.52,
+          8.2
+        ],
+        [
+          0.974164,
+          0.5325,
+          9.334999999999999
+        ]
+      ]
+    },
+    {
+      "id": "link_002",
+      "name": "root_guard",
+      "point_file": null,
+      "faces": 3200,
+      "vertices": 1715,
+      "bounds": [
+        [
+          0.45,
+          -0.985,
+          7.765
+        ],
+        [
+          1.04,
+          0.985,
+          9.735
+        ]
+      ]
+    },
+    {
+      "id": "link_003",
+      "name": "hub",
+      "point_file": "inputs/link_003.npz",
+      "faces": 1312,
+      "vertices": 686,
+      "bounds": [
+        [
+          0.9739984205221429,
+          -0.5484682144443849,
+          8.110025388746019
+        ],
+        [
+          1.944,
+          0.66,
+          9.389974141888043
+        ]
+      ]
+    },
+    {
+      "id": "link_004",
+      "name": "blade_0",
+      "point_file": null,
+      "faces": 1978,
+      "vertices": 1017,
+      "bounds": [
+        [
+          0.944,
+          0.5599987511102649,
+          8.409999632681783
+        ],
+        [
+          1.624,
+          3.140000287961875,
+          9.089999999997707
+        ]
+      ]
+    },
+    {
+      "id": "link_005",
+      "name": "blade_1",
+      "point_file": null,
+      "faces": 1978,
+      "vertices": 1017,
+      "bounds": [
+        [
+          0.944,
+          -1.6378968842510597,
+          9.064973933925229
+        ],
+        [
+          1.624,
+          0.01444859913841251,
+          11.520119272030296
+        ]
+      ]
+    },
+    {
+      "id": "link_006",
+      "name": "blade_2",
+      "point_file": null,
+      "faces": 1978,
+      "vertices": 1017,
+      "bounds": [
+        [
+          0.944,
+          -1.6579966487851763,
+          5.991485197560643
+        ],
+        [
+          1.624,
+          0.014447978025941,
+          8.435027141868034
+        ]
+      ]
+    },
+    {
+      "id": "link_007",
+      "name": "lock_pin",
+      "point_file": null,
+      "faces": 268,
+      "vertices": 140,
+      "bounds": [
+        [
+          0.18749979797390484,
+          0.5,
+          9.14499989898723
+        ],
+        [
+          0.810000165292543,
+          0.6200000000000001,
+          9.255000101012769
+        ]
+      ]
+    }
+  ],
+  "joints": [
+    {
+      "name": "tower_to_nacelle",
+      "type": "revolute",
+      "parent": "link_000",
+      "child": "link_001",
+      "reference_q": 0.0,
+      "mimic": null
+    },
+    {
+      "name": "nacelle_to_guard",
+      "type": "fixed",
+      "parent": "link_001",
+      "child": "link_002",
+      "reference_q": 0.0,
+      "mimic": null
+    },
+    {
+      "name": "nacelle_to_hub",
+      "type": "continuous",
+      "parent": "link_001",
+      "child": "link_003",
+      "reference_q": 0.0,
+      "mimic": null
+    },
+    {
+      "name": "hub_to_blade_0",
+      "type": "revolute",
+      "parent": "link_003",
+      "child": "link_004",
+      "reference_q": 0.0,
+      "mimic": null
+    },
+    {
+      "name": "hub_to_blade_1",
+      "type": "revolute",
+      "parent": "link_003",
+      "child": "link_005",
+      "reference_q": 0.0,
+      "mimic": null
+    },
+    {
+      "name": "hub_to_blade_2",
+      "type": "revolute",
+      "parent": "link_003",
+      "child": "link_006",
+      "reference_q": 0.0,
+      "mimic": null
+    },
+    {
+      "name": "nacelle_to_lock_pin",
+      "type": "prismatic",
+      "parent": "link_001",
+      "child": "link_007",
+      "reference_q": 0.0,
+      "mimic": null
+    }
+  ],
+  "bounds": [
+    [
+      -1.3,
+      -1.6579966487851763,
+      0.0
+    ],
+    [
+      1.944,
+      3.140000287961875,
+      11.520119272030296
+    ]
+  ],
+  "point_pool_size": 65536,
+  "reference_pose": "Zero position clamped to limits; mimic values propagated",
+  "qc": {
+    "finite_geometry": true,
+    "tree_valid": true,
+    "axis_unit": true,
+    "physical_collision_validation": false,
+    "visual_tessellation": "32 cylinder segments, icosphere subdivision 2"
+  }
+}

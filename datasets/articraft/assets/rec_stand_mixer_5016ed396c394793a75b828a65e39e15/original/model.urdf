@@ -1,0 +1,355 @@
+<robot name="consumer_stand_mixer">
+  <material name="body_orange">
+    <color rgba="0.93 0.34 0.14 1" />
+    </material>
+  <material name="chrome">
+    <color rgba="0.9 0.91 0.93 1" />
+    </material>
+  <material name="satin_steel">
+    <color rgba="0.76 0.78 0.8 1" />
+    </material>
+  <material name="dark_trim">
+    <color rgba="0.18 0.18 0.2 1" />
+    </material>
+  <material name="control_cream">
+    <color rgba="0.95 0.93 0.85 1" />
+    </material>
+  <link name="base">
+    <inertial>
+      <origin xyz="0.01 0 0.16" rpy="0 0 0" />
+      <mass value="8" />
+      <inertia ixx="0.106667" ixy="0" ixz="0" iyy="0.174933" iyz="0" izz="0.145067" />
+      </inertial>
+    <visual name="base_shell">
+      <geometry>
+        <mesh filename="assets/meshes/base_shell.obj" />
+        </geometry>
+      <material name="body_orange">
+        <color rgba="0.93 0.34 0.14 1" />
+        </material>
+      </visual>
+    <visual name="rear_pedestal">
+      <geometry>
+        <mesh filename="assets/meshes/rear_pedestal.obj" />
+        </geometry>
+      <material name="body_orange">
+        <color rgba="0.93 0.34 0.14 1" />
+        </material>
+      </visual>
+    <visual name="slide_deck">
+      <origin xyz="0.075 0 0.061" rpy="0 0 0" />
+      <geometry>
+        <box size="0.205 0.122 0.014" />
+        </geometry>
+      <material name="chrome">
+        <color rgba="0.9 0.91 0.93 1" />
+        </material>
+      </visual>
+    <visual name="slide_track">
+      <origin xyz="0.047 0 0.059" rpy="0 0 0" />
+      <geometry>
+        <box size="0.15 0.074 0.01" />
+        </geometry>
+      <material name="dark_trim">
+        <color rgba="0.18 0.18 0.2 1" />
+        </material>
+      </visual>
+    <visual name="lock_button_bezel">
+      <origin xyz="-0.156 0 0.126" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.006" />
+        </geometry>
+      <material name="chrome">
+        <color rgba="0.9 0.91 0.93 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="bowl_stage">
+    <inertial>
+      <origin xyz="0.078 0 0.03" rpy="0 0 0" />
+      <mass value="1" />
+      <inertia ixx="0.00140208" ixy="0" ixz="0" iyy="0.00230208" iyz="0" izz="0.00310417" />
+      </inertial>
+    <visual name="stage_plate">
+      <origin xyz="0.0775 0 0.007" rpy="0 0 0" />
+      <geometry>
+        <box size="0.155 0.115 0.014" />
+        </geometry>
+      <material name="satin_steel">
+        <color rgba="0.76 0.78 0.8 1" />
+        </material>
+      </visual>
+    <visual name="stage_tongue">
+      <origin xyz="0.035 0 0.02" rpy="0 0 0" />
+      <geometry>
+        <box size="0.1 0.05 0.02" />
+        </geometry>
+      <material name="dark_trim">
+        <color rgba="0.18 0.18 0.2 1" />
+        </material>
+      </visual>
+    <visual name="bowl_pedestal">
+      <origin xyz="0.09 0 0.028" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.034" length="0.028" />
+        </geometry>
+      <material name="satin_steel">
+        <color rgba="0.76 0.78 0.8 1" />
+        </material>
+      </visual>
+    <visual name="bowl_seat">
+      <origin xyz="0.09 0 0.048" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.06" length="0.012" />
+        </geometry>
+      <material name="satin_steel">
+        <color rgba="0.76 0.78 0.8 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="bowl">
+    <inertial>
+      <origin xyz="0 0 0.0725" rpy="0 0 0" />
+      <mass value="1.1" />
+      <inertia ixx="0.00501719" ixy="0" ixz="0" iyy="0.00501719" iyz="0" izz="0.0061798" />
+      </inertial>
+    <visual name="bowl_shell">
+      <geometry>
+        <mesh filename="assets/meshes/mixing_bowl.obj" />
+        </geometry>
+      <material name="chrome">
+        <color rgba="0.9 0.91 0.93 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="head">
+    <inertial>
+      <origin xyz="0.155 0 0.085" rpy="0 0 0" />
+      <mass value="4.6" />
+      <inertia ixx="0.0291717" ixy="0" ixz="0" iyy="0.0521717" iyz="0" izz="0.0506767" />
+      </inertial>
+    <visual name="head_shell">
+      <geometry>
+        <mesh filename="assets/meshes/head_shell.obj" />
+        </geometry>
+      <material name="body_orange">
+        <color rgba="0.93 0.34 0.14 1" />
+        </material>
+      </visual>
+    <visual name="hub_nose">
+      <origin xyz="0.2 0 0.018" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.026" length="0.06" />
+        </geometry>
+      <material name="chrome">
+        <color rgba="0.9 0.91 0.93 1" />
+        </material>
+      </visual>
+    <visual name="hinge_saddle">
+      <origin xyz="0.014 0 0.02" rpy="0 0 0" />
+      <geometry>
+        <box size="0.028 0.09 0.04" />
+        </geometry>
+      <material name="dark_trim">
+        <color rgba="0.18 0.18 0.2 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="speed_lever">
+    <inertial>
+      <origin xyz="0.02 0.01 0.001" rpy="0 0 0" />
+      <mass value="0.05" />
+      <inertia ixx="3.01667e-06" ixy="0" ixz="0" iyy="1.17667e-05" iyz="0" izz="1.20833e-05" />
+      </inertial>
+    <visual name="speed_pivot">
+      <origin xyz="0 0.006 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.012" />
+        </geometry>
+      <material name="chrome">
+        <color rgba="0.9 0.91 0.93 1" />
+        </material>
+      </visual>
+    <visual name="speed_handle">
+      <origin xyz="0.016 0.012 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.032 0.01 0.01" />
+        </geometry>
+      <material name="dark_trim">
+        <color rgba="0.18 0.18 0.2 1" />
+        </material>
+      </visual>
+    <visual name="speed_tip">
+      <origin xyz="0.036 0.014 0.002" rpy="0 0 0" />
+      <geometry>
+        <box size="0.012 0.014 0.012" />
+        </geometry>
+      <material name="control_cream">
+        <color rgba="0.95 0.93 0.85 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="head_lock_button">
+    <inertial>
+      <origin xyz="-0.008 0 0" rpy="0 0 0" />
+      <mass value="0.03" />
+      <inertia ixx="1.28e-06" ixy="0" ixz="0" iyy="1.85e-06" iyz="0" izz="1.85e-06" />
+      </inertial>
+    <visual name="lock_cap">
+      <origin xyz="-0.004 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0075" length="0.008" />
+        </geometry>
+      <material name="control_cream">
+        <color rgba="0.95 0.93 0.85 1" />
+        </material>
+      </visual>
+    <visual name="lock_plunger">
+      <origin xyz="-0.011 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0045" length="0.014" />
+        </geometry>
+      <material name="chrome">
+        <color rgba="0.9 0.91 0.93 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="whisk">
+    <inertial>
+      <origin xyz="0 0 -0.055" rpy="0 0 0" />
+      <mass value="0.24" />
+      <inertia ixx="0.0006995" ixy="0" ixz="0" iyy="0.0006995" iyz="0" izz="0.000243" />
+      </inertial>
+    <visual name="whisk_drive_stub">
+      <origin xyz="0 0 0.01" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0052" length="0.034" />
+        </geometry>
+      <material name="chrome">
+        <color rgba="0.9 0.91 0.93 1" />
+        </material>
+      </visual>
+    <visual name="whisk_shaft">
+      <origin xyz="0 0 -0.03" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0042" length="0.046" />
+        </geometry>
+      <material name="satin_steel">
+        <color rgba="0.76 0.78 0.8 1" />
+        </material>
+      </visual>
+    <visual name="whisk_ferrule">
+      <origin xyz="0 0 -0.065" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0105" length="0.024" />
+        </geometry>
+      <material name="chrome">
+        <color rgba="0.9 0.91 0.93 1" />
+        </material>
+      </visual>
+    <visual name="whisk_loop_0">
+      <geometry>
+        <mesh filename="assets/meshes/whisk_loop_0.obj" />
+        </geometry>
+      <material name="satin_steel">
+        <color rgba="0.76 0.78 0.8 1" />
+        </material>
+      </visual>
+    <visual name="whisk_loop_1">
+      <geometry>
+        <mesh filename="assets/meshes/whisk_loop_1.obj" />
+        </geometry>
+      <material name="satin_steel">
+        <color rgba="0.76 0.78 0.8 1" />
+        </material>
+      </visual>
+    <visual name="whisk_loop_2">
+      <geometry>
+        <mesh filename="assets/meshes/whisk_loop_2.obj" />
+        </geometry>
+      <material name="satin_steel">
+        <color rgba="0.76 0.78 0.8 1" />
+        </material>
+      </visual>
+    <visual name="whisk_loop_3">
+      <geometry>
+        <mesh filename="assets/meshes/whisk_loop_3.obj" />
+        </geometry>
+      <material name="satin_steel">
+        <color rgba="0.76 0.78 0.8 1" />
+        </material>
+      </visual>
+    <visual name="whisk_loop_4">
+      <geometry>
+        <mesh filename="assets/meshes/whisk_loop_4.obj" />
+        </geometry>
+      <material name="satin_steel">
+        <color rgba="0.76 0.78 0.8 1" />
+        </material>
+      </visual>
+    <visual name="whisk_loop_5">
+      <geometry>
+        <mesh filename="assets/meshes/whisk_loop_5.obj" />
+        </geometry>
+      <material name="satin_steel">
+        <color rgba="0.76 0.78 0.8 1" />
+        </material>
+      </visual>
+    <visual name="whisk_loop_6">
+      <geometry>
+        <mesh filename="assets/meshes/whisk_loop_6.obj" />
+        </geometry>
+      <material name="satin_steel">
+        <color rgba="0.76 0.78 0.8 1" />
+        </material>
+      </visual>
+    <visual name="whisk_loop_7">
+      <geometry>
+        <mesh filename="assets/meshes/whisk_loop_7.obj" />
+        </geometry>
+      <material name="satin_steel">
+        <color rgba="0.76 0.78 0.8 1" />
+        </material>
+      </visual>
+    </link>
+  <joint name="base_to_bowl_stage" type="prismatic">
+    <origin xyz="0.005 0 0.068" rpy="0 0 0" />
+    <parent link="base" />
+    <child link="bowl_stage" />
+    <axis xyz="1 0 0" />
+    <limit effort="60" velocity="0.08" lower="0" upper="0.04" />
+    </joint>
+  <joint name="stage_to_bowl" type="fixed">
+    <origin xyz="0.09 0 0.054" rpy="0 0 0" />
+    <parent link="bowl_stage" />
+    <child link="bowl" />
+    </joint>
+  <joint name="base_to_head" type="revolute">
+    <origin xyz="-0.105 0 0.315" rpy="0 0 0" />
+    <parent link="base" />
+    <child link="head" />
+    <axis xyz="0 -1 0" />
+    <limit effort="20" velocity="1" lower="0" upper="1.0821" />
+    </joint>
+  <joint name="base_to_speed_lever" type="revolute">
+    <origin xyz="-0.082 0.0605 0.132" rpy="0 0 0" />
+    <parent link="base" />
+    <child link="speed_lever" />
+    <axis xyz="0 1 0" />
+    <limit effort="1" velocity="2" lower="-0.488692" upper="0.383972" />
+    </joint>
+  <joint name="base_to_head_lock_button" type="prismatic">
+    <origin xyz="-0.156 0 0.126" rpy="0 0 0" />
+    <parent link="base" />
+    <child link="head_lock_button" />
+    <axis xyz="-1 0 0" />
+    <limit effort="8" velocity="0.03" lower="-0.008" upper="0" />
+    </joint>
+  <joint name="head_to_whisk" type="continuous">
+    <origin xyz="0.2 0 -0.035" rpy="0 0 0" />
+    <parent link="head" />
+    <child link="whisk" />
+    <axis xyz="0 0 1" />
+    <limit effort="12" velocity="30" />
+    </joint>
+  </robot>

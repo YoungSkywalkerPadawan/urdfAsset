@@ -1,0 +1,148 @@
+{
+  "summary": {
+    "id": "rec_turntable_d2844b05a2904a50addf5820d20bc4ee",
+    "category": "turntable",
+    "robot_name": "industrial_safety_turntable",
+    "joint_count": 1,
+    "link_count": 4,
+    "target_link_count": 2,
+    "family": "rec_turntable",
+    "warnings": [],
+    "diagonal": 1.372785617367111,
+    "bytes": 3532155
+  },
+  "source": {
+    "dataset": "camvsl/Articraft-10K",
+    "revision": "3c79d5a05bb7cb6bf7bfee5e090176636ee3ac65",
+    "license": "CC-BY-4.0",
+    "url": "https://huggingface.co/datasets/camvsl/Articraft-10K/blob/3c79d5a05bb7cb6bf7bfee5e090176636ee3ac65/rec_turntable_d2844b05a2904a50addf5820d20bc4ee.tar.gz",
+    "archive_sha256": "21febe4ee868811876cb3b1969869112723f6dc9943e9c76505cbe0d7fa462c3",
+    "archive": "rec_turntable_d2844b05a2904a50addf5820d20bc4ee.tar.gz",
+    "label_status": "Original generated URDF reference; not manually verified or physically validated"
+  },
+  "links": [
+    {
+      "id": "link_000",
+      "name": "plinth",
+      "point_file": "inputs/link_000.npz",
+      "faces": 7868,
+      "vertices": 4034,
+      "bounds": [
+        [
+          -0.548725,
+          -0.368,
+          -0.0345
+        ],
+        [
+          0.4525,
+          0.36872499999999997,
+          0.347
+        ]
+      ]
+    },
+    {
+      "id": "link_001",
+      "name": "platter",
+      "point_file": "inputs/link_001.npz",
+      "faces": 688,
+      "vertices": 362,
+      "bounds": [
+        [
+          -0.46599999999999997,
+          -0.286,
+          0.119
+        ],
+        [
+          0.10599999999999998,
+          0.286,
+          0.2855
+        ]
+      ]
+    },
+    {
+      "id": "link_002",
+      "name": "tonearm_stage",
+      "point_file": null,
+      "faces": 688,
+      "vertices": 362,
+      "bounds": [
+        [
+          -0.28400002571230754,
+          -0.255,
+          0.15500000000000003
+        ],
+        [
+          0.3950001285619088,
+          -0.14500000000000002,
+          0.34100014692796804
+        ]
+      ]
+    },
+    {
+      "id": "link_003",
+      "name": "lockout_lever",
+      "point_file": null,
+      "faces": 280,
+      "vertices": 148,
+      "bounds": [
+        [
+          0.234,
+          0.194,
+          0.163
+        ],
+        [
+          0.545,
+          0.266,
+          0.22000008264695292
+        ]
+      ]
+    }
+  ],
+  "joints": [
+    {
+      "name": "plinth_to_platter",
+      "type": "continuous",
+      "parent": "link_000",
+      "child": "link_001",
+      "reference_q": 0.0,
+      "mimic": null
+    },
+    {
+      "name": "plinth_to_tonearm",
+      "type": "revolute",
+      "parent": "link_000",
+      "child": "link_002",
+      "reference_q": 0.0,
+      "mimic": null
+    },
+    {
+      "name": "plinth_to_lockout",
+      "type": "revolute",
+      "parent": "link_000",
+      "child": "link_003",
+      "reference_q": 0.0,
+      "mimic": null
+    }
+  ],
+  "bounds": [
+    [
+      -0.548725,
+      -0.368,
+      -0.0345
+    ],
+    [
+      0.545,
+      0.36872499999999997,
+      0.347
+    ]
+  ],
+  "point_pool_size": 65536,
+  "reference_pose": "Zero position clamped to limits; mimic values propagated",
+  "qc": {
+    "finite_geometry": true,
+    "tree_valid": true,
+    "axis_unit": true,
+    "physical_collision_validation": false,
+    "visual_tessellation": "32 cylinder segments, icosphere subdivision 2"
+  }
+}

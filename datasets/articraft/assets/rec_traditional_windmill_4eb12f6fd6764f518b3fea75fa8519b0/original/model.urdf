@@ -1,0 +1,292 @@
+<robot name="traditional_windmill">
+  <material name="warm_stone">
+    <color rgba="0.62 0.57 0.48 1" />
+    </material>
+  <material name="stone_courses">
+    <color rgba="0.48 0.45 0.39 1" />
+    </material>
+  <material name="weathered_thatch">
+    <color rgba="0.45 0.31 0.16 1" />
+    </material>
+  <material name="painted_wood">
+    <color rgba="0.82 0.76 0.63 1" />
+    </material>
+  <material name="sail_wood">
+    <color rgba="0.72 0.5 0.27 1" />
+    </material>
+  <material name="dark_wood">
+    <color rgba="0.2 0.12 0.06 1" />
+    </material>
+  <material name="dark_iron">
+    <color rgba="0.08 0.09 0.09 1" />
+    </material>
+  <material name="guard_iron">
+    <color rgba="0.12 0.15 0.16 1" />
+    </material>
+  <material name="painted_tip">
+    <color rgba="0.65 0.08 0.04 1" />
+    </material>
+  <link name="tower">
+    <visual name="tower_body">
+      <geometry>
+        <mesh filename="assets/meshes/tower_body.obj" />
+        </geometry>
+      <material name="warm_stone">
+        <color rgba="0.62 0.57 0.48 1" />
+        </material>
+      </visual>
+    <visual name="base_plinth">
+      <origin xyz="0 0 0.06" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.44" length="0.12" />
+        </geometry>
+      <material name="stone_courses">
+        <color rgba="0.48 0.45 0.39 1" />
+        </material>
+      </visual>
+    <visual name="top_turntable">
+      <origin xyz="0 0 1.72" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.315" length="0.06" />
+        </geometry>
+      <material name="stone_courses">
+        <color rgba="0.48 0.45 0.39 1" />
+        </material>
+      </visual>
+    <visual name="course_band_0">
+      <origin xyz="0 0 0.55" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.355" length="0.025" />
+        </geometry>
+      <material name="stone_courses">
+        <color rgba="0.48 0.45 0.39 1" />
+        </material>
+      </visual>
+    <visual name="course_band_1">
+      <origin xyz="0 0 1.05" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.325" length="0.025" />
+        </geometry>
+      <material name="stone_courses">
+        <color rgba="0.48 0.45 0.39 1" />
+        </material>
+      </visual>
+    <visual name="course_band_2">
+      <origin xyz="0 0 1.48" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.302" length="0.025" />
+        </geometry>
+      <material name="stone_courses">
+        <color rgba="0.48 0.45 0.39 1" />
+        </material>
+      </visual>
+    <visual name="front_door">
+      <origin xyz="0.368 0 0.32" rpy="0 0 0" />
+      <geometry>
+        <box size="0.024 0.2 0.44" />
+        </geometry>
+      <material name="dark_wood">
+        <color rgba="0.2 0.12 0.06 1" />
+        </material>
+      </visual>
+    <visual name="door_lintel">
+      <origin xyz="0.381 0 0.54" rpy="0 0 0" />
+      <geometry>
+        <box size="0.026 0.24 0.035" />
+        </geometry>
+      <material name="painted_wood">
+        <color rgba="0.82 0.76 0.63 1" />
+        </material>
+      </visual>
+    <visual name="front_window_0">
+      <origin xyz="0.332 0 0.88" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.15 0.18" />
+        </geometry>
+      <material name="dark_wood">
+        <color rgba="0.2 0.12 0.06 1" />
+        </material>
+      </visual>
+    <visual name="window_cap_0">
+      <origin xyz="0.345 0 0.975" rpy="0 0 0" />
+      <geometry>
+        <box size="0.02 0.18 0.026" />
+        </geometry>
+      <material name="painted_wood">
+        <color rgba="0.82 0.76 0.63 1" />
+        </material>
+      </visual>
+    <visual name="front_window_1">
+      <origin xyz="0.317 0 1.27" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.15 0.18" />
+        </geometry>
+      <material name="dark_wood">
+        <color rgba="0.2 0.12 0.06 1" />
+        </material>
+      </visual>
+    <visual name="window_cap_1">
+      <origin xyz="0.33 0 1.365" rpy="0 0 0" />
+      <geometry>
+        <box size="0.02 0.18 0.026" />
+        </geometry>
+      <material name="painted_wood">
+        <color rgba="0.82 0.76 0.63 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="cap">
+    <visual name="cap_skirt">
+      <origin xyz="0 0 0.05" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.34" length="0.1" />
+        </geometry>
+      <material name="painted_wood">
+        <color rgba="0.82 0.76 0.63 1" />
+        </material>
+      </visual>
+    <visual name="cap_roof">
+      <geometry>
+        <mesh filename="assets/meshes/cap_roof.obj" />
+        </geometry>
+      <material name="weathered_thatch">
+        <color rgba="0.45 0.31 0.16 1" />
+        </material>
+      </visual>
+    <visual name="front_nacelle">
+      <origin xyz="0.37 0 0.2" rpy="0 0 0" />
+      <geometry>
+        <box size="0.52 0.28 0.22" />
+        </geometry>
+      <material name="painted_wood">
+        <color rgba="0.82 0.76 0.63 1" />
+        </material>
+      </visual>
+    <visual name="bearing_barrel">
+      <origin xyz="0.57 0 0.25" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.082" length="0.16" />
+        </geometry>
+      <material name="dark_iron">
+        <color rgba="0.08 0.09 0.09 1" />
+        </material>
+      </visual>
+    <visual name="guard_lug_0">
+      <origin xyz="0.635 0.17 0.25" rpy="0 0 0" />
+      <geometry>
+        <box size="0.07 0.13 0.11" />
+        </geometry>
+      <material name="painted_wood">
+        <color rgba="0.82 0.76 0.63 1" />
+        </material>
+      </visual>
+    <visual name="guard_lug_1">
+      <origin xyz="0.635 -0.17 0.25" rpy="0 0 0" />
+      <geometry>
+        <box size="0.07 0.13 0.11" />
+        </geometry>
+      <material name="painted_wood">
+        <color rgba="0.82 0.76 0.63 1" />
+        </material>
+      </visual>
+    <visual name="guard_ring">
+      <geometry>
+        <mesh filename="assets/meshes/guard_ring.obj" />
+        </geometry>
+      <material name="guard_iron">
+        <color rgba="0.12 0.15 0.16 1" />
+        </material>
+      </visual>
+    <visual name="guard_arm_0">
+      <geometry>
+        <mesh filename="assets/meshes/guard_arm_0.obj" />
+        </geometry>
+      <material name="guard_iron">
+        <color rgba="0.12 0.15 0.16 1" />
+        </material>
+      </visual>
+    <visual name="guard_arm_1">
+      <geometry>
+        <mesh filename="assets/meshes/guard_arm_1.obj" />
+        </geometry>
+      <material name="guard_iron">
+        <color rgba="0.12 0.15 0.16 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="sail_hub">
+    <visual name="hub_disk">
+      <origin xyz="0.05 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.083" length="0.1" />
+        </geometry>
+      <material name="dark_iron">
+        <color rgba="0.08 0.09 0.09 1" />
+        </material>
+      </visual>
+    <visual name="hub_boss">
+      <origin xyz="0.112 0 0" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.055" />
+        </geometry>
+      <material name="dark_iron">
+        <color rgba="0.08 0.09 0.09 1" />
+        </material>
+      </visual>
+    <visual name="blade_0">
+      <geometry>
+        <mesh filename="assets/meshes/blade_0.obj" />
+        </geometry>
+      <material name="sail_wood">
+        <color rgba="0.72 0.5 0.27 1" />
+        </material>
+      </visual>
+    <visual name="blade_1">
+      <geometry>
+        <mesh filename="assets/meshes/blade_1.obj" />
+        </geometry>
+      <material name="sail_wood">
+        <color rgba="0.72 0.5 0.27 1" />
+        </material>
+      </visual>
+    <visual name="blade_2">
+      <geometry>
+        <mesh filename="assets/meshes/blade_2.obj" />
+        </geometry>
+      <material name="sail_wood">
+        <color rgba="0.72 0.5 0.27 1" />
+        </material>
+      </visual>
+    <visual name="blade_3">
+      <geometry>
+        <mesh filename="assets/meshes/blade_3.obj" />
+        </geometry>
+      <material name="sail_wood">
+        <color rgba="0.72 0.5 0.27 1" />
+        </material>
+      </visual>
+    <visual name="blade_tip_marker">
+      <origin xyz="0.055 0 0.69" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.024" />
+        </geometry>
+      <material name="painted_tip">
+        <color rgba="0.65 0.08 0.04 1" />
+        </material>
+      </visual>
+    </link>
+  <joint name="tower_to_cap" type="continuous">
+    <origin xyz="0 0 1.75" rpy="0 0 0" />
+    <parent link="tower" />
+    <child link="cap" />
+    <axis xyz="0 0 1" />
+    <limit effort="80" velocity="0.5" />
+    </joint>
+  <joint name="cap_to_sail_hub" type="continuous">
+    <origin xyz="0.65 0 0.25" rpy="0 0 0" />
+    <parent link="cap" />
+    <child link="sail_hub" />
+    <axis xyz="1 0 0" />
+    <limit effort="20" velocity="8" />
+    </joint>
+  </robot>

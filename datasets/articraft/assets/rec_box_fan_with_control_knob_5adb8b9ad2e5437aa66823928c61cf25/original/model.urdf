@@ -1,0 +1,620 @@
+<robot name="tower_fan">
+  <material name="body">
+    <color rgba="0.82 0.84 0.86 1" />
+    </material>
+  <material name="charcoal">
+    <color rgba="0.2 0.22 0.24 1" />
+    </material>
+  <material name="black">
+    <color rgba="0.08 0.09 0.1 1" />
+    </material>
+  <material name="dark_grey">
+    <color rgba="0.31 0.33 0.35 1" />
+    </material>
+  <material name="steel">
+    <color rgba="0.61 0.65 0.69 1" />
+    </material>
+  <link name="pedestal_base">
+    <visual name="base_shell">
+      <geometry>
+        <mesh filename="assets/meshes/tower_fan_base_shell.obj" />
+        </geometry>
+      <material name="charcoal">
+        <color rgba="0.2 0.22 0.24 1" />
+        </material>
+      </visual>
+    <visual name="bearing_pad">
+      <origin xyz="0 0 0.041" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.074" length="0.008" />
+        </geometry>
+      <material name="dark_grey">
+        <color rgba="0.31 0.33 0.35 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="tower_housing">
+    <visual name="turntable_collar">
+      <origin xyz="0 0 0.009" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.07" length="0.018" />
+        </geometry>
+      <material name="body">
+        <color rgba="0.82 0.84 0.86 1" />
+        </material>
+      </visual>
+    <visual name="drive_hub">
+      <origin xyz="0 0 0.011" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.026" length="0.022" />
+        </geometry>
+      <material name="dark_grey">
+        <color rgba="0.31 0.33 0.35 1" />
+        </material>
+      </visual>
+    <visual name="left_side_panel">
+      <origin xyz="-0.063 0 0.468" rpy="0 0 0" />
+      <geometry>
+        <box size="0.004 0.11 0.908" />
+        </geometry>
+      <material name="body">
+        <color rgba="0.82 0.84 0.86 1" />
+        </material>
+      </visual>
+    <visual name="right_side_panel">
+      <origin xyz="0.063 0 0.468" rpy="0 0 0" />
+      <geometry>
+        <box size="0.004 0.11 0.908" />
+        </geometry>
+      <material name="body">
+        <color rgba="0.82 0.84 0.86 1" />
+        </material>
+      </visual>
+    <visual name="front_lower_panel">
+      <origin xyz="0 0.053 0.066" rpy="0 0 0" />
+      <geometry>
+        <box size="0.122 0.004 0.104" />
+        </geometry>
+      <material name="body">
+        <color rgba="0.82 0.84 0.86 1" />
+        </material>
+      </visual>
+    <visual name="front_upper_panel">
+      <origin xyz="0 0.053 0.881" rpy="0 0 0" />
+      <geometry>
+        <box size="0.122 0.004 0.082" />
+        </geometry>
+      <material name="body">
+        <color rgba="0.82 0.84 0.86 1" />
+        </material>
+      </visual>
+    <visual name="front_left_stile">
+      <origin xyz="-0.0405 0.053 0.479" rpy="0 0 0" />
+      <geometry>
+        <box size="0.019 0.004 0.726" />
+        </geometry>
+      <material name="body">
+        <color rgba="0.82 0.84 0.86 1" />
+        </material>
+      </visual>
+    <visual name="front_right_stile">
+      <origin xyz="0.0405 0.053 0.479" rpy="0 0 0" />
+      <geometry>
+        <box size="0.019 0.004 0.726" />
+        </geometry>
+      <material name="body">
+        <color rgba="0.82 0.84 0.86 1" />
+        </material>
+      </visual>
+    <visual name="front_grille_slat_00">
+      <origin xyz="0 0.0522 0.158" rpy="0 0 0" />
+      <geometry>
+        <box size="0.068 0.0032 0.005" />
+        </geometry>
+      <material name="black">
+        <color rgba="0.08 0.09 0.1 1" />
+        </material>
+      </visual>
+    <visual name="front_grille_slat_01">
+      <origin xyz="0 0.0522 0.218" rpy="0 0 0" />
+      <geometry>
+        <box size="0.068 0.0032 0.005" />
+        </geometry>
+      <material name="black">
+        <color rgba="0.08 0.09 0.1 1" />
+        </material>
+      </visual>
+    <visual name="front_grille_slat_02">
+      <origin xyz="0 0.0522 0.278" rpy="0 0 0" />
+      <geometry>
+        <box size="0.068 0.0032 0.005" />
+        </geometry>
+      <material name="black">
+        <color rgba="0.08 0.09 0.1 1" />
+        </material>
+      </visual>
+    <visual name="front_grille_slat_03">
+      <origin xyz="0 0.0522 0.338" rpy="0 0 0" />
+      <geometry>
+        <box size="0.068 0.0032 0.005" />
+        </geometry>
+      <material name="black">
+        <color rgba="0.08 0.09 0.1 1" />
+        </material>
+      </visual>
+    <visual name="front_grille_slat_04">
+      <origin xyz="0 0.0522 0.398" rpy="0 0 0" />
+      <geometry>
+        <box size="0.068 0.0032 0.005" />
+        </geometry>
+      <material name="black">
+        <color rgba="0.08 0.09 0.1 1" />
+        </material>
+      </visual>
+    <visual name="front_grille_slat_05">
+      <origin xyz="0 0.0522 0.458" rpy="0 0 0" />
+      <geometry>
+        <box size="0.068 0.0032 0.005" />
+        </geometry>
+      <material name="black">
+        <color rgba="0.08 0.09 0.1 1" />
+        </material>
+      </visual>
+    <visual name="front_grille_slat_06">
+      <origin xyz="0 0.0522 0.518" rpy="0 0 0" />
+      <geometry>
+        <box size="0.068 0.0032 0.005" />
+        </geometry>
+      <material name="black">
+        <color rgba="0.08 0.09 0.1 1" />
+        </material>
+      </visual>
+    <visual name="front_grille_slat_07">
+      <origin xyz="0 0.0522 0.578" rpy="0 0 0" />
+      <geometry>
+        <box size="0.068 0.0032 0.005" />
+        </geometry>
+      <material name="black">
+        <color rgba="0.08 0.09 0.1 1" />
+        </material>
+      </visual>
+    <visual name="front_grille_slat_08">
+      <origin xyz="0 0.0522 0.638" rpy="0 0 0" />
+      <geometry>
+        <box size="0.068 0.0032 0.005" />
+        </geometry>
+      <material name="black">
+        <color rgba="0.08 0.09 0.1 1" />
+        </material>
+      </visual>
+    <visual name="front_grille_slat_09">
+      <origin xyz="0 0.0522 0.698" rpy="0 0 0" />
+      <geometry>
+        <box size="0.068 0.0032 0.005" />
+        </geometry>
+      <material name="black">
+        <color rgba="0.08 0.09 0.1 1" />
+        </material>
+      </visual>
+    <visual name="front_grille_slat_10">
+      <origin xyz="0 0.0522 0.758" rpy="0 0 0" />
+      <geometry>
+        <box size="0.068 0.0032 0.005" />
+        </geometry>
+      <material name="black">
+        <color rgba="0.08 0.09 0.1 1" />
+        </material>
+      </visual>
+    <visual name="rear_lower_panel">
+      <origin xyz="0 -0.053 0.081" rpy="0 0 0" />
+      <geometry>
+        <box size="0.122 0.004 0.134" />
+        </geometry>
+      <material name="body">
+        <color rgba="0.82 0.84 0.86 1" />
+        </material>
+      </visual>
+    <visual name="rear_top_panel">
+      <origin xyz="0 -0.053 0.826" rpy="0 0 0" />
+      <geometry>
+        <box size="0.122 0.004 0.192" />
+        </geometry>
+      <material name="body">
+        <color rgba="0.82 0.84 0.86 1" />
+        </material>
+      </visual>
+    <visual name="rear_left_stile">
+      <origin xyz="-0.049 -0.053 0.439" rpy="0 0 0" />
+      <geometry>
+        <box size="0.016 0.004 0.586" />
+        </geometry>
+      <material name="body">
+        <color rgba="0.82 0.84 0.86 1" />
+        </material>
+      </visual>
+    <visual name="rear_right_stile">
+      <origin xyz="0.049 -0.053 0.439" rpy="0 0 0" />
+      <geometry>
+        <box size="0.016 0.004 0.586" />
+        </geometry>
+      <material name="body">
+        <color rgba="0.82 0.84 0.86 1" />
+        </material>
+      </visual>
+    <visual name="rear_intake_slat_00">
+      <origin xyz="-0.037 -0.053 0.439" rpy="0 0 0" />
+      <geometry>
+        <box size="0.003 0.004 0.586" />
+        </geometry>
+      <material name="black">
+        <color rgba="0.08 0.09 0.1 1" />
+        </material>
+      </visual>
+    <visual name="rear_intake_slat_01">
+      <origin xyz="-0.0302727 -0.053 0.439" rpy="0 0 0" />
+      <geometry>
+        <box size="0.003 0.004 0.586" />
+        </geometry>
+      <material name="black">
+        <color rgba="0.08 0.09 0.1 1" />
+        </material>
+      </visual>
+    <visual name="rear_intake_slat_02">
+      <origin xyz="-0.0235455 -0.053 0.439" rpy="0 0 0" />
+      <geometry>
+        <box size="0.003 0.004 0.586" />
+        </geometry>
+      <material name="black">
+        <color rgba="0.08 0.09 0.1 1" />
+        </material>
+      </visual>
+    <visual name="rear_intake_slat_03">
+      <origin xyz="-0.0168182 -0.053 0.439" rpy="0 0 0" />
+      <geometry>
+        <box size="0.003 0.004 0.586" />
+        </geometry>
+      <material name="black">
+        <color rgba="0.08 0.09 0.1 1" />
+        </material>
+      </visual>
+    <visual name="rear_intake_slat_04">
+      <origin xyz="-0.0100909 -0.053 0.439" rpy="0 0 0" />
+      <geometry>
+        <box size="0.003 0.004 0.586" />
+        </geometry>
+      <material name="black">
+        <color rgba="0.08 0.09 0.1 1" />
+        </material>
+      </visual>
+    <visual name="rear_intake_slat_05">
+      <origin xyz="-0.004 -0.053 0.439" rpy="0 0 0" />
+      <geometry>
+        <box size="0.003 0.004 0.586" />
+        </geometry>
+      <material name="black">
+        <color rgba="0.08 0.09 0.1 1" />
+        </material>
+      </visual>
+    <visual name="rear_intake_slat_06">
+      <origin xyz="0.004 -0.053 0.439" rpy="0 0 0" />
+      <geometry>
+        <box size="0.003 0.004 0.586" />
+        </geometry>
+      <material name="black">
+        <color rgba="0.08 0.09 0.1 1" />
+        </material>
+      </visual>
+    <visual name="rear_intake_slat_07">
+      <origin xyz="0.0100909 -0.053 0.439" rpy="0 0 0" />
+      <geometry>
+        <box size="0.003 0.004 0.586" />
+        </geometry>
+      <material name="black">
+        <color rgba="0.08 0.09 0.1 1" />
+        </material>
+      </visual>
+    <visual name="rear_intake_slat_08">
+      <origin xyz="0.0168182 -0.053 0.439" rpy="0 0 0" />
+      <geometry>
+        <box size="0.003 0.004 0.586" />
+        </geometry>
+      <material name="black">
+        <color rgba="0.08 0.09 0.1 1" />
+        </material>
+      </visual>
+    <visual name="rear_intake_slat_09">
+      <origin xyz="0.0235455 -0.053 0.439" rpy="0 0 0" />
+      <geometry>
+        <box size="0.003 0.004 0.586" />
+        </geometry>
+      <material name="black">
+        <color rgba="0.08 0.09 0.1 1" />
+        </material>
+      </visual>
+    <visual name="rear_intake_slat_10">
+      <origin xyz="0.0302727 -0.053 0.439" rpy="0 0 0" />
+      <geometry>
+        <box size="0.003 0.004 0.586" />
+        </geometry>
+      <material name="black">
+        <color rgba="0.08 0.09 0.1 1" />
+        </material>
+      </visual>
+    <visual name="rear_intake_slat_11">
+      <origin xyz="0.037 -0.053 0.439" rpy="0 0 0" />
+      <geometry>
+        <box size="0.003 0.004 0.586" />
+        </geometry>
+      <material name="black">
+        <color rgba="0.08 0.09 0.1 1" />
+        </material>
+      </visual>
+    <visual name="lower_motor_cradle">
+      <origin xyz="0 0 0.069" rpy="0 0 0" />
+      <geometry>
+        <box size="0.04 0.102 0.024" />
+        </geometry>
+      <material name="dark_grey">
+        <color rgba="0.31 0.33 0.35 1" />
+        </material>
+      </visual>
+    <visual name="lower_bearing_boss">
+      <origin xyz="0 0.008 0.086" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.013" length="0.01" />
+        </geometry>
+      <material name="dark_grey">
+        <color rgba="0.31 0.33 0.35 1" />
+        </material>
+      </visual>
+    <visual name="upper_bearing_bridge">
+      <origin xyz="0 0.008 0.849" rpy="0 0 0" />
+      <geometry>
+        <box size="0.122 0.02 0.012" />
+        </geometry>
+      <material name="dark_grey">
+        <color rgba="0.31 0.33 0.35 1" />
+        </material>
+      </visual>
+    <visual name="upper_bearing_boss">
+      <origin xyz="0 0.008 0.838" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.013" length="0.01" />
+        </geometry>
+      <material name="dark_grey">
+        <color rgba="0.31 0.33 0.35 1" />
+        </material>
+      </visual>
+    <visual name="top_cap">
+      <origin xyz="0 0 0.908" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/tower_fan_top_cap.obj" />
+        </geometry>
+      <material name="body">
+        <color rgba="0.82 0.84 0.86 1" />
+        </material>
+      </visual>
+    <visual name="rear_switch_panel">
+      <origin xyz="0 -0.054 0.882" rpy="0 0 0" />
+      <geometry>
+        <box size="0.02 0.01 0.004" />
+        </geometry>
+      <material name="dark_grey">
+        <color rgba="0.31 0.33 0.35 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="impeller_drum">
+    <visual name="axle">
+      <geometry>
+        <cylinder radius="0.008" length="0.742" />
+        </geometry>
+      <material name="dark_grey">
+        <color rgba="0.31 0.33 0.35 1" />
+        </material>
+      </visual>
+    <visual name="lower_end_disc">
+      <origin xyz="0 0 -0.364" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.041" length="0.014" />
+        </geometry>
+      <material name="steel">
+        <color rgba="0.61 0.65 0.69 1" />
+        </material>
+      </visual>
+    <visual name="upper_end_disc">
+      <origin xyz="0 0 0.364" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.041" length="0.014" />
+        </geometry>
+      <material name="steel">
+        <color rgba="0.61 0.65 0.69 1" />
+        </material>
+      </visual>
+    <visual name="blade_00">
+      <origin xyz="0.031 0 0" rpy="0 0 0.32" />
+      <geometry>
+        <box size="0.004 0.016 0.746" />
+        </geometry>
+      <material name="steel">
+        <color rgba="0.61 0.65 0.69 1" />
+        </material>
+      </visual>
+    <visual name="blade_01">
+      <origin xyz="0.0286403 0.0118632 0" rpy="0 0 0.712699" />
+      <geometry>
+        <box size="0.004 0.016 0.746" />
+        </geometry>
+      <material name="steel">
+        <color rgba="0.61 0.65 0.69 1" />
+        </material>
+      </visual>
+    <visual name="blade_02">
+      <origin xyz="0.0219203 0.0219203 0" rpy="0 0 1.1054" />
+      <geometry>
+        <box size="0.004 0.016 0.746" />
+        </geometry>
+      <material name="steel">
+        <color rgba="0.61 0.65 0.69 1" />
+        </material>
+      </visual>
+    <visual name="blade_03">
+      <origin xyz="0.0118632 0.0286403 0" rpy="0 0 1.4981" />
+      <geometry>
+        <box size="0.004 0.016 0.746" />
+        </geometry>
+      <material name="steel">
+        <color rgba="0.61 0.65 0.69 1" />
+        </material>
+      </visual>
+    <visual name="blade_04">
+      <origin xyz="1.8982e-18 0.031 0" rpy="0 0 1.8908" />
+      <geometry>
+        <box size="0.004 0.016 0.746" />
+        </geometry>
+      <material name="steel">
+        <color rgba="0.61 0.65 0.69 1" />
+        </material>
+      </visual>
+    <visual name="blade_05">
+      <origin xyz="-0.0118632 0.0286403 0" rpy="0 0 2.2835" />
+      <geometry>
+        <box size="0.004 0.016 0.746" />
+        </geometry>
+      <material name="steel">
+        <color rgba="0.61 0.65 0.69 1" />
+        </material>
+      </visual>
+    <visual name="blade_06">
+      <origin xyz="-0.0219203 0.0219203 0" rpy="0 0 2.67619" />
+      <geometry>
+        <box size="0.004 0.016 0.746" />
+        </geometry>
+      <material name="steel">
+        <color rgba="0.61 0.65 0.69 1" />
+        </material>
+      </visual>
+    <visual name="blade_07">
+      <origin xyz="-0.0286403 0.0118632 0" rpy="0 0 3.06889" />
+      <geometry>
+        <box size="0.004 0.016 0.746" />
+        </geometry>
+      <material name="steel">
+        <color rgba="0.61 0.65 0.69 1" />
+        </material>
+      </visual>
+    <visual name="blade_08">
+      <origin xyz="-0.031 3.79641e-18 0" rpy="0 0 3.46159" />
+      <geometry>
+        <box size="0.004 0.016 0.746" />
+        </geometry>
+      <material name="steel">
+        <color rgba="0.61 0.65 0.69 1" />
+        </material>
+      </visual>
+    <visual name="blade_09">
+      <origin xyz="-0.0286403 -0.0118632 0" rpy="0 0 3.85429" />
+      <geometry>
+        <box size="0.004 0.016 0.746" />
+        </geometry>
+      <material name="steel">
+        <color rgba="0.61 0.65 0.69 1" />
+        </material>
+      </visual>
+    <visual name="blade_10">
+      <origin xyz="-0.0219203 -0.0219203 0" rpy="0 0 4.24699" />
+      <geometry>
+        <box size="0.004 0.016 0.746" />
+        </geometry>
+      <material name="steel">
+        <color rgba="0.61 0.65 0.69 1" />
+        </material>
+      </visual>
+    <visual name="blade_11">
+      <origin xyz="-0.0118632 -0.0286403 0" rpy="0 0 4.63969" />
+      <geometry>
+        <box size="0.004 0.016 0.746" />
+        </geometry>
+      <material name="steel">
+        <color rgba="0.61 0.65 0.69 1" />
+        </material>
+      </visual>
+    <visual name="blade_12">
+      <origin xyz="-5.69461e-18 -0.031 0" rpy="0 0 5.03239" />
+      <geometry>
+        <box size="0.004 0.016 0.746" />
+        </geometry>
+      <material name="steel">
+        <color rgba="0.61 0.65 0.69 1" />
+        </material>
+      </visual>
+    <visual name="blade_13">
+      <origin xyz="0.0118632 -0.0286403 0" rpy="0 0 5.42509" />
+      <geometry>
+        <box size="0.004 0.016 0.746" />
+        </geometry>
+      <material name="steel">
+        <color rgba="0.61 0.65 0.69 1" />
+        </material>
+      </visual>
+    <visual name="blade_14">
+      <origin xyz="0.0219203 -0.0219203 0" rpy="0 0 5.81779" />
+      <geometry>
+        <box size="0.004 0.016 0.746" />
+        </geometry>
+      <material name="steel">
+        <color rgba="0.61 0.65 0.69 1" />
+        </material>
+      </visual>
+    <visual name="blade_15">
+      <origin xyz="0.0286403 -0.0118632 0" rpy="0 0 6.21049" />
+      <geometry>
+        <box size="0.004 0.016 0.746" />
+        </geometry>
+      <material name="steel">
+        <color rgba="0.61 0.65 0.69 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="speed_selector_knob">
+    <visual name="knob_body">
+      <origin xyz="0 -0.011 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.022" />
+        </geometry>
+      <material name="charcoal">
+        <color rgba="0.2 0.22 0.24 1" />
+        </material>
+      </visual>
+    <visual name="indicator_ridge">
+      <origin xyz="0 -0.02 0.012" rpy="0 0 0" />
+      <geometry>
+        <box size="0.003 0.004 0.01" />
+        </geometry>
+      <material name="steel">
+        <color rgba="0.61 0.65 0.69 1" />
+        </material>
+      </visual>
+    </link>
+  <joint name="base_oscillation" type="revolute">
+    <origin xyz="0 0 0.045" rpy="0 0 0" />
+    <parent link="pedestal_base" />
+    <child link="tower_housing" />
+    <axis xyz="0 0 1" />
+    <limit effort="12" velocity="1" lower="-1.05" upper="1.05" />
+    </joint>
+  <joint name="housing_to_impeller" type="continuous">
+    <origin xyz="0 0.008 0.462" rpy="0 0 0" />
+    <parent link="tower_housing" />
+    <child link="impeller_drum" />
+    <axis xyz="0 0 1" />
+    <limit effort="2" velocity="18" />
+    </joint>
+  <joint name="housing_to_speed_knob" type="revolute">
+    <origin xyz="0 -0.055 0.782" rpy="3.14159 -0 3.14159" />
+    <parent link="tower_housing" />
+    <child link="speed_selector_knob" />
+    <axis xyz="0 1 0" />
+    <limit effort="0.25" velocity="2.5" lower="0" upper="4.8" />
+    </joint>
+  </robot>

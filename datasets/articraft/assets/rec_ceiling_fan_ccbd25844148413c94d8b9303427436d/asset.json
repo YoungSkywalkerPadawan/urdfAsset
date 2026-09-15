@@ -1,0 +1,148 @@
+{
+  "summary": {
+    "id": "rec_ceiling_fan_ccbd25844148413c94d8b9303427436d",
+    "category": "fan",
+    "robot_name": "ceiling_fan_with_spotlight",
+    "joint_count": 1,
+    "link_count": 4,
+    "target_link_count": 2,
+    "family": "rec_ceiling_fan",
+    "warnings": [],
+    "diagonal": 1.804415501775575,
+    "bytes": 3353422
+  },
+  "source": {
+    "dataset": "camvsl/Articraft-10K",
+    "revision": "3c79d5a05bb7cb6bf7bfee5e090176636ee3ac65",
+    "license": "CC-BY-4.0",
+    "url": "https://huggingface.co/datasets/camvsl/Articraft-10K/blob/3c79d5a05bb7cb6bf7bfee5e090176636ee3ac65/rec_ceiling_fan_ccbd25844148413c94d8b9303427436d.tar.gz",
+    "archive_sha256": "047ca8d785b0310433bf3ff801892d130735f52a844f3e6fcac9fcaeabf9e14e",
+    "archive": "rec_ceiling_fan_ccbd25844148413c94d8b9303427436d.tar.gz",
+    "label_status": "Original generated URDF reference; not manually verified or physically validated"
+  },
+  "links": [
+    {
+      "id": "link_000",
+      "name": "ceiling_mount",
+      "point_file": "inputs/link_000.npz",
+      "faces": 1648,
+      "vertices": 835,
+      "bounds": [
+        [
+          -0.088,
+          -0.088,
+          -0.28500000000000003
+        ],
+        [
+          0.088,
+          0.088,
+          0.0
+        ]
+      ]
+    },
+    {
+      "id": "link_001",
+      "name": "fan_rotor",
+      "point_file": "inputs/link_001.npz",
+      "faces": 1320,
+      "vertices": 692,
+      "bounds": [
+        [
+          -0.617891,
+          -0.617891,
+          -0.366
+        ],
+        [
+          0.617891,
+          0.617891,
+          -0.276539
+        ]
+      ]
+    },
+    {
+      "id": "link_002",
+      "name": "spotlight_arm",
+      "point_file": null,
+      "faces": 1656,
+      "vertices": 834,
+      "bounds": [
+        [
+          -0.01,
+          0.132,
+          -0.42499999999999993
+        ],
+        [
+          0.01,
+          0.238,
+          -0.32699999999999996
+        ]
+      ]
+    },
+    {
+      "id": "link_003",
+      "name": "spotlight_head",
+      "point_file": null,
+      "faces": 896,
+      "vertices": 451,
+      "bounds": [
+        [
+          -0.034,
+          0.23799995959478432,
+          -0.44899999999999995
+        ],
+        [
+          0.034,
+          0.32,
+          -0.381
+        ]
+      ]
+    }
+  ],
+  "joints": [
+    {
+      "name": "fan_spin",
+      "type": "continuous",
+      "parent": "link_000",
+      "child": "link_001",
+      "reference_q": 0.0,
+      "mimic": null
+    },
+    {
+      "name": "arm_pivot",
+      "type": "revolute",
+      "parent": "link_001",
+      "child": "link_002",
+      "reference_q": 0.0,
+      "mimic": null
+    },
+    {
+      "name": "head_tilt",
+      "type": "revolute",
+      "parent": "link_002",
+      "child": "link_003",
+      "reference_q": 0.0,
+      "mimic": null
+    }
+  ],
+  "bounds": [
+    [
+      -0.617891,
+      -0.617891,
+      -0.44899999999999995
+    ],
+    [
+      0.617891,
+      0.617891,
+      0.0
+    ]
+  ],
+  "point_pool_size": 65536,
+  "reference_pose": "Zero position clamped to limits; mimic values propagated",
+  "qc": {
+    "finite_geometry": true,
+    "tree_valid": true,
+    "axis_unit": true,
+    "physical_collision_validation": false,
+    "visual_tessellation": "32 cylinder segments, icosphere subdivision 2"
+  }
+}

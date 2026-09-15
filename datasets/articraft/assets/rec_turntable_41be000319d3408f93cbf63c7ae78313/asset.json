@@ -1,0 +1,202 @@
+{
+  "summary": {
+    "id": "rec_turntable_41be000319d3408f93cbf63c7ae78313",
+    "category": "turntable",
+    "robot_name": "record_turntable",
+    "joint_count": 1,
+    "link_count": 6,
+    "target_link_count": 2,
+    "family": "rec_turntable",
+    "warnings": [],
+    "diagonal": 0.7566373251925269,
+    "bytes": 3226240
+  },
+  "source": {
+    "dataset": "camvsl/Articraft-10K",
+    "revision": "3c79d5a05bb7cb6bf7bfee5e090176636ee3ac65",
+    "license": "CC-BY-4.0",
+    "url": "https://huggingface.co/datasets/camvsl/Articraft-10K/blob/3c79d5a05bb7cb6bf7bfee5e090176636ee3ac65/rec_turntable_41be000319d3408f93cbf63c7ae78313.tar.gz",
+    "archive_sha256": "9637aac6ace84217fcef3f1ecd5bda00da20f09d2f4a2e34b81d05cb934515d8",
+    "archive": "rec_turntable_41be000319d3408f93cbf63c7ae78313.tar.gz",
+    "label_status": "Original generated URDF reference; not manually verified or physically validated"
+  },
+  "links": [
+    {
+      "id": "link_000",
+      "name": "plinth",
+      "point_file": "inputs/link_000.npz",
+      "faces": 664,
+      "vertices": 346,
+      "bounds": [
+        [
+          -0.3,
+          -0.21,
+          -0.019999999999999997
+        ],
+        [
+          0.3,
+          0.21,
+          0.065
+        ]
+      ]
+    },
+    {
+      "id": "link_001",
+      "name": "side_support_0",
+      "point_file": null,
+      "faces": 12,
+      "vertices": 8,
+      "bounds": [
+        [
+          -0.275,
+          0.16999999999999998,
+          0.055
+        ],
+        [
+          0.145,
+          0.2,
+          0.12
+        ]
+      ]
+    },
+    {
+      "id": "link_002",
+      "name": "side_support_1",
+      "point_file": null,
+      "faces": 12,
+      "vertices": 8,
+      "bounds": [
+        [
+          -0.275,
+          -0.2,
+          0.055
+        ],
+        [
+          0.145,
+          -0.16999999999999998,
+          0.12
+        ]
+      ]
+    },
+    {
+      "id": "link_003",
+      "name": "platter",
+      "point_file": "inputs/link_003.npz",
+      "faces": 640,
+      "vertices": 330,
+      "bounds": [
+        [
+          -0.21,
+          -0.145,
+          0.065
+        ],
+        [
+          0.07999999999999999,
+          0.145,
+          0.14900000000000002
+        ]
+      ]
+    },
+    {
+      "id": "link_004",
+      "name": "tonearm_base",
+      "point_file": null,
+      "faces": 268,
+      "vertices": 140,
+      "bounds": [
+        [
+          0.16249999999999998,
+          -0.17,
+          0.055
+        ],
+        [
+          0.2475,
+          -0.1,
+          0.125
+        ]
+      ]
+    },
+    {
+      "id": "link_005",
+      "name": "tonearm",
+      "point_file": null,
+      "faces": 524,
+      "vertices": 272,
+      "bounds": [
+        [
+          -0.1614151784281924,
+          -0.1756129919615565,
+          0.099
+        ],
+        [
+          0.28224622638448477,
+          -0.008663340022937671,
+          0.17000011019602493
+        ]
+      ]
+    }
+  ],
+  "joints": [
+    {
+      "name": "plinth_to_side_support_0",
+      "type": "fixed",
+      "parent": "link_000",
+      "child": "link_001",
+      "reference_q": 0.0,
+      "mimic": null
+    },
+    {
+      "name": "plinth_to_side_support_1",
+      "type": "fixed",
+      "parent": "link_000",
+      "child": "link_002",
+      "reference_q": 0.0,
+      "mimic": null
+    },
+    {
+      "name": "platter_spin",
+      "type": "continuous",
+      "parent": "link_000",
+      "child": "link_003",
+      "reference_q": 0.0,
+      "mimic": null
+    },
+    {
+      "name": "plinth_to_tonearm_base",
+      "type": "fixed",
+      "parent": "link_000",
+      "child": "link_004",
+      "reference_q": 0.0,
+      "mimic": null
+    },
+    {
+      "name": "tonearm_swing",
+      "type": "revolute",
+      "parent": "link_004",
+      "child": "link_005",
+      "reference_q": 0.0,
+      "mimic": null
+    }
+  ],
+  "bounds": [
+    [
+      -0.3,
+      -0.21,
+      -0.019999999999999997
+    ],
+    [
+      0.3,
+      0.21,
+      0.17000011019602493
+    ]
+  ],
+  "point_pool_size": 65536,
+  "reference_pose": "Zero position clamped to limits; mimic values propagated",
+  "qc": {
+    "finite_geometry": true,
+    "tree_valid": true,
+    "axis_unit": true,
+    "physical_collision_validation": false,
+    "visual_tessellation": "32 cylinder segments, icosphere subdivision 2"
+  }
+}

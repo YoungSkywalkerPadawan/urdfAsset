@@ -1,0 +1,175 @@
+{
+  "summary": {
+    "id": "rec_single_rotor_helicopter_985a38427e9548c18c3ad93ffafd0e51",
+    "category": "rotor",
+    "robot_name": "corporate_helicopter",
+    "joint_count": 2,
+    "link_count": 5,
+    "target_link_count": 3,
+    "family": "rec_single_rotor_helicopter",
+    "warnings": [],
+    "diagonal": 12.090093154444096,
+    "bytes": 7544374
+  },
+  "source": {
+    "dataset": "camvsl/Articraft-10K",
+    "revision": "3c79d5a05bb7cb6bf7bfee5e090176636ee3ac65",
+    "license": "CC-BY-4.0",
+    "url": "https://huggingface.co/datasets/camvsl/Articraft-10K/blob/3c79d5a05bb7cb6bf7bfee5e090176636ee3ac65/rec_single_rotor_helicopter_985a38427e9548c18c3ad93ffafd0e51.tar.gz",
+    "archive_sha256": "63f9be1b11117c1414bd6ef9c24281b97f9762464afbde4dc0969195ad10a676",
+    "archive": "rec_single_rotor_helicopter_985a38427e9548c18c3ad93ffafd0e51.tar.gz",
+    "label_status": "Original generated URDF reference; not manually verified or physically validated"
+  },
+  "links": [
+    {
+      "id": "link_000",
+      "name": "fuselage",
+      "point_file": "inputs/link_000.npz",
+      "faces": 45770,
+      "vertices": 29959,
+      "bounds": [
+        [
+          -2.353963,
+          -0.918455,
+          -0.979944
+        ],
+        [
+          4.99,
+          0.919846,
+          1.071715
+        ]
+      ]
+    },
+    {
+      "id": "link_001",
+      "name": "main_rotor",
+      "point_file": "inputs/link_001.npz",
+      "faces": 3808,
+      "vertices": 3982,
+      "bounds": [
+        [
+          -3.72,
+          -3.72,
+          0.8400000000000001
+        ],
+        [
+          3.72,
+          3.72,
+          1.23
+        ]
+      ]
+    },
+    {
+      "id": "link_002",
+      "name": "tail_rotor",
+      "point_file": "inputs/link_002.npz",
+      "faces": 1240,
+      "vertices": 1348,
+      "bounds": [
+        [
+          4.31,
+          0.31999999999999995,
+          -0.09999999999999998
+        ],
+        [
+          5.55,
+          0.5449999999999999,
+          1.1400000000000001
+        ]
+      ]
+    },
+    {
+      "id": "link_003",
+      "name": "passenger_door",
+      "point_file": null,
+      "faces": 1014,
+      "vertices": 1058,
+      "bounds": [
+        [
+          -0.69,
+          0.9195,
+          -0.5900000000000001
+        ],
+        [
+          0.21000000000000008,
+          0.9784999999999999,
+          0.51
+        ]
+      ]
+    },
+    {
+      "id": "link_004",
+      "name": "baggage_hatch",
+      "point_file": null,
+      "faces": 1572,
+      "vertices": 1632,
+      "bounds": [
+        [
+          0.71,
+          -0.22,
+          0.78
+        ],
+        [
+          1.4300000000000002,
+          0.22,
+          0.8280000000000001
+        ]
+      ]
+    }
+  ],
+  "joints": [
+    {
+      "name": "fuselage_to_main_rotor",
+      "type": "continuous",
+      "parent": "link_000",
+      "child": "link_001",
+      "reference_q": 0.0,
+      "mimic": null
+    },
+    {
+      "name": "fuselage_to_tail_rotor",
+      "type": "continuous",
+      "parent": "link_000",
+      "child": "link_002",
+      "reference_q": 0.0,
+      "mimic": null
+    },
+    {
+      "name": "fuselage_to_baggage_hatch",
+      "type": "revolute",
+      "parent": "link_000",
+      "child": "link_004",
+      "reference_q": 0.0,
+      "mimic": null
+    },
+    {
+      "name": "fuselage_to_passenger_door",
+      "type": "revolute",
+      "parent": "link_000",
+      "child": "link_003",
+      "reference_q": 0.0,
+      "mimic": null
+    }
+  ],
+  "bounds": [
+    [
+      -3.72,
+      -3.72,
+      -0.979944
+    ],
+    [
+      5.55,
+      3.72,
+      1.23
+    ]
+  ],
+  "point_pool_size": 65536,
+  "reference_pose": "Zero position clamped to limits; mimic values propagated",
+  "qc": {
+    "finite_geometry": true,
+    "tree_valid": true,
+    "axis_unit": true,
+    "physical_collision_validation": false,
+    "visual_tessellation": "32 cylinder segments, icosphere subdivision 2"
+  }
+}

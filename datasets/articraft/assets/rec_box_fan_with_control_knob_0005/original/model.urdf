@@ -1,0 +1,422 @@
+<robot name="square_box_fan">
+  <material name="housing_white">
+    <color rgba="0.88 0.89 0.91 1" />
+    </material>
+  <material name="trim_gray">
+    <color rgba="0.62 0.66 0.7 1" />
+    </material>
+  <material name="grille_dark">
+    <color rgba="0.26 0.29 0.31 1" />
+    </material>
+  <material name="blade_gray">
+    <color rgba="0.76 0.79 0.82 1" />
+    </material>
+  <material name="hub_gray">
+    <color rgba="0.56 0.6 0.64 1" />
+    </material>
+  <material name="knob_black">
+    <color rgba="0.1 0.11 0.12 1" />
+    </material>
+  <link name="housing">
+    <inertial>
+      <mass value="2.4" />
+      <inertia ixx="0.0377" ixy="0" ixz="0" iyy="0.07056" iyz="0" izz="0.0377" />
+      </inertial>
+    <visual name="top_shell">
+      <origin xyz="0 0 0.1875" rpy="0 0 0" />
+      <geometry>
+        <box size="0.42 0.11 0.045" />
+        </geometry>
+      <material name="housing_white">
+        <color rgba="0.88 0.89 0.91 1" />
+        </material>
+      </visual>
+    <visual name="bottom_shell">
+      <origin xyz="0 0 -0.1875" rpy="0 0 0" />
+      <geometry>
+        <box size="0.42 0.11 0.045" />
+        </geometry>
+      <material name="housing_white">
+        <color rgba="0.88 0.89 0.91 1" />
+        </material>
+      </visual>
+    <visual name="left_shell">
+      <origin xyz="-0.1875 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.045 0.11 0.33" />
+        </geometry>
+      <material name="housing_white">
+        <color rgba="0.88 0.89 0.91 1" />
+        </material>
+      </visual>
+    <visual name="right_shell">
+      <origin xyz="0.1875 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.045 0.11 0.33" />
+        </geometry>
+      <material name="housing_white">
+        <color rgba="0.88 0.89 0.91 1" />
+        </material>
+      </visual>
+    <visual name="front_top_bezel">
+      <origin xyz="0 0.049 0.1815" rpy="0 0 0" />
+      <geometry>
+        <box size="0.414 0.012 0.057" />
+        </geometry>
+      <material name="trim_gray">
+        <color rgba="0.62 0.66 0.7 1" />
+        </material>
+      </visual>
+    <visual name="front_bottom_bezel">
+      <origin xyz="0 0.049 -0.1815" rpy="0 0 0" />
+      <geometry>
+        <box size="0.414 0.012 0.057" />
+        </geometry>
+      <material name="trim_gray">
+        <color rgba="0.62 0.66 0.7 1" />
+        </material>
+      </visual>
+    <visual name="front_left_bezel">
+      <origin xyz="-0.1815 0.049 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.057 0.012 0.346" />
+        </geometry>
+      <material name="trim_gray">
+        <color rgba="0.62 0.66 0.7 1" />
+        </material>
+      </visual>
+    <visual name="front_right_bezel">
+      <origin xyz="0.1815 0.049 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.057 0.012 0.346" />
+        </geometry>
+      <material name="trim_gray">
+        <color rgba="0.62 0.66 0.7 1" />
+        </material>
+      </visual>
+    <visual name="motor_crossbar_horizontal">
+      <origin xyz="0 -0.02 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.33 0.016 0.022" />
+        </geometry>
+      <material name="trim_gray">
+        <color rgba="0.62 0.66 0.7 1" />
+        </material>
+      </visual>
+    <visual name="motor_crossbar_vertical">
+      <origin xyz="0 -0.02 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.022 0.016 0.33" />
+        </geometry>
+      <material name="trim_gray">
+        <color rgba="0.62 0.66 0.7 1" />
+        </material>
+      </visual>
+    <visual name="motor_pod">
+      <origin xyz="0 -0.01 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.055" length="0.045" />
+        </geometry>
+      <material name="trim_gray">
+        <color rgba="0.62 0.66 0.7 1" />
+        </material>
+      </visual>
+    <visual name="center_spindle">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.114" />
+        </geometry>
+      <material name="hub_gray">
+        <color rgba="0.56 0.6 0.64 1" />
+        </material>
+      </visual>
+    <visual name="control_boss">
+      <origin xyz="0.214 0 -0.1" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.03" length="0.008" />
+        </geometry>
+      <material name="trim_gray">
+        <color rgba="0.62 0.66 0.7 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="front_grille">
+    <inertial>
+      <mass value="0.2" />
+      <inertia ixx="0.00193093" ixy="0" ixz="0" iyy="0.00385333" iyz="0" izz="0.00193093" />
+      </inertial>
+    <visual name="square_loop">
+      <geometry>
+        <mesh filename="assets/meshes/box_fan_grille_square_loop.obj" />
+        </geometry>
+      <material name="grille_dark">
+        <color rgba="0.26 0.29 0.31 1" />
+        </material>
+      </visual>
+    <visual name="ring_inner">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/box_fan_grille_ring_inner.obj" />
+        </geometry>
+      <material name="grille_dark">
+        <color rgba="0.26 0.29 0.31 1" />
+        </material>
+      </visual>
+    <visual name="ring_mid_1">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/box_fan_grille_ring_mid_1.obj" />
+        </geometry>
+      <material name="grille_dark">
+        <color rgba="0.26 0.29 0.31 1" />
+        </material>
+      </visual>
+    <visual name="ring_mid_2">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/box_fan_grille_ring_mid_2.obj" />
+        </geometry>
+      <material name="grille_dark">
+        <color rgba="0.26 0.29 0.31 1" />
+        </material>
+      </visual>
+    <visual name="ring_outer">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/box_fan_grille_ring_outer.obj" />
+        </geometry>
+      <material name="grille_dark">
+        <color rgba="0.26 0.29 0.31 1" />
+        </material>
+      </visual>
+    <visual name="spoke_0">
+      <origin xyz="0.081 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.003" length="0.162" />
+        </geometry>
+      <material name="grille_dark">
+        <color rgba="0.26 0.29 0.31 1" />
+        </material>
+      </visual>
+    <visual name="spoke_1">
+      <origin xyz="0.0572756 0 0.0572756" rpy="0 0.785398 0" />
+      <geometry>
+        <cylinder radius="0.003" length="0.162" />
+        </geometry>
+      <material name="grille_dark">
+        <color rgba="0.26 0.29 0.31 1" />
+        </material>
+      </visual>
+    <visual name="spoke_2">
+      <origin xyz="4.95982e-18 0 0.081" rpy="0 6.12323e-17 0" />
+      <geometry>
+        <cylinder radius="0.003" length="0.162" />
+        </geometry>
+      <material name="grille_dark">
+        <color rgba="0.26 0.29 0.31 1" />
+        </material>
+      </visual>
+    <visual name="spoke_3">
+      <origin xyz="-0.0572756 0 0.0572756" rpy="0 0.785398 3.14159" />
+      <geometry>
+        <cylinder radius="0.003" length="0.162" />
+        </geometry>
+      <material name="grille_dark">
+        <color rgba="0.26 0.29 0.31 1" />
+        </material>
+      </visual>
+    <visual name="spoke_4">
+      <origin xyz="-0.081 0 9.91964e-18" rpy="0 1.5708 3.14159" />
+      <geometry>
+        <cylinder radius="0.003" length="0.162" />
+        </geometry>
+      <material name="grille_dark">
+        <color rgba="0.26 0.29 0.31 1" />
+        </material>
+      </visual>
+    <visual name="spoke_5">
+      <origin xyz="-0.0572756 0 -0.0572756" rpy="0 2.35619 3.14159" />
+      <geometry>
+        <cylinder radius="0.003" length="0.162" />
+        </geometry>
+      <material name="grille_dark">
+        <color rgba="0.26 0.29 0.31 1" />
+        </material>
+      </visual>
+    <visual name="spoke_6">
+      <origin xyz="-1.48795e-17 0 -0.081" rpy="0 3.14159 3.14159" />
+      <geometry>
+        <cylinder radius="0.003" length="0.162" />
+        </geometry>
+      <material name="grille_dark">
+        <color rgba="0.26 0.29 0.31 1" />
+        </material>
+      </visual>
+    <visual name="spoke_7">
+      <origin xyz="0.0572756 0 -0.0572756" rpy="0 2.35619 0" />
+      <geometry>
+        <cylinder radius="0.003" length="0.162" />
+        </geometry>
+      <material name="grille_dark">
+        <color rgba="0.26 0.29 0.31 1" />
+        </material>
+      </visual>
+    <visual name="tab_right">
+      <origin xyz="0.156 -0.007 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.014 0.02" />
+        </geometry>
+      <material name="grille_dark">
+        <color rgba="0.26 0.29 0.31 1" />
+        </material>
+      </visual>
+    <visual name="tab_left">
+      <origin xyz="-0.156 -0.007 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.014 0.02" />
+        </geometry>
+      <material name="grille_dark">
+        <color rgba="0.26 0.29 0.31 1" />
+        </material>
+      </visual>
+    <visual name="tab_top">
+      <origin xyz="0 -0.007 0.156" rpy="0 0 0" />
+      <geometry>
+        <box size="0.02 0.014 0.018" />
+        </geometry>
+      <material name="grille_dark">
+        <color rgba="0.26 0.29 0.31 1" />
+        </material>
+      </visual>
+    <visual name="tab_bottom">
+      <origin xyz="0 -0.007 -0.156" rpy="0 0 0" />
+      <geometry>
+        <box size="0.02 0.014 0.018" />
+        </geometry>
+      <material name="grille_dark">
+        <color rgba="0.26 0.29 0.31 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="rotor">
+    <inertial>
+      <mass value="0.35" />
+      <inertia ixx="0.0030749" ixy="0" ixz="0" iyy="0.00597333" iyz="0" izz="0.0030749" />
+      </inertial>
+    <visual name="hub_sleeve">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.034" length="0.052" />
+        </geometry>
+      <material name="hub_gray">
+        <color rgba="0.56 0.6 0.64 1" />
+        </material>
+      </visual>
+    <visual name="front_cap">
+      <origin xyz="0 0.016 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.024" length="0.02" />
+        </geometry>
+      <material name="hub_gray">
+        <color rgba="0.56 0.6 0.64 1" />
+        </material>
+      </visual>
+    <visual name="blade_0">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/box_fan_blade.obj" />
+        </geometry>
+      <material name="blade_gray">
+        <color rgba="0.76 0.79 0.82 1" />
+        </material>
+      </visual>
+    <visual name="blade_1">
+      <origin xyz="0 0 0" rpy="1.5708 1.25664 0" />
+      <geometry>
+        <mesh filename="assets/meshes/box_fan_blade.obj" />
+        </geometry>
+      <material name="blade_gray">
+        <color rgba="0.76 0.79 0.82 1" />
+        </material>
+      </visual>
+    <visual name="blade_2">
+      <origin xyz="0 0 0" rpy="1.5708 2.51327 0" />
+      <geometry>
+        <mesh filename="assets/meshes/box_fan_blade.obj" />
+        </geometry>
+      <material name="blade_gray">
+        <color rgba="0.76 0.79 0.82 1" />
+        </material>
+      </visual>
+    <visual name="blade_3">
+      <origin xyz="0 0 0" rpy="1.5708 3.76991 0" />
+      <geometry>
+        <mesh filename="assets/meshes/box_fan_blade.obj" />
+        </geometry>
+      <material name="blade_gray">
+        <color rgba="0.76 0.79 0.82 1" />
+        </material>
+      </visual>
+    <visual name="blade_4">
+      <origin xyz="0 0 0" rpy="1.5708 5.02655 0" />
+      <geometry>
+        <mesh filename="assets/meshes/box_fan_blade.obj" />
+        </geometry>
+      <material name="blade_gray">
+        <color rgba="0.76 0.79 0.82 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="speed_knob">
+    <inertial>
+      <origin xyz="0.02 0 0" rpy="0 0 0" />
+      <mass value="0.05" />
+      <inertia ixx="1.6875e-05" ixy="0" ixz="0" iyy="1.51042e-05" iyz="0" izz="1.51042e-05" />
+      </inertial>
+    <visual name="knob_body">
+      <origin xyz="0.014 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.022" length="0.028" />
+        </geometry>
+      <material name="knob_black">
+        <color rgba="0.1 0.11 0.12 1" />
+        </material>
+      </visual>
+    <visual name="knob_stem">
+      <origin xyz="0.005 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.01" />
+        </geometry>
+      <material name="hub_gray">
+        <color rgba="0.56 0.6 0.64 1" />
+        </material>
+      </visual>
+    <visual name="indicator_tick">
+      <origin xyz="0.027 0 0.016" rpy="0 0 0" />
+      <geometry>
+        <box size="0.01 0.003 0.01" />
+        </geometry>
+      <material name="housing_white">
+        <color rgba="0.88 0.89 0.91 1" />
+        </material>
+      </visual>
+    </link>
+  <joint name="grille_mount" type="fixed">
+    <origin xyz="0 0.056 0" rpy="0 0 0" />
+    <parent link="housing" />
+    <child link="front_grille" />
+    </joint>
+  <joint name="blade_spin" type="continuous">
+    <parent link="housing" />
+    <child link="rotor" />
+    <axis xyz="0 1 0" />
+    <limit effort="3" velocity="22" />
+    </joint>
+  <joint name="speed_control" type="continuous">
+    <origin xyz="0.218 0 -0.1" rpy="0 0 0" />
+    <parent link="housing" />
+    <child link="speed_knob" />
+    <axis xyz="1 0 0" />
+    <limit effort="0.2" velocity="8" />
+    </joint>
+  </robot>

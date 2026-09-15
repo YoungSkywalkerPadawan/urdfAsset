@@ -1,0 +1,534 @@
+<robot name="church_clock_tower">
+  <material name="stone">
+    <color rgba="0.7 0.68 0.62 1" />
+    </material>
+  <material name="stone_trim">
+    <color rgba="0.82 0.8 0.74 1" />
+    </material>
+  <material name="roof_slate">
+    <color rgba="0.24 0.25 0.29 1" />
+    </material>
+  <material name="dial_ivory">
+    <color rgba="0.93 0.91 0.82 1" />
+    </material>
+  <material name="dark_opening">
+    <color rgba="0.16 0.14 0.12 1" />
+    </material>
+  <material name="oxidized_metal">
+    <color rgba="0.1 0.11 0.11 1" />
+    </material>
+  <material name="stained_glass">
+    <color rgba="0.22 0.18 0.24 1" />
+    </material>
+  <link name="facade">
+    <inertial>
+      <origin xyz="0 -1.4 9.7" rpy="0 0 0" />
+      <mass value="18000" />
+      <inertia ixx="608280" ixy="0" ixz="0" iyy="714540" iyz="0" izz="193740" />
+      </inertial>
+    <visual name="nave_wall">
+      <origin xyz="0 0 4.1" rpy="0 0 0" />
+      <geometry>
+        <box size="9.6 1 8.2" />
+        </geometry>
+      <material name="stone">
+        <color rgba="0.7 0.68 0.62 1" />
+        </material>
+      </visual>
+    <visual name="buttress_left">
+      <origin xyz="-3.55 0 2.6" rpy="0 0 0" />
+      <geometry>
+        <box size="0.82 1.42 5.2" />
+        </geometry>
+      <material name="stone_trim">
+        <color rgba="0.82 0.8 0.74 1" />
+        </material>
+      </visual>
+    <visual name="buttress_right">
+      <origin xyz="3.55 0 2.6" rpy="0 0 0" />
+      <geometry>
+        <box size="0.82 1.42 5.2" />
+        </geometry>
+      <material name="stone_trim">
+        <color rgba="0.82 0.8 0.74 1" />
+        </material>
+      </visual>
+    <visual name="portal_jamb_left">
+      <origin xyz="-1.04 0.38 1.55" rpy="0 0 0" />
+      <geometry>
+        <box size="0.34 0.24 3.1" />
+        </geometry>
+      <material name="stone_trim">
+        <color rgba="0.82 0.8 0.74 1" />
+        </material>
+      </visual>
+    <visual name="portal_jamb_right">
+      <origin xyz="1.04 0.38 1.55" rpy="0 0 0" />
+      <geometry>
+        <box size="0.34 0.24 3.1" />
+        </geometry>
+      <material name="stone_trim">
+        <color rgba="0.82 0.8 0.74 1" />
+        </material>
+      </visual>
+    <visual name="portal_lintel">
+      <origin xyz="0 0.38 3.1" rpy="0 0 0" />
+      <geometry>
+        <box size="2.42 0.24 0.34" />
+        </geometry>
+      <material name="stone_trim">
+        <color rgba="0.82 0.8 0.74 1" />
+        </material>
+      </visual>
+    <visual name="portal_door">
+      <origin xyz="0 0.5 1.42" rpy="0 0 0" />
+      <geometry>
+        <box size="1.58 0.12 2.72" />
+        </geometry>
+      <material name="dark_opening">
+        <color rgba="0.16 0.14 0.12 1" />
+        </material>
+      </visual>
+    <visual name="oculus_bezel">
+      <origin xyz="0 0.45 5.25" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.82" length="0.18" />
+        </geometry>
+      <material name="stone_trim">
+        <color rgba="0.82 0.8 0.74 1" />
+        </material>
+      </visual>
+    <visual name="oculus_glass">
+      <origin xyz="0 0.5 5.25" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.6" length="0.1" />
+        </geometry>
+      <material name="stained_glass">
+        <color rgba="0.22 0.18 0.24 1" />
+        </material>
+      </visual>
+    <visual name="oculus_bar_horizontal">
+      <origin xyz="0 0.55 5.25" rpy="0 0 0" />
+      <geometry>
+        <box size="1.1 0.06 0.1" />
+        </geometry>
+      <material name="stone_trim">
+        <color rgba="0.82 0.8 0.74 1" />
+        </material>
+      </visual>
+    <visual name="oculus_bar_vertical">
+      <origin xyz="0 0.55 5.25" rpy="0 0 0" />
+      <geometry>
+        <box size="0.1 0.06 1.1" />
+        </geometry>
+      <material name="stone_trim">
+        <color rgba="0.82 0.8 0.74 1" />
+        </material>
+      </visual>
+    <visual name="tower_shaft">
+      <origin xyz="0 -1.6 10.6" rpy="0 0 0" />
+      <geometry>
+        <box size="4.2 4.2 4.8" />
+        </geometry>
+      <material name="stone">
+        <color rgba="0.7 0.68 0.62 1" />
+        </material>
+      </visual>
+    <visual name="shaft_base_band">
+      <origin xyz="0 -1.6 8.33" rpy="0 0 0" />
+      <geometry>
+        <box size="4.6 4.6 0.26" />
+        </geometry>
+      <material name="stone_trim">
+        <color rgba="0.82 0.8 0.74 1" />
+        </material>
+      </visual>
+    <visual name="shaft_pilaster_left">
+      <origin xyz="-1.96 0.32 10.6" rpy="0 0 0" />
+      <geometry>
+        <box size="0.28 0.36 4.96" />
+        </geometry>
+      <material name="stone_trim">
+        <color rgba="0.82 0.8 0.74 1" />
+        </material>
+      </visual>
+    <visual name="shaft_pilaster_right">
+      <origin xyz="1.96 0.32 10.6" rpy="0 0 0" />
+      <geometry>
+        <box size="0.28 0.36 4.96" />
+        </geometry>
+      <material name="stone_trim">
+        <color rgba="0.82 0.8 0.74 1" />
+        </material>
+      </visual>
+    <visual name="clock_bezel">
+      <origin xyz="0 0.48 10.6" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="1.34" length="0.14" />
+        </geometry>
+      <material name="stone_trim">
+        <color rgba="0.82 0.8 0.74 1" />
+        </material>
+      </visual>
+    <visual name="clock_dial">
+      <origin xyz="0 0.49 10.6" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="1.18" length="0.06" />
+        </geometry>
+      <material name="dial_ivory">
+        <color rgba="0.93 0.91 0.82 1" />
+        </material>
+      </visual>
+    <visual name="clock_spindle">
+      <origin xyz="0 0.55 10.6" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.11" length="0.068" />
+        </geometry>
+      <material name="oxidized_metal">
+        <color rgba="0.1 0.11 0.11 1" />
+        </material>
+      </visual>
+    <visual name="dial_marker_00">
+      <origin xyz="0 0.55 11.52" rpy="0 0 0" />
+      <geometry>
+        <box size="0.14 0.05 0.34" />
+        </geometry>
+      <material name="oxidized_metal">
+        <color rgba="0.1 0.11 0.11 1" />
+        </material>
+      </visual>
+    <visual name="dial_marker_01">
+      <origin xyz="0.46 0.55 11.3967" rpy="0 0.523599 0" />
+      <geometry>
+        <box size="0.08 0.05 0.18" />
+        </geometry>
+      <material name="oxidized_metal">
+        <color rgba="0.1 0.11 0.11 1" />
+        </material>
+      </visual>
+    <visual name="dial_marker_02">
+      <origin xyz="0.796743 0.55 11.06" rpy="0 1.0472 0" />
+      <geometry>
+        <box size="0.08 0.05 0.18" />
+        </geometry>
+      <material name="oxidized_metal">
+        <color rgba="0.1 0.11 0.11 1" />
+        </material>
+      </visual>
+    <visual name="dial_marker_03">
+      <origin xyz="0.92 0.55 10.6" rpy="0 1.5708 0" />
+      <geometry>
+        <box size="0.14 0.05 0.34" />
+        </geometry>
+      <material name="oxidized_metal">
+        <color rgba="0.1 0.11 0.11 1" />
+        </material>
+      </visual>
+    <visual name="dial_marker_04">
+      <origin xyz="0.796743 0.55 10.14" rpy="0 2.0944 0" />
+      <geometry>
+        <box size="0.08 0.05 0.18" />
+        </geometry>
+      <material name="oxidized_metal">
+        <color rgba="0.1 0.11 0.11 1" />
+        </material>
+      </visual>
+    <visual name="dial_marker_05">
+      <origin xyz="0.46 0.55 9.80326" rpy="0 2.61799 0" />
+      <geometry>
+        <box size="0.08 0.05 0.18" />
+        </geometry>
+      <material name="oxidized_metal">
+        <color rgba="0.1 0.11 0.11 1" />
+        </material>
+      </visual>
+    <visual name="dial_marker_06">
+      <origin xyz="1.12668e-16 0.55 9.68" rpy="0 3.14159 0" />
+      <geometry>
+        <box size="0.14 0.05 0.34" />
+        </geometry>
+      <material name="oxidized_metal">
+        <color rgba="0.1 0.11 0.11 1" />
+        </material>
+      </visual>
+    <visual name="dial_marker_07">
+      <origin xyz="-0.46 0.55 9.80326" rpy="0 3.66519 0" />
+      <geometry>
+        <box size="0.08 0.05 0.18" />
+        </geometry>
+      <material name="oxidized_metal">
+        <color rgba="0.1 0.11 0.11 1" />
+        </material>
+      </visual>
+    <visual name="dial_marker_08">
+      <origin xyz="-0.796743 0.55 10.14" rpy="0 4.18879 0" />
+      <geometry>
+        <box size="0.08 0.05 0.18" />
+        </geometry>
+      <material name="oxidized_metal">
+        <color rgba="0.1 0.11 0.11 1" />
+        </material>
+      </visual>
+    <visual name="dial_marker_09">
+      <origin xyz="-0.92 0.55 10.6" rpy="0 4.71239 0" />
+      <geometry>
+        <box size="0.14 0.05 0.34" />
+        </geometry>
+      <material name="oxidized_metal">
+        <color rgba="0.1 0.11 0.11 1" />
+        </material>
+      </visual>
+    <visual name="dial_marker_10">
+      <origin xyz="-0.796743 0.55 11.06" rpy="0 5.23599 0" />
+      <geometry>
+        <box size="0.08 0.05 0.18" />
+        </geometry>
+      <material name="oxidized_metal">
+        <color rgba="0.1 0.11 0.11 1" />
+        </material>
+      </visual>
+    <visual name="dial_marker_11">
+      <origin xyz="-0.46 0.55 11.3967" rpy="0 5.75959 0" />
+      <geometry>
+        <box size="0.08 0.05 0.18" />
+        </geometry>
+      <material name="oxidized_metal">
+        <color rgba="0.1 0.11 0.11 1" />
+        </material>
+      </visual>
+    <visual name="bell_base_cornice">
+      <origin xyz="0 -1.9 12.96" rpy="0 0 0" />
+      <geometry>
+        <box size="5.2 5.2 0.28" />
+        </geometry>
+      <material name="stone_trim">
+        <color rgba="0.82 0.8 0.74 1" />
+        </material>
+      </visual>
+    <visual name="bell_chamber">
+      <origin xyz="0 -1.9 15.2" rpy="0 0 0" />
+      <geometry>
+        <box size="4.8 4.8 4.4" />
+        </geometry>
+      <material name="stone">
+        <color rgba="0.7 0.68 0.62 1" />
+        </material>
+      </visual>
+    <visual name="bell_front_quoin_left">
+      <origin xyz="-2.22 0.32 15.2" rpy="0 0 0" />
+      <geometry>
+        <box size="0.3 0.36 4.6" />
+        </geometry>
+      <material name="stone_trim">
+        <color rgba="0.82 0.8 0.74 1" />
+        </material>
+      </visual>
+    <visual name="bell_front_quoin_right">
+      <origin xyz="2.22 0.32 15.2" rpy="0 0 0" />
+      <geometry>
+        <box size="0.3 0.36 4.6" />
+        </geometry>
+      <material name="stone_trim">
+        <color rgba="0.82 0.8 0.74 1" />
+        </material>
+      </visual>
+    <visual name="bell_opening_left">
+      <origin xyz="-1.05 0.41 15.1" rpy="0 0 0" />
+      <geometry>
+        <box size="1 0.18 1.92" />
+        </geometry>
+      <material name="dark_opening">
+        <color rgba="0.16 0.14 0.12 1" />
+        </material>
+      </visual>
+    <visual name="bell_frame_left_jamb_left">
+      <origin xyz="-1.51 0.38 15.1" rpy="0 0 0" />
+      <geometry>
+        <box size="0.12 0.24 2.06" />
+        </geometry>
+      <material name="stone_trim">
+        <color rgba="0.82 0.8 0.74 1" />
+        </material>
+      </visual>
+    <visual name="bell_frame_left_jamb_right">
+      <origin xyz="-0.59 0.38 15.1" rpy="0 0 0" />
+      <geometry>
+        <box size="0.12 0.24 2.06" />
+        </geometry>
+      <material name="stone_trim">
+        <color rgba="0.82 0.8 0.74 1" />
+        </material>
+      </visual>
+    <visual name="bell_frame_left_head">
+      <origin xyz="-1.05 0.38 16.05" rpy="0 0 0" />
+      <geometry>
+        <box size="1.1 0.24 0.16" />
+        </geometry>
+      <material name="stone_trim">
+        <color rgba="0.82 0.8 0.74 1" />
+        </material>
+      </visual>
+    <visual name="bell_opening_right">
+      <origin xyz="1.05 0.41 15.1" rpy="0 0 0" />
+      <geometry>
+        <box size="1 0.18 1.92" />
+        </geometry>
+      <material name="dark_opening">
+        <color rgba="0.16 0.14 0.12 1" />
+        </material>
+      </visual>
+    <visual name="bell_frame_right_jamb_left">
+      <origin xyz="0.59 0.38 15.1" rpy="0 0 0" />
+      <geometry>
+        <box size="0.12 0.24 2.06" />
+        </geometry>
+      <material name="stone_trim">
+        <color rgba="0.82 0.8 0.74 1" />
+        </material>
+      </visual>
+    <visual name="bell_frame_right_jamb_right">
+      <origin xyz="1.51 0.38 15.1" rpy="0 0 0" />
+      <geometry>
+        <box size="0.12 0.24 2.06" />
+        </geometry>
+      <material name="stone_trim">
+        <color rgba="0.82 0.8 0.74 1" />
+        </material>
+      </visual>
+    <visual name="bell_frame_right_head">
+      <origin xyz="1.05 0.38 16.05" rpy="0 0 0" />
+      <geometry>
+        <box size="1.1 0.24 0.16" />
+        </geometry>
+      <material name="stone_trim">
+        <color rgba="0.82 0.8 0.74 1" />
+        </material>
+      </visual>
+    <visual name="bell_top_cornice">
+      <origin xyz="0 -1.9 17.44" rpy="0 0 0" />
+      <geometry>
+        <box size="5.1 5.1 0.24" />
+        </geometry>
+      <material name="stone_trim">
+        <color rgba="0.82 0.8 0.74 1" />
+        </material>
+      </visual>
+    <visual name="tower_roof">
+      <geometry>
+        <mesh filename="assets/meshes/tower_roof.obj" />
+        </geometry>
+      <material name="roof_slate">
+        <color rgba="0.24 0.25 0.29 1" />
+        </material>
+      </visual>
+    <visual name="roof_finial">
+      <origin xyz="0 -1.9 19.38" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.07" length="0.8" />
+        </geometry>
+      <material name="oxidized_metal">
+        <color rgba="0.1 0.11 0.11 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="hour_hand">
+    <inertial>
+      <origin xyz="0 0 0.2" rpy="0 0 0" />
+      <mass value="3" />
+      <inertia ixx="0.185125" ixy="0" ixz="0" iyy="0.1949" iyz="0" izz="0.010225" />
+      </inertial>
+    <visual name="hour_hub">
+      <origin xyz="0 0 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.1" length="0.022" />
+        </geometry>
+      <material name="oxidized_metal">
+        <color rgba="0.1 0.11 0.11 1" />
+        </material>
+      </visual>
+    <visual name="hour_blade">
+      <origin xyz="0 0 0.19" rpy="0 0 0" />
+      <geometry>
+        <box size="0.16 0.016 0.46" />
+        </geometry>
+      <material name="oxidized_metal">
+        <color rgba="0.1 0.11 0.11 1" />
+        </material>
+      </visual>
+    <visual name="hour_tip">
+      <origin xyz="0 0 0.53" rpy="0 0 0" />
+      <geometry>
+        <box size="0.09 0.016 0.22" />
+        </geometry>
+      <material name="oxidized_metal">
+        <color rgba="0.1 0.11 0.11 1" />
+        </material>
+      </visual>
+    <visual name="hour_counterweight">
+      <origin xyz="0 0 -0.1" rpy="0 0 0" />
+      <geometry>
+        <box size="0.06 0.016 0.14" />
+        </geometry>
+      <material name="oxidized_metal">
+        <color rgba="0.1 0.11 0.11 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="minute_hand">
+    <inertial>
+      <origin xyz="0 0 0.28" rpy="0 0 0" />
+      <mass value="2.2" />
+      <inertia ixx="0.309948" ixy="0" ixz="0" iyy="0.313427" iyz="0" izz="0.00370792" />
+      </inertial>
+    <visual name="minute_hub">
+      <origin xyz="0 0 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.072" length="0.018" />
+        </geometry>
+      <material name="oxidized_metal">
+        <color rgba="0.1 0.11 0.11 1" />
+        </material>
+      </visual>
+    <visual name="minute_blade">
+      <origin xyz="0 0 0.31" rpy="0 0 0" />
+      <geometry>
+        <box size="0.11 0.012 0.74" />
+        </geometry>
+      <material name="oxidized_metal">
+        <color rgba="0.1 0.11 0.11 1" />
+        </material>
+      </visual>
+    <visual name="minute_tip">
+      <origin xyz="0 0 0.85" rpy="0 0 0" />
+      <geometry>
+        <box size="0.06 0.012 0.34" />
+        </geometry>
+      <material name="oxidized_metal">
+        <color rgba="0.1 0.11 0.11 1" />
+        </material>
+      </visual>
+    <visual name="minute_counterweight">
+      <origin xyz="0 0 -0.13" rpy="0 0 0" />
+      <geometry>
+        <box size="0.045 0.012 0.2" />
+        </geometry>
+      <material name="oxidized_metal">
+        <color rgba="0.1 0.11 0.11 1" />
+        </material>
+      </visual>
+    </link>
+  <joint name="facade_to_hour_hand" type="continuous">
+    <origin xyz="0 0.595 10.6" rpy="0 0 0" />
+    <parent link="facade" />
+    <child link="hour_hand" />
+    <axis xyz="0 1 0" />
+    <limit effort="8" velocity="2" />
+    </joint>
+  <joint name="facade_to_minute_hand" type="continuous">
+    <origin xyz="0 0.615 10.6" rpy="0 0 0" />
+    <parent link="facade" />
+    <child link="minute_hand" />
+    <axis xyz="0 1 0" />
+    <limit effort="8" velocity="6" />
+    </joint>
+  </robot>

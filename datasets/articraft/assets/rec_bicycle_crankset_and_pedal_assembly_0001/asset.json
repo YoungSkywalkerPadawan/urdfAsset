@@ -1,0 +1,148 @@
+{
+  "summary": {
+    "id": "rec_bicycle_crankset_and_pedal_assembly_0001",
+    "category": "crank",
+    "robot_name": "bicycle_crankset",
+    "joint_count": 3,
+    "link_count": 4,
+    "target_link_count": 4,
+    "family": "rec_bicycle_crankset_and_pedal_assembly",
+    "warnings": [],
+    "diagonal": 0.5099012950034095,
+    "bytes": 6545582
+  },
+  "source": {
+    "dataset": "camvsl/Articraft-10K",
+    "revision": "3c79d5a05bb7cb6bf7bfee5e090176636ee3ac65",
+    "license": "CC-BY-4.0",
+    "url": "https://huggingface.co/datasets/camvsl/Articraft-10K/blob/3c79d5a05bb7cb6bf7bfee5e090176636ee3ac65/rec_bicycle_crankset_and_pedal_assembly_0001.tar.gz",
+    "archive_sha256": "a71d1c78edd4c7a995eeb4838b9a9ea197004a17cfbeec986751457eef1f46bd",
+    "archive": "rec_bicycle_crankset_and_pedal_assembly_0001.tar.gz",
+    "label_status": "Original generated URDF reference; not manually verified or physically validated"
+  },
+  "links": [
+    {
+      "id": "link_000",
+      "name": "bb_shell",
+      "point_file": "inputs/link_000.npz",
+      "faces": 896,
+      "vertices": 462,
+      "bounds": [
+        [
+          -0.10566129800356142,
+          -0.046500089993491305,
+          -0.024500018365860233
+        ],
+        [
+          0.11958313335650966,
+          0.046500089993491305,
+          0.12928104040478433
+        ]
+      ]
+    },
+    {
+      "id": "link_001",
+      "name": "crankset",
+      "point_file": "inputs/link_001.npz",
+      "faces": 4012,
+      "vertices": 2014,
+      "bounds": [
+        [
+          -0.100969,
+          -0.07600004224134597,
+          -0.1689275379526216
+        ],
+        [
+          0.100969,
+          0.07600004224134597,
+          0.16892732510765474
+        ]
+      ]
+    },
+    {
+      "id": "link_002",
+      "name": "left_pedal",
+      "point_file": "inputs/link_002.npz",
+      "faces": 540,
+      "vertices": 280,
+      "bounds": [
+        [
+          -0.1276689,
+          0.0519999779609549,
+          0.14443599999999998
+        ],
+        [
+          -0.0316689,
+          0.14200002644703627,
+          0.160436
+        ]
+      ]
+    },
+    {
+      "id": "link_003",
+      "name": "right_pedal",
+      "point_file": "inputs/link_003.npz",
+      "faces": 540,
+      "vertices": 280,
+      "bounds": [
+        [
+          0.0316689,
+          -0.14200002644703627,
+          -0.160436
+        ],
+        [
+          0.1276689,
+          -0.0519999779609549,
+          -0.14443599999999998
+        ]
+      ]
+    }
+  ],
+  "joints": [
+    {
+      "name": "bb_to_crank",
+      "type": "continuous",
+      "parent": "link_000",
+      "child": "link_001",
+      "reference_q": 0.0,
+      "mimic": null
+    },
+    {
+      "name": "left_pedal_spin",
+      "type": "continuous",
+      "parent": "link_001",
+      "child": "link_002",
+      "reference_q": 0.0,
+      "mimic": null
+    },
+    {
+      "name": "right_pedal_spin",
+      "type": "continuous",
+      "parent": "link_001",
+      "child": "link_003",
+      "reference_q": 0.0,
+      "mimic": null
+    }
+  ],
+  "bounds": [
+    [
+      -0.1276689,
+      -0.14200002644703627,
+      -0.1689275379526216
+    ],
+    [
+      0.1276689,
+      0.14200002644703627,
+      0.16892732510765474
+    ]
+  ],
+  "point_pool_size": 65536,
+  "reference_pose": "Zero position clamped to limits; mimic values propagated",
+  "qc": {
+    "finite_geometry": true,
+    "tree_valid": true,
+    "axis_unit": true,
+    "physical_collision_validation": false,
+    "visual_tessellation": "32 cylinder segments, icosphere subdivision 2"
+  }
+}

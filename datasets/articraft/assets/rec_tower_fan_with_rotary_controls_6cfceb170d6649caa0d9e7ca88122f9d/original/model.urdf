@@ -1,0 +1,346 @@
+<robot name="tower_fan">
+  <material name="body_dark">
+    <color rgba="0.17 0.18 0.2 1" />
+    </material>
+  <material name="base_dark">
+    <color rgba="0.13 0.14 0.16 1" />
+    </material>
+  <material name="trim_dark">
+    <color rgba="0.08 0.09 0.1 1" />
+    </material>
+  <material name="rotor_dark">
+    <color rgba="0.12 0.12 0.13 1" />
+    </material>
+  <material name="deck_black">
+    <color rgba="0.06 0.07 0.08 1" />
+    </material>
+  <material name="knob_silver">
+    <color rgba="0.74 0.76 0.79 1" />
+    </material>
+  <link name="base">
+    <visual name="pedestal_disk">
+      <origin xyz="0 0 0.015" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.16" length="0.03" />
+        </geometry>
+      <material name="base_dark">
+        <color rgba="0.13 0.14 0.16 1" />
+        </material>
+      </visual>
+    <visual name="pedestal_cap">
+      <origin xyz="0 0 0.036" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.112" length="0.012" />
+        </geometry>
+      <material name="trim_dark">
+        <color rgba="0.08 0.09 0.1 1" />
+        </material>
+      </visual>
+    <visual name="pivot_collar">
+      <origin xyz="0 0 0.06" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.05" length="0.04" />
+        </geometry>
+      <material name="body_dark">
+        <color rgba="0.17 0.18 0.2 1" />
+        </material>
+      </visual>
+    <collision name="pedestal_disk">
+      <origin xyz="0 0 0.015" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.16" length="0.03" />
+        </geometry>
+      </collision>
+    <collision name="pedestal_cap">
+      <origin xyz="0 0 0.036" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.112" length="0.012" />
+        </geometry>
+      </collision>
+    <collision name="pivot_collar">
+      <origin xyz="0 0 0.06" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.05" length="0.04" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="tower">
+    <visual name="pivot_post">
+      <origin xyz="0 0 0.02" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.028" length="0.04" />
+        </geometry>
+      <material name="body_dark">
+        <color rgba="0.17 0.18 0.2 1" />
+        </material>
+      </visual>
+    <visual name="lower_mount">
+      <origin xyz="0 0 0.053" rpy="0 0 0" />
+      <geometry>
+        <box size="0.058 0.05 0.026" />
+        </geometry>
+      <material name="body_dark">
+        <color rgba="0.17 0.18 0.2 1" />
+        </material>
+      </visual>
+    <visual name="tower_shell">
+      <origin xyz="0 0 0.066" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/tower_shell.obj" />
+        </geometry>
+      <material name="body_dark">
+        <color rgba="0.17 0.18 0.2 1" />
+        </material>
+      </visual>
+    <visual name="control_deck">
+      <origin xyz="0 0 0.987" rpy="0 0 0" />
+      <geometry>
+        <box size="0.086 0.06 0.006" />
+        </geometry>
+      <material name="deck_black">
+        <color rgba="0.06 0.07 0.08 1" />
+        </material>
+      </visual>
+    <visual name="button_bezel">
+      <origin xyz="0.036 0 0.99" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/button_bezel.obj" />
+        </geometry>
+      <material name="deck_black">
+        <color rgba="0.06 0.07 0.08 1" />
+        </material>
+      </visual>
+    <visual name="vent_rib_0">
+      <origin xyz="-0.024 0.045 0.5195" rpy="0 0 0" />
+      <geometry>
+        <box size="0.004 0.008 0.743" />
+        </geometry>
+      <material name="trim_dark">
+        <color rgba="0.08 0.09 0.1 1" />
+        </material>
+      </visual>
+    <visual name="vent_rib_1">
+      <origin xyz="-0.012 0.045 0.5195" rpy="0 0 0" />
+      <geometry>
+        <box size="0.004 0.008 0.743" />
+        </geometry>
+      <material name="trim_dark">
+        <color rgba="0.08 0.09 0.1 1" />
+        </material>
+      </visual>
+    <visual name="vent_rib_2">
+      <origin xyz="0 0.045 0.5195" rpy="0 0 0" />
+      <geometry>
+        <box size="0.004 0.008 0.743" />
+        </geometry>
+      <material name="trim_dark">
+        <color rgba="0.08 0.09 0.1 1" />
+        </material>
+      </visual>
+    <visual name="vent_rib_3">
+      <origin xyz="0.012 0.045 0.5195" rpy="0 0 0" />
+      <geometry>
+        <box size="0.004 0.008 0.743" />
+        </geometry>
+      <material name="trim_dark">
+        <color rgba="0.08 0.09 0.1 1" />
+        </material>
+      </visual>
+    <visual name="vent_rib_4">
+      <origin xyz="0.024 0.045 0.5195" rpy="0 0 0" />
+      <geometry>
+        <box size="0.004 0.008 0.743" />
+        </geometry>
+      <material name="trim_dark">
+        <color rgba="0.08 0.09 0.1 1" />
+        </material>
+      </visual>
+    <collision name="pivot_post">
+      <origin xyz="0 0 0.02" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.028" length="0.04" />
+        </geometry>
+      </collision>
+    <collision name="lower_mount">
+      <origin xyz="0 0 0.053" rpy="0 0 0" />
+      <geometry>
+        <box size="0.058 0.05 0.026" />
+        </geometry>
+      </collision>
+    <collision name="tower_shell">
+      <origin xyz="0 0 0.066" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/tower_shell.obj" />
+        </geometry>
+      </collision>
+    <collision name="control_deck">
+      <origin xyz="0 0 0.987" rpy="0 0 0" />
+      <geometry>
+        <box size="0.086 0.06 0.006" />
+        </geometry>
+      </collision>
+    <collision name="button_bezel">
+      <origin xyz="0.036 0 0.99" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/button_bezel.obj" />
+        </geometry>
+      </collision>
+    <collision name="vent_rib_0">
+      <origin xyz="-0.024 0.045 0.5195" rpy="0 0 0" />
+      <geometry>
+        <box size="0.004 0.008 0.743" />
+        </geometry>
+      </collision>
+    <collision name="vent_rib_1">
+      <origin xyz="-0.012 0.045 0.5195" rpy="0 0 0" />
+      <geometry>
+        <box size="0.004 0.008 0.743" />
+        </geometry>
+      </collision>
+    <collision name="vent_rib_2">
+      <origin xyz="0 0.045 0.5195" rpy="0 0 0" />
+      <geometry>
+        <box size="0.004 0.008 0.743" />
+        </geometry>
+      </collision>
+    <collision name="vent_rib_3">
+      <origin xyz="0.012 0.045 0.5195" rpy="0 0 0" />
+      <geometry>
+        <box size="0.004 0.008 0.743" />
+        </geometry>
+      </collision>
+    <collision name="vent_rib_4">
+      <origin xyz="0.024 0.045 0.5195" rpy="0 0 0" />
+      <geometry>
+        <box size="0.004 0.008 0.743" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="blower">
+    <visual name="blower_wheel">
+      <geometry>
+        <mesh filename="assets/meshes/tower_fan_blower.obj" />
+        </geometry>
+      <material name="rotor_dark">
+        <color rgba="0.12 0.12 0.13 1" />
+        </material>
+      </visual>
+    <collision name="blower_wheel">
+      <geometry>
+        <mesh filename="assets/meshes/tower_fan_blower.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="speed_knob">
+    <visual name="speed_knob">
+      <geometry>
+        <mesh filename="assets/meshes/tower_fan_knob.obj" />
+        </geometry>
+      <material name="knob_silver">
+        <color rgba="0.74 0.76 0.79 1" />
+        </material>
+      </visual>
+    <collision name="speed_knob">
+      <geometry>
+        <mesh filename="assets/meshes/tower_fan_knob.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="timer_knob">
+    <visual name="timer_knob">
+      <geometry>
+        <mesh filename="assets/meshes/tower_fan_knob.obj" />
+        </geometry>
+      <material name="knob_silver">
+        <color rgba="0.74 0.76 0.79 1" />
+        </material>
+      </visual>
+    <collision name="timer_knob">
+      <geometry>
+        <mesh filename="assets/meshes/tower_fan_knob.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="osc_button">
+    <visual name="button_stop">
+      <origin xyz="0 0 -0.0005" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0098" length="0.001" />
+        </geometry>
+      <material name="trim_dark">
+        <color rgba="0.08 0.09 0.1 1" />
+        </material>
+      </visual>
+    <visual name="button_stem">
+      <origin xyz="0 0 0.00225" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0064" length="0.0045" />
+        </geometry>
+      <material name="trim_dark">
+        <color rgba="0.08 0.09 0.1 1" />
+        </material>
+      </visual>
+    <visual name="button_cap">
+      <origin xyz="0 0 0.0065" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.008" length="0.004" />
+        </geometry>
+      <material name="trim_dark">
+        <color rgba="0.08 0.09 0.1 1" />
+        </material>
+      </visual>
+    <collision name="button_stop">
+      <origin xyz="0 0 -0.0005" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0098" length="0.001" />
+        </geometry>
+      </collision>
+    <collision name="button_stem">
+      <origin xyz="0 0 0.00225" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0064" length="0.0045" />
+        </geometry>
+      </collision>
+    <collision name="button_cap">
+      <origin xyz="0 0 0.0065" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.008" length="0.004" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="base_to_tower" type="revolute">
+    <origin xyz="0 0 0.08" rpy="0 0 0" />
+    <parent link="base" />
+    <child link="tower" />
+    <axis xyz="0 0 1" />
+    <limit effort="10" velocity="1.8" lower="-1.05" upper="1.05" />
+    </joint>
+  <joint name="tower_to_blower" type="continuous">
+    <origin xyz="0 0 0.088" rpy="0 0 0" />
+    <parent link="tower" />
+    <child link="blower" />
+    <axis xyz="0 0 1" />
+    <limit effort="3" velocity="24" />
+    </joint>
+  <joint name="tower_to_speed_knob" type="continuous">
+    <origin xyz="-0.021 0 0.99" rpy="0 0 0" />
+    <parent link="tower" />
+    <child link="speed_knob" />
+    <axis xyz="0 0 1" />
+    <limit effort="0.12" velocity="8" />
+    </joint>
+  <joint name="tower_to_timer_knob" type="continuous">
+    <origin xyz="0.007 0 0.99" rpy="0 0 0" />
+    <parent link="tower" />
+    <child link="timer_knob" />
+    <axis xyz="0 0 1" />
+    <limit effort="0.12" velocity="8" />
+    </joint>
+  <joint name="tower_to_osc_button" type="prismatic">
+    <origin xyz="0.036 0 0.99" rpy="0 0 0" />
+    <parent link="tower" />
+    <child link="osc_button" />
+    <axis xyz="0 0 -1" />
+    <limit effort="4" velocity="0.05" lower="0" upper="0.0025" />
+    </joint>
+  </robot>

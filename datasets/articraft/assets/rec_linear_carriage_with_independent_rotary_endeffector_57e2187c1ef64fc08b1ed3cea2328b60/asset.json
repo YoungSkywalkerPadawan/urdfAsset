@@ -1,0 +1,121 @@
+{
+  "summary": {
+    "id": "rec_linear_carriage_with_independent_rotary_endeffector_57e2187c1ef64fc08b1ed3cea2328b60",
+    "category": "rotary",
+    "robot_name": "box_rail_rotary_nose",
+    "joint_count": 1,
+    "link_count": 3,
+    "target_link_count": 2,
+    "family": "rec_linear_carriage_with_independent_rotary_endeffector",
+    "warnings": [],
+    "diagonal": 0.7681171851885602,
+    "bytes": 3178939
+  },
+  "source": {
+    "dataset": "camvsl/Articraft-10K",
+    "revision": "3c79d5a05bb7cb6bf7bfee5e090176636ee3ac65",
+    "license": "CC-BY-4.0",
+    "url": "https://huggingface.co/datasets/camvsl/Articraft-10K/blob/3c79d5a05bb7cb6bf7bfee5e090176636ee3ac65/rec_linear_carriage_with_independent_rotary_endeffector_57e2187c1ef64fc08b1ed3cea2328b60.tar.gz",
+    "archive_sha256": "f867e4d1712cc015164370fbc9baed0c326385e5b30ad1201c4186e8c88b7bf1",
+    "archive": "rec_linear_carriage_with_independent_rotary_endeffector_57e2187c1ef64fc08b1ed3cea2328b60.tar.gz",
+    "label_status": "Original generated URDF reference; not manually verified or physically validated"
+  },
+  "links": [
+    {
+      "id": "link_000",
+      "name": "rail",
+      "point_file": null,
+      "faces": 36,
+      "vertices": 24,
+      "bounds": [
+        [
+          -0.36,
+          -0.075,
+          0.0
+        ],
+        [
+          0.36,
+          0.075,
+          0.1
+        ]
+      ]
+    },
+    {
+      "id": "link_001",
+      "name": "carriage",
+      "point_file": "inputs/link_001.npz",
+      "faces": 176,
+      "vertices": 98,
+      "bounds": [
+        [
+          -0.09,
+          -0.09,
+          0.045
+        ],
+        [
+          0.10400017631379774,
+          0.09,
+          0.1980000257121119
+        ]
+      ]
+    },
+    {
+      "id": "link_002",
+      "name": "nose_spindle",
+      "point_file": "inputs/link_002.npz",
+      "faces": 396,
+      "vertices": 206,
+      "bounds": [
+        [
+          0.10399984205222777,
+          -0.043,
+          0.10699997428785436
+        ],
+        [
+          0.1860000734639334,
+          0.043,
+          0.19300002571214564
+        ]
+      ]
+    }
+  ],
+  "joints": [
+    {
+      "name": "rail_to_carriage",
+      "type": "prismatic",
+      "parent": "link_000",
+      "child": "link_001",
+      "reference_q": 0.0,
+      "mimic": null
+    },
+    {
+      "name": "carriage_to_nose_spindle",
+      "type": "continuous",
+      "parent": "link_001",
+      "child": "link_002",
+      "reference_q": 0.0,
+      "mimic": null
+    }
+  ],
+  "bounds": [
+    [
+      -0.36,
+      -0.09,
+      0.0
+    ],
+    [
+      0.36,
+      0.09,
+      0.1980000257121119
+    ]
+  ],
+  "point_pool_size": 65536,
+  "reference_pose": "Zero position clamped to limits; mimic values propagated",
+  "qc": {
+    "finite_geometry": true,
+    "tree_valid": true,
+    "axis_unit": true,
+    "physical_collision_validation": false,
+    "visual_tessellation": "32 cylinder segments, icosphere subdivision 2"
+  }
+}

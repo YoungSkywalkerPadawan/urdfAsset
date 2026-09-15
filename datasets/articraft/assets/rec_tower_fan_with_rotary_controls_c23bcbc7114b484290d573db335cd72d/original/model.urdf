@@ -1,0 +1,1024 @@
+<robot name="modern_tower_fan">
+  <material name="tower_body">
+    <color rgba="0.9 0.91 0.92 1" />
+    </material>
+  <material name="tower_trim">
+    <color rgba="0.16 0.17 0.19 1" />
+    </material>
+  <material name="control_finish">
+    <color rgba="0.78 0.8 0.82 1" />
+    </material>
+  <material name="display_finish">
+    <color rgba="0.18 0.23 0.27 1" />
+    </material>
+  <material name="rotor_finish">
+    <color rgba="0.1 0.1 0.11 1" />
+    </material>
+  <link name="base">
+    <visual name="pedestal">
+      <geometry>
+        <mesh filename="assets/meshes/pedestal.obj" />
+        </geometry>
+      <material name="tower_trim">
+        <color rgba="0.16 0.17 0.19 1" />
+        </material>
+      </visual>
+    <collision name="pedestal">
+      <geometry>
+        <mesh filename="assets/meshes/pedestal.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="tower">
+    <visual name="lower_collar">
+      <origin xyz="0 0 0.02" rpy="0 0 0" />
+      <geometry>
+        <box size="0.096 0.072 0.04" />
+        </geometry>
+      <material name="tower_trim">
+        <color rgba="0.16 0.17 0.19 1" />
+        </material>
+      </visual>
+    <visual name="rear_neck">
+      <origin xyz="0 -0.032 0.04" rpy="0 0 0" />
+      <geometry>
+        <box size="0.104 0.038 0.08" />
+        </geometry>
+      <material name="tower_body">
+        <color rgba="0.9 0.91 0.92 1" />
+        </material>
+      </visual>
+    <visual name="side_neck_0">
+      <origin xyz="-0.052 0 0.04" rpy="0 0 0" />
+      <geometry>
+        <box size="0.016 0.062 0.08" />
+        </geometry>
+      <material name="tower_body">
+        <color rgba="0.9 0.91 0.92 1" />
+        </material>
+      </visual>
+    <visual name="side_neck_1">
+      <origin xyz="0.052 0 0.04" rpy="0 0 0" />
+      <geometry>
+        <box size="0.016 0.062 0.08" />
+        </geometry>
+      <material name="tower_body">
+        <color rgba="0.9 0.91 0.92 1" />
+        </material>
+      </visual>
+    <visual name="tower_shell">
+      <origin xyz="0 -0.051 0.453" rpy="0 0 0" />
+      <geometry>
+        <box size="0.124 0.012 0.828" />
+        </geometry>
+      <material name="tower_body">
+        <color rgba="0.9 0.91 0.92 1" />
+        </material>
+      </visual>
+    <visual name="side_shell_0">
+      <origin xyz="-0.062 0 0.453" rpy="0 0 0" />
+      <geometry>
+        <box size="0.012 0.114 0.828" />
+        </geometry>
+      <material name="tower_body">
+        <color rgba="0.9 0.91 0.92 1" />
+        </material>
+      </visual>
+    <visual name="side_shell_1">
+      <origin xyz="0.062 0 0.453" rpy="0 0 0" />
+      <geometry>
+        <box size="0.012 0.114 0.828" />
+        </geometry>
+      <material name="tower_body">
+        <color rgba="0.9 0.91 0.92 1" />
+        </material>
+      </visual>
+    <visual name="lower_bridge">
+      <origin xyz="0 0.052 0.0825" rpy="0 0 0" />
+      <geometry>
+        <box size="0.112 0.01 0.086" />
+        </geometry>
+      <material name="tower_body">
+        <color rgba="0.9 0.91 0.92 1" />
+        </material>
+      </visual>
+    <visual name="upper_bridge">
+      <origin xyz="0 0.052 0.834" rpy="0 0 0" />
+      <geometry>
+        <box size="0.112 0.01 0.08" />
+        </geometry>
+      <material name="tower_body">
+        <color rgba="0.9 0.91 0.92 1" />
+        </material>
+      </visual>
+    <visual name="top_cap_0">
+      <origin xyz="-0.056 0 0.883" rpy="0 0 0" />
+      <geometry>
+        <box size="0.034 0.12 0.032" />
+        </geometry>
+      <material name="tower_body">
+        <color rgba="0.9 0.91 0.92 1" />
+        </material>
+      </visual>
+    <visual name="top_cap_1">
+      <origin xyz="0.056 0 0.883" rpy="0 0 0" />
+      <geometry>
+        <box size="0.034 0.12 0.032" />
+        </geometry>
+      <material name="tower_body">
+        <color rgba="0.9 0.91 0.92 1" />
+        </material>
+      </visual>
+    <visual name="top_cap_2">
+      <origin xyz="0 0.024 0.883" rpy="0 0 0" />
+      <geometry>
+        <box size="0.078 0.054 0.032" />
+        </geometry>
+      <material name="tower_body">
+        <color rgba="0.9 0.91 0.92 1" />
+        </material>
+      </visual>
+    <visual name="blower_support_0">
+      <origin xyz="0 0.026 0.094" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.052 0.008" />
+        </geometry>
+      <material name="tower_trim">
+        <color rgba="0.16 0.17 0.19 1" />
+        </material>
+      </visual>
+    <visual name="blower_bearing_0">
+      <origin xyz="0 0 0.094" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.008" />
+        </geometry>
+      <material name="tower_trim">
+        <color rgba="0.16 0.17 0.19 1" />
+        </material>
+      </visual>
+    <visual name="blower_support_1">
+      <origin xyz="0 0.026 0.838" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.052 0.008" />
+        </geometry>
+      <material name="tower_trim">
+        <color rgba="0.16 0.17 0.19 1" />
+        </material>
+      </visual>
+    <visual name="blower_bearing_1">
+      <origin xyz="0 0 0.838" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.008" />
+        </geometry>
+      <material name="tower_trim">
+        <color rgba="0.16 0.17 0.19 1" />
+        </material>
+      </visual>
+    <visual name="slat_0">
+      <origin xyz="0 0.052 0.161158" rpy="0 0 0" />
+      <geometry>
+        <box size="0.112 0.008 0.004" />
+        </geometry>
+      <material name="tower_trim">
+        <color rgba="0.16 0.17 0.19 1" />
+        </material>
+      </visual>
+    <visual name="slat_1">
+      <origin xyz="0 0.052 0.196316" rpy="0 0 0" />
+      <geometry>
+        <box size="0.112 0.008 0.004" />
+        </geometry>
+      <material name="tower_trim">
+        <color rgba="0.16 0.17 0.19 1" />
+        </material>
+      </visual>
+    <visual name="slat_2">
+      <origin xyz="0 0.052 0.231474" rpy="0 0 0" />
+      <geometry>
+        <box size="0.112 0.008 0.004" />
+        </geometry>
+      <material name="tower_trim">
+        <color rgba="0.16 0.17 0.19 1" />
+        </material>
+      </visual>
+    <visual name="slat_3">
+      <origin xyz="0 0.052 0.266632" rpy="0 0 0" />
+      <geometry>
+        <box size="0.112 0.008 0.004" />
+        </geometry>
+      <material name="tower_trim">
+        <color rgba="0.16 0.17 0.19 1" />
+        </material>
+      </visual>
+    <visual name="slat_4">
+      <origin xyz="0 0.052 0.301789" rpy="0 0 0" />
+      <geometry>
+        <box size="0.112 0.008 0.004" />
+        </geometry>
+      <material name="tower_trim">
+        <color rgba="0.16 0.17 0.19 1" />
+        </material>
+      </visual>
+    <visual name="slat_5">
+      <origin xyz="0 0.052 0.336947" rpy="0 0 0" />
+      <geometry>
+        <box size="0.112 0.008 0.004" />
+        </geometry>
+      <material name="tower_trim">
+        <color rgba="0.16 0.17 0.19 1" />
+        </material>
+      </visual>
+    <visual name="slat_6">
+      <origin xyz="0 0.052 0.372105" rpy="0 0 0" />
+      <geometry>
+        <box size="0.112 0.008 0.004" />
+        </geometry>
+      <material name="tower_trim">
+        <color rgba="0.16 0.17 0.19 1" />
+        </material>
+      </visual>
+    <visual name="slat_7">
+      <origin xyz="0 0.052 0.407263" rpy="0 0 0" />
+      <geometry>
+        <box size="0.112 0.008 0.004" />
+        </geometry>
+      <material name="tower_trim">
+        <color rgba="0.16 0.17 0.19 1" />
+        </material>
+      </visual>
+    <visual name="slat_8">
+      <origin xyz="0 0.052 0.442421" rpy="0 0 0" />
+      <geometry>
+        <box size="0.112 0.008 0.004" />
+        </geometry>
+      <material name="tower_trim">
+        <color rgba="0.16 0.17 0.19 1" />
+        </material>
+      </visual>
+    <visual name="slat_9">
+      <origin xyz="0 0.052 0.477579" rpy="0 0 0" />
+      <geometry>
+        <box size="0.112 0.008 0.004" />
+        </geometry>
+      <material name="tower_trim">
+        <color rgba="0.16 0.17 0.19 1" />
+        </material>
+      </visual>
+    <visual name="slat_10">
+      <origin xyz="0 0.052 0.512737" rpy="0 0 0" />
+      <geometry>
+        <box size="0.112 0.008 0.004" />
+        </geometry>
+      <material name="tower_trim">
+        <color rgba="0.16 0.17 0.19 1" />
+        </material>
+      </visual>
+    <visual name="slat_11">
+      <origin xyz="0 0.052 0.547895" rpy="0 0 0" />
+      <geometry>
+        <box size="0.112 0.008 0.004" />
+        </geometry>
+      <material name="tower_trim">
+        <color rgba="0.16 0.17 0.19 1" />
+        </material>
+      </visual>
+    <visual name="slat_12">
+      <origin xyz="0 0.052 0.583053" rpy="0 0 0" />
+      <geometry>
+        <box size="0.112 0.008 0.004" />
+        </geometry>
+      <material name="tower_trim">
+        <color rgba="0.16 0.17 0.19 1" />
+        </material>
+      </visual>
+    <visual name="slat_13">
+      <origin xyz="0 0.052 0.618211" rpy="0 0 0" />
+      <geometry>
+        <box size="0.112 0.008 0.004" />
+        </geometry>
+      <material name="tower_trim">
+        <color rgba="0.16 0.17 0.19 1" />
+        </material>
+      </visual>
+    <visual name="slat_14">
+      <origin xyz="0 0.052 0.653368" rpy="0 0 0" />
+      <geometry>
+        <box size="0.112 0.008 0.004" />
+        </geometry>
+      <material name="tower_trim">
+        <color rgba="0.16 0.17 0.19 1" />
+        </material>
+      </visual>
+    <visual name="slat_15">
+      <origin xyz="0 0.052 0.688526" rpy="0 0 0" />
+      <geometry>
+        <box size="0.112 0.008 0.004" />
+        </geometry>
+      <material name="tower_trim">
+        <color rgba="0.16 0.17 0.19 1" />
+        </material>
+      </visual>
+    <visual name="slat_16">
+      <origin xyz="0 0.052 0.723684" rpy="0 0 0" />
+      <geometry>
+        <box size="0.112 0.008 0.004" />
+        </geometry>
+      <material name="tower_trim">
+        <color rgba="0.16 0.17 0.19 1" />
+        </material>
+      </visual>
+    <visual name="slat_17">
+      <origin xyz="0 0.052 0.758842" rpy="0 0 0" />
+      <geometry>
+        <box size="0.112 0.008 0.004" />
+        </geometry>
+      <material name="tower_trim">
+        <color rgba="0.16 0.17 0.19 1" />
+        </material>
+      </visual>
+    <visual name="display_panel">
+      <origin xyz="0 0.054 0.804" rpy="0 0 0" />
+      <geometry>
+        <box size="0.046 0.004 0.028" />
+        </geometry>
+      <material name="display_finish">
+        <color rgba="0.18 0.23 0.27 1" />
+        </material>
+      </visual>
+    <collision name="lower_collar">
+      <origin xyz="0 0 0.02" rpy="0 0 0" />
+      <geometry>
+        <box size="0.096 0.072 0.04" />
+        </geometry>
+      </collision>
+    <collision name="rear_neck">
+      <origin xyz="0 -0.032 0.04" rpy="0 0 0" />
+      <geometry>
+        <box size="0.104 0.038 0.08" />
+        </geometry>
+      </collision>
+    <collision name="side_neck_0">
+      <origin xyz="-0.052 0 0.04" rpy="0 0 0" />
+      <geometry>
+        <box size="0.016 0.062 0.08" />
+        </geometry>
+      </collision>
+    <collision name="side_neck_1">
+      <origin xyz="0.052 0 0.04" rpy="0 0 0" />
+      <geometry>
+        <box size="0.016 0.062 0.08" />
+        </geometry>
+      </collision>
+    <collision name="tower_shell">
+      <origin xyz="0 -0.051 0.453" rpy="0 0 0" />
+      <geometry>
+        <box size="0.124 0.012 0.828" />
+        </geometry>
+      </collision>
+    <collision name="side_shell_0">
+      <origin xyz="-0.062 0 0.453" rpy="0 0 0" />
+      <geometry>
+        <box size="0.012 0.114 0.828" />
+        </geometry>
+      </collision>
+    <collision name="side_shell_1">
+      <origin xyz="0.062 0 0.453" rpy="0 0 0" />
+      <geometry>
+        <box size="0.012 0.114 0.828" />
+        </geometry>
+      </collision>
+    <collision name="lower_bridge">
+      <origin xyz="0 0.052 0.0825" rpy="0 0 0" />
+      <geometry>
+        <box size="0.112 0.01 0.086" />
+        </geometry>
+      </collision>
+    <collision name="upper_bridge">
+      <origin xyz="0 0.052 0.834" rpy="0 0 0" />
+      <geometry>
+        <box size="0.112 0.01 0.08" />
+        </geometry>
+      </collision>
+    <collision name="top_cap_0">
+      <origin xyz="-0.056 0 0.883" rpy="0 0 0" />
+      <geometry>
+        <box size="0.034 0.12 0.032" />
+        </geometry>
+      </collision>
+    <collision name="top_cap_1">
+      <origin xyz="0.056 0 0.883" rpy="0 0 0" />
+      <geometry>
+        <box size="0.034 0.12 0.032" />
+        </geometry>
+      </collision>
+    <collision name="top_cap_2">
+      <origin xyz="0 0.024 0.883" rpy="0 0 0" />
+      <geometry>
+        <box size="0.078 0.054 0.032" />
+        </geometry>
+      </collision>
+    <collision name="blower_support_0">
+      <origin xyz="0 0.026 0.094" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.052 0.008" />
+        </geometry>
+      </collision>
+    <collision name="blower_bearing_0">
+      <origin xyz="0 0 0.094" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.008" />
+        </geometry>
+      </collision>
+    <collision name="blower_support_1">
+      <origin xyz="0 0.026 0.838" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.052 0.008" />
+        </geometry>
+      </collision>
+    <collision name="blower_bearing_1">
+      <origin xyz="0 0 0.838" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.008" />
+        </geometry>
+      </collision>
+    <collision name="slat_0">
+      <origin xyz="0 0.052 0.161158" rpy="0 0 0" />
+      <geometry>
+        <box size="0.112 0.008 0.004" />
+        </geometry>
+      </collision>
+    <collision name="slat_1">
+      <origin xyz="0 0.052 0.196316" rpy="0 0 0" />
+      <geometry>
+        <box size="0.112 0.008 0.004" />
+        </geometry>
+      </collision>
+    <collision name="slat_2">
+      <origin xyz="0 0.052 0.231474" rpy="0 0 0" />
+      <geometry>
+        <box size="0.112 0.008 0.004" />
+        </geometry>
+      </collision>
+    <collision name="slat_3">
+      <origin xyz="0 0.052 0.266632" rpy="0 0 0" />
+      <geometry>
+        <box size="0.112 0.008 0.004" />
+        </geometry>
+      </collision>
+    <collision name="slat_4">
+      <origin xyz="0 0.052 0.301789" rpy="0 0 0" />
+      <geometry>
+        <box size="0.112 0.008 0.004" />
+        </geometry>
+      </collision>
+    <collision name="slat_5">
+      <origin xyz="0 0.052 0.336947" rpy="0 0 0" />
+      <geometry>
+        <box size="0.112 0.008 0.004" />
+        </geometry>
+      </collision>
+    <collision name="slat_6">
+      <origin xyz="0 0.052 0.372105" rpy="0 0 0" />
+      <geometry>
+        <box size="0.112 0.008 0.004" />
+        </geometry>
+      </collision>
+    <collision name="slat_7">
+      <origin xyz="0 0.052 0.407263" rpy="0 0 0" />
+      <geometry>
+        <box size="0.112 0.008 0.004" />
+        </geometry>
+      </collision>
+    <collision name="slat_8">
+      <origin xyz="0 0.052 0.442421" rpy="0 0 0" />
+      <geometry>
+        <box size="0.112 0.008 0.004" />
+        </geometry>
+      </collision>
+    <collision name="slat_9">
+      <origin xyz="0 0.052 0.477579" rpy="0 0 0" />
+      <geometry>
+        <box size="0.112 0.008 0.004" />
+        </geometry>
+      </collision>
+    <collision name="slat_10">
+      <origin xyz="0 0.052 0.512737" rpy="0 0 0" />
+      <geometry>
+        <box size="0.112 0.008 0.004" />
+        </geometry>
+      </collision>
+    <collision name="slat_11">
+      <origin xyz="0 0.052 0.547895" rpy="0 0 0" />
+      <geometry>
+        <box size="0.112 0.008 0.004" />
+        </geometry>
+      </collision>
+    <collision name="slat_12">
+      <origin xyz="0 0.052 0.583053" rpy="0 0 0" />
+      <geometry>
+        <box size="0.112 0.008 0.004" />
+        </geometry>
+      </collision>
+    <collision name="slat_13">
+      <origin xyz="0 0.052 0.618211" rpy="0 0 0" />
+      <geometry>
+        <box size="0.112 0.008 0.004" />
+        </geometry>
+      </collision>
+    <collision name="slat_14">
+      <origin xyz="0 0.052 0.653368" rpy="0 0 0" />
+      <geometry>
+        <box size="0.112 0.008 0.004" />
+        </geometry>
+      </collision>
+    <collision name="slat_15">
+      <origin xyz="0 0.052 0.688526" rpy="0 0 0" />
+      <geometry>
+        <box size="0.112 0.008 0.004" />
+        </geometry>
+      </collision>
+    <collision name="slat_16">
+      <origin xyz="0 0.052 0.723684" rpy="0 0 0" />
+      <geometry>
+        <box size="0.112 0.008 0.004" />
+        </geometry>
+      </collision>
+    <collision name="slat_17">
+      <origin xyz="0 0.052 0.758842" rpy="0 0 0" />
+      <geometry>
+        <box size="0.112 0.008 0.004" />
+        </geometry>
+      </collision>
+    <collision name="display_panel">
+      <origin xyz="0 0.054 0.804" rpy="0 0 0" />
+      <geometry>
+        <box size="0.046 0.004 0.028" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="blower">
+    <visual name="blower_wheel">
+      <origin xyz="0 0 0.36" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.736" />
+        </geometry>
+      <material name="rotor_finish">
+        <color rgba="0.1 0.1 0.11 1" />
+        </material>
+      </visual>
+    <visual name="endplate_0">
+      <origin xyz="0 0 0.004" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.045" length="0.008" />
+        </geometry>
+      <material name="rotor_finish">
+        <color rgba="0.1 0.1 0.11 1" />
+        </material>
+      </visual>
+    <visual name="endplate_1">
+      <origin xyz="0 0 0.716" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.045" length="0.008" />
+        </geometry>
+      <material name="rotor_finish">
+        <color rgba="0.1 0.1 0.11 1" />
+        </material>
+      </visual>
+    <visual name="blade_0">
+      <origin xyz="0.034 0 0.36" rpy="0 0 0.35" />
+      <geometry>
+        <box size="0.004 0.02 0.704" />
+        </geometry>
+      <material name="rotor_finish">
+        <color rgba="0.1 0.1 0.11 1" />
+        </material>
+      </visual>
+    <visual name="blade_1">
+      <origin xyz="0.0328415 0.00879985 0.36" rpy="0 0 0.611799" />
+      <geometry>
+        <box size="0.004 0.02 0.704" />
+        </geometry>
+      <material name="rotor_finish">
+        <color rgba="0.1 0.1 0.11 1" />
+        </material>
+      </visual>
+    <visual name="blade_2">
+      <origin xyz="0.0294449 0.017 0.36" rpy="0 0 0.873599" />
+      <geometry>
+        <box size="0.004 0.02 0.704" />
+        </geometry>
+      <material name="rotor_finish">
+        <color rgba="0.1 0.1 0.11 1" />
+        </material>
+      </visual>
+    <visual name="blade_3">
+      <origin xyz="0.0240416 0.0240416 0.36" rpy="0 0 1.1354" />
+      <geometry>
+        <box size="0.004 0.02 0.704" />
+        </geometry>
+      <material name="rotor_finish">
+        <color rgba="0.1 0.1 0.11 1" />
+        </material>
+      </visual>
+    <visual name="blade_4">
+      <origin xyz="0.017 0.0294449 0.36" rpy="0 0 1.3972" />
+      <geometry>
+        <box size="0.004 0.02 0.704" />
+        </geometry>
+      <material name="rotor_finish">
+        <color rgba="0.1 0.1 0.11 1" />
+        </material>
+      </visual>
+    <visual name="blade_5">
+      <origin xyz="0.00879985 0.0328415 0.36" rpy="0 0 1.659" />
+      <geometry>
+        <box size="0.004 0.02 0.704" />
+        </geometry>
+      <material name="rotor_finish">
+        <color rgba="0.1 0.1 0.11 1" />
+        </material>
+      </visual>
+    <visual name="blade_6">
+      <origin xyz="2.0819e-18 0.034 0.36" rpy="0 0 1.9208" />
+      <geometry>
+        <box size="0.004 0.02 0.704" />
+        </geometry>
+      <material name="rotor_finish">
+        <color rgba="0.1 0.1 0.11 1" />
+        </material>
+      </visual>
+    <visual name="blade_7">
+      <origin xyz="-0.00879985 0.0328415 0.36" rpy="0 0 2.1826" />
+      <geometry>
+        <box size="0.004 0.02 0.704" />
+        </geometry>
+      <material name="rotor_finish">
+        <color rgba="0.1 0.1 0.11 1" />
+        </material>
+      </visual>
+    <visual name="blade_8">
+      <origin xyz="-0.017 0.0294449 0.36" rpy="0 0 2.4444" />
+      <geometry>
+        <box size="0.004 0.02 0.704" />
+        </geometry>
+      <material name="rotor_finish">
+        <color rgba="0.1 0.1 0.11 1" />
+        </material>
+      </visual>
+    <visual name="blade_9">
+      <origin xyz="-0.0240416 0.0240416 0.36" rpy="0 0 2.70619" />
+      <geometry>
+        <box size="0.004 0.02 0.704" />
+        </geometry>
+      <material name="rotor_finish">
+        <color rgba="0.1 0.1 0.11 1" />
+        </material>
+      </visual>
+    <visual name="blade_10">
+      <origin xyz="-0.0294449 0.017 0.36" rpy="0 0 2.96799" />
+      <geometry>
+        <box size="0.004 0.02 0.704" />
+        </geometry>
+      <material name="rotor_finish">
+        <color rgba="0.1 0.1 0.11 1" />
+        </material>
+      </visual>
+    <visual name="blade_11">
+      <origin xyz="-0.0328415 0.00879985 0.36" rpy="0 0 3.22979" />
+      <geometry>
+        <box size="0.004 0.02 0.704" />
+        </geometry>
+      <material name="rotor_finish">
+        <color rgba="0.1 0.1 0.11 1" />
+        </material>
+      </visual>
+    <visual name="blade_12">
+      <origin xyz="-0.034 4.1638e-18 0.36" rpy="0 0 3.49159" />
+      <geometry>
+        <box size="0.004 0.02 0.704" />
+        </geometry>
+      <material name="rotor_finish">
+        <color rgba="0.1 0.1 0.11 1" />
+        </material>
+      </visual>
+    <visual name="blade_13">
+      <origin xyz="-0.0328415 -0.00879985 0.36" rpy="0 0 3.75339" />
+      <geometry>
+        <box size="0.004 0.02 0.704" />
+        </geometry>
+      <material name="rotor_finish">
+        <color rgba="0.1 0.1 0.11 1" />
+        </material>
+      </visual>
+    <visual name="blade_14">
+      <origin xyz="-0.0294449 -0.017 0.36" rpy="0 0 4.01519" />
+      <geometry>
+        <box size="0.004 0.02 0.704" />
+        </geometry>
+      <material name="rotor_finish">
+        <color rgba="0.1 0.1 0.11 1" />
+        </material>
+      </visual>
+    <visual name="blade_15">
+      <origin xyz="-0.0240416 -0.0240416 0.36" rpy="0 0 4.27699" />
+      <geometry>
+        <box size="0.004 0.02 0.704" />
+        </geometry>
+      <material name="rotor_finish">
+        <color rgba="0.1 0.1 0.11 1" />
+        </material>
+      </visual>
+    <visual name="blade_16">
+      <origin xyz="-0.017 -0.0294449 0.36" rpy="0 0 4.53879" />
+      <geometry>
+        <box size="0.004 0.02 0.704" />
+        </geometry>
+      <material name="rotor_finish">
+        <color rgba="0.1 0.1 0.11 1" />
+        </material>
+      </visual>
+    <visual name="blade_17">
+      <origin xyz="-0.00879985 -0.0328415 0.36" rpy="0 0 4.80059" />
+      <geometry>
+        <box size="0.004 0.02 0.704" />
+        </geometry>
+      <material name="rotor_finish">
+        <color rgba="0.1 0.1 0.11 1" />
+        </material>
+      </visual>
+    <visual name="blade_18">
+      <origin xyz="-6.2457e-18 -0.034 0.36" rpy="0 0 5.06239" />
+      <geometry>
+        <box size="0.004 0.02 0.704" />
+        </geometry>
+      <material name="rotor_finish">
+        <color rgba="0.1 0.1 0.11 1" />
+        </material>
+      </visual>
+    <visual name="blade_19">
+      <origin xyz="0.00879985 -0.0328415 0.36" rpy="0 0 5.32419" />
+      <geometry>
+        <box size="0.004 0.02 0.704" />
+        </geometry>
+      <material name="rotor_finish">
+        <color rgba="0.1 0.1 0.11 1" />
+        </material>
+      </visual>
+    <visual name="blade_20">
+      <origin xyz="0.017 -0.0294449 0.36" rpy="0 0 5.58599" />
+      <geometry>
+        <box size="0.004 0.02 0.704" />
+        </geometry>
+      <material name="rotor_finish">
+        <color rgba="0.1 0.1 0.11 1" />
+        </material>
+      </visual>
+    <visual name="blade_21">
+      <origin xyz="0.0240416 -0.0240416 0.36" rpy="0 0 5.84779" />
+      <geometry>
+        <box size="0.004 0.02 0.704" />
+        </geometry>
+      <material name="rotor_finish">
+        <color rgba="0.1 0.1 0.11 1" />
+        </material>
+      </visual>
+    <visual name="blade_22">
+      <origin xyz="0.0294449 -0.017 0.36" rpy="0 0 6.10959" />
+      <geometry>
+        <box size="0.004 0.02 0.704" />
+        </geometry>
+      <material name="rotor_finish">
+        <color rgba="0.1 0.1 0.11 1" />
+        </material>
+      </visual>
+    <visual name="blade_23">
+      <origin xyz="0.0328415 -0.00879985 0.36" rpy="0 0 6.37139" />
+      <geometry>
+        <box size="0.004 0.02 0.704" />
+        </geometry>
+      <material name="rotor_finish">
+        <color rgba="0.1 0.1 0.11 1" />
+        </material>
+      </visual>
+    <collision name="blower_wheel">
+      <origin xyz="0 0 0.36" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.736" />
+        </geometry>
+      </collision>
+    <collision name="endplate_0">
+      <origin xyz="0 0 0.004" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.045" length="0.008" />
+        </geometry>
+      </collision>
+    <collision name="endplate_1">
+      <origin xyz="0 0 0.716" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.045" length="0.008" />
+        </geometry>
+      </collision>
+    <collision name="blade_0">
+      <origin xyz="0.034 0 0.36" rpy="0 0 0.35" />
+      <geometry>
+        <box size="0.004 0.02 0.704" />
+        </geometry>
+      </collision>
+    <collision name="blade_1">
+      <origin xyz="0.0328415 0.00879985 0.36" rpy="0 0 0.611799" />
+      <geometry>
+        <box size="0.004 0.02 0.704" />
+        </geometry>
+      </collision>
+    <collision name="blade_2">
+      <origin xyz="0.0294449 0.017 0.36" rpy="0 0 0.873599" />
+      <geometry>
+        <box size="0.004 0.02 0.704" />
+        </geometry>
+      </collision>
+    <collision name="blade_3">
+      <origin xyz="0.0240416 0.0240416 0.36" rpy="0 0 1.1354" />
+      <geometry>
+        <box size="0.004 0.02 0.704" />
+        </geometry>
+      </collision>
+    <collision name="blade_4">
+      <origin xyz="0.017 0.0294449 0.36" rpy="0 0 1.3972" />
+      <geometry>
+        <box size="0.004 0.02 0.704" />
+        </geometry>
+      </collision>
+    <collision name="blade_5">
+      <origin xyz="0.00879985 0.0328415 0.36" rpy="0 0 1.659" />
+      <geometry>
+        <box size="0.004 0.02 0.704" />
+        </geometry>
+      </collision>
+    <collision name="blade_6">
+      <origin xyz="2.0819e-18 0.034 0.36" rpy="0 0 1.9208" />
+      <geometry>
+        <box size="0.004 0.02 0.704" />
+        </geometry>
+      </collision>
+    <collision name="blade_7">
+      <origin xyz="-0.00879985 0.0328415 0.36" rpy="0 0 2.1826" />
+      <geometry>
+        <box size="0.004 0.02 0.704" />
+        </geometry>
+      </collision>
+    <collision name="blade_8">
+      <origin xyz="-0.017 0.0294449 0.36" rpy="0 0 2.4444" />
+      <geometry>
+        <box size="0.004 0.02 0.704" />
+        </geometry>
+      </collision>
+    <collision name="blade_9">
+      <origin xyz="-0.0240416 0.0240416 0.36" rpy="0 0 2.70619" />
+      <geometry>
+        <box size="0.004 0.02 0.704" />
+        </geometry>
+      </collision>
+    <collision name="blade_10">
+      <origin xyz="-0.0294449 0.017 0.36" rpy="0 0 2.96799" />
+      <geometry>
+        <box size="0.004 0.02 0.704" />
+        </geometry>
+      </collision>
+    <collision name="blade_11">
+      <origin xyz="-0.0328415 0.00879985 0.36" rpy="0 0 3.22979" />
+      <geometry>
+        <box size="0.004 0.02 0.704" />
+        </geometry>
+      </collision>
+    <collision name="blade_12">
+      <origin xyz="-0.034 4.1638e-18 0.36" rpy="0 0 3.49159" />
+      <geometry>
+        <box size="0.004 0.02 0.704" />
+        </geometry>
+      </collision>
+    <collision name="blade_13">
+      <origin xyz="-0.0328415 -0.00879985 0.36" rpy="0 0 3.75339" />
+      <geometry>
+        <box size="0.004 0.02 0.704" />
+        </geometry>
+      </collision>
+    <collision name="blade_14">
+      <origin xyz="-0.0294449 -0.017 0.36" rpy="0 0 4.01519" />
+      <geometry>
+        <box size="0.004 0.02 0.704" />
+        </geometry>
+      </collision>
+    <collision name="blade_15">
+      <origin xyz="-0.0240416 -0.0240416 0.36" rpy="0 0 4.27699" />
+      <geometry>
+        <box size="0.004 0.02 0.704" />
+        </geometry>
+      </collision>
+    <collision name="blade_16">
+      <origin xyz="-0.017 -0.0294449 0.36" rpy="0 0 4.53879" />
+      <geometry>
+        <box size="0.004 0.02 0.704" />
+        </geometry>
+      </collision>
+    <collision name="blade_17">
+      <origin xyz="-0.00879985 -0.0328415 0.36" rpy="0 0 4.80059" />
+      <geometry>
+        <box size="0.004 0.02 0.704" />
+        </geometry>
+      </collision>
+    <collision name="blade_18">
+      <origin xyz="-6.2457e-18 -0.034 0.36" rpy="0 0 5.06239" />
+      <geometry>
+        <box size="0.004 0.02 0.704" />
+        </geometry>
+      </collision>
+    <collision name="blade_19">
+      <origin xyz="0.00879985 -0.0328415 0.36" rpy="0 0 5.32419" />
+      <geometry>
+        <box size="0.004 0.02 0.704" />
+        </geometry>
+      </collision>
+    <collision name="blade_20">
+      <origin xyz="0.017 -0.0294449 0.36" rpy="0 0 5.58599" />
+      <geometry>
+        <box size="0.004 0.02 0.704" />
+        </geometry>
+      </collision>
+    <collision name="blade_21">
+      <origin xyz="0.0240416 -0.0240416 0.36" rpy="0 0 5.84779" />
+      <geometry>
+        <box size="0.004 0.02 0.704" />
+        </geometry>
+      </collision>
+    <collision name="blade_22">
+      <origin xyz="0.0294449 -0.017 0.36" rpy="0 0 6.10959" />
+      <geometry>
+        <box size="0.004 0.02 0.704" />
+        </geometry>
+      </collision>
+    <collision name="blade_23">
+      <origin xyz="0.0328415 -0.00879985 0.36" rpy="0 0 6.37139" />
+      <geometry>
+        <box size="0.004 0.02 0.704" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="speed_knob">
+    <visual name="speed_cap">
+      <geometry>
+        <mesh filename="assets/meshes/speed_knob.obj" />
+        </geometry>
+      <material name="control_finish">
+        <color rgba="0.78 0.8 0.82 1" />
+        </material>
+      </visual>
+    <collision name="speed_cap">
+      <geometry>
+        <mesh filename="assets/meshes/speed_knob.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="timer_knob">
+    <visual name="timer_cap">
+      <geometry>
+        <mesh filename="assets/meshes/timer_knob.obj" />
+        </geometry>
+      <material name="control_finish">
+        <color rgba="0.78 0.8 0.82 1" />
+        </material>
+      </visual>
+    <collision name="timer_cap">
+      <geometry>
+        <mesh filename="assets/meshes/timer_knob.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="base_to_tower" type="revolute">
+    <origin xyz="0 0 0.076" rpy="0 0 0" />
+    <parent link="base" />
+    <child link="tower" />
+    <axis xyz="0 0 1" />
+    <limit effort="12" velocity="1.2" lower="-1.05" upper="1.05" />
+    </joint>
+  <joint name="tower_to_blower" type="continuous">
+    <origin xyz="0 0 0.106" rpy="0 0 0" />
+    <parent link="tower" />
+    <child link="blower" />
+    <axis xyz="0 0 1" />
+    <limit effort="3" velocity="35" />
+    </joint>
+  <joint name="tower_to_speed_knob" type="continuous">
+    <origin xyz="-0.03 -0.004 0.899" rpy="0 0 0" />
+    <parent link="tower" />
+    <child link="speed_knob" />
+    <axis xyz="0 0 1" />
+    <limit effort="0.6" velocity="8" />
+    </joint>
+  <joint name="tower_to_timer_knob" type="continuous">
+    <origin xyz="0.03 -0.004 0.899" rpy="0 0 0" />
+    <parent link="tower" />
+    <child link="timer_knob" />
+    <axis xyz="0 0 1" />
+    <limit effort="0.6" velocity="8" />
+    </joint>
+  </robot>

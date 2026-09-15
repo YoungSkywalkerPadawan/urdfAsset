@@ -1,0 +1,148 @@
+{
+  "summary": {
+    "id": "rec_single_rotor_helicopter_fc81d9489a184dfb9a200c94301669dd",
+    "category": "rotor",
+    "robot_name": "civilian_helicopter",
+    "joint_count": 2,
+    "link_count": 4,
+    "target_link_count": 3,
+    "family": "rec_single_rotor_helicopter",
+    "warnings": [],
+    "diagonal": 9.23759671499774,
+    "bytes": 5718731
+  },
+  "source": {
+    "dataset": "camvsl/Articraft-10K",
+    "revision": "3c79d5a05bb7cb6bf7bfee5e090176636ee3ac65",
+    "license": "CC-BY-4.0",
+    "url": "https://huggingface.co/datasets/camvsl/Articraft-10K/blob/3c79d5a05bb7cb6bf7bfee5e090176636ee3ac65/rec_single_rotor_helicopter_fc81d9489a184dfb9a200c94301669dd.tar.gz",
+    "archive_sha256": "da960e853ab836f2d3c29fc587e9c058a8b09cb105d4bffff0bef8949b156407",
+    "archive": "rec_single_rotor_helicopter_fc81d9489a184dfb9a200c94301669dd.tar.gz",
+    "label_status": "Original generated URDF reference; not manually verified or physically validated"
+  },
+  "links": [
+    {
+      "id": "link_000",
+      "name": "airframe",
+      "point_file": "inputs/link_000.npz",
+      "faces": 18882,
+      "vertices": 9518,
+      "bounds": [
+        [
+          -5.12,
+          -0.801688,
+          0.091331
+        ],
+        [
+          1.28,
+          0.801688,
+          1.9600000000000002
+        ]
+      ]
+    },
+    {
+      "id": "link_001",
+      "name": "main_rotor",
+      "point_file": "inputs/link_001.npz",
+      "faces": 756,
+      "vertices": 392,
+      "bounds": [
+        [
+          -3.25,
+          -0.195,
+          1.96
+        ],
+        [
+          3.25,
+          0.195,
+          2.24
+        ]
+      ]
+    },
+    {
+      "id": "link_002",
+      "name": "tail_rotor",
+      "point_file": "inputs/link_002.npz",
+      "faces": 1260,
+      "vertices": 650,
+      "bounds": [
+        [
+          -5.59,
+          0.34750000000000003,
+          1.3699999999999999
+        ],
+        [
+          -4.49,
+          0.5675,
+          1.55
+        ]
+      ]
+    },
+    {
+      "id": "link_003",
+      "name": "baggage_door",
+      "point_file": null,
+      "faces": 236,
+      "vertices": 124,
+      "bounds": [
+        [
+          -1.17,
+          -0.6625,
+          0.8099999999999998
+        ],
+        [
+          -0.535,
+          -0.622,
+          1.49
+        ]
+      ]
+    }
+  ],
+  "joints": [
+    {
+      "name": "airframe_to_main_rotor",
+      "type": "continuous",
+      "parent": "link_000",
+      "child": "link_001",
+      "reference_q": 0.0,
+      "mimic": null
+    },
+    {
+      "name": "airframe_to_tail_rotor",
+      "type": "continuous",
+      "parent": "link_000",
+      "child": "link_002",
+      "reference_q": 0.0,
+      "mimic": null
+    },
+    {
+      "name": "airframe_to_baggage_door",
+      "type": "revolute",
+      "parent": "link_000",
+      "child": "link_003",
+      "reference_q": 0.0,
+      "mimic": null
+    }
+  ],
+  "bounds": [
+    [
+      -5.59,
+      -0.801688,
+      0.091331
+    ],
+    [
+      3.25,
+      0.801688,
+      2.24
+    ]
+  ],
+  "point_pool_size": 65536,
+  "reference_pose": "Zero position clamped to limits; mimic values propagated",
+  "qc": {
+    "finite_geometry": true,
+    "tree_valid": true,
+    "axis_unit": true,
+    "physical_collision_validation": false,
+    "visual_tessellation": "32 cylinder segments, icosphere subdivision 2"
+  }
+}

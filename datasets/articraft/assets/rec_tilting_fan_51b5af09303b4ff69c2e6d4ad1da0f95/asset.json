@@ -1,0 +1,175 @@
+{
+  "summary": {
+    "id": "rec_tilting_fan_51b5af09303b4ff69c2e6d4ad1da0f95",
+    "category": "fan",
+    "robot_name": "outdoor_weatherproof_tilting_fan",
+    "joint_count": 1,
+    "link_count": 5,
+    "target_link_count": 2,
+    "family": "rec_tilting_fan",
+    "warnings": [],
+    "diagonal": 1.215635224892731,
+    "bytes": 3453332
+  },
+  "source": {
+    "dataset": "camvsl/Articraft-10K",
+    "revision": "3c79d5a05bb7cb6bf7bfee5e090176636ee3ac65",
+    "license": "CC-BY-4.0",
+    "url": "https://huggingface.co/datasets/camvsl/Articraft-10K/blob/3c79d5a05bb7cb6bf7bfee5e090176636ee3ac65/rec_tilting_fan_51b5af09303b4ff69c2e6d4ad1da0f95.tar.gz",
+    "archive_sha256": "70735b522af78e5ba0537e6ec224aed34757004db905019635eca9be7a4ee1ba",
+    "archive": "rec_tilting_fan_51b5af09303b4ff69c2e6d4ad1da0f95.tar.gz",
+    "label_status": "Original generated URDF reference; not manually verified or physically validated"
+  },
+  "links": [
+    {
+      "id": "link_000",
+      "name": "base",
+      "point_file": null,
+      "faces": 1096,
+      "vertices": 576,
+      "bounds": [
+        [
+          -0.21,
+          -0.21,
+          0.0
+        ],
+        [
+          0.21,
+          0.21,
+          0.935
+        ]
+      ]
+    },
+    {
+      "id": "link_001",
+      "name": "head",
+      "point_file": "inputs/link_001.npz",
+      "faces": 816,
+      "vertices": 428,
+      "bounds": [
+        [
+          -0.028,
+          -0.175,
+          0.7349998347062089
+        ],
+        [
+          0.19000004407840726,
+          0.175,
+          0.8650001652937912
+        ]
+      ]
+    },
+    {
+      "id": "link_002",
+      "name": "front_guard",
+      "point_file": null,
+      "faces": 3440,
+      "vertices": 1872,
+      "bounds": [
+        [
+          0.175,
+          -0.223,
+          0.5770000000000001
+        ],
+        [
+          0.272,
+          0.223,
+          1.0230000000000001
+        ]
+      ]
+    },
+    {
+      "id": "link_003",
+      "name": "rear_guard",
+      "point_file": null,
+      "faces": 3216,
+      "vertices": 1742,
+      "bounds": [
+        [
+          0.147122,
+          -0.213,
+          0.5870000000000001
+        ],
+        [
+          0.162878,
+          0.213,
+          1.0130000000000001
+        ]
+      ]
+    },
+    {
+      "id": "link_004",
+      "name": "rotor",
+      "point_file": "inputs/link_004.npz",
+      "faces": 1321,
+      "vertices": 672,
+      "bounds": [
+        [
+          0.18,
+          -0.124576,
+          0.726229
+        ],
+        [
+          0.221,
+          0.124576,
+          0.9420000000000001
+        ]
+      ]
+    }
+  ],
+  "joints": [
+    {
+      "name": "base_to_head_tilt",
+      "type": "revolute",
+      "parent": "link_000",
+      "child": "link_001",
+      "reference_q": 0.0,
+      "mimic": null
+    },
+    {
+      "name": "head_to_front_guard",
+      "type": "fixed",
+      "parent": "link_001",
+      "child": "link_002",
+      "reference_q": 0.0,
+      "mimic": null
+    },
+    {
+      "name": "head_to_rear_guard",
+      "type": "fixed",
+      "parent": "link_001",
+      "child": "link_003",
+      "reference_q": 0.0,
+      "mimic": null
+    },
+    {
+      "name": "head_to_rotor_spin",
+      "type": "continuous",
+      "parent": "link_001",
+      "child": "link_004",
+      "reference_q": 0.0,
+      "mimic": null
+    }
+  ],
+  "bounds": [
+    [
+      -0.21,
+      -0.223,
+      0.0
+    ],
+    [
+      0.272,
+      0.223,
+      1.0230000000000001
+    ]
+  ],
+  "point_pool_size": 65536,
+  "reference_pose": "Zero position clamped to limits; mimic values propagated",
+  "qc": {
+    "finite_geometry": true,
+    "tree_valid": true,
+    "axis_unit": true,
+    "physical_collision_validation": false,
+    "visual_tessellation": "32 cylinder segments, icosphere subdivision 2"
+  }
+}

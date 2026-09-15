@@ -1,0 +1,1457 @@
+<robot name="retrofit_legacy_wind_turbine">
+  <material name="tower_white">
+    <color rgba="0.84 0.86 0.86 1" />
+    </material>
+  <material name="nacelle_cream">
+    <color rgba="0.8 0.81 0.76 1" />
+    </material>
+  <material name="weathered_grey">
+    <color rgba="0.36 0.38 0.4 1" />
+    </material>
+  <material name="dark_steel">
+    <color rgba="0.22 0.24 0.26 1" />
+    </material>
+  <material name="galvanized">
+    <color rgba="0.69 0.72 0.74 1" />
+    </material>
+  <material name="service_grey">
+    <color rgba="0.6 0.63 0.65 1" />
+    </material>
+  <link name="tower">
+    <inertial>
+      <origin xyz="0 0 12" rpy="0 0 0" />
+      <mass value="9600" />
+      <inertia ixx="466200" ixy="0" ixz="0" iyy="466200" iyz="0" izz="10800" />
+      </inertial>
+    <visual name="tower_shell">
+      <geometry>
+        <mesh filename="assets/meshes/tower_shell.obj" />
+        </geometry>
+      <material name="tower_white">
+        <color rgba="0.84 0.86 0.86 1" />
+        </material>
+      </visual>
+    <visual name="foundation_plinth">
+      <origin xyz="0 0 0.12" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="1.62" length="0.24" />
+        </geometry>
+      <material name="weathered_grey">
+        <color rgba="0.36 0.38 0.4 1" />
+        </material>
+      </visual>
+    <visual name="top_adapter_cap">
+      <origin xyz="0 0 23.91" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.92" length="0.18" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.22 0.24 0.26 1" />
+        </material>
+      </visual>
+    <visual name="segment_ring_lower">
+      <origin xyz="0 0 8" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="1.34" length="0.16" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.22 0.24 0.26 1" />
+        </material>
+      </visual>
+    <visual name="segment_ring_upper">
+      <origin xyz="0 0 16" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="1.11" length="0.14" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.22 0.24 0.26 1" />
+        </material>
+      </visual>
+    <visual name="tower_service_hatch">
+      <origin xyz="1.34058 0 1.45" rpy="0 0 0" />
+      <geometry>
+        <box size="0.08 0.84 1.95" />
+        </geometry>
+      <material name="service_grey">
+        <color rgba="0.6 0.63 0.65 1" />
+        </material>
+      </visual>
+    <visual name="tower_hatch_header">
+      <origin xyz="1.3287 0 2.4" rpy="0 0 0" />
+      <geometry>
+        <box size="0.1 0.96 0.1" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.22 0.24 0.26 1" />
+        </material>
+      </visual>
+    <visual name="tower_hatch_sill">
+      <origin xyz="1.36162 0 0.5" rpy="0 0 0" />
+      <geometry>
+        <box size="0.1 0.96 0.1" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.22 0.24 0.26 1" />
+        </material>
+      </visual>
+    <visual name="tower_hatch_left_jamb">
+      <origin xyz="1.34558 -0.44 1.45" rpy="0 0 0" />
+      <geometry>
+        <box size="0.1 0.08 1.96" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.22 0.24 0.26 1" />
+        </material>
+      </visual>
+    <visual name="tower_hatch_right_jamb">
+      <origin xyz="1.34558 0.44 1.45" rpy="0 0 0" />
+      <geometry>
+        <box size="0.1 0.08 1.96" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.22 0.24 0.26 1" />
+        </material>
+      </visual>
+    <visual name="tower_hatch_hinge_bar">
+      <origin xyz="1.40058 -0.47 1.55" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.025" length="1.7" />
+        </geometry>
+      <material name="galvanized">
+        <color rgba="0.69 0.72 0.74 1" />
+        </material>
+      </visual>
+    <visual name="base_bolt_00">
+      <origin xyz="1.44 0 0.22" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.022" length="0.08" />
+        </geometry>
+      <material name="galvanized">
+        <color rgba="0.69 0.72 0.74 1" />
+        </material>
+      </visual>
+    <visual name="base_bolt_01">
+      <origin xyz="1.36952 0.444984 0.22" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.022" length="0.08" />
+        </geometry>
+      <material name="galvanized">
+        <color rgba="0.69 0.72 0.74 1" />
+        </material>
+      </visual>
+    <visual name="base_bolt_02">
+      <origin xyz="1.16498 0.846411 0.22" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.022" length="0.08" />
+        </geometry>
+      <material name="galvanized">
+        <color rgba="0.69 0.72 0.74 1" />
+        </material>
+      </visual>
+    <visual name="base_bolt_03">
+      <origin xyz="0.846411 1.16498 0.22" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.022" length="0.08" />
+        </geometry>
+      <material name="galvanized">
+        <color rgba="0.69 0.72 0.74 1" />
+        </material>
+      </visual>
+    <visual name="base_bolt_04">
+      <origin xyz="0.444984 1.36952 0.22" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.022" length="0.08" />
+        </geometry>
+      <material name="galvanized">
+        <color rgba="0.69 0.72 0.74 1" />
+        </material>
+      </visual>
+    <visual name="base_bolt_05">
+      <origin xyz="8.81746e-17 1.44 0.22" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.022" length="0.08" />
+        </geometry>
+      <material name="galvanized">
+        <color rgba="0.69 0.72 0.74 1" />
+        </material>
+      </visual>
+    <visual name="base_bolt_06">
+      <origin xyz="-0.444984 1.36952 0.22" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.022" length="0.08" />
+        </geometry>
+      <material name="galvanized">
+        <color rgba="0.69 0.72 0.74 1" />
+        </material>
+      </visual>
+    <visual name="base_bolt_07">
+      <origin xyz="-0.846411 1.16498 0.22" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.022" length="0.08" />
+        </geometry>
+      <material name="galvanized">
+        <color rgba="0.69 0.72 0.74 1" />
+        </material>
+      </visual>
+    <visual name="base_bolt_08">
+      <origin xyz="-1.16498 0.846411 0.22" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.022" length="0.08" />
+        </geometry>
+      <material name="galvanized">
+        <color rgba="0.69 0.72 0.74 1" />
+        </material>
+      </visual>
+    <visual name="base_bolt_09">
+      <origin xyz="-1.36952 0.444984 0.22" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.022" length="0.08" />
+        </geometry>
+      <material name="galvanized">
+        <color rgba="0.69 0.72 0.74 1" />
+        </material>
+      </visual>
+    <visual name="base_bolt_10">
+      <origin xyz="-1.44 1.76349e-16 0.22" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.022" length="0.08" />
+        </geometry>
+      <material name="galvanized">
+        <color rgba="0.69 0.72 0.74 1" />
+        </material>
+      </visual>
+    <visual name="base_bolt_11">
+      <origin xyz="-1.36952 -0.444984 0.22" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.022" length="0.08" />
+        </geometry>
+      <material name="galvanized">
+        <color rgba="0.69 0.72 0.74 1" />
+        </material>
+      </visual>
+    <visual name="base_bolt_12">
+      <origin xyz="-1.16498 -0.846411 0.22" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.022" length="0.08" />
+        </geometry>
+      <material name="galvanized">
+        <color rgba="0.69 0.72 0.74 1" />
+        </material>
+      </visual>
+    <visual name="base_bolt_13">
+      <origin xyz="-0.846411 -1.16498 0.22" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.022" length="0.08" />
+        </geometry>
+      <material name="galvanized">
+        <color rgba="0.69 0.72 0.74 1" />
+        </material>
+      </visual>
+    <visual name="base_bolt_14">
+      <origin xyz="-0.444984 -1.36952 0.22" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.022" length="0.08" />
+        </geometry>
+      <material name="galvanized">
+        <color rgba="0.69 0.72 0.74 1" />
+        </material>
+      </visual>
+    <visual name="base_bolt_15">
+      <origin xyz="-2.64524e-16 -1.44 0.22" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.022" length="0.08" />
+        </geometry>
+      <material name="galvanized">
+        <color rgba="0.69 0.72 0.74 1" />
+        </material>
+      </visual>
+    <visual name="base_bolt_16">
+      <origin xyz="0.444984 -1.36952 0.22" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.022" length="0.08" />
+        </geometry>
+      <material name="galvanized">
+        <color rgba="0.69 0.72 0.74 1" />
+        </material>
+      </visual>
+    <visual name="base_bolt_17">
+      <origin xyz="0.846411 -1.16498 0.22" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.022" length="0.08" />
+        </geometry>
+      <material name="galvanized">
+        <color rgba="0.69 0.72 0.74 1" />
+        </material>
+      </visual>
+    <visual name="base_bolt_18">
+      <origin xyz="1.16498 -0.846411 0.22" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.022" length="0.08" />
+        </geometry>
+      <material name="galvanized">
+        <color rgba="0.69 0.72 0.74 1" />
+        </material>
+      </visual>
+    <visual name="base_bolt_19">
+      <origin xyz="1.36952 -0.444984 0.22" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.022" length="0.08" />
+        </geometry>
+      <material name="galvanized">
+        <color rgba="0.69 0.72 0.74 1" />
+        </material>
+      </visual>
+    <visual name="mid_bolt_00">
+      <origin xyz="1.29 0 8" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.016" length="0.09" />
+        </geometry>
+      <material name="galvanized">
+        <color rgba="0.69 0.72 0.74 1" />
+        </material>
+      </visual>
+    <visual name="mid_bolt_01">
+      <origin xyz="1.2122 0.441206 8" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.016" length="0.09" />
+        </geometry>
+      <material name="galvanized">
+        <color rgba="0.69 0.72 0.74 1" />
+        </material>
+      </visual>
+    <visual name="mid_bolt_02">
+      <origin xyz="0.988197 0.829196 8" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.016" length="0.09" />
+        </geometry>
+      <material name="galvanized">
+        <color rgba="0.69 0.72 0.74 1" />
+        </material>
+      </visual>
+    <visual name="mid_bolt_03">
+      <origin xyz="0.645 1.11717 8" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.016" length="0.09" />
+        </geometry>
+      <material name="galvanized">
+        <color rgba="0.69 0.72 0.74 1" />
+        </material>
+      </visual>
+    <visual name="mid_bolt_04">
+      <origin xyz="0.224006 1.2704 8" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.016" length="0.09" />
+        </geometry>
+      <material name="galvanized">
+        <color rgba="0.69 0.72 0.74 1" />
+        </material>
+      </visual>
+    <visual name="mid_bolt_05">
+      <origin xyz="-0.224006 1.2704 8" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.016" length="0.09" />
+        </geometry>
+      <material name="galvanized">
+        <color rgba="0.69 0.72 0.74 1" />
+        </material>
+      </visual>
+    <visual name="mid_bolt_06">
+      <origin xyz="-0.645 1.11717 8" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.016" length="0.09" />
+        </geometry>
+      <material name="galvanized">
+        <color rgba="0.69 0.72 0.74 1" />
+        </material>
+      </visual>
+    <visual name="mid_bolt_07">
+      <origin xyz="-0.988197 0.829196 8" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.016" length="0.09" />
+        </geometry>
+      <material name="galvanized">
+        <color rgba="0.69 0.72 0.74 1" />
+        </material>
+      </visual>
+    <visual name="mid_bolt_08">
+      <origin xyz="-1.2122 0.441206 8" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.016" length="0.09" />
+        </geometry>
+      <material name="galvanized">
+        <color rgba="0.69 0.72 0.74 1" />
+        </material>
+      </visual>
+    <visual name="mid_bolt_09">
+      <origin xyz="-1.29 1.57979e-16 8" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.016" length="0.09" />
+        </geometry>
+      <material name="galvanized">
+        <color rgba="0.69 0.72 0.74 1" />
+        </material>
+      </visual>
+    <visual name="mid_bolt_10">
+      <origin xyz="-1.2122 -0.441206 8" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.016" length="0.09" />
+        </geometry>
+      <material name="galvanized">
+        <color rgba="0.69 0.72 0.74 1" />
+        </material>
+      </visual>
+    <visual name="mid_bolt_11">
+      <origin xyz="-0.988197 -0.829196 8" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.016" length="0.09" />
+        </geometry>
+      <material name="galvanized">
+        <color rgba="0.69 0.72 0.74 1" />
+        </material>
+      </visual>
+    <visual name="mid_bolt_12">
+      <origin xyz="-0.645 -1.11717 8" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.016" length="0.09" />
+        </geometry>
+      <material name="galvanized">
+        <color rgba="0.69 0.72 0.74 1" />
+        </material>
+      </visual>
+    <visual name="mid_bolt_13">
+      <origin xyz="-0.224006 -1.2704 8" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.016" length="0.09" />
+        </geometry>
+      <material name="galvanized">
+        <color rgba="0.69 0.72 0.74 1" />
+        </material>
+      </visual>
+    <visual name="mid_bolt_14">
+      <origin xyz="0.224006 -1.2704 8" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.016" length="0.09" />
+        </geometry>
+      <material name="galvanized">
+        <color rgba="0.69 0.72 0.74 1" />
+        </material>
+      </visual>
+    <visual name="mid_bolt_15">
+      <origin xyz="0.645 -1.11717 8" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.016" length="0.09" />
+        </geometry>
+      <material name="galvanized">
+        <color rgba="0.69 0.72 0.74 1" />
+        </material>
+      </visual>
+    <visual name="mid_bolt_16">
+      <origin xyz="0.988197 -0.829196 8" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.016" length="0.09" />
+        </geometry>
+      <material name="galvanized">
+        <color rgba="0.69 0.72 0.74 1" />
+        </material>
+      </visual>
+    <visual name="mid_bolt_17">
+      <origin xyz="1.2122 -0.441206 8" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.016" length="0.09" />
+        </geometry>
+      <material name="galvanized">
+        <color rgba="0.69 0.72 0.74 1" />
+        </material>
+      </visual>
+    <visual name="upper_bolt_00">
+      <origin xyz="1.08 0 16" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.015" length="0.09" />
+        </geometry>
+      <material name="galvanized">
+        <color rgba="0.69 0.72 0.74 1" />
+        </material>
+      </visual>
+    <visual name="upper_bolt_01">
+      <origin xyz="0.99779 0.413298 16" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.015" length="0.09" />
+        </geometry>
+      <material name="galvanized">
+        <color rgba="0.69 0.72 0.74 1" />
+        </material>
+      </visual>
+    <visual name="upper_bolt_02">
+      <origin xyz="0.763675 0.763675 16" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.015" length="0.09" />
+        </geometry>
+      <material name="galvanized">
+        <color rgba="0.69 0.72 0.74 1" />
+        </material>
+      </visual>
+    <visual name="upper_bolt_03">
+      <origin xyz="0.413298 0.99779 16" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.015" length="0.09" />
+        </geometry>
+      <material name="galvanized">
+        <color rgba="0.69 0.72 0.74 1" />
+        </material>
+      </visual>
+    <visual name="upper_bolt_04">
+      <origin xyz="6.61309e-17 1.08 16" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.015" length="0.09" />
+        </geometry>
+      <material name="galvanized">
+        <color rgba="0.69 0.72 0.74 1" />
+        </material>
+      </visual>
+    <visual name="upper_bolt_05">
+      <origin xyz="-0.413298 0.99779 16" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.015" length="0.09" />
+        </geometry>
+      <material name="galvanized">
+        <color rgba="0.69 0.72 0.74 1" />
+        </material>
+      </visual>
+    <visual name="upper_bolt_06">
+      <origin xyz="-0.763675 0.763675 16" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.015" length="0.09" />
+        </geometry>
+      <material name="galvanized">
+        <color rgba="0.69 0.72 0.74 1" />
+        </material>
+      </visual>
+    <visual name="upper_bolt_07">
+      <origin xyz="-0.99779 0.413298 16" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.015" length="0.09" />
+        </geometry>
+      <material name="galvanized">
+        <color rgba="0.69 0.72 0.74 1" />
+        </material>
+      </visual>
+    <visual name="upper_bolt_08">
+      <origin xyz="-1.08 1.32262e-16 16" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.015" length="0.09" />
+        </geometry>
+      <material name="galvanized">
+        <color rgba="0.69 0.72 0.74 1" />
+        </material>
+      </visual>
+    <visual name="upper_bolt_09">
+      <origin xyz="-0.99779 -0.413298 16" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.015" length="0.09" />
+        </geometry>
+      <material name="galvanized">
+        <color rgba="0.69 0.72 0.74 1" />
+        </material>
+      </visual>
+    <visual name="upper_bolt_10">
+      <origin xyz="-0.763675 -0.763675 16" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.015" length="0.09" />
+        </geometry>
+      <material name="galvanized">
+        <color rgba="0.69 0.72 0.74 1" />
+        </material>
+      </visual>
+    <visual name="upper_bolt_11">
+      <origin xyz="-0.413298 -0.99779 16" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.015" length="0.09" />
+        </geometry>
+      <material name="galvanized">
+        <color rgba="0.69 0.72 0.74 1" />
+        </material>
+      </visual>
+    <visual name="upper_bolt_12">
+      <origin xyz="-1.98393e-16 -1.08 16" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.015" length="0.09" />
+        </geometry>
+      <material name="galvanized">
+        <color rgba="0.69 0.72 0.74 1" />
+        </material>
+      </visual>
+    <visual name="upper_bolt_13">
+      <origin xyz="0.413298 -0.99779 16" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.015" length="0.09" />
+        </geometry>
+      <material name="galvanized">
+        <color rgba="0.69 0.72 0.74 1" />
+        </material>
+      </visual>
+    <visual name="upper_bolt_14">
+      <origin xyz="0.763675 -0.763675 16" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.015" length="0.09" />
+        </geometry>
+      <material name="galvanized">
+        <color rgba="0.69 0.72 0.74 1" />
+        </material>
+      </visual>
+    <visual name="upper_bolt_15">
+      <origin xyz="0.99779 -0.413298 16" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.015" length="0.09" />
+        </geometry>
+      <material name="galvanized">
+        <color rgba="0.69 0.72 0.74 1" />
+        </material>
+      </visual>
+    <visual name="top_bolt_00">
+      <origin xyz="0.82 0 23.95" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.015" length="0.08" />
+        </geometry>
+      <material name="galvanized">
+        <color rgba="0.69 0.72 0.74 1" />
+        </material>
+      </visual>
+    <visual name="top_bolt_01">
+      <origin xyz="0.757581 0.3138 23.95" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.015" length="0.08" />
+        </geometry>
+      <material name="galvanized">
+        <color rgba="0.69 0.72 0.74 1" />
+        </material>
+      </visual>
+    <visual name="top_bolt_02">
+      <origin xyz="0.579828 0.579828 23.95" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.015" length="0.08" />
+        </geometry>
+      <material name="galvanized">
+        <color rgba="0.69 0.72 0.74 1" />
+        </material>
+      </visual>
+    <visual name="top_bolt_03">
+      <origin xyz="0.3138 0.757581 23.95" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.015" length="0.08" />
+        </geometry>
+      <material name="galvanized">
+        <color rgba="0.69 0.72 0.74 1" />
+        </material>
+      </visual>
+    <visual name="top_bolt_04">
+      <origin xyz="5.02105e-17 0.82 23.95" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.015" length="0.08" />
+        </geometry>
+      <material name="galvanized">
+        <color rgba="0.69 0.72 0.74 1" />
+        </material>
+      </visual>
+    <visual name="top_bolt_05">
+      <origin xyz="-0.3138 0.757581 23.95" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.015" length="0.08" />
+        </geometry>
+      <material name="galvanized">
+        <color rgba="0.69 0.72 0.74 1" />
+        </material>
+      </visual>
+    <visual name="top_bolt_06">
+      <origin xyz="-0.579828 0.579828 23.95" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.015" length="0.08" />
+        </geometry>
+      <material name="galvanized">
+        <color rgba="0.69 0.72 0.74 1" />
+        </material>
+      </visual>
+    <visual name="top_bolt_07">
+      <origin xyz="-0.757581 0.3138 23.95" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.015" length="0.08" />
+        </geometry>
+      <material name="galvanized">
+        <color rgba="0.69 0.72 0.74 1" />
+        </material>
+      </visual>
+    <visual name="top_bolt_08">
+      <origin xyz="-0.82 1.00421e-16 23.95" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.015" length="0.08" />
+        </geometry>
+      <material name="galvanized">
+        <color rgba="0.69 0.72 0.74 1" />
+        </material>
+      </visual>
+    <visual name="top_bolt_09">
+      <origin xyz="-0.757581 -0.3138 23.95" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.015" length="0.08" />
+        </geometry>
+      <material name="galvanized">
+        <color rgba="0.69 0.72 0.74 1" />
+        </material>
+      </visual>
+    <visual name="top_bolt_10">
+      <origin xyz="-0.579828 -0.579828 23.95" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.015" length="0.08" />
+        </geometry>
+      <material name="galvanized">
+        <color rgba="0.69 0.72 0.74 1" />
+        </material>
+      </visual>
+    <visual name="top_bolt_11">
+      <origin xyz="-0.3138 -0.757581 23.95" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.015" length="0.08" />
+        </geometry>
+      <material name="galvanized">
+        <color rgba="0.69 0.72 0.74 1" />
+        </material>
+      </visual>
+    <visual name="top_bolt_12">
+      <origin xyz="-1.50632e-16 -0.82 23.95" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.015" length="0.08" />
+        </geometry>
+      <material name="galvanized">
+        <color rgba="0.69 0.72 0.74 1" />
+        </material>
+      </visual>
+    <visual name="top_bolt_13">
+      <origin xyz="0.3138 -0.757581 23.95" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.015" length="0.08" />
+        </geometry>
+      <material name="galvanized">
+        <color rgba="0.69 0.72 0.74 1" />
+        </material>
+      </visual>
+    <visual name="top_bolt_14">
+      <origin xyz="0.579828 -0.579828 23.95" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.015" length="0.08" />
+        </geometry>
+      <material name="galvanized">
+        <color rgba="0.69 0.72 0.74 1" />
+        </material>
+      </visual>
+    <visual name="top_bolt_15">
+      <origin xyz="0.757581 -0.3138 23.95" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.015" length="0.08" />
+        </geometry>
+      <material name="galvanized">
+        <color rgba="0.69 0.72 0.74 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="nacelle">
+    <inertial>
+      <origin xyz="0.3 0 1.1" rpy="0 0 0" />
+      <mass value="2600" />
+      <inertia ixx="2097.33" ixy="0" ixz="0" iyy="4515.33" iyz="0" izz="4515.33" />
+      </inertial>
+    <visual name="yaw_deck">
+      <origin xyz="0 0 0.09" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.95" length="0.18" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.22 0.24 0.26 1" />
+        </material>
+      </visual>
+    <visual name="yaw_adapter_plate">
+      <origin xyz="0.05 0 0.22" rpy="0 0 0" />
+      <geometry>
+        <box size="1.7 1.3 0.14" />
+        </geometry>
+      <material name="weathered_grey">
+        <color rgba="0.36 0.38 0.4 1" />
+        </material>
+      </visual>
+    <visual name="bed_rail_0">
+      <origin xyz="0.24 -0.56 0.42" rpy="0 0 0" />
+      <geometry>
+        <box size="3.6 0.22 0.24" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.22 0.24 0.26 1" />
+        </material>
+      </visual>
+    <visual name="bed_rail_1">
+      <origin xyz="0.24 0.56 0.42" rpy="0 0 0" />
+      <geometry>
+        <box size="3.6 0.22 0.24" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.22 0.24 0.26 1" />
+        </material>
+      </visual>
+    <visual name="bed_crossmember_0">
+      <origin xyz="-1.04 0 0.42" rpy="0 0 0" />
+      <geometry>
+        <box size="0.18 1.3 0.22" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.22 0.24 0.26 1" />
+        </material>
+      </visual>
+    <visual name="bed_crossmember_1">
+      <origin xyz="-0.14 0 0.42" rpy="0 0 0" />
+      <geometry>
+        <box size="0.18 1.3 0.22" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.22 0.24 0.26 1" />
+        </material>
+      </visual>
+    <visual name="bed_crossmember_2">
+      <origin xyz="0.98 0 0.42" rpy="0 0 0" />
+      <geometry>
+        <box size="0.18 1.3 0.22" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.22 0.24 0.26 1" />
+        </material>
+      </visual>
+    <visual name="bed_crossmember_3">
+      <origin xyz="1.86 0 0.42" rpy="0 0 0" />
+      <geometry>
+        <box size="0.18 1.3 0.22" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.22 0.24 0.26 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="-0.37 -0.55 0.42" rpy="0 0.71883 0" />
+      <geometry>
+        <cylinder radius="0.065" length="0.637809" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.22 0.24 0.26 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="-0.37 0.55 0.42" rpy="0 0.71883 0" />
+      <geometry>
+        <cylinder radius="0.065" length="0.637809" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.22 0.24 0.26 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="0.25 -0.55 0.44" rpy="0 0.579074 0" />
+      <geometry>
+        <cylinder radius="0.06" length="0.621289" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.22 0.24 0.26 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="0.25 0.55 0.44" rpy="0 0.579074 0" />
+      <geometry>
+        <cylinder radius="0.06" length="0.621289" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.22 0.24 0.26 1" />
+        </material>
+      </visual>
+    <visual name="starboard_shell">
+      <origin xyz="-0.02 -0.88 1.18" rpy="0 0 0" />
+      <geometry>
+        <box size="3.12 0.05 1.66" />
+        </geometry>
+      <material name="nacelle_cream">
+        <color rgba="0.8 0.81 0.76 1" />
+        </material>
+      </visual>
+    <visual name="port_shell">
+      <origin xyz="-0.02 0.88 1.18" rpy="0 0 0" />
+      <geometry>
+        <box size="3.12 0.05 1.66" />
+        </geometry>
+      <material name="nacelle_cream">
+        <color rgba="0.8 0.81 0.76 1" />
+        </material>
+      </visual>
+    <visual name="roof_panel">
+      <origin xyz="-0.1 0 2.03" rpy="0 0 0" />
+      <geometry>
+        <box size="2.94 1.74 0.06" />
+        </geometry>
+      <material name="nacelle_cream">
+        <color rgba="0.8 0.81 0.76 1" />
+        </material>
+      </visual>
+    <visual name="rear_bulkhead">
+      <origin xyz="-1.46 0 1.18" rpy="0 0 0" />
+      <geometry>
+        <box size="0.44 1.72 1.56" />
+        </geometry>
+      <material name="nacelle_cream">
+        <color rgba="0.8 0.81 0.76 1" />
+        </material>
+      </visual>
+    <visual name="front_roof_break">
+      <origin xyz="1.72 0 2" rpy="0 -0.24 0" />
+      <geometry>
+        <box size="0.92 1.66 0.06" />
+        </geometry>
+      <material name="nacelle_cream">
+        <color rgba="0.8 0.81 0.76 1" />
+        </material>
+      </visual>
+    <visual name="nose_belly_panel">
+      <origin xyz="1.78 0 0.76" rpy="0 0.16 0" />
+      <geometry>
+        <box size="0.92 1.55 0.05" />
+        </geometry>
+      <material name="nacelle_cream">
+        <color rgba="0.8 0.81 0.76 1" />
+        </material>
+      </visual>
+    <visual name="bearing_pedestal">
+      <origin xyz="1.9 0 1.45" rpy="0 0 0" />
+      <geometry>
+        <box size="0.72 1.06 1.06" />
+        </geometry>
+      <material name="weathered_grey">
+        <color rgba="0.36 0.38 0.4 1" />
+        </material>
+      </visual>
+    <visual name="bearing_saddle_frame">
+      <origin xyz="1.58 0 0.66" rpy="0 0 0" />
+      <geometry>
+        <box size="0.92 1.04 0.34" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.22 0.24 0.26 1" />
+        </material>
+      </visual>
+    <visual name="bearing_cheek_starboard">
+      <origin xyz="1.62 -0.44 0.97" rpy="0 0 0" />
+      <geometry>
+        <box size="0.88 0.18 0.9" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.22 0.24 0.26 1" />
+        </material>
+      </visual>
+    <visual name="bearing_cheek_port">
+      <origin xyz="1.62 0.44 0.97" rpy="0 0 0" />
+      <geometry>
+        <box size="0.88 0.18 0.9" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.22 0.24 0.26 1" />
+        </material>
+      </visual>
+    <visual name="bearing_crown_frame">
+      <origin xyz="1.58 0 1.84" rpy="0 0 0" />
+      <geometry>
+        <box size="0.9 1.02 0.24" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.22 0.24 0.26 1" />
+        </material>
+      </visual>
+    <visual name="bearing_adapter_flange">
+      <origin xyz="2.09 0 1.45" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.68" length="0.08" />
+        </geometry>
+      <material name="galvanized">
+        <color rgba="0.69 0.72 0.74 1" />
+        </material>
+      </visual>
+    <visual name="main_bearing_housing">
+      <origin xyz="2.24 0 1.45" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.55" length="0.22" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.22 0.24 0.26 1" />
+        </material>
+      </visual>
+    <visual name="nacelle_service_hatch">
+      <origin xyz="-0.12 -0.87 1.2" rpy="0 0 0" />
+      <geometry>
+        <box size="0.96 0.06 1.12" />
+        </geometry>
+      <material name="service_grey">
+        <color rgba="0.6 0.63 0.65 1" />
+        </material>
+      </visual>
+    <visual name="nacelle_hatch_header">
+      <origin xyz="-0.1 -0.88 1.78" rpy="0 0 0" />
+      <geometry>
+        <box size="1.04 0.1 0.08" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.22 0.24 0.26 1" />
+        </material>
+      </visual>
+    <visual name="nacelle_hatch_sill">
+      <origin xyz="-0.1 -0.88 0.64" rpy="0 0 0" />
+      <geometry>
+        <box size="1.04 0.1 0.08" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.22 0.24 0.26 1" />
+        </material>
+      </visual>
+    <visual name="nacelle_hatch_front_jamb">
+      <origin xyz="-0.58 -0.88 1.2" rpy="0 0 0" />
+      <geometry>
+        <box size="0.1 0.1 1.16" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.22 0.24 0.26 1" />
+        </material>
+      </visual>
+    <visual name="nacelle_hatch_rear_jamb">
+      <origin xyz="0.36 -0.88 1.2" rpy="0 0 0" />
+      <geometry>
+        <box size="0.1 0.1 1.16" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.22 0.24 0.26 1" />
+        </material>
+      </visual>
+    <visual name="nacelle_hatch_hinge">
+      <origin xyz="-0.58 -0.93 1.22" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.02" length="1.02" />
+        </geometry>
+      <material name="galvanized">
+        <color rgba="0.69 0.72 0.74 1" />
+        </material>
+      </visual>
+    <visual name="rear_cooling_box">
+      <origin xyz="-1 0 1.98" rpy="0 0 0" />
+      <geometry>
+        <box size="0.44 0.52 0.46" />
+        </geometry>
+      <material name="weathered_grey">
+        <color rgba="0.36 0.38 0.4 1" />
+        </material>
+      </visual>
+    <visual name="rear_service_frame">
+      <origin xyz="-1.38 0 1.36" rpy="0 0 0" />
+      <geometry>
+        <box size="0.4 1.2 0.08" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.22 0.24 0.26 1" />
+        </material>
+      </visual>
+    <visual name="yaw_bolt_00">
+      <origin xyz="0.88 0 0.12" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.07" />
+        </geometry>
+      <material name="galvanized">
+        <color rgba="0.69 0.72 0.74 1" />
+        </material>
+      </visual>
+    <visual name="yaw_bolt_01">
+      <origin xyz="0.82693 0.300978 0.12" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.07" />
+        </geometry>
+      <material name="galvanized">
+        <color rgba="0.69 0.72 0.74 1" />
+        </material>
+      </visual>
+    <visual name="yaw_bolt_02">
+      <origin xyz="0.674119 0.565653 0.12" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.07" />
+        </geometry>
+      <material name="galvanized">
+        <color rgba="0.69 0.72 0.74 1" />
+        </material>
+      </visual>
+    <visual name="yaw_bolt_03">
+      <origin xyz="0.44 0.762102 0.12" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.07" />
+        </geometry>
+      <material name="galvanized">
+        <color rgba="0.69 0.72 0.74 1" />
+        </material>
+      </visual>
+    <visual name="yaw_bolt_04">
+      <origin xyz="0.15281 0.866631 0.12" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.07" />
+        </geometry>
+      <material name="galvanized">
+        <color rgba="0.69 0.72 0.74 1" />
+        </material>
+      </visual>
+    <visual name="yaw_bolt_05">
+      <origin xyz="-0.15281 0.866631 0.12" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.07" />
+        </geometry>
+      <material name="galvanized">
+        <color rgba="0.69 0.72 0.74 1" />
+        </material>
+      </visual>
+    <visual name="yaw_bolt_06">
+      <origin xyz="-0.44 0.762102 0.12" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.07" />
+        </geometry>
+      <material name="galvanized">
+        <color rgba="0.69 0.72 0.74 1" />
+        </material>
+      </visual>
+    <visual name="yaw_bolt_07">
+      <origin xyz="-0.674119 0.565653 0.12" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.07" />
+        </geometry>
+      <material name="galvanized">
+        <color rgba="0.69 0.72 0.74 1" />
+        </material>
+      </visual>
+    <visual name="yaw_bolt_08">
+      <origin xyz="-0.82693 0.300978 0.12" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.07" />
+        </geometry>
+      <material name="galvanized">
+        <color rgba="0.69 0.72 0.74 1" />
+        </material>
+      </visual>
+    <visual name="yaw_bolt_09">
+      <origin xyz="-0.88 1.07769e-16 0.12" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.07" />
+        </geometry>
+      <material name="galvanized">
+        <color rgba="0.69 0.72 0.74 1" />
+        </material>
+      </visual>
+    <visual name="yaw_bolt_10">
+      <origin xyz="-0.82693 -0.300978 0.12" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.07" />
+        </geometry>
+      <material name="galvanized">
+        <color rgba="0.69 0.72 0.74 1" />
+        </material>
+      </visual>
+    <visual name="yaw_bolt_11">
+      <origin xyz="-0.674119 -0.565653 0.12" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.07" />
+        </geometry>
+      <material name="galvanized">
+        <color rgba="0.69 0.72 0.74 1" />
+        </material>
+      </visual>
+    <visual name="yaw_bolt_12">
+      <origin xyz="-0.44 -0.762102 0.12" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.07" />
+        </geometry>
+      <material name="galvanized">
+        <color rgba="0.69 0.72 0.74 1" />
+        </material>
+      </visual>
+    <visual name="yaw_bolt_13">
+      <origin xyz="-0.15281 -0.866631 0.12" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.07" />
+        </geometry>
+      <material name="galvanized">
+        <color rgba="0.69 0.72 0.74 1" />
+        </material>
+      </visual>
+    <visual name="yaw_bolt_14">
+      <origin xyz="0.15281 -0.866631 0.12" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.07" />
+        </geometry>
+      <material name="galvanized">
+        <color rgba="0.69 0.72 0.74 1" />
+        </material>
+      </visual>
+    <visual name="yaw_bolt_15">
+      <origin xyz="0.44 -0.762102 0.12" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.07" />
+        </geometry>
+      <material name="galvanized">
+        <color rgba="0.69 0.72 0.74 1" />
+        </material>
+      </visual>
+    <visual name="yaw_bolt_16">
+      <origin xyz="0.674119 -0.565653 0.12" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.07" />
+        </geometry>
+      <material name="galvanized">
+        <color rgba="0.69 0.72 0.74 1" />
+        </material>
+      </visual>
+    <visual name="yaw_bolt_17">
+      <origin xyz="0.82693 -0.300978 0.12" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.07" />
+        </geometry>
+      <material name="galvanized">
+        <color rgba="0.69 0.72 0.74 1" />
+        </material>
+      </visual>
+    <visual name="bearing_bolt_00">
+      <origin xyz="2.09 0.58 1.45" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.07" />
+        </geometry>
+      <material name="galvanized">
+        <color rgba="0.69 0.72 0.74 1" />
+        </material>
+      </visual>
+    <visual name="bearing_bolt_01">
+      <origin xyz="2.09 0.522562 1.70165" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.07" />
+        </geometry>
+      <material name="galvanized">
+        <color rgba="0.69 0.72 0.74 1" />
+        </material>
+      </visual>
+    <visual name="bearing_bolt_02">
+      <origin xyz="2.09 0.361624 1.90346" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.07" />
+        </geometry>
+      <material name="galvanized">
+        <color rgba="0.69 0.72 0.74 1" />
+        </material>
+      </visual>
+    <visual name="bearing_bolt_03">
+      <origin xyz="2.09 0.129062 2.01546" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.07" />
+        </geometry>
+      <material name="galvanized">
+        <color rgba="0.69 0.72 0.74 1" />
+        </material>
+      </visual>
+    <visual name="bearing_bolt_04">
+      <origin xyz="2.09 -0.129062 2.01546" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.07" />
+        </geometry>
+      <material name="galvanized">
+        <color rgba="0.69 0.72 0.74 1" />
+        </material>
+      </visual>
+    <visual name="bearing_bolt_05">
+      <origin xyz="2.09 -0.361624 1.90346" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.07" />
+        </geometry>
+      <material name="galvanized">
+        <color rgba="0.69 0.72 0.74 1" />
+        </material>
+      </visual>
+    <visual name="bearing_bolt_06">
+      <origin xyz="2.09 -0.522562 1.70165" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.07" />
+        </geometry>
+      <material name="galvanized">
+        <color rgba="0.69 0.72 0.74 1" />
+        </material>
+      </visual>
+    <visual name="bearing_bolt_07">
+      <origin xyz="2.09 -0.58 1.45" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.07" />
+        </geometry>
+      <material name="galvanized">
+        <color rgba="0.69 0.72 0.74 1" />
+        </material>
+      </visual>
+    <visual name="bearing_bolt_08">
+      <origin xyz="2.09 -0.522562 1.19835" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.07" />
+        </geometry>
+      <material name="galvanized">
+        <color rgba="0.69 0.72 0.74 1" />
+        </material>
+      </visual>
+    <visual name="bearing_bolt_09">
+      <origin xyz="2.09 -0.361624 0.996538" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.07" />
+        </geometry>
+      <material name="galvanized">
+        <color rgba="0.69 0.72 0.74 1" />
+        </material>
+      </visual>
+    <visual name="bearing_bolt_10">
+      <origin xyz="2.09 -0.129062 0.884542" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.07" />
+        </geometry>
+      <material name="galvanized">
+        <color rgba="0.69 0.72 0.74 1" />
+        </material>
+      </visual>
+    <visual name="bearing_bolt_11">
+      <origin xyz="2.09 0.129062 0.884542" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.07" />
+        </geometry>
+      <material name="galvanized">
+        <color rgba="0.69 0.72 0.74 1" />
+        </material>
+      </visual>
+    <visual name="bearing_bolt_12">
+      <origin xyz="2.09 0.361624 0.996538" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.07" />
+        </geometry>
+      <material name="galvanized">
+        <color rgba="0.69 0.72 0.74 1" />
+        </material>
+      </visual>
+    <visual name="bearing_bolt_13">
+      <origin xyz="2.09 0.522562 1.19835" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.07" />
+        </geometry>
+      <material name="galvanized">
+        <color rgba="0.69 0.72 0.74 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="rotor">
+    <inertial>
+      <origin xyz="0.9 0 0" rpy="0 1.5708 0" />
+      <mass value="1800" />
+      <inertia ixx="22843.5" ixy="0" ixz="0" iyy="22843.5" iyz="0" izz="44100" />
+      </inertial>
+    <visual name="main_shaft_stub">
+      <origin xyz="0.13 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.24" length="0.26" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.22 0.24 0.26 1" />
+        </material>
+      </visual>
+    <visual name="shaft_adapter">
+      <origin xyz="0.4 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.38" length="0.44" />
+        </geometry>
+      <material name="weathered_grey">
+        <color rgba="0.36 0.38 0.4 1" />
+        </material>
+      </visual>
+    <visual name="hub_barrel">
+      <origin xyz="0.85 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.5" length="1.3" />
+        </geometry>
+      <material name="weathered_grey">
+        <color rgba="0.36 0.38 0.4 1" />
+        </material>
+      </visual>
+    <visual name="spinner">
+      <geometry>
+        <mesh filename="assets/meshes/hub_spinner.obj" />
+        </geometry>
+      <material name="tower_white">
+        <color rgba="0.84 0.86 0.86 1" />
+        </material>
+      </visual>
+    <visual name="root_gusset_0">
+      <origin xyz="0.82 0 0.34" rpy="0 0 0" />
+      <geometry>
+        <box size="0.44 0.18 0.76" />
+        </geometry>
+      <material name="weathered_grey">
+        <color rgba="0.36 0.38 0.4 1" />
+        </material>
+      </visual>
+    <visual name="blade_0">
+      <origin xyz="0.86 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/turbine_blade.obj" />
+        </geometry>
+      <material name="tower_white">
+        <color rgba="0.84 0.86 0.86 1" />
+        </material>
+      </visual>
+    <visual name="root_gusset_1">
+      <origin xyz="0.82 0 0.34" rpy="2.0944 0 0" />
+      <geometry>
+        <box size="0.44 0.18 0.76" />
+        </geometry>
+      <material name="weathered_grey">
+        <color rgba="0.36 0.38 0.4 1" />
+        </material>
+      </visual>
+    <visual name="blade_1">
+      <origin xyz="0.86 0 0" rpy="2.0944 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/turbine_blade.obj" />
+        </geometry>
+      <material name="tower_white">
+        <color rgba="0.84 0.86 0.86 1" />
+        </material>
+      </visual>
+    <visual name="root_gusset_2">
+      <origin xyz="0.82 0 0.34" rpy="4.18879 0 0" />
+      <geometry>
+        <box size="0.44 0.18 0.76" />
+        </geometry>
+      <material name="weathered_grey">
+        <color rgba="0.36 0.38 0.4 1" />
+        </material>
+      </visual>
+    <visual name="blade_2">
+      <origin xyz="0.86 0 0" rpy="4.18879 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/turbine_blade.obj" />
+        </geometry>
+      <material name="tower_white">
+        <color rgba="0.84 0.86 0.86 1" />
+        </material>
+      </visual>
+    </link>
+  <joint name="tower_to_nacelle_yaw" type="continuous">
+    <origin xyz="0 0 24" rpy="0 0 0" />
+    <parent link="tower" />
+    <child link="nacelle" />
+    <axis xyz="0 0 1" />
+    <limit effort="60000" velocity="0.2" />
+    </joint>
+  <joint name="nacelle_to_rotor_spin" type="continuous">
+    <origin xyz="2.35 0 1.45" rpy="0 0 0" />
+    <parent link="nacelle" />
+    <child link="rotor" />
+    <axis xyz="1 0 0" />
+    <limit effort="90000" velocity="1.1" />
+    </joint>
+  </robot>

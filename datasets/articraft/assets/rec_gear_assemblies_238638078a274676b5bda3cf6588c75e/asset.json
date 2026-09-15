@@ -1,0 +1,238 @@
+{
+  "summary": {
+    "id": "rec_gear_assemblies_238638078a274676b5bda3cf6588c75e",
+    "category": "gear",
+    "robot_name": "gear_assemblies_study",
+    "joint_count": 4,
+    "link_count": 7,
+    "target_link_count": 5,
+    "family": "rec_gear_assemblies",
+    "warnings": [],
+    "diagonal": 1.8128089975104082,
+    "bytes": 8860961
+  },
+  "source": {
+    "dataset": "camvsl/Articraft-10K",
+    "revision": "3c79d5a05bb7cb6bf7bfee5e090176636ee3ac65",
+    "license": "CC-BY-4.0",
+    "url": "https://huggingface.co/datasets/camvsl/Articraft-10K/blob/3c79d5a05bb7cb6bf7bfee5e090176636ee3ac65/rec_gear_assemblies_238638078a274676b5bda3cf6588c75e.tar.gz",
+    "archive_sha256": "4d91c65ae870dff30bddfc4826d516b0fcb55521522bd1f239274dafab26a9cb",
+    "archive": "rec_gear_assemblies_238638078a274676b5bda3cf6588c75e.tar.gz",
+    "label_status": "Original generated URDF reference; not manually verified or physically validated"
+  },
+  "links": [
+    {
+      "id": "link_000",
+      "name": "frame",
+      "point_file": "inputs/link_000.npz",
+      "faces": 13792,
+      "vertices": 7397,
+      "bounds": [
+        [
+          -0.78,
+          -0.3825,
+          0.0
+        ],
+        [
+          0.5800000000000001,
+          0.5175001138689703,
+          0.56
+        ]
+      ]
+    },
+    {
+      "id": "link_001",
+      "name": "input_shaft",
+      "point_file": "inputs/link_001.npz",
+      "faces": 1478,
+      "vertices": 880,
+      "bounds": [
+        [
+          -0.547825,
+          -0.35500008815672013,
+          0.21199990817073597
+        ],
+        [
+          -0.29217499999999996,
+          0.2950000661157017,
+          0.46800009182926405
+        ]
+      ]
+    },
+    {
+      "id": "link_002",
+      "name": "compound_shaft",
+      "point_file": "inputs/link_002.npz",
+      "faces": 2552,
+      "vertices": 1538,
+      "bounds": [
+        [
+          -0.2774402912587087,
+          -0.2950000661157017,
+          0.16399989898804704
+        ],
+        [
+          0.07744029125870872,
+          0.2950000661157017,
+          0.516000101011953
+        ]
+      ]
+    },
+    {
+      "id": "link_003",
+      "name": "transfer_shaft",
+      "point_file": "inputs/link_003.npz",
+      "faces": 2168,
+      "vertices": 1250,
+      "bounds": [
+        [
+          -0.008543197786393925,
+          -0.3050000661162414,
+          0.1881449044976918
+        ],
+        [
+          0.29854319778639393,
+          0.1250000661162414,
+          0.4918550955023082
+        ]
+      ]
+    },
+    {
+      "id": "link_004",
+      "name": "output_shaft",
+      "point_file": "inputs/link_004.npz",
+      "faces": 1804,
+      "vertices": 918,
+      "bounds": [
+        [
+          0.073,
+          0.173,
+          0.19
+        ],
+        [
+          0.21699999999999997,
+          0.317,
+          0.758
+        ]
+      ]
+    },
+    {
+      "id": "link_005",
+      "name": "spur_cover",
+      "point_file": null,
+      "faces": 1072,
+      "vertices": 560,
+      "bounds": [
+        [
+          -0.5125000000000001,
+          -0.41100000000000003,
+          0.23550000000000004
+        ],
+        [
+          -0.047500000000000014,
+          -0.373,
+          0.4405
+        ]
+      ]
+    },
+    {
+      "id": "link_006",
+      "name": "bevel_cover",
+      "point_file": null,
+      "faces": 816,
+      "vertices": 428,
+      "bounds": [
+        [
+          0.017500000000000016,
+          -0.41100000000000003,
+          0.23550000000000004
+        ],
+        [
+          0.3225,
+          -0.373,
+          0.4405
+        ]
+      ]
+    }
+  ],
+  "joints": [
+    {
+      "name": "frame_to_input_shaft",
+      "type": "continuous",
+      "parent": "link_000",
+      "child": "link_001",
+      "reference_q": 0.0,
+      "mimic": null
+    },
+    {
+      "name": "frame_to_compound_shaft",
+      "type": "continuous",
+      "parent": "link_000",
+      "child": "link_002",
+      "reference_q": 0.0,
+      "mimic": {
+        "joint": "frame_to_input_shaft",
+        "multiplier": "-0.714286"
+      }
+    },
+    {
+      "name": "frame_to_transfer_shaft",
+      "type": "continuous",
+      "parent": "link_000",
+      "child": "link_003",
+      "reference_q": 0.0,
+      "mimic": {
+        "joint": "frame_to_compound_shaft",
+        "multiplier": "-0.5"
+      }
+    },
+    {
+      "name": "frame_to_output_shaft",
+      "type": "continuous",
+      "parent": "link_000",
+      "child": "link_004",
+      "reference_q": 0.0,
+      "mimic": {
+        "joint": "frame_to_transfer_shaft",
+        "multiplier": "-0.642857"
+      }
+    },
+    {
+      "name": "frame_to_spur_cover",
+      "type": "prismatic",
+      "parent": "link_000",
+      "child": "link_005",
+      "reference_q": 0.0,
+      "mimic": null
+    },
+    {
+      "name": "frame_to_bevel_cover",
+      "type": "prismatic",
+      "parent": "link_000",
+      "child": "link_006",
+      "reference_q": 0.0,
+      "mimic": null
+    }
+  ],
+  "bounds": [
+    [
+      -0.78,
+      -0.41100000000000003,
+      0.0
+    ],
+    [
+      0.5800000000000001,
+      0.5175001138689703,
+      0.758
+    ]
+  ],
+  "point_pool_size": 65536,
+  "reference_pose": "Zero position clamped to limits; mimic values propagated",
+  "qc": {
+    "finite_geometry": true,
+    "tree_valid": true,
+    "axis_unit": true,
+    "physical_collision_validation": false,
+    "visual_tessellation": "32 cylinder segments, icosphere subdivision 2"
+  }
+}

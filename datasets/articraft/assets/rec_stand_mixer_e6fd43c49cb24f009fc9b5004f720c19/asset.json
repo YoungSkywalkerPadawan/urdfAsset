@@ -1,0 +1,229 @@
+{
+  "summary": {
+    "id": "rec_stand_mixer_e6fd43c49cb24f009fc9b5004f720c19",
+    "category": "mixer",
+    "robot_name": "family_stand_mixer",
+    "joint_count": 1,
+    "link_count": 7,
+    "target_link_count": 2,
+    "family": "rec_stand_mixer",
+    "warnings": [],
+    "diagonal": 0.7058650087070985,
+    "bytes": 3271669
+  },
+  "source": {
+    "dataset": "camvsl/Articraft-10K",
+    "revision": "3c79d5a05bb7cb6bf7bfee5e090176636ee3ac65",
+    "license": "CC-BY-4.0",
+    "url": "https://huggingface.co/datasets/camvsl/Articraft-10K/blob/3c79d5a05bb7cb6bf7bfee5e090176636ee3ac65/rec_stand_mixer_e6fd43c49cb24f009fc9b5004f720c19.tar.gz",
+    "archive_sha256": "c348a5a971fc2c1583c6a49eafb76fd5910a49f45484e32e1f0704c67c9026f3",
+    "archive": "rec_stand_mixer_e6fd43c49cb24f009fc9b5004f720c19.tar.gz",
+    "label_status": "Original generated URDF reference; not manually verified or physically validated"
+  },
+  "links": [
+    {
+      "id": "link_000",
+      "name": "base",
+      "point_file": null,
+      "faces": 1336,
+      "vertices": 708,
+      "bounds": [
+        [
+          -0.17,
+          -0.135,
+          0.0
+        ],
+        [
+          0.21500000000000002,
+          0.135,
+          0.42000000000000004
+        ]
+      ]
+    },
+    {
+      "id": "link_001",
+      "name": "carriage",
+      "point_file": null,
+      "faces": 152,
+      "vertices": 82,
+      "bounds": [
+        [
+          0.019000000000000003,
+          -0.096,
+          0.060000000000000005
+        ],
+        [
+          0.21100000000000002,
+          0.096,
+          0.08800000000000001
+        ]
+      ]
+    },
+    {
+      "id": "link_002",
+      "name": "bowl",
+      "point_file": null,
+      "faces": 1584,
+      "vertices": 794,
+      "bounds": [
+        [
+          -0.008999999999999994,
+          -0.124,
+          0.08800000000000001
+        ],
+        [
+          0.239,
+          0.124,
+          0.256
+        ]
+      ]
+    },
+    {
+      "id": "link_003",
+      "name": "head",
+      "point_file": "inputs/link_003.npz",
+      "faces": 536,
+      "vertices": 280,
+      "bounds": [
+        [
+          -0.102,
+          -0.074,
+          0.28800000000000003
+        ],
+        [
+          0.20500018366000555,
+          0.074,
+          0.5080004040520756
+        ]
+      ]
+    },
+    {
+      "id": "link_004",
+      "name": "paddle",
+      "point_file": "inputs/link_004.npz",
+      "faces": 316,
+      "vertices": 172,
+      "bounds": [
+        [
+          0.08700000000000001,
+          -0.01,
+          0.10900000000000004
+        ],
+        [
+          0.14300000000000002,
+          0.01,
+          0.28800000000000003
+        ]
+      ]
+    },
+    {
+      "id": "link_005",
+      "name": "speed_control",
+      "point_file": null,
+      "faces": 140,
+      "vertices": 74,
+      "bounds": [
+        [
+          -0.066,
+          0.07599995592158598,
+          0.13299997428764523
+        ],
+        [
+          -0.024,
+          0.092,
+          0.15700002571235475
+        ]
+      ]
+    },
+    {
+      "id": "link_006",
+      "name": "lock_release",
+      "point_file": null,
+      "faces": 24,
+      "vertices": 16,
+      "bounds": [
+        [
+          -0.134,
+          -0.08700000000000001,
+          0.126
+        ],
+        [
+          -0.10400000000000001,
+          -0.081,
+          0.138
+        ]
+      ]
+    }
+  ],
+  "joints": [
+    {
+      "name": "base_to_carriage",
+      "type": "prismatic",
+      "parent": "link_000",
+      "child": "link_001",
+      "reference_q": 0.0,
+      "mimic": null
+    },
+    {
+      "name": "carriage_to_bowl",
+      "type": "fixed",
+      "parent": "link_001",
+      "child": "link_002",
+      "reference_q": 0.0,
+      "mimic": null
+    },
+    {
+      "name": "base_to_head",
+      "type": "revolute",
+      "parent": "link_000",
+      "child": "link_003",
+      "reference_q": 0.0,
+      "mimic": null
+    },
+    {
+      "name": "head_to_paddle",
+      "type": "continuous",
+      "parent": "link_003",
+      "child": "link_004",
+      "reference_q": 0.0,
+      "mimic": null
+    },
+    {
+      "name": "base_to_speed_control",
+      "type": "revolute",
+      "parent": "link_000",
+      "child": "link_005",
+      "reference_q": 0.0,
+      "mimic": null
+    },
+    {
+      "name": "base_to_lock_release",
+      "type": "prismatic",
+      "parent": "link_000",
+      "child": "link_006",
+      "reference_q": 0.0,
+      "mimic": null
+    }
+  ],
+  "bounds": [
+    [
+      -0.17,
+      -0.135,
+      0.0
+    ],
+    [
+      0.239,
+      0.135,
+      0.5080004040520756
+    ]
+  ],
+  "point_pool_size": 65536,
+  "reference_pose": "Zero position clamped to limits; mimic values propagated",
+  "qc": {
+    "finite_geometry": true,
+    "tree_valid": true,
+    "axis_unit": true,
+    "physical_collision_validation": false,
+    "visual_tessellation": "32 cylinder segments, icosphere subdivision 2"
+  }
+}

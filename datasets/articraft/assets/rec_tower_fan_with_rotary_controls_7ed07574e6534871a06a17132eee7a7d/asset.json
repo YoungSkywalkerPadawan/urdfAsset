@@ -1,0 +1,148 @@
+{
+  "summary": {
+    "id": "rec_tower_fan_with_rotary_controls_7ed07574e6534871a06a17132eee7a7d",
+    "category": "fan",
+    "robot_name": "pedestal_tower_fan",
+    "joint_count": 2,
+    "link_count": 4,
+    "target_link_count": 3,
+    "family": "rec_tower_fan_with_rotary_controls",
+    "warnings": [],
+    "diagonal": 1.4956590520569852,
+    "bytes": 6495432
+  },
+  "source": {
+    "dataset": "camvsl/Articraft-10K",
+    "revision": "3c79d5a05bb7cb6bf7bfee5e090176636ee3ac65",
+    "license": "CC-BY-4.0",
+    "url": "https://huggingface.co/datasets/camvsl/Articraft-10K/blob/3c79d5a05bb7cb6bf7bfee5e090176636ee3ac65/rec_tower_fan_with_rotary_controls_7ed07574e6534871a06a17132eee7a7d.tar.gz",
+    "archive_sha256": "656bb5aa4cc89e9f0dc434457911522f531127b9fddb0b0f606bb161794ff056",
+    "archive": "rec_tower_fan_with_rotary_controls_7ed07574e6534871a06a17132eee7a7d.tar.gz",
+    "label_status": "Original generated URDF reference; not manually verified or physically validated"
+  },
+  "links": [
+    {
+      "id": "link_000",
+      "name": "base",
+      "point_file": null,
+      "faces": 384,
+      "vertices": 198,
+      "bounds": [
+        [
+          -0.27,
+          -0.27,
+          0.0
+        ],
+        [
+          0.27,
+          0.27,
+          0.11499999999999999
+        ]
+      ]
+    },
+    {
+      "id": "link_001",
+      "name": "tower",
+      "point_file": "inputs/link_001.npz",
+      "faces": 6788,
+      "vertices": 3339,
+      "bounds": [
+        [
+          -0.10200000000000001,
+          -0.084,
+          0.115
+        ],
+        [
+          0.10200000000000001,
+          0.084,
+          1.251
+        ]
+      ]
+    },
+    {
+      "id": "link_002",
+      "name": "rotor",
+      "point_file": "inputs/link_002.npz",
+      "faces": 4480,
+      "vertices": 2188,
+      "bounds": [
+        [
+          -0.052,
+          -0.051984,
+          0.26999999999999996
+        ],
+        [
+          0.052,
+          0.051984,
+          1.13
+        ]
+      ]
+    },
+    {
+      "id": "link_003",
+      "name": "dial",
+      "point_file": "inputs/link_003.npz",
+      "faces": 26924,
+      "vertices": 13466,
+      "bounds": [
+        [
+          -0.057491,
+          -0.057491,
+          1.216
+        ],
+        [
+          0.057491,
+          0.057491,
+          1.2859999999999998
+        ]
+      ]
+    }
+  ],
+  "joints": [
+    {
+      "name": "base_to_tower",
+      "type": "revolute",
+      "parent": "link_000",
+      "child": "link_001",
+      "reference_q": 0.0,
+      "mimic": null
+    },
+    {
+      "name": "tower_to_rotor",
+      "type": "continuous",
+      "parent": "link_001",
+      "child": "link_002",
+      "reference_q": 0.0,
+      "mimic": null
+    },
+    {
+      "name": "tower_to_dial",
+      "type": "continuous",
+      "parent": "link_001",
+      "child": "link_003",
+      "reference_q": 0.0,
+      "mimic": null
+    }
+  ],
+  "bounds": [
+    [
+      -0.27,
+      -0.27,
+      0.0
+    ],
+    [
+      0.27,
+      0.27,
+      1.2859999999999998
+    ]
+  ],
+  "point_pool_size": 65536,
+  "reference_pose": "Zero position clamped to limits; mimic values propagated",
+  "qc": {
+    "finite_geometry": true,
+    "tree_valid": true,
+    "axis_unit": true,
+    "physical_collision_validation": false,
+    "visual_tessellation": "32 cylinder segments, icosphere subdivision 2"
+  }
+}

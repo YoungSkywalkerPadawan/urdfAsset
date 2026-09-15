@@ -1,0 +1,229 @@
+{
+  "summary": {
+    "id": "rec_gear_assemblies_0001",
+    "category": "gear",
+    "robot_name": "industrial_compound_gear_train",
+    "joint_count": 3,
+    "link_count": 7,
+    "target_link_count": 6,
+    "family": "rec_gear_assemblies",
+    "warnings": [],
+    "diagonal": 0.34899283660270164,
+    "bytes": 11163565
+  },
+  "source": {
+    "dataset": "camvsl/Articraft-10K",
+    "revision": "3c79d5a05bb7cb6bf7bfee5e090176636ee3ac65",
+    "license": "CC-BY-4.0",
+    "url": "https://huggingface.co/datasets/camvsl/Articraft-10K/blob/3c79d5a05bb7cb6bf7bfee5e090176636ee3ac65/rec_gear_assemblies_0001.tar.gz",
+    "archive_sha256": "c8e0816687f06e75127e9e0b097ffb0ef36e6ee420194ac974d709b37498c6f7",
+    "archive": "rec_gear_assemblies_0001.tar.gz",
+    "label_status": "Original generated URDF reference; not manually verified or physically validated"
+  },
+  "links": [
+    {
+      "id": "link_000",
+      "name": "bed",
+      "point_file": null,
+      "faces": 2676,
+      "vertices": 2496,
+      "bounds": [
+        [
+          -0.138,
+          -0.074,
+          0.0
+        ],
+        [
+          0.138,
+          0.074,
+          0.02
+        ]
+      ]
+    },
+    {
+      "id": "link_001",
+      "name": "input_support",
+      "point_file": "inputs/link_001.npz",
+      "faces": 472,
+      "vertices": 342,
+      "bounds": [
+        [
+          -0.10300000000000001,
+          -0.04884,
+          0.02
+        ],
+        [
+          -0.053,
+          0.022,
+          0.06
+        ]
+      ]
+    },
+    {
+      "id": "link_002",
+      "name": "compound_support",
+      "point_file": "inputs/link_002.npz",
+      "faces": 472,
+      "vertices": 342,
+      "bounds": [
+        [
+          -0.029,
+          -0.05328,
+          0.02
+        ],
+        [
+          0.029,
+          0.024,
+          0.06
+        ]
+      ]
+    },
+    {
+      "id": "link_003",
+      "name": "output_support",
+      "point_file": "inputs/link_003.npz",
+      "faces": 472,
+      "vertices": 342,
+      "bounds": [
+        [
+          0.052000000000000005,
+          -0.05106,
+          0.02
+        ],
+        [
+          0.104,
+          0.023,
+          0.06
+        ]
+      ]
+    },
+    {
+      "id": "link_004",
+      "name": "input_gear",
+      "point_file": "inputs/link_004.npz",
+      "faces": 7334,
+      "vertices": 7600,
+      "bounds": [
+        [
+          -0.11399999999999999,
+          -0.035989,
+          0.054
+        ],
+        [
+          -0.042,
+          0.035989,
+          0.154
+        ]
+      ]
+    },
+    {
+      "id": "link_005",
+      "name": "compound_cluster",
+      "point_file": "inputs/link_005.npz",
+      "faces": 8440,
+      "vertices": 8932,
+      "bounds": [
+        [
+          -0.049481,
+          -0.049481,
+          0.054
+        ],
+        [
+          0.049481,
+          0.049481,
+          0.128
+        ]
+      ]
+    },
+    {
+      "id": "link_006",
+      "name": "output_gear",
+      "point_file": "inputs/link_006.npz",
+      "faces": 9324,
+      "vertices": 9682,
+      "bounds": [
+        [
+          0.022517000000000002,
+          -0.055483,
+          0.054
+        ],
+        [
+          0.133483,
+          0.055483,
+          0.14200000000000002
+        ]
+      ]
+    }
+  ],
+  "joints": [
+    {
+      "name": "bed_to_input_support",
+      "type": "fixed",
+      "parent": "link_000",
+      "child": "link_001",
+      "reference_q": 0.0,
+      "mimic": null
+    },
+    {
+      "name": "bed_to_compound_support",
+      "type": "fixed",
+      "parent": "link_000",
+      "child": "link_002",
+      "reference_q": 0.0,
+      "mimic": null
+    },
+    {
+      "name": "bed_to_output_support",
+      "type": "fixed",
+      "parent": "link_000",
+      "child": "link_003",
+      "reference_q": 0.0,
+      "mimic": null
+    },
+    {
+      "name": "input_spin",
+      "type": "continuous",
+      "parent": "link_001",
+      "child": "link_004",
+      "reference_q": 0.0,
+      "mimic": null
+    },
+    {
+      "name": "compound_spin",
+      "type": "continuous",
+      "parent": "link_002",
+      "child": "link_005",
+      "reference_q": 0.0,
+      "mimic": null
+    },
+    {
+      "name": "output_spin",
+      "type": "continuous",
+      "parent": "link_003",
+      "child": "link_006",
+      "reference_q": 0.0,
+      "mimic": null
+    }
+  ],
+  "bounds": [
+    [
+      -0.138,
+      -0.074,
+      0.0
+    ],
+    [
+      0.138,
+      0.074,
+      0.154
+    ]
+  ],
+  "point_pool_size": 65536,
+  "reference_pose": "Zero position clamped to limits; mimic values propagated",
+  "qc": {
+    "finite_geometry": true,
+    "tree_valid": true,
+    "axis_unit": true,
+    "physical_collision_validation": false,
+    "visual_tessellation": "32 cylinder segments, icosphere subdivision 2"
+  }
+}

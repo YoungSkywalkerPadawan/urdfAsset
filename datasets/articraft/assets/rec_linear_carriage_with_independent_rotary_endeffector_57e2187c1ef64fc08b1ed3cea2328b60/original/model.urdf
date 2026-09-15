@@ -1,0 +1,115 @@
+<robot name="box_rail_rotary_nose">
+  <material name="rail_gray">
+    <color rgba="0.45 0.47 0.5 1" />
+    </material>
+  <material name="carriage_silver">
+    <color rgba="0.76 0.78 0.81 1" />
+    </material>
+  <material name="spindle_steel">
+    <color rgba="0.58 0.6 0.63 1" />
+    </material>
+  <link name="rail">
+    <visual name="rail_shell">
+      <origin xyz="0 0 0.06" rpy="0 0 0" />
+      <geometry>
+        <box size="0.72 0.1 0.08" />
+        </geometry>
+      <material name="rail_gray" />
+      </visual>
+    <visual name="left_foot">
+      <origin xyz="-0.3 0 0.011" rpy="0 0 0" />
+      <geometry>
+        <box size="0.1 0.15 0.022" />
+        </geometry>
+      <material name="rail_gray" />
+      </visual>
+    <visual name="right_foot">
+      <origin xyz="0.3 0 0.011" rpy="0 0 0" />
+      <geometry>
+        <box size="0.1 0.15 0.022" />
+        </geometry>
+      <material name="rail_gray" />
+      </visual>
+    </link>
+  <link name="carriage">
+    <visual name="bridge">
+      <origin xyz="0 0 0.015" rpy="0 0 0" />
+      <geometry>
+        <box size="0.18 0.18 0.06" />
+        </geometry>
+      <material name="carriage_silver" />
+      </visual>
+    <visual name="right_leg">
+      <origin xyz="0 0.073 -0.045" rpy="0 0 0" />
+      <geometry>
+        <box size="0.18 0.034 0.12" />
+        </geometry>
+      <material name="carriage_silver" />
+      </visual>
+    <visual name="left_leg">
+      <origin xyz="0 -0.073 -0.045" rpy="0 0 0" />
+      <geometry>
+        <box size="0.18 0.034 0.12" />
+        </geometry>
+      <material name="carriage_silver" />
+      </visual>
+    <visual name="guide_shoe">
+      <origin xyz="0 0 -0.025" rpy="0 0 0" />
+      <geometry>
+        <box size="0.14 0.09 0.05" />
+        </geometry>
+      <material name="carriage_silver" />
+      </visual>
+    <visual name="nose_boss">
+      <origin xyz="0.097 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.048" length="0.014" />
+        </geometry>
+      <material name="carriage_silver" />
+      </visual>
+    </link>
+  <link name="nose_spindle">
+    <visual name="spindle_flange">
+      <origin xyz="0.007 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.043" length="0.014" />
+        </geometry>
+      <material name="spindle_steel" />
+      </visual>
+    <visual name="spindle_collar">
+      <origin xyz="0.023 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.028" length="0.018" />
+        </geometry>
+      <material name="spindle_steel" />
+      </visual>
+    <visual name="spindle_body">
+      <origin xyz="0.057 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.02" length="0.05" />
+        </geometry>
+      <material name="spindle_steel" />
+      </visual>
+    <visual name="index_lug">
+      <origin xyz="0.007 0.03526 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.01 0.014 0.01" />
+        </geometry>
+      <material name="spindle_steel" />
+      </visual>
+    </link>
+  <joint name="rail_to_carriage" type="prismatic">
+    <origin xyz="0 0 0.15" rpy="0 0 0" />
+    <parent link="rail" />
+    <child link="carriage" />
+    <axis xyz="1 0 0" />
+    <limit effort="180" velocity="0.45" lower="-0.13" upper="0.13" />
+    </joint>
+  <joint name="carriage_to_nose_spindle" type="continuous">
+    <origin xyz="0.104 0 0" rpy="0 0 0" />
+    <parent link="carriage" />
+    <child link="nose_spindle" />
+    <axis xyz="1 0 0" />
+    <limit effort="25" velocity="10" />
+    </joint>
+  </robot>

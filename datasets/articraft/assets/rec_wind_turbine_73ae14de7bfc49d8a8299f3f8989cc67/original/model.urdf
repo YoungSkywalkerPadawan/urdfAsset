@@ -1,0 +1,81 @@
+<robot name="wind_turbine">
+  <link name="tower">
+    <visual name="tower_body">
+      <origin xyz="0 0 25" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="1.5" length="50" />
+        </geometry>
+      </visual>
+    </link>
+  <link name="nacelle">
+    <visual name="nacelle_body">
+      <origin xyz="-2 0 2" rpy="0 0 0" />
+      <geometry>
+        <box size="10 3 3" />
+        </geometry>
+      </visual>
+    <visual name="yaw_bearing">
+      <origin xyz="0 0 0.25" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="1.5" length="0.5" />
+        </geometry>
+      </visual>
+    </link>
+  <link name="hub">
+    <visual name="hub_body">
+      <geometry>
+        <mesh filename="assets/meshes/hub_mesh.obj" />
+        </geometry>
+      </visual>
+    </link>
+  <link name="blade_0">
+    <visual name="blade_0_shell">
+      <geometry>
+        <mesh filename="assets/meshes/blade_0_mesh.obj" />
+        </geometry>
+      </visual>
+    </link>
+  <link name="blade_1">
+    <visual name="blade_1_shell">
+      <geometry>
+        <mesh filename="assets/meshes/blade_1_mesh.obj" />
+        </geometry>
+      </visual>
+    </link>
+  <link name="blade_2">
+    <visual name="blade_2_shell">
+      <geometry>
+        <mesh filename="assets/meshes/blade_2_mesh.obj" />
+        </geometry>
+      </visual>
+    </link>
+  <joint name="tower_to_nacelle" type="continuous">
+    <origin xyz="0 0 50" rpy="0 0 0" />
+    <parent link="tower" />
+    <child link="nacelle" />
+    <axis xyz="0 0 1" />
+    <limit effort="100" velocity="1" />
+    </joint>
+  <joint name="nacelle_to_hub" type="continuous">
+    <origin xyz="3 0 2" rpy="0 0 0" />
+    <parent link="nacelle" />
+    <child link="hub" />
+    <axis xyz="1 0 0" />
+    <limit effort="100" velocity="5" />
+    </joint>
+  <joint name="hub_to_blade_0" type="fixed">
+    <origin xyz="1 -0 0.9" rpy="0 0 0" />
+    <parent link="hub" />
+    <child link="blade_0" />
+    </joint>
+  <joint name="hub_to_blade_1" type="fixed">
+    <origin xyz="1 -0.779423 -0.45" rpy="2.0944 0 0" />
+    <parent link="hub" />
+    <child link="blade_1" />
+    </joint>
+  <joint name="hub_to_blade_2" type="fixed">
+    <origin xyz="1 0.779423 -0.45" rpy="4.18879 0 0" />
+    <parent link="hub" />
+    <child link="blade_2" />
+    </joint>
+  </robot>

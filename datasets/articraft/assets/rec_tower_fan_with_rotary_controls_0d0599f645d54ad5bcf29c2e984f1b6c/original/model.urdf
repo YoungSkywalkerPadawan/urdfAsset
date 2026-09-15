@@ -1,0 +1,279 @@
+<robot name="residential_tower_fan">
+  <material name="warm_white_plastic">
+    <color rgba="0.86 0.84 0.78 1" />
+    </material>
+  <material name="dark_graphite_grille">
+    <color rgba="0.05 0.055 0.06 1" />
+    </material>
+  <material name="charcoal_base">
+    <color rgba="0.02 0.022 0.025 1" />
+    </material>
+  <material name="satin_gray_controls">
+    <color rgba="0.36 0.37 0.36 1" />
+    </material>
+  <material name="white_control_marks">
+    <color rgba="0.94 0.94 0.88 1" />
+    </material>
+  <material name="pale_blower_wheel">
+    <color rgba="0.72 0.77 0.78 1" />
+    </material>
+  <link name="base">
+    <visual name="round_foot">
+      <origin xyz="0 0 0.02" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.158" length="0.04" />
+        </geometry>
+      <material name="charcoal_base">
+        <color rgba="0.02 0.022 0.025 1" />
+        </material>
+      </visual>
+    <visual name="bearing_plinth">
+      <origin xyz="0 0 0.049" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.07" length="0.018" />
+        </geometry>
+      <material name="charcoal_base">
+        <color rgba="0.02 0.022 0.025 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="body">
+    <visual name="rear_wall">
+      <origin xyz="-0.058 0 0.5175" rpy="0 0 0" />
+      <geometry>
+        <box size="0.016 0.15 0.925" />
+        </geometry>
+      <material name="warm_white_plastic">
+        <color rgba="0.86 0.84 0.78 1" />
+        </material>
+      </visual>
+    <visual name="side_rail_0">
+      <origin xyz="0 -0.079 0.5175" rpy="0 0 0" />
+      <geometry>
+        <box size="0.108 0.022 0.925" />
+        </geometry>
+      <material name="warm_white_plastic">
+        <color rgba="0.86 0.84 0.78 1" />
+        </material>
+      </visual>
+    <visual name="side_rail_1">
+      <origin xyz="0 0.079 0.5175" rpy="0 0 0" />
+      <geometry>
+        <box size="0.108 0.022 0.925" />
+        </geometry>
+      <material name="warm_white_plastic">
+        <color rgba="0.86 0.84 0.78 1" />
+        </material>
+      </visual>
+    <visual name="front_stile_0">
+      <origin xyz="0.056 -0.067 0.5175" rpy="0 0 0" />
+      <geometry>
+        <box size="0.02 0.02 0.925" />
+        </geometry>
+      <material name="warm_white_plastic">
+        <color rgba="0.86 0.84 0.78 1" />
+        </material>
+      </visual>
+    <visual name="front_stile_1">
+      <origin xyz="0.056 0.067 0.5175" rpy="0 0 0" />
+      <geometry>
+        <box size="0.02 0.02 0.925" />
+        </geometry>
+      <material name="warm_white_plastic">
+        <color rgba="0.86 0.84 0.78 1" />
+        </material>
+      </visual>
+    <visual name="lower_outlet_lip">
+      <origin xyz="0.056 0 0.145" rpy="0 0 0" />
+      <geometry>
+        <box size="0.02 0.126 0.03" />
+        </geometry>
+      <material name="warm_white_plastic">
+        <color rgba="0.86 0.84 0.78 1" />
+        </material>
+      </visual>
+    <visual name="upper_outlet_lip">
+      <origin xyz="0.056 0 0.975" rpy="0 0 0" />
+      <geometry>
+        <box size="0.02 0.126 0.03" />
+        </geometry>
+      <material name="warm_white_plastic">
+        <color rgba="0.86 0.84 0.78 1" />
+        </material>
+      </visual>
+    <visual name="top_deck">
+      <origin xyz="0 0 1.0075" rpy="0 0 0" />
+      <geometry>
+        <box size="0.132 0.18 0.055" />
+        </geometry>
+      <material name="warm_white_plastic">
+        <color rgba="0.86 0.84 0.78 1" />
+        </material>
+      </visual>
+    <visual name="lower_cover">
+      <origin xyz="0 0 0.04" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.079" length="0.08" />
+        </geometry>
+      <material name="warm_white_plastic">
+        <color rgba="0.86 0.84 0.78 1" />
+        </material>
+      </visual>
+    <visual name="outlet_grille">
+      <origin xyz="0.06468 0 0.56" rpy="0 -1.5708 0" />
+      <geometry>
+        <mesh filename="assets/meshes/broad_outlet_grille.obj" />
+        </geometry>
+      <material name="dark_graphite_grille">
+        <color rgba="0.05 0.055 0.06 1" />
+        </material>
+      </visual>
+    <visual name="lower_bearing">
+      <origin xyz="0 0 0.11" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.06" />
+        </geometry>
+      <material name="dark_graphite_grille">
+        <color rgba="0.05 0.055 0.06 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="impeller">
+    <visual name="impeller_wheel">
+      <geometry>
+        <mesh filename="assets/meshes/vertical_crossflow_impeller.obj" />
+        </geometry>
+      <material name="pale_blower_wheel">
+        <color rgba="0.72 0.77 0.78 1" />
+        </material>
+      </visual>
+    <visual name="impeller_shaft">
+      <geometry>
+        <cylinder radius="0.006" length="0.84" />
+        </geometry>
+      <material name="dark_graphite_grille">
+        <color rgba="0.05 0.055 0.06 1" />
+        </material>
+      </visual>
+    <visual name="lower_hub">
+      <origin xyz="0 0 -0.36" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.024" length="0.012" />
+        </geometry>
+      <material name="pale_blower_wheel">
+        <color rgba="0.72 0.77 0.78 1" />
+        </material>
+      </visual>
+    <visual name="upper_hub">
+      <origin xyz="0 0 0.36" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.024" length="0.012" />
+        </geometry>
+      <material name="pale_blower_wheel">
+        <color rgba="0.72 0.77 0.78 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="power_knob">
+    <visual name="knob_body">
+      <geometry>
+        <mesh filename="assets/meshes/power_knob_cap.obj" />
+        </geometry>
+      <material name="satin_gray_controls">
+        <color rgba="0.36 0.37 0.36 1" />
+        </material>
+      </visual>
+    <visual name="pointer_mark">
+      <origin xyz="0.006 0 0.0233" rpy="0 0 0" />
+      <geometry>
+        <box size="0.02 0.003 0.0012" />
+        </geometry>
+      <material name="white_control_marks">
+        <color rgba="0.94 0.94 0.88 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="timer_knob">
+    <visual name="knob_body">
+      <geometry>
+        <mesh filename="assets/meshes/timer_knob_cap.obj" />
+        </geometry>
+      <material name="satin_gray_controls">
+        <color rgba="0.36 0.37 0.36 1" />
+        </material>
+      </visual>
+    <visual name="pointer_mark">
+      <origin xyz="0.007 0 0.0243" rpy="0 0 0" />
+      <geometry>
+        <box size="0.022 0.0032 0.0012" />
+        </geometry>
+      <material name="white_control_marks">
+        <color rgba="0.94 0.94 0.88 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="oscillation_button">
+    <visual name="button_cap">
+      <origin xyz="0 0 0.008" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.008" />
+        </geometry>
+      <material name="satin_gray_controls">
+        <color rgba="0.36 0.37 0.36 1" />
+        </material>
+      </visual>
+    <visual name="button_stem">
+      <origin xyz="0 0 -0.003" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.014" />
+        </geometry>
+      <material name="satin_gray_controls">
+        <color rgba="0.36 0.37 0.36 1" />
+        </material>
+      </visual>
+    <visual name="button_mark">
+      <origin xyz="0.002 0 0.0122" rpy="0 0 0" />
+      <geometry>
+        <box size="0.014 0.0022 0.0008" />
+        </geometry>
+      <material name="white_control_marks">
+        <color rgba="0.94 0.94 0.88 1" />
+        </material>
+      </visual>
+    </link>
+  <joint name="base_to_body" type="revolute">
+    <origin xyz="0 0 0.058" rpy="0 0 0" />
+    <parent link="base" />
+    <child link="body" />
+    <axis xyz="0 0 1" />
+    <limit effort="18" velocity="0.8" lower="-0.75" upper="0.75" />
+    </joint>
+  <joint name="body_to_impeller" type="continuous">
+    <origin xyz="0 0 0.56" rpy="0 0 0" />
+    <parent link="body" />
+    <child link="impeller" />
+    <axis xyz="0 0 1" />
+    <limit effort="3" velocity="70" />
+    </joint>
+  <joint name="body_to_power_knob" type="continuous">
+    <origin xyz="0 -0.04 1.035" rpy="0 0 0" />
+    <parent link="body" />
+    <child link="power_knob" />
+    <axis xyz="0 0 1" />
+    <limit effort="0.4" velocity="4" />
+    </joint>
+  <joint name="body_to_timer_knob" type="continuous">
+    <origin xyz="0 0.034 1.035" rpy="0 0 0" />
+    <parent link="body" />
+    <child link="timer_knob" />
+    <axis xyz="0 0 1" />
+    <limit effort="0.4" velocity="4" />
+    </joint>
+  <joint name="body_to_oscillation_button" type="prismatic">
+    <origin xyz="-0.038 0.071 1.035" rpy="0 0 0" />
+    <parent link="body" />
+    <child link="oscillation_button" />
+    <axis xyz="0 0 -1" />
+    <limit effort="1" velocity="0.08" lower="0" upper="0.006" />
+    </joint>
+  </robot>

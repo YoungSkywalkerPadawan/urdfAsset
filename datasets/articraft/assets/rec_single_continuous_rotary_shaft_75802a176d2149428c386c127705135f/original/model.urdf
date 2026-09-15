@@ -1,0 +1,61 @@
+<robot name="bridge_rotary_shaft_fixture">
+  <material name="painted_frame">
+    <color rgba="0.24 0.34 0.56 1" />
+    </material>
+  <material name="painted_keeper">
+    <color rgba="0.21 0.3 0.5 1" />
+    </material>
+  <material name="steel">
+    <color rgba="0.74 0.76 0.79 1" />
+    </material>
+  <link name="lower_frame">
+    <visual name="frame_body">
+      <geometry>
+        <mesh filename="assets/meshes/lower_frame.obj" />
+        </geometry>
+      <material name="painted_frame" />
+      </visual>
+    </link>
+  <link name="top_keeper">
+    <visual name="keeper_body">
+      <geometry>
+        <mesh filename="assets/meshes/top_keeper.obj" />
+        </geometry>
+      <material name="painted_keeper" />
+      </visual>
+    </link>
+  <link name="shaft">
+    <visual name="shaft_body">
+      <origin xyz="0 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.015" length="0.21" />
+        </geometry>
+      <material name="steel" />
+      </visual>
+    <visual name="left_collar">
+      <origin xyz="-0.099 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.024" length="0.01" />
+        </geometry>
+      <material name="steel" />
+      </visual>
+    <visual name="right_collar">
+      <origin xyz="0.099 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.024" length="0.01" />
+        </geometry>
+      <material name="steel" />
+      </visual>
+    </link>
+  <joint name="frame_to_keeper" type="fixed">
+    <parent link="lower_frame" />
+    <child link="top_keeper" />
+    </joint>
+  <joint name="frame_to_shaft" type="continuous">
+    <origin xyz="0 0 0.06" rpy="0 0 0" />
+    <parent link="lower_frame" />
+    <child link="shaft" />
+    <axis xyz="1 0 0" />
+    <limit effort="12" velocity="15" />
+    </joint>
+  </robot>

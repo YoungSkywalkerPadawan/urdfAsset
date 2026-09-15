@@ -1,0 +1,179 @@
+<robot name="minimalist_canted_globe">
+  <material name="satin_black_metal">
+    <color rgba="0.02 0.022 0.024 1" />
+    </material>
+  <material name="brushed_steel">
+    <color rgba="0.72 0.7 0.66 1" />
+    </material>
+  <material name="dark_bearing_gap">
+    <color rgba="0.006 0.006 0.007 1" />
+    </material>
+  <material name="muted_ocean_blue">
+    <color rgba="0.05 0.22 0.44 1" />
+    </material>
+  <material name="warm_ivory_grid">
+    <color rgba="0.92 0.86 0.7 1" />
+    </material>
+  <link name="base">
+    <visual name="base_frame">
+      <geometry>
+        <mesh filename="assets/meshes/ring_base.obj" />
+        </geometry>
+      <material name="satin_black_metal">
+        <color rgba="0.02 0.022 0.024 1" />
+        </material>
+      </visual>
+    <visual name="bearing_shadow">
+      <origin xyz="0 0 0.038" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.078" length="0.004" />
+        </geometry>
+      <material name="dark_bearing_gap">
+        <color rgba="0.006 0.006 0.007 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="pedestal">
+    <visual name="turntable_disk">
+      <origin xyz="0 0 0.009" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.075" length="0.018" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.72 0.7 0.66 1" />
+        </material>
+      </visual>
+    <visual name="bearing_ring">
+      <origin xyz="0 0 0.019" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/pedestal_bearing_ring.obj" />
+        </geometry>
+      <material name="satin_black_metal">
+        <color rgba="0.02 0.022 0.024 1" />
+        </material>
+      </visual>
+    <visual name="upright_post">
+      <origin xyz="0 0 0.07" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.104" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.72 0.7 0.66 1" />
+        </material>
+      </visual>
+    <visual name="canted_arm">
+      <origin xyz="0.0344206 0 0.132869" rpy="0 1.02577 0" />
+      <geometry>
+        <cylinder radius="0.011" length="0.0805053" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.72 0.7 0.66 1" />
+        </material>
+      </visual>
+    <visual name="spindle_socket">
+      <origin xyz="0.0716325 0 0.160156" rpy="0 0.410152 0" />
+      <geometry>
+        <cylinder radius="0.017" length="0.02" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.72 0.7 0.66 1" />
+        </material>
+      </visual>
+    <visual name="spindle_pin">
+      <origin xyz="0.0780125 0 0.174829" rpy="0 0.410152 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.056" />
+        </geometry>
+      <material name="satin_black_metal">
+        <color rgba="0.02 0.022 0.024 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="globe">
+    <visual name="globe_shell">
+      <origin xyz="0 0 0.12" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.12" />
+        </geometry>
+      <material name="muted_ocean_blue">
+        <color rgba="0.05 0.22 0.44 1" />
+        </material>
+      </visual>
+    <visual name="pole_socket">
+      <origin xyz="0 0 -0.006" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.018" />
+        </geometry>
+      <material name="warm_ivory_grid">
+        <color rgba="0.92 0.86 0.7 1" />
+        </material>
+      </visual>
+    <visual name="equator_band">
+      <origin xyz="0 0 0.12" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/equator_band.obj" />
+        </geometry>
+      <material name="warm_ivory_grid">
+        <color rgba="0.92 0.86 0.7 1" />
+        </material>
+      </visual>
+    <visual name="latitude_north">
+      <origin xyz="0 0 0.188829" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/latitude_north.obj" />
+        </geometry>
+      <material name="warm_ivory_grid">
+        <color rgba="0.92 0.86 0.7 1" />
+        </material>
+      </visual>
+    <visual name="latitude_south">
+      <origin xyz="0 0 0.0511708" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/latitude_south.obj" />
+        </geometry>
+      <material name="warm_ivory_grid">
+        <color rgba="0.92 0.86 0.7 1" />
+        </material>
+      </visual>
+    <visual name="meridian_0">
+      <geometry>
+        <mesh filename="assets/meshes/meridian_0.obj" />
+        </geometry>
+      <material name="warm_ivory_grid">
+        <color rgba="0.92 0.86 0.7 1" />
+        </material>
+      </visual>
+    <visual name="meridian_1">
+      <geometry>
+        <mesh filename="assets/meshes/meridian_1.obj" />
+        </geometry>
+      <material name="warm_ivory_grid">
+        <color rgba="0.92 0.86 0.7 1" />
+        </material>
+      </visual>
+    <visual name="meridian_2">
+      <geometry>
+        <mesh filename="assets/meshes/meridian_2.obj" />
+        </geometry>
+      <material name="warm_ivory_grid">
+        <color rgba="0.92 0.86 0.7 1" />
+        </material>
+      </visual>
+    </link>
+  <joint name="base_to_pedestal" type="continuous">
+    <origin xyz="0 0 0.036" rpy="0 0 0" />
+    <parent link="base" />
+    <child link="pedestal" />
+    <axis xyz="0 0 1" />
+    <limit effort="1.5" velocity="1" />
+    <dynamics damping="0.015" friction="0.01" />
+    </joint>
+  <joint name="pedestal_to_globe" type="continuous">
+    <origin xyz="0.082 0 0.184" rpy="0 0.410152 0" />
+    <parent link="pedestal" />
+    <child link="globe" />
+    <axis xyz="0 0 1" />
+    <limit effort="0.6" velocity="3.5" />
+    <dynamics damping="0.004" friction="0.002" />
+    </joint>
+  </robot>

@@ -1,0 +1,181 @@
+<robot name="premium_desktop_pencil_sharpener">
+  <material name="graphite_enamel">
+    <color rgba="0.035 0.038 0.043 1" />
+    </material>
+  <material name="satin_brushed_metal">
+    <color rgba="0.72 0.7 0.66 1" />
+    </material>
+  <material name="soft_black_grip">
+    <color rgba="0.006 0.006 0.007 1" />
+    </material>
+  <material name="smoked_drawer">
+    <color rgba="0.12 0.13 0.14 1" />
+    </material>
+  <link name="body">
+    <visual name="body_shell">
+      <geometry>
+        <mesh filename="assets/meshes/rounded_body_shell.obj" />
+        </geometry>
+      <material name="graphite_enamel">
+        <color rgba="0.035 0.038 0.043 1" />
+        </material>
+      </visual>
+    <visual name="base_floor">
+      <origin xyz="0 0 0.003" rpy="0 0 0" />
+      <geometry>
+        <box size="0.16 0.115 0.006" />
+        </geometry>
+      <material name="graphite_enamel">
+        <color rgba="0.035 0.038 0.043 1" />
+        </material>
+      </visual>
+    <visual name="side_wall_0">
+      <origin xyz="-0.07 0 0.0245" rpy="0 0 0" />
+      <geometry>
+        <box size="0.02 0.115 0.038" />
+        </geometry>
+      <material name="graphite_enamel">
+        <color rgba="0.035 0.038 0.043 1" />
+        </material>
+      </visual>
+    <visual name="side_wall_1">
+      <origin xyz="0.07 0 0.0245" rpy="0 0 0" />
+      <geometry>
+        <box size="0.02 0.115 0.038" />
+        </geometry>
+      <material name="graphite_enamel">
+        <color rgba="0.035 0.038 0.043 1" />
+        </material>
+      </visual>
+    <visual name="rear_wall">
+      <origin xyz="0 0.047 0.0245" rpy="0 0 0" />
+      <geometry>
+        <box size="0.12 0.02 0.038" />
+        </geometry>
+      <material name="graphite_enamel">
+        <color rgba="0.035 0.038 0.043 1" />
+        </material>
+      </visual>
+    <visual name="side_hub">
+      <origin xyz="0.085 0.01 0.056" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.021" length="0.01" />
+        </geometry>
+      <material name="satin_brushed_metal">
+        <color rgba="0.72 0.7 0.66 1" />
+        </material>
+      </visual>
+    <visual name="port_liner">
+      <geometry>
+        <mesh filename="assets/meshes/front_port_liner.obj" />
+        </geometry>
+      <material name="satin_brushed_metal">
+        <color rgba="0.72 0.7 0.66 1" />
+        </material>
+      </visual>
+    <visual name="dial_race">
+      <geometry>
+        <mesh filename="assets/meshes/dial_bearing_race.obj" />
+        </geometry>
+      <material name="satin_brushed_metal">
+        <color rgba="0.72 0.7 0.66 1" />
+        </material>
+      </visual>
+    <visual name="top_inlay">
+      <origin xyz="0 -0.002 0.096" rpy="0 0 0" />
+      <geometry>
+        <box size="0.128 0.072 0.002" />
+        </geometry>
+      <material name="satin_brushed_metal">
+        <color rgba="0.72 0.7 0.66 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="drawer">
+    <visual name="drawer_front">
+      <geometry>
+        <mesh filename="assets/meshes/drawer_front_panel.obj" />
+        </geometry>
+      <material name="smoked_drawer">
+        <color rgba="0.12 0.13 0.14 1" />
+        </material>
+      </visual>
+    <visual name="drawer_tray">
+      <geometry>
+        <mesh filename="assets/meshes/sliding_shavings_tray.obj" />
+        </geometry>
+      <material name="smoked_drawer">
+        <color rgba="0.12 0.13 0.14 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="crank">
+    <visual name="crank_hub">
+      <origin xyz="0 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.017" length="0.01" />
+        </geometry>
+      <material name="satin_brushed_metal">
+        <color rgba="0.72 0.7 0.66 1" />
+        </material>
+      </visual>
+    <visual name="crank_arm">
+      <origin xyz="0.006 0 -0.022" rpy="0 0 0" />
+      <geometry>
+        <box size="0.006 0.013 0.043" />
+        </geometry>
+      <material name="satin_brushed_metal">
+        <color rgba="0.72 0.7 0.66 1" />
+        </material>
+      </visual>
+    <visual name="handle_spindle">
+      <origin xyz="0.024 0 -0.043" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0042" length="0.034" />
+        </geometry>
+      <material name="satin_brushed_metal">
+        <color rgba="0.72 0.7 0.66 1" />
+        </material>
+      </visual>
+    <visual name="handle_grip">
+      <origin xyz="0.026 0 -0.043" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.009" length="0.03" />
+        </geometry>
+      <material name="soft_black_grip">
+        <color rgba="0.006 0.006 0.007 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="dial">
+    <visual name="dial_ring">
+      <geometry>
+        <mesh filename="assets/meshes/point_adjustment_dial.obj" />
+        </geometry>
+      <material name="satin_brushed_metal">
+        <color rgba="0.72 0.7 0.66 1" />
+        </material>
+      </visual>
+    </link>
+  <joint name="body_to_drawer" type="prismatic">
+    <origin xyz="0 -0.0605 0.027" rpy="0 0 0" />
+    <parent link="body" />
+    <child link="drawer" />
+    <axis xyz="0 -1 0" />
+    <limit effort="35" velocity="0.22" lower="0" upper="0.052" />
+    </joint>
+  <joint name="body_to_crank" type="continuous">
+    <origin xyz="0.095 0.01 0.056" rpy="0 0 0" />
+    <parent link="body" />
+    <child link="crank" />
+    <axis xyz="1 0 0" />
+    <limit effort="4" velocity="8" />
+    </joint>
+  <joint name="body_to_dial" type="continuous">
+    <origin xyz="0 -0.0673 0.073" rpy="0 0 0" />
+    <parent link="body" />
+    <child link="dial" />
+    <axis xyz="0 -1 0" />
+    <limit effort="0.6" velocity="5" />
+    </joint>
+  </robot>

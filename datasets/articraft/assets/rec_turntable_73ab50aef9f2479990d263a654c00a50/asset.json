@@ -1,0 +1,229 @@
+{
+  "summary": {
+    "id": "rec_turntable_73ab50aef9f2479990d263a654c00a50",
+    "category": "turntable",
+    "robot_name": "retrofit_legacy_turntable",
+    "joint_count": 1,
+    "link_count": 7,
+    "target_link_count": 2,
+    "family": "rec_turntable",
+    "warnings": [],
+    "diagonal": 0.6008987439095598,
+    "bytes": 3384263
+  },
+  "source": {
+    "dataset": "camvsl/Articraft-10K",
+    "revision": "3c79d5a05bb7cb6bf7bfee5e090176636ee3ac65",
+    "license": "CC-BY-4.0",
+    "url": "https://huggingface.co/datasets/camvsl/Articraft-10K/blob/3c79d5a05bb7cb6bf7bfee5e090176636ee3ac65/rec_turntable_73ab50aef9f2479990d263a654c00a50.tar.gz",
+    "archive_sha256": "93dd40538987bd8b4f6bcd26b4272f73b07213358b0c072086dc5620d6887827",
+    "archive": "rec_turntable_73ab50aef9f2479990d263a654c00a50.tar.gz",
+    "label_status": "Original generated URDF reference; not manually verified or physically validated"
+  },
+  "links": [
+    {
+      "id": "link_000",
+      "name": "plinth",
+      "point_file": null,
+      "faces": 560,
+      "vertices": 296,
+      "bounds": [
+        [
+          -0.23,
+          -0.18,
+          -0.01
+        ],
+        [
+          0.23,
+          0.18,
+          0.067
+        ]
+      ]
+    },
+    {
+      "id": "link_001",
+      "name": "bearing_support",
+      "point_file": "inputs/link_001.npz",
+      "faces": 1296,
+      "vertices": 656,
+      "bounds": [
+        [
+          -0.08499999999999999,
+          -0.045,
+          0.064
+        ],
+        [
+          0.0049999999999999975,
+          0.045,
+          0.074
+        ]
+      ]
+    },
+    {
+      "id": "link_002",
+      "name": "platter",
+      "point_file": "inputs/link_002.npz",
+      "faces": 640,
+      "vertices": 330,
+      "bounds": [
+        [
+          -0.193,
+          -0.153,
+          0.074
+        ],
+        [
+          0.11299999999999999,
+          0.153,
+          0.122
+        ]
+      ]
+    },
+    {
+      "id": "link_003",
+      "name": "tonearm_pedestal",
+      "point_file": null,
+      "faces": 1344,
+      "vertices": 688,
+      "bounds": [
+        [
+          0.127,
+          0.04700000000000001,
+          0.064
+        ],
+        [
+          0.20500000000000002,
+          0.149,
+          0.1
+        ]
+      ]
+    },
+    {
+      "id": "link_004",
+      "name": "tonearm_stage",
+      "point_file": null,
+      "faces": 2556,
+      "vertices": 1296,
+      "bounds": [
+        [
+          -0.06285447361389213,
+          0.026515299174492565,
+          0.09999995959481808
+        ],
+        [
+          0.2309070288900515,
+          0.12399967977831236,
+          0.12200004040518193
+        ]
+      ]
+    },
+    {
+      "id": "link_005",
+      "name": "motor_hatch",
+      "point_file": null,
+      "faces": 924,
+      "vertices": 466,
+      "bounds": [
+        [
+          -0.125,
+          -0.0325,
+          -0.016
+        ],
+        [
+          0.0050000000000000044,
+          0.0725,
+          0.0
+        ]
+      ]
+    },
+    {
+      "id": "link_006",
+      "name": "signal_hatch",
+      "point_file": null,
+      "faces": 924,
+      "vertices": 466,
+      "bounds": [
+        [
+          0.077,
+          0.017,
+          -0.016
+        ],
+        [
+          0.173,
+          0.139,
+          0.0
+        ]
+      ]
+    }
+  ],
+  "joints": [
+    {
+      "name": "plinth_to_bearing_support",
+      "type": "fixed",
+      "parent": "link_000",
+      "child": "link_001",
+      "reference_q": 0.0,
+      "mimic": null
+    },
+    {
+      "name": "bearing_to_platter",
+      "type": "continuous",
+      "parent": "link_001",
+      "child": "link_002",
+      "reference_q": 0.0,
+      "mimic": null
+    },
+    {
+      "name": "plinth_to_tonearm_pedestal",
+      "type": "fixed",
+      "parent": "link_000",
+      "child": "link_003",
+      "reference_q": 0.0,
+      "mimic": null
+    },
+    {
+      "name": "pedestal_to_tonearm_stage",
+      "type": "revolute",
+      "parent": "link_003",
+      "child": "link_004",
+      "reference_q": 0.0,
+      "mimic": null
+    },
+    {
+      "name": "plinth_to_motor_hatch",
+      "type": "fixed",
+      "parent": "link_000",
+      "child": "link_005",
+      "reference_q": 0.0,
+      "mimic": null
+    },
+    {
+      "name": "plinth_to_signal_hatch",
+      "type": "fixed",
+      "parent": "link_000",
+      "child": "link_006",
+      "reference_q": 0.0,
+      "mimic": null
+    }
+  ],
+  "bounds": [
+    [
+      -0.23,
+      -0.18,
+      -0.016
+    ],
+    [
+      0.2309070288900515,
+      0.18,
+      0.12200004040518193
+    ]
+  ],
+  "point_pool_size": 65536,
+  "reference_pose": "Zero position clamped to limits; mimic values propagated",
+  "qc": {
+    "finite_geometry": true,
+    "tree_valid": true,
+    "axis_unit": true,
+    "physical_collision_validation": false,
+    "visual_tessellation": "32 cylinder segments, icosphere subdivision 2"
+  }
+}

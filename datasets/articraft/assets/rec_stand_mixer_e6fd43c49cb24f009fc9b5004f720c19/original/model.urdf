@@ -1,0 +1,473 @@
+<robot name="family_stand_mixer">
+  <material name="body_finish">
+    <color rgba="0.74 0.18 0.16 1" />
+    </material>
+  <material name="trim_dark">
+    <color rgba="0.12 0.12 0.13 1" />
+    </material>
+  <material name="steel">
+    <color rgba="0.86 0.87 0.89 1" />
+    </material>
+  <material name="satin">
+    <color rgba="0.7 0.72 0.75 1" />
+    </material>
+  <material name="rubber">
+    <color rgba="0.08 0.08 0.08 1" />
+    </material>
+  <link name="base">
+    <inertial>
+      <origin xyz="0 0 0.17" rpy="0 0 0" />
+      <mass value="11" />
+      <inertia ixx="0.177833" ixy="0" ixz="0" iyy="0.252633" iyz="0" izz="0.218533" />
+      </inertial>
+    <visual name="base_plinth">
+      <origin xyz="0.02 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/base_plinth.obj" />
+        </geometry>
+      <material name="body_finish">
+        <color rgba="0.74 0.18 0.16 1" />
+        </material>
+      </visual>
+    <visual name="upper_deck">
+      <origin xyz="0.015 0 0.028" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/upper_deck.obj" />
+        </geometry>
+      <material name="body_finish">
+        <color rgba="0.74 0.18 0.16 1" />
+        </material>
+      </visual>
+    <visual name="slide_bed">
+      <origin xyz="0.1 0 0.056" rpy="0 0 0" />
+      <geometry>
+        <box size="0.23 0.17 0.008" />
+        </geometry>
+      <material name="satin">
+        <color rgba="0.7 0.72 0.75 1" />
+        </material>
+      </visual>
+    <visual name="lower_column">
+      <origin xyz="-0.074 0 0.132" rpy="0 0 0" />
+      <geometry>
+        <box size="0.112 0.156 0.16" />
+        </geometry>
+      <material name="body_finish">
+        <color rgba="0.74 0.18 0.16 1" />
+        </material>
+      </visual>
+    <visual name="upper_column">
+      <origin xyz="-0.082 0 0.282" rpy="0 0 0" />
+      <geometry>
+        <box size="0.094 0.132 0.14" />
+        </geometry>
+      <material name="body_finish">
+        <color rgba="0.74 0.18 0.16 1" />
+        </material>
+      </visual>
+    <visual name="column_front_round">
+      <origin xyz="-0.102 0 0.164" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.028" length="0.108" />
+        </geometry>
+      <material name="body_finish">
+        <color rgba="0.74 0.18 0.16 1" />
+        </material>
+      </visual>
+    <visual name="hinge_bridge">
+      <origin xyz="-0.082 0 0.356" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.108 0.012" />
+        </geometry>
+      <material name="body_finish">
+        <color rgba="0.74 0.18 0.16 1" />
+        </material>
+      </visual>
+    <visual name="hinge_shelf">
+      <origin xyz="-0.119 0 0.378" rpy="0 0 0" />
+      <geometry>
+        <box size="0.02 0.11 0.068" />
+        </geometry>
+      <material name="body_finish">
+        <color rgba="0.74 0.18 0.16 1" />
+        </material>
+      </visual>
+    <visual name="hinge_cheek_left">
+      <origin xyz="-0.076 -0.062 0.388" rpy="0 0 0" />
+      <geometry>
+        <box size="0.028 0.028 0.064" />
+        </geometry>
+      <material name="satin">
+        <color rgba="0.7 0.72 0.75 1" />
+        </material>
+      </visual>
+    <visual name="hinge_cheek_right">
+      <origin xyz="-0.076 0.062 0.388" rpy="0 0 0" />
+      <geometry>
+        <box size="0.028 0.028 0.064" />
+        </geometry>
+      <material name="satin">
+        <color rgba="0.7 0.72 0.75 1" />
+        </material>
+      </visual>
+    <visual name="hinge_pin_left">
+      <origin xyz="-0.076 -0.062 0.388" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.02" length="0.02" />
+        </geometry>
+      <material name="satin">
+        <color rgba="0.7 0.72 0.75 1" />
+        </material>
+      </visual>
+    <visual name="hinge_pin_right">
+      <origin xyz="-0.076 0.062 0.388" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.02" length="0.02" />
+        </geometry>
+      <material name="satin">
+        <color rgba="0.7 0.72 0.75 1" />
+        </material>
+      </visual>
+    <visual name="speed_bezel">
+      <origin xyz="-0.054 0.07 0.145" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.016" length="0.014" />
+        </geometry>
+      <material name="satin">
+        <color rgba="0.7 0.72 0.75 1" />
+        </material>
+      </visual>
+    <visual name="speed_mount_block">
+      <origin xyz="-0.054 0.058 0.145" rpy="0 0 0" />
+      <geometry>
+        <box size="0.026 0.018 0.032" />
+        </geometry>
+      <material name="satin">
+        <color rgba="0.7 0.72 0.75 1" />
+        </material>
+      </visual>
+    <visual name="lock_track">
+      <origin xyz="-0.149 -0.084 0.132" rpy="0 0 0" />
+      <geometry>
+        <box size="0.034 0.008 0.026" />
+        </geometry>
+      <material name="satin">
+        <color rgba="0.7 0.72 0.75 1" />
+        </material>
+      </visual>
+    <visual name="lock_track_bridge">
+      <origin xyz="-0.138 -0.082 0.132" rpy="0 0 0" />
+      <geometry>
+        <box size="0.02 0.012 0.02" />
+        </geometry>
+      <material name="satin">
+        <color rgba="0.7 0.72 0.75 1" />
+        </material>
+      </visual>
+    <visual name="foot_front_right">
+      <origin xyz="0.17 -0.09 0.004" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.017" length="0.008" />
+        </geometry>
+      <material name="rubber">
+        <color rgba="0.08 0.08 0.08 1" />
+        </material>
+      </visual>
+    <visual name="foot_rear_right">
+      <origin xyz="-0.12 -0.09 0.004" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.017" length="0.008" />
+        </geometry>
+      <material name="rubber">
+        <color rgba="0.08 0.08 0.08 1" />
+        </material>
+      </visual>
+    <visual name="foot_front_left">
+      <origin xyz="0.17 0.09 0.004" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.017" length="0.008" />
+        </geometry>
+      <material name="rubber">
+        <color rgba="0.08 0.08 0.08 1" />
+        </material>
+      </visual>
+    <visual name="foot_rear_left">
+      <origin xyz="-0.12 0.09 0.004" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.017" length="0.008" />
+        </geometry>
+      <material name="rubber">
+        <color rgba="0.08 0.08 0.08 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="carriage">
+    <inertial>
+      <origin xyz="0 0 0.005" rpy="0 0 0" />
+      <mass value="1.1" />
+      <inertia ixx="0.00273167" ixy="0" ixz="0" iyy="0.00339167" iyz="0" izz="0.00595833" />
+      </inertial>
+    <visual name="carriage_plate">
+      <origin xyz="0 0 0.006" rpy="0 0 0" />
+      <geometry>
+        <box size="0.182 0.158 0.012" />
+        </geometry>
+      <material name="satin">
+        <color rgba="0.7 0.72 0.75 1" />
+        </material>
+      </visual>
+    <visual name="carriage_guide">
+      <origin xyz="0 0 -0.005" rpy="0 0 0" />
+      <geometry>
+        <box size="0.138 0.118 0.01" />
+        </geometry>
+      <material name="trim_dark">
+        <color rgba="0.12 0.12 0.13 1" />
+        </material>
+      </visual>
+    <visual name="bowl_seat">
+      <origin xyz="0 0 0.015" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.096" length="0.006" />
+        </geometry>
+      <material name="satin">
+        <color rgba="0.7 0.72 0.75 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="bowl">
+    <inertial>
+      <origin xyz="0 0 0.084" rpy="0 0 0" />
+      <mass value="1.3" />
+      <inertia ixx="0.0080548" ixy="0" ixz="0" iyy="0.0080548" iyz="0" izz="0.0099944" />
+      </inertial>
+    <visual name="bowl_shell">
+      <geometry>
+        <mesh filename="assets/meshes/mixing_bowl_shell.obj" />
+        </geometry>
+      <material name="steel">
+        <color rgba="0.86 0.87 0.89 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="head">
+    <inertial>
+      <origin xyz="0.11 0 -0.012" rpy="0 0 0" />
+      <mass value="5" />
+      <inertia ixx="0.027" ixy="0" ixz="0" iyy="0.0616667" iyz="0" izz="0.0616667" />
+      </inertial>
+    <visual name="head_shell">
+      <origin xyz="0.132 0 0.048" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.072" length="0.22" />
+        </geometry>
+      <material name="body_finish">
+        <color rgba="0.74 0.18 0.16 1" />
+        </material>
+      </visual>
+    <visual name="head_lower_pan">
+      <origin xyz="0.15 0 -0.04" rpy="0 0 0" />
+      <geometry>
+        <box size="0.18 0.148 0.048" />
+        </geometry>
+      <material name="body_finish">
+        <color rgba="0.74 0.18 0.16 1" />
+        </material>
+      </visual>
+    <visual name="nose_cap">
+      <origin xyz="0.24 0 -0.014" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.05" length="0.074" />
+        </geometry>
+      <material name="body_finish">
+        <color rgba="0.74 0.18 0.16 1" />
+        </material>
+      </visual>
+    <visual name="nose_block">
+      <origin xyz="0.222 0 -0.018" rpy="0 0 0" />
+      <geometry>
+        <box size="0.078 0.116 0.078" />
+        </geometry>
+      <material name="body_finish">
+        <color rgba="0.74 0.18 0.16 1" />
+        </material>
+      </visual>
+    <visual name="head_hinge_collar">
+      <origin xyz="-0.004 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.026" length="0.092" />
+        </geometry>
+      <material name="satin">
+        <color rgba="0.7 0.72 0.75 1" />
+        </material>
+      </visual>
+    <visual name="spindle_housing">
+      <origin xyz="0.187 0 -0.074" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.019" length="0.052" />
+        </geometry>
+      <material name="satin">
+        <color rgba="0.7 0.72 0.75 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="paddle">
+    <inertial>
+      <origin xyz="0 0 -0.095" rpy="0 0 0" />
+      <mass value="0.35" />
+      <inertia ixx="0.00106458" ixy="0" ixz="0" iyy="0.00123958" iyz="0" izz="0.000198333" />
+      </inertial>
+    <visual name="paddle_shaft">
+      <origin xyz="0 0 -0.031" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.007" length="0.062" />
+        </geometry>
+      <material name="steel">
+        <color rgba="0.86 0.87 0.89 1" />
+        </material>
+      </visual>
+    <visual name="paddle_collar">
+      <origin xyz="0 0 -0.074" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.024" />
+        </geometry>
+      <material name="satin">
+        <color rgba="0.7 0.72 0.75 1" />
+        </material>
+      </visual>
+    <visual name="paddle_top_bridge">
+      <origin xyz="0 0 -0.091" rpy="0 0 0" />
+      <geometry>
+        <box size="0.056 0.01 0.01" />
+        </geometry>
+      <material name="steel">
+        <color rgba="0.86 0.87 0.89 1" />
+        </material>
+      </visual>
+    <visual name="paddle_left_leg">
+      <origin xyz="-0.02 0 -0.133" rpy="0 0 0" />
+      <geometry>
+        <box size="0.01 0.006 0.084" />
+        </geometry>
+      <material name="steel">
+        <color rgba="0.86 0.87 0.89 1" />
+        </material>
+      </visual>
+    <visual name="paddle_right_leg">
+      <origin xyz="0.02 0 -0.133" rpy="0 0 0" />
+      <geometry>
+        <box size="0.01 0.006 0.084" />
+        </geometry>
+      <material name="steel">
+        <color rgba="0.86 0.87 0.89 1" />
+        </material>
+      </visual>
+    <visual name="paddle_bottom_bridge">
+      <origin xyz="0 0 -0.174" rpy="0 0 0" />
+      <geometry>
+        <box size="0.046 0.006 0.01" />
+        </geometry>
+      <material name="steel">
+        <color rgba="0.86 0.87 0.89 1" />
+        </material>
+      </visual>
+    <visual name="paddle_center_blade">
+      <origin xyz="0 0 -0.132" rpy="0 0 0" />
+      <geometry>
+        <box size="0.008 0.004 0.074" />
+        </geometry>
+      <material name="steel">
+        <color rgba="0.86 0.87 0.89 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="speed_control">
+    <inertial>
+      <origin xyz="0.012 0.009 0" rpy="0 0 0" />
+      <mass value="0.05" />
+      <inertia ixx="2.7e-06" ixy="0" ixz="0" iyy="5.61667e-06" iyz="0" izz="5.61667e-06" />
+      </inertial>
+    <visual name="speed_knob">
+      <origin xyz="0 0.007 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.014" />
+        </geometry>
+      <material name="trim_dark">
+        <color rgba="0.12 0.12 0.13 1" />
+        </material>
+      </visual>
+    <visual name="speed_tab">
+      <origin xyz="0.015 0.011 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.01 0.01" />
+        </geometry>
+      <material name="trim_dark">
+        <color rgba="0.12 0.12 0.13 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="lock_release">
+    <inertial>
+      <origin xyz="-0.001 0 0" rpy="0 0 0" />
+      <mass value="0.04" />
+      <inertia ixx="8.66667e-07" ixy="0" ixz="0" iyy="2.90667e-06" iyz="0" izz="2.46667e-06" />
+      </inertial>
+    <visual name="lock_button">
+      <geometry>
+        <box size="0.024 0.006 0.012" />
+        </geometry>
+      <material name="trim_dark">
+        <color rgba="0.12 0.12 0.13 1" />
+        </material>
+      </visual>
+    <visual name="lock_slider_body">
+      <origin xyz="-0.011 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.014 0.004 0.008" />
+        </geometry>
+      <material name="trim_dark">
+        <color rgba="0.12 0.12 0.13 1" />
+        </material>
+      </visual>
+    </link>
+  <joint name="base_to_carriage" type="prismatic">
+    <origin xyz="0.115 0 0.07" rpy="0 0 0" />
+    <parent link="base" />
+    <child link="carriage" />
+    <axis xyz="1 0 0" />
+    <limit effort="80" velocity="0.12" lower="0" upper="0.055" />
+    </joint>
+  <joint name="carriage_to_bowl" type="fixed">
+    <origin xyz="0 0 0.018" rpy="0 0 0" />
+    <parent link="carriage" />
+    <child link="bowl" />
+    </joint>
+  <joint name="base_to_head" type="revolute">
+    <origin xyz="-0.072 0 0.388" rpy="0 0 0" />
+    <parent link="base" />
+    <child link="head" />
+    <axis xyz="0 -1 0" />
+    <limit effort="22" velocity="1" lower="0" upper="1.09956" />
+    </joint>
+  <joint name="head_to_paddle" type="continuous">
+    <origin xyz="0.187 0 -0.1" rpy="0 0 0" />
+    <parent link="head" />
+    <child link="paddle" />
+    <axis xyz="0 0 1" />
+    <limit effort="12" velocity="18" />
+    </joint>
+  <joint name="base_to_speed_control" type="revolute">
+    <origin xyz="-0.054 0.076 0.145" rpy="0 0 0" />
+    <parent link="base" />
+    <child link="speed_control" />
+    <axis xyz="0 -1 0" />
+    <limit effort="1.2" velocity="2.5" lower="0" upper="0.959931" />
+    </joint>
+  <joint name="base_to_lock_release" type="prismatic">
+    <origin xyz="-0.116 -0.084 0.132" rpy="0 0 0" />
+    <parent link="base" />
+    <child link="lock_release" />
+    <axis xyz="1 0 0" />
+    <limit effort="0.8" velocity="0.06" lower="0" upper="0.016" />
+    </joint>
+  </robot>

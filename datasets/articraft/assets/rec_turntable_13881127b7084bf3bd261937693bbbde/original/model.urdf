@@ -1,0 +1,261 @@
+<robot name="record_turntable">
+  <material name="walnut">
+    <color rgba="0.36 0.22 0.12 1" />
+    </material>
+  <material name="satin_black">
+    <color rgba="0.08 0.08 0.09 1" />
+    </material>
+  <material name="rubber_black">
+    <color rgba="0.04 0.04 0.04 1" />
+    </material>
+  <material name="brushed_aluminum">
+    <color rgba="0.73 0.74 0.76 1" />
+    </material>
+  <material name="dark_gray">
+    <color rgba="0.18 0.18 0.19 1" />
+    </material>
+  <material name="label_gray">
+    <color rgba="0.7 0.71 0.73 1" />
+    </material>
+  <link name="plinth">
+    <inertial>
+      <origin xyz="0 0 0.024" rpy="0 0 0" />
+      <mass value="6.8" />
+      <inertia ixx="0.07803" ixy="0" ixz="0" iyy="0.11934" iyz="0" izz="0.18819" />
+      </inertial>
+    <visual name="plinth_shell">
+      <origin xyz="0 0 0.03" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/plinth_shell.obj" />
+        </geometry>
+      <material name="walnut">
+        <color rgba="0.36 0.22 0.12 1" />
+        </material>
+      </visual>
+    <visual name="top_deck">
+      <origin xyz="0 0 0.0615" rpy="0 0 0" />
+      <geometry>
+        <box size="0.428 0.338 0.003" />
+        </geometry>
+      <material name="dark_gray">
+        <color rgba="0.18 0.18 0.19 1" />
+        </material>
+      </visual>
+    <visual name="foot_front_left">
+      <origin xyz="-0.17 0.12 -0.006" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.022" length="0.012" />
+        </geometry>
+      <material name="rubber_black">
+        <color rgba="0.04 0.04 0.04 1" />
+        </material>
+      </visual>
+    <visual name="foot_front_right">
+      <origin xyz="0.17 0.12 -0.006" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.022" length="0.012" />
+        </geometry>
+      <material name="rubber_black">
+        <color rgba="0.04 0.04 0.04 1" />
+        </material>
+      </visual>
+    <visual name="foot_rear_left">
+      <origin xyz="-0.17 -0.12 -0.006" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.022" length="0.012" />
+        </geometry>
+      <material name="rubber_black">
+        <color rgba="0.04 0.04 0.04 1" />
+        </material>
+      </visual>
+    <visual name="foot_rear_right">
+      <origin xyz="0.17 -0.12 -0.006" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.022" length="0.012" />
+        </geometry>
+      <material name="rubber_black">
+        <color rgba="0.04 0.04 0.04 1" />
+        </material>
+      </visual>
+    <visual name="platter_support">
+      <origin xyz="0 0 0.069" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.068" length="0.018" />
+        </geometry>
+      <material name="dark_gray">
+        <color rgba="0.18 0.18 0.19 1" />
+        </material>
+      </visual>
+    <visual name="speed_switch">
+      <origin xyz="-0.17 0.12 0.063" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.012 0.004" />
+        </geometry>
+      <material name="brushed_aluminum">
+        <color rgba="0.73 0.74 0.76 1" />
+        </material>
+      </visual>
+    <visual name="tonearm_mount_flange">
+      <origin xyz="0.155 -0.105 0.064" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.042" length="0.008" />
+        </geometry>
+      <material name="dark_gray">
+        <color rgba="0.18 0.18 0.19 1" />
+        </material>
+      </visual>
+    <visual name="tonearm_base_pedestal">
+      <origin xyz="0.155 -0.105 0.078" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.03" length="0.036" />
+        </geometry>
+      <material name="dark_gray">
+        <color rgba="0.18 0.18 0.19 1" />
+        </material>
+      </visual>
+    <visual name="arm_rest_post">
+      <origin xyz="0.192 -0.015 0.072" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.005" length="0.024" />
+        </geometry>
+      <material name="brushed_aluminum">
+        <color rgba="0.73 0.74 0.76 1" />
+        </material>
+      </visual>
+    <visual name="arm_rest_cradle">
+      <origin xyz="0.192 -0.015 0.086" rpy="0 0 0" />
+      <geometry>
+        <box size="0.02 0.006 0.004" />
+        </geometry>
+      <material name="satin_black">
+        <color rgba="0.08 0.08 0.09 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="platter">
+    <inertial>
+      <origin xyz="0 0 0.016" rpy="0 0 0" />
+      <mass value="1.8" />
+      <inertia ixx="0.0105504" ixy="0" ixz="0" iyy="0.0105504" iyz="0" izz="0.0207936" />
+      </inertial>
+    <visual name="platter_body">
+      <origin xyz="0 0 0.009" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.152" length="0.018" />
+        </geometry>
+      <material name="brushed_aluminum">
+        <color rgba="0.73 0.74 0.76 1" />
+        </material>
+      </visual>
+    <visual name="rubber_mat">
+      <origin xyz="0 0 0.019" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.146" length="0.002" />
+        </geometry>
+      <material name="rubber_black">
+        <color rgba="0.04 0.04 0.04 1" />
+        </material>
+      </visual>
+    <visual name="record_disc">
+      <origin xyz="0 0 0.0209" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.149" length="0.0018" />
+        </geometry>
+      <material name="satin_black">
+        <color rgba="0.08 0.08 0.09 1" />
+        </material>
+      </visual>
+    <visual name="record_label">
+      <origin xyz="0 0 0.0221" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.05" length="0.0006" />
+        </geometry>
+      <material name="label_gray">
+        <color rgba="0.7 0.71 0.73 1" />
+        </material>
+      </visual>
+    <visual name="spindle">
+      <origin xyz="0 0 0.025" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0035" length="0.014" />
+        </geometry>
+      <material name="brushed_aluminum">
+        <color rgba="0.73 0.74 0.76 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="tonearm">
+    <inertial>
+      <origin xyz="0 0.1 0.018" rpy="0 0 0" />
+      <mass value="0.32" />
+      <inertia ixx="0.00297067" ixy="0" ixz="0" iyy="0.000109333" iyz="0" izz="0.00294667" />
+      </inertial>
+    <visual name="pivot_housing">
+      <origin xyz="0 0 0.016" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.032" />
+        </geometry>
+      <material name="brushed_aluminum">
+        <color rgba="0.73 0.74 0.76 1" />
+        </material>
+      </visual>
+    <visual name="arm_tube">
+      <geometry>
+        <mesh filename="assets/meshes/tonearm_tube.obj" />
+        </geometry>
+      <material name="brushed_aluminum">
+        <color rgba="0.73 0.74 0.76 1" />
+        </material>
+      </visual>
+    <visual name="rear_stub">
+      <origin xyz="0 -0.0225 0.02" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0045" length="0.045" />
+        </geometry>
+      <material name="brushed_aluminum">
+        <color rgba="0.73 0.74 0.76 1" />
+        </material>
+      </visual>
+    <visual name="counterweight">
+      <origin xyz="0 -0.06 0.02" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0135" length="0.03" />
+        </geometry>
+      <material name="dark_gray">
+        <color rgba="0.18 0.18 0.19 1" />
+        </material>
+      </visual>
+    <visual name="headshell">
+      <origin xyz="0.006 0.237 0.013" rpy="0 0 0" />
+      <geometry>
+        <box size="0.014 0.028 0.005" />
+        </geometry>
+      <material name="satin_black">
+        <color rgba="0.08 0.08 0.09 1" />
+        </material>
+      </visual>
+    <visual name="cartridge_body">
+      <origin xyz="0.006 0.247 0.008" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.014 0.007" />
+        </geometry>
+      <material name="satin_black">
+        <color rgba="0.08 0.08 0.09 1" />
+        </material>
+      </visual>
+    </link>
+  <joint name="platter_spin" type="continuous">
+    <origin xyz="0 0 0.078" rpy="0 0 0" />
+    <parent link="plinth" />
+    <child link="platter" />
+    <axis xyz="0 0 1" />
+    <limit effort="2" velocity="12" />
+    </joint>
+  <joint name="tonearm_pivot" type="revolute">
+    <origin xyz="0.155 -0.105 0.096" rpy="0 0 0" />
+    <parent link="plinth" />
+    <child link="tonearm" />
+    <axis xyz="0 0 1" />
+    <limit effort="0.5" velocity="1.2" lower="-0.2" upper="0.95" />
+    </joint>
+  </robot>

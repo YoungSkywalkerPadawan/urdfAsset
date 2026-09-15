@@ -1,0 +1,326 @@
+<robot name="vintage_desktop_pencil_sharpener">
+  <material name="body_finish">
+    <color rgba="0.45 0.07 0.08 1" />
+    </material>
+  <material name="steel">
+    <color rgba="0.63 0.66 0.7 1" />
+    </material>
+  <material name="dark_metal">
+    <color rgba="0.22 0.23 0.25 1" />
+    </material>
+  <material name="bakelite">
+    <color rgba="0.1 0.09 0.08 1" />
+    </material>
+  <link name="body">
+    <visual name="housing">
+      <geometry>
+        <mesh filename="assets/meshes/sharpener_housing.obj" />
+        </geometry>
+      <material name="body_finish">
+        <color rgba="0.45 0.07 0.08 1" />
+        </material>
+      </visual>
+    <collision name="housing">
+      <geometry>
+        <mesh filename="assets/meshes/sharpener_housing.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="drawer">
+    <visual name="tray_bottom">
+      <origin xyz="-0.044 0 0.001" rpy="0 0 0" />
+      <geometry>
+        <box size="0.088 0.054 0.002" />
+        </geometry>
+      <material name="dark_metal">
+        <color rgba="0.22 0.23 0.25 1" />
+        </material>
+      </visual>
+    <visual name="tray_side_0">
+      <origin xyz="-0.044 0.026 0.012" rpy="0 0 0" />
+      <geometry>
+        <box size="0.088 0.002 0.022" />
+        </geometry>
+      <material name="dark_metal">
+        <color rgba="0.22 0.23 0.25 1" />
+        </material>
+      </visual>
+    <visual name="tray_side_1">
+      <origin xyz="-0.044 -0.026 0.012" rpy="0 0 0" />
+      <geometry>
+        <box size="0.088 0.002 0.022" />
+        </geometry>
+      <material name="dark_metal">
+        <color rgba="0.22 0.23 0.25 1" />
+        </material>
+      </visual>
+    <visual name="tray_back">
+      <origin xyz="-0.087 0 0.012" rpy="0 0 0" />
+      <geometry>
+        <box size="0.002 0.054 0.022" />
+        </geometry>
+      <material name="dark_metal">
+        <color rgba="0.22 0.23 0.25 1" />
+        </material>
+      </visual>
+    <visual name="drawer_front">
+      <origin xyz="0.003 0 0.017" rpy="0 0 0" />
+      <geometry>
+        <box size="0.006 0.066 0.034" />
+        </geometry>
+      <material name="body_finish">
+        <color rgba="0.45 0.07 0.08 1" />
+        </material>
+      </visual>
+    <visual name="drawer_knob">
+      <origin xyz="0.013 0 0.017" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0055" length="0.014" />
+        </geometry>
+      <material name="bakelite">
+        <color rgba="0.1 0.09 0.08 1" />
+        </material>
+      </visual>
+    <collision name="tray_bottom">
+      <origin xyz="-0.044 0 0.001" rpy="0 0 0" />
+      <geometry>
+        <box size="0.088 0.054 0.002" />
+        </geometry>
+      </collision>
+    <collision name="tray_side_0">
+      <origin xyz="-0.044 0.026 0.012" rpy="0 0 0" />
+      <geometry>
+        <box size="0.088 0.002 0.022" />
+        </geometry>
+      </collision>
+    <collision name="tray_side_1">
+      <origin xyz="-0.044 -0.026 0.012" rpy="0 0 0" />
+      <geometry>
+        <box size="0.088 0.002 0.022" />
+        </geometry>
+      </collision>
+    <collision name="tray_back">
+      <origin xyz="-0.087 0 0.012" rpy="0 0 0" />
+      <geometry>
+        <box size="0.002 0.054 0.022" />
+        </geometry>
+      </collision>
+    <collision name="drawer_front">
+      <origin xyz="0.003 0 0.017" rpy="0 0 0" />
+      <geometry>
+        <box size="0.006 0.066 0.034" />
+        </geometry>
+      </collision>
+    <collision name="drawer_knob">
+      <origin xyz="0.013 0 0.017" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0055" length="0.014" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="cleanout_door">
+    <visual name="door_panel">
+      <origin xyz="0.017 -0.0015 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.034 0.003 0.032" />
+        </geometry>
+      <material name="body_finish">
+        <color rgba="0.45 0.07 0.08 1" />
+        </material>
+      </visual>
+    <visual name="door_flange">
+      <origin xyz="0.018 0.00125 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.028 0.0025 0.026" />
+        </geometry>
+      <material name="dark_metal">
+        <color rgba="0.22 0.23 0.25 1" />
+        </material>
+      </visual>
+    <visual name="door_hinge_0">
+      <origin xyz="-0.0024 -0.0012 -0.011" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0025" length="0.008" />
+        </geometry>
+      <material name="steel">
+        <color rgba="0.63 0.66 0.7 1" />
+        </material>
+      </visual>
+    <visual name="door_hinge_1">
+      <origin xyz="-0.0024 -0.0012 0" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0025" length="0.008" />
+        </geometry>
+      <material name="steel">
+        <color rgba="0.63 0.66 0.7 1" />
+        </material>
+      </visual>
+    <visual name="door_hinge_2">
+      <origin xyz="-0.0024 -0.0012 0.011" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0025" length="0.008" />
+        </geometry>
+      <material name="steel">
+        <color rgba="0.63 0.66 0.7 1" />
+        </material>
+      </visual>
+    <visual name="door_tab">
+      <origin xyz="0.034 -0.0015 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0022" length="0.006" />
+        </geometry>
+      <material name="steel">
+        <color rgba="0.63 0.66 0.7 1" />
+        </material>
+      </visual>
+    <collision name="door_panel">
+      <origin xyz="0.017 -0.0015 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.034 0.003 0.032" />
+        </geometry>
+      </collision>
+    <collision name="door_flange">
+      <origin xyz="0.018 0.00125 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.028 0.0025 0.026" />
+        </geometry>
+      </collision>
+    <collision name="door_hinge_0">
+      <origin xyz="-0.0024 -0.0012 -0.011" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0025" length="0.008" />
+        </geometry>
+      </collision>
+    <collision name="door_hinge_1">
+      <origin xyz="-0.0024 -0.0012 0" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0025" length="0.008" />
+        </geometry>
+      </collision>
+    <collision name="door_hinge_2">
+      <origin xyz="-0.0024 -0.0012 0.011" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0025" length="0.008" />
+        </geometry>
+      </collision>
+    <collision name="door_tab">
+      <origin xyz="0.034 -0.0015 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0022" length="0.006" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="crank">
+    <visual name="crank_hub">
+      <origin xyz="0 0.012 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0065" length="0.024" />
+        </geometry>
+      <material name="steel">
+        <color rgba="0.63 0.66 0.7 1" />
+        </material>
+      </visual>
+    <visual name="crank_shoulder">
+      <origin xyz="-0.002 0.014 0.003" rpy="0 0 0" />
+      <geometry>
+        <box size="0.02 0.012 0.018" />
+        </geometry>
+      <material name="steel">
+        <color rgba="0.63 0.66 0.7 1" />
+        </material>
+      </visual>
+    <visual name="crank_arm">
+      <origin xyz="-0.014 0.014 0.016" rpy="0 2.30361 0" />
+      <geometry>
+        <box size="0.0538145 0.01 0.01" />
+        </geometry>
+      <material name="steel">
+        <color rgba="0.63 0.66 0.7 1" />
+        </material>
+      </visual>
+    <visual name="crank_elbow">
+      <origin xyz="-0.028 0.017 0.028" rpy="0 0 0" />
+      <geometry>
+        <box size="0.024 0.014 0.022" />
+        </geometry>
+      <material name="steel">
+        <color rgba="0.63 0.66 0.7 1" />
+        </material>
+      </visual>
+    <visual name="crank_pin">
+      <origin xyz="-0.032 0.028 0.036" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0032" length="0.032" />
+        </geometry>
+      <material name="steel">
+        <color rgba="0.63 0.66 0.7 1" />
+        </material>
+      </visual>
+    <visual name="crank_grip">
+      <origin xyz="-0.032 0.051 0.036" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0075" length="0.02" />
+        </geometry>
+      <material name="bakelite">
+        <color rgba="0.1 0.09 0.08 1" />
+        </material>
+      </visual>
+    <collision name="crank_hub">
+      <origin xyz="0 0.012 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0065" length="0.024" />
+        </geometry>
+      </collision>
+    <collision name="crank_shoulder">
+      <origin xyz="-0.002 0.014 0.003" rpy="0 0 0" />
+      <geometry>
+        <box size="0.02 0.012 0.018" />
+        </geometry>
+      </collision>
+    <collision name="crank_arm">
+      <origin xyz="-0.014 0.014 0.016" rpy="0 2.30361 0" />
+      <geometry>
+        <box size="0.0538145 0.01 0.01" />
+        </geometry>
+      </collision>
+    <collision name="crank_elbow">
+      <origin xyz="-0.028 0.017 0.028" rpy="0 0 0" />
+      <geometry>
+        <box size="0.024 0.014 0.022" />
+        </geometry>
+      </collision>
+    <collision name="crank_pin">
+      <origin xyz="-0.032 0.028 0.036" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0032" length="0.032" />
+        </geometry>
+      </collision>
+    <collision name="crank_grip">
+      <origin xyz="-0.032 0.051 0.036" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0075" length="0.02" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="body_to_drawer" type="prismatic">
+    <origin xyz="0.058 0 0.018" rpy="0 0 0" />
+    <parent link="body" />
+    <child link="drawer" />
+    <axis xyz="1 0 0" />
+    <limit effort="15" velocity="0.12" lower="0" upper="0.045" />
+    </joint>
+  <joint name="body_to_cleanout_door" type="revolute">
+    <origin xyz="-0.021 -0.043 0.035" rpy="0 0 0" />
+    <parent link="body" />
+    <child link="cleanout_door" />
+    <axis xyz="0 0 -1" />
+    <limit effort="2" velocity="2" lower="0" upper="1.25" />
+    </joint>
+  <joint name="body_to_crank" type="continuous">
+    <origin xyz="-0.006 0.042 0.1" rpy="0 0 0" />
+    <parent link="body" />
+    <child link="crank" />
+    <axis xyz="0 1 0" />
+    <limit effort="3" velocity="18" />
+    </joint>
+  </robot>

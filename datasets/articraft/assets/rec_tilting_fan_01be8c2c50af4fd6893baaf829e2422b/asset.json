@@ -1,0 +1,121 @@
+{
+  "summary": {
+    "id": "rec_tilting_fan_01be8c2c50af4fd6893baaf829e2422b",
+    "category": "fan",
+    "robot_name": "compact_tilting_fan",
+    "joint_count": 1,
+    "link_count": 3,
+    "target_link_count": 2,
+    "family": "rec_tilting_fan",
+    "warnings": [],
+    "diagonal": 0.40039642930728586,
+    "bytes": 3466890
+  },
+  "source": {
+    "dataset": "camvsl/Articraft-10K",
+    "revision": "3c79d5a05bb7cb6bf7bfee5e090176636ee3ac65",
+    "license": "CC-BY-4.0",
+    "url": "https://huggingface.co/datasets/camvsl/Articraft-10K/blob/3c79d5a05bb7cb6bf7bfee5e090176636ee3ac65/rec_tilting_fan_01be8c2c50af4fd6893baaf829e2422b.tar.gz",
+    "archive_sha256": "747eb530413097bb60bca1bd154eca242416dd25672d66879f4565f3b37b804d",
+    "archive": "rec_tilting_fan_01be8c2c50af4fd6893baaf829e2422b.tar.gz",
+    "label_status": "Original generated URDF reference; not manually verified or physically validated"
+  },
+  "links": [
+    {
+      "id": "link_000",
+      "name": "base",
+      "point_file": null,
+      "faces": 400,
+      "vertices": 214,
+      "bounds": [
+        [
+          -0.095,
+          -0.12300005142481074,
+          0.0
+        ],
+        [
+          0.095,
+          0.12300005142481074,
+          0.14400003305875148
+        ]
+      ]
+    },
+    {
+      "id": "link_001",
+      "name": "head",
+      "point_file": "inputs/link_001.npz",
+      "faces": 6284,
+      "vertices": 3332,
+      "bounds": [
+        [
+          -0.012,
+          -0.10500004407838029,
+          0.0445
+        ],
+        [
+          0.1315,
+          0.10500004407838029,
+          0.21550000000000002
+        ]
+      ]
+    },
+    {
+      "id": "link_002",
+      "name": "rotor",
+      "point_file": "inputs/link_002.npz",
+      "faces": 1074,
+      "vertices": 571,
+      "bounds": [
+        [
+          0.09399994857518927,
+          -0.031963114363312034,
+          0.0926384464454118
+        ],
+        [
+          0.136,
+          0.039,
+          0.1671876788340025
+        ]
+      ]
+    }
+  ],
+  "joints": [
+    {
+      "name": "base_to_head",
+      "type": "revolute",
+      "parent": "link_000",
+      "child": "link_001",
+      "reference_q": 0.0,
+      "mimic": null
+    },
+    {
+      "name": "head_to_rotor",
+      "type": "continuous",
+      "parent": "link_001",
+      "child": "link_002",
+      "reference_q": 0.0,
+      "mimic": null
+    }
+  ],
+  "bounds": [
+    [
+      -0.095,
+      -0.12300005142481074,
+      0.0
+    ],
+    [
+      0.136,
+      0.12300005142481074,
+      0.21550000000000002
+    ]
+  ],
+  "point_pool_size": 65536,
+  "reference_pose": "Zero position clamped to limits; mimic values propagated",
+  "qc": {
+    "finite_geometry": true,
+    "tree_valid": true,
+    "axis_unit": true,
+    "physical_collision_validation": false,
+    "visual_tessellation": "32 cylinder segments, icosphere subdivision 2"
+  }
+}

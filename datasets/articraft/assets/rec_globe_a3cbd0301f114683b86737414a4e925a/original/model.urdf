@@ -1,0 +1,36 @@
+<robot name="globe_stand">
+  <link name="base">
+    <visual name="base_mesh">
+      <geometry>
+        <mesh filename="assets/meshes/base_mesh.obj" />
+        </geometry>
+      </visual>
+    </link>
+  <link name="meridian">
+    <visual name="meridian_mesh">
+      <geometry>
+        <mesh filename="assets/meshes/meridian_mesh.obj" />
+        </geometry>
+      </visual>
+    </link>
+  <link name="globe">
+    <visual name="sphere">
+      <geometry>
+        <sphere radius="0.15" />
+        </geometry>
+      </visual>
+    </link>
+  <joint name="meridian_tilt" type="revolute">
+    <origin xyz="0 0 0.3" rpy="0 0 0" />
+    <parent link="base" />
+    <child link="meridian" />
+    <axis xyz="1 0 0" />
+    <limit effort="1" velocity="1" lower="-1.57" upper="1.57" />
+    </joint>
+  <joint name="globe_spin" type="continuous">
+    <parent link="meridian" />
+    <child link="globe" />
+    <axis xyz="0 0 1" />
+    <limit effort="1" velocity="5" />
+    </joint>
+  </robot>

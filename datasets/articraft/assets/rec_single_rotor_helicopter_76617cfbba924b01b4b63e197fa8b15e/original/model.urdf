@@ -1,0 +1,638 @@
+<robot name="tour_helicopter">
+  <material name="body_paint">
+    <color rgba="0.95 0.96 0.97 1" />
+    </material>
+  <material name="trim_dark">
+    <color rgba="0.16 0.18 0.21 1" />
+    </material>
+  <material name="skid_steel">
+    <color rgba="0.3 0.31 0.33 1" />
+    </material>
+  <material name="glass">
+    <color rgba="0.56 0.72 0.82 0.35" />
+    </material>
+  <material name="cabin_trim">
+    <color rgba="0.24 0.25 0.27 1" />
+    </material>
+  <material name="seat_vinyl">
+    <color rgba="0.13 0.13 0.14 1" />
+    </material>
+  <material name="rotor_gray">
+    <color rgba="0.22 0.23 0.25 1" />
+    </material>
+  <link name="body">
+    <inertial>
+      <origin xyz="-1.2 0 1" rpy="0 0 0" />
+      <mass value="1250" />
+      <inertia ixx="768.417" ixy="0" ixz="0" iyy="3476.55" iyz="0" izz="3254.89" />
+      </inertial>
+    <visual name="body_shell">
+      <geometry>
+        <mesh filename="assets/meshes/body_shell.obj" />
+        </geometry>
+      <material name="body_paint">
+        <color rgba="0.95 0.96 0.97 1" />
+        </material>
+      </visual>
+    <visual name="windshield">
+      <geometry>
+        <mesh filename="assets/meshes/windshield.obj" />
+        </geometry>
+      <material name="glass">
+        <color rgba="0.56 0.72 0.82 0.35" />
+        </material>
+      </visual>
+    <visual name="tail_boom">
+      <origin xyz="-3.12 0 1.18" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.11" length="2.8" />
+        </geometry>
+      <material name="body_paint">
+        <color rgba="0.95 0.96 0.97 1" />
+        </material>
+      </visual>
+    <visual name="tail_boom_tip">
+      <origin xyz="-4.36 0 1.22" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.07" length="1.2" />
+        </geometry>
+      <material name="body_paint">
+        <color rgba="0.95 0.96 0.97 1" />
+        </material>
+      </visual>
+    <visual name="vertical_fin">
+      <origin xyz="-4.56 0 1.55" rpy="0 0 0" />
+      <geometry>
+        <box size="0.34 0.08 0.74" />
+        </geometry>
+      <material name="body_paint">
+        <color rgba="0.95 0.96 0.97 1" />
+        </material>
+      </visual>
+    <visual name="horizontal_stab">
+      <origin xyz="-4.12 0 1.18" rpy="0 0 0" />
+      <geometry>
+        <box size="0.58 0.18 0.04" />
+        </geometry>
+      <material name="body_paint">
+        <color rgba="0.95 0.96 0.97 1" />
+        </material>
+      </visual>
+    <visual name="tail_shaft">
+      <origin xyz="-5.035 0 1.23" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.035" length="0.16" />
+        </geometry>
+      <material name="body_paint">
+        <color rgba="0.95 0.96 0.97 1" />
+        </material>
+      </visual>
+    <visual name="tail_gearbox">
+      <origin xyz="-5.155 0 1.23" rpy="0 0 0" />
+      <geometry>
+        <box size="0.08 0.14 0.14" />
+        </geometry>
+      <material name="body_paint">
+        <color rgba="0.95 0.96 0.97 1" />
+        </material>
+      </visual>
+    <visual name="cabin_floor">
+      <origin xyz="-0.1 0 0.6" rpy="0 0 0" />
+      <geometry>
+        <box size="1.32 1.02 0.08" />
+        </geometry>
+      <material name="cabin_trim">
+        <color rgba="0.24 0.25 0.27 1" />
+        </material>
+      </visual>
+    <visual name="left_hinge_post">
+      <origin xyz="0.34 0.57 1.24" rpy="0 0 0" />
+      <geometry>
+        <box size="0.04 0.06 0.86" />
+        </geometry>
+      <material name="trim_dark">
+        <color rgba="0.16 0.18 0.21 1" />
+        </material>
+      </visual>
+    <visual name="right_hinge_post">
+      <origin xyz="0.34 -0.5951 1.24" rpy="0 0 0" />
+      <geometry>
+        <box size="0.04 0.06 0.86" />
+        </geometry>
+      <material name="trim_dark">
+        <color rgba="0.16 0.18 0.21 1" />
+        </material>
+      </visual>
+    <visual name="hatch_hinge_post">
+      <origin xyz="-1.78 0.375 1.17" rpy="0 0 0" />
+      <geometry>
+        <box size="0.04 0.04 0.48" />
+        </geometry>
+      <material name="trim_dark">
+        <color rgba="0.16 0.18 0.21 1" />
+        </material>
+      </visual>
+    <visual name="left_front_seat_base">
+      <origin xyz="0.12 0.28 0.68" rpy="0 0 0" />
+      <geometry>
+        <box size="0.32 0.4 0.12" />
+        </geometry>
+      <material name="seat_vinyl">
+        <color rgba="0.13 0.13 0.14 1" />
+        </material>
+      </visual>
+    <visual name="right_front_seat_base">
+      <origin xyz="0.12 -0.28 0.68" rpy="0 0 0" />
+      <geometry>
+        <box size="0.32 0.4 0.12" />
+        </geometry>
+      <material name="seat_vinyl">
+        <color rgba="0.13 0.13 0.14 1" />
+        </material>
+      </visual>
+    <visual name="left_front_seat_back">
+      <origin xyz="-0.02 0.28 0.87" rpy="0 0 0" />
+      <geometry>
+        <box size="0.1 0.38 0.34" />
+        </geometry>
+      <material name="seat_vinyl">
+        <color rgba="0.13 0.13 0.14 1" />
+        </material>
+      </visual>
+    <visual name="right_front_seat_back">
+      <origin xyz="-0.02 -0.28 0.87" rpy="0 0 0" />
+      <geometry>
+        <box size="0.1 0.38 0.34" />
+        </geometry>
+      <material name="seat_vinyl">
+        <color rgba="0.13 0.13 0.14 1" />
+        </material>
+      </visual>
+    <visual name="rear_bench_base">
+      <origin xyz="-0.58 0 0.68" rpy="0 0 0" />
+      <geometry>
+        <box size="0.58 0.48 0.14" />
+        </geometry>
+      <material name="seat_vinyl">
+        <color rgba="0.13 0.13 0.14 1" />
+        </material>
+      </visual>
+    <visual name="rear_bench_back">
+      <origin xyz="-0.8 0 0.85" rpy="0 0 0" />
+      <geometry>
+        <box size="0.12 0.5 0.32" />
+        </geometry>
+      <material name="seat_vinyl">
+        <color rgba="0.13 0.13 0.14 1" />
+        </material>
+      </visual>
+    <visual name="console">
+      <origin xyz="0.56 0 0.78" rpy="0 0 0" />
+      <geometry>
+        <box size="0.22 0.18 0.34" />
+        </geometry>
+      <material name="trim_dark">
+        <color rgba="0.16 0.18 0.21 1" />
+        </material>
+      </visual>
+    <visual name="mast_fairing">
+      <origin xyz="0.06 0 1.79" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.11" length="0.3" />
+        </geometry>
+      <material name="trim_dark">
+        <color rgba="0.16 0.18 0.21 1" />
+        </material>
+      </visual>
+    <visual name="mast">
+      <origin xyz="0.06 0 1.95" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.05" length="0.38" />
+        </geometry>
+      <material name="trim_dark">
+        <color rgba="0.16 0.18 0.21 1" />
+        </material>
+      </visual>
+    <visual name="left_skid">
+      <geometry>
+        <mesh filename="assets/meshes/left_skid.obj" />
+        </geometry>
+      <material name="skid_steel">
+        <color rgba="0.3 0.31 0.33 1" />
+        </material>
+      </visual>
+    <visual name="right_skid">
+      <geometry>
+        <mesh filename="assets/meshes/right_skid.obj" />
+        </geometry>
+      <material name="skid_steel">
+        <color rgba="0.3 0.31 0.33 1" />
+        </material>
+      </visual>
+    <visual name="front_cross_tube">
+      <geometry>
+        <mesh filename="assets/meshes/front_cross_tube.obj" />
+        </geometry>
+      <material name="skid_steel">
+        <color rgba="0.3 0.31 0.33 1" />
+        </material>
+      </visual>
+    <visual name="rear_cross_tube">
+      <geometry>
+        <mesh filename="assets/meshes/rear_cross_tube.obj" />
+        </geometry>
+      <material name="skid_steel">
+        <color rgba="0.3 0.31 0.33 1" />
+        </material>
+      </visual>
+    <collision name="body_shell">
+      <geometry>
+        <mesh filename="assets/meshes/body_shell.obj" />
+        </geometry>
+      </collision>
+    <collision name="windshield">
+      <geometry>
+        <mesh filename="assets/meshes/windshield.obj" />
+        </geometry>
+      </collision>
+    <collision name="tail_boom">
+      <origin xyz="-3.12 0 1.18" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.11" length="2.8" />
+        </geometry>
+      </collision>
+    <collision name="tail_boom_tip">
+      <origin xyz="-4.36 0 1.22" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.07" length="1.2" />
+        </geometry>
+      </collision>
+    <collision name="vertical_fin">
+      <origin xyz="-4.56 0 1.55" rpy="0 0 0" />
+      <geometry>
+        <box size="0.34 0.08 0.74" />
+        </geometry>
+      </collision>
+    <collision name="horizontal_stab">
+      <origin xyz="-4.12 0 1.18" rpy="0 0 0" />
+      <geometry>
+        <box size="0.58 0.18 0.04" />
+        </geometry>
+      </collision>
+    <collision name="tail_shaft">
+      <origin xyz="-5.035 0 1.23" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.035" length="0.16" />
+        </geometry>
+      </collision>
+    <collision name="tail_gearbox">
+      <origin xyz="-5.155 0 1.23" rpy="0 0 0" />
+      <geometry>
+        <box size="0.08 0.14 0.14" />
+        </geometry>
+      </collision>
+    <collision name="cabin_floor">
+      <origin xyz="-0.1 0 0.6" rpy="0 0 0" />
+      <geometry>
+        <box size="1.32 1.02 0.08" />
+        </geometry>
+      </collision>
+    <collision name="left_hinge_post">
+      <origin xyz="0.34 0.57 1.24" rpy="0 0 0" />
+      <geometry>
+        <box size="0.04 0.06 0.86" />
+        </geometry>
+      </collision>
+    <collision name="right_hinge_post">
+      <origin xyz="0.34 -0.5951 1.24" rpy="0 0 0" />
+      <geometry>
+        <box size="0.04 0.06 0.86" />
+        </geometry>
+      </collision>
+    <collision name="hatch_hinge_post">
+      <origin xyz="-1.78 0.375 1.17" rpy="0 0 0" />
+      <geometry>
+        <box size="0.04 0.04 0.48" />
+        </geometry>
+      </collision>
+    <collision name="left_front_seat_base">
+      <origin xyz="0.12 0.28 0.68" rpy="0 0 0" />
+      <geometry>
+        <box size="0.32 0.4 0.12" />
+        </geometry>
+      </collision>
+    <collision name="right_front_seat_base">
+      <origin xyz="0.12 -0.28 0.68" rpy="0 0 0" />
+      <geometry>
+        <box size="0.32 0.4 0.12" />
+        </geometry>
+      </collision>
+    <collision name="left_front_seat_back">
+      <origin xyz="-0.02 0.28 0.87" rpy="0 0 0" />
+      <geometry>
+        <box size="0.1 0.38 0.34" />
+        </geometry>
+      </collision>
+    <collision name="right_front_seat_back">
+      <origin xyz="-0.02 -0.28 0.87" rpy="0 0 0" />
+      <geometry>
+        <box size="0.1 0.38 0.34" />
+        </geometry>
+      </collision>
+    <collision name="rear_bench_base">
+      <origin xyz="-0.58 0 0.68" rpy="0 0 0" />
+      <geometry>
+        <box size="0.58 0.48 0.14" />
+        </geometry>
+      </collision>
+    <collision name="rear_bench_back">
+      <origin xyz="-0.8 0 0.85" rpy="0 0 0" />
+      <geometry>
+        <box size="0.12 0.5 0.32" />
+        </geometry>
+      </collision>
+    <collision name="console">
+      <origin xyz="0.56 0 0.78" rpy="0 0 0" />
+      <geometry>
+        <box size="0.22 0.18 0.34" />
+        </geometry>
+      </collision>
+    <collision name="mast_fairing">
+      <origin xyz="0.06 0 1.79" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.11" length="0.3" />
+        </geometry>
+      </collision>
+    <collision name="mast">
+      <origin xyz="0.06 0 1.95" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.05" length="0.38" />
+        </geometry>
+      </collision>
+    <collision name="left_skid">
+      <geometry>
+        <mesh filename="assets/meshes/left_skid.obj" />
+        </geometry>
+      </collision>
+    <collision name="right_skid">
+      <geometry>
+        <mesh filename="assets/meshes/right_skid.obj" />
+        </geometry>
+      </collision>
+    <collision name="front_cross_tube">
+      <geometry>
+        <mesh filename="assets/meshes/front_cross_tube.obj" />
+        </geometry>
+      </collision>
+    <collision name="rear_cross_tube">
+      <geometry>
+        <mesh filename="assets/meshes/rear_cross_tube.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="left_door">
+    <inertial>
+      <origin xyz="-0.42 -0.015 0" rpy="0 0 0" />
+      <mass value="16" />
+      <inertia ixx="1.08213" ixy="0" ixz="0" iyy="2.11253" iyz="0" izz="1.03467" />
+      </inertial>
+    <visual name="door_frame">
+      <origin xyz="0 -0.03 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/left_door_frame.obj" />
+        </geometry>
+      <material name="body_paint">
+        <color rgba="0.95 0.96 0.97 1" />
+        </material>
+      </visual>
+    <visual name="door_window">
+      <origin xyz="0 -0.021 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/left_door_window.obj" />
+        </geometry>
+      <material name="glass">
+        <color rgba="0.56 0.72 0.82 0.35" />
+        </material>
+      </visual>
+    <visual name="door_handle">
+      <origin xyz="-0.46 -0.012 -0.06" rpy="0 0 0" />
+      <geometry>
+        <box size="0.06 0.024 0.1" />
+        </geometry>
+      <material name="trim_dark">
+        <color rgba="0.16 0.18 0.21 1" />
+        </material>
+      </visual>
+    <collision name="door_frame">
+      <origin xyz="0 -0.03 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/left_door_frame.obj" />
+        </geometry>
+      </collision>
+    <collision name="door_window">
+      <origin xyz="0 -0.021 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/left_door_window.obj" />
+        </geometry>
+      </collision>
+    <collision name="door_handle">
+      <origin xyz="-0.46 -0.012 -0.06" rpy="0 0 0" />
+      <geometry>
+        <box size="0.06 0.024 0.1" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="right_door">
+    <inertial>
+      <origin xyz="-0.42 0.015 0" rpy="0 0 0" />
+      <mass value="16" />
+      <inertia ixx="1.08213" ixy="0" ixz="0" iyy="2.11253" iyz="0" izz="1.03467" />
+      </inertial>
+    <visual name="door_frame">
+      <geometry>
+        <mesh filename="assets/meshes/right_door_frame.obj" />
+        </geometry>
+      <material name="body_paint">
+        <color rgba="0.95 0.96 0.97 1" />
+        </material>
+      </visual>
+    <visual name="door_window">
+      <origin xyz="0 0.009 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/right_door_window.obj" />
+        </geometry>
+      <material name="glass">
+        <color rgba="0.56 0.72 0.82 0.35" />
+        </material>
+      </visual>
+    <visual name="door_handle">
+      <origin xyz="-0.46 0.012 -0.06" rpy="0 0 0" />
+      <geometry>
+        <box size="0.06 0.024 0.1" />
+        </geometry>
+      <material name="trim_dark">
+        <color rgba="0.16 0.18 0.21 1" />
+        </material>
+      </visual>
+    <collision name="door_frame">
+      <geometry>
+        <mesh filename="assets/meshes/right_door_frame.obj" />
+        </geometry>
+      </collision>
+    <collision name="door_window">
+      <origin xyz="0 0.009 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/right_door_window.obj" />
+        </geometry>
+      </collision>
+    <collision name="door_handle">
+      <origin xyz="-0.46 0.012 -0.06" rpy="0 0 0" />
+      <geometry>
+        <box size="0.06 0.024 0.1" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="luggage_hatch">
+    <inertial>
+      <origin xyz="0.3 -0.014 0" rpy="0 0 0" />
+      <mass value="9" />
+      <inertia ixx="0.1887" ixy="0" ixz="0" iyy="0.4947" iyz="0" izz="0.3084" />
+      </inertial>
+    <visual name="hatch_panel">
+      <origin xyz="0 -0.028 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/luggage_hatch_panel.obj" />
+        </geometry>
+      <material name="body_paint">
+        <color rgba="0.95 0.96 0.97 1" />
+        </material>
+      </visual>
+    <visual name="hatch_handle">
+      <origin xyz="0.22 -0.014 -0.03" rpy="0 0 0" />
+      <geometry>
+        <box size="0.07 0.028 0.08" />
+        </geometry>
+      <material name="trim_dark">
+        <color rgba="0.16 0.18 0.21 1" />
+        </material>
+      </visual>
+    <collision name="hatch_panel">
+      <origin xyz="0 -0.028 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/luggage_hatch_panel.obj" />
+        </geometry>
+      </collision>
+    <collision name="hatch_handle">
+      <origin xyz="0.22 -0.014 -0.03" rpy="0 0 0" />
+      <geometry>
+        <box size="0.07 0.028 0.08" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="main_rotor">
+    <inertial>
+      <origin xyz="0 0 0.08" rpy="0 0 0" />
+      <mass value="32" />
+      <inertia ixx="86.7264" ixy="0" ixz="0" iyy="86.7264" iyz="0" izz="173.28" />
+      </inertial>
+    <visual name="main_rotor">
+      <geometry>
+        <mesh filename="assets/meshes/main_rotor.obj" />
+        </geometry>
+      <material name="rotor_gray">
+        <color rgba="0.22 0.23 0.25 1" />
+        </material>
+      </visual>
+    <collision name="main_rotor">
+      <geometry>
+        <mesh filename="assets/meshes/main_rotor.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="tail_rotor">
+    <inertial>
+      <mass value="4.5" />
+      <inertia ixx="0.1404" ixy="0" ixz="0" iyy="0.27" iyz="0" izz="0.1404" />
+      </inertial>
+    <visual name="tail_hub">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.045" length="0.1" />
+        </geometry>
+      <material name="trim_dark">
+        <color rgba="0.16 0.18 0.21 1" />
+        </material>
+      </visual>
+    <visual name="tail_blade_up">
+      <origin xyz="0 0 0.1725" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.02 0.255" />
+        </geometry>
+      <material name="rotor_gray">
+        <color rgba="0.22 0.23 0.25 1" />
+        </material>
+      </visual>
+    <visual name="tail_blade_down">
+      <origin xyz="0 0 -0.1725" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.02 0.255" />
+        </geometry>
+      <material name="rotor_gray">
+        <color rgba="0.22 0.23 0.25 1" />
+        </material>
+      </visual>
+    <collision name="tail_hub">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.045" length="0.1" />
+        </geometry>
+      </collision>
+    <collision name="tail_blade_up">
+      <origin xyz="0 0 0.1725" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.02 0.255" />
+        </geometry>
+      </collision>
+    <collision name="tail_blade_down">
+      <origin xyz="0 0 -0.1725" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.02 0.255" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="left_door_hinge" type="revolute">
+    <origin xyz="0.34 0.66 1.24" rpy="0 0 0" />
+    <parent link="body" />
+    <child link="left_door" />
+    <axis xyz="0 0 -1" />
+    <limit effort="40" velocity="1.2" lower="0" upper="1.3" />
+    </joint>
+  <joint name="right_door_hinge" type="revolute">
+    <origin xyz="0.34 -0.66 1.24" rpy="0 0 0" />
+    <parent link="body" />
+    <child link="right_door" />
+    <axis xyz="0 0 1" />
+    <limit effort="40" velocity="1.2" lower="0" upper="1.3" />
+    </joint>
+  <joint name="luggage_hatch_hinge" type="revolute">
+    <origin xyz="-1.78 0.45 1.17" rpy="0 0 0" />
+    <parent link="body" />
+    <child link="luggage_hatch" />
+    <axis xyz="0 0 1" />
+    <limit effort="25" velocity="1" lower="0" upper="1.15" />
+    </joint>
+  <joint name="main_rotor_spin" type="continuous">
+    <origin xyz="0.06 0 2.14" rpy="0 0 0" />
+    <parent link="body" />
+    <child link="main_rotor" />
+    <axis xyz="0 0 1" />
+    <limit effort="80" velocity="35" />
+    </joint>
+  <joint name="tail_rotor_spin" type="continuous">
+    <origin xyz="-5.24 0 1.24" rpy="0 0 0" />
+    <parent link="body" />
+    <child link="tail_rotor" />
+    <axis xyz="0 1 0" />
+    <limit effort="18" velocity="55" />
+    </joint>
+  </robot>

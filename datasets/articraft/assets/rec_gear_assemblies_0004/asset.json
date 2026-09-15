@@ -1,0 +1,148 @@
+{
+  "summary": {
+    "id": "rec_gear_assemblies_0004",
+    "category": "gear",
+    "robot_name": "right_angle_gear_assembly",
+    "joint_count": 3,
+    "link_count": 4,
+    "target_link_count": 4,
+    "family": "rec_gear_assemblies",
+    "warnings": [],
+    "diagonal": 0.36693954425218334,
+    "bytes": 7372190
+  },
+  "source": {
+    "dataset": "camvsl/Articraft-10K",
+    "revision": "3c79d5a05bb7cb6bf7bfee5e090176636ee3ac65",
+    "license": "CC-BY-4.0",
+    "url": "https://huggingface.co/datasets/camvsl/Articraft-10K/blob/3c79d5a05bb7cb6bf7bfee5e090176636ee3ac65/rec_gear_assemblies_0004.tar.gz",
+    "archive_sha256": "1b67afbfddb7a72dd4cf503d39204c280994ad1771529badec988b54ab09cfb0",
+    "archive": "rec_gear_assemblies_0004.tar.gz",
+    "label_status": "Original generated URDF reference; not manually verified or physically validated"
+  },
+  "links": [
+    {
+      "id": "link_000",
+      "name": "base",
+      "point_file": "inputs/link_000.npz",
+      "faces": 6196,
+      "vertices": 6306,
+      "bounds": [
+        [
+          -0.039999999999999994,
+          -0.05,
+          0.0
+        ],
+        [
+          0.2,
+          0.08,
+          0.16
+        ]
+      ]
+    },
+    {
+      "id": "link_001",
+      "name": "input_shaft",
+      "point_file": "inputs/link_001.npz",
+      "faces": 4598,
+      "vertices": 2925,
+      "bounds": [
+        [
+          -0.022855,
+          -0.022855,
+          0.010000000000000002
+        ],
+        [
+          0.022855,
+          0.022855,
+          0.24000000000000002
+        ]
+      ]
+    },
+    {
+      "id": "link_002",
+      "name": "output_shaft",
+      "point_file": "inputs/link_002.npz",
+      "faces": 6234,
+      "vertices": 4757,
+      "bounds": [
+        [
+          0.001999963499360888,
+          -0.022855,
+          0.04714491184323171
+        ],
+        [
+          0.18000001836546897,
+          0.022855,
+          0.09285491184292334
+        ]
+      ]
+    },
+    {
+      "id": "link_003",
+      "name": "reduction_shaft",
+      "point_file": "inputs/link_003.npz",
+      "faces": 2116,
+      "vertices": 2174,
+      "bounds": [
+        [
+          0.04799998163437926,
+          0.018555999999999996,
+          0.034555974287803395
+        ],
+        [
+          0.16800001836562073,
+          0.089444,
+          0.10544402571219662
+        ]
+      ]
+    }
+  ],
+  "joints": [
+    {
+      "name": "input_spin",
+      "type": "continuous",
+      "parent": "link_000",
+      "child": "link_001",
+      "reference_q": 0.0,
+      "mimic": null
+    },
+    {
+      "name": "output_spin",
+      "type": "continuous",
+      "parent": "link_000",
+      "child": "link_002",
+      "reference_q": 0.0,
+      "mimic": null
+    },
+    {
+      "name": "reduction_spin",
+      "type": "continuous",
+      "parent": "link_000",
+      "child": "link_003",
+      "reference_q": 0.0,
+      "mimic": null
+    }
+  ],
+  "bounds": [
+    [
+      -0.039999999999999994,
+      -0.05,
+      0.0
+    ],
+    [
+      0.2,
+      0.089444,
+      0.24000000000000002
+    ]
+  ],
+  "point_pool_size": 65536,
+  "reference_pose": "Zero position clamped to limits; mimic values propagated",
+  "qc": {
+    "finite_geometry": true,
+    "tree_valid": true,
+    "axis_unit": true,
+    "physical_collision_validation": false,
+    "visual_tessellation": "32 cylinder segments, icosphere subdivision 2"
+  }
+}

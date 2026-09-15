@@ -1,0 +1,531 @@
+<robot name="tall_tilting_desk_fan">
+  <material name="satin_white">
+    <color rgba="0.88 0.88 0.84 1" />
+    </material>
+  <material name="warm_gray">
+    <color rgba="0.42 0.43 0.42 1" />
+    </material>
+  <material name="dark_wire">
+    <color rgba="0.07 0.08 0.08 1" />
+    </material>
+  <material name="black_rubber">
+    <color rgba="0.02 0.02 0.018 1" />
+    </material>
+  <material name="smoky_blue_blade">
+    <color rgba="0.28 0.5 0.72 0.88" />
+    </material>
+  <link name="stand">
+    <visual name="base_disc">
+      <origin xyz="0 0 0.0175" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.165" length="0.035" />
+        </geometry>
+      <material name="satin_white">
+        <color rgba="0.88 0.88 0.84 1" />
+        </material>
+      </visual>
+    <visual name="rubber_foot_ring">
+      <origin xyz="0 0 0.006" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/rubber_foot_ring.obj" />
+        </geometry>
+      <material name="black_rubber">
+        <color rgba="0.02 0.02 0.018 1" />
+        </material>
+      </visual>
+    <visual name="slender_stem">
+      <origin xyz="0 0 0.425" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.78" />
+        </geometry>
+      <material name="satin_white">
+        <color rgba="0.88 0.88 0.84 1" />
+        </material>
+      </visual>
+    <visual name="height_collar">
+      <origin xyz="0 0 0.81" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.027" length="0.05" />
+        </geometry>
+      <material name="warm_gray">
+        <color rgba="0.42 0.43 0.42 1" />
+        </material>
+      </visual>
+    <visual name="yoke_bridge">
+      <origin xyz="0 0 0.81" rpy="0 0 0" />
+      <geometry>
+        <box size="0.425 0.038 0.038" />
+        </geometry>
+      <material name="satin_white">
+        <color rgba="0.88 0.88 0.84 1" />
+        </material>
+      </visual>
+    <visual name="side_bracket_0">
+      <origin xyz="0.205 0 0.945" rpy="0 0 0" />
+      <geometry>
+        <box size="0.026 0.044 0.27" />
+        </geometry>
+      <material name="satin_white">
+        <color rgba="0.88 0.88 0.84 1" />
+        </material>
+      </visual>
+    <visual name="pivot_bushing_0">
+      <origin xyz="0.205 0 1.055" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.034" length="0.034" />
+        </geometry>
+      <material name="warm_gray">
+        <color rgba="0.42 0.43 0.42 1" />
+        </material>
+      </visual>
+    <visual name="side_bracket_1">
+      <origin xyz="-0.205 0 0.945" rpy="0 0 0" />
+      <geometry>
+        <box size="0.026 0.044 0.27" />
+        </geometry>
+      <material name="satin_white">
+        <color rgba="0.88 0.88 0.84 1" />
+        </material>
+      </visual>
+    <visual name="pivot_bushing_1">
+      <origin xyz="-0.205 0 1.055" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.034" length="0.034" />
+        </geometry>
+      <material name="warm_gray">
+        <color rgba="0.42 0.43 0.42 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="head">
+    <visual name="front_outer_ring">
+      <origin xyz="0 -0.064 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/outer_guard_ring.obj" />
+        </geometry>
+      <material name="dark_wire">
+        <color rgba="0.07 0.08 0.08 1" />
+        </material>
+      </visual>
+    <visual name="front_middle_ring">
+      <origin xyz="0 -0.064 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/middle_guard_ring.obj" />
+        </geometry>
+      <material name="dark_wire">
+        <color rgba="0.07 0.08 0.08 1" />
+        </material>
+      </visual>
+    <visual name="front_inner_ring">
+      <origin xyz="0 -0.064 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/inner_guard_ring.obj" />
+        </geometry>
+      <material name="dark_wire">
+        <color rgba="0.07 0.08 0.08 1" />
+        </material>
+      </visual>
+    <visual name="rear_outer_ring">
+      <origin xyz="0 0.064 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/outer_guard_ring.obj" />
+        </geometry>
+      <material name="dark_wire">
+        <color rgba="0.07 0.08 0.08 1" />
+        </material>
+      </visual>
+    <visual name="rear_middle_ring">
+      <origin xyz="0 0.064 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/middle_guard_ring.obj" />
+        </geometry>
+      <material name="dark_wire">
+        <color rgba="0.07 0.08 0.08 1" />
+        </material>
+      </visual>
+    <visual name="rear_inner_ring">
+      <origin xyz="0 0.064 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/inner_guard_ring.obj" />
+        </geometry>
+      <material name="dark_wire">
+        <color rgba="0.07 0.08 0.08 1" />
+        </material>
+      </visual>
+    <visual name="front_center_cap">
+      <origin xyz="0 -0.064 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.026" length="0.01" />
+        </geometry>
+      <material name="dark_wire">
+        <color rgba="0.07 0.08 0.08 1" />
+        </material>
+      </visual>
+    <visual name="motor_shell">
+      <origin xyz="0 0.11 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.054" length="0.108" />
+        </geometry>
+      <material name="satin_white">
+        <color rgba="0.88 0.88 0.84 1" />
+        </material>
+      </visual>
+    <visual name="axle_nose">
+      <origin xyz="0 0.024 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.027" length="0.064" />
+        </geometry>
+      <material name="warm_gray">
+        <color rgba="0.42 0.43 0.42 1" />
+        </material>
+      </visual>
+    <visual name="trunnion_0">
+      <origin xyz="0.1765 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.019" length="0.023" />
+        </geometry>
+      <material name="warm_gray">
+        <color rgba="0.42 0.43 0.42 1" />
+        </material>
+      </visual>
+    <visual name="trunnion_1">
+      <origin xyz="-0.1765 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.019" length="0.023" />
+        </geometry>
+      <material name="warm_gray">
+        <color rgba="0.42 0.43 0.42 1" />
+        </material>
+      </visual>
+    <visual name="front_spoke_0">
+      <origin xyz="0.094 -0.064 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0022" length="0.154" />
+        </geometry>
+      <material name="dark_wire">
+        <color rgba="0.07 0.08 0.08 1" />
+        </material>
+      </visual>
+    <visual name="front_spoke_1">
+      <origin xyz="0.0814064 -0.064 0.047" rpy="0 1.0472 0" />
+      <geometry>
+        <cylinder radius="0.0022" length="0.154" />
+        </geometry>
+      <material name="dark_wire">
+        <color rgba="0.07 0.08 0.08 1" />
+        </material>
+      </visual>
+    <visual name="front_spoke_2">
+      <origin xyz="0.047 -0.064 0.0814064" rpy="0 0.523599 0" />
+      <geometry>
+        <cylinder radius="0.0022" length="0.154" />
+        </geometry>
+      <material name="dark_wire">
+        <color rgba="0.07 0.08 0.08 1" />
+        </material>
+      </visual>
+    <visual name="front_spoke_3">
+      <origin xyz="5.75584e-18 -0.064 0.094" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0022" length="0.154" />
+        </geometry>
+      <material name="dark_wire">
+        <color rgba="0.07 0.08 0.08 1" />
+        </material>
+      </visual>
+    <visual name="front_spoke_4">
+      <origin xyz="-0.047 -0.064 0.0814064" rpy="0 -0.523599 0" />
+      <geometry>
+        <cylinder radius="0.0022" length="0.154" />
+        </geometry>
+      <material name="dark_wire">
+        <color rgba="0.07 0.08 0.08 1" />
+        </material>
+      </visual>
+    <visual name="front_spoke_5">
+      <origin xyz="-0.0814064 -0.064 0.047" rpy="0 -1.0472 0" />
+      <geometry>
+        <cylinder radius="0.0022" length="0.154" />
+        </geometry>
+      <material name="dark_wire">
+        <color rgba="0.07 0.08 0.08 1" />
+        </material>
+      </visual>
+    <visual name="front_spoke_6">
+      <origin xyz="-0.094 -0.064 1.15117e-17" rpy="0 -1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0022" length="0.154" />
+        </geometry>
+      <material name="dark_wire">
+        <color rgba="0.07 0.08 0.08 1" />
+        </material>
+      </visual>
+    <visual name="front_spoke_7">
+      <origin xyz="-0.0814064 -0.064 -0.047" rpy="0 -2.0944 0" />
+      <geometry>
+        <cylinder radius="0.0022" length="0.154" />
+        </geometry>
+      <material name="dark_wire">
+        <color rgba="0.07 0.08 0.08 1" />
+        </material>
+      </visual>
+    <visual name="front_spoke_8">
+      <origin xyz="-0.047 -0.064 -0.0814064" rpy="0 -2.61799 0" />
+      <geometry>
+        <cylinder radius="0.0022" length="0.154" />
+        </geometry>
+      <material name="dark_wire">
+        <color rgba="0.07 0.08 0.08 1" />
+        </material>
+      </visual>
+    <visual name="front_spoke_9">
+      <origin xyz="-1.72675e-17 -0.064 -0.094" rpy="0 -3.14159 0" />
+      <geometry>
+        <cylinder radius="0.0022" length="0.154" />
+        </geometry>
+      <material name="dark_wire">
+        <color rgba="0.07 0.08 0.08 1" />
+        </material>
+      </visual>
+    <visual name="front_spoke_10">
+      <origin xyz="0.047 -0.064 -0.0814064" rpy="0 -3.66519 0" />
+      <geometry>
+        <cylinder radius="0.0022" length="0.154" />
+        </geometry>
+      <material name="dark_wire">
+        <color rgba="0.07 0.08 0.08 1" />
+        </material>
+      </visual>
+    <visual name="front_spoke_11">
+      <origin xyz="0.0814064 -0.064 -0.047" rpy="0 -4.18879 0" />
+      <geometry>
+        <cylinder radius="0.0022" length="0.154" />
+        </geometry>
+      <material name="dark_wire">
+        <color rgba="0.07 0.08 0.08 1" />
+        </material>
+      </visual>
+    <visual name="rear_spoke_0">
+      <origin xyz="0.108 0.064 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0022" length="0.126" />
+        </geometry>
+      <material name="dark_wire">
+        <color rgba="0.07 0.08 0.08 1" />
+        </material>
+      </visual>
+    <visual name="rear_spoke_1">
+      <origin xyz="0.0873738 0.064 0.0634808" rpy="0 0.942478 0" />
+      <geometry>
+        <cylinder radius="0.0022" length="0.126" />
+        </geometry>
+      <material name="dark_wire">
+        <color rgba="0.07 0.08 0.08 1" />
+        </material>
+      </visual>
+    <visual name="rear_spoke_2">
+      <origin xyz="0.0333738 0.064 0.102714" rpy="0 0.314159 0" />
+      <geometry>
+        <cylinder radius="0.0022" length="0.126" />
+        </geometry>
+      <material name="dark_wire">
+        <color rgba="0.07 0.08 0.08 1" />
+        </material>
+      </visual>
+    <visual name="rear_spoke_3">
+      <origin xyz="-0.0333738 0.064 0.102714" rpy="0 -0.314159 0" />
+      <geometry>
+        <cylinder radius="0.0022" length="0.126" />
+        </geometry>
+      <material name="dark_wire">
+        <color rgba="0.07 0.08 0.08 1" />
+        </material>
+      </visual>
+    <visual name="rear_spoke_4">
+      <origin xyz="-0.0873738 0.064 0.0634808" rpy="0 -0.942478 0" />
+      <geometry>
+        <cylinder radius="0.0022" length="0.126" />
+        </geometry>
+      <material name="dark_wire">
+        <color rgba="0.07 0.08 0.08 1" />
+        </material>
+      </visual>
+    <visual name="rear_spoke_5">
+      <origin xyz="-0.108 0.064 1.32262e-17" rpy="0 -1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0022" length="0.126" />
+        </geometry>
+      <material name="dark_wire">
+        <color rgba="0.07 0.08 0.08 1" />
+        </material>
+      </visual>
+    <visual name="rear_spoke_6">
+      <origin xyz="-0.0873738 0.064 -0.0634808" rpy="0 -2.19911 0" />
+      <geometry>
+        <cylinder radius="0.0022" length="0.126" />
+        </geometry>
+      <material name="dark_wire">
+        <color rgba="0.07 0.08 0.08 1" />
+        </material>
+      </visual>
+    <visual name="rear_spoke_7">
+      <origin xyz="-0.0333738 0.064 -0.102714" rpy="0 -2.82743 0" />
+      <geometry>
+        <cylinder radius="0.0022" length="0.126" />
+        </geometry>
+      <material name="dark_wire">
+        <color rgba="0.07 0.08 0.08 1" />
+        </material>
+      </visual>
+    <visual name="rear_spoke_8">
+      <origin xyz="0.0333738 0.064 -0.102714" rpy="0 -3.45575 0" />
+      <geometry>
+        <cylinder radius="0.0022" length="0.126" />
+        </geometry>
+      <material name="dark_wire">
+        <color rgba="0.07 0.08 0.08 1" />
+        </material>
+      </visual>
+    <visual name="rear_spoke_9">
+      <origin xyz="0.0873738 0.064 -0.0634808" rpy="0 -4.08407 0" />
+      <geometry>
+        <cylinder radius="0.0022" length="0.126" />
+        </geometry>
+      <material name="dark_wire">
+        <color rgba="0.07 0.08 0.08 1" />
+        </material>
+      </visual>
+    <visual name="cage_rod_0">
+      <origin xyz="0.166 0 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0026" length="0.128" />
+        </geometry>
+      <material name="dark_wire">
+        <color rgba="0.07 0.08 0.08 1" />
+        </material>
+      </visual>
+    <visual name="cage_rod_1">
+      <origin xyz="0.14376 0 0.083" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0026" length="0.128" />
+        </geometry>
+      <material name="dark_wire">
+        <color rgba="0.07 0.08 0.08 1" />
+        </material>
+      </visual>
+    <visual name="cage_rod_2">
+      <origin xyz="0.083 0 0.14376" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0026" length="0.128" />
+        </geometry>
+      <material name="dark_wire">
+        <color rgba="0.07 0.08 0.08 1" />
+        </material>
+      </visual>
+    <visual name="cage_rod_3">
+      <origin xyz="1.01646e-17 0 0.166" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0026" length="0.128" />
+        </geometry>
+      <material name="dark_wire">
+        <color rgba="0.07 0.08 0.08 1" />
+        </material>
+      </visual>
+    <visual name="cage_rod_4">
+      <origin xyz="-0.083 0 0.14376" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0026" length="0.128" />
+        </geometry>
+      <material name="dark_wire">
+        <color rgba="0.07 0.08 0.08 1" />
+        </material>
+      </visual>
+    <visual name="cage_rod_5">
+      <origin xyz="-0.14376 0 0.083" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0026" length="0.128" />
+        </geometry>
+      <material name="dark_wire">
+        <color rgba="0.07 0.08 0.08 1" />
+        </material>
+      </visual>
+    <visual name="cage_rod_6">
+      <origin xyz="-0.166 0 2.03291e-17" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0026" length="0.128" />
+        </geometry>
+      <material name="dark_wire">
+        <color rgba="0.07 0.08 0.08 1" />
+        </material>
+      </visual>
+    <visual name="cage_rod_7">
+      <origin xyz="-0.14376 0 -0.083" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0026" length="0.128" />
+        </geometry>
+      <material name="dark_wire">
+        <color rgba="0.07 0.08 0.08 1" />
+        </material>
+      </visual>
+    <visual name="cage_rod_8">
+      <origin xyz="-0.083 0 -0.14376" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0026" length="0.128" />
+        </geometry>
+      <material name="dark_wire">
+        <color rgba="0.07 0.08 0.08 1" />
+        </material>
+      </visual>
+    <visual name="cage_rod_9">
+      <origin xyz="-3.04937e-17 0 -0.166" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0026" length="0.128" />
+        </geometry>
+      <material name="dark_wire">
+        <color rgba="0.07 0.08 0.08 1" />
+        </material>
+      </visual>
+    <visual name="cage_rod_10">
+      <origin xyz="0.083 0 -0.14376" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0026" length="0.128" />
+        </geometry>
+      <material name="dark_wire">
+        <color rgba="0.07 0.08 0.08 1" />
+        </material>
+      </visual>
+    <visual name="cage_rod_11">
+      <origin xyz="0.14376 0 -0.083" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0026" length="0.128" />
+        </geometry>
+      <material name="dark_wire">
+        <color rgba="0.07 0.08 0.08 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="rotor">
+    <visual name="rotor_blades">
+      <origin xyz="0 -0.019 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/rotor_blades.obj" />
+        </geometry>
+      <material name="smoky_blue_blade">
+        <color rgba="0.28 0.5 0.72 0.88" />
+        </material>
+      </visual>
+    </link>
+  <joint name="stand_to_head" type="revolute">
+    <origin xyz="0 0 1.055" rpy="0 0 0" />
+    <parent link="stand" />
+    <child link="head" />
+    <axis xyz="1 0 0" />
+    <limit effort="14" velocity="1.2" lower="-0.42" upper="0.42" />
+    </joint>
+  <joint name="head_to_rotor" type="continuous">
+    <parent link="head" />
+    <child link="rotor" />
+    <axis xyz="0 1 0" />
+    <limit effort="1" velocity="70" />
+    </joint>
+  </robot>

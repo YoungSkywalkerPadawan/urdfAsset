@@ -1,0 +1,310 @@
+<robot name="precision_drill_stand">
+  <material name="cast_iron">
+    <color rgba="0.25 0.27 0.29 1" />
+    </material>
+  <material name="steel">
+    <color rgba="0.73 0.75 0.78 1" />
+    </material>
+  <material name="handle_black">
+    <color rgba="0.1 0.1 0.11 1" />
+    </material>
+  <link name="frame">
+    <visual name="base_plate">
+      <origin xyz="0 0 0.008" rpy="0 0 0" />
+      <geometry>
+        <box size="0.22 0.16 0.016" />
+        </geometry>
+      <material name="cast_iron">
+        <color rgba="0.25 0.27 0.29 1" />
+        </material>
+      </visual>
+    <visual name="column_foot">
+      <origin xyz="-0.055 0 0.041" rpy="0 0 0" />
+      <geometry>
+        <box size="0.06 0.075 0.05" />
+        </geometry>
+      <material name="cast_iron">
+        <color rgba="0.25 0.27 0.29 1" />
+        </material>
+      </visual>
+    <visual name="rear_gusset">
+      <origin xyz="-0.08 0 0.101" rpy="0 0 0" />
+      <geometry>
+        <box size="0.02 0.07 0.17" />
+        </geometry>
+      <material name="cast_iron">
+        <color rgba="0.25 0.27 0.29 1" />
+        </material>
+      </visual>
+    <visual name="guide_column">
+      <origin xyz="-0.055 0 0.181" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.009" length="0.33" />
+        </geometry>
+      <material name="steel">
+        <color rgba="0.73 0.75 0.78 1" />
+        </material>
+      </visual>
+    <visual name="column_cap">
+      <origin xyz="-0.055 0 0.35" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.008" />
+        </geometry>
+      <material name="steel">
+        <color rgba="0.73 0.75 0.78 1" />
+        </material>
+      </visual>
+    <visual name="table_bracket">
+      <origin xyz="-0.049 0 0.128" rpy="0 0 0" />
+      <geometry>
+        <box size="0.052 0.062 0.034" />
+        </geometry>
+      <material name="cast_iron">
+        <color rgba="0.25 0.27 0.29 1" />
+        </material>
+      </visual>
+    <collision name="base_plate">
+      <origin xyz="0 0 0.008" rpy="0 0 0" />
+      <geometry>
+        <box size="0.22 0.16 0.016" />
+        </geometry>
+      </collision>
+    <collision name="column_foot">
+      <origin xyz="-0.055 0 0.041" rpy="0 0 0" />
+      <geometry>
+        <box size="0.06 0.075 0.05" />
+        </geometry>
+      </collision>
+    <collision name="rear_gusset">
+      <origin xyz="-0.08 0 0.101" rpy="0 0 0" />
+      <geometry>
+        <box size="0.02 0.07 0.17" />
+        </geometry>
+      </collision>
+    <collision name="guide_column">
+      <origin xyz="-0.055 0 0.181" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.009" length="0.33" />
+        </geometry>
+      </collision>
+    <collision name="column_cap">
+      <origin xyz="-0.055 0 0.35" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.008" />
+        </geometry>
+      </collision>
+    <collision name="table_bracket">
+      <origin xyz="-0.049 0 0.128" rpy="0 0 0" />
+      <geometry>
+        <box size="0.052 0.062 0.034" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="carriage">
+    <visual name="left_cheek">
+      <origin xyz="0.012 0.015 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.07 0.012 0.09" />
+        </geometry>
+      <material name="cast_iron">
+        <color rgba="0.25 0.27 0.29 1" />
+        </material>
+      </visual>
+    <visual name="right_cheek">
+      <origin xyz="0.012 -0.015 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.07 0.012 0.09" />
+        </geometry>
+      <material name="cast_iron">
+        <color rgba="0.25 0.27 0.29 1" />
+        </material>
+      </visual>
+    <visual name="front_bridge">
+      <origin xyz="0.049 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.028 0.042 0.09" />
+        </geometry>
+      <material name="cast_iron">
+        <color rgba="0.25 0.27 0.29 1" />
+        </material>
+      </visual>
+    <visual name="rear_tie">
+      <origin xyz="-0.028 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.01 0.042 0.09" />
+        </geometry>
+      <material name="cast_iron">
+        <color rgba="0.25 0.27 0.29 1" />
+        </material>
+      </visual>
+    <visual name="drill_collar">
+      <origin xyz="0.06 0 0" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.024" length="0.09" />
+        </geometry>
+      <material name="cast_iron">
+        <color rgba="0.25 0.27 0.29 1" />
+        </material>
+      </visual>
+    <visual name="quill_nose">
+      <origin xyz="0.06 0 -0.069" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.048" />
+        </geometry>
+      <material name="steel">
+        <color rgba="0.73 0.75 0.78 1" />
+        </material>
+      </visual>
+    <collision name="left_cheek">
+      <origin xyz="0.012 0.015 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.07 0.012 0.09" />
+        </geometry>
+      </collision>
+    <collision name="right_cheek">
+      <origin xyz="0.012 -0.015 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.07 0.012 0.09" />
+        </geometry>
+      </collision>
+    <collision name="front_bridge">
+      <origin xyz="0.049 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.028 0.042 0.09" />
+        </geometry>
+      </collision>
+    <collision name="rear_tie">
+      <origin xyz="-0.028 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.01 0.042 0.09" />
+        </geometry>
+      </collision>
+    <collision name="drill_collar">
+      <origin xyz="0.06 0 0" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.024" length="0.09" />
+        </geometry>
+      </collision>
+    <collision name="quill_nose">
+      <origin xyz="0.06 0 -0.069" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.048" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="table">
+    <visual name="trunnion">
+      <origin xyz="0 0 -0.012" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.008" length="0.058" />
+        </geometry>
+      <material name="cast_iron">
+        <color rgba="0.25 0.27 0.29 1" />
+        </material>
+      </visual>
+    <visual name="tilt_rib">
+      <origin xyz="0.024 0 -0.016" rpy="0 0 0" />
+      <geometry>
+        <box size="0.04 0.028 0.024" />
+        </geometry>
+      <material name="cast_iron">
+        <color rgba="0.25 0.27 0.29 1" />
+        </material>
+      </visual>
+    <visual name="table_top">
+      <origin xyz="0.0575 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.115 0.095 0.008" />
+        </geometry>
+      <material name="cast_iron">
+        <color rgba="0.25 0.27 0.29 1" />
+        </material>
+      </visual>
+    <collision name="trunnion">
+      <origin xyz="0 0 -0.012" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.008" length="0.058" />
+        </geometry>
+      </collision>
+    <collision name="tilt_rib">
+      <origin xyz="0.024 0 -0.016" rpy="0 0 0" />
+      <geometry>
+        <box size="0.04 0.028 0.024" />
+        </geometry>
+      </collision>
+    <collision name="table_top">
+      <origin xyz="0.0575 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.115 0.095 0.008" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="lever">
+    <visual name="hub">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.018" />
+        </geometry>
+      <material name="steel">
+        <color rgba="0.73 0.75 0.78 1" />
+        </material>
+      </visual>
+    <visual name="arm">
+      <origin xyz="0.026 0 -0.037" rpy="0 2.53073 0" />
+      <geometry>
+        <cylinder radius="0.0042" length="0.09" />
+        </geometry>
+      <material name="steel">
+        <color rgba="0.73 0.75 0.78 1" />
+        </material>
+      </visual>
+    <visual name="grip">
+      <origin xyz="0.052 0 -0.074" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.026" />
+        </geometry>
+      <material name="handle_black">
+        <color rgba="0.1 0.1 0.11 1" />
+        </material>
+      </visual>
+    <collision name="hub">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.018" />
+        </geometry>
+      </collision>
+    <collision name="arm">
+      <origin xyz="0.026 0 -0.037" rpy="0 2.53073 0" />
+      <geometry>
+        <cylinder radius="0.0042" length="0.09" />
+        </geometry>
+      </collision>
+    <collision name="grip">
+      <origin xyz="0.052 0 -0.074" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.026" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="frame_to_carriage" type="prismatic">
+    <origin xyz="-0.055 0 0.287" rpy="0 0 0" />
+    <parent link="frame" />
+    <child link="carriage" />
+    <axis xyz="0 0 -1" />
+    <limit effort="60" velocity="0.1" lower="0" upper="0.045" />
+    </joint>
+  <joint name="frame_to_table" type="revolute">
+    <origin xyz="-0.015 0 0.128" rpy="0 0 0" />
+    <parent link="frame" />
+    <child link="table" />
+    <axis xyz="0 -1 0" />
+    <limit effort="18" velocity="1" lower="-0.610865" upper="0.610865" />
+    </joint>
+  <joint name="carriage_to_lever" type="continuous">
+    <origin xyz="0.016 -0.03 0.018" rpy="0 0 0" />
+    <parent link="carriage" />
+    <child link="lever" />
+    <axis xyz="0 1 0" />
+    <limit effort="8" velocity="12" />
+    </joint>
+  </robot>

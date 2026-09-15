@@ -1,0 +1,82 @@
+<robot name="record_turntable">
+  <link name="plinth">
+    <visual name="plinth_body">
+      <origin xyz="0 0 0.025" rpy="0 0 0" />
+      <geometry>
+        <box size="0.45 0.35 0.05" />
+        </geometry>
+      </visual>
+    </link>
+  <link name="platter_support">
+    <visual name="support_body">
+      <origin xyz="0 0 0.06" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.02" length="0.02" />
+        </geometry>
+      </visual>
+    </link>
+  <link name="platter">
+    <visual name="platter_body">
+      <origin xyz="0 0 0.0075" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.15" length="0.015" />
+        </geometry>
+      </visual>
+    </link>
+  <link name="tonearm_base">
+    <visual name="base_body">
+      <origin xyz="0.16 -0.12 0.07" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.03" length="0.04" />
+        </geometry>
+      </visual>
+    </link>
+  <link name="tonearm">
+    <visual name="arm_tube">
+      <origin xyz="0 0.08 0.005" rpy="0 0 0" />
+      <geometry>
+        <box size="0.01 0.28 0.01" />
+        </geometry>
+      </visual>
+    <visual name="pivot_cap">
+      <origin xyz="0 0 0.005" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.015" length="0.01" />
+        </geometry>
+      </visual>
+    <visual name="counterweight">
+      <origin xyz="0 -0.05 0.005" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.015" length="0.02" />
+        </geometry>
+      </visual>
+    <visual name="headshell">
+      <origin xyz="0 0.22 0.005" rpy="0 0 0" />
+      <geometry>
+        <box size="0.02 0.04 0.01" />
+        </geometry>
+      </visual>
+    </link>
+  <joint name="plinth_to_support" type="fixed">
+    <parent link="plinth" />
+    <child link="platter_support" />
+    </joint>
+  <joint name="platter_spin" type="continuous">
+    <origin xyz="0 0 0.07" rpy="0 0 0" />
+    <parent link="platter_support" />
+    <child link="platter" />
+    <axis xyz="0 0 1" />
+    <limit effort="1" velocity="10" />
+    </joint>
+  <joint name="plinth_to_tonearm_base" type="fixed">
+    <parent link="plinth" />
+    <child link="tonearm_base" />
+    </joint>
+  <joint name="tonearm_pivot" type="revolute">
+    <origin xyz="0.16 -0.12 0.09" rpy="0 0 0" />
+    <parent link="tonearm_base" />
+    <child link="tonearm" />
+    <axis xyz="0 0 1" />
+    <limit effort="0.5" velocity="1" lower="0" upper="0.8" />
+    </joint>
+  </robot>

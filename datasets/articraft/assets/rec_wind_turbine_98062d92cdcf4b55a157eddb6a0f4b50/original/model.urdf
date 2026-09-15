@@ -1,0 +1,175 @@
+<robot name="horizontal_axis_wind_turbine">
+  <material name="tower_white">
+    <color rgba="0.92 0.94 0.95 1" />
+    </material>
+  <material name="nacelle_white">
+    <color rgba="0.9 0.92 0.93 1" />
+    </material>
+  <material name="light_gray">
+    <color rgba="0.74 0.76 0.79 1" />
+    </material>
+  <material name="dark_gray">
+    <color rgba="0.27 0.29 0.31 1" />
+    </material>
+  <material name="concrete">
+    <color rgba="0.67 0.68 0.69 1" />
+    </material>
+  <link name="tower">
+    <inertial>
+      <origin xyz="0 0 39" rpy="0 0 0" />
+      <mass value="175000" />
+      <inertia ixx="9.80583e+07" ixy="0" ixz="0" iyy="9.80583e+07" iyz="0" izz="9.45e+06" />
+      </inertial>
+    <visual name="foundation_pad">
+      <origin xyz="0 0 -0.6" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="9" length="1.2" />
+        </geometry>
+      <material name="concrete">
+        <color rgba="0.67 0.68 0.69 1" />
+        </material>
+      </visual>
+    <visual name="tower_shell">
+      <geometry>
+        <mesh filename="assets/meshes/tower_shell.obj" />
+        </geometry>
+      <material name="tower_white">
+        <color rgba="0.92 0.94 0.95 1" />
+        </material>
+      </visual>
+    <visual name="tower_head_flange">
+      <origin xyz="0 0 78.5" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="2.2" length="1" />
+        </geometry>
+      <material name="light_gray">
+        <color rgba="0.74 0.76 0.79 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="nacelle">
+    <inertial>
+      <origin xyz="1.8 0 2.8" rpy="0 0 0" />
+      <mass value="68000" />
+      <inertia ixx="408000" ixy="0" ixz="0" iyy="1.31467e+06" iyz="0" izz="1.31467e+06" />
+      </inertial>
+    <visual name="nacelle_shell">
+      <origin xyz="1.2 0 2.6" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/nacelle_shell.obj" />
+        </geometry>
+      <material name="nacelle_white">
+        <color rgba="0.9 0.92 0.93 1" />
+        </material>
+      </visual>
+    <visual name="yaw_bearing_ring">
+      <origin xyz="0 0 0.45" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="2.2" length="0.9" />
+        </geometry>
+      <material name="dark_gray">
+        <color rgba="0.27 0.29 0.31 1" />
+        </material>
+      </visual>
+    <visual name="bedplate">
+      <origin xyz="1.2 0 0.95" rpy="0 0 0" />
+      <geometry>
+        <box size="4.6 3.2 0.9" />
+        </geometry>
+      <material name="dark_gray">
+        <color rgba="0.27 0.29 0.31 1" />
+        </material>
+      </visual>
+    <visual name="front_bearing_block">
+      <origin xyz="4.6 0 2.2" rpy="0 0 0" />
+      <geometry>
+        <box size="2.8 2.6 1.9" />
+        </geometry>
+      <material name="dark_gray">
+        <color rgba="0.27 0.29 0.31 1" />
+        </material>
+      </visual>
+    <visual name="main_shaft_housing">
+      <origin xyz="7.5 0 2.8" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="1.18" length="7" />
+        </geometry>
+      <material name="light_gray">
+        <color rgba="0.74 0.76 0.79 1" />
+        </material>
+      </visual>
+    <visual name="rear_equipment_bay">
+      <origin xyz="-2 0 2.5" rpy="0 0 0" />
+      <geometry>
+        <box size="2.2 3.4 2.4" />
+        </geometry>
+      <material name="dark_gray">
+        <color rgba="0.27 0.29 0.31 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="rotor">
+    <inertial>
+      <origin xyz="0.8 0 0" rpy="0 0 0" />
+      <mass value="52000" />
+      <inertia ixx="1.08715e+08" ixy="0" ixz="0" iyy="5.46347e+07" iyz="0" izz="5.46347e+07" />
+      </inertial>
+    <visual name="hub_barrel">
+      <origin xyz="0 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="1.45" length="5" />
+        </geometry>
+      <material name="dark_gray">
+        <color rgba="0.27 0.29 0.31 1" />
+        </material>
+      </visual>
+    <visual name="hub_spinner">
+      <geometry>
+        <mesh filename="assets/meshes/hub_spinner.obj" />
+        </geometry>
+      <material name="tower_white">
+        <color rgba="0.92 0.94 0.95 1" />
+        </material>
+      </visual>
+    <visual name="blade_0">
+      <geometry>
+        <mesh filename="assets/meshes/blade_shell.obj" />
+        </geometry>
+      <material name="tower_white">
+        <color rgba="0.92 0.94 0.95 1" />
+        </material>
+      </visual>
+    <visual name="blade_1">
+      <origin xyz="0 0 0" rpy="2.0944 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/blade_shell.obj" />
+        </geometry>
+      <material name="tower_white">
+        <color rgba="0.92 0.94 0.95 1" />
+        </material>
+      </visual>
+    <visual name="blade_2">
+      <origin xyz="0 0 0" rpy="4.18879 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/blade_shell.obj" />
+        </geometry>
+      <material name="tower_white">
+        <color rgba="0.92 0.94 0.95 1" />
+        </material>
+      </visual>
+    </link>
+  <joint name="nacelle_yaw" type="continuous">
+    <origin xyz="0 0 79" rpy="0 0 0" />
+    <parent link="tower" />
+    <child link="nacelle" />
+    <axis xyz="0 0 1" />
+    <limit effort="280000" velocity="0.18" />
+    </joint>
+  <joint name="rotor_spin" type="continuous">
+    <origin xyz="13.5 0 2.8" rpy="0 0 0" />
+    <parent link="nacelle" />
+    <child link="rotor" />
+    <axis xyz="1 0 0" />
+    <limit effort="420000" velocity="1.8" />
+    </joint>
+  </robot>

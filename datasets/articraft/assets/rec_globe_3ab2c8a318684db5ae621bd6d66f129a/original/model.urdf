@@ -1,0 +1,263 @@
+<robot name="marine_gimbal_globe">
+  <material name="brass">
+    <color rgba="0.78 0.67 0.35 1" />
+    </material>
+  <material name="aged_brass">
+    <color rgba="0.58 0.48 0.24 1" />
+    </material>
+  <material name="mahogany">
+    <color rgba="0.35 0.17 0.09 1" />
+    </material>
+  <material name="ebony">
+    <color rgba="0.11 0.08 0.05 1" />
+    </material>
+  <material name="ocean_blue">
+    <color rgba="0.15 0.32 0.56 1" />
+    </material>
+  <material name="parchment">
+    <color rgba="0.86 0.82 0.7 1" />
+    </material>
+  <link name="pedestal_cradle">
+    <inertial>
+      <origin xyz="0 0 0.43" rpy="0 0 0" />
+      <mass value="12" />
+      <inertia ixx="0.754" ixy="0" ixz="0" iyy="0.9896" iyz="0" izz="0.2644" />
+      </inertial>
+    <visual name="base_disc">
+      <origin xyz="0 0 0.0225" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.16" length="0.045" />
+        </geometry>
+      <material name="mahogany">
+        <color rgba="0.35 0.17 0.09 1" />
+        </material>
+      </visual>
+    <visual name="base_collar">
+      <origin xyz="0 0 0.055" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.11" length="0.03" />
+        </geometry>
+      <material name="brass">
+        <color rgba="0.78 0.67 0.35 1" />
+        </material>
+      </visual>
+    <visual name="column_shaft">
+      <origin xyz="0 0 0.235" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.042" length="0.36" />
+        </geometry>
+      <material name="aged_brass">
+        <color rgba="0.58 0.48 0.24 1" />
+        </material>
+      </visual>
+    <visual name="crown_cap">
+      <origin xyz="0 0 0.392" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.046" length="0.028" />
+        </geometry>
+      <material name="brass">
+        <color rgba="0.78 0.67 0.35 1" />
+        </material>
+      </visual>
+    <visual name="support_arm_left">
+      <geometry>
+        <mesh filename="assets/meshes/pedestal_support_arm.obj" />
+        </geometry>
+      <material name="aged_brass">
+        <color rgba="0.58 0.48 0.24 1" />
+        </material>
+      </visual>
+    <visual name="support_arm_right">
+      <origin xyz="0 0 0" rpy="0 0 3.14159" />
+      <geometry>
+        <mesh filename="assets/meshes/pedestal_support_arm.obj" />
+        </geometry>
+      <material name="aged_brass">
+        <color rgba="0.58 0.48 0.24 1" />
+        </material>
+      </visual>
+    <visual name="outer_guard_ring">
+      <origin xyz="0 0 0.62" rpy="1.5708 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/outer_guard_ring.obj" />
+        </geometry>
+      <material name="brass">
+        <color rgba="0.78 0.67 0.35 1" />
+        </material>
+      </visual>
+    <visual name="pivot_socket_pos">
+      <origin xyz="0.205 0 0.62" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.03" />
+        </geometry>
+      <material name="aged_brass">
+        <color rgba="0.58 0.48 0.24 1" />
+        </material>
+      </visual>
+    <visual name="pivot_socket_neg">
+      <origin xyz="-0.205 0 0.62" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.03" />
+        </geometry>
+      <material name="aged_brass">
+        <color rgba="0.58 0.48 0.24 1" />
+        </material>
+      </visual>
+    <visual name="pivot_knob_pos">
+      <origin xyz="0.231 0 0.62" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.022" />
+        </geometry>
+      <material name="brass">
+        <color rgba="0.78 0.67 0.35 1" />
+        </material>
+      </visual>
+    <visual name="pivot_knob_neg">
+      <origin xyz="-0.231 0 0.62" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.022" />
+        </geometry>
+      <material name="brass">
+        <color rgba="0.78 0.67 0.35 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="inner_ring">
+    <inertial>
+      <mass value="1.4" />
+      <inertia ixx="0.0189583" ixy="0" ixz="0" iyy="0.0373333" iyz="0" izz="0.0189583" />
+      </inertial>
+    <visual name="meridian_ring">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/inner_meridian_ring.obj" />
+        </geometry>
+      <material name="brass">
+        <color rgba="0.78 0.67 0.35 1" />
+        </material>
+      </visual>
+    <visual name="trunnion_pos">
+      <origin xyz="0.1775 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.008" length="0.025" />
+        </geometry>
+      <material name="aged_brass">
+        <color rgba="0.58 0.48 0.24 1" />
+        </material>
+      </visual>
+    <visual name="trunnion_neg">
+      <origin xyz="-0.1775 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.008" length="0.025" />
+        </geometry>
+      <material name="aged_brass">
+        <color rgba="0.58 0.48 0.24 1" />
+        </material>
+      </visual>
+    <visual name="north_socket">
+      <origin xyz="0 0 0.175" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.03" />
+        </geometry>
+      <material name="aged_brass">
+        <color rgba="0.58 0.48 0.24 1" />
+        </material>
+      </visual>
+    <visual name="south_socket">
+      <origin xyz="0 0 -0.175" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.03" />
+        </geometry>
+      <material name="aged_brass">
+        <color rgba="0.58 0.48 0.24 1" />
+        </material>
+      </visual>
+    <visual name="north_pivot_cap">
+      <origin xyz="0 0 0.193" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.018" />
+        </geometry>
+      <material name="brass">
+        <color rgba="0.78 0.67 0.35 1" />
+        </material>
+      </visual>
+    <visual name="south_pivot_cap">
+      <origin xyz="0 0 -0.193" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.018" />
+        </geometry>
+      <material name="brass">
+        <color rgba="0.78 0.67 0.35 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="globe">
+    <inertial>
+      <mass value="2.4" />
+      <inertia ixx="0.018816" ixy="0" ixz="0" iyy="0.018816" iyz="0" izz="0.018816" />
+      </inertial>
+    <visual name="globe_surface">
+      <geometry>
+        <sphere radius="0.14" />
+        </geometry>
+      <material name="ocean_blue">
+        <color rgba="0.15 0.32 0.56 1" />
+        </material>
+      </visual>
+    <visual name="map_tint">
+      <geometry>
+        <sphere radius="0.135" />
+        </geometry>
+      <material name="parchment">
+        <color rgba="0.86 0.82 0.7 1" />
+        </material>
+      </visual>
+    <visual name="polar_spindle">
+      <geometry>
+        <cylinder radius="0.0065" length="0.32" />
+        </geometry>
+      <material name="brass">
+        <color rgba="0.78 0.67 0.35 1" />
+        </material>
+      </visual>
+    <visual name="equator_band">
+      <geometry>
+        <mesh filename="assets/meshes/globe_equator_band.obj" />
+        </geometry>
+      <material name="parchment">
+        <color rgba="0.86 0.82 0.7 1" />
+        </material>
+      </visual>
+    <visual name="prime_meridian_band">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/globe_meridian_band.obj" />
+        </geometry>
+      <material name="parchment">
+        <color rgba="0.86 0.82 0.7 1" />
+        </material>
+      </visual>
+    <visual name="secondary_meridian_band">
+      <origin xyz="0 0 0" rpy="1.5708 0 1.5708" />
+      <geometry>
+        <mesh filename="assets/meshes/globe_meridian_band.obj" />
+        </geometry>
+      <material name="parchment">
+        <color rgba="0.86 0.82 0.7 1" />
+        </material>
+      </visual>
+    </link>
+  <joint name="gimbal_tilt" type="revolute">
+    <origin xyz="0 0 0.62" rpy="0 0 0" />
+    <parent link="pedestal_cradle" />
+    <child link="inner_ring" />
+    <axis xyz="1 0 0" />
+    <limit effort="18" velocity="1.2" lower="-0.65" upper="0.65" />
+    </joint>
+  <joint name="globe_spin" type="continuous">
+    <parent link="inner_ring" />
+    <child link="globe" />
+    <axis xyz="0 0 1" />
+    <limit effort="4" velocity="2.4" />
+    </joint>
+  </robot>

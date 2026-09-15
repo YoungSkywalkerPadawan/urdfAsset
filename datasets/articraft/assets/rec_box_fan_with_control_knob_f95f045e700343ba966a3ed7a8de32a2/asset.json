@@ -1,0 +1,148 @@
+{
+  "summary": {
+    "id": "rec_box_fan_with_control_knob_f95f045e700343ba966a3ed7a8de32a2",
+    "category": "fan",
+    "robot_name": "pedestal_box_fan",
+    "joint_count": 1,
+    "link_count": 4,
+    "target_link_count": 2,
+    "family": "rec_box_fan_with_control_knob",
+    "warnings": [],
+    "diagonal": 1.8238712553111593,
+    "bytes": 4462384
+  },
+  "source": {
+    "dataset": "camvsl/Articraft-10K",
+    "revision": "3c79d5a05bb7cb6bf7bfee5e090176636ee3ac65",
+    "license": "CC-BY-4.0",
+    "url": "https://huggingface.co/datasets/camvsl/Articraft-10K/blob/3c79d5a05bb7cb6bf7bfee5e090176636ee3ac65/rec_box_fan_with_control_knob_f95f045e700343ba966a3ed7a8de32a2.tar.gz",
+    "archive_sha256": "ce6df3b96c84aa6bae13e764c1876ec505ede375f7b921b079609df7d1aeef2a",
+    "archive": "rec_box_fan_with_control_knob_f95f045e700343ba966a3ed7a8de32a2.tar.gz",
+    "label_status": "Original generated URDF reference; not manually verified or physically validated"
+  },
+  "links": [
+    {
+      "id": "link_000",
+      "name": "base",
+      "point_file": null,
+      "faces": 3200,
+      "vertices": 1689,
+      "bounds": [
+        [
+          -0.245,
+          -0.245,
+          0.0
+        ],
+        [
+          0.245,
+          0.245,
+          0.593878
+        ]
+      ]
+    },
+    {
+      "id": "link_001",
+      "name": "upper_column",
+      "point_file": "inputs/link_001.npz",
+      "faces": 8040,
+      "vertices": 4432,
+      "bounds": [
+        [
+          -0.36,
+          -0.11100014325495855,
+          0.25
+        ],
+        [
+          0.36,
+          0.10900038201327003,
+          1.602500033057817
+        ]
+      ]
+    },
+    {
+      "id": "link_002",
+      "name": "propeller",
+      "point_file": "inputs/link_002.npz",
+      "faces": 5732,
+      "vertices": 2866,
+      "bounds": [
+        [
+          -0.20975,
+          -0.07386917102798227,
+          1.0293349819955047
+        ],
+        [
+          0.229,
+          -0.036344974295043284,
+          1.4758800169026336
+        ]
+      ]
+    },
+    {
+      "id": "link_003",
+      "name": "timer_knob",
+      "point_file": null,
+      "faces": 20188,
+      "vertices": 10098,
+      "bounds": [
+        [
+          -0.042984,
+          0.10899984405775054,
+          1.216839996488707
+        ],
+        [
+          0.042984,
+          0.15800000275457327,
+          1.3031599964881249
+        ]
+      ]
+    }
+  ],
+  "joints": [
+    {
+      "name": "base_to_column",
+      "type": "prismatic",
+      "parent": "link_000",
+      "child": "link_001",
+      "reference_q": 0.0,
+      "mimic": null
+    },
+    {
+      "name": "column_to_propeller",
+      "type": "continuous",
+      "parent": "link_001",
+      "child": "link_002",
+      "reference_q": 0.0,
+      "mimic": null
+    },
+    {
+      "name": "column_to_timer",
+      "type": "revolute",
+      "parent": "link_001",
+      "child": "link_003",
+      "reference_q": 0.0,
+      "mimic": null
+    }
+  ],
+  "bounds": [
+    [
+      -0.36,
+      -0.245,
+      0.0
+    ],
+    [
+      0.36,
+      0.245,
+      1.602500033057817
+    ]
+  ],
+  "point_pool_size": 65536,
+  "reference_pose": "Zero position clamped to limits; mimic values propagated",
+  "qc": {
+    "finite_geometry": true,
+    "tree_valid": true,
+    "axis_unit": true,
+    "physical_collision_validation": false,
+    "visual_tessellation": "32 cylinder segments, icosphere subdivision 2"
+  }
+}

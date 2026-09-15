@@ -1,0 +1,246 @@
+<robot name="gear_assembly_study">
+  <material name="frame_gray">
+    <color rgba="0.23 0.25 0.28 1" />
+    </material>
+  <material name="cover_gray">
+    <color rgba="0.32 0.34 0.37 1" />
+    </material>
+  <material name="machined_steel">
+    <color rgba="0.63 0.66 0.69 1" />
+    </material>
+  <material name="gear_steel">
+    <color rgba="0.52 0.55 0.58 1" />
+    </material>
+  <material name="fastener_black">
+    <color rgba="0.12 0.13 0.14 1" />
+    </material>
+  <link name="frame">
+    <inertial>
+      <origin xyz="0 0 0.1225" rpy="0 0 0" />
+      <mass value="34" />
+      <inertia ixx="0.478621" ixy="0" ixz="0" iyy="0.579204" iyz="0" izz="0.717683" />
+      </inertial>
+    <visual name="frame_shell">
+      <geometry>
+        <mesh filename="assets/meshes/frame_shell.obj" />
+        </geometry>
+      <material name="frame_gray">
+        <color rgba="0.23 0.25 0.28 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="left_bearing_caps">
+    <inertial>
+      <mass value="3.6" />
+      <inertia ixx="0.01803" ixy="0" ixz="0" iyy="0.0010572" iyz="0" izz="0.0175872" />
+      </inertial>
+    <visual name="left_caps">
+      <geometry>
+        <mesh filename="assets/meshes/left_bearing_caps.obj" />
+        </geometry>
+      <material name="cover_gray">
+        <color rgba="0.32 0.34 0.37 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="right_bearing_caps">
+    <inertial>
+      <mass value="3.6" />
+      <inertia ixx="0.01803" ixy="0" ixz="0" iyy="0.0010572" iyz="0" izz="0.0175872" />
+      </inertial>
+    <visual name="right_caps">
+      <geometry>
+        <mesh filename="assets/meshes/right_bearing_caps.obj" />
+        </geometry>
+      <material name="cover_gray">
+        <color rgba="0.32 0.34 0.37 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="top_inspection_cover">
+    <inertial>
+      <origin xyz="0 0 0.013" rpy="0 0 0" />
+      <mass value="3.2" />
+      <inertia ixx="0.0160565" ixy="0" ixz="0" iyy="0.0264725" iyz="0" izz="0.0421685" />
+      </inertial>
+    <visual name="top_cover">
+      <geometry>
+        <mesh filename="assets/meshes/top_inspection_cover.obj" />
+        </geometry>
+      <material name="cover_gray">
+        <color rgba="0.32 0.34 0.37 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="bevel_housing_cover">
+    <inertial>
+      <origin xyz="0 0 0.036" rpy="0 0 0" />
+      <mass value="2.8" />
+      <inertia ixx="0.00336" ixy="0" ixz="0" iyy="0.00445853" iyz="0" izz="0.00539933" />
+      </inertial>
+    <visual name="bevel_cover">
+      <geometry>
+        <mesh filename="assets/meshes/bevel_housing_cover.obj" />
+        </geometry>
+      <material name="cover_gray">
+        <color rgba="0.32 0.34 0.37 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="input_shaft">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 1.5708 0" />
+      <mass value="6" />
+      <inertia ixx="0.089376" ixy="0" ixz="0" iyy="0.089376" iyz="0" izz="0.002352" />
+      </inertial>
+    <visual name="shaft_body">
+      <geometry>
+        <mesh filename="assets/meshes/input_shaft_body.obj" />
+        </geometry>
+      <material name="machined_steel">
+        <color rgba="0.63 0.66 0.69 1" />
+        </material>
+      </visual>
+    <visual name="stage1_pinion">
+      <geometry>
+        <mesh filename="assets/meshes/input_stage1_pinion.obj" />
+        </geometry>
+      <material name="gear_steel">
+        <color rgba="0.52 0.55 0.58 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="intermediate_shaft">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 1.5708 0" />
+      <mass value="9" />
+      <inertia ixx="0.1236" ixy="0" ixz="0" iyy="0.1236" iyz="0" izz="0.0072" />
+      </inertial>
+    <visual name="shaft_body">
+      <geometry>
+        <mesh filename="assets/meshes/intermediate_shaft_body.obj" />
+        </geometry>
+      <material name="machined_steel">
+        <color rgba="0.63 0.66 0.69 1" />
+        </material>
+      </visual>
+    <visual name="stage1_gear">
+      <geometry>
+        <mesh filename="assets/meshes/intermediate_stage1_gear.obj" />
+        </geometry>
+      <material name="gear_steel">
+        <color rgba="0.52 0.55 0.58 1" />
+        </material>
+      </visual>
+    <visual name="stage2_pinion">
+      <geometry>
+        <mesh filename="assets/meshes/intermediate_stage2_pinion.obj" />
+        </geometry>
+      <material name="gear_steel">
+        <color rgba="0.52 0.55 0.58 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="layshaft">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 1.5708 0" />
+      <mass value="10" />
+      <inertia ixx="0.151622" ixy="0" ixz="0" iyy="0.151622" iyz="0" izz="0.009245" />
+      </inertial>
+    <visual name="shaft_body">
+      <geometry>
+        <mesh filename="assets/meshes/layshaft_body.obj" />
+        </geometry>
+      <material name="machined_steel">
+        <color rgba="0.63 0.66 0.69 1" />
+        </material>
+      </visual>
+    <visual name="stage2_gear">
+      <geometry>
+        <mesh filename="assets/meshes/layshaft_stage2_gear.obj" />
+        </geometry>
+      <material name="gear_steel">
+        <color rgba="0.52 0.55 0.58 1" />
+        </material>
+      </visual>
+    <visual name="bevel_pinion">
+      <geometry>
+        <mesh filename="assets/meshes/layshaft_bevel_pinion.obj" />
+        </geometry>
+      <material name="gear_steel">
+        <color rgba="0.52 0.55 0.58 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="vertical_output">
+    <inertial>
+      <origin xyz="0 0 0.14" rpy="0 0 0" />
+      <mass value="6.8" />
+      <inertia ixx="0.0459567" ixy="0" ixz="0" iyy="0.0459567" iyz="0" izz="0.00306" />
+      </inertial>
+    <visual name="shaft_body">
+      <geometry>
+        <mesh filename="assets/meshes/vertical_output_shaft.obj" />
+        </geometry>
+      <material name="machined_steel">
+        <color rgba="0.63 0.66 0.69 1" />
+        </material>
+      </visual>
+    <visual name="bevel_gear">
+      <geometry>
+        <mesh filename="assets/meshes/vertical_output_bevel_gear.obj" />
+        </geometry>
+      <material name="gear_steel">
+        <color rgba="0.52 0.55 0.58 1" />
+        </material>
+      </visual>
+    </link>
+  <joint name="frame_to_left_caps" type="fixed">
+    <origin xyz="-0.164 0.005 0.145" rpy="0 0 0" />
+    <parent link="frame" />
+    <child link="left_bearing_caps" />
+    </joint>
+  <joint name="frame_to_right_caps" type="fixed">
+    <origin xyz="0.164 0.005 0.145" rpy="0 0 0" />
+    <parent link="frame" />
+    <child link="right_bearing_caps" />
+    </joint>
+  <joint name="frame_to_top_cover" type="fixed">
+    <origin xyz="0 0 0.223" rpy="0 0 0" />
+    <parent link="frame" />
+    <child link="top_inspection_cover" />
+    </joint>
+  <joint name="frame_to_bevel_cover" type="fixed">
+    <origin xyz="0.11 0.105 0.082" rpy="0 0 0" />
+    <parent link="frame" />
+    <child link="bevel_housing_cover" />
+    </joint>
+  <joint name="frame_to_input_shaft" type="continuous">
+    <origin xyz="0 -0.09 0.145" rpy="0 0 0" />
+    <parent link="frame" />
+    <child link="input_shaft" />
+    <axis xyz="1 0 0" />
+    <limit effort="45" velocity="12" />
+    </joint>
+  <joint name="frame_to_intermediate_shaft" type="continuous">
+    <origin xyz="0 0.005 0.145" rpy="0 0 0" />
+    <parent link="frame" />
+    <child link="intermediate_shaft" />
+    <axis xyz="1 0 0" />
+    <limit effort="55" velocity="10" />
+    </joint>
+  <joint name="frame_to_layshaft" type="continuous">
+    <origin xyz="0 0.105 0.145" rpy="0 0 0" />
+    <parent link="frame" />
+    <child link="layshaft" />
+    <axis xyz="1 0 0" />
+    <limit effort="60" velocity="9" />
+    </joint>
+  <joint name="frame_to_vertical_output" type="continuous">
+    <origin xyz="0.11 0.105 0.038" rpy="0 0 0" />
+    <parent link="frame" />
+    <child link="vertical_output" />
+    <axis xyz="0 0 1" />
+    <limit effort="50" velocity="8" />
+    </joint>
+  </robot>

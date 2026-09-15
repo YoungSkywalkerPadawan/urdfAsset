@@ -1,0 +1,457 @@
+<robot name="bowl_lift_stand_mixer">
+  <material name="enamel">
+    <color rgba="0.9 0.88 0.82 1" />
+    </material>
+  <material name="steel">
+    <color rgba="0.87 0.88 0.9 1" />
+    </material>
+  <material name="dark_trim">
+    <color rgba="0.16 0.16 0.18 1" />
+    </material>
+  <link name="body">
+    <visual name="base_shell">
+      <origin xyz="0.02 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/base_shell.obj" />
+        </geometry>
+      <material name="enamel">
+        <color rgba="0.9 0.88 0.82 1" />
+        </material>
+      </visual>
+    <visual name="column_shell">
+      <geometry>
+        <mesh filename="assets/meshes/column_shell.obj" />
+        </geometry>
+      <material name="enamel">
+        <color rgba="0.9 0.88 0.82 1" />
+        </material>
+      </visual>
+    <visual name="neck_shell">
+      <origin xyz="0.005 0 0.349" rpy="0 0 0" />
+      <geometry>
+        <box size="0.092 0.104 0.078" />
+        </geometry>
+      <material name="enamel">
+        <color rgba="0.9 0.88 0.82 1" />
+        </material>
+      </visual>
+    <visual name="head_shell">
+      <origin xyz="0.04 0 0.392" rpy="0 0 0" />
+      <geometry>
+        <box size="0.168 0.132 0.112" />
+        </geometry>
+      <material name="enamel">
+        <color rgba="0.9 0.88 0.82 1" />
+        </material>
+      </visual>
+    <visual name="nose_shell">
+      <origin xyz="0.133 0 0.362" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.046" length="0.114" />
+        </geometry>
+      <material name="enamel">
+        <color rgba="0.9 0.88 0.82 1" />
+        </material>
+      </visual>
+    <visual name="guide_post_0">
+      <origin xyz="0.02 0.138 0.139" rpy="0 0 0" />
+      <geometry>
+        <box size="0.014 0.018 0.19" />
+        </geometry>
+      <material name="enamel">
+        <color rgba="0.9 0.88 0.82 1" />
+        </material>
+      </visual>
+    <visual name="guide_post_1">
+      <origin xyz="0.02 -0.138 0.139" rpy="0 0 0" />
+      <geometry>
+        <box size="0.014 0.018 0.19" />
+        </geometry>
+      <material name="enamel">
+        <color rgba="0.9 0.88 0.82 1" />
+        </material>
+      </visual>
+    <visual name="bridge_beam">
+      <origin xyz="-0.045 0 0.242" rpy="0 0 0" />
+      <geometry>
+        <box size="0.13 0.278 0.024" />
+        </geometry>
+      <material name="enamel">
+        <color rgba="0.9 0.88 0.82 1" />
+        </material>
+      </visual>
+    <visual name="lever_mount">
+      <origin xyz="-0.045 0.05 0.17" rpy="0 0 0" />
+      <geometry>
+        <box size="0.02 0.022 0.05" />
+        </geometry>
+      <material name="dark_trim">
+        <color rgba="0.16 0.16 0.18 1" />
+        </material>
+      </visual>
+    <visual name="drive_collar">
+      <origin xyz="0.132 0 0.32" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.022" length="0.018" />
+        </geometry>
+      <material name="dark_trim">
+        <color rgba="0.16 0.16 0.18 1" />
+        </material>
+      </visual>
+    <visual name="drive_mount">
+      <origin xyz="0.132 0 0.326" rpy="0 0 0" />
+      <geometry>
+        <box size="0.054 0.064 0.018" />
+        </geometry>
+      <material name="enamel">
+        <color rgba="0.9 0.88 0.82 1" />
+        </material>
+      </visual>
+    <collision name="base_shell">
+      <origin xyz="0.02 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/base_shell.obj" />
+        </geometry>
+      </collision>
+    <collision name="column_shell">
+      <geometry>
+        <mesh filename="assets/meshes/column_shell.obj" />
+        </geometry>
+      </collision>
+    <collision name="neck_shell">
+      <origin xyz="0.005 0 0.349" rpy="0 0 0" />
+      <geometry>
+        <box size="0.092 0.104 0.078" />
+        </geometry>
+      </collision>
+    <collision name="head_shell">
+      <origin xyz="0.04 0 0.392" rpy="0 0 0" />
+      <geometry>
+        <box size="0.168 0.132 0.112" />
+        </geometry>
+      </collision>
+    <collision name="nose_shell">
+      <origin xyz="0.133 0 0.362" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.046" length="0.114" />
+        </geometry>
+      </collision>
+    <collision name="guide_post_0">
+      <origin xyz="0.02 0.138 0.139" rpy="0 0 0" />
+      <geometry>
+        <box size="0.014 0.018 0.19" />
+        </geometry>
+      </collision>
+    <collision name="guide_post_1">
+      <origin xyz="0.02 -0.138 0.139" rpy="0 0 0" />
+      <geometry>
+        <box size="0.014 0.018 0.19" />
+        </geometry>
+      </collision>
+    <collision name="bridge_beam">
+      <origin xyz="-0.045 0 0.242" rpy="0 0 0" />
+      <geometry>
+        <box size="0.13 0.278 0.024" />
+        </geometry>
+      </collision>
+    <collision name="lever_mount">
+      <origin xyz="-0.045 0.05 0.17" rpy="0 0 0" />
+      <geometry>
+        <box size="0.02 0.022 0.05" />
+        </geometry>
+      </collision>
+    <collision name="drive_collar">
+      <origin xyz="0.132 0 0.32" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.022" length="0.018" />
+        </geometry>
+      </collision>
+    <collision name="drive_mount">
+      <origin xyz="0.132 0 0.326" rpy="0 0 0" />
+      <geometry>
+        <box size="0.054 0.064 0.018" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="bowl_carriage">
+    <visual name="support_plate">
+      <origin xyz="0 0 0.005" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.094" length="0.01" />
+        </geometry>
+      <material name="steel">
+        <color rgba="0.87 0.88 0.9 1" />
+        </material>
+      </visual>
+    <visual name="rear_beam">
+      <origin xyz="-0.095 0 0.03" rpy="0 0 0" />
+      <geometry>
+        <box size="0.032 0.26 0.024" />
+        </geometry>
+      <material name="steel">
+        <color rgba="0.87 0.88 0.9 1" />
+        </material>
+      </visual>
+    <visual name="guide_shoe_0">
+      <origin xyz="-0.095 0.138 0.089" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.016 0.13" />
+        </geometry>
+      <material name="steel">
+        <color rgba="0.87 0.88 0.9 1" />
+        </material>
+      </visual>
+    <visual name="support_arm_0">
+      <origin xyz="-0.062 0.07 0.013" rpy="0 0 0" />
+      <geometry>
+        <box size="0.09 0.018 0.018" />
+        </geometry>
+      <material name="steel">
+        <color rgba="0.87 0.88 0.9 1" />
+        </material>
+      </visual>
+    <visual name="guide_shoe_1">
+      <origin xyz="-0.095 -0.138 0.089" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.016 0.13" />
+        </geometry>
+      <material name="steel">
+        <color rgba="0.87 0.88 0.9 1" />
+        </material>
+      </visual>
+    <visual name="support_arm_1">
+      <origin xyz="-0.062 -0.07 0.013" rpy="0 0 0" />
+      <geometry>
+        <box size="0.09 0.018 0.018" />
+        </geometry>
+      <material name="steel">
+        <color rgba="0.87 0.88 0.9 1" />
+        </material>
+      </visual>
+    <collision name="support_plate">
+      <origin xyz="0 0 0.005" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.094" length="0.01" />
+        </geometry>
+      </collision>
+    <collision name="rear_beam">
+      <origin xyz="-0.095 0 0.03" rpy="0 0 0" />
+      <geometry>
+        <box size="0.032 0.26 0.024" />
+        </geometry>
+      </collision>
+    <collision name="guide_shoe_0">
+      <origin xyz="-0.095 0.138 0.089" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.016 0.13" />
+        </geometry>
+      </collision>
+    <collision name="support_arm_0">
+      <origin xyz="-0.062 0.07 0.013" rpy="0 0 0" />
+      <geometry>
+        <box size="0.09 0.018 0.018" />
+        </geometry>
+      </collision>
+    <collision name="guide_shoe_1">
+      <origin xyz="-0.095 -0.138 0.089" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.016 0.13" />
+        </geometry>
+      </collision>
+    <collision name="support_arm_1">
+      <origin xyz="-0.062 -0.07 0.013" rpy="0 0 0" />
+      <geometry>
+        <box size="0.09 0.018 0.018" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="bowl">
+    <visual name="bowl_shell">
+      <geometry>
+        <mesh filename="assets/meshes/bowl_shell.obj" />
+        </geometry>
+      <material name="steel">
+        <color rgba="0.87 0.88 0.9 1" />
+        </material>
+      </visual>
+    <visual name="handle_0">
+      <geometry>
+        <mesh filename="assets/meshes/bowl_handle_0.obj" />
+        </geometry>
+      <material name="steel">
+        <color rgba="0.87 0.88 0.9 1" />
+        </material>
+      </visual>
+    <visual name="handle_mount_0_0">
+      <origin xyz="-0.016 0.11 0.088" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.034" />
+        </geometry>
+      <material name="steel">
+        <color rgba="0.87 0.88 0.9 1" />
+        </material>
+      </visual>
+    <visual name="handle_mount_0_1">
+      <origin xyz="0.06 0.11 0.106" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.034" />
+        </geometry>
+      <material name="steel">
+        <color rgba="0.87 0.88 0.9 1" />
+        </material>
+      </visual>
+    <visual name="handle_1">
+      <geometry>
+        <mesh filename="assets/meshes/bowl_handle_1.obj" />
+        </geometry>
+      <material name="steel">
+        <color rgba="0.87 0.88 0.9 1" />
+        </material>
+      </visual>
+    <visual name="handle_mount_1_0">
+      <origin xyz="-0.016 -0.11 0.088" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.034" />
+        </geometry>
+      <material name="steel">
+        <color rgba="0.87 0.88 0.9 1" />
+        </material>
+      </visual>
+    <visual name="handle_mount_1_1">
+      <origin xyz="0.06 -0.11 0.106" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.034" />
+        </geometry>
+      <material name="steel">
+        <color rgba="0.87 0.88 0.9 1" />
+        </material>
+      </visual>
+    <collision name="bowl_shell">
+      <geometry>
+        <mesh filename="assets/meshes/bowl_shell.obj" />
+        </geometry>
+      </collision>
+    <collision name="handle_0">
+      <geometry>
+        <mesh filename="assets/meshes/bowl_handle_0.obj" />
+        </geometry>
+      </collision>
+    <collision name="handle_mount_0_0">
+      <origin xyz="-0.016 0.11 0.088" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.034" />
+        </geometry>
+      </collision>
+    <collision name="handle_mount_0_1">
+      <origin xyz="0.06 0.11 0.106" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.034" />
+        </geometry>
+      </collision>
+    <collision name="handle_1">
+      <geometry>
+        <mesh filename="assets/meshes/bowl_handle_1.obj" />
+        </geometry>
+      </collision>
+    <collision name="handle_mount_1_0">
+      <origin xyz="-0.016 -0.11 0.088" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.034" />
+        </geometry>
+      </collision>
+    <collision name="handle_mount_1_1">
+      <origin xyz="0.06 -0.11 0.106" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.034" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="lift_lever">
+    <visual name="lever_pivot">
+      <origin xyz="0 0.006 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.014 0.012 0.02" />
+        </geometry>
+      <material name="dark_trim">
+        <color rgba="0.16 0.16 0.18 1" />
+        </material>
+      </visual>
+    <visual name="lever_arm">
+      <origin xyz="0 0.014 -0.042" rpy="0 0 0" />
+      <geometry>
+        <box size="0.014 0.012 0.085" />
+        </geometry>
+      <material name="dark_trim">
+        <color rgba="0.16 0.16 0.18 1" />
+        </material>
+      </visual>
+    <visual name="lever_grip">
+      <origin xyz="0 0.03 -0.082" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.009" length="0.028" />
+        </geometry>
+      <material name="dark_trim">
+        <color rgba="0.16 0.16 0.18 1" />
+        </material>
+      </visual>
+    <collision name="lever_pivot">
+      <origin xyz="0 0.006 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.014 0.012 0.02" />
+        </geometry>
+      </collision>
+    <collision name="lever_arm">
+      <origin xyz="0 0.014 -0.042" rpy="0 0 0" />
+      <geometry>
+        <box size="0.014 0.012 0.085" />
+        </geometry>
+      </collision>
+    <collision name="lever_grip">
+      <origin xyz="0 0.03 -0.082" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.009" length="0.028" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="whisk">
+    <visual name="whisk_shell">
+      <geometry>
+        <mesh filename="assets/meshes/whisk_shell.obj" />
+        </geometry>
+      <material name="steel">
+        <color rgba="0.87 0.88 0.9 1" />
+        </material>
+      </visual>
+    <collision name="whisk_shell">
+      <geometry>
+        <mesh filename="assets/meshes/whisk_shell.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="body_to_bowl_carriage" type="prismatic">
+    <origin xyz="0.132 0 0.044" rpy="0 0 0" />
+    <parent link="body" />
+    <child link="bowl_carriage" />
+    <axis xyz="0 0 1" />
+    <limit effort="120" velocity="0.08" lower="0" upper="0.07" />
+    </joint>
+  <joint name="carriage_to_bowl" type="fixed">
+    <origin xyz="0 0 0.01" rpy="0 0 0" />
+    <parent link="bowl_carriage" />
+    <child link="bowl" />
+    </joint>
+  <joint name="body_to_lift_lever" type="revolute">
+    <origin xyz="-0.045 0.061 0.17" rpy="0 0 0" />
+    <parent link="body" />
+    <child link="lift_lever" />
+    <axis xyz="1 0 0" />
+    <limit effort="10" velocity="1.2" lower="-0.2" upper="0.95" />
+    </joint>
+  <joint name="body_to_whisk" type="continuous">
+    <origin xyz="0.132 0 0.311" rpy="0 0 0" />
+    <parent link="body" />
+    <child link="whisk" />
+    <axis xyz="0 0 1" />
+    <limit effort="25" velocity="18" />
+    </joint>
+  </robot>

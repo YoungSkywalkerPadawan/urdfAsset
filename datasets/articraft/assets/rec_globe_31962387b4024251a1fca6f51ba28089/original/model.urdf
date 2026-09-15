@@ -1,0 +1,276 @@
+<robot name="floor_standing_globe">
+  <material name="warm_wood">
+    <color rgba="0.43 0.22 0.09 1" />
+    </material>
+  <material name="dark_wood">
+    <color rgba="0.2 0.11 0.05 1" />
+    </material>
+  <material name="brushed_brass">
+    <color rgba="0.86 0.63 0.22 1" />
+    </material>
+  <material name="satin_ocean_blue">
+    <color rgba="0.06 0.28 0.58 1" />
+    </material>
+  <material name="raised_land_green">
+    <color rgba="0.15 0.48 0.18 1" />
+    </material>
+  <material name="antique_map_line">
+    <color rgba="0.91 0.77 0.43 1" />
+    </material>
+  <link name="base">
+    <visual name="base_plinth">
+      <origin xyz="0 0 0.035" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.4" length="0.07" />
+        </geometry>
+      <material name="dark_wood">
+        <color rgba="0.2 0.11 0.05 1" />
+        </material>
+      </visual>
+    <visual name="upper_step">
+      <origin xyz="0 0 0.071" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.33" length="0.018" />
+        </geometry>
+      <material name="warm_wood">
+        <color rgba="0.43 0.22 0.09 1" />
+        </material>
+      </visual>
+    <visual name="bearing_race">
+      <origin xyz="0 0 0.085" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.17" length="0.01" />
+        </geometry>
+      <material name="brushed_brass">
+        <color rgba="0.86 0.63 0.22 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="turntable">
+    <visual name="turntable_disk">
+      <origin xyz="0 0 0.024" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.31" length="0.04" />
+        </geometry>
+      <material name="warm_wood">
+        <color rgba="0.43 0.22 0.09 1" />
+        </material>
+      </visual>
+    <visual name="brass_rim">
+      <origin xyz="0 0 0.008" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.325" length="0.014" />
+        </geometry>
+      <material name="brushed_brass">
+        <color rgba="0.86 0.63 0.22 1" />
+        </material>
+      </visual>
+    <visual name="pedestal_column">
+      <origin xyz="0 0 0.275" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.048" length="0.47" />
+        </geometry>
+      <material name="warm_wood">
+        <color rgba="0.43 0.22 0.09 1" />
+        </material>
+      </visual>
+    <visual name="lower_collar">
+      <origin xyz="0 0 0.065" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.08" length="0.035" />
+        </geometry>
+      <material name="brushed_brass">
+        <color rgba="0.86 0.63 0.22 1" />
+        </material>
+      </visual>
+    <visual name="upper_collar">
+      <origin xyz="0 0 0.515" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.073" length="0.04" />
+        </geometry>
+      <material name="brushed_brass">
+        <color rgba="0.86 0.63 0.22 1" />
+        </material>
+      </visual>
+    <visual name="meridian_arc">
+      <geometry>
+        <mesh filename="assets/meshes/meridian_arc.obj" />
+        </geometry>
+      <material name="brushed_brass">
+        <color rgba="0.86 0.63 0.22 1" />
+        </material>
+      </visual>
+    <visual name="lower_yoke">
+      <geometry>
+        <mesh filename="assets/meshes/lower_yoke.obj" />
+        </geometry>
+      <material name="brushed_brass">
+        <color rgba="0.86 0.63 0.22 1" />
+        </material>
+      </visual>
+    <visual name="side_brace">
+      <geometry>
+        <mesh filename="assets/meshes/side_brace.obj" />
+        </geometry>
+      <material name="brushed_brass">
+        <color rgba="0.86 0.63 0.22 1" />
+        </material>
+      </visual>
+    <visual name="north_pivot_pin">
+      <geometry>
+        <mesh filename="assets/meshes/north_pivot_pin.obj" />
+        </geometry>
+      <material name="brushed_brass">
+        <color rgba="0.86 0.63 0.22 1" />
+        </material>
+      </visual>
+    <visual name="north_pivot_bearing">
+      <origin xyz="0.155512 0 1.27765" rpy="0 0.410152 0" />
+      <geometry>
+        <cylinder radius="0.052" length="0.026" />
+        </geometry>
+      <material name="brushed_brass">
+        <color rgba="0.86 0.63 0.22 1" />
+        </material>
+      </visual>
+    <visual name="south_pivot_pin">
+      <geometry>
+        <mesh filename="assets/meshes/south_pivot_pin.obj" />
+        </geometry>
+      <material name="brushed_brass">
+        <color rgba="0.86 0.63 0.22 1" />
+        </material>
+      </visual>
+    <visual name="south_pivot_bearing">
+      <origin xyz="-0.155512 0 0.562347" rpy="0 0.410152 0" />
+      <geometry>
+        <cylinder radius="0.052" length="0.026" />
+        </geometry>
+      <material name="brushed_brass">
+        <color rgba="0.86 0.63 0.22 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="globe">
+    <visual name="globe_sphere">
+      <geometry>
+        <sphere radius="0.32" />
+        </geometry>
+      <material name="satin_ocean_blue">
+        <color rgba="0.06 0.28 0.58 1" />
+        </material>
+      </visual>
+    <visual name="equator_line">
+      <geometry>
+        <mesh filename="assets/meshes/equator_line.obj" />
+        </geometry>
+      <material name="antique_map_line">
+        <color rgba="0.91 0.77 0.43 1" />
+        </material>
+      </visual>
+    <visual name="north_parallel">
+      <geometry>
+        <mesh filename="assets/meshes/north_parallel.obj" />
+        </geometry>
+      <material name="antique_map_line">
+        <color rgba="0.91 0.77 0.43 1" />
+        </material>
+      </visual>
+    <visual name="south_parallel">
+      <geometry>
+        <mesh filename="assets/meshes/south_parallel.obj" />
+        </geometry>
+      <material name="antique_map_line">
+        <color rgba="0.91 0.77 0.43 1" />
+        </material>
+      </visual>
+    <visual name="meridian_line_0">
+      <geometry>
+        <mesh filename="assets/meshes/meridian_line_0.obj" />
+        </geometry>
+      <material name="antique_map_line">
+        <color rgba="0.91 0.77 0.43 1" />
+        </material>
+      </visual>
+    <visual name="meridian_line_1">
+      <geometry>
+        <mesh filename="assets/meshes/meridian_line_1.obj" />
+        </geometry>
+      <material name="antique_map_line">
+        <color rgba="0.91 0.77 0.43 1" />
+        </material>
+      </visual>
+    <visual name="meridian_line_2">
+      <geometry>
+        <mesh filename="assets/meshes/meridian_line_2.obj" />
+        </geometry>
+      <material name="antique_map_line">
+        <color rgba="0.91 0.77 0.43 1" />
+        </material>
+      </visual>
+    <visual name="continent_0">
+      <geometry>
+        <mesh filename="assets/meshes/continent_0.obj" />
+        </geometry>
+      <material name="raised_land_green">
+        <color rgba="0.15 0.48 0.18 1" />
+        </material>
+      </visual>
+    <visual name="continent_1">
+      <geometry>
+        <mesh filename="assets/meshes/continent_1.obj" />
+        </geometry>
+      <material name="raised_land_green">
+        <color rgba="0.15 0.48 0.18 1" />
+        </material>
+      </visual>
+    <visual name="continent_2">
+      <geometry>
+        <mesh filename="assets/meshes/continent_2.obj" />
+        </geometry>
+      <material name="raised_land_green">
+        <color rgba="0.15 0.48 0.18 1" />
+        </material>
+      </visual>
+    <visual name="continent_3">
+      <geometry>
+        <mesh filename="assets/meshes/continent_3.obj" />
+        </geometry>
+      <material name="raised_land_green">
+        <color rgba="0.15 0.48 0.18 1" />
+        </material>
+      </visual>
+    <visual name="north_cap">
+      <origin xyz="0 0 0.329" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.045" length="0.018" />
+        </geometry>
+      <material name="brushed_brass">
+        <color rgba="0.86 0.63 0.22 1" />
+        </material>
+      </visual>
+    <visual name="south_cap">
+      <origin xyz="0 0 -0.329" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.045" length="0.018" />
+        </geometry>
+      <material name="brushed_brass">
+        <color rgba="0.86 0.63 0.22 1" />
+        </material>
+      </visual>
+    </link>
+  <joint name="base_swivel" type="continuous">
+    <origin xyz="0 0 0.089" rpy="0 0 0" />
+    <parent link="base" />
+    <child link="turntable" />
+    <axis xyz="0 0 1" />
+    <limit effort="8" velocity="3" />
+    </joint>
+  <joint name="globe_spin" type="continuous">
+    <origin xyz="0 0 0.92" rpy="0 0.410152 0" />
+    <parent link="turntable" />
+    <child link="globe" />
+    <axis xyz="0 0 1" />
+    <limit effort="2" velocity="6" />
+    </joint>
+  </robot>

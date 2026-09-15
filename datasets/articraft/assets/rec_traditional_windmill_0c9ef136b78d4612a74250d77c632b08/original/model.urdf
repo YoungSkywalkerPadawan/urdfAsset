@@ -1,0 +1,1099 @@
+<robot name="traditional_windmill">
+  <material name="stone">
+    <color rgba="0.7 0.68 0.63 1" />
+    </material>
+  <material name="dark_stone">
+    <color rgba="0.52 0.5 0.47 1" />
+    </material>
+  <material name="timber">
+    <color rgba="0.41 0.27 0.15 1" />
+    </material>
+  <material name="weathered_wood">
+    <color rgba="0.33 0.24 0.16 1" />
+    </material>
+  <material name="shingle">
+    <color rgba="0.22 0.17 0.14 1" />
+    </material>
+  <material name="black_iron">
+    <color rgba="0.14 0.14 0.15 1" />
+    </material>
+  <material name="sail_wood">
+    <color rgba="0.7 0.61 0.42 1" />
+    </material>
+  <material name="off_white">
+    <color rgba="0.88 0.85 0.76 1" />
+    </material>
+  <link name="tower_base">
+    <inertial>
+      <origin xyz="0 0 4.05" rpy="0 0 0" />
+      <mass value="18000" />
+      <inertia ixx="165750" ixy="0" ixz="0" iyy="165750" iyz="0" izz="134670" />
+      </inertial>
+    <visual name="tower_shell">
+      <geometry>
+        <mesh filename="assets/meshes/tower_shell.obj" />
+        </geometry>
+      <material name="stone">
+        <color rgba="0.7 0.68 0.63 1" />
+        </material>
+      </visual>
+    <visual name="plinth_ring">
+      <origin xyz="0 0 0.23" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="3.32" length="0.46" />
+        </geometry>
+      <material name="dark_stone">
+        <color rgba="0.52 0.5 0.47 1" />
+        </material>
+      </visual>
+    <visual name="front_door">
+      <origin xyz="3.02 0 1.03" rpy="0 0 0" />
+      <geometry>
+        <box size="0.34 1.06 2.05" />
+        </geometry>
+      <material name="timber">
+        <color rgba="0.41 0.27 0.15 1" />
+        </material>
+      </visual>
+    <visual name="mid_window">
+      <origin xyz="2.76 0 3.55" rpy="0 0 0" />
+      <geometry>
+        <box size="0.18 0.62 0.9" />
+        </geometry>
+      <material name="weathered_wood">
+        <color rgba="0.33 0.24 0.16 1" />
+        </material>
+      </visual>
+    <visual name="upper_window">
+      <origin xyz="2.53 0 5.75" rpy="0 0 0" />
+      <geometry>
+        <box size="0.14 0.54 0.76" />
+        </geometry>
+      <material name="weathered_wood">
+        <color rgba="0.33 0.24 0.16 1" />
+        </material>
+      </visual>
+    <visual name="tower_top_ring">
+      <origin xyz="0 0 7.93" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="2.34" length="0.12" />
+        </geometry>
+      <material name="dark_stone">
+        <color rgba="0.52 0.5 0.47 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="bearing_module">
+    <inertial>
+      <origin xyz="0 0 0.28" rpy="0 0 0" />
+      <mass value="1400" />
+      <inertia ixx="2137.46" ixy="0" ixz="0" iyy="2137.46" iyz="0" izz="4201.75" />
+      </inertial>
+    <visual name="bottom_curb">
+      <origin xyz="0 0 0.09" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="2.42" length="0.18" />
+        </geometry>
+      <material name="timber">
+        <color rgba="0.41 0.27 0.15 1" />
+        </material>
+      </visual>
+    <visual name="upper_curb">
+      <origin xyz="0 0 0.31" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="2.18" length="0.18" />
+        </geometry>
+      <material name="weathered_wood">
+        <color rgba="0.33 0.24 0.16 1" />
+        </material>
+      </visual>
+    <visual name="top_track">
+      <origin xyz="0 0 0.47" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="2.28" length="0.1" />
+        </geometry>
+      <material name="black_iron">
+        <color rgba="0.14 0.14 0.15 1" />
+        </material>
+      </visual>
+    <visual name="bearing_block_0">
+      <origin xyz="1.45 0 0.3" rpy="0 0 0" />
+      <geometry>
+        <box size="0.46 0.26 0.2" />
+        </geometry>
+      <material name="timber">
+        <color rgba="0.41 0.27 0.15 1" />
+        </material>
+      </visual>
+    <visual name="bearing_block_1">
+      <origin xyz="8.87869e-17 1.45 0.3" rpy="0 0 1.5708" />
+      <geometry>
+        <box size="0.46 0.26 0.2" />
+        </geometry>
+      <material name="timber">
+        <color rgba="0.41 0.27 0.15 1" />
+        </material>
+      </visual>
+    <visual name="bearing_block_2">
+      <origin xyz="-1.45 1.77574e-16 0.3" rpy="0 0 3.14159" />
+      <geometry>
+        <box size="0.46 0.26 0.2" />
+        </geometry>
+      <material name="timber">
+        <color rgba="0.41 0.27 0.15 1" />
+        </material>
+      </visual>
+    <visual name="bearing_block_3">
+      <origin xyz="-2.66361e-16 -1.45 0.3" rpy="0 0 4.71239" />
+      <geometry>
+        <box size="0.46 0.26 0.2" />
+        </geometry>
+      <material name="timber">
+        <color rgba="0.41 0.27 0.15 1" />
+        </material>
+      </visual>
+    <visual name="bearing_post_0">
+      <origin xyz="1.82 0 0.27" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.1" length="0.34" />
+        </geometry>
+      <material name="black_iron">
+        <color rgba="0.14 0.14 0.15 1" />
+        </material>
+      </visual>
+    <visual name="bearing_post_1">
+      <origin xyz="1.11443e-16 1.82 0.27" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.1" length="0.34" />
+        </geometry>
+      <material name="black_iron">
+        <color rgba="0.14 0.14 0.15 1" />
+        </material>
+      </visual>
+    <visual name="bearing_post_2">
+      <origin xyz="-1.82 2.22886e-16 0.27" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.1" length="0.34" />
+        </geometry>
+      <material name="black_iron">
+        <color rgba="0.14 0.14 0.15 1" />
+        </material>
+      </visual>
+    <visual name="bearing_post_3">
+      <origin xyz="-3.34329e-16 -1.82 0.27" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.1" length="0.34" />
+        </geometry>
+      <material name="black_iron">
+        <color rgba="0.14 0.14 0.15 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="cap_shell">
+    <inertial>
+      <origin xyz="0 0 1.02" rpy="0 0 0" />
+      <mass value="2600" />
+      <inertia ixx="3763.5" ixy="0" ixz="0" iyy="4777.5" iyz="0" izz="6630" />
+      </inertial>
+    <visual name="cap_base_ring">
+      <origin xyz="0 0 0.09" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="2.06" length="0.18" />
+        </geometry>
+      <material name="weathered_wood">
+        <color rgba="0.33 0.24 0.16 1" />
+        </material>
+      </visual>
+    <visual name="cap_body">
+      <geometry>
+        <mesh filename="assets/meshes/cap_shell_body.obj" />
+        </geometry>
+      <material name="shingle">
+        <color rgba="0.22 0.17 0.14 1" />
+        </material>
+      </visual>
+    <visual name="rear_service_hatch">
+      <origin xyz="-1.72 0 0.72" rpy="0 0 0" />
+      <geometry>
+        <box size="0.18 0.86 0.96" />
+        </geometry>
+      <material name="weathered_wood">
+        <color rgba="0.33 0.24 0.16 1" />
+        </material>
+      </visual>
+    <visual name="port_cap_window">
+      <origin xyz="0.1 1.55 0.86" rpy="0 0 0" />
+      <geometry>
+        <box size="0.14 0.52 0.62" />
+        </geometry>
+      <material name="weathered_wood">
+        <color rgba="0.33 0.24 0.16 1" />
+        </material>
+      </visual>
+    <visual name="starboard_cap_window">
+      <origin xyz="0.1 -1.55 0.86" rpy="0 0 0" />
+      <geometry>
+        <box size="0.14 0.52 0.62" />
+        </geometry>
+      <material name="weathered_wood">
+        <color rgba="0.33 0.24 0.16 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="head_frame">
+    <inertial>
+      <origin xyz="0.36 0 0" rpy="0 0 0" />
+      <mass value="900" />
+      <inertia ixx="198.75" ixy="0" ixz="0" iyy="143.67" iyz="0" izz="160.92" />
+      </inertial>
+    <visual name="rear_mount_plate">
+      <geometry>
+        <box size="0.16 1.16 1.04" />
+        </geometry>
+      <material name="weathered_wood">
+        <color rgba="0.33 0.24 0.16 1" />
+        </material>
+      </visual>
+    <visual name="port_cheek">
+      <origin xyz="0.31 0.42 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.62 0.2 0.78" />
+        </geometry>
+      <material name="weathered_wood">
+        <color rgba="0.33 0.24 0.16 1" />
+        </material>
+      </visual>
+    <visual name="starboard_cheek">
+      <origin xyz="0.31 -0.42 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.62 0.2 0.78" />
+        </geometry>
+      <material name="weathered_wood">
+        <color rgba="0.33 0.24 0.16 1" />
+        </material>
+      </visual>
+    <visual name="top_bridge">
+      <origin xyz="0.18 0 0.35" rpy="0 0 0" />
+      <geometry>
+        <box size="0.42 0.96 0.16" />
+        </geometry>
+      <material name="weathered_wood">
+        <color rgba="0.33 0.24 0.16 1" />
+        </material>
+      </visual>
+    <visual name="bottom_bridge">
+      <origin xyz="0.14 0 -0.3" rpy="0 0 0" />
+      <geometry>
+        <box size="0.3 0.68 0.12" />
+        </geometry>
+      <material name="weathered_wood">
+        <color rgba="0.33 0.24 0.16 1" />
+        </material>
+      </visual>
+    <visual name="front_cheek_bridge">
+      <origin xyz="0.64 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.22 0.84 0.14" />
+        </geometry>
+      <material name="weathered_wood">
+        <color rgba="0.33 0.24 0.16 1" />
+        </material>
+      </visual>
+    <visual name="front_bearing_collar">
+      <origin xyz="0.77 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.24" length="0.16" />
+        </geometry>
+      <material name="black_iron">
+        <color rgba="0.14 0.14 0.15 1" />
+        </material>
+      </visual>
+    <visual name="port_upper_strut">
+      <origin xyz="0.32 0.3 0.23" rpy="0 1.87324 -0.588003" />
+      <geometry>
+        <cylinder radius="0.04" length="0.604318" />
+        </geometry>
+      <material name="black_iron">
+        <color rgba="0.14 0.14 0.15 1" />
+        </material>
+      </visual>
+    <visual name="starboard_upper_strut">
+      <origin xyz="0.32 -0.3 0.23" rpy="0 1.87324 0.588003" />
+      <geometry>
+        <cylinder radius="0.04" length="0.604318" />
+        </geometry>
+      <material name="black_iron">
+        <color rgba="0.14 0.14 0.15 1" />
+        </material>
+      </visual>
+    <visual name="port_lower_strut">
+      <origin xyz="0.3 0.24 -0.15" rpy="0 1.27923 -0.54042" />
+      <geometry>
+        <cylinder radius="0.035" length="0.487032" />
+        </geometry>
+      <material name="black_iron">
+        <color rgba="0.14 0.14 0.15 1" />
+        </material>
+      </visual>
+    <visual name="starboard_lower_strut">
+      <origin xyz="0.3 -0.24 -0.15" rpy="0 1.27923 0.54042" />
+      <geometry>
+        <cylinder radius="0.035" length="0.487032" />
+        </geometry>
+      <material name="black_iron">
+        <color rgba="0.14 0.14 0.15 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="sail_hub">
+    <inertial>
+      <origin xyz="0.45 0 0" rpy="0 0 0" />
+      <mass value="1200" />
+      <inertia ixx="25992" ixy="0" ixz="0" iyy="13117" iyz="0" izz="13117" />
+      </inertial>
+    <visual name="hub_disk">
+      <origin xyz="0.12 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.56" length="0.24" />
+        </geometry>
+      <material name="black_iron">
+        <color rgba="0.14 0.14 0.15 1" />
+        </material>
+      </visual>
+    <visual name="hub_barrel">
+      <origin xyz="0.31 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.2" length="0.62" />
+        </geometry>
+      <material name="black_iron">
+        <color rgba="0.14 0.14 0.15 1" />
+        </material>
+      </visual>
+    <visual name="nose_collar">
+      <origin xyz="0.71 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.13" length="0.2" />
+        </geometry>
+      <material name="black_iron">
+        <color rgba="0.14 0.14 0.15 1" />
+        </material>
+      </visual>
+    <visual name="nose_tip">
+      <origin xyz="0.88 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.06" length="0.16" />
+        </geometry>
+      <material name="off_white">
+        <color rgba="0.88 0.85 0.76 1" />
+        </material>
+      </visual>
+    <visual name="north_sail_root_stock">
+      <origin xyz="0.16 0 0.73" rpy="0 -1.5708 0" />
+      <geometry>
+        <box size="0.9 0.26 0.18" />
+        </geometry>
+      <material name="sail_wood">
+        <color rgba="0.7 0.61 0.42 1" />
+        </material>
+      </visual>
+    <visual name="north_sail_center_spar">
+      <origin xyz="0.16 0 2.934" rpy="0 -1.5708 0" />
+      <geometry>
+        <box size="5.108 0.15 0.11" />
+        </geometry>
+      <material name="sail_wood">
+        <color rgba="0.7 0.61 0.42 1" />
+        </material>
+      </visual>
+    <visual name="north_sail_outer_leading">
+      <origin xyz="0.16 0.3822 3.11" rpy="0 -1.55562 1.5708" />
+      <geometry>
+        <box size="4.98057 0.12 0.09" />
+        </geometry>
+      <material name="sail_wood">
+        <color rgba="0.7 0.61 0.42 1" />
+        </material>
+      </visual>
+    <visual name="north_sail_outer_trailing">
+      <origin xyz="0.16 -0.3822 3.11" rpy="0 -1.55562 -1.5708" />
+      <geometry>
+        <box size="4.98057 0.12 0.09" />
+        </geometry>
+      <material name="sail_wood">
+        <color rgba="0.7 0.61 0.42 1" />
+        </material>
+      </visual>
+    <visual name="north_sail_inner_leading_lath">
+      <origin xyz="0.16 0.2695 3.179" rpy="0 -1.5464 1.5708" />
+      <geometry>
+        <box size="4.05921 0.05 0.04" />
+        </geometry>
+      <material name="sail_wood">
+        <color rgba="0.7 0.61 0.42 1" />
+        </material>
+      </visual>
+    <visual name="north_sail_inner_trailing_lath">
+      <origin xyz="0.16 -0.2695 3.179" rpy="0 -1.5464 -1.5708" />
+      <geometry>
+        <box size="4.05921 0.05 0.04" />
+        </geometry>
+      <material name="sail_wood">
+        <color rgba="0.7 0.61 0.42 1" />
+        </material>
+      </visual>
+    <visual name="north_sail_rung_00">
+      <origin xyz="0.16 0 1.1" rpy="0 -0 1.5708" />
+      <geometry>
+        <box size="0.7185 0.08 0.045" />
+        </geometry>
+      <material name="sail_wood">
+        <color rgba="0.7 0.61 0.42 1" />
+        </material>
+      </visual>
+    <visual name="north_sail_rung_01">
+      <origin xyz="0.16 0 1.75" rpy="0 -0 1.5708" />
+      <geometry>
+        <box size="0.73605 0.08 0.045" />
+        </geometry>
+      <material name="sail_wood">
+        <color rgba="0.7 0.61 0.42 1" />
+        </material>
+      </visual>
+    <visual name="north_sail_rung_02">
+      <origin xyz="0.16 0 2.4" rpy="0 -0 1.5708" />
+      <geometry>
+        <box size="0.7536 0.06 0.045" />
+        </geometry>
+      <material name="sail_wood">
+        <color rgba="0.7 0.61 0.42 1" />
+        </material>
+      </visual>
+    <visual name="north_sail_rung_03">
+      <origin xyz="0.16 0 3.05" rpy="0 -0 1.5708" />
+      <geometry>
+        <box size="0.77115 0.06 0.045" />
+        </geometry>
+      <material name="sail_wood">
+        <color rgba="0.7 0.61 0.42 1" />
+        </material>
+      </visual>
+    <visual name="north_sail_rung_04">
+      <origin xyz="0.16 0 3.7" rpy="0 -0 1.5708" />
+      <geometry>
+        <box size="0.7887 0.06 0.045" />
+        </geometry>
+      <material name="sail_wood">
+        <color rgba="0.7 0.61 0.42 1" />
+        </material>
+      </visual>
+    <visual name="north_sail_rung_05">
+      <origin xyz="0.16 0 4.35" rpy="0 -0 1.5708" />
+      <geometry>
+        <box size="0.80625 0.06 0.045" />
+        </geometry>
+      <material name="sail_wood">
+        <color rgba="0.7 0.61 0.42 1" />
+        </material>
+      </visual>
+    <visual name="north_sail_rung_06">
+      <origin xyz="0.16 0 5" rpy="0 -0 1.5708" />
+      <geometry>
+        <box size="0.8238 0.06 0.045" />
+        </geometry>
+      <material name="sail_wood">
+        <color rgba="0.7 0.61 0.42 1" />
+        </material>
+      </visual>
+    <visual name="north_sail_brace_00">
+      <origin xyz="0.16 0.0252 1.425" rpy="0 -0.744406 -1.5708" />
+      <geometry>
+        <box size="0.95936 0.05 0.04" />
+        </geometry>
+      <material name="sail_wood">
+        <color rgba="0.7 0.61 0.42 1" />
+        </material>
+      </visual>
+    <visual name="north_sail_brace_01">
+      <origin xyz="0.16 -0.0252 2.075" rpy="0 -0.744406 1.5708" />
+      <geometry>
+        <box size="0.95936 0.05 0.04" />
+        </geometry>
+      <material name="sail_wood">
+        <color rgba="0.7 0.61 0.42 1" />
+        </material>
+      </visual>
+    <visual name="north_sail_brace_02">
+      <origin xyz="0.16 0.0252 2.725" rpy="0 -0.744406 -1.5708" />
+      <geometry>
+        <box size="0.95936 0.05 0.04" />
+        </geometry>
+      <material name="sail_wood">
+        <color rgba="0.7 0.61 0.42 1" />
+        </material>
+      </visual>
+    <visual name="north_sail_brace_03">
+      <origin xyz="0.16 -0.0252 3.375" rpy="0 -0.744406 1.5708" />
+      <geometry>
+        <box size="0.95936 0.05 0.04" />
+        </geometry>
+      <material name="sail_wood">
+        <color rgba="0.7 0.61 0.42 1" />
+        </material>
+      </visual>
+    <visual name="north_sail_brace_04">
+      <origin xyz="0.16 0.0252 4.025" rpy="0 -0.744406 -1.5708" />
+      <geometry>
+        <box size="0.95936 0.05 0.04" />
+        </geometry>
+      <material name="sail_wood">
+        <color rgba="0.7 0.61 0.42 1" />
+        </material>
+      </visual>
+    <visual name="north_sail_brace_05">
+      <origin xyz="0.16 -0.0252 4.675" rpy="0 -0.744406 1.5708" />
+      <geometry>
+        <box size="0.95936 0.05 0.04" />
+        </geometry>
+      <material name="sail_wood">
+        <color rgba="0.7 0.61 0.42 1" />
+        </material>
+      </visual>
+    <visual name="east_sail_root_stock">
+      <origin xyz="0.16 0.73 4.46996e-17" rpy="0 -6.12323e-17 1.5708" />
+      <geometry>
+        <box size="0.9 0.26 0.18" />
+        </geometry>
+      <material name="sail_wood">
+        <color rgba="0.7 0.61 0.42 1" />
+        </material>
+      </visual>
+    <visual name="east_sail_center_spar">
+      <origin xyz="0.16 2.934 1.79656e-16" rpy="0 -6.12323e-17 1.5708" />
+      <geometry>
+        <box size="5.108 0.15 0.11" />
+        </geometry>
+      <material name="sail_wood">
+        <color rgba="0.7 0.61 0.42 1" />
+        </material>
+      </visual>
+    <visual name="east_sail_outer_leading">
+      <origin xyz="0.16 3.11 -0.3822" rpy="0 0.0151796 1.5708" />
+      <geometry>
+        <box size="4.98057 0.12 0.09" />
+        </geometry>
+      <material name="sail_wood">
+        <color rgba="0.7 0.61 0.42 1" />
+        </material>
+      </visual>
+    <visual name="east_sail_outer_trailing">
+      <origin xyz="0.16 3.11 0.3822" rpy="0 -0.0151796 1.5708" />
+      <geometry>
+        <box size="4.98057 0.12 0.09" />
+        </geometry>
+      <material name="sail_wood">
+        <color rgba="0.7 0.61 0.42 1" />
+        </material>
+      </visual>
+    <visual name="east_sail_inner_leading_lath">
+      <origin xyz="0.16 3.179 -0.2695" rpy="0 0.0243914 1.5708" />
+      <geometry>
+        <box size="4.05921 0.05 0.04" />
+        </geometry>
+      <material name="sail_wood">
+        <color rgba="0.7 0.61 0.42 1" />
+        </material>
+      </visual>
+    <visual name="east_sail_inner_trailing_lath">
+      <origin xyz="0.16 3.179 0.2695" rpy="0 -0.0243914 1.5708" />
+      <geometry>
+        <box size="4.05921 0.05 0.04" />
+        </geometry>
+      <material name="sail_wood">
+        <color rgba="0.7 0.61 0.42 1" />
+        </material>
+      </visual>
+    <visual name="east_sail_rung_00">
+      <origin xyz="0.16 1.1 5.55112e-17" rpy="0 1.5708 0" />
+      <geometry>
+        <box size="0.7185 0.08 0.045" />
+        </geometry>
+      <material name="sail_wood">
+        <color rgba="0.7 0.61 0.42 1" />
+        </material>
+      </visual>
+    <visual name="east_sail_rung_01">
+      <origin xyz="0.16 1.75 1.11022e-16" rpy="0 1.5708 0" />
+      <geometry>
+        <box size="0.73605 0.08 0.045" />
+        </geometry>
+      <material name="sail_wood">
+        <color rgba="0.7 0.61 0.42 1" />
+        </material>
+      </visual>
+    <visual name="east_sail_rung_02">
+      <origin xyz="0.16 2.4 1.66533e-16" rpy="0 1.5708 0" />
+      <geometry>
+        <box size="0.7536 0.06 0.045" />
+        </geometry>
+      <material name="sail_wood">
+        <color rgba="0.7 0.61 0.42 1" />
+        </material>
+      </visual>
+    <visual name="east_sail_rung_03">
+      <origin xyz="0.16 3.05 1.66533e-16" rpy="0 1.5708 0" />
+      <geometry>
+        <box size="0.77115 0.06 0.045" />
+        </geometry>
+      <material name="sail_wood">
+        <color rgba="0.7 0.61 0.42 1" />
+        </material>
+      </visual>
+    <visual name="east_sail_rung_04">
+      <origin xyz="0.16 3.7 2.22045e-16" rpy="0 1.5708 0" />
+      <geometry>
+        <box size="0.7887 0.06 0.045" />
+        </geometry>
+      <material name="sail_wood">
+        <color rgba="0.7 0.61 0.42 1" />
+        </material>
+      </visual>
+    <visual name="east_sail_rung_05">
+      <origin xyz="0.16 4.35 2.77556e-16" rpy="0 1.5708 0" />
+      <geometry>
+        <box size="0.80625 0.06 0.045" />
+        </geometry>
+      <material name="sail_wood">
+        <color rgba="0.7 0.61 0.42 1" />
+        </material>
+      </visual>
+    <visual name="east_sail_rung_06">
+      <origin xyz="0.16 5 3.33067e-16" rpy="0 1.5708 0" />
+      <geometry>
+        <box size="0.8238 0.06 0.045" />
+        </geometry>
+      <material name="sail_wood">
+        <color rgba="0.7 0.61 0.42 1" />
+        </material>
+      </visual>
+    <visual name="east_sail_brace_00">
+      <origin xyz="0.16 1.425 -0.0252" rpy="0 -0.82639 1.5708" />
+      <geometry>
+        <box size="0.95936 0.05 0.04" />
+        </geometry>
+      <material name="sail_wood">
+        <color rgba="0.7 0.61 0.42 1" />
+        </material>
+      </visual>
+    <visual name="east_sail_brace_01">
+      <origin xyz="0.16 2.075 0.0252" rpy="0 0.82639 1.5708" />
+      <geometry>
+        <box size="0.95936 0.05 0.04" />
+        </geometry>
+      <material name="sail_wood">
+        <color rgba="0.7 0.61 0.42 1" />
+        </material>
+      </visual>
+    <visual name="east_sail_brace_02">
+      <origin xyz="0.16 2.725 -0.0252" rpy="0 -0.82639 1.5708" />
+      <geometry>
+        <box size="0.95936 0.05 0.04" />
+        </geometry>
+      <material name="sail_wood">
+        <color rgba="0.7 0.61 0.42 1" />
+        </material>
+      </visual>
+    <visual name="east_sail_brace_03">
+      <origin xyz="0.16 3.375 0.0252" rpy="0 0.82639 1.5708" />
+      <geometry>
+        <box size="0.95936 0.05 0.04" />
+        </geometry>
+      <material name="sail_wood">
+        <color rgba="0.7 0.61 0.42 1" />
+        </material>
+      </visual>
+    <visual name="east_sail_brace_04">
+      <origin xyz="0.16 4.025 -0.0252" rpy="0 -0.82639 1.5708" />
+      <geometry>
+        <box size="0.95936 0.05 0.04" />
+        </geometry>
+      <material name="sail_wood">
+        <color rgba="0.7 0.61 0.42 1" />
+        </material>
+      </visual>
+    <visual name="east_sail_brace_05">
+      <origin xyz="0.16 4.675 0.0252" rpy="0 0.82639 1.5708" />
+      <geometry>
+        <box size="0.95936 0.05 0.04" />
+        </geometry>
+      <material name="sail_wood">
+        <color rgba="0.7 0.61 0.42 1" />
+        </material>
+      </visual>
+    <visual name="south_sail_root_stock">
+      <origin xyz="0.16 8.93992e-17 -0.73" rpy="0 1.5708 1.5708" />
+      <geometry>
+        <box size="0.9 0.26 0.18" />
+        </geometry>
+      <material name="sail_wood">
+        <color rgba="0.7 0.61 0.42 1" />
+        </material>
+      </visual>
+    <visual name="south_sail_center_spar">
+      <origin xyz="0.16 3.59311e-16 -2.934" rpy="0 1.5708 1.5708" />
+      <geometry>
+        <box size="5.108 0.15 0.11" />
+        </geometry>
+      <material name="sail_wood">
+        <color rgba="0.7 0.61 0.42 1" />
+        </material>
+      </visual>
+    <visual name="south_sail_outer_leading">
+      <origin xyz="0.16 -0.3822 -3.11" rpy="0 1.55562 -1.5708" />
+      <geometry>
+        <box size="4.98057 0.12 0.09" />
+        </geometry>
+      <material name="sail_wood">
+        <color rgba="0.7 0.61 0.42 1" />
+        </material>
+      </visual>
+    <visual name="south_sail_outer_trailing">
+      <origin xyz="0.16 0.3822 -3.11" rpy="0 1.55562 1.5708" />
+      <geometry>
+        <box size="4.98057 0.12 0.09" />
+        </geometry>
+      <material name="sail_wood">
+        <color rgba="0.7 0.61 0.42 1" />
+        </material>
+      </visual>
+    <visual name="south_sail_inner_leading_lath">
+      <origin xyz="0.16 -0.2695 -3.179" rpy="0 1.5464 -1.5708" />
+      <geometry>
+        <box size="4.05921 0.05 0.04" />
+        </geometry>
+      <material name="sail_wood">
+        <color rgba="0.7 0.61 0.42 1" />
+        </material>
+      </visual>
+    <visual name="south_sail_inner_trailing_lath">
+      <origin xyz="0.16 0.2695 -3.179" rpy="0 1.5464 1.5708" />
+      <geometry>
+        <box size="4.05921 0.05 0.04" />
+        </geometry>
+      <material name="sail_wood">
+        <color rgba="0.7 0.61 0.42 1" />
+        </material>
+      </visual>
+    <visual name="south_sail_rung_00">
+      <origin xyz="0.16 1.11022e-16 -1.1" rpy="0 -0 -1.5708" />
+      <geometry>
+        <box size="0.7185 0.08 0.045" />
+        </geometry>
+      <material name="sail_wood">
+        <color rgba="0.7 0.61 0.42 1" />
+        </material>
+      </visual>
+    <visual name="south_sail_rung_01">
+      <origin xyz="0.16 2.22045e-16 -1.75" rpy="0 -0 -1.5708" />
+      <geometry>
+        <box size="0.73605 0.08 0.045" />
+        </geometry>
+      <material name="sail_wood">
+        <color rgba="0.7 0.61 0.42 1" />
+        </material>
+      </visual>
+    <visual name="south_sail_rung_02">
+      <origin xyz="0.16 2.77556e-16 -2.4" rpy="0 -0 -1.5708" />
+      <geometry>
+        <box size="0.7536 0.06 0.045" />
+        </geometry>
+      <material name="sail_wood">
+        <color rgba="0.7 0.61 0.42 1" />
+        </material>
+      </visual>
+    <visual name="south_sail_rung_03">
+      <origin xyz="0.16 3.88578e-16 -3.05" rpy="0 -0 -1.5708" />
+      <geometry>
+        <box size="0.77115 0.06 0.045" />
+        </geometry>
+      <material name="sail_wood">
+        <color rgba="0.7 0.61 0.42 1" />
+        </material>
+      </visual>
+    <visual name="south_sail_rung_04">
+      <origin xyz="0.16 4.44089e-16 -3.7" rpy="0 -0 -1.5708" />
+      <geometry>
+        <box size="0.7887 0.06 0.045" />
+        </geometry>
+      <material name="sail_wood">
+        <color rgba="0.7 0.61 0.42 1" />
+        </material>
+      </visual>
+    <visual name="south_sail_rung_05">
+      <origin xyz="0.16 5.55112e-16 -4.35" rpy="0 -0 -1.5708" />
+      <geometry>
+        <box size="0.80625 0.06 0.045" />
+        </geometry>
+      <material name="sail_wood">
+        <color rgba="0.7 0.61 0.42 1" />
+        </material>
+      </visual>
+    <visual name="south_sail_rung_06">
+      <origin xyz="0.16 6.10623e-16 -5" rpy="0 -0 -1.5708" />
+      <geometry>
+        <box size="0.8238 0.06 0.045" />
+        </geometry>
+      <material name="sail_wood">
+        <color rgba="0.7 0.61 0.42 1" />
+        </material>
+      </visual>
+    <visual name="south_sail_brace_00">
+      <origin xyz="0.16 -0.0252 -1.425" rpy="0 0.744406 1.5708" />
+      <geometry>
+        <box size="0.95936 0.05 0.04" />
+        </geometry>
+      <material name="sail_wood">
+        <color rgba="0.7 0.61 0.42 1" />
+        </material>
+      </visual>
+    <visual name="south_sail_brace_01">
+      <origin xyz="0.16 0.0252 -2.075" rpy="0 0.744406 -1.5708" />
+      <geometry>
+        <box size="0.95936 0.05 0.04" />
+        </geometry>
+      <material name="sail_wood">
+        <color rgba="0.7 0.61 0.42 1" />
+        </material>
+      </visual>
+    <visual name="south_sail_brace_02">
+      <origin xyz="0.16 -0.0252 -2.725" rpy="0 0.744406 1.5708" />
+      <geometry>
+        <box size="0.95936 0.05 0.04" />
+        </geometry>
+      <material name="sail_wood">
+        <color rgba="0.7 0.61 0.42 1" />
+        </material>
+      </visual>
+    <visual name="south_sail_brace_03">
+      <origin xyz="0.16 0.0252 -3.375" rpy="0 0.744406 -1.5708" />
+      <geometry>
+        <box size="0.95936 0.05 0.04" />
+        </geometry>
+      <material name="sail_wood">
+        <color rgba="0.7 0.61 0.42 1" />
+        </material>
+      </visual>
+    <visual name="south_sail_brace_04">
+      <origin xyz="0.16 -0.0252 -4.025" rpy="0 0.744406 1.5708" />
+      <geometry>
+        <box size="0.95936 0.05 0.04" />
+        </geometry>
+      <material name="sail_wood">
+        <color rgba="0.7 0.61 0.42 1" />
+        </material>
+      </visual>
+    <visual name="south_sail_brace_05">
+      <origin xyz="0.16 0.0252 -4.675" rpy="0 0.744406 -1.5708" />
+      <geometry>
+        <box size="0.95936 0.05 0.04" />
+        </geometry>
+      <material name="sail_wood">
+        <color rgba="0.7 0.61 0.42 1" />
+        </material>
+      </visual>
+    <visual name="west_sail_root_stock">
+      <origin xyz="0.16 -0.73 -1.34099e-16" rpy="0 1.83697e-16 -1.5708" />
+      <geometry>
+        <box size="0.9 0.26 0.18" />
+        </geometry>
+      <material name="sail_wood">
+        <color rgba="0.7 0.61 0.42 1" />
+        </material>
+      </visual>
+    <visual name="west_sail_center_spar">
+      <origin xyz="0.16 -2.934 -5.38967e-16" rpy="0 1.83697e-16 -1.5708" />
+      <geometry>
+        <box size="5.108 0.15 0.11" />
+        </geometry>
+      <material name="sail_wood">
+        <color rgba="0.7 0.61 0.42 1" />
+        </material>
+      </visual>
+    <visual name="west_sail_outer_leading">
+      <origin xyz="0.16 -3.11 0.3822" rpy="0 -0.0151796 -1.5708" />
+      <geometry>
+        <box size="4.98057 0.12 0.09" />
+        </geometry>
+      <material name="sail_wood">
+        <color rgba="0.7 0.61 0.42 1" />
+        </material>
+      </visual>
+    <visual name="west_sail_outer_trailing">
+      <origin xyz="0.16 -3.11 -0.3822" rpy="0 0.0151796 -1.5708" />
+      <geometry>
+        <box size="4.98057 0.12 0.09" />
+        </geometry>
+      <material name="sail_wood">
+        <color rgba="0.7 0.61 0.42 1" />
+        </material>
+      </visual>
+    <visual name="west_sail_inner_leading_lath">
+      <origin xyz="0.16 -3.179 0.2695" rpy="0 -0.0243914 -1.5708" />
+      <geometry>
+        <box size="4.05921 0.05 0.04" />
+        </geometry>
+      <material name="sail_wood">
+        <color rgba="0.7 0.61 0.42 1" />
+        </material>
+      </visual>
+    <visual name="west_sail_inner_trailing_lath">
+      <origin xyz="0.16 -3.179 -0.2695" rpy="0 0.0243914 -1.5708" />
+      <geometry>
+        <box size="4.05921 0.05 0.04" />
+        </geometry>
+      <material name="sail_wood">
+        <color rgba="0.7 0.61 0.42 1" />
+        </material>
+      </visual>
+    <visual name="west_sail_rung_00">
+      <origin xyz="0.16 -1.1 -2.22045e-16" rpy="0 -1.5708 0" />
+      <geometry>
+        <box size="0.7185 0.08 0.045" />
+        </geometry>
+      <material name="sail_wood">
+        <color rgba="0.7 0.61 0.42 1" />
+        </material>
+      </visual>
+    <visual name="west_sail_rung_01">
+      <origin xyz="0.16 -1.75 -3.33067e-16" rpy="0 -1.5708 0" />
+      <geometry>
+        <box size="0.73605 0.08 0.045" />
+        </geometry>
+      <material name="sail_wood">
+        <color rgba="0.7 0.61 0.42 1" />
+        </material>
+      </visual>
+    <visual name="west_sail_rung_02">
+      <origin xyz="0.16 -2.4 -4.44089e-16" rpy="0 -1.5708 0" />
+      <geometry>
+        <box size="0.7536 0.06 0.045" />
+        </geometry>
+      <material name="sail_wood">
+        <color rgba="0.7 0.61 0.42 1" />
+        </material>
+      </visual>
+    <visual name="west_sail_rung_03">
+      <origin xyz="0.16 -3.05 -5.55112e-16" rpy="0 -1.5708 0" />
+      <geometry>
+        <box size="0.77115 0.06 0.045" />
+        </geometry>
+      <material name="sail_wood">
+        <color rgba="0.7 0.61 0.42 1" />
+        </material>
+      </visual>
+    <visual name="west_sail_rung_04">
+      <origin xyz="0.16 -3.7 -6.66134e-16" rpy="0 -1.5708 0" />
+      <geometry>
+        <box size="0.7887 0.06 0.045" />
+        </geometry>
+      <material name="sail_wood">
+        <color rgba="0.7 0.61 0.42 1" />
+        </material>
+      </visual>
+    <visual name="west_sail_rung_05">
+      <origin xyz="0.16 -4.35 -7.77156e-16" rpy="0 -1.5708 0" />
+      <geometry>
+        <box size="0.80625 0.06 0.045" />
+        </geometry>
+      <material name="sail_wood">
+        <color rgba="0.7 0.61 0.42 1" />
+        </material>
+      </visual>
+    <visual name="west_sail_rung_06">
+      <origin xyz="0.16 -5 -9.4369e-16" rpy="0 -1.5708 0" />
+      <geometry>
+        <box size="0.8238 0.06 0.045" />
+        </geometry>
+      <material name="sail_wood">
+        <color rgba="0.7 0.61 0.42 1" />
+        </material>
+      </visual>
+    <visual name="west_sail_brace_00">
+      <origin xyz="0.16 -1.425 0.0252" rpy="0 0.82639 -1.5708" />
+      <geometry>
+        <box size="0.95936 0.05 0.04" />
+        </geometry>
+      <material name="sail_wood">
+        <color rgba="0.7 0.61 0.42 1" />
+        </material>
+      </visual>
+    <visual name="west_sail_brace_01">
+      <origin xyz="0.16 -2.075 -0.0252" rpy="0 -0.82639 -1.5708" />
+      <geometry>
+        <box size="0.95936 0.05 0.04" />
+        </geometry>
+      <material name="sail_wood">
+        <color rgba="0.7 0.61 0.42 1" />
+        </material>
+      </visual>
+    <visual name="west_sail_brace_02">
+      <origin xyz="0.16 -2.725 0.0252" rpy="0 0.82639 -1.5708" />
+      <geometry>
+        <box size="0.95936 0.05 0.04" />
+        </geometry>
+      <material name="sail_wood">
+        <color rgba="0.7 0.61 0.42 1" />
+        </material>
+      </visual>
+    <visual name="west_sail_brace_03">
+      <origin xyz="0.16 -3.375 -0.0252" rpy="0 -0.82639 -1.5708" />
+      <geometry>
+        <box size="0.95936 0.05 0.04" />
+        </geometry>
+      <material name="sail_wood">
+        <color rgba="0.7 0.61 0.42 1" />
+        </material>
+      </visual>
+    <visual name="west_sail_brace_04">
+      <origin xyz="0.16 -4.025 0.0252" rpy="0 0.82639 -1.5708" />
+      <geometry>
+        <box size="0.95936 0.05 0.04" />
+        </geometry>
+      <material name="sail_wood">
+        <color rgba="0.7 0.61 0.42 1" />
+        </material>
+      </visual>
+    <visual name="west_sail_brace_05">
+      <origin xyz="0.16 -4.675 -0.0252" rpy="0 -0.82639 -1.5708" />
+      <geometry>
+        <box size="0.95936 0.05 0.04" />
+        </geometry>
+      <material name="sail_wood">
+        <color rgba="0.7 0.61 0.42 1" />
+        </material>
+      </visual>
+    </link>
+  <joint name="base_to_bearing" type="fixed">
+    <origin xyz="0 0 8" rpy="0 0 0" />
+    <parent link="tower_base" />
+    <child link="bearing_module" />
+    </joint>
+  <joint name="bearing_to_cap" type="continuous">
+    <origin xyz="0 0 0.52" rpy="0 0 0" />
+    <parent link="bearing_module" />
+    <child link="cap_shell" />
+    <axis xyz="0 0 1" />
+    <limit effort="4000" velocity="0.4" />
+    </joint>
+  <joint name="cap_to_head_frame" type="fixed">
+    <origin xyz="1.96 0 1.05" rpy="0 0 0" />
+    <parent link="cap_shell" />
+    <child link="head_frame" />
+    </joint>
+  <joint name="head_to_sail_hub" type="continuous">
+    <origin xyz="0.85 0 0" rpy="0 0 0" />
+    <parent link="head_frame" />
+    <child link="sail_hub" />
+    <axis xyz="1 0 0" />
+    <limit effort="2500" velocity="2.2" />
+    </joint>
+  </robot>

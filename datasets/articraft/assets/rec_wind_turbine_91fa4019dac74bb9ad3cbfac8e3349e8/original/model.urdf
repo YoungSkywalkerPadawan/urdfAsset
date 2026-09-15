@@ -1,0 +1,567 @@
+<robot name="precision_calibration_wind_turbine">
+  <material name="matte_white">
+    <color rgba="0.88 0.9 0.91 1" />
+    </material>
+  <material name="tower_paint">
+    <color rgba="0.72 0.76 0.78 1" />
+    </material>
+  <material name="dark_steel">
+    <color rgba="0.1 0.12 0.13 1" />
+    </material>
+  <material name="satin_steel">
+    <color rgba="0.48 0.52 0.55 1" />
+    </material>
+  <material name="datum_blue">
+    <color rgba="0.05 0.22 0.55 1" />
+    </material>
+  <material name="mark_black">
+    <color rgba="0.01 0.012 0.014 1" />
+    </material>
+  <material name="brass_adjusters">
+    <color rgba="0.86 0.65 0.28 1" />
+    </material>
+  <link name="tower">
+    <visual name="base_plate">
+      <origin xyz="0 0 0.025" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.17" length="0.05" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.1 0.12 0.13 1" />
+        </material>
+      </visual>
+    <visual name="tower_tube">
+      <origin xyz="0 0 0.8" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.045" length="1.52" />
+        </geometry>
+      <material name="tower_paint">
+        <color rgba="0.72 0.76 0.78 1" />
+        </material>
+      </visual>
+    <visual name="yaw_lower_ring">
+      <origin xyz="0 0 1.585" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.11" length="0.05" />
+        </geometry>
+      <material name="satin_steel">
+        <color rgba="0.48 0.52 0.55 1" />
+        </material>
+      </visual>
+    <visual name="vertical_datum_strip">
+      <origin xyz="0 0.048 0.82" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.008 1.22" />
+        </geometry>
+      <material name="datum_blue">
+        <color rgba="0.05 0.22 0.55 1" />
+        </material>
+      </visual>
+    <visual name="zero_yaw_index">
+      <origin xyz="0 0.11 1.612" rpy="0 0 0" />
+      <geometry>
+        <box size="0.07 0.01 0.006" />
+        </geometry>
+      <material name="mark_black">
+        <color rgba="0.01 0.012 0.014 1" />
+        </material>
+      </visual>
+    <visual name="leveling_pad_0">
+      <origin xyz="0.115 0.115 0.053" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.022" />
+        </geometry>
+      <material name="brass_adjusters">
+        <color rgba="0.86 0.65 0.28 1" />
+        </material>
+      </visual>
+    <visual name="leveling_pad_1">
+      <origin xyz="-0.115 0.115 0.053" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.022" />
+        </geometry>
+      <material name="brass_adjusters">
+        <color rgba="0.86 0.65 0.28 1" />
+        </material>
+      </visual>
+    <visual name="leveling_pad_2">
+      <origin xyz="-0.115 -0.115 0.053" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.022" />
+        </geometry>
+      <material name="brass_adjusters">
+        <color rgba="0.86 0.65 0.28 1" />
+        </material>
+      </visual>
+    <visual name="leveling_pad_3">
+      <origin xyz="0.115 -0.115 0.053" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.022" />
+        </geometry>
+      <material name="brass_adjusters">
+        <color rgba="0.86 0.65 0.28 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="nacelle">
+    <visual name="yaw_upper_ring">
+      <origin xyz="0 0 0.02" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.1" length="0.04" />
+        </geometry>
+      <material name="satin_steel">
+        <color rgba="0.48 0.52 0.55 1" />
+        </material>
+      </visual>
+    <visual name="yaw_pedestal">
+      <origin xyz="0 0 0.06" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.055" length="0.075" />
+        </geometry>
+      <material name="tower_paint">
+        <color rgba="0.72 0.76 0.78 1" />
+        </material>
+      </visual>
+    <visual name="nacelle_body">
+      <origin xyz="0.23 0 0.15" rpy="0 0 0" />
+      <geometry>
+        <box size="0.55 0.18 0.16" />
+        </geometry>
+      <material name="matte_white">
+        <color rgba="0.88 0.9 0.91 1" />
+        </material>
+      </visual>
+    <visual name="roof_datum_pad">
+      <origin xyz="0.18 0 0.235" rpy="0 0 0" />
+      <geometry>
+        <box size="0.225 0.126 0.01" />
+        </geometry>
+      <material name="datum_blue">
+        <color rgba="0.05 0.22 0.55 1" />
+        </material>
+      </visual>
+    <visual name="front_bearing">
+      <origin xyz="0.545 0 0.15" rpy="0 1.5708 0" />
+      <geometry>
+        <mesh filename="assets/meshes/front_bearing_ring.obj" />
+        </geometry>
+      <material name="satin_steel">
+        <color rgba="0.48 0.52 0.55 1" />
+        </material>
+      </visual>
+    <visual name="bearing_zero_tick">
+      <origin xyz="0.588 0 0.221" rpy="0 0 0" />
+      <geometry>
+        <box size="0.006 0.008 0.034" />
+        </geometry>
+      <material name="mark_black">
+        <color rgba="0.01 0.012 0.014 1" />
+        </material>
+      </visual>
+    <visual name="bearing_side_tick">
+      <origin xyz="0.588 0.071 0.15" rpy="0 0 0" />
+      <geometry>
+        <box size="0.006 0.034 0.008" />
+        </geometry>
+      <material name="mark_black">
+        <color rgba="0.01 0.012 0.014 1" />
+        </material>
+      </visual>
+    <visual name="side_adjuster_0">
+      <origin xyz="0.2 0.096 0.15" rpy="0 0 0" />
+      <geometry>
+        <box size="0.038 0.012 0.012" />
+        </geometry>
+      <material name="brass_adjusters">
+        <color rgba="0.86 0.65 0.28 1" />
+        </material>
+      </visual>
+    <visual name="side_adjuster_1">
+      <origin xyz="0.31 -0.096 0.15" rpy="0 0 0" />
+      <geometry>
+        <box size="0.038 0.012 0.012" />
+        </geometry>
+      <material name="brass_adjusters">
+        <color rgba="0.86 0.65 0.28 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="rotor_hub">
+    <visual name="main_shaft">
+      <origin xyz="-0.03 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.026" length="0.09" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.1 0.12 0.13 1" />
+        </material>
+      </visual>
+    <visual name="front_collar">
+      <origin xyz="0.0125 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.05" length="0.025" />
+        </geometry>
+      <material name="satin_steel">
+        <color rgba="0.48 0.52 0.55 1" />
+        </material>
+      </visual>
+    <visual name="hub_drum">
+      <origin xyz="0.08 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.09" length="0.12" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.1 0.12 0.13 1" />
+        </material>
+      </visual>
+    <visual name="nose_datum">
+      <origin xyz="0.155 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.032" length="0.04" />
+        </geometry>
+      <material name="datum_blue">
+        <color rgba="0.05 0.22 0.55 1" />
+        </material>
+      </visual>
+    <visual name="pitch_socket_0">
+      <origin xyz="0.08 0 0.095" rpy="-0 0 0" />
+      <geometry>
+        <cylinder radius="0.04" length="0.13" />
+        </geometry>
+      <material name="satin_steel">
+        <color rgba="0.48 0.52 0.55 1" />
+        </material>
+      </visual>
+    <visual name="root_index_0">
+      <origin xyz="0.12 0 0.133" rpy="-0 0 0" />
+      <geometry>
+        <box size="0.032 0.006 0.01" />
+        </geometry>
+      <material name="mark_black">
+        <color rgba="0.01 0.012 0.014 1" />
+        </material>
+      </visual>
+    <visual name="pitch_socket_1">
+      <origin xyz="0.08 0.0822724 -0.0475" rpy="-2.0944 0 0" />
+      <geometry>
+        <cylinder radius="0.04" length="0.13" />
+        </geometry>
+      <material name="satin_steel">
+        <color rgba="0.48 0.52 0.55 1" />
+        </material>
+      </visual>
+    <visual name="root_index_1">
+      <origin xyz="0.12 0.115181 -0.0665" rpy="-2.0944 0 0" />
+      <geometry>
+        <box size="0.032 0.006 0.01" />
+        </geometry>
+      <material name="mark_black">
+        <color rgba="0.01 0.012 0.014 1" />
+        </material>
+      </visual>
+    <visual name="pitch_socket_2">
+      <origin xyz="0.08 -0.0822724 -0.0475" rpy="-4.18879 0 0" />
+      <geometry>
+        <cylinder radius="0.04" length="0.13" />
+        </geometry>
+      <material name="satin_steel">
+        <color rgba="0.48 0.52 0.55 1" />
+        </material>
+      </visual>
+    <visual name="root_index_2">
+      <origin xyz="0.12 -0.115181 -0.0665" rpy="-4.18879 0 0" />
+      <geometry>
+        <box size="0.032 0.006 0.01" />
+        </geometry>
+      <material name="mark_black">
+        <color rgba="0.01 0.012 0.014 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="blade_root_0">
+    <visual name="pitch_journal">
+      <origin xyz="0 0 -0.025" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.024" length="0.06" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.1 0.12 0.13 1" />
+        </material>
+      </visual>
+    <visual name="root_flange">
+      <origin xyz="0 0 0.02" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.052" length="0.04" />
+        </geometry>
+      <material name="satin_steel">
+        <color rgba="0.48 0.52 0.55 1" />
+        </material>
+      </visual>
+    <visual name="root_datum_flat">
+      <origin xyz="0 0 0.055" rpy="0 0 0" />
+      <geometry>
+        <box size="0.086 0.018 0.035" />
+        </geometry>
+      <material name="datum_blue">
+        <color rgba="0.05 0.22 0.55 1" />
+        </material>
+      </visual>
+    <visual name="blade_shell">
+      <geometry>
+        <mesh filename="assets/meshes/calibration_blade_shell.obj" />
+        </geometry>
+      <material name="matte_white">
+        <color rgba="0.88 0.9 0.91 1" />
+        </material>
+      </visual>
+    <visual name="pitch_zero_line">
+      <origin xyz="0 0 0.042" rpy="0 0 0" />
+      <geometry>
+        <box size="0.01 0.07 0.006" />
+        </geometry>
+      <material name="mark_black">
+        <color rgba="0.01 0.012 0.014 1" />
+        </material>
+      </visual>
+    <visual name="flange_bolt_0">
+      <origin xyz="0.033 0 0.045" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.005" length="0.012" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.1 0.12 0.13 1" />
+        </material>
+      </visual>
+    <visual name="flange_bolt_1">
+      <origin xyz="2.02067e-18 0.033 0.045" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.005" length="0.012" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.1 0.12 0.13 1" />
+        </material>
+      </visual>
+    <visual name="flange_bolt_2">
+      <origin xyz="-0.033 4.04133e-18 0.045" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.005" length="0.012" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.1 0.12 0.13 1" />
+        </material>
+      </visual>
+    <visual name="flange_bolt_3">
+      <origin xyz="-6.062e-18 -0.033 0.045" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.005" length="0.012" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.1 0.12 0.13 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="blade_root_1">
+    <visual name="pitch_journal">
+      <origin xyz="0 0 -0.025" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.024" length="0.06" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.1 0.12 0.13 1" />
+        </material>
+      </visual>
+    <visual name="root_flange">
+      <origin xyz="0 0 0.02" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.052" length="0.04" />
+        </geometry>
+      <material name="satin_steel">
+        <color rgba="0.48 0.52 0.55 1" />
+        </material>
+      </visual>
+    <visual name="root_datum_flat">
+      <origin xyz="0 0 0.055" rpy="0 0 0" />
+      <geometry>
+        <box size="0.086 0.018 0.035" />
+        </geometry>
+      <material name="datum_blue">
+        <color rgba="0.05 0.22 0.55 1" />
+        </material>
+      </visual>
+    <visual name="blade_shell">
+      <geometry>
+        <mesh filename="assets/meshes/calibration_blade_shell.obj" />
+        </geometry>
+      <material name="matte_white">
+        <color rgba="0.88 0.9 0.91 1" />
+        </material>
+      </visual>
+    <visual name="pitch_zero_line">
+      <origin xyz="0 0 0.042" rpy="0 0 0" />
+      <geometry>
+        <box size="0.01 0.07 0.006" />
+        </geometry>
+      <material name="mark_black">
+        <color rgba="0.01 0.012 0.014 1" />
+        </material>
+      </visual>
+    <visual name="flange_bolt_0">
+      <origin xyz="0.033 0 0.045" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.005" length="0.012" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.1 0.12 0.13 1" />
+        </material>
+      </visual>
+    <visual name="flange_bolt_1">
+      <origin xyz="2.02067e-18 0.033 0.045" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.005" length="0.012" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.1 0.12 0.13 1" />
+        </material>
+      </visual>
+    <visual name="flange_bolt_2">
+      <origin xyz="-0.033 4.04133e-18 0.045" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.005" length="0.012" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.1 0.12 0.13 1" />
+        </material>
+      </visual>
+    <visual name="flange_bolt_3">
+      <origin xyz="-6.062e-18 -0.033 0.045" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.005" length="0.012" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.1 0.12 0.13 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="blade_root_2">
+    <visual name="pitch_journal">
+      <origin xyz="0 0 -0.025" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.024" length="0.06" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.1 0.12 0.13 1" />
+        </material>
+      </visual>
+    <visual name="root_flange">
+      <origin xyz="0 0 0.02" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.052" length="0.04" />
+        </geometry>
+      <material name="satin_steel">
+        <color rgba="0.48 0.52 0.55 1" />
+        </material>
+      </visual>
+    <visual name="root_datum_flat">
+      <origin xyz="0 0 0.055" rpy="0 0 0" />
+      <geometry>
+        <box size="0.086 0.018 0.035" />
+        </geometry>
+      <material name="datum_blue">
+        <color rgba="0.05 0.22 0.55 1" />
+        </material>
+      </visual>
+    <visual name="blade_shell">
+      <geometry>
+        <mesh filename="assets/meshes/calibration_blade_shell.obj" />
+        </geometry>
+      <material name="matte_white">
+        <color rgba="0.88 0.9 0.91 1" />
+        </material>
+      </visual>
+    <visual name="pitch_zero_line">
+      <origin xyz="0 0 0.042" rpy="0 0 0" />
+      <geometry>
+        <box size="0.01 0.07 0.006" />
+        </geometry>
+      <material name="mark_black">
+        <color rgba="0.01 0.012 0.014 1" />
+        </material>
+      </visual>
+    <visual name="flange_bolt_0">
+      <origin xyz="0.033 0 0.045" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.005" length="0.012" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.1 0.12 0.13 1" />
+        </material>
+      </visual>
+    <visual name="flange_bolt_1">
+      <origin xyz="2.02067e-18 0.033 0.045" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.005" length="0.012" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.1 0.12 0.13 1" />
+        </material>
+      </visual>
+    <visual name="flange_bolt_2">
+      <origin xyz="-0.033 4.04133e-18 0.045" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.005" length="0.012" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.1 0.12 0.13 1" />
+        </material>
+      </visual>
+    <visual name="flange_bolt_3">
+      <origin xyz="-6.062e-18 -0.033 0.045" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.005" length="0.012" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.1 0.12 0.13 1" />
+        </material>
+      </visual>
+    </link>
+  <joint name="hub_to_blade_root_0" type="revolute">
+    <origin xyz="0.08 0 0.16" rpy="-0 0 0" />
+    <parent link="rotor_hub" />
+    <child link="blade_root_0" />
+    <axis xyz="0 0 1" />
+    <limit effort="12" velocity="0.45" lower="-0.174533" upper="0.383972" />
+    <dynamics damping="0.08" friction="0.03" />
+    </joint>
+  <joint name="hub_to_blade_root_1" type="revolute">
+    <origin xyz="0.08 0.138564 -0.08" rpy="-2.0944 0 0" />
+    <parent link="rotor_hub" />
+    <child link="blade_root_1" />
+    <axis xyz="0 0 1" />
+    <limit effort="12" velocity="0.45" lower="-0.174533" upper="0.383972" />
+    <dynamics damping="0.08" friction="0.03" />
+    </joint>
+  <joint name="hub_to_blade_root_2" type="revolute">
+    <origin xyz="0.08 -0.138564 -0.08" rpy="-4.18879 0 0" />
+    <parent link="rotor_hub" />
+    <child link="blade_root_2" />
+    <axis xyz="0 0 1" />
+    <limit effort="12" velocity="0.45" lower="-0.174533" upper="0.383972" />
+    <dynamics damping="0.08" friction="0.03" />
+    </joint>
+  <joint name="tower_to_nacelle" type="revolute">
+    <origin xyz="0 0 1.61" rpy="0 0 0" />
+    <parent link="tower" />
+    <child link="nacelle" />
+    <axis xyz="0 0 1" />
+    <limit effort="60" velocity="0.25" lower="-3.14159" upper="3.14159" />
+    <dynamics damping="0.2" friction="0.1" />
+    </joint>
+  <joint name="nacelle_to_rotor_hub" type="continuous">
+    <origin xyz="0.585 0 0.15" rpy="0 0 0" />
+    <parent link="nacelle" />
+    <child link="rotor_hub" />
+    <axis xyz="1 0 0" />
+    <limit effort="18" velocity="8" />
+    <dynamics damping="0.02" friction="0.01" />
+    </joint>
+  </robot>

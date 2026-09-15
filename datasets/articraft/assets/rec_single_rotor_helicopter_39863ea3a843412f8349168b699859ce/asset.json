@@ -1,0 +1,202 @@
+{
+  "summary": {
+    "id": "rec_single_rotor_helicopter_39863ea3a843412f8349168b699859ce",
+    "category": "rotor",
+    "robot_name": "fire_utility_helicopter",
+    "joint_count": 2,
+    "link_count": 6,
+    "target_link_count": 3,
+    "family": "rec_single_rotor_helicopter",
+    "warnings": [],
+    "diagonal": 15.943990774640023,
+    "bytes": 5420214
+  },
+  "source": {
+    "dataset": "camvsl/Articraft-10K",
+    "revision": "3c79d5a05bb7cb6bf7bfee5e090176636ee3ac65",
+    "license": "CC-BY-4.0",
+    "url": "https://huggingface.co/datasets/camvsl/Articraft-10K/blob/3c79d5a05bb7cb6bf7bfee5e090176636ee3ac65/rec_single_rotor_helicopter_39863ea3a843412f8349168b699859ce.tar.gz",
+    "archive_sha256": "ae8be22ec246f6c807e62fe93e73f46c54b515fa61542577099e185a1391d393",
+    "archive": "rec_single_rotor_helicopter_39863ea3a843412f8349168b699859ce.tar.gz",
+    "label_status": "Original generated URDF reference; not manually verified or physically validated"
+  },
+  "links": [
+    {
+      "id": "link_000",
+      "name": "fuselage",
+      "point_file": "inputs/link_000.npz",
+      "faces": 13574,
+      "vertices": 6805,
+      "bounds": [
+        [
+          -1.174987,
+          -6.64,
+          0.023068
+        ],
+        [
+          1.174987,
+          2.2,
+          2.92
+        ]
+      ]
+    },
+    {
+      "id": "link_001",
+      "name": "main_rotor",
+      "point_file": "inputs/link_001.npz",
+      "faces": 504,
+      "vertices": 278,
+      "bounds": [
+        [
+          -4.386263142891252,
+          -5.152879749574739,
+          2.64
+        ],
+        [
+          5.32,
+          5.052882677623989,
+          2.88
+        ]
+      ]
+    },
+    {
+      "id": "link_002",
+      "name": "tail_rotor",
+      "point_file": "inputs/link_002.npz",
+      "faces": 304,
+      "vertices": 164,
+      "bounds": [
+        [
+          0.51999955921559,
+          -7.2600001127761935,
+          0.839999956666552
+        ],
+        [
+          0.7000002938558011,
+          -5.46,
+          2.6400001561085857
+        ]
+      ]
+    },
+    {
+      "id": "link_003",
+      "name": "right_service_door",
+      "point_file": null,
+      "faces": 140,
+      "vertices": 74,
+      "bounds": [
+        [
+          0.975,
+          -0.98,
+          1.06
+        ],
+        [
+          1.0300000440782926,
+          -0.2,
+          1.6800000000000002
+        ]
+      ]
+    },
+    {
+      "id": "link_004",
+      "name": "left_service_door",
+      "point_file": null,
+      "faces": 140,
+      "vertices": 74,
+      "bounds": [
+        [
+          -1.0300000440782926,
+          -0.98,
+          1.06
+        ],
+        [
+          -0.975,
+          -0.2,
+          1.6800000000000002
+        ]
+      ]
+    },
+    {
+      "id": "link_005",
+      "name": "crew_door",
+      "point_file": null,
+      "faces": 152,
+      "vertices": 82,
+      "bounds": [
+        [
+          0.983,
+          -0.20000000000000007,
+          0.64
+        ],
+        [
+          1.0450000550978742,
+          0.72,
+          1.7200000000000002
+        ]
+      ]
+    }
+  ],
+  "joints": [
+    {
+      "name": "rotor_spin",
+      "type": "continuous",
+      "parent": "link_000",
+      "child": "link_001",
+      "reference_q": 0.0,
+      "mimic": null
+    },
+    {
+      "name": "tail_rotor_spin",
+      "type": "continuous",
+      "parent": "link_000",
+      "child": "link_002",
+      "reference_q": 0.0,
+      "mimic": null
+    },
+    {
+      "name": "right_service_hinge",
+      "type": "revolute",
+      "parent": "link_000",
+      "child": "link_003",
+      "reference_q": 0.0,
+      "mimic": null
+    },
+    {
+      "name": "left_service_hinge",
+      "type": "revolute",
+      "parent": "link_000",
+      "child": "link_004",
+      "reference_q": 0.0,
+      "mimic": null
+    },
+    {
+      "name": "crew_door_hinge",
+      "type": "revolute",
+      "parent": "link_000",
+      "child": "link_005",
+      "reference_q": 0.0,
+      "mimic": null
+    }
+  ],
+  "bounds": [
+    [
+      -4.386263142891252,
+      -7.2600001127761935,
+      0.023068
+    ],
+    [
+      5.32,
+      5.052882677623989,
+      2.92
+    ]
+  ],
+  "point_pool_size": 65536,
+  "reference_pose": "Zero position clamped to limits; mimic values propagated",
+  "qc": {
+    "finite_geometry": true,
+    "tree_valid": true,
+    "axis_unit": true,
+    "physical_collision_validation": false,
+    "visual_tessellation": "32 cylinder segments, icosphere subdivision 2"
+  }
+}

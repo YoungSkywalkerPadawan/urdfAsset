@@ -1,0 +1,121 @@
+{
+  "summary": {
+    "id": "rec_turntable_5ff9b56637a44ddab0a9914eff62627e",
+    "category": "turntable",
+    "robot_name": "record_turntable",
+    "joint_count": 1,
+    "link_count": 3,
+    "target_link_count": 2,
+    "family": "rec_turntable",
+    "warnings": [],
+    "diagonal": 0.628179932456988,
+    "bytes": 3243924
+  },
+  "source": {
+    "dataset": "camvsl/Articraft-10K",
+    "revision": "3c79d5a05bb7cb6bf7bfee5e090176636ee3ac65",
+    "license": "CC-BY-4.0",
+    "url": "https://huggingface.co/datasets/camvsl/Articraft-10K/blob/3c79d5a05bb7cb6bf7bfee5e090176636ee3ac65/rec_turntable_5ff9b56637a44ddab0a9914eff62627e.tar.gz",
+    "archive_sha256": "1280dc344891b7d73b9884f6b82c3a5ad0a87f160f27aa2f82b68ba28949609b",
+    "archive": "rec_turntable_5ff9b56637a44ddab0a9914eff62627e.tar.gz",
+    "label_status": "Original generated URDF reference; not manually verified or physically validated"
+  },
+  "links": [
+    {
+      "id": "link_000",
+      "name": "plinth",
+      "point_file": "inputs/link_000.npz",
+      "faces": 1048,
+      "vertices": 816,
+      "bounds": [
+        [
+          -0.24,
+          -0.191,
+          0.0
+        ],
+        [
+          0.24,
+          0.18,
+          0.13
+        ]
+      ]
+    },
+    {
+      "id": "link_001",
+      "name": "platter",
+      "point_file": "inputs/link_001.npz",
+      "faces": 640,
+      "vertices": 330,
+      "bounds": [
+        [
+          -0.164,
+          -0.164,
+          0.075
+        ],
+        [
+          0.164,
+          0.164,
+          0.119
+        ]
+      ]
+    },
+    {
+      "id": "link_002",
+      "name": "tonearm",
+      "point_file": null,
+      "faces": 548,
+      "vertices": 288,
+      "bounds": [
+        [
+          -0.016500000000000015,
+          0.08499999999999999,
+          0.10800000000000001
+        ],
+        [
+          0.23800005509792138,
+          0.125,
+          0.1630000844836162
+        ]
+      ]
+    }
+  ],
+  "joints": [
+    {
+      "name": "platter_spin",
+      "type": "continuous",
+      "parent": "link_000",
+      "child": "link_001",
+      "reference_q": 0.0,
+      "mimic": null
+    },
+    {
+      "name": "tonearm_swing",
+      "type": "revolute",
+      "parent": "link_000",
+      "child": "link_002",
+      "reference_q": 0.0,
+      "mimic": null
+    }
+  ],
+  "bounds": [
+    [
+      -0.24,
+      -0.191,
+      0.0
+    ],
+    [
+      0.24,
+      0.18,
+      0.1630000844836162
+    ]
+  ],
+  "point_pool_size": 65536,
+  "reference_pose": "Zero position clamped to limits; mimic values propagated",
+  "qc": {
+    "finite_geometry": true,
+    "tree_valid": true,
+    "axis_unit": true,
+    "physical_collision_validation": false,
+    "visual_tessellation": "32 cylinder segments, icosphere subdivision 2"
+  }
+}

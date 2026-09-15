@@ -1,0 +1,270 @@
+<robot name="wheelbarrow">
+  <material name="tray_green">
+    <color rgba="0.27 0.39 0.18 1" />
+    </material>
+  <material name="frame_green">
+    <color rgba="0.22 0.33 0.15 1" />
+    </material>
+  <material name="steel">
+    <color rgba="0.6 0.62 0.66 1" />
+    </material>
+  <material name="dark_steel">
+    <color rgba="0.2 0.22 0.24 1" />
+    </material>
+  <material name="rubber">
+    <color rgba="0.07 0.07 0.07 1" />
+    </material>
+  <material name="grip_black">
+    <color rgba="0.09 0.09 0.08 1" />
+    </material>
+  <link name="frame">
+    <inertial>
+      <origin xyz="0 -0.03 0.33" rpy="0 0 0" />
+      <mass value="18" />
+      <inertia ixx="5.2152" ixy="0" ixz="0" iyy="1.9392" iyz="0" izz="5.5992" />
+      </inertial>
+    <visual name="tray_floor">
+      <origin xyz="0 0.04 0.35" rpy="0 0 0" />
+      <geometry>
+        <box size="0.72 0.68 0.028" />
+        </geometry>
+      <material name="tray_green">
+        <color rgba="0.27 0.39 0.18 1" />
+        </material>
+      </visual>
+    <visual name="left_tray_wall">
+      <origin xyz="0.304 0.02 0.455" rpy="0 -0.18 0" />
+      <geometry>
+        <box size="0.024 0.8 0.24" />
+        </geometry>
+      <material name="tray_green">
+        <color rgba="0.27 0.39 0.18 1" />
+        </material>
+      </visual>
+    <visual name="right_tray_wall">
+      <origin xyz="-0.304 0.02 0.455" rpy="0 0.18 0" />
+      <geometry>
+        <box size="0.024 0.8 0.24" />
+        </geometry>
+      <material name="tray_green">
+        <color rgba="0.27 0.39 0.18 1" />
+        </material>
+      </visual>
+    <visual name="tray_front_wall">
+      <origin xyz="0 0.4 0.47" rpy="0.12 0 0" />
+      <geometry>
+        <box size="0.66 0.024 0.25" />
+        </geometry>
+      <material name="tray_green">
+        <color rgba="0.27 0.39 0.18 1" />
+        </material>
+      </visual>
+    <visual name="tray_rear_lip">
+      <origin xyz="0 -0.29 0.39" rpy="-0.05 0 0" />
+      <geometry>
+        <box size="0.62 0.04 0.1" />
+        </geometry>
+      <material name="tray_green">
+        <color rgba="0.27 0.39 0.18 1" />
+        </material>
+      </visual>
+    <visual name="tray_support_block">
+      <origin xyz="0 0.2 0.28" rpy="0 0 0" />
+      <geometry>
+        <box size="0.3 0.34 0.12" />
+        </geometry>
+      <material name="frame_green">
+        <color rgba="0.22 0.33 0.15 1" />
+        </material>
+      </visual>
+    <visual name="fork_spine">
+      <origin xyz="0 0.29 0.23" rpy="0 0 0" />
+      <geometry>
+        <box size="0.14 0.22 0.09" />
+        </geometry>
+      <material name="frame_green">
+        <color rgba="0.22 0.33 0.15 1" />
+        </material>
+      </visual>
+    <visual name="left_handle">
+      <geometry>
+        <mesh filename="assets/meshes/left_handle_rail.obj" />
+        </geometry>
+      <material name="frame_green">
+        <color rgba="0.22 0.33 0.15 1" />
+        </material>
+      </visual>
+    <visual name="right_handle">
+      <geometry>
+        <mesh filename="assets/meshes/right_handle_rail.obj" />
+        </geometry>
+      <material name="frame_green">
+        <color rgba="0.22 0.33 0.15 1" />
+        </material>
+      </visual>
+    <visual name="left_leg">
+      <geometry>
+        <mesh filename="assets/meshes/left_rear_leg.obj" />
+        </geometry>
+      <material name="frame_green">
+        <color rgba="0.22 0.33 0.15 1" />
+        </material>
+      </visual>
+    <visual name="right_leg">
+      <geometry>
+        <mesh filename="assets/meshes/right_rear_leg.obj" />
+        </geometry>
+      <material name="frame_green">
+        <color rgba="0.22 0.33 0.15 1" />
+        </material>
+      </visual>
+    <visual name="rear_leg_crossbrace">
+      <origin xyz="0 -0.44 0.2" rpy="0 0 0" />
+      <geometry>
+        <box size="0.5 0.06 0.06" />
+        </geometry>
+      <material name="frame_green">
+        <color rgba="0.22 0.33 0.15 1" />
+        </material>
+      </visual>
+    <visual name="left_tray_mount">
+      <origin xyz="0.27 0.03 0.29" rpy="0 0 0" />
+      <geometry>
+        <box size="0.16 0.18 0.08" />
+        </geometry>
+      <material name="frame_green">
+        <color rgba="0.22 0.33 0.15 1" />
+        </material>
+      </visual>
+    <visual name="right_tray_mount">
+      <origin xyz="-0.27 0.03 0.29" rpy="0 0 0" />
+      <geometry>
+        <box size="0.16 0.18 0.08" />
+        </geometry>
+      <material name="frame_green">
+        <color rgba="0.22 0.33 0.15 1" />
+        </material>
+      </visual>
+    <visual name="left_fork_arm">
+      <origin xyz="0.11 0.49 0.235" rpy="-0.23 0 0" />
+      <geometry>
+        <box size="0.09 0.3 0.095" />
+        </geometry>
+      <material name="frame_green">
+        <color rgba="0.22 0.33 0.15 1" />
+        </material>
+      </visual>
+    <visual name="right_fork_arm">
+      <origin xyz="-0.11 0.49 0.235" rpy="-0.23 0 0" />
+      <geometry>
+        <box size="0.09 0.3 0.095" />
+        </geometry>
+      <material name="frame_green">
+        <color rgba="0.22 0.33 0.15 1" />
+        </material>
+      </visual>
+    <visual name="left_axle_block">
+      <origin xyz="0.11 0.62 0.19" rpy="0 0 0" />
+      <geometry>
+        <box size="0.08 0.12 0.11" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.2 0.22 0.24 1" />
+        </material>
+      </visual>
+    <visual name="right_axle_block">
+      <origin xyz="-0.11 0.62 0.19" rpy="0 0 0" />
+      <geometry>
+        <box size="0.08 0.12 0.11" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.2 0.22 0.24 1" />
+        </material>
+      </visual>
+    <visual name="left_grip">
+      <origin xyz="0.34 -0.76 0.63" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.022" length="0.14" />
+        </geometry>
+      <material name="grip_black">
+        <color rgba="0.09 0.09 0.08 1" />
+        </material>
+      </visual>
+    <visual name="right_grip">
+      <origin xyz="-0.34 -0.76 0.63" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.022" length="0.14" />
+        </geometry>
+      <material name="grip_black">
+        <color rgba="0.09 0.09 0.08 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="front_wheel">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 1.5708 0" />
+      <mass value="4.2" />
+      <inertia ixx="0.041405" ixy="0" ixz="0" iyy="0.041405" iyz="0" izz="0.07581" />
+      </inertial>
+    <visual name="tire">
+      <geometry>
+        <mesh filename="assets/meshes/wheelbarrow_tire.obj" />
+        </geometry>
+      <material name="rubber">
+        <color rgba="0.07 0.07 0.07 1" />
+        </material>
+      </visual>
+    <visual name="rim_drum">
+      <origin xyz="0 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.1197" length="0.054" />
+        </geometry>
+      <material name="steel">
+        <color rgba="0.6 0.62 0.66 1" />
+        </material>
+      </visual>
+    <visual name="left_rim_face">
+      <origin xyz="0.018 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0874" length="0.03" />
+        </geometry>
+      <material name="steel">
+        <color rgba="0.6 0.62 0.66 1" />
+        </material>
+      </visual>
+    <visual name="right_rim_face">
+      <origin xyz="-0.018 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0874" length="0.03" />
+        </geometry>
+      <material name="steel">
+        <color rgba="0.6 0.62 0.66 1" />
+        </material>
+      </visual>
+    <visual name="hub">
+      <origin xyz="0 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0342" length="0.115" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.2 0.22 0.24 1" />
+        </material>
+      </visual>
+    <visual name="axle_sleeve">
+      <origin xyz="0 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.019" length="0.14" />
+        </geometry>
+      <material name="steel">
+        <color rgba="0.6 0.62 0.66 1" />
+        </material>
+      </visual>
+    </link>
+  <joint name="wheel_spin" type="continuous">
+    <origin xyz="0 0.62 0.19" rpy="0 0 0" />
+    <parent link="frame" />
+    <child link="front_wheel" />
+    <axis xyz="1 0 0" />
+    <limit effort="20" velocity="30" />
+    </joint>
+  </robot>

@@ -1,0 +1,45 @@
+<robot name="overhung_spindle_stage">
+  <material name="housing_gray">
+    <color rgba="0.24 0.26 0.29 1" />
+    </material>
+  <material name="steel">
+    <color rgba="0.72 0.75 0.78 1" />
+    </material>
+  <material name="faceplate_steel">
+    <color rgba="0.63 0.66 0.7 1" />
+    </material>
+  <link name="bearing_body">
+    <visual name="housing">
+      <geometry>
+        <mesh filename="assets/meshes/bearing_body.obj" />
+        </geometry>
+      <material name="housing_gray" />
+      </visual>
+    </link>
+  <link name="spindle">
+    <visual name="shaft_core">
+      <geometry>
+        <mesh filename="assets/meshes/shaft_core.obj" />
+        </geometry>
+      <material name="steel" />
+      </visual>
+    <visual name="retaining_collar">
+      <geometry>
+        <mesh filename="assets/meshes/retaining_collar.obj" />
+        </geometry>
+      <material name="faceplate_steel" />
+      </visual>
+    <visual name="faceplate">
+      <geometry>
+        <mesh filename="assets/meshes/faceplate.obj" />
+        </geometry>
+      <material name="faceplate_steel" />
+      </visual>
+    </link>
+  <joint name="body_to_spindle" type="continuous">
+    <parent link="bearing_body" />
+    <child link="spindle" />
+    <axis xyz="1 0 0" />
+    <limit effort="20" velocity="18" />
+    </joint>
+  </robot>

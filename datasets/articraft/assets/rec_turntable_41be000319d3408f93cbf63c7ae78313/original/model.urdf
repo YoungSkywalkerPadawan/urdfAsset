@@ -1,0 +1,262 @@
+<robot name="record_turntable">
+  <material name="dark_walnut">
+    <color rgba="0.28 0.15 0.07 1" />
+    </material>
+  <material name="satin_black">
+    <color rgba="0.01 0.01 0.012 1" />
+    </material>
+  <material name="matte_rubber">
+    <color rgba="0.02 0.02 0.018 1" />
+    </material>
+  <material name="gloss_black_vinyl">
+    <color rgba="0.004 0.004 0.005 1" />
+    </material>
+  <material name="brushed_aluminum">
+    <color rgba="0.7 0.72 0.7 1" />
+    </material>
+  <material name="red_record_label">
+    <color rgba="0.7 0.05 0.04 1" />
+    </material>
+  <material name="brass_stylus">
+    <color rgba="0.88 0.68 0.28 1" />
+    </material>
+  <link name="plinth">
+    <visual name="wood_body">
+      <origin xyz="0 0 0.0275" rpy="0 0 0" />
+      <geometry>
+        <box size="0.6 0.42 0.055" />
+        </geometry>
+      <material name="dark_walnut">
+        <color rgba="0.28 0.15 0.07 1" />
+        </material>
+      </visual>
+    <visual name="recessed_deck">
+      <origin xyz="-0.065 0 0.057" rpy="0 0 0" />
+      <geometry>
+        <box size="0.42 0.3 0.005" />
+        </geometry>
+      <material name="satin_black">
+        <color rgba="0.01 0.01 0.012 1" />
+        </material>
+      </visual>
+    <visual name="bearing_washer">
+      <origin xyz="-0.065 0 0.062" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.055" length="0.006" />
+        </geometry>
+      <material name="brushed_aluminum">
+        <color rgba="0.7 0.72 0.7 1" />
+        </material>
+      </visual>
+    <visual name="foot_0">
+      <origin xyz="-0.245 -0.155 -0.009" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.028" length="0.022" />
+        </geometry>
+      <material name="matte_rubber">
+        <color rgba="0.02 0.02 0.018 1" />
+        </material>
+      </visual>
+    <visual name="foot_1">
+      <origin xyz="-0.245 0.155 -0.009" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.028" length="0.022" />
+        </geometry>
+      <material name="matte_rubber">
+        <color rgba="0.02 0.02 0.018 1" />
+        </material>
+      </visual>
+    <visual name="foot_2">
+      <origin xyz="0.245 -0.155 -0.009" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.028" length="0.022" />
+        </geometry>
+      <material name="matte_rubber">
+        <color rgba="0.02 0.02 0.018 1" />
+        </material>
+      </visual>
+    <visual name="foot_3">
+      <origin xyz="0.245 0.155 -0.009" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.028" length="0.022" />
+        </geometry>
+      <material name="matte_rubber">
+        <color rgba="0.02 0.02 0.018 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="side_support_0">
+    <visual name="side_rail">
+      <origin xyz="0 0 0.0325" rpy="0 0 0" />
+      <geometry>
+        <box size="0.42 0.03 0.065" />
+        </geometry>
+      <material name="brushed_aluminum">
+        <color rgba="0.7 0.72 0.7 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="side_support_1">
+    <visual name="side_rail">
+      <origin xyz="0 0 0.0325" rpy="0 0 0" />
+      <geometry>
+        <box size="0.42 0.03 0.065" />
+        </geometry>
+      <material name="brushed_aluminum">
+        <color rgba="0.7 0.72 0.7 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="platter">
+    <visual name="platter_disk">
+      <origin xyz="0 0 0.015" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.145" length="0.03" />
+        </geometry>
+      <material name="brushed_aluminum">
+        <color rgba="0.7 0.72 0.7 1" />
+        </material>
+      </visual>
+    <visual name="rubber_mat">
+      <origin xyz="0 0 0.032" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.133" length="0.005" />
+        </geometry>
+      <material name="matte_rubber">
+        <color rgba="0.02 0.02 0.018 1" />
+        </material>
+      </visual>
+    <visual name="record_disc">
+      <origin xyz="0 0 0.036" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.128" length="0.003" />
+        </geometry>
+      <material name="gloss_black_vinyl">
+        <color rgba="0.004 0.004 0.005 1" />
+        </material>
+      </visual>
+    <visual name="record_label">
+      <origin xyz="0 0 0.0395" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.028" length="0.0035" />
+        </geometry>
+      <material name="red_record_label">
+        <color rgba="0.7 0.05 0.04 1" />
+        </material>
+      </visual>
+    <visual name="center_spindle">
+      <origin xyz="0 0 0.057" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0055" length="0.054" />
+        </geometry>
+      <material name="brushed_aluminum">
+        <color rgba="0.7 0.72 0.7 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="tonearm_base">
+    <visual name="pedestal">
+      <origin xyz="0 0 0.0225" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.035" length="0.045" />
+        </geometry>
+      <material name="satin_black">
+        <color rgba="0.01 0.01 0.012 1" />
+        </material>
+      </visual>
+    <visual name="pivot_cap">
+      <origin xyz="0 0 0.0575" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.026" length="0.025" />
+        </geometry>
+      <material name="brushed_aluminum">
+        <color rgba="0.7 0.72 0.7 1" />
+        </material>
+      </visual>
+    <visual name="mounting_plate">
+      <origin xyz="0 0 0.003" rpy="0 0 0" />
+      <geometry>
+        <box size="0.085 0.05 0.006" />
+        </geometry>
+      <material name="brushed_aluminum">
+        <color rgba="0.7 0.72 0.7 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="tonearm">
+    <visual name="pivot_collar">
+      <origin xyz="0 0 0.005" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.01" />
+        </geometry>
+      <material name="brushed_aluminum">
+        <color rgba="0.7 0.72 0.7 1" />
+        </material>
+      </visual>
+    <visual name="arm_wand">
+      <origin xyz="0.1675 0 0.012" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.335" />
+        </geometry>
+      <material name="brushed_aluminum">
+        <color rgba="0.7 0.72 0.7 1" />
+        </material>
+      </visual>
+    <visual name="counterweight">
+      <origin xyz="-0.045 0 0.026" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.019" length="0.06" />
+        </geometry>
+      <material name="satin_black">
+        <color rgba="0.01 0.01 0.012 1" />
+        </material>
+      </visual>
+    <visual name="headshell">
+      <origin xyz="0.355 0 0.006" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.026 0.009" />
+        </geometry>
+      <material name="satin_black">
+        <color rgba="0.01 0.01 0.012 1" />
+        </material>
+      </visual>
+    <visual name="stylus">
+      <origin xyz="0.371 0 -0.012" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0018" length="0.028" />
+        </geometry>
+      <material name="brass_stylus">
+        <color rgba="0.88 0.68 0.28 1" />
+        </material>
+      </visual>
+    </link>
+  <joint name="plinth_to_side_support_0" type="fixed">
+    <origin xyz="-0.065 0.185 0.055" rpy="0 0 0" />
+    <parent link="plinth" />
+    <child link="side_support_0" />
+    </joint>
+  <joint name="plinth_to_side_support_1" type="fixed">
+    <origin xyz="-0.065 -0.185 0.055" rpy="0 0 0" />
+    <parent link="plinth" />
+    <child link="side_support_1" />
+    </joint>
+  <joint name="platter_spin" type="continuous">
+    <origin xyz="-0.065 0 0.065" rpy="0 0 0" />
+    <parent link="plinth" />
+    <child link="platter" />
+    <axis xyz="0 0 1" />
+    <limit effort="2" velocity="12" />
+    </joint>
+  <joint name="plinth_to_tonearm_base" type="fixed">
+    <origin xyz="0.205 -0.135 0.055" rpy="0 0 0" />
+    <parent link="plinth" />
+    <child link="tonearm_base" />
+    </joint>
+  <joint name="tonearm_swing" type="revolute">
+    <origin xyz="0 0 0.07" rpy="0 0 2.83708" />
+    <parent link="tonearm_base" />
+    <child link="tonearm" />
+    <axis xyz="0 0 1" />
+    <limit effort="1" velocity="1.8" lower="-0.42" upper="0.46" />
+    </joint>
+  </robot>

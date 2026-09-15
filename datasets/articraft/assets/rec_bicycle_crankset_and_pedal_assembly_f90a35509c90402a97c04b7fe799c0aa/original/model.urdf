@@ -1,0 +1,215 @@
+<robot name="road_triple_crankset">
+  <material name="shell_paint">
+    <color rgba="0.19 0.19 0.2 1" />
+    </material>
+  <material name="alloy">
+    <color rgba="0.8 0.81 0.82 1" />
+    </material>
+  <material name="polished_alloy">
+    <color rgba="0.88 0.89 0.9 1" />
+    </material>
+  <material name="chainring_steel">
+    <color rgba="0.72 0.73 0.75 1" />
+    </material>
+  <material name="rubber">
+    <color rgba="0.08 0.08 0.08 1" />
+    </material>
+  <link name="bottom_bracket_shell">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 1.5708 0" />
+      <mass value="0.55" />
+      <inertia ixx="0.000462733" ixy="0" ixz="0" iyy="0.000462733" iyz="0" izz="0.0002475" />
+      </inertial>
+    <visual name="bb_shell_assembly">
+      <geometry>
+        <mesh filename="assets/meshes/bottom_bracket_shell_mesh.obj" />
+        </geometry>
+      <material name="shell_paint">
+        <color rgba="0.19 0.19 0.2 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="spindle">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 1.5708 0" />
+      <mass value="0.35" />
+      <inertia ixx="0.000492654" ixy="0" ixz="0" iyy="0.000492654" iyz="0" izz="2.9575e-05" />
+      </inertial>
+    <visual name="spindle_axle">
+      <geometry>
+        <mesh filename="assets/meshes/spindle_mesh.obj" />
+        </geometry>
+      <material name="polished_alloy">
+        <color rgba="0.88 0.89 0.9 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="right_crank">
+    <inertial>
+      <origin xyz="0.05 0 -0.03" rpy="0 0 0" />
+      <mass value="1.05" />
+      <inertia ixx="0.01008" ixy="0" ixz="0" iyy="0.00651875" iyz="0" izz="0.00651875" />
+      </inertial>
+    <visual name="right_arm_plate">
+      <geometry>
+        <mesh filename="assets/meshes/right_arm_plate_mesh.obj" />
+        </geometry>
+      <material name="alloy">
+        <color rgba="0.8 0.81 0.82 1" />
+        </material>
+      </visual>
+    <visual name="right_spindle_boss">
+      <geometry>
+        <mesh filename="assets/meshes/right_spindle_boss_mesh.obj" />
+        </geometry>
+      <material name="alloy">
+        <color rgba="0.8 0.81 0.82 1" />
+        </material>
+      </visual>
+    <visual name="right_pedal_eye">
+      <geometry>
+        <mesh filename="assets/meshes/right_pedal_eye_mesh.obj" />
+        </geometry>
+      <material name="alloy">
+        <color rgba="0.8 0.81 0.82 1" />
+        </material>
+      </visual>
+    <visual name="right_spider">
+      <geometry>
+        <mesh filename="assets/meshes/right_spider_mesh.obj" />
+        </geometry>
+      <material name="alloy">
+        <color rgba="0.8 0.81 0.82 1" />
+        </material>
+      </visual>
+    <visual name="outer_chainring">
+      <geometry>
+        <mesh filename="assets/meshes/outer_chainring_mesh.obj" />
+        </geometry>
+      <material name="chainring_steel">
+        <color rgba="0.72 0.73 0.75 1" />
+        </material>
+      </visual>
+    <visual name="middle_chainring">
+      <geometry>
+        <mesh filename="assets/meshes/middle_chainring_mesh.obj" />
+        </geometry>
+      <material name="chainring_steel">
+        <color rgba="0.72 0.73 0.75 1" />
+        </material>
+      </visual>
+    <visual name="inner_chainring">
+      <geometry>
+        <mesh filename="assets/meshes/inner_chainring_mesh.obj" />
+        </geometry>
+      <material name="chainring_steel">
+        <color rgba="0.72 0.73 0.75 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="left_crank">
+    <inertial>
+      <origin xyz="-0.05 0 0.03" rpy="0 0 0" />
+      <mass value="0.72" />
+      <inertia ixx="0.00384" ixy="0" ixz="0" iyy="0.004056" iyz="0" izz="0.000984" />
+      </inertial>
+    <visual name="left_arm_plate">
+      <geometry>
+        <mesh filename="assets/meshes/left_arm_plate_mesh.obj" />
+        </geometry>
+      <material name="alloy">
+        <color rgba="0.8 0.81 0.82 1" />
+        </material>
+      </visual>
+    <visual name="left_spindle_boss">
+      <geometry>
+        <mesh filename="assets/meshes/left_spindle_boss_mesh.obj" />
+        </geometry>
+      <material name="alloy">
+        <color rgba="0.8 0.81 0.82 1" />
+        </material>
+      </visual>
+    <visual name="left_pedal_eye">
+      <geometry>
+        <mesh filename="assets/meshes/left_pedal_eye_mesh.obj" />
+        </geometry>
+      <material name="alloy">
+        <color rgba="0.8 0.81 0.82 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="right_pedal">
+    <inertial>
+      <origin xyz="0.026 0 0" rpy="0 0 0" />
+      <mass value="0.18" />
+      <inertia ixx="0.00012636" ixy="0" ixz="0" iyy="1.35e-05" iyz="0" izz="0.00013014" />
+      </inertial>
+    <visual name="right_pedal_spindle">
+      <geometry>
+        <mesh filename="assets/meshes/right_pedal_spindle_mesh.obj" />
+        </geometry>
+      <material name="polished_alloy">
+        <color rgba="0.88 0.89 0.9 1" />
+        </material>
+      </visual>
+    <visual name="right_pedal_body">
+      <geometry>
+        <mesh filename="assets/meshes/right_pedal_body_mesh.obj" />
+        </geometry>
+      <material name="rubber">
+        <color rgba="0.08 0.08 0.08 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="left_pedal">
+    <inertial>
+      <origin xyz="-0.026 0 0" rpy="0 0 0" />
+      <mass value="0.18" />
+      <inertia ixx="0.00012636" ixy="0" ixz="0" iyy="1.35e-05" iyz="0" izz="0.00013014" />
+      </inertial>
+    <visual name="left_pedal_spindle">
+      <geometry>
+        <mesh filename="assets/meshes/left_pedal_spindle_mesh.obj" />
+        </geometry>
+      <material name="polished_alloy">
+        <color rgba="0.88 0.89 0.9 1" />
+        </material>
+      </visual>
+    <visual name="left_pedal_body">
+      <geometry>
+        <mesh filename="assets/meshes/left_pedal_body_mesh.obj" />
+        </geometry>
+      <material name="rubber">
+        <color rgba="0.08 0.08 0.08 1" />
+        </material>
+      </visual>
+    </link>
+  <joint name="shell_to_spindle" type="continuous">
+    <parent link="bottom_bracket_shell" />
+    <child link="spindle" />
+    <axis xyz="1 0 0" />
+    <limit effort="90" velocity="25" />
+    </joint>
+  <joint name="spindle_to_right_crank" type="fixed">
+    <parent link="spindle" />
+    <child link="right_crank" />
+    </joint>
+  <joint name="spindle_to_left_crank" type="fixed">
+    <parent link="spindle" />
+    <child link="left_crank" />
+    </joint>
+  <joint name="right_crank_to_right_pedal" type="continuous">
+    <origin xyz="0.05 0.006 -0.172" rpy="0 0 0" />
+    <parent link="right_crank" />
+    <child link="right_pedal" />
+    <axis xyz="1 0 0" />
+    <limit effort="8" velocity="20" />
+    </joint>
+  <joint name="left_crank_to_left_pedal" type="continuous">
+    <origin xyz="-0.05 -0.006 0.172" rpy="0 0 0" />
+    <parent link="left_crank" />
+    <child link="left_pedal" />
+    <axis xyz="1 0 0" />
+    <limit effort="8" velocity="20" />
+    </joint>
+  </robot>

@@ -1,0 +1,196 @@
+<robot name="ceiling_fan_with_spotlight">
+  <material name="housing_white">
+    <color rgba="0.93 0.93 0.92 1" />
+    </material>
+  <material name="brushed_metal">
+    <color rgba="0.72 0.74 0.77 1" />
+    </material>
+  <material name="walnut">
+    <color rgba="0.46 0.31 0.19 1" />
+    </material>
+  <material name="charcoal">
+    <color rgba="0.14 0.15 0.17 1" />
+    </material>
+  <link name="ceiling_mount">
+    <inertial>
+      <origin xyz="0 0 -0.145" rpy="0 0 0" />
+      <mass value="2.8" />
+      <inertia ixx="0.0252933" ixy="0" ixz="0" iyy="0.0252933" iyz="0" izz="0.01134" />
+      </inertial>
+    <visual name="ceiling_plate">
+      <origin xyz="0 0 -0.005" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.088" length="0.01" />
+        </geometry>
+      <material name="brushed_metal">
+        <color rgba="0.72 0.74 0.77 1" />
+        </material>
+      </visual>
+    <visual name="canopy_shell">
+      <geometry>
+        <mesh filename="assets/meshes/canopy_shell.obj" />
+        </geometry>
+      <material name="housing_white">
+        <color rgba="0.93 0.93 0.92 1" />
+        </material>
+      </visual>
+    <visual name="downrod">
+      <origin xyz="0 0 -0.185" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.013" length="0.16" />
+        </geometry>
+      <material name="brushed_metal">
+        <color rgba="0.72 0.74 0.77 1" />
+        </material>
+      </visual>
+    <visual name="hanger_sleeve">
+      <origin xyz="0 0 -0.139" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.02" length="0.068" />
+        </geometry>
+      <material name="brushed_metal">
+        <color rgba="0.72 0.74 0.77 1" />
+        </material>
+      </visual>
+    <visual name="downrod_socket">
+      <origin xyz="0 0 -0.0575" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.022" length="0.095" />
+        </geometry>
+      <material name="brushed_metal">
+        <color rgba="0.72 0.74 0.77 1" />
+        </material>
+      </visual>
+    <visual name="lower_collar">
+      <origin xyz="0 0 -0.275" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.024" length="0.02" />
+        </geometry>
+      <material name="charcoal">
+        <color rgba="0.14 0.15 0.17 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="fan_rotor">
+    <inertial>
+      <origin xyz="0 0 -0.05" rpy="0 0 0" />
+      <mass value="6.6" />
+      <inertia ixx="0.638715" ixy="0" ixz="0" iyy="0.638715" iyz="0" izz="1.26852" />
+      </inertial>
+    <visual name="axle_collar">
+      <origin xyz="0 0 -0.011" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.024" length="0.022" />
+        </geometry>
+      <material name="charcoal">
+        <color rgba="0.14 0.15 0.17 1" />
+        </material>
+      </visual>
+    <visual name="motor_housing">
+      <origin xyz="0 0 -0.034" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.125" length="0.036" />
+        </geometry>
+      <material name="housing_white">
+        <color rgba="0.93 0.93 0.92 1" />
+        </material>
+      </visual>
+    <visual name="housing_trim_ring">
+      <origin xyz="0 0 -0.058" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.135" length="0.012" />
+        </geometry>
+      <material name="brushed_metal">
+        <color rgba="0.72 0.74 0.77 1" />
+        </material>
+      </visual>
+    <visual name="bottom_cap">
+      <origin xyz="0 0 -0.072" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.06" length="0.018" />
+        </geometry>
+      <material name="charcoal">
+        <color rgba="0.14 0.15 0.17 1" />
+        </material>
+      </visual>
+    <visual name="blade_set">
+      <origin xyz="0 0 -0.004" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/blade_set.obj" />
+        </geometry>
+      <material name="walnut">
+        <color rgba="0.46 0.31 0.19 1" />
+        </material>
+      </visual>
+    <visual name="arm_hinge_block">
+      <origin xyz="0 0.127 -0.048" rpy="0 0 0" />
+      <geometry>
+        <box size="0.024 0.01 0.022" />
+        </geometry>
+      <material name="charcoal">
+        <color rgba="0.14 0.15 0.17 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="spotlight_arm">
+    <inertial>
+      <origin xyz="0 0.06 -0.04" rpy="0 0 0" />
+      <mass value="0.45" />
+      <inertia ixx="0.00104719" ixy="0" ixz="0" iyy="0.000507187" iyz="0" izz="0.0007275" />
+      </inertial>
+    <visual name="arm_body">
+      <geometry>
+        <mesh filename="assets/meshes/spotlight_arm.obj" />
+        </geometry>
+      <material name="charcoal">
+        <color rgba="0.14 0.15 0.17 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="spotlight_head">
+    <inertial>
+      <origin xyz="0 0.038 0" rpy="-1.5708 0 0" />
+      <mass value="0.6" />
+      <inertia ixx="0.0005144" ixy="0" ixz="0" iyy="0.0005144" iyz="0" izz="0.0003888" />
+      </inertial>
+    <visual name="rear_collar">
+      <origin xyz="0 0.006 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.011" length="0.012" />
+        </geometry>
+      <material name="charcoal">
+        <color rgba="0.14 0.15 0.17 1" />
+        </material>
+      </visual>
+    <visual name="head_shell">
+      <origin xyz="0 0.006 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/spotlight_head_shell.obj" />
+        </geometry>
+      <material name="charcoal">
+        <color rgba="0.14 0.15 0.17 1" />
+        </material>
+      </visual>
+    </link>
+  <joint name="fan_spin" type="continuous">
+    <origin xyz="0 0 -0.285" rpy="0 0 0" />
+    <parent link="ceiling_mount" />
+    <child link="fan_rotor" />
+    <axis xyz="0 0 1" />
+    <limit effort="25" velocity="18" />
+    </joint>
+  <joint name="arm_pivot" type="revolute">
+    <origin xyz="0 0.132 -0.048" rpy="0 0 0" />
+    <parent link="fan_rotor" />
+    <child link="spotlight_arm" />
+    <axis xyz="1 0 0" />
+    <limit effort="4" velocity="2" lower="-0.95" upper="0.45" />
+    </joint>
+  <joint name="head_tilt" type="revolute">
+    <origin xyz="0 0.106 -0.082" rpy="0 0 0" />
+    <parent link="spotlight_arm" />
+    <child link="spotlight_head" />
+    <axis xyz="1 0 0" />
+    <limit effort="2" velocity="2" lower="-0.9" upper="0.7" />
+    </joint>
+  </robot>

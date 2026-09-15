@@ -1,0 +1,120 @@
+<robot name="bridge_rotary_shaft_fixture">
+  <material name="frame_gray">
+    <color rgba="0.23 0.24 0.26 1" />
+    </material>
+  <material name="keeper_gray">
+    <color rgba="0.52 0.54 0.57 1" />
+    </material>
+  <material name="shaft_steel">
+    <color rgba="0.78 0.8 0.82 1" />
+    </material>
+  <link name="lower_frame">
+    <visual name="base_plate">
+      <origin xyz="0 0 0.009" rpy="0 0 0" />
+      <geometry>
+        <box size="0.26 0.12 0.018" />
+        </geometry>
+      <material name="frame_gray" />
+      </visual>
+    <visual name="left_cheek_1">
+      <origin xyz="-0.072 -0.022 0.054" rpy="0 0 0" />
+      <geometry>
+        <box size="0.032 0.012 0.072" />
+        </geometry>
+      <material name="frame_gray" />
+      </visual>
+    <visual name="left_cheek_2">
+      <origin xyz="0.072 -0.022 0.054" rpy="0 0 0" />
+      <geometry>
+        <box size="0.032 0.012 0.072" />
+        </geometry>
+      <material name="frame_gray" />
+      </visual>
+    <visual name="right_cheek_1">
+      <origin xyz="-0.072 0.022 0.054" rpy="0 0 0" />
+      <geometry>
+        <box size="0.032 0.012 0.072" />
+        </geometry>
+      <material name="frame_gray" />
+      </visual>
+    <visual name="right_cheek_2">
+      <origin xyz="0.072 0.022 0.054" rpy="0 0 0" />
+      <geometry>
+        <box size="0.032 0.012 0.072" />
+        </geometry>
+      <material name="frame_gray" />
+      </visual>
+    <visual name="lower_land_1">
+      <origin xyz="-0.072 0 0.059" rpy="0 0 0" />
+      <geometry>
+        <box size="0.032 0.032 0.006" />
+        </geometry>
+      <material name="frame_gray" />
+      </visual>
+    <visual name="lower_land_2">
+      <origin xyz="0.072 0 0.059" rpy="0 0 0" />
+      <geometry>
+        <box size="0.032 0.032 0.006" />
+        </geometry>
+      <material name="frame_gray" />
+      </visual>
+    </link>
+  <link name="top_keeper">
+    <visual name="bridge_bar">
+      <origin xyz="0 0 0.01" rpy="0 0 0" />
+      <geometry>
+        <box size="0.176 0.06 0.02" />
+        </geometry>
+      <material name="keeper_gray" />
+      </visual>
+    <visual name="upper_land_1">
+      <origin xyz="-0.072 0 -0.003" rpy="0 0 0" />
+      <geometry>
+        <box size="0.032 0.032 0.006" />
+        </geometry>
+      <material name="keeper_gray" />
+      </visual>
+    <visual name="upper_land_2">
+      <origin xyz="0.072 0 -0.003" rpy="0 0 0" />
+      <geometry>
+        <box size="0.032 0.032 0.006" />
+        </geometry>
+      <material name="keeper_gray" />
+      </visual>
+    </link>
+  <link name="shaft">
+    <visual name="shaft_body">
+      <origin xyz="0 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.248" />
+        </geometry>
+      <material name="shaft_steel" />
+      </visual>
+    <visual name="left_collar">
+      <origin xyz="-0.092 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.008" />
+        </geometry>
+      <material name="shaft_steel" />
+      </visual>
+    <visual name="right_collar">
+      <origin xyz="0.092 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.008" />
+        </geometry>
+      <material name="shaft_steel" />
+      </visual>
+    </link>
+  <joint name="frame_to_keeper" type="fixed">
+    <origin xyz="0 0 0.09" rpy="0 0 0" />
+    <parent link="lower_frame" />
+    <child link="top_keeper" />
+    </joint>
+  <joint name="frame_to_shaft" type="continuous">
+    <origin xyz="0 0 0.074" rpy="0 0 0" />
+    <parent link="lower_frame" />
+    <child link="shaft" />
+    <axis xyz="1 0 0" />
+    <limit effort="18" velocity="10" />
+    </joint>
+  </robot>

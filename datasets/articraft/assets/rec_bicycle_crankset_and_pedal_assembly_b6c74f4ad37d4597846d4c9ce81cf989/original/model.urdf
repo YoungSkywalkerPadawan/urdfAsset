@@ -1,0 +1,267 @@
+<robot name="downhill_freeride_crankset">
+  <material name="bb_black">
+    <color rgba="0.025 0.027 0.03 1" />
+    </material>
+  <material name="matte_black">
+    <color rgba="0.035 0.037 0.04 1" />
+    </material>
+  <material name="gunmetal">
+    <color rgba="0.22 0.23 0.25 1" />
+    </material>
+  <material name="brushed_steel">
+    <color rgba="0.7 0.72 0.74 1" />
+    </material>
+  <material name="guard_black">
+    <color rgba="0.01 0.012 0.014 1" />
+    </material>
+  <material name="bolt_steel">
+    <color rgba="0.62 0.64 0.66 1" />
+    </material>
+  <material name="rubber">
+    <color rgba="0.012 0.012 0.013 1" />
+    </material>
+  <link name="bottom_shell">
+    <visual name="bb_shell">
+      <geometry>
+        <mesh filename="assets/meshes/wide_bottom_bracket_shell.obj" />
+        </geometry>
+      <material name="bb_black" />
+      </visual>
+    <visual name="bearing_pad_top">
+      <origin xyz="0 0 0.016" rpy="0 0 0" />
+      <geometry>
+        <box size="0.128 0.01 0.008" />
+        </geometry>
+      <material name="gunmetal" />
+      </visual>
+    <visual name="bearing_pad_bottom">
+      <origin xyz="0 0 -0.016" rpy="0 0 0" />
+      <geometry>
+        <box size="0.128 0.01 0.008" />
+        </geometry>
+      <material name="gunmetal" />
+      </visual>
+    </link>
+  <link name="crank">
+    <visual name="spindle">
+      <geometry>
+        <mesh filename="assets/meshes/hollowtech_spindle.obj" />
+        </geometry>
+      <material name="brushed_steel" />
+      </visual>
+    <visual name="drive_hub">
+      <origin xyz="0.092 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.033" length="0.05" />
+        </geometry>
+      <material name="gunmetal" />
+      </visual>
+    <visual name="arm_hub">
+      <origin xyz="-0.092 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.031" length="0.036" />
+        </geometry>
+      <material name="gunmetal" />
+      </visual>
+    <visual name="arm_down">
+      <geometry>
+        <mesh filename="assets/meshes/oversized_crank_arm_down.obj" />
+        </geometry>
+      <material name="matte_black" />
+      </visual>
+    <visual name="arm_up">
+      <geometry>
+        <mesh filename="assets/meshes/oversized_crank_arm_up.obj" />
+        </geometry>
+      <material name="matte_black" />
+      </visual>
+    <visual name="pedal_boss_down">
+      <origin xyz="0.082 0 -0.166" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.026" length="0.022" />
+        </geometry>
+      <material name="matte_black" />
+      </visual>
+    <visual name="pedal_boss_up">
+      <origin xyz="-0.082 0 0.166" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.026" length="0.022" />
+        </geometry>
+      <material name="matte_black" />
+      </visual>
+    <visual name="bash_guard">
+      <origin xyz="0.112 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/bash_guard_outer_ring.obj" />
+        </geometry>
+      <material name="guard_black" />
+      </visual>
+    <visual name="chainring">
+      <origin xyz="0.101 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/toothed_chainring.obj" />
+        </geometry>
+      <material name="brushed_steel" />
+      </visual>
+    <visual name="spider_spoke_0">
+      <geometry>
+        <mesh filename="assets/meshes/spider_spoke_0.obj" />
+        </geometry>
+      <material name="gunmetal" />
+      </visual>
+    <visual name="guard_bolt_0">
+      <origin xyz="0.1175 0.0523259 0.0523259" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0055" length="0.005" />
+        </geometry>
+      <material name="bolt_steel" />
+      </visual>
+    <visual name="spider_spoke_1">
+      <geometry>
+        <mesh filename="assets/meshes/spider_spoke_1.obj" />
+        </geometry>
+      <material name="gunmetal" />
+      </visual>
+    <visual name="guard_bolt_1">
+      <origin xyz="0.1175 -0.0523259 0.0523259" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0055" length="0.005" />
+        </geometry>
+      <material name="bolt_steel" />
+      </visual>
+    <visual name="spider_spoke_2">
+      <geometry>
+        <mesh filename="assets/meshes/spider_spoke_2.obj" />
+        </geometry>
+      <material name="gunmetal" />
+      </visual>
+    <visual name="guard_bolt_2">
+      <origin xyz="0.1175 -0.0523259 -0.0523259" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0055" length="0.005" />
+        </geometry>
+      <material name="bolt_steel" />
+      </visual>
+    <visual name="spider_spoke_3">
+      <geometry>
+        <mesh filename="assets/meshes/spider_spoke_3.obj" />
+        </geometry>
+      <material name="gunmetal" />
+      </visual>
+    <visual name="guard_bolt_3">
+      <origin xyz="0.1175 0.0523259 -0.0523259" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0055" length="0.005" />
+        </geometry>
+      <material name="bolt_steel" />
+      </visual>
+    </link>
+  <link name="pedal_0">
+    <visual name="axle">
+      <origin xyz="0.026 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0053" length="0.052" />
+        </geometry>
+      <material name="brushed_steel" />
+      </visual>
+    <visual name="platform_body">
+      <origin xyz="0.058 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.022 0.106 0.056" />
+        </geometry>
+      <material name="rubber" />
+      </visual>
+    <visual name="outer_rail_0">
+      <origin xyz="0.058 0.05 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.026 0.01 0.064" />
+        </geometry>
+      <material name="matte_black" />
+      </visual>
+    <visual name="outer_rail_1">
+      <origin xyz="0.058 -0.05 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.026 0.01 0.064" />
+        </geometry>
+      <material name="matte_black" />
+      </visual>
+    <visual name="grip_bar_0">
+      <origin xyz="0.058 0 0.03" rpy="0 0 0" />
+      <geometry>
+        <box size="0.026 0.088 0.008" />
+        </geometry>
+      <material name="matte_black" />
+      </visual>
+    <visual name="grip_bar_1">
+      <origin xyz="0.058 0 -0.03" rpy="0 0 0" />
+      <geometry>
+        <box size="0.026 0.088 0.008" />
+        </geometry>
+      <material name="matte_black" />
+      </visual>
+    </link>
+  <link name="pedal_1">
+    <visual name="axle">
+      <origin xyz="-0.026 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0053" length="0.052" />
+        </geometry>
+      <material name="brushed_steel" />
+      </visual>
+    <visual name="platform_body">
+      <origin xyz="-0.058 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.022 0.106 0.056" />
+        </geometry>
+      <material name="rubber" />
+      </visual>
+    <visual name="outer_rail_0">
+      <origin xyz="-0.058 0.05 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.026 0.01 0.064" />
+        </geometry>
+      <material name="matte_black" />
+      </visual>
+    <visual name="outer_rail_1">
+      <origin xyz="-0.058 -0.05 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.026 0.01 0.064" />
+        </geometry>
+      <material name="matte_black" />
+      </visual>
+    <visual name="grip_bar_0">
+      <origin xyz="-0.058 0 0.03" rpy="0 0 0" />
+      <geometry>
+        <box size="0.026 0.088 0.008" />
+        </geometry>
+      <material name="matte_black" />
+      </visual>
+    <visual name="grip_bar_1">
+      <origin xyz="-0.058 0 -0.03" rpy="0 0 0" />
+      <geometry>
+        <box size="0.026 0.088 0.008" />
+        </geometry>
+      <material name="matte_black" />
+      </visual>
+    </link>
+  <joint name="spindle_spin" type="continuous">
+    <parent link="bottom_shell" />
+    <child link="crank" />
+    <axis xyz="1 0 0" />
+    <limit effort="120" velocity="18" />
+    </joint>
+  <joint name="pedal_0_spin" type="continuous">
+    <origin xyz="0.093 0 -0.166" rpy="0 0 0" />
+    <parent link="crank" />
+    <child link="pedal_0" />
+    <axis xyz="1 0 0" />
+    <limit effort="18" velocity="22" />
+    </joint>
+  <joint name="pedal_1_spin" type="continuous">
+    <origin xyz="-0.093 0 0.166" rpy="0 0 0" />
+    <parent link="crank" />
+    <child link="pedal_1" />
+    <axis xyz="1 0 0" />
+    <limit effort="18" velocity="22" />
+    </joint>
+  </robot>

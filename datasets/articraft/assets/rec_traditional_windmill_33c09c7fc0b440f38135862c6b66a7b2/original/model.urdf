@@ -1,0 +1,646 @@
+<robot name="traditional_windmill">
+  <link name="base">
+    <visual name="foundation">
+      <origin xyz="0 0 0.17" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="1.28" length="0.34" />
+        </geometry>
+      <material name="dark_foundation_stone">
+        <color rgba="0.35 0.34 0.32 1" />
+        </material>
+      </visual>
+    <visual name="tower_body">
+      <geometry>
+        <mesh filename="assets/meshes/tapered_tower.obj" />
+        </geometry>
+      <material name="aged_whitewash">
+        <color rgba="0.82 0.79 0.68 1" />
+        </material>
+      </visual>
+    <visual name="front_door">
+      <origin xyz="0 0.875 0.76" rpy="0 0 0" />
+      <geometry>
+        <box size="0.42 0.045 0.82" />
+        </geometry>
+      <material name="dark_tarred_wood">
+        <color rgba="0.18 0.12 0.08 1" />
+        </material>
+      </visual>
+    <visual name="front_window">
+      <origin xyz="0 0.68 2.3" rpy="0 0 0" />
+      <geometry>
+        <box size="0.26 0.04 0.32" />
+        </geometry>
+      <material name="dark_glass">
+        <color rgba="0.03 0.05 0.07 1" />
+        </material>
+      </visual>
+    <visual name="side_window">
+      <origin xyz="0.62 0 2.95" rpy="0 0 0" />
+      <geometry>
+        <box size="0.035 0.24 0.28" />
+        </geometry>
+      <material name="dark_glass">
+        <color rgba="0.03 0.05 0.07 1" />
+        </material>
+      </visual>
+    <visual name="tower_capstone">
+      <origin xyz="0 0 4.03" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.6" length="0.06" />
+        </geometry>
+      <material name="warm_limestone">
+        <color rgba="0.64 0.58 0.48 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="bearing_module">
+    <visual name="lower_curb">
+      <origin xyz="0 0 0.06" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.62" length="0.12" />
+        </geometry>
+      <material name="dark_tarred_wood">
+        <color rgba="0.18 0.12 0.08 1" />
+        </material>
+      </visual>
+    <visual name="yaw_ring">
+      <geometry>
+        <mesh filename="assets/meshes/annular_yaw_bearing.obj" />
+        </geometry>
+      <material name="blackened_iron">
+        <color rgba="0.05 0.05 0.045 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="head">
+    <visual name="turntable">
+      <origin xyz="0 0 0.05" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.56" length="0.1" />
+        </geometry>
+      <material name="dark_tarred_wood">
+        <color rgba="0.18 0.12 0.08 1" />
+        </material>
+      </visual>
+    <visual name="cap_body">
+      <origin xyz="0 -0.02 0.375" rpy="0 0 0" />
+      <geometry>
+        <box size="1.2 1.25 0.55" />
+        </geometry>
+      <material name="weathered_oak">
+        <color rgba="0.5 0.31 0.16 1" />
+        </material>
+      </visual>
+    <visual name="roof">
+      <geometry>
+        <mesh filename="assets/meshes/pitched_cap_roof.obj" />
+        </geometry>
+      <material name="brown_thatch_roof">
+        <color rgba="0.46 0.33 0.16 1" />
+        </material>
+      </visual>
+    <visual name="front_bearing_block">
+      <origin xyz="0 0.635 0.42" rpy="0 0 0" />
+      <geometry>
+        <box size="0.42 0.12 0.34" />
+        </geometry>
+      <material name="dark_tarred_wood">
+        <color rgba="0.18 0.12 0.08 1" />
+        </material>
+      </visual>
+    <visual name="front_bearing">
+      <geometry>
+        <mesh filename="assets/meshes/hollow_front_bearing.obj" />
+        </geometry>
+      <material name="blackened_iron">
+        <color rgba="0.05 0.05 0.045 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="sail_hub">
+    <visual name="shaft">
+      <origin xyz="0 0.16 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.055" length="0.38" />
+        </geometry>
+      <material name="blackened_iron">
+        <color rgba="0.05 0.05 0.045 1" />
+        </material>
+      </visual>
+    <visual name="thrust_collar">
+      <origin xyz="0 0.0175 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.14" length="0.035" />
+        </geometry>
+      <material name="blackened_iron">
+        <color rgba="0.05 0.05 0.045 1" />
+        </material>
+      </visual>
+    <visual name="hub_disk">
+      <origin xyz="0 0.36 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.2" length="0.16" />
+        </geometry>
+      <material name="dark_tarred_wood">
+        <color rgba="0.18 0.12 0.08 1" />
+        </material>
+      </visual>
+    <visual name="nose_cap">
+      <origin xyz="0 0.465 0" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.105" />
+        </geometry>
+      <material name="blackened_iron">
+        <color rgba="0.05 0.05 0.045 1" />
+        </material>
+      </visual>
+    <visual name="blade_0_spar">
+      <origin xyz="0 0.42 0.825" rpy="0 -1.5708 0" />
+      <geometry>
+        <box size="1.45 0.065 0.065" />
+        </geometry>
+      <material name="dark_tarred_wood">
+        <color rgba="0.18 0.12 0.08 1" />
+        </material>
+      </visual>
+    <visual name="blade_0_rail_0">
+      <origin xyz="-0.18 0.42 0.89" rpy="0 -1.73869 0" />
+      <geometry>
+        <box size="1.19683 0.065 0.055" />
+        </geometry>
+      <material name="dark_tarred_wood">
+        <color rgba="0.18 0.12 0.08 1" />
+        </material>
+      </visual>
+    <visual name="blade_0_rail_1">
+      <origin xyz="0.18 0.42 0.89" rpy="0 -1.4029 0" />
+      <geometry>
+        <box size="1.19683 0.065 0.055" />
+        </geometry>
+      <material name="dark_tarred_wood">
+        <color rgba="0.18 0.12 0.08 1" />
+        </material>
+      </visual>
+    <visual name="blade_0_cross_0">
+      <origin xyz="0 0.42 0.45" rpy="0 -0 0" />
+      <geometry>
+        <box size="0.210847 0.065 0.045" />
+        </geometry>
+      <material name="dark_tarred_wood">
+        <color rgba="0.18 0.12 0.08 1" />
+        </material>
+      </visual>
+    <visual name="blade_0_brace_0">
+      <origin xyz="0.0127119 0.42 0.375" rpy="0 -0.680179 0" />
+      <geometry>
+        <box size="0.238499 0.065 0.035" />
+        </geometry>
+      <material name="dark_tarred_wood">
+        <color rgba="0.18 0.12 0.08 1" />
+        </material>
+      </visual>
+    <visual name="blade_0_cross_1">
+      <origin xyz="0 0.42 0.7" rpy="0 -0 0" />
+      <geometry>
+        <box size="0.295593 0.065 0.045" />
+        </geometry>
+      <material name="dark_tarred_wood">
+        <color rgba="0.18 0.12 0.08 1" />
+        </material>
+      </visual>
+    <visual name="blade_0_brace_1">
+      <origin xyz="-0.0211864 0.42 0.575" rpy="0 -2.36259 0" />
+      <geometry>
+        <box size="0.355838 0.065 0.035" />
+        </geometry>
+      <material name="dark_tarred_wood">
+        <color rgba="0.18 0.12 0.08 1" />
+        </material>
+      </visual>
+    <visual name="blade_0_cross_2">
+      <origin xyz="0 0.42 0.95" rpy="0 -0 0" />
+      <geometry>
+        <box size="0.380339 0.065 0.045" />
+        </geometry>
+      <material name="dark_tarred_wood">
+        <color rgba="0.18 0.12 0.08 1" />
+        </material>
+      </visual>
+    <visual name="blade_0_brace_2">
+      <origin xyz="0.0211864 0.42 0.825" rpy="0 -0.636889 0" />
+      <geometry>
+        <box size="0.420382 0.065 0.035" />
+        </geometry>
+      <material name="dark_tarred_wood">
+        <color rgba="0.18 0.12 0.08 1" />
+        </material>
+      </visual>
+    <visual name="blade_0_cross_3">
+      <origin xyz="0 0.42 1.2" rpy="0 -0 0" />
+      <geometry>
+        <box size="0.465085 0.065 0.045" />
+        </geometry>
+      <material name="dark_tarred_wood">
+        <color rgba="0.18 0.12 0.08 1" />
+        </material>
+      </visual>
+    <visual name="blade_0_brace_3">
+      <origin xyz="-0.0211864 0.42 1.075" rpy="0 -2.60751 0" />
+      <geometry>
+        <box size="0.491106 0.065 0.035" />
+        </geometry>
+      <material name="dark_tarred_wood">
+        <color rgba="0.18 0.12 0.08 1" />
+        </material>
+      </visual>
+    <visual name="blade_0_cross_4">
+      <origin xyz="0 0.42 1.43" rpy="0 -0 0" />
+      <geometry>
+        <box size="0.543051 0.065 0.045" />
+        </geometry>
+      <material name="dark_tarred_wood">
+        <color rgba="0.18 0.12 0.08 1" />
+        </material>
+      </visual>
+    <visual name="blade_0_brace_4">
+      <origin xyz="0.0194915 0.42 1.315" rpy="0 -0.428071 0" />
+      <geometry>
+        <box size="0.554062 0.065 0.035" />
+        </geometry>
+      <material name="dark_tarred_wood">
+        <color rgba="0.18 0.12 0.08 1" />
+        </material>
+      </visual>
+    <visual name="blade_1_spar">
+      <origin xyz="0.825 0.42 5.05167e-17" rpy="0 -6.12323e-17 0" />
+      <geometry>
+        <box size="1.45 0.065 0.065" />
+        </geometry>
+      <material name="dark_tarred_wood">
+        <color rgba="0.18 0.12 0.08 1" />
+        </material>
+      </visual>
+    <visual name="blade_1_rail_0">
+      <origin xyz="0.89 0.42 0.18" rpy="0 -0.167896 0" />
+      <geometry>
+        <box size="1.19683 0.065 0.055" />
+        </geometry>
+      <material name="dark_tarred_wood">
+        <color rgba="0.18 0.12 0.08 1" />
+        </material>
+      </visual>
+    <visual name="blade_1_rail_1">
+      <origin xyz="0.89 0.42 -0.18" rpy="0 0.167896 0" />
+      <geometry>
+        <box size="1.19683 0.065 0.055" />
+        </geometry>
+      <material name="dark_tarred_wood">
+        <color rgba="0.18 0.12 0.08 1" />
+        </material>
+      </visual>
+    <visual name="blade_1_cross_0">
+      <origin xyz="0.45 0.42 2.77556e-17" rpy="0 1.5708 0" />
+      <geometry>
+        <box size="0.210847 0.065 0.045" />
+        </geometry>
+      <material name="dark_tarred_wood">
+        <color rgba="0.18 0.12 0.08 1" />
+        </material>
+      </visual>
+    <visual name="blade_1_brace_0">
+      <origin xyz="0.375 0.42 -0.0127119" rpy="0 0.890617 0" />
+      <geometry>
+        <box size="0.238499 0.065 0.035" />
+        </geometry>
+      <material name="dark_tarred_wood">
+        <color rgba="0.18 0.12 0.08 1" />
+        </material>
+      </visual>
+    <visual name="blade_1_cross_1">
+      <origin xyz="0.7 0.42 5.55112e-17" rpy="0 1.5708 0" />
+      <geometry>
+        <box size="0.295593 0.065 0.045" />
+        </geometry>
+      <material name="dark_tarred_wood">
+        <color rgba="0.18 0.12 0.08 1" />
+        </material>
+      </visual>
+    <visual name="blade_1_brace_1">
+      <origin xyz="0.575 0.42 0.0211864" rpy="0 -0.791798 0" />
+      <geometry>
+        <box size="0.355838 0.065 0.035" />
+        </geometry>
+      <material name="dark_tarred_wood">
+        <color rgba="0.18 0.12 0.08 1" />
+        </material>
+      </visual>
+    <visual name="blade_1_cross_2">
+      <origin xyz="0.95 0.42 5.55112e-17" rpy="0 1.5708 0" />
+      <geometry>
+        <box size="0.380339 0.065 0.045" />
+        </geometry>
+      <material name="dark_tarred_wood">
+        <color rgba="0.18 0.12 0.08 1" />
+        </material>
+      </visual>
+    <visual name="blade_1_brace_2">
+      <origin xyz="0.825 0.42 -0.0211864" rpy="0 0.933907 0" />
+      <geometry>
+        <box size="0.420382 0.065 0.035" />
+        </geometry>
+      <material name="dark_tarred_wood">
+        <color rgba="0.18 0.12 0.08 1" />
+        </material>
+      </visual>
+    <visual name="blade_1_cross_3">
+      <origin xyz="1.2 0.42 8.32667e-17" rpy="0 1.5708 0" />
+      <geometry>
+        <box size="0.465085 0.065 0.045" />
+        </geometry>
+      <material name="dark_tarred_wood">
+        <color rgba="0.18 0.12 0.08 1" />
+        </material>
+      </visual>
+    <visual name="blade_1_brace_3">
+      <origin xyz="1.075 0.42 0.0211864" rpy="0 -1.03671 0" />
+      <geometry>
+        <box size="0.491106 0.065 0.035" />
+        </geometry>
+      <material name="dark_tarred_wood">
+        <color rgba="0.18 0.12 0.08 1" />
+        </material>
+      </visual>
+    <visual name="blade_1_cross_4">
+      <origin xyz="1.43 0.42 1.11022e-16" rpy="0 1.5708 0" />
+      <geometry>
+        <box size="0.543051 0.065 0.045" />
+        </geometry>
+      <material name="dark_tarred_wood">
+        <color rgba="0.18 0.12 0.08 1" />
+        </material>
+      </visual>
+    <visual name="blade_1_brace_4">
+      <origin xyz="1.315 0.42 -0.0194915" rpy="0 1.14273 0" />
+      <geometry>
+        <box size="0.554062 0.065 0.035" />
+        </geometry>
+      <material name="dark_tarred_wood">
+        <color rgba="0.18 0.12 0.08 1" />
+        </material>
+      </visual>
+    <visual name="blade_2_spar">
+      <origin xyz="1.01033e-16 0.42 -0.825" rpy="0 1.5708 0" />
+      <geometry>
+        <box size="1.45 0.065 0.065" />
+        </geometry>
+      <material name="dark_tarred_wood">
+        <color rgba="0.18 0.12 0.08 1" />
+        </material>
+      </visual>
+    <visual name="blade_2_rail_0">
+      <origin xyz="0.18 0.42 -0.89" rpy="0 1.4029 0" />
+      <geometry>
+        <box size="1.19683 0.065 0.055" />
+        </geometry>
+      <material name="dark_tarred_wood">
+        <color rgba="0.18 0.12 0.08 1" />
+        </material>
+      </visual>
+    <visual name="blade_2_rail_1">
+      <origin xyz="-0.18 0.42 -0.89" rpy="0 1.73869 0" />
+      <geometry>
+        <box size="1.19683 0.065 0.055" />
+        </geometry>
+      <material name="dark_tarred_wood">
+        <color rgba="0.18 0.12 0.08 1" />
+        </material>
+      </visual>
+    <visual name="blade_2_cross_0">
+      <origin xyz="5.55112e-17 0.42 -0.45" rpy="0 -3.14159 0" />
+      <geometry>
+        <box size="0.210847 0.065 0.045" />
+        </geometry>
+      <material name="dark_tarred_wood">
+        <color rgba="0.18 0.12 0.08 1" />
+        </material>
+      </visual>
+    <visual name="blade_2_brace_0">
+      <origin xyz="-0.0127119 0.42 -0.375" rpy="0 2.46141 0" />
+      <geometry>
+        <box size="0.238499 0.065 0.035" />
+        </geometry>
+      <material name="dark_tarred_wood">
+        <color rgba="0.18 0.12 0.08 1" />
+        </material>
+      </visual>
+    <visual name="blade_2_cross_1">
+      <origin xyz="8.32667e-17 0.42 -0.7" rpy="0 -3.14159 0" />
+      <geometry>
+        <box size="0.295593 0.065 0.045" />
+        </geometry>
+      <material name="dark_tarred_wood">
+        <color rgba="0.18 0.12 0.08 1" />
+        </material>
+      </visual>
+    <visual name="blade_2_brace_1">
+      <origin xyz="0.0211864 0.42 -0.575" rpy="0 0.778999 0" />
+      <geometry>
+        <box size="0.355838 0.065 0.035" />
+        </geometry>
+      <material name="dark_tarred_wood">
+        <color rgba="0.18 0.12 0.08 1" />
+        </material>
+      </visual>
+    <visual name="blade_2_cross_2">
+      <origin xyz="1.11022e-16 0.42 -0.95" rpy="0 -3.14159 0" />
+      <geometry>
+        <box size="0.380339 0.065 0.045" />
+        </geometry>
+      <material name="dark_tarred_wood">
+        <color rgba="0.18 0.12 0.08 1" />
+        </material>
+      </visual>
+    <visual name="blade_2_brace_2">
+      <origin xyz="-0.0211864 0.42 -0.825" rpy="0 2.5047 0" />
+      <geometry>
+        <box size="0.420382 0.065 0.035" />
+        </geometry>
+      <material name="dark_tarred_wood">
+        <color rgba="0.18 0.12 0.08 1" />
+        </material>
+      </visual>
+    <visual name="blade_2_cross_3">
+      <origin xyz="1.38778e-16 0.42 -1.2" rpy="0 -3.14159 0" />
+      <geometry>
+        <box size="0.465085 0.065 0.045" />
+        </geometry>
+      <material name="dark_tarred_wood">
+        <color rgba="0.18 0.12 0.08 1" />
+        </material>
+      </visual>
+    <visual name="blade_2_brace_3">
+      <origin xyz="0.0211864 0.42 -1.075" rpy="0 0.534086 0" />
+      <geometry>
+        <box size="0.491106 0.065 0.035" />
+        </geometry>
+      <material name="dark_tarred_wood">
+        <color rgba="0.18 0.12 0.08 1" />
+        </material>
+      </visual>
+    <visual name="blade_2_cross_4">
+      <origin xyz="1.66533e-16 0.42 -1.43" rpy="0 -3.14159 0" />
+      <geometry>
+        <box size="0.543051 0.065 0.045" />
+        </geometry>
+      <material name="dark_tarred_wood">
+        <color rgba="0.18 0.12 0.08 1" />
+        </material>
+      </visual>
+    <visual name="blade_2_brace_4">
+      <origin xyz="-0.0194915 0.42 -1.315" rpy="0 2.71352 0" />
+      <geometry>
+        <box size="0.554062 0.065 0.035" />
+        </geometry>
+      <material name="dark_tarred_wood">
+        <color rgba="0.18 0.12 0.08 1" />
+        </material>
+      </visual>
+    <visual name="blade_3_spar">
+      <origin xyz="-0.825 0.42 -1.5155e-16" rpy="0 3.14159 0" />
+      <geometry>
+        <box size="1.45 0.065 0.065" />
+        </geometry>
+      <material name="dark_tarred_wood">
+        <color rgba="0.18 0.12 0.08 1" />
+        </material>
+      </visual>
+    <visual name="blade_3_rail_0">
+      <origin xyz="-0.89 0.42 -0.18" rpy="0 2.9737 0" />
+      <geometry>
+        <box size="1.19683 0.065 0.055" />
+        </geometry>
+      <material name="dark_tarred_wood">
+        <color rgba="0.18 0.12 0.08 1" />
+        </material>
+      </visual>
+    <visual name="blade_3_rail_1">
+      <origin xyz="-0.89 0.42 0.18" rpy="0 -2.9737 0" />
+      <geometry>
+        <box size="1.19683 0.065 0.055" />
+        </geometry>
+      <material name="dark_tarred_wood">
+        <color rgba="0.18 0.12 0.08 1" />
+        </material>
+      </visual>
+    <visual name="blade_3_cross_0">
+      <origin xyz="-0.45 0.42 -8.32667e-17" rpy="0 -1.5708 0" />
+      <geometry>
+        <box size="0.210847 0.065 0.045" />
+        </geometry>
+      <material name="dark_tarred_wood">
+        <color rgba="0.18 0.12 0.08 1" />
+        </material>
+      </visual>
+    <visual name="blade_3_brace_0">
+      <origin xyz="-0.375 0.42 0.0127119" rpy="0 -2.25098 0" />
+      <geometry>
+        <box size="0.238499 0.065 0.035" />
+        </geometry>
+      <material name="dark_tarred_wood">
+        <color rgba="0.18 0.12 0.08 1" />
+        </material>
+      </visual>
+    <visual name="blade_3_cross_1">
+      <origin xyz="-0.7 0.42 -1.38778e-16" rpy="0 -1.5708 0" />
+      <geometry>
+        <box size="0.295593 0.065 0.045" />
+        </geometry>
+      <material name="dark_tarred_wood">
+        <color rgba="0.18 0.12 0.08 1" />
+        </material>
+      </visual>
+    <visual name="blade_3_brace_1">
+      <origin xyz="-0.575 0.42 -0.0211864" rpy="0 2.3498 0" />
+      <geometry>
+        <box size="0.355838 0.065 0.035" />
+        </geometry>
+      <material name="dark_tarred_wood">
+        <color rgba="0.18 0.12 0.08 1" />
+        </material>
+      </visual>
+    <visual name="blade_3_cross_2">
+      <origin xyz="-0.95 0.42 -1.66533e-16" rpy="0 -1.5708 0" />
+      <geometry>
+        <box size="0.380339 0.065 0.045" />
+        </geometry>
+      <material name="dark_tarred_wood">
+        <color rgba="0.18 0.12 0.08 1" />
+        </material>
+      </visual>
+    <visual name="blade_3_brace_2">
+      <origin xyz="-0.825 0.42 0.0211864" rpy="0 -2.20769 0" />
+      <geometry>
+        <box size="0.420382 0.065 0.035" />
+        </geometry>
+      <material name="dark_tarred_wood">
+        <color rgba="0.18 0.12 0.08 1" />
+        </material>
+      </visual>
+    <visual name="blade_3_cross_3">
+      <origin xyz="-1.2 0.42 -2.22045e-16" rpy="0 -1.5708 0" />
+      <geometry>
+        <box size="0.465085 0.065 0.045" />
+        </geometry>
+      <material name="dark_tarred_wood">
+        <color rgba="0.18 0.12 0.08 1" />
+        </material>
+      </visual>
+    <visual name="blade_3_brace_3">
+      <origin xyz="-1.075 0.42 -0.0211864" rpy="0 2.10488 0" />
+      <geometry>
+        <box size="0.491106 0.065 0.035" />
+        </geometry>
+      <material name="dark_tarred_wood">
+        <color rgba="0.18 0.12 0.08 1" />
+        </material>
+      </visual>
+    <visual name="blade_3_cross_4">
+      <origin xyz="-1.43 0.42 -2.77556e-16" rpy="0 -1.5708 0" />
+      <geometry>
+        <box size="0.543051 0.065 0.045" />
+        </geometry>
+      <material name="dark_tarred_wood">
+        <color rgba="0.18 0.12 0.08 1" />
+        </material>
+      </visual>
+    <visual name="blade_3_brace_4">
+      <origin xyz="-1.315 0.42 0.0194915" rpy="0 -1.99887 0" />
+      <geometry>
+        <box size="0.554062 0.065 0.035" />
+        </geometry>
+      <material name="dark_tarred_wood">
+        <color rgba="0.18 0.12 0.08 1" />
+        </material>
+      </visual>
+    </link>
+  <joint name="base_to_bearing" type="fixed">
+    <origin xyz="0 0 4.06" rpy="0 0 0" />
+    <parent link="base" />
+    <child link="bearing_module" />
+    </joint>
+  <joint name="bearing_to_head" type="continuous">
+    <origin xyz="0 0 0.24" rpy="0 0 0" />
+    <parent link="bearing_module" />
+    <child link="head" />
+    <axis xyz="0 0 1" />
+    <limit effort="120" velocity="0.35" />
+    </joint>
+  <joint name="head_to_sail_hub" type="continuous">
+    <origin xyz="0 0.785 0.42" rpy="0 0 0" />
+    <parent link="head" />
+    <child link="sail_hub" />
+    <axis xyz="0 1 0" />
+    <limit effort="30" velocity="8" />
+    </joint>
+  </robot>

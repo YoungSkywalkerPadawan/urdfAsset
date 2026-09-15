@@ -1,0 +1,95 @@
+<robot name="vintage_desktop_pencil_sharpener">
+  <material name="enamel_red">
+    <color rgba="0.5 0.1 0.12 1" />
+    </material>
+  <material name="drawer_black">
+    <color rgba="0.12 0.12 0.13 1" />
+    </material>
+  <material name="selector_black">
+    <color rgba="0.1 0.1 0.1 1" />
+    </material>
+  <material name="steel">
+    <color rgba="0.67 0.69 0.72 1" />
+    </material>
+  <link name="body">
+    <visual name="housing">
+      <geometry>
+        <mesh filename="assets/meshes/sharpener_body.obj" />
+        </geometry>
+      <material name="enamel_red">
+        <color rgba="0.5 0.1 0.12 1" />
+        </material>
+      </visual>
+    <collision name="housing">
+      <geometry>
+        <mesh filename="assets/meshes/sharpener_body.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="drawer">
+    <visual name="drawer">
+      <geometry>
+        <mesh filename="assets/meshes/sharpener_drawer.obj" />
+        </geometry>
+      <material name="drawer_black">
+        <color rgba="0.12 0.12 0.13 1" />
+        </material>
+      </visual>
+    <collision name="drawer">
+      <geometry>
+        <mesh filename="assets/meshes/sharpener_drawer.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="selector">
+    <visual name="selector">
+      <geometry>
+        <mesh filename="assets/meshes/sharpener_selector.obj" />
+        </geometry>
+      <material name="selector_black">
+        <color rgba="0.1 0.1 0.1 1" />
+        </material>
+      </visual>
+    <collision name="selector">
+      <geometry>
+        <mesh filename="assets/meshes/sharpener_selector.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="crank">
+    <visual name="crank">
+      <geometry>
+        <mesh filename="assets/meshes/sharpener_crank.obj" />
+        </geometry>
+      <material name="steel">
+        <color rgba="0.67 0.69 0.72 1" />
+        </material>
+      </visual>
+    <collision name="crank">
+      <geometry>
+        <mesh filename="assets/meshes/sharpener_crank.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="body_to_drawer" type="prismatic">
+    <origin xyz="-0.026 0 0.013" rpy="0 0 0" />
+    <parent link="body" />
+    <child link="drawer" />
+    <axis xyz="1 0 0" />
+    <limit effort="35" velocity="0.18" lower="0" upper="0.04" />
+    </joint>
+  <joint name="body_to_selector" type="prismatic">
+    <origin xyz="0.054 -0.021 0.096" rpy="0 0 0" />
+    <parent link="body" />
+    <child link="selector" />
+    <axis xyz="0 0 1" />
+    <limit effort="3" velocity="0.08" lower="0" upper="0.014" />
+    </joint>
+  <joint name="body_to_crank" type="continuous">
+    <origin xyz="-0.059 0 0.084" rpy="0 0 0" />
+    <parent link="body" />
+    <child link="crank" />
+    <axis xyz="-1 0 0" />
+    <limit effort="8" velocity="8" />
+    </joint>
+  </robot>

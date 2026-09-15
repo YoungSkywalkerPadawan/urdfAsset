@@ -1,0 +1,133 @@
+<robot name="gear_bench">
+  <link name="frame">
+    <visual name="base_plate">
+      <origin xyz="0.06 0 -0.005" rpy="0 0 0" />
+      <geometry>
+        <box size="0.2 0.08 0.01" />
+        </geometry>
+      </visual>
+    <visual name="boss_0">
+      <origin xyz="0 0 0.002" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.008" length="0.004" />
+        </geometry>
+      </visual>
+    <visual name="boss_1">
+      <origin xyz="0.04 0 0.002" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.008" length="0.004" />
+        </geometry>
+      </visual>
+    <visual name="boss_2">
+      <origin xyz="0.08 0 0.002" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.008" length="0.004" />
+        </geometry>
+      </visual>
+    <visual name="boss_3">
+      <origin xyz="0.12 0 0.002" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.008" length="0.004" />
+        </geometry>
+      </visual>
+    </link>
+  <link name="shaft_0">
+    <visual name="shaft_base_0">
+      <origin xyz="0 0 0.04" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.004" length="0.08" />
+        </geometry>
+      </visual>
+    <visual name="large_gear_0">
+      <geometry>
+        <mesh filename="assets/meshes/large_gear_0.obj" />
+        </geometry>
+      </visual>
+    <visual name="small_gear_0">
+      <geometry>
+        <mesh filename="assets/meshes/small_gear_0.obj" />
+        </geometry>
+      </visual>
+    </link>
+  <link name="shaft_1">
+    <visual name="shaft_base_1">
+      <origin xyz="0 0 0.04" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.004" length="0.08" />
+        </geometry>
+      </visual>
+    <visual name="large_gear_1">
+      <geometry>
+        <mesh filename="assets/meshes/large_gear_1.obj" />
+        </geometry>
+      </visual>
+    <visual name="small_gear_1">
+      <geometry>
+        <mesh filename="assets/meshes/small_gear_1.obj" />
+        </geometry>
+      </visual>
+    </link>
+  <link name="shaft_2">
+    <visual name="shaft_base_2">
+      <origin xyz="0 0 0.04" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.004" length="0.08" />
+        </geometry>
+      </visual>
+    <visual name="large_gear_2">
+      <geometry>
+        <mesh filename="assets/meshes/large_gear_2.obj" />
+        </geometry>
+      </visual>
+    <visual name="small_gear_2">
+      <geometry>
+        <mesh filename="assets/meshes/small_gear_2.obj" />
+        </geometry>
+      </visual>
+    </link>
+  <link name="shaft_3">
+    <visual name="shaft_base_3">
+      <origin xyz="0 0 0.04" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.004" length="0.08" />
+        </geometry>
+      </visual>
+    <visual name="large_gear_3">
+      <geometry>
+        <mesh filename="assets/meshes/large_gear_3.obj" />
+        </geometry>
+      </visual>
+    <visual name="small_gear_3">
+      <geometry>
+        <mesh filename="assets/meshes/small_gear_3.obj" />
+        </geometry>
+      </visual>
+    </link>
+  <joint name="joint_0" type="continuous">
+    <parent link="frame" />
+    <child link="shaft_0" />
+    <axis xyz="0 0 1" />
+    <limit effort="1" velocity="1" />
+    </joint>
+  <joint name="joint_1" type="continuous">
+    <origin xyz="0.04 0 0" rpy="0 0 0" />
+    <parent link="frame" />
+    <child link="shaft_1" />
+    <axis xyz="0 0 1" />
+    <limit effort="1" velocity="1" />
+    </joint>
+  <joint name="joint_2" type="continuous">
+    <origin xyz="0.08 0 0" rpy="0 0 0" />
+    <parent link="frame" />
+    <child link="shaft_2" />
+    <axis xyz="0 0 1" />
+    <limit effort="1" velocity="1" />
+    </joint>
+  <joint name="joint_3" type="continuous">
+    <origin xyz="0.12 0 0" rpy="0 0 0" />
+    <parent link="frame" />
+    <child link="shaft_3" />
+    <axis xyz="0 0 1" />
+    <limit effort="1" velocity="1" />
+    </joint>
+  </robot>

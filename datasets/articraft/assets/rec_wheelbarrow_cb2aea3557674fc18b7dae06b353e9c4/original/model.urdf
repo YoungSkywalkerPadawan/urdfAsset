@@ -1,0 +1,221 @@
+<robot name="wheelbarrow">
+  <material name="painted_steel">
+    <color rgba="0.2 0.33 0.18 1" />
+    </material>
+  <material name="dark_steel">
+    <color rgba="0.24 0.24 0.25 1" />
+    </material>
+  <material name="rubber">
+    <color rgba="0.05 0.05 0.05 1" />
+    </material>
+  <material name="handle_grip">
+    <color rgba="0.6 0.42 0.22 1" />
+    </material>
+  <link name="frame">
+    <inertial>
+      <origin xyz="0 0.04 0.32" rpy="0 0 0" />
+      <mass value="16" />
+      <inertia ixx="3.74947" ixy="0" ixz="0" iyy="1.27627" iyz="0" izz="3.93347" />
+      </inertial>
+    <visual name="left_rail">
+      <geometry>
+        <mesh filename="assets/meshes/wheelbarrow_left_rail.obj" />
+        </geometry>
+      <material name="painted_steel">
+        <color rgba="0.2 0.33 0.18 1" />
+        </material>
+      </visual>
+    <visual name="right_rail">
+      <geometry>
+        <mesh filename="assets/meshes/wheelbarrow_right_rail.obj" />
+        </geometry>
+      <material name="painted_steel">
+        <color rgba="0.2 0.33 0.18 1" />
+        </material>
+      </visual>
+    <visual name="rear_crossbrace">
+      <origin xyz="0 -0.28 0.43" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.56" />
+        </geometry>
+      <material name="painted_steel">
+        <color rgba="0.2 0.33 0.18 1" />
+        </material>
+      </visual>
+    <visual name="mid_crossbrace">
+      <origin xyz="0 0.05 0.35" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.48" />
+        </geometry>
+      <material name="painted_steel">
+        <color rgba="0.2 0.33 0.18 1" />
+        </material>
+      </visual>
+    <visual name="front_tray_rest">
+      <origin xyz="0 0.1 0.355" rpy="0 0 0" />
+      <geometry>
+        <box size="0.2 0.1 0.02" />
+        </geometry>
+      <material name="painted_steel">
+        <color rgba="0.2 0.33 0.18 1" />
+        </material>
+      </visual>
+    <visual name="left_fork_cheek">
+      <origin xyz="-0.103 0.625 0.235" rpy="0 0 0" />
+      <geometry>
+        <box size="0.024 0.04 0.12" />
+        </geometry>
+      <material name="painted_steel">
+        <color rgba="0.2 0.33 0.18 1" />
+        </material>
+      </visual>
+    <visual name="right_fork_cheek">
+      <origin xyz="0.103 0.625 0.235" rpy="0 0 0" />
+      <geometry>
+        <box size="0.024 0.04 0.12" />
+        </geometry>
+      <material name="painted_steel">
+        <color rgba="0.2 0.33 0.18 1" />
+        </material>
+      </visual>
+    <visual name="left_axle_pin">
+      <origin xyz="-0.091 0.64 0.2" rpy="0 0 0" />
+      <geometry>
+        <box size="0.022 0.024 0.024" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.24 0.24 0.25 1" />
+        </material>
+      </visual>
+    <visual name="right_axle_pin">
+      <origin xyz="0.091 0.64 0.2" rpy="0 0 0" />
+      <geometry>
+        <box size="0.022 0.024 0.024" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.24 0.24 0.25 1" />
+        </material>
+      </visual>
+    <visual name="left_leg">
+      <geometry>
+        <mesh filename="assets/meshes/wheelbarrow_left_leg.obj" />
+        </geometry>
+      <material name="painted_steel">
+        <color rgba="0.2 0.33 0.18 1" />
+        </material>
+      </visual>
+    <visual name="right_leg">
+      <geometry>
+        <mesh filename="assets/meshes/wheelbarrow_right_leg.obj" />
+        </geometry>
+      <material name="painted_steel">
+        <color rgba="0.2 0.33 0.18 1" />
+        </material>
+      </visual>
+    <visual name="leg_spreader">
+      <origin xyz="0 -0.12 0.03" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.44" />
+        </geometry>
+      <material name="painted_steel">
+        <color rgba="0.2 0.33 0.18 1" />
+        </material>
+      </visual>
+    <visual name="left_handle_grip">
+      <origin xyz="-0.29 -0.63 0.55" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.017" length="0.11" />
+        </geometry>
+      <material name="handle_grip">
+        <color rgba="0.6 0.42 0.22 1" />
+        </material>
+      </visual>
+    <visual name="right_handle_grip">
+      <origin xyz="0.29 -0.63 0.55" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.017" length="0.11" />
+        </geometry>
+      <material name="handle_grip">
+        <color rgba="0.6 0.42 0.22 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="tray">
+    <inertial>
+      <origin xyz="0 0.01 0.14" rpy="0 0 0" />
+      <mass value="7.5" />
+      <inertia ixx="0.449" ixy="0" ixz="0" iyy="0.245" iyz="0" izz="0.596" />
+      </inertial>
+    <visual name="tray_shell">
+      <geometry>
+        <mesh filename="assets/meshes/wheelbarrow_tray_shell.obj" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.24 0.24 0.25 1" />
+        </material>
+      </visual>
+    <visual name="front_support_saddle">
+      <origin xyz="0 0.03 0.01" rpy="0 0 0" />
+      <geometry>
+        <box size="0.18 0.06 0.05" />
+        </geometry>
+      <material name="painted_steel">
+        <color rgba="0.2 0.33 0.18 1" />
+        </material>
+      </visual>
+    <visual name="rear_support_saddle">
+      <origin xyz="0 -0.26 0.04" rpy="0 0 0" />
+      <geometry>
+        <box size="0.16 0.06 0.06" />
+        </geometry>
+      <material name="painted_steel">
+        <color rgba="0.2 0.33 0.18 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="front_wheel">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 1.5708 0" />
+      <mass value="4.2" />
+      <inertia ixx="0.0455" ixy="0" ixz="0" iyy="0.0455" iyz="0" izz="0.084" />
+      </inertial>
+    <visual name="tire">
+      <geometry>
+        <mesh filename="assets/meshes/wheelbarrow_tire.obj" />
+        </geometry>
+      <material name="rubber">
+        <color rgba="0.05 0.05 0.05 1" />
+        </material>
+      </visual>
+    <visual name="rim">
+      <origin xyz="0 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.13" length="0.082" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.24 0.24 0.25 1" />
+        </material>
+      </visual>
+    <visual name="hub">
+      <origin xyz="0 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.035" length="0.16" />
+        </geometry>
+      <material name="painted_steel">
+        <color rgba="0.2 0.33 0.18 1" />
+        </material>
+      </visual>
+    </link>
+  <joint name="tray_mount" type="fixed">
+    <origin xyz="0 0.09 0.38" rpy="0 0 0" />
+    <parent link="frame" />
+    <child link="tray" />
+    </joint>
+  <joint name="front_wheel_spin" type="continuous">
+    <origin xyz="0 0.64 0.2" rpy="0 0 0" />
+    <parent link="frame" />
+    <child link="front_wheel" />
+    <axis xyz="1 0 0" />
+    <limit effort="18" velocity="30" />
+    </joint>
+  </robot>

@@ -1,0 +1,202 @@
+{
+  "summary": {
+    "id": "rec_wheelbarrow_676a6ae56ab442b2903b9f72c8942bc5",
+    "category": "wheel",
+    "robot_name": "compact_desktop_wheelbarrow",
+    "joint_count": 1,
+    "link_count": 6,
+    "target_link_count": 2,
+    "family": "rec_wheelbarrow",
+    "warnings": [],
+    "diagonal": 1.079754420377152,
+    "bytes": 4504612
+  },
+  "source": {
+    "dataset": "camvsl/Articraft-10K",
+    "revision": "3c79d5a05bb7cb6bf7bfee5e090176636ee3ac65",
+    "license": "CC-BY-4.0",
+    "url": "https://huggingface.co/datasets/camvsl/Articraft-10K/blob/3c79d5a05bb7cb6bf7bfee5e090176636ee3ac65/rec_wheelbarrow_676a6ae56ab442b2903b9f72c8942bc5.tar.gz",
+    "archive_sha256": "ae6c334c14210c8163fc5d002a80c51401a866ed6d3b0aeac4791f12453efa38",
+    "archive": "rec_wheelbarrow_676a6ae56ab442b2903b9f72c8942bc5.tar.gz",
+    "label_status": "Original generated URDF reference; not manually verified or physically validated"
+  },
+  "links": [
+    {
+      "id": "link_000",
+      "name": "frame",
+      "point_file": null,
+      "faces": 3312,
+      "vertices": 1690,
+      "bounds": [
+        [
+          -0.173,
+          -0.3750000661172871,
+          -0.07300022039218476
+        ],
+        [
+          0.173,
+          0.09000000000000001,
+          0.012000459150556963
+        ]
+      ]
+    },
+    {
+      "id": "link_001",
+      "name": "tray",
+      "point_file": null,
+      "faces": 6808,
+      "vertices": 3398,
+      "bounds": [
+        [
+          -0.1915,
+          -0.4615,
+          -0.017000095503218002
+        ],
+        [
+          0.1915,
+          0.0615,
+          0.157
+        ]
+      ]
+    },
+    {
+      "id": "link_002",
+      "name": "front_wheel_fork",
+      "point_file": "inputs/link_002.npz",
+      "faces": 1984,
+      "vertices": 1006,
+      "bounds": [
+        [
+          -0.08000005142433175,
+          0.06,
+          -0.1280000459149896
+        ],
+        [
+          0.08000005142433175,
+          0.16299999999999998,
+          -0.007999706143686178
+        ]
+      ]
+    },
+    {
+      "id": "link_003",
+      "name": "wheel",
+      "point_file": "inputs/link_003.npz",
+      "faces": 18480,
+      "vertices": 9210,
+      "bounds": [
+        [
+          -0.025,
+          0.06699999999999999,
+          -0.186974
+        ],
+        [
+          0.030673,
+          0.237,
+          -0.017026000000000013
+        ]
+      ]
+    },
+    {
+      "id": "link_004",
+      "name": "rear_legs",
+      "point_file": null,
+      "faces": 1880,
+      "vertices": 952,
+      "bounds": [
+        [
+          -0.159,
+          -0.46099999999999997,
+          -0.225
+        ],
+        [
+          0.159,
+          -0.348,
+          -0.03999954084944304
+        ]
+      ]
+    },
+    {
+      "id": "link_005",
+      "name": "handles",
+      "point_file": null,
+      "faces": 3692,
+      "vertices": 1850,
+      "bounds": [
+        [
+          -0.185179,
+          -0.6974819999999999,
+          -0.064273
+        ],
+        [
+          0.185179,
+          -0.313646,
+          0.02500036732041589
+        ]
+      ]
+    }
+  ],
+  "joints": [
+    {
+      "name": "frame_to_tray",
+      "type": "revolute",
+      "parent": "link_000",
+      "child": "link_001",
+      "reference_q": 0.0,
+      "mimic": null
+    },
+    {
+      "name": "frame_to_fork",
+      "type": "revolute",
+      "parent": "link_000",
+      "child": "link_002",
+      "reference_q": 0.0,
+      "mimic": null
+    },
+    {
+      "name": "fork_to_wheel",
+      "type": "continuous",
+      "parent": "link_002",
+      "child": "link_003",
+      "reference_q": 0.0,
+      "mimic": null
+    },
+    {
+      "name": "frame_to_rear_legs",
+      "type": "revolute",
+      "parent": "link_000",
+      "child": "link_004",
+      "reference_q": 0.0,
+      "mimic": null
+    },
+    {
+      "name": "frame_to_handles",
+      "type": "prismatic",
+      "parent": "link_000",
+      "child": "link_005",
+      "reference_q": 0.0,
+      "mimic": null
+    }
+  ],
+  "bounds": [
+    [
+      -0.1915,
+      -0.6974819999999999,
+      -0.225
+    ],
+    [
+      0.1915,
+      0.237,
+      0.157
+    ]
+  ],
+  "point_pool_size": 65536,
+  "reference_pose": "Zero position clamped to limits; mimic values propagated",
+  "qc": {
+    "finite_geometry": true,
+    "tree_valid": true,
+    "axis_unit": true,
+    "physical_collision_validation": false,
+    "visual_tessellation": "32 cylinder segments, icosphere subdivision 2"
+  }
+}

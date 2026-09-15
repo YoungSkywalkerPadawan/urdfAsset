@@ -1,0 +1,1140 @@
+<robot name="traditional_windmill">
+  <material name="stone">
+    <color rgba="0.83 0.81 0.76 1" />
+    </material>
+  <material name="aged_oak">
+    <color rgba="0.42 0.31 0.2 1" />
+    </material>
+  <material name="dark_oak">
+    <color rgba="0.26 0.19 0.12 1" />
+    </material>
+  <material name="weathered_roof">
+    <color rgba="0.17 0.16 0.15 1" />
+    </material>
+  <material name="iron">
+    <color rgba="0.29 0.31 0.33 1" />
+    </material>
+  <link name="tower">
+    <inertial>
+      <origin xyz="0 0 4.45" rpy="0 0 0" />
+      <mass value="52000" />
+      <inertia ixx="441556" ixy="0" ixz="0" iyy="441556" iyz="0" izz="196625" />
+      </inertial>
+    <visual name="tower_shell">
+      <geometry>
+        <mesh filename="assets/meshes/tower_shell.obj" />
+        </geometry>
+      <material name="stone">
+        <color rgba="0.83 0.81 0.76 1" />
+        </material>
+      </visual>
+    <visual name="base_plinth">
+      <origin xyz="0 0 0.275" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="2.9" length="0.55" />
+        </geometry>
+      <material name="stone">
+        <color rgba="0.83 0.81 0.76 1" />
+        </material>
+      </visual>
+    <visual name="cap_curb_ring">
+      <origin xyz="0 0 8.69" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="1.95" length="0.28" />
+        </geometry>
+      <material name="dark_oak">
+        <color rgba="0.26 0.19 0.12 1" />
+        </material>
+      </visual>
+    <visual name="front_door">
+      <origin xyz="2.12 0 1.1" rpy="0 0 0" />
+      <geometry>
+        <box size="1.2 0.18 2.2" />
+        </geometry>
+      <material name="dark_oak">
+        <color rgba="0.26 0.19 0.12 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="cap">
+    <inertial>
+      <origin xyz="0 0 1.1" rpy="0 0 0" />
+      <mass value="7200" />
+      <inertia ixx="7278" ixy="0" ixz="0" iyy="11568" iyz="0" izz="13038" />
+      </inertial>
+    <visual name="turntable_ring">
+      <origin xyz="0 0 0.45" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="1.98" length="0.34" />
+        </geometry>
+      <material name="iron">
+        <color rgba="0.29 0.31 0.33 1" />
+        </material>
+      </visual>
+    <visual name="cap_deck">
+      <origin xyz="0 0 0.4" rpy="0 0 0" />
+      <geometry>
+        <box size="3.55 2.55 0.22" />
+        </geometry>
+      <material name="aged_oak">
+        <color rgba="0.42 0.31 0.2 1" />
+        </material>
+      </visual>
+    <visual name="roof_shell">
+      <origin xyz="0 0 1.34" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/cap_roof.obj" />
+        </geometry>
+      <material name="weathered_roof">
+        <color rgba="0.17 0.16 0.15 1" />
+        </material>
+      </visual>
+    <visual name="front_bearing_housing">
+      <origin xyz="3.35 0 1.28" rpy="0 1.5708 0" />
+      <geometry>
+        <mesh filename="assets/meshes/front_bearing_shell.obj" />
+        </geometry>
+      <material name="iron">
+        <color rgba="0.29 0.31 0.33 1" />
+        </material>
+      </visual>
+    <visual name="right_front_cheek">
+      <origin xyz="2.25 0.98 1.02" rpy="0 0 0" />
+      <geometry>
+        <box size="2.25 0.42 1.42" />
+        </geometry>
+      <material name="dark_oak">
+        <color rgba="0.26 0.19 0.12 1" />
+        </material>
+      </visual>
+    <visual name="left_front_cheek">
+      <origin xyz="2.25 -0.98 1.02" rpy="0 0 0" />
+      <geometry>
+        <box size="2.25 0.42 1.42" />
+        </geometry>
+      <material name="dark_oak">
+        <color rgba="0.26 0.19 0.12 1" />
+        </material>
+      </visual>
+    <visual name="rear_counterweight_box">
+      <origin xyz="-1.15 0 0.98" rpy="0 0 0" />
+      <geometry>
+        <box size="1.75 2 0.56" />
+        </geometry>
+      <material name="aged_oak">
+        <color rgba="0.42 0.31 0.2 1" />
+        </material>
+      </visual>
+    <visual name="right_lower_bearing_pedestal">
+      <origin xyz="2.38 0.88 0.67" rpy="0 0 0" />
+      <geometry>
+        <box size="0.96 0.44 0.38" />
+        </geometry>
+      <material name="dark_oak">
+        <color rgba="0.26 0.19 0.12 1" />
+        </material>
+      </visual>
+    <visual name="left_lower_bearing_pedestal">
+      <origin xyz="2.38 -0.88 0.67" rpy="0 0 0" />
+      <geometry>
+        <box size="0.96 0.44 0.38" />
+        </geometry>
+      <material name="dark_oak">
+        <color rgba="0.26 0.19 0.12 1" />
+        </material>
+      </visual>
+    <visual name="upper_bearing_tie">
+      <origin xyz="2.45 0 1.59" rpy="0 0 0" />
+      <geometry>
+        <box size="0.9 1.92 0.3" />
+        </geometry>
+      <material name="dark_oak">
+        <color rgba="0.26 0.19 0.12 1" />
+        </material>
+      </visual>
+    <visual name="right_lower_support">
+      <origin xyz="1.935 0.98 0.805" rpy="0 1.35534 -0.0894468" />
+      <geometry>
+        <box size="0.22 0.2 2.29194" />
+        </geometry>
+      <material name="dark_oak">
+        <color rgba="0.26 0.19 0.12 1" />
+        </material>
+      </visual>
+    <visual name="left_lower_support">
+      <origin xyz="1.935 -0.98 0.805" rpy="0 1.35534 0.0894468" />
+      <geometry>
+        <box size="0.22 0.2 2.29194" />
+        </geometry>
+      <material name="dark_oak">
+        <color rgba="0.26 0.19 0.12 1" />
+        </material>
+      </visual>
+    <visual name="right_upper_support">
+      <origin xyz="1.71 0.9 1.48" rpy="0 1.64801 -0.0619362" />
+      <geometry>
+        <box size="0.18 0.16 2.59268" />
+        </geometry>
+      <material name="dark_oak">
+        <color rgba="0.26 0.19 0.12 1" />
+        </material>
+      </visual>
+    <visual name="left_upper_support">
+      <origin xyz="1.71 -0.9 1.48" rpy="0 1.64801 0.0619362" />
+      <geometry>
+        <box size="0.18 0.16 2.59268" />
+        </geometry>
+      <material name="dark_oak">
+        <color rgba="0.26 0.19 0.12 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="hub">
+    <inertial>
+      <origin xyz="0.25 0 0" rpy="0 1.5708 0" />
+      <mass value="1800" />
+      <inertia ixx="1026" ixy="0" ixz="0" iyy="1026" iyz="0" izz="324" />
+      </inertial>
+    <visual name="main_shaft">
+      <origin xyz="0.25 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.16" length="2.4" />
+        </geometry>
+      <material name="iron">
+        <color rgba="0.29 0.31 0.33 1" />
+        </material>
+      </visual>
+    <visual name="hub_drum">
+      <origin xyz="0.12 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.54" length="0.92" />
+        </geometry>
+      <material name="iron">
+        <color rgba="0.29 0.31 0.33 1" />
+        </material>
+      </visual>
+    <visual name="front_nose">
+      <origin xyz="1.02 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.3" length="0.58" />
+        </geometry>
+      <material name="iron">
+        <color rgba="0.29 0.31 0.33 1" />
+        </material>
+      </visual>
+    <visual name="sail_0_stock">
+      <origin xyz="1 0 2.765" rpy="0 0 0" />
+      <geometry>
+        <box size="0.22 0.1 5.17" />
+        </geometry>
+      <material name="aged_oak">
+        <color rgba="0.42 0.31 0.2 1" />
+        </material>
+      </visual>
+    <visual name="sail_0_left_rail">
+      <origin xyz="1 -0.52 2.885" rpy="0 0.144269 -1.5708" />
+      <geometry>
+        <box size="0.1 0.05 4.17336" />
+        </geometry>
+      <material name="aged_oak">
+        <color rgba="0.42 0.31 0.2 1" />
+        </material>
+      </visual>
+    <visual name="sail_0_right_rail">
+      <origin xyz="1 0.52 2.885" rpy="0 0.144269 1.5708" />
+      <geometry>
+        <box size="0.1 0.05 4.17336" />
+        </geometry>
+      <material name="aged_oak">
+        <color rgba="0.42 0.31 0.2 1" />
+        </material>
+      </visual>
+    <visual name="sail_0_slat_00">
+      <origin xyz="1 0 0.82" rpy="0 1.5708 1.5708" />
+      <geometry>
+        <box size="0.08 0.04 0.44" />
+        </geometry>
+      <material name="aged_oak">
+        <color rgba="0.42 0.31 0.2 1" />
+        </material>
+      </visual>
+    <visual name="sail_0_slat_01">
+      <origin xyz="1 0 1.35" rpy="0 1.5708 1.5708" />
+      <geometry>
+        <box size="0.08 0.04 0.64" />
+        </geometry>
+      <material name="aged_oak">
+        <color rgba="0.42 0.31 0.2 1" />
+        </material>
+      </visual>
+    <visual name="sail_0_slat_02">
+      <origin xyz="1 0 1.95" rpy="0 1.5708 1.5708" />
+      <geometry>
+        <box size="0.08 0.04 0.88" />
+        </geometry>
+      <material name="aged_oak">
+        <color rgba="0.42 0.31 0.2 1" />
+        </material>
+      </visual>
+    <visual name="sail_0_slat_03">
+      <origin xyz="1 0 2.55" rpy="0 1.5708 1.5708" />
+      <geometry>
+        <box size="0.08 0.04 1.12" />
+        </geometry>
+      <material name="aged_oak">
+        <color rgba="0.42 0.31 0.2 1" />
+        </material>
+      </visual>
+    <visual name="sail_0_slat_04">
+      <origin xyz="1 0 3.15" rpy="0 1.5708 1.5708" />
+      <geometry>
+        <box size="0.08 0.04 1.36" />
+        </geometry>
+      <material name="aged_oak">
+        <color rgba="0.42 0.31 0.2 1" />
+        </material>
+      </visual>
+    <visual name="sail_0_slat_05">
+      <origin xyz="1 0 3.75" rpy="0 1.5708 1.5708" />
+      <geometry>
+        <box size="0.08 0.04 1.6" />
+        </geometry>
+      <material name="aged_oak">
+        <color rgba="0.42 0.31 0.2 1" />
+        </material>
+      </visual>
+    <visual name="sail_0_slat_06">
+      <origin xyz="1 0 4.35" rpy="0 1.5708 1.5708" />
+      <geometry>
+        <box size="0.08 0.04 1.8" />
+        </geometry>
+      <material name="aged_oak">
+        <color rgba="0.42 0.31 0.2 1" />
+        </material>
+      </visual>
+    <visual name="sail_0_slat_07">
+      <origin xyz="1 0 4.95" rpy="0 1.5708 1.5708" />
+      <geometry>
+        <box size="0.08 0.04 1.64" />
+        </geometry>
+      <material name="aged_oak">
+        <color rgba="0.42 0.31 0.2 1" />
+        </material>
+      </visual>
+    <visual name="sail_0_brace_a_00">
+      <origin xyz="1 -0.11 1.085" rpy="0 0.393451 1.5708" />
+      <geometry>
+        <box size="0.06 0.035 0.573847" />
+        </geometry>
+      <material name="aged_oak">
+        <color rgba="0.42 0.31 0.2 1" />
+        </material>
+      </visual>
+    <visual name="sail_0_brace_b_00">
+      <origin xyz="1 0.16 1.085" rpy="0 0.54319 1.5708" />
+      <geometry>
+        <box size="0.06 0.035 0.619112" />
+        </geometry>
+      <material name="aged_oak">
+        <color rgba="0.42 0.31 0.2 1" />
+        </material>
+      </visual>
+    <visual name="sail_0_brace_a_01">
+      <origin xyz="1 -0.22 1.65" rpy="0 0.632749 -1.5708" />
+      <geometry>
+        <box size="0.06 0.035 0.744043" />
+        </geometry>
+      <material name="aged_oak">
+        <color rgba="0.42 0.31 0.2 1" />
+        </material>
+      </visual>
+    <visual name="sail_0_brace_b_01">
+      <origin xyz="1 0.16 1.65" rpy="0 0.489957 -1.5708" />
+      <geometry>
+        <box size="0.06 0.035 0.68" />
+        </geometry>
+      <material name="aged_oak">
+        <color rgba="0.42 0.31 0.2 1" />
+        </material>
+      </visual>
+    <visual name="sail_0_brace_a_02">
+      <origin xyz="1 -0.22 2.25" rpy="0 0.632749 1.5708" />
+      <geometry>
+        <box size="0.06 0.035 0.744043" />
+        </geometry>
+      <material name="aged_oak">
+        <color rgba="0.42 0.31 0.2 1" />
+        </material>
+      </visual>
+    <visual name="sail_0_brace_b_02">
+      <origin xyz="1 0.28 2.25" rpy="0 0.750929 1.5708" />
+      <geometry>
+        <box size="0.06 0.035 0.820731" />
+        </geometry>
+      <material name="aged_oak">
+        <color rgba="0.42 0.31 0.2 1" />
+        </material>
+      </visual>
+    <visual name="sail_0_brace_a_03">
+      <origin xyz="1 -0.34 2.85" rpy="0 0.847817 -1.5708" />
+      <geometry>
+        <box size="0.06 0.035 0.906863" />
+        </geometry>
+      <material name="aged_oak">
+        <color rgba="0.42 0.31 0.2 1" />
+        </material>
+      </visual>
+    <visual name="sail_0_brace_b_03">
+      <origin xyz="1 0.28 2.85" rpy="0 0.750929 -1.5708" />
+      <geometry>
+        <box size="0.06 0.035 0.820731" />
+        </geometry>
+      <material name="aged_oak">
+        <color rgba="0.42 0.31 0.2 1" />
+        </material>
+      </visual>
+    <visual name="sail_0_brace_a_04">
+      <origin xyz="1 -0.34 3.45" rpy="0 0.847817 1.5708" />
+      <geometry>
+        <box size="0.06 0.035 0.906863" />
+        </geometry>
+      <material name="aged_oak">
+        <color rgba="0.42 0.31 0.2 1" />
+        </material>
+      </visual>
+    <visual name="sail_0_brace_b_04">
+      <origin xyz="1 0.4 3.45" rpy="0 0.927295 1.5708" />
+      <geometry>
+        <box size="0.06 0.035 1" />
+        </geometry>
+      <material name="aged_oak">
+        <color rgba="0.42 0.31 0.2 1" />
+        </material>
+      </visual>
+    <visual name="sail_0_brace_a_05">
+      <origin xyz="1 -0.45 4.05" rpy="0 0.982794 -1.5708" />
+      <geometry>
+        <box size="0.06 0.035 1.08167" />
+        </geometry>
+      <material name="aged_oak">
+        <color rgba="0.42 0.31 0.2 1" />
+        </material>
+      </visual>
+    <visual name="sail_0_brace_b_05">
+      <origin xyz="1 0.4 4.05" rpy="0 0.927295 -1.5708" />
+      <geometry>
+        <box size="0.06 0.035 1" />
+        </geometry>
+      <material name="aged_oak">
+        <color rgba="0.42 0.31 0.2 1" />
+        </material>
+      </visual>
+    <visual name="sail_0_brace_a_06">
+      <origin xyz="1 -0.45 4.65" rpy="0 0.982794 1.5708" />
+      <geometry>
+        <box size="0.06 0.035 1.08167" />
+        </geometry>
+      <material name="aged_oak">
+        <color rgba="0.42 0.31 0.2 1" />
+        </material>
+      </visual>
+    <visual name="sail_0_brace_b_06">
+      <origin xyz="1 0.41 4.65" rpy="0 0.939106 1.5708" />
+      <geometry>
+        <box size="0.06 0.035 1.01607" />
+        </geometry>
+      <material name="aged_oak">
+        <color rgba="0.42 0.31 0.2 1" />
+        </material>
+      </visual>
+    <visual name="sail_1_stock">
+      <origin xyz="1 -2.765 1.69307e-16" rpy="0 1.5708 -1.5708" />
+      <geometry>
+        <box size="0.22 0.1 5.17" />
+        </geometry>
+      <material name="aged_oak">
+        <color rgba="0.42 0.31 0.2 1" />
+        </material>
+      </visual>
+    <visual name="sail_1_left_rail">
+      <origin xyz="1 -2.885 -0.52" rpy="0 1.71507 -1.5708" />
+      <geometry>
+        <box size="0.1 0.05 4.17336" />
+        </geometry>
+      <material name="aged_oak">
+        <color rgba="0.42 0.31 0.2 1" />
+        </material>
+      </visual>
+    <visual name="sail_1_right_rail">
+      <origin xyz="1 -2.885 0.52" rpy="0 1.42653 -1.5708" />
+      <geometry>
+        <box size="0.1 0.05 4.17336" />
+        </geometry>
+      <material name="aged_oak">
+        <color rgba="0.42 0.31 0.2 1" />
+        </material>
+      </visual>
+    <visual name="sail_1_slat_00">
+      <origin xyz="1 -0.82 5.55112e-17" rpy="0 0 0" />
+      <geometry>
+        <box size="0.08 0.04 0.44" />
+        </geometry>
+      <material name="aged_oak">
+        <color rgba="0.42 0.31 0.2 1" />
+        </material>
+      </visual>
+    <visual name="sail_1_slat_01">
+      <origin xyz="1 -1.35 5.55112e-17" rpy="0 0 0" />
+      <geometry>
+        <box size="0.08 0.04 0.64" />
+        </geometry>
+      <material name="aged_oak">
+        <color rgba="0.42 0.31 0.2 1" />
+        </material>
+      </visual>
+    <visual name="sail_1_slat_02">
+      <origin xyz="1 -1.95 1.11022e-16" rpy="0 0 0" />
+      <geometry>
+        <box size="0.08 0.04 0.88" />
+        </geometry>
+      <material name="aged_oak">
+        <color rgba="0.42 0.31 0.2 1" />
+        </material>
+      </visual>
+    <visual name="sail_1_slat_03">
+      <origin xyz="1 -2.55 1.11022e-16" rpy="0 0 0" />
+      <geometry>
+        <box size="0.08 0.04 1.12" />
+        </geometry>
+      <material name="aged_oak">
+        <color rgba="0.42 0.31 0.2 1" />
+        </material>
+      </visual>
+    <visual name="sail_1_slat_04">
+      <origin xyz="1 -3.15 2.22045e-16" rpy="0 0 0" />
+      <geometry>
+        <box size="0.08 0.04 1.36" />
+        </geometry>
+      <material name="aged_oak">
+        <color rgba="0.42 0.31 0.2 1" />
+        </material>
+      </visual>
+    <visual name="sail_1_slat_05">
+      <origin xyz="1 -3.75 2.22045e-16" rpy="0 0 0" />
+      <geometry>
+        <box size="0.08 0.04 1.6" />
+        </geometry>
+      <material name="aged_oak">
+        <color rgba="0.42 0.31 0.2 1" />
+        </material>
+      </visual>
+    <visual name="sail_1_slat_06">
+      <origin xyz="1 -4.35 2.22045e-16" rpy="0 0 0" />
+      <geometry>
+        <box size="0.08 0.04 1.8" />
+        </geometry>
+      <material name="aged_oak">
+        <color rgba="0.42 0.31 0.2 1" />
+        </material>
+      </visual>
+    <visual name="sail_1_slat_07">
+      <origin xyz="1 -4.95 3.33067e-16" rpy="0 0 0" />
+      <geometry>
+        <box size="0.08 0.04 1.64" />
+        </geometry>
+      <material name="aged_oak">
+        <color rgba="0.42 0.31 0.2 1" />
+        </material>
+      </visual>
+    <visual name="sail_1_brace_a_00">
+      <origin xyz="1 -1.085 -0.11" rpy="0 1.17735 -1.5708" />
+      <geometry>
+        <box size="0.06 0.035 0.573847" />
+        </geometry>
+      <material name="aged_oak">
+        <color rgba="0.42 0.31 0.2 1" />
+        </material>
+      </visual>
+    <visual name="sail_1_brace_b_00">
+      <origin xyz="1 -1.085 0.16" rpy="0 1.02761 -1.5708" />
+      <geometry>
+        <box size="0.06 0.035 0.619112" />
+        </geometry>
+      <material name="aged_oak">
+        <color rgba="0.42 0.31 0.2 1" />
+        </material>
+      </visual>
+    <visual name="sail_1_brace_a_01">
+      <origin xyz="1 -1.65 -0.22" rpy="0 2.20355 -1.5708" />
+      <geometry>
+        <box size="0.06 0.035 0.744043" />
+        </geometry>
+      <material name="aged_oak">
+        <color rgba="0.42 0.31 0.2 1" />
+        </material>
+      </visual>
+    <visual name="sail_1_brace_b_01">
+      <origin xyz="1 -1.65 0.16" rpy="0 2.06075 -1.5708" />
+      <geometry>
+        <box size="0.06 0.035 0.68" />
+        </geometry>
+      <material name="aged_oak">
+        <color rgba="0.42 0.31 0.2 1" />
+        </material>
+      </visual>
+    <visual name="sail_1_brace_a_02">
+      <origin xyz="1 -2.25 -0.22" rpy="0 0.938047 -1.5708" />
+      <geometry>
+        <box size="0.06 0.035 0.744043" />
+        </geometry>
+      <material name="aged_oak">
+        <color rgba="0.42 0.31 0.2 1" />
+        </material>
+      </visual>
+    <visual name="sail_1_brace_b_02">
+      <origin xyz="1 -2.25 0.28" rpy="0 0.819867 -1.5708" />
+      <geometry>
+        <box size="0.06 0.035 0.820731" />
+        </geometry>
+      <material name="aged_oak">
+        <color rgba="0.42 0.31 0.2 1" />
+        </material>
+      </visual>
+    <visual name="sail_1_brace_a_03">
+      <origin xyz="1 -2.85 -0.34" rpy="0 2.41861 -1.5708" />
+      <geometry>
+        <box size="0.06 0.035 0.906863" />
+        </geometry>
+      <material name="aged_oak">
+        <color rgba="0.42 0.31 0.2 1" />
+        </material>
+      </visual>
+    <visual name="sail_1_brace_b_03">
+      <origin xyz="1 -2.85 0.28" rpy="0 2.32173 -1.5708" />
+      <geometry>
+        <box size="0.06 0.035 0.820731" />
+        </geometry>
+      <material name="aged_oak">
+        <color rgba="0.42 0.31 0.2 1" />
+        </material>
+      </visual>
+    <visual name="sail_1_brace_a_04">
+      <origin xyz="1 -3.45 -0.34" rpy="0 0.722979 -1.5708" />
+      <geometry>
+        <box size="0.06 0.035 0.906863" />
+        </geometry>
+      <material name="aged_oak">
+        <color rgba="0.42 0.31 0.2 1" />
+        </material>
+      </visual>
+    <visual name="sail_1_brace_b_04">
+      <origin xyz="1 -3.45 0.4" rpy="0 0.643501 -1.5708" />
+      <geometry>
+        <box size="0.06 0.035 1" />
+        </geometry>
+      <material name="aged_oak">
+        <color rgba="0.42 0.31 0.2 1" />
+        </material>
+      </visual>
+    <visual name="sail_1_brace_a_05">
+      <origin xyz="1 -4.05 -0.45" rpy="0 2.55359 -1.5708" />
+      <geometry>
+        <box size="0.06 0.035 1.08167" />
+        </geometry>
+      <material name="aged_oak">
+        <color rgba="0.42 0.31 0.2 1" />
+        </material>
+      </visual>
+    <visual name="sail_1_brace_b_05">
+      <origin xyz="1 -4.05 0.4" rpy="0 2.49809 -1.5708" />
+      <geometry>
+        <box size="0.06 0.035 1" />
+        </geometry>
+      <material name="aged_oak">
+        <color rgba="0.42 0.31 0.2 1" />
+        </material>
+      </visual>
+    <visual name="sail_1_brace_a_06">
+      <origin xyz="1 -4.65 -0.45" rpy="0 0.588003 -1.5708" />
+      <geometry>
+        <box size="0.06 0.035 1.08167" />
+        </geometry>
+      <material name="aged_oak">
+        <color rgba="0.42 0.31 0.2 1" />
+        </material>
+      </visual>
+    <visual name="sail_1_brace_b_06">
+      <origin xyz="1 -4.65 0.41" rpy="0 0.631691 -1.5708" />
+      <geometry>
+        <box size="0.06 0.035 1.01607" />
+        </geometry>
+      <material name="aged_oak">
+        <color rgba="0.42 0.31 0.2 1" />
+        </material>
+      </visual>
+    <visual name="sail_2_stock">
+      <origin xyz="1 -3.38615e-16 -2.765" rpy="0 3.14159 -1.5708" />
+      <geometry>
+        <box size="0.22 0.1 5.17" />
+        </geometry>
+      <material name="aged_oak">
+        <color rgba="0.42 0.31 0.2 1" />
+        </material>
+      </visual>
+    <visual name="sail_2_left_rail">
+      <origin xyz="1 0.52 -2.885" rpy="0 2.99732 1.5708" />
+      <geometry>
+        <box size="0.1 0.05 4.17336" />
+        </geometry>
+      <material name="aged_oak">
+        <color rgba="0.42 0.31 0.2 1" />
+        </material>
+      </visual>
+    <visual name="sail_2_right_rail">
+      <origin xyz="1 -0.52 -2.885" rpy="0 2.99732 -1.5708" />
+      <geometry>
+        <box size="0.1 0.05 4.17336" />
+        </geometry>
+      <material name="aged_oak">
+        <color rgba="0.42 0.31 0.2 1" />
+        </material>
+      </visual>
+    <visual name="sail_2_slat_00">
+      <origin xyz="1 -1.11022e-16 -0.82" rpy="0 1.5708 -1.5708" />
+      <geometry>
+        <box size="0.08 0.04 0.44" />
+        </geometry>
+      <material name="aged_oak">
+        <color rgba="0.42 0.31 0.2 1" />
+        </material>
+      </visual>
+    <visual name="sail_2_slat_01">
+      <origin xyz="1 -1.66533e-16 -1.35" rpy="0 1.5708 -1.5708" />
+      <geometry>
+        <box size="0.08 0.04 0.64" />
+        </geometry>
+      <material name="aged_oak">
+        <color rgba="0.42 0.31 0.2 1" />
+        </material>
+      </visual>
+    <visual name="sail_2_slat_02">
+      <origin xyz="1 -2.22045e-16 -1.95" rpy="0 1.5708 -1.5708" />
+      <geometry>
+        <box size="0.08 0.04 0.88" />
+        </geometry>
+      <material name="aged_oak">
+        <color rgba="0.42 0.31 0.2 1" />
+        </material>
+      </visual>
+    <visual name="sail_2_slat_03">
+      <origin xyz="1 -3.33067e-16 -2.55" rpy="0 1.5708 -1.5708" />
+      <geometry>
+        <box size="0.08 0.04 1.12" />
+        </geometry>
+      <material name="aged_oak">
+        <color rgba="0.42 0.31 0.2 1" />
+        </material>
+      </visual>
+    <visual name="sail_2_slat_04">
+      <origin xyz="1 -3.33067e-16 -3.15" rpy="0 1.5708 -1.5708" />
+      <geometry>
+        <box size="0.08 0.04 1.36" />
+        </geometry>
+      <material name="aged_oak">
+        <color rgba="0.42 0.31 0.2 1" />
+        </material>
+      </visual>
+    <visual name="sail_2_slat_05">
+      <origin xyz="1 -4.44089e-16 -3.75" rpy="0 1.5708 -1.5708" />
+      <geometry>
+        <box size="0.08 0.04 1.6" />
+        </geometry>
+      <material name="aged_oak">
+        <color rgba="0.42 0.31 0.2 1" />
+        </material>
+      </visual>
+    <visual name="sail_2_slat_06">
+      <origin xyz="1 -5.55112e-16 -4.35" rpy="0 1.5708 -1.5708" />
+      <geometry>
+        <box size="0.08 0.04 1.8" />
+        </geometry>
+      <material name="aged_oak">
+        <color rgba="0.42 0.31 0.2 1" />
+        </material>
+      </visual>
+    <visual name="sail_2_slat_07">
+      <origin xyz="1 -5.55112e-16 -4.95" rpy="0 1.5708 -1.5708" />
+      <geometry>
+        <box size="0.08 0.04 1.64" />
+        </geometry>
+      <material name="aged_oak">
+        <color rgba="0.42 0.31 0.2 1" />
+        </material>
+      </visual>
+    <visual name="sail_2_brace_a_00">
+      <origin xyz="1 0.11 -1.085" rpy="0 2.74814 -1.5708" />
+      <geometry>
+        <box size="0.06 0.035 0.573847" />
+        </geometry>
+      <material name="aged_oak">
+        <color rgba="0.42 0.31 0.2 1" />
+        </material>
+      </visual>
+    <visual name="sail_2_brace_b_00">
+      <origin xyz="1 -0.16 -1.085" rpy="0 2.5984 -1.5708" />
+      <geometry>
+        <box size="0.06 0.035 0.619112" />
+        </geometry>
+      <material name="aged_oak">
+        <color rgba="0.42 0.31 0.2 1" />
+        </material>
+      </visual>
+    <visual name="sail_2_brace_a_01">
+      <origin xyz="1 0.22 -1.65" rpy="0 2.50884 1.5708" />
+      <geometry>
+        <box size="0.06 0.035 0.744043" />
+        </geometry>
+      <material name="aged_oak">
+        <color rgba="0.42 0.31 0.2 1" />
+        </material>
+      </visual>
+    <visual name="sail_2_brace_b_01">
+      <origin xyz="1 -0.16 -1.65" rpy="0 2.65164 1.5708" />
+      <geometry>
+        <box size="0.06 0.035 0.68" />
+        </geometry>
+      <material name="aged_oak">
+        <color rgba="0.42 0.31 0.2 1" />
+        </material>
+      </visual>
+    <visual name="sail_2_brace_a_02">
+      <origin xyz="1 0.22 -2.25" rpy="0 2.50884 -1.5708" />
+      <geometry>
+        <box size="0.06 0.035 0.744043" />
+        </geometry>
+      <material name="aged_oak">
+        <color rgba="0.42 0.31 0.2 1" />
+        </material>
+      </visual>
+    <visual name="sail_2_brace_b_02">
+      <origin xyz="1 -0.28 -2.25" rpy="0 2.39066 -1.5708" />
+      <geometry>
+        <box size="0.06 0.035 0.820731" />
+        </geometry>
+      <material name="aged_oak">
+        <color rgba="0.42 0.31 0.2 1" />
+        </material>
+      </visual>
+    <visual name="sail_2_brace_a_03">
+      <origin xyz="1 0.34 -2.85" rpy="0 2.29378 1.5708" />
+      <geometry>
+        <box size="0.06 0.035 0.906863" />
+        </geometry>
+      <material name="aged_oak">
+        <color rgba="0.42 0.31 0.2 1" />
+        </material>
+      </visual>
+    <visual name="sail_2_brace_b_03">
+      <origin xyz="1 -0.28 -2.85" rpy="0 2.39066 1.5708" />
+      <geometry>
+        <box size="0.06 0.035 0.820731" />
+        </geometry>
+      <material name="aged_oak">
+        <color rgba="0.42 0.31 0.2 1" />
+        </material>
+      </visual>
+    <visual name="sail_2_brace_a_04">
+      <origin xyz="1 0.34 -3.45" rpy="0 2.29378 -1.5708" />
+      <geometry>
+        <box size="0.06 0.035 0.906863" />
+        </geometry>
+      <material name="aged_oak">
+        <color rgba="0.42 0.31 0.2 1" />
+        </material>
+      </visual>
+    <visual name="sail_2_brace_b_04">
+      <origin xyz="1 -0.4 -3.45" rpy="0 2.2143 -1.5708" />
+      <geometry>
+        <box size="0.06 0.035 1" />
+        </geometry>
+      <material name="aged_oak">
+        <color rgba="0.42 0.31 0.2 1" />
+        </material>
+      </visual>
+    <visual name="sail_2_brace_a_05">
+      <origin xyz="1 0.45 -4.05" rpy="0 2.1588 1.5708" />
+      <geometry>
+        <box size="0.06 0.035 1.08167" />
+        </geometry>
+      <material name="aged_oak">
+        <color rgba="0.42 0.31 0.2 1" />
+        </material>
+      </visual>
+    <visual name="sail_2_brace_b_05">
+      <origin xyz="1 -0.4 -4.05" rpy="0 2.2143 1.5708" />
+      <geometry>
+        <box size="0.06 0.035 1" />
+        </geometry>
+      <material name="aged_oak">
+        <color rgba="0.42 0.31 0.2 1" />
+        </material>
+      </visual>
+    <visual name="sail_2_brace_a_06">
+      <origin xyz="1 0.45 -4.65" rpy="0 2.1588 -1.5708" />
+      <geometry>
+        <box size="0.06 0.035 1.08167" />
+        </geometry>
+      <material name="aged_oak">
+        <color rgba="0.42 0.31 0.2 1" />
+        </material>
+      </visual>
+    <visual name="sail_2_brace_b_06">
+      <origin xyz="1 -0.41 -4.65" rpy="0 2.20249 -1.5708" />
+      <geometry>
+        <box size="0.06 0.035 1.01607" />
+        </geometry>
+      <material name="aged_oak">
+        <color rgba="0.42 0.31 0.2 1" />
+        </material>
+      </visual>
+    <visual name="sail_3_stock">
+      <origin xyz="1 2.765 -5.07922e-16" rpy="0 1.5708 1.5708" />
+      <geometry>
+        <box size="0.22 0.1 5.17" />
+        </geometry>
+      <material name="aged_oak">
+        <color rgba="0.42 0.31 0.2 1" />
+        </material>
+      </visual>
+    <visual name="sail_3_left_rail">
+      <origin xyz="1 2.885 0.52" rpy="0 1.42653 1.5708" />
+      <geometry>
+        <box size="0.1 0.05 4.17336" />
+        </geometry>
+      <material name="aged_oak">
+        <color rgba="0.42 0.31 0.2 1" />
+        </material>
+      </visual>
+    <visual name="sail_3_right_rail">
+      <origin xyz="1 2.885 -0.52" rpy="0 1.71507 1.5708" />
+      <geometry>
+        <box size="0.1 0.05 4.17336" />
+        </geometry>
+      <material name="aged_oak">
+        <color rgba="0.42 0.31 0.2 1" />
+        </material>
+      </visual>
+    <visual name="sail_3_slat_00">
+      <origin xyz="1 0.82 -1.38778e-16" rpy="0 3.14159 0" />
+      <geometry>
+        <box size="0.08 0.04 0.44" />
+        </geometry>
+      <material name="aged_oak">
+        <color rgba="0.42 0.31 0.2 1" />
+        </material>
+      </visual>
+    <visual name="sail_3_slat_01">
+      <origin xyz="1 1.35 -2.22045e-16" rpy="0 3.14159 0" />
+      <geometry>
+        <box size="0.08 0.04 0.64" />
+        </geometry>
+      <material name="aged_oak">
+        <color rgba="0.42 0.31 0.2 1" />
+        </material>
+      </visual>
+    <visual name="sail_3_slat_02">
+      <origin xyz="1 1.95 -3.33067e-16" rpy="0 3.14159 0" />
+      <geometry>
+        <box size="0.08 0.04 0.88" />
+        </geometry>
+      <material name="aged_oak">
+        <color rgba="0.42 0.31 0.2 1" />
+        </material>
+      </visual>
+    <visual name="sail_3_slat_03">
+      <origin xyz="1 2.55 -4.44089e-16" rpy="0 3.14159 0" />
+      <geometry>
+        <box size="0.08 0.04 1.12" />
+        </geometry>
+      <material name="aged_oak">
+        <color rgba="0.42 0.31 0.2 1" />
+        </material>
+      </visual>
+    <visual name="sail_3_slat_04">
+      <origin xyz="1 3.15 -5.55112e-16" rpy="0 3.14159 0" />
+      <geometry>
+        <box size="0.08 0.04 1.36" />
+        </geometry>
+      <material name="aged_oak">
+        <color rgba="0.42 0.31 0.2 1" />
+        </material>
+      </visual>
+    <visual name="sail_3_slat_05">
+      <origin xyz="1 3.75 -6.66134e-16" rpy="0 3.14159 0" />
+      <geometry>
+        <box size="0.08 0.04 1.6" />
+        </geometry>
+      <material name="aged_oak">
+        <color rgba="0.42 0.31 0.2 1" />
+        </material>
+      </visual>
+    <visual name="sail_3_slat_06">
+      <origin xyz="1 4.35 -7.77156e-16" rpy="0 3.14159 0" />
+      <geometry>
+        <box size="0.08 0.04 1.8" />
+        </geometry>
+      <material name="aged_oak">
+        <color rgba="0.42 0.31 0.2 1" />
+        </material>
+      </visual>
+    <visual name="sail_3_slat_07">
+      <origin xyz="1 4.95 -8.88178e-16" rpy="0 3.14159 0" />
+      <geometry>
+        <box size="0.08 0.04 1.64" />
+        </geometry>
+      <material name="aged_oak">
+        <color rgba="0.42 0.31 0.2 1" />
+        </material>
+      </visual>
+    <visual name="sail_3_brace_a_00">
+      <origin xyz="1 1.085 0.11" rpy="0 1.96425 1.5708" />
+      <geometry>
+        <box size="0.06 0.035 0.573847" />
+        </geometry>
+      <material name="aged_oak">
+        <color rgba="0.42 0.31 0.2 1" />
+        </material>
+      </visual>
+    <visual name="sail_3_brace_b_00">
+      <origin xyz="1 1.085 -0.16" rpy="0 2.11399 1.5708" />
+      <geometry>
+        <box size="0.06 0.035 0.619112" />
+        </geometry>
+      <material name="aged_oak">
+        <color rgba="0.42 0.31 0.2 1" />
+        </material>
+      </visual>
+    <visual name="sail_3_brace_a_01">
+      <origin xyz="1 1.65 0.22" rpy="0 0.938047 1.5708" />
+      <geometry>
+        <box size="0.06 0.035 0.744043" />
+        </geometry>
+      <material name="aged_oak">
+        <color rgba="0.42 0.31 0.2 1" />
+        </material>
+      </visual>
+    <visual name="sail_3_brace_b_01">
+      <origin xyz="1 1.65 -0.16" rpy="0 1.08084 1.5708" />
+      <geometry>
+        <box size="0.06 0.035 0.68" />
+        </geometry>
+      <material name="aged_oak">
+        <color rgba="0.42 0.31 0.2 1" />
+        </material>
+      </visual>
+    <visual name="sail_3_brace_a_02">
+      <origin xyz="1 2.25 0.22" rpy="0 2.20355 1.5708" />
+      <geometry>
+        <box size="0.06 0.035 0.744043" />
+        </geometry>
+      <material name="aged_oak">
+        <color rgba="0.42 0.31 0.2 1" />
+        </material>
+      </visual>
+    <visual name="sail_3_brace_b_02">
+      <origin xyz="1 2.25 -0.28" rpy="0 2.32173 1.5708" />
+      <geometry>
+        <box size="0.06 0.035 0.820731" />
+        </geometry>
+      <material name="aged_oak">
+        <color rgba="0.42 0.31 0.2 1" />
+        </material>
+      </visual>
+    <visual name="sail_3_brace_a_03">
+      <origin xyz="1 2.85 0.34" rpy="0 0.722979 1.5708" />
+      <geometry>
+        <box size="0.06 0.035 0.906863" />
+        </geometry>
+      <material name="aged_oak">
+        <color rgba="0.42 0.31 0.2 1" />
+        </material>
+      </visual>
+    <visual name="sail_3_brace_b_03">
+      <origin xyz="1 2.85 -0.28" rpy="0 0.819867 1.5708" />
+      <geometry>
+        <box size="0.06 0.035 0.820731" />
+        </geometry>
+      <material name="aged_oak">
+        <color rgba="0.42 0.31 0.2 1" />
+        </material>
+      </visual>
+    <visual name="sail_3_brace_a_04">
+      <origin xyz="1 3.45 0.34" rpy="0 2.41861 1.5708" />
+      <geometry>
+        <box size="0.06 0.035 0.906863" />
+        </geometry>
+      <material name="aged_oak">
+        <color rgba="0.42 0.31 0.2 1" />
+        </material>
+      </visual>
+    <visual name="sail_3_brace_b_04">
+      <origin xyz="1 3.45 -0.4" rpy="0 2.49809 1.5708" />
+      <geometry>
+        <box size="0.06 0.035 1" />
+        </geometry>
+      <material name="aged_oak">
+        <color rgba="0.42 0.31 0.2 1" />
+        </material>
+      </visual>
+    <visual name="sail_3_brace_a_05">
+      <origin xyz="1 4.05 0.45" rpy="0 0.588003 1.5708" />
+      <geometry>
+        <box size="0.06 0.035 1.08167" />
+        </geometry>
+      <material name="aged_oak">
+        <color rgba="0.42 0.31 0.2 1" />
+        </material>
+      </visual>
+    <visual name="sail_3_brace_b_05">
+      <origin xyz="1 4.05 -0.4" rpy="0 0.643501 1.5708" />
+      <geometry>
+        <box size="0.06 0.035 1" />
+        </geometry>
+      <material name="aged_oak">
+        <color rgba="0.42 0.31 0.2 1" />
+        </material>
+      </visual>
+    <visual name="sail_3_brace_a_06">
+      <origin xyz="1 4.65 0.45" rpy="0 2.55359 1.5708" />
+      <geometry>
+        <box size="0.06 0.035 1.08167" />
+        </geometry>
+      <material name="aged_oak">
+        <color rgba="0.42 0.31 0.2 1" />
+        </material>
+      </visual>
+    <visual name="sail_3_brace_b_06">
+      <origin xyz="1 4.65 -0.41" rpy="0 2.5099 1.5708" />
+      <geometry>
+        <box size="0.06 0.035 1.01607" />
+        </geometry>
+      <material name="aged_oak">
+        <color rgba="0.42 0.31 0.2 1" />
+        </material>
+      </visual>
+    </link>
+  <joint name="tower_to_cap" type="continuous">
+    <origin xyz="0 0 8.55" rpy="0 0 0" />
+    <parent link="tower" />
+    <child link="cap" />
+    <axis xyz="0 0 1" />
+    <limit effort="28000" velocity="0.35" />
+    </joint>
+  <joint name="cap_to_hub" type="continuous">
+    <origin xyz="3.35 0 1.28" rpy="0 0 0" />
+    <parent link="cap" />
+    <child link="hub" />
+    <axis xyz="1 0 0" />
+    <limit effort="22000" velocity="1.2" />
+    </joint>
+  </robot>

@@ -1,0 +1,175 @@
+{
+  "summary": {
+    "id": "rec_drillpress_tilt_table_2fe92880a3e443b29d4b695f1838cce2",
+    "category": "drill",
+    "robot_name": "magnetic_base_drill_stand",
+    "joint_count": 1,
+    "link_count": 5,
+    "target_link_count": 2,
+    "family": "rec_drillpress_tilt_table",
+    "warnings": [],
+    "diagonal": 1.173572130482289,
+    "bytes": 4003290
+  },
+  "source": {
+    "dataset": "camvsl/Articraft-10K",
+    "revision": "3c79d5a05bb7cb6bf7bfee5e090176636ee3ac65",
+    "license": "CC-BY-4.0",
+    "url": "https://huggingface.co/datasets/camvsl/Articraft-10K/blob/3c79d5a05bb7cb6bf7bfee5e090176636ee3ac65/rec_drillpress_tilt_table_2fe92880a3e443b29d4b695f1838cce2.tar.gz",
+    "archive_sha256": "f0f6f1ca77ac00afc72f83c16b4dc2e5257c3b2c583cedcceb0478efb6938ac2",
+    "archive": "rec_drillpress_tilt_table_2fe92880a3e443b29d4b695f1838cce2.tar.gz",
+    "label_status": "Original generated URDF reference; not manually verified or physically validated"
+  },
+  "links": [
+    {
+      "id": "link_000",
+      "name": "base",
+      "point_file": null,
+      "faces": 108,
+      "vertices": 72,
+      "bounds": [
+        [
+          -0.23,
+          -0.16,
+          0.0
+        ],
+        [
+          0.23,
+          0.16,
+          0.365
+        ]
+      ]
+    },
+    {
+      "id": "link_001",
+      "name": "magnet_switch",
+      "point_file": null,
+      "faces": 12,
+      "vertices": 8,
+      "bounds": [
+        [
+          -0.1725,
+          -0.156,
+          0.077
+        ],
+        [
+          -0.1375,
+          -0.15,
+          0.103
+        ]
+      ]
+    },
+    {
+      "id": "link_002",
+      "name": "column",
+      "point_file": null,
+      "faces": 372,
+      "vertices": 248,
+      "bounds": [
+        [
+          -0.0475,
+          -0.0020000000000000018,
+          0.12
+        ],
+        [
+          0.11499999999999999,
+          0.1175,
+          0.875
+        ]
+      ]
+    },
+    {
+      "id": "link_003",
+      "name": "spindle_head",
+      "point_file": "inputs/link_003.npz",
+      "faces": 928,
+      "vertices": 484,
+      "bounds": [
+        [
+          -0.085,
+          -0.235,
+          0.18299999999999994
+        ],
+        [
+          0.11500006244438557,
+          0.052000000000000005,
+          0.9775
+        ]
+      ]
+    },
+    {
+      "id": "link_004",
+      "name": "handwheel",
+      "point_file": "inputs/link_004.npz",
+      "faces": 13416,
+      "vertices": 12283,
+      "bounds": [
+        [
+          0.11499996694140369,
+          -0.098,
+          0.6870000000004926
+        ],
+        [
+          0.2855000440783094,
+          0.047999999999999994,
+          0.8390000826470339
+        ]
+      ]
+    }
+  ],
+  "joints": [
+    {
+      "name": "base_to_magnet_switch",
+      "type": "revolute",
+      "parent": "link_000",
+      "child": "link_001",
+      "reference_q": 0.0,
+      "mimic": null
+    },
+    {
+      "name": "base_to_column",
+      "type": "prismatic",
+      "parent": "link_000",
+      "child": "link_002",
+      "reference_q": 0.0,
+      "mimic": null
+    },
+    {
+      "name": "column_to_spindle_head",
+      "type": "prismatic",
+      "parent": "link_002",
+      "child": "link_003",
+      "reference_q": 0.0,
+      "mimic": null
+    },
+    {
+      "name": "spindle_head_to_handwheel",
+      "type": "continuous",
+      "parent": "link_003",
+      "child": "link_004",
+      "reference_q": 0.0,
+      "mimic": null
+    }
+  ],
+  "bounds": [
+    [
+      -0.23,
+      -0.235,
+      0.0
+    ],
+    [
+      0.2855000440783094,
+      0.16,
+      0.9775
+    ]
+  ],
+  "point_pool_size": 65536,
+  "reference_pose": "Zero position clamped to limits; mimic values propagated",
+  "qc": {
+    "finite_geometry": true,
+    "tree_valid": true,
+    "axis_unit": true,
+    "physical_collision_validation": false,
+    "visual_tessellation": "32 cylinder segments, icosphere subdivision 2"
+  }
+}

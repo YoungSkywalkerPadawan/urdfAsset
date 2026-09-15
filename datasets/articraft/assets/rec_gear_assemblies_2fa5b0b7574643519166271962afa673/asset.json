@@ -1,0 +1,154 @@
+{
+  "summary": {
+    "id": "rec_gear_assemblies_2fa5b0b7574643519166271962afa673",
+    "category": "gear",
+    "robot_name": "open_spur_gear_train_bench",
+    "joint_count": 3,
+    "link_count": 4,
+    "target_link_count": 4,
+    "family": "rec_gear_assemblies",
+    "warnings": [],
+    "diagonal": 1.075196445761105,
+    "bytes": 8495075
+  },
+  "source": {
+    "dataset": "camvsl/Articraft-10K",
+    "revision": "3c79d5a05bb7cb6bf7bfee5e090176636ee3ac65",
+    "license": "CC-BY-4.0",
+    "url": "https://huggingface.co/datasets/camvsl/Articraft-10K/blob/3c79d5a05bb7cb6bf7bfee5e090176636ee3ac65/rec_gear_assemblies_2fa5b0b7574643519166271962afa673.tar.gz",
+    "archive_sha256": "9e4e2a593d02ff0c7e1d8cf9ff91012e5c5d6c3132f09052fb9e58e0590e68d4",
+    "archive": "rec_gear_assemblies_2fa5b0b7574643519166271962afa673.tar.gz",
+    "label_status": "Original generated URDF reference; not manually verified or physically validated"
+  },
+  "links": [
+    {
+      "id": "link_000",
+      "name": "side_frame",
+      "point_file": "inputs/link_000.npz",
+      "faces": 16896,
+      "vertices": 16158,
+      "bounds": [
+        [
+          -0.47250000000000003,
+          -0.21,
+          0.0
+        ],
+        [
+          0.4025,
+          0.15,
+          0.5035100331547124
+        ]
+      ]
+    },
+    {
+      "id": "link_001",
+      "name": "input_shaft",
+      "point_file": "inputs/link_001.npz",
+      "faces": 8948,
+      "vertices": 9090,
+      "bounds": [
+        [
+          -0.423891,
+          -0.2000000587700673,
+          0.128108816340783
+        ],
+        [
+          -0.11610900000000002,
+          0.16000005877006732,
+          0.435891183659217
+        ]
+      ]
+    },
+    {
+      "id": "link_002",
+      "name": "idler_shaft",
+      "point_file": "inputs/link_002.npz",
+      "faces": 7804,
+      "vertices": 7850,
+      "bounds": [
+        [
+          -0.111815,
+          -0.2000000587700673,
+          0.1731848163404789
+        ],
+        [
+          0.10581499999999999,
+          0.16000005877006732,
+          0.39081518365952106
+        ]
+      ]
+    },
+    {
+      "id": "link_003",
+      "name": "output_shaft",
+      "point_file": "inputs/link_003.npz",
+      "faces": 2916,
+      "vertices": 2898,
+      "bounds": [
+        [
+          0.110227,
+          -0.2000000587700673,
+          0.20222681634028297
+        ],
+        [
+          0.269773,
+          0.16000005877006732,
+          0.361773183659717
+        ]
+      ]
+    }
+  ],
+  "joints": [
+    {
+      "name": "side_frame_to_input_shaft",
+      "type": "continuous",
+      "parent": "link_000",
+      "child": "link_001",
+      "reference_q": 0.0,
+      "mimic": null
+    },
+    {
+      "name": "side_frame_to_idler_shaft",
+      "type": "continuous",
+      "parent": "link_000",
+      "child": "link_002",
+      "reference_q": 0.0,
+      "mimic": {
+        "joint": "side_frame_to_input_shaft",
+        "multiplier": "-1.42857"
+      }
+    },
+    {
+      "name": "side_frame_to_output_shaft",
+      "type": "continuous",
+      "parent": "link_000",
+      "child": "link_003",
+      "reference_q": 0.0,
+      "mimic": {
+        "joint": "side_frame_to_input_shaft",
+        "multiplier": "2"
+      }
+    }
+  ],
+  "bounds": [
+    [
+      -0.47250000000000003,
+      -0.21,
+      0.0
+    ],
+    [
+      0.4025,
+      0.16000005877006732,
+      0.5035100331547124
+    ]
+  ],
+  "point_pool_size": 65536,
+  "reference_pose": "Zero position clamped to limits; mimic values propagated",
+  "qc": {
+    "finite_geometry": true,
+    "tree_valid": true,
+    "axis_unit": true,
+    "physical_collision_validation": false,
+    "visual_tessellation": "32 cylinder segments, icosphere subdivision 2"
+  }
+}

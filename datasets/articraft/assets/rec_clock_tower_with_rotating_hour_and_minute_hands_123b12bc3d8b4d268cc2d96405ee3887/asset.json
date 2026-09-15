@@ -1,0 +1,121 @@
+{
+  "summary": {
+    "id": "rec_clock_tower_with_rotating_hour_and_minute_hands_123b12bc3d8b4d268cc2d96405ee3887",
+    "category": "clock",
+    "robot_name": "castle_gatehouse_clock_tower",
+    "joint_count": 2,
+    "link_count": 3,
+    "target_link_count": 3,
+    "family": "rec_clock_tower_with_rotating_hour_and_minute_hands",
+    "warnings": [],
+    "diagonal": 12.761133374430345,
+    "bytes": 4794564
+  },
+  "source": {
+    "dataset": "camvsl/Articraft-10K",
+    "revision": "3c79d5a05bb7cb6bf7bfee5e090176636ee3ac65",
+    "license": "CC-BY-4.0",
+    "url": "https://huggingface.co/datasets/camvsl/Articraft-10K/blob/3c79d5a05bb7cb6bf7bfee5e090176636ee3ac65/rec_clock_tower_with_rotating_hour_and_minute_hands_123b12bc3d8b4d268cc2d96405ee3887.tar.gz",
+    "archive_sha256": "b27a95ce3c25c6822cc42555119500e05702708b541caaf8fcb5f98d598e654e",
+    "archive": "rec_clock_tower_with_rotating_hour_and_minute_hands_123b12bc3d8b4d268cc2d96405ee3887.tar.gz",
+    "label_status": "Original generated URDF reference; not manually verified or physically validated"
+  },
+  "links": [
+    {
+      "id": "link_000",
+      "name": "tower_body",
+      "point_file": "inputs/link_000.npz",
+      "faces": 1064,
+      "vertices": 604,
+      "bounds": [
+        [
+          -3.46,
+          -2.535,
+          0.0
+        ],
+        [
+          3.46,
+          2.26,
+          9.59
+        ]
+      ]
+    },
+    {
+      "id": "link_001",
+      "name": "hour_hand",
+      "point_file": "inputs/link_001.npz",
+      "faces": 312,
+      "vertices": 162,
+      "bounds": [
+        [
+          -0.11,
+          -2.2170001101961163,
+          6.2700000000000005
+        ],
+        [
+          0.11,
+          -2.2059995959474725,
+          7.08
+        ]
+      ]
+    },
+    {
+      "id": "link_002",
+      "name": "minute_hand",
+      "point_file": "inputs/link_002.npz",
+      "faces": 184,
+      "vertices": 96,
+      "bounds": [
+        [
+          -0.08,
+          -2.2230002938563884,
+          6.23
+        ],
+        [
+          0.08,
+          -2.216999706143612,
+          7.3100000000000005
+        ]
+      ]
+    }
+  ],
+  "joints": [
+    {
+      "name": "tower_to_hour_hand",
+      "type": "continuous",
+      "parent": "link_000",
+      "child": "link_001",
+      "reference_q": 0.0,
+      "mimic": null
+    },
+    {
+      "name": "tower_to_minute_hand",
+      "type": "continuous",
+      "parent": "link_000",
+      "child": "link_002",
+      "reference_q": 0.0,
+      "mimic": null
+    }
+  ],
+  "bounds": [
+    [
+      -3.46,
+      -2.535,
+      0.0
+    ],
+    [
+      3.46,
+      2.26,
+      9.59
+    ]
+  ],
+  "point_pool_size": 65536,
+  "reference_pose": "Zero position clamped to limits; mimic values propagated",
+  "qc": {
+    "finite_geometry": true,
+    "tree_valid": true,
+    "axis_unit": true,
+    "physical_collision_validation": false,
+    "visual_tessellation": "32 cylinder segments, icosphere subdivision 2"
+  }
+}

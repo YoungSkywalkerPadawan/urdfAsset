@@ -1,0 +1,256 @@
+{
+  "summary": {
+    "id": "rec_drillpress_tilt_table_e037398ff8734e68984e027d1d773ee0",
+    "category": "drill",
+    "robot_name": "floor_drill_press",
+    "joint_count": 1,
+    "link_count": 8,
+    "target_link_count": 2,
+    "family": "rec_drillpress_tilt_table",
+    "warnings": [],
+    "diagonal": 1.9038557917553538,
+    "bytes": 4336294
+  },
+  "source": {
+    "dataset": "camvsl/Articraft-10K",
+    "revision": "3c79d5a05bb7cb6bf7bfee5e090176636ee3ac65",
+    "license": "CC-BY-4.0",
+    "url": "https://huggingface.co/datasets/camvsl/Articraft-10K/blob/3c79d5a05bb7cb6bf7bfee5e090176636ee3ac65/rec_drillpress_tilt_table_e037398ff8734e68984e027d1d773ee0.tar.gz",
+    "archive_sha256": "d01480986e399ec150ca3c154ba33a709ef981b9bc72359d318709f404363abf",
+    "archive": "rec_drillpress_tilt_table_e037398ff8734e68984e027d1d773ee0.tar.gz",
+    "label_status": "Original generated URDF reference; not manually verified or physically validated"
+  },
+  "links": [
+    {
+      "id": "link_000",
+      "name": "base",
+      "point_file": null,
+      "faces": 532,
+      "vertices": 554,
+      "bounds": [
+        [
+          -0.28,
+          -0.19,
+          0.0
+        ],
+        [
+          0.28,
+          0.19,
+          0.103
+        ]
+      ]
+    },
+    {
+      "id": "link_001",
+      "name": "column",
+      "point_file": null,
+      "faces": 128,
+      "vertices": 66,
+      "bounds": [
+        [
+          -0.04,
+          -0.04,
+          0.103
+        ],
+        [
+          0.04,
+          0.04,
+          1.453
+        ]
+      ]
+    },
+    {
+      "id": "link_002",
+      "name": "carriage",
+      "point_file": "inputs/link_002.npz",
+      "faces": 164,
+      "vertices": 90,
+      "bounds": [
+        [
+          -0.085,
+          0.039999999999999994,
+          0.663
+        ],
+        [
+          0.10700006611761766,
+          0.11499999999999999,
+          0.843
+        ]
+      ]
+    },
+    {
+      "id": "link_003",
+      "name": "table",
+      "point_file": null,
+      "faces": 912,
+      "vertices": 968,
+      "bounds": [
+        [
+          -0.17,
+          0.087,
+          0.700006
+        ],
+        [
+          0.17,
+          0.45999999999999996,
+          0.8029999999999999
+        ]
+      ]
+    },
+    {
+      "id": "link_004",
+      "name": "insert_cover",
+      "point_file": null,
+      "faces": 152,
+      "vertices": 82,
+      "bounds": [
+        [
+          -0.043,
+          0.218,
+          0.7969999999999999
+        ],
+        [
+          0.043,
+          0.351,
+          0.8070001432549719
+        ]
+      ]
+    },
+    {
+      "id": "link_005",
+      "name": "table_lock_knob",
+      "point_file": "inputs/link_005.npz",
+      "faces": 22616,
+      "vertices": 11312,
+      "bounds": [
+        [
+          0.10699997796083009,
+          0.04478700000000001,
+          0.7277869256728648
+        ],
+        [
+          0.149000067586812,
+          0.095213,
+          0.77821292580476
+        ]
+      ]
+    },
+    {
+      "id": "link_006",
+      "name": "head",
+      "point_file": null,
+      "faces": 1880,
+      "vertices": 964,
+      "bounds": [
+        [
+          -0.19,
+          0.037000000000000005,
+          1.038
+        ],
+        [
+          0.19000006611755696,
+          0.363,
+          1.6629999999999998
+        ]
+      ]
+    },
+    {
+      "id": "link_007",
+      "name": "motor",
+      "point_file": null,
+      "faces": 268,
+      "vertices": 140,
+      "bounds": [
+        [
+          -0.078,
+          -0.21200028650918848,
+          1.5349995592159136
+        ],
+        [
+          0.078,
+          0.04,
+          1.6910004407840862
+        ]
+      ]
+    }
+  ],
+  "joints": [
+    {
+      "name": "base_to_column",
+      "type": "fixed",
+      "parent": "link_000",
+      "child": "link_001",
+      "reference_q": 0.0,
+      "mimic": null
+    },
+    {
+      "name": "column_to_carriage",
+      "type": "prismatic",
+      "parent": "link_001",
+      "child": "link_002",
+      "reference_q": 0.0,
+      "mimic": null
+    },
+    {
+      "name": "carriage_to_table",
+      "type": "revolute",
+      "parent": "link_002",
+      "child": "link_003",
+      "reference_q": 0.0,
+      "mimic": null
+    },
+    {
+      "name": "table_to_insert_cover",
+      "type": "revolute",
+      "parent": "link_003",
+      "child": "link_004",
+      "reference_q": 0.0,
+      "mimic": null
+    },
+    {
+      "name": "carriage_to_table_lock_knob",
+      "type": "continuous",
+      "parent": "link_002",
+      "child": "link_005",
+      "reference_q": 0.0,
+      "mimic": null
+    },
+    {
+      "name": "column_to_head",
+      "type": "fixed",
+      "parent": "link_001",
+      "child": "link_006",
+      "reference_q": 0.0,
+      "mimic": null
+    },
+    {
+      "name": "head_to_motor",
+      "type": "fixed",
+      "parent": "link_006",
+      "child": "link_007",
+      "reference_q": 0.0,
+      "mimic": null
+    }
+  ],
+  "bounds": [
+    [
+      -0.28,
+      -0.21200028650918848,
+      0.0
+    ],
+    [
+      0.28,
+      0.45999999999999996,
+      1.6910004407840862
+    ]
+  ],
+  "point_pool_size": 65536,
+  "reference_pose": "Zero position clamped to limits; mimic values propagated",
+  "qc": {
+    "finite_geometry": true,
+    "tree_valid": true,
+    "axis_unit": true,
+    "physical_collision_validation": false,
+    "visual_tessellation": "32 cylinder segments, icosphere subdivision 2"
+  }
+}

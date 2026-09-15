@@ -1,0 +1,175 @@
+{
+  "summary": {
+    "id": "rec_stand_mixer_e5bd0a280728439fadc8e8e4e526f035",
+    "category": "mixer",
+    "robot_name": "bowl_lift_stand_mixer",
+    "joint_count": 1,
+    "link_count": 5,
+    "target_link_count": 2,
+    "family": "rec_stand_mixer",
+    "warnings": [],
+    "diagonal": 0.6865238715762184,
+    "bytes": 4207696
+  },
+  "source": {
+    "dataset": "camvsl/Articraft-10K",
+    "revision": "3c79d5a05bb7cb6bf7bfee5e090176636ee3ac65",
+    "license": "CC-BY-4.0",
+    "url": "https://huggingface.co/datasets/camvsl/Articraft-10K/blob/3c79d5a05bb7cb6bf7bfee5e090176636ee3ac65/rec_stand_mixer_e5bd0a280728439fadc8e8e4e526f035.tar.gz",
+    "archive_sha256": "54756a3b84adedc7fd84d02cff4f78907ca5b796f45aae7c982d2d91e58f061e",
+    "archive": "rec_stand_mixer_e5bd0a280728439fadc8e8e4e526f035.tar.gz",
+    "label_status": "Original generated URDF reference; not manually verified or physically validated"
+  },
+  "links": [
+    {
+      "id": "link_000",
+      "name": "body",
+      "point_file": "inputs/link_000.npz",
+      "faces": 996,
+      "vertices": 522,
+      "bounds": [
+        [
+          -0.16,
+          -0.14700000000000002,
+          0.0
+        ],
+        [
+          0.19999999999999998,
+          0.14700000000000002,
+          0.448
+        ]
+      ]
+    },
+    {
+      "id": "link_001",
+      "name": "bowl_carriage",
+      "point_file": null,
+      "faces": 188,
+      "vertices": 106,
+      "bounds": [
+        [
+          0.021000000000000005,
+          -0.14600000000000002,
+          0.044
+        ],
+        [
+          0.226,
+          0.14600000000000002,
+          0.198
+        ]
+      ]
+    },
+    {
+      "id": "link_002",
+      "name": "bowl",
+      "point_file": null,
+      "faces": 5048,
+      "vertices": 2537,
+      "bounds": [
+        [
+          0.008000000000000007,
+          -0.156169,
+          0.054
+        ],
+        [
+          0.256,
+          0.156169,
+          0.19599999999999998
+        ]
+      ]
+    },
+    {
+      "id": "link_003",
+      "name": "lift_lever",
+      "point_file": null,
+      "faces": 152,
+      "vertices": 82,
+      "bounds": [
+        [
+          -0.054,
+          0.061,
+          0.07899994857518929
+        ],
+        [
+          -0.036,
+          0.10500003305875148,
+          0.18000000000000002
+        ]
+      ]
+    },
+    {
+      "id": "link_004",
+      "name": "whisk",
+      "point_file": "inputs/link_004.npz",
+      "faces": 18744,
+      "vertices": 9388,
+      "bounds": [
+        [
+          0.0887,
+          -0.0377,
+          0.1355
+        ],
+        [
+          0.1753,
+          0.0377,
+          0.311
+        ]
+      ]
+    }
+  ],
+  "joints": [
+    {
+      "name": "body_to_bowl_carriage",
+      "type": "prismatic",
+      "parent": "link_000",
+      "child": "link_001",
+      "reference_q": 0.0,
+      "mimic": null
+    },
+    {
+      "name": "carriage_to_bowl",
+      "type": "fixed",
+      "parent": "link_001",
+      "child": "link_002",
+      "reference_q": 0.0,
+      "mimic": null
+    },
+    {
+      "name": "body_to_lift_lever",
+      "type": "revolute",
+      "parent": "link_000",
+      "child": "link_003",
+      "reference_q": 0.0,
+      "mimic": null
+    },
+    {
+      "name": "body_to_whisk",
+      "type": "continuous",
+      "parent": "link_000",
+      "child": "link_004",
+      "reference_q": 0.0,
+      "mimic": null
+    }
+  ],
+  "bounds": [
+    [
+      -0.16,
+      -0.156169,
+      0.0
+    ],
+    [
+      0.256,
+      0.156169,
+      0.448
+    ]
+  ],
+  "point_pool_size": 65536,
+  "reference_pose": "Zero position clamped to limits; mimic values propagated",
+  "qc": {
+    "finite_geometry": true,
+    "tree_valid": true,
+    "axis_unit": true,
+    "physical_collision_validation": false,
+    "visual_tessellation": "32 cylinder segments, icosphere subdivision 2"
+  }
+}

@@ -1,0 +1,175 @@
+{
+  "summary": {
+    "id": "rec_wheelie_bin_with_hinged_lid_3c6f9e355f1a4eb48a3d8b5810e6617f",
+    "category": "wheel",
+    "robot_name": "weatherproof_wheelie_bin",
+    "joint_count": 2,
+    "link_count": 5,
+    "target_link_count": 3,
+    "family": "rec_wheelie_bin_with_hinged_lid",
+    "warnings": [],
+    "diagonal": 1.538865602928798,
+    "bytes": 4803979
+  },
+  "source": {
+    "dataset": "camvsl/Articraft-10K",
+    "revision": "3c79d5a05bb7cb6bf7bfee5e090176636ee3ac65",
+    "license": "CC-BY-4.0",
+    "url": "https://huggingface.co/datasets/camvsl/Articraft-10K/blob/3c79d5a05bb7cb6bf7bfee5e090176636ee3ac65/rec_wheelie_bin_with_hinged_lid_3c6f9e355f1a4eb48a3d8b5810e6617f.tar.gz",
+    "archive_sha256": "4437aa91089c3832450899626b0b8b1a1b74d35119b8dab32db868a5acedee03",
+    "archive": "rec_wheelie_bin_with_hinged_lid_3c6f9e355f1a4eb48a3d8b5810e6617f.tar.gz",
+    "label_status": "Original generated URDF reference; not manually verified or physically validated"
+  },
+  "links": [
+    {
+      "id": "link_000",
+      "name": "body_shell",
+      "point_file": null,
+      "faces": 624,
+      "vertices": 358,
+      "bounds": [
+        [
+          -0.306,
+          -0.372,
+          0.0
+        ],
+        [
+          0.306,
+          0.376,
+          0.9580002203922117
+        ]
+      ]
+    },
+    {
+      "id": "link_001",
+      "name": "rear_axle",
+      "point_file": "inputs/link_001.npz",
+      "faces": 432,
+      "vertices": 230,
+      "bounds": [
+        [
+          -0.2955001175425228,
+          0.32299999999999995,
+          0.07799997796098526
+        ],
+        [
+          0.2955001175425228,
+          0.387,
+          0.19
+        ]
+      ]
+    },
+    {
+      "id": "link_002",
+      "name": "left_wheel",
+      "point_file": "inputs/link_002.npz",
+      "faces": 512,
+      "vertices": 264,
+      "bounds": [
+        [
+          -0.35050040405237587,
+          0.245,
+          -1.0101239825144326e-07
+        ],
+        [
+          -0.29549959594762415,
+          0.46499999999999997,
+          0.22000010101239825
+        ]
+      ]
+    },
+    {
+      "id": "link_003",
+      "name": "right_wheel",
+      "point_file": "inputs/link_003.npz",
+      "faces": 512,
+      "vertices": 264,
+      "bounds": [
+        [
+          0.29549959594762415,
+          0.245,
+          -1.0101239825144326e-07
+        ],
+        [
+          0.35050040405237587,
+          0.46499999999999997,
+          0.22000010101239825
+        ]
+      ]
+    },
+    {
+      "id": "link_004",
+      "name": "lid",
+      "point_file": null,
+      "faces": 364,
+      "vertices": 204,
+      "bounds": [
+        [
+          -0.34400000000000003,
+          -0.422,
+          0.8739999999999999
+        ],
+        [
+          0.34400000000000003,
+          0.382,
+          1.044
+        ]
+      ]
+    }
+  ],
+  "joints": [
+    {
+      "name": "body_to_rear_axle",
+      "type": "fixed",
+      "parent": "link_000",
+      "child": "link_001",
+      "reference_q": 0.0,
+      "mimic": null
+    },
+    {
+      "name": "rear_axle_to_left_wheel",
+      "type": "continuous",
+      "parent": "link_001",
+      "child": "link_002",
+      "reference_q": 0.0,
+      "mimic": null
+    },
+    {
+      "name": "rear_axle_to_right_wheel",
+      "type": "continuous",
+      "parent": "link_001",
+      "child": "link_003",
+      "reference_q": 0.0,
+      "mimic": null
+    },
+    {
+      "name": "body_to_lid",
+      "type": "revolute",
+      "parent": "link_000",
+      "child": "link_004",
+      "reference_q": 0.0,
+      "mimic": null
+    }
+  ],
+  "bounds": [
+    [
+      -0.35050040405237587,
+      -0.422,
+      -1.0101239825144326e-07
+    ],
+    [
+      0.35050040405237587,
+      0.46499999999999997,
+      1.044
+    ]
+  ],
+  "point_pool_size": 65536,
+  "reference_pose": "Zero position clamped to limits; mimic values propagated",
+  "qc": {
+    "finite_geometry": true,
+    "tree_valid": true,
+    "axis_unit": true,
+    "physical_collision_validation": false,
+    "visual_tessellation": "32 cylinder segments, icosphere subdivision 2"
+  }
+}

@@ -1,0 +1,429 @@
+<robot name="floor_drill_press">
+  <material name="machine_green">
+    <color rgba="0.2 0.36 0.3 1" />
+    </material>
+  <material name="cast_iron">
+    <color rgba="0.3 0.32 0.34 1" />
+    </material>
+  <material name="dark_steel">
+    <color rgba="0.24 0.25 0.27 1" />
+    </material>
+  <material name="bright_steel">
+    <color rgba="0.7 0.72 0.75 1" />
+    </material>
+  <material name="black_plastic">
+    <color rgba="0.1 0.1 0.11 1" />
+    </material>
+  <material name="motor_gray">
+    <color rgba="0.42 0.44 0.47 1" />
+    </material>
+  <material name="aluminum">
+    <color rgba="0.78 0.79 0.81 1" />
+    </material>
+  <link name="base">
+    <visual name="base_casting">
+      <geometry>
+        <mesh filename="assets/meshes/drill_press_base.obj" />
+        </geometry>
+      <material name="cast_iron" />
+      </visual>
+    <collision name="base_casting">
+      <geometry>
+        <mesh filename="assets/meshes/drill_press_base.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="column">
+    <visual name="column_tube">
+      <origin xyz="0 0 0.675" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.04" length="1.35" />
+        </geometry>
+      <material name="bright_steel" />
+      </visual>
+    <collision name="column_tube">
+      <origin xyz="0 0 0.675" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.04" length="1.35" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="carriage">
+    <visual name="rear_pad">
+      <origin xyz="0 0.06 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.17 0.04 0.18" />
+        </geometry>
+      <material name="cast_iron" />
+      </visual>
+    <visual name="ear_0">
+      <origin xyz="-0.06 0.09 -0.03" rpy="0 0 0" />
+      <geometry>
+        <box size="0.02 0.05 0.08" />
+        </geometry>
+      <material name="cast_iron" />
+      </visual>
+    <visual name="ear_1">
+      <origin xyz="0.06 0.09 -0.03" rpy="0 0 0" />
+      <geometry>
+        <box size="0.02 0.05 0.08" />
+        </geometry>
+      <material name="cast_iron" />
+      </visual>
+    <visual name="knob_boss">
+      <origin xyz="0.096 0.07 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.022" />
+        </geometry>
+      <material name="cast_iron" />
+      </visual>
+    <collision name="rear_pad">
+      <origin xyz="0 0.06 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.17 0.04 0.18" />
+        </geometry>
+      </collision>
+    <collision name="ear_0">
+      <origin xyz="-0.06 0.09 -0.03" rpy="0 0 0" />
+      <geometry>
+        <box size="0.02 0.05 0.08" />
+        </geometry>
+      </collision>
+    <collision name="ear_1">
+      <origin xyz="0.06 0.09 -0.03" rpy="0 0 0" />
+      <geometry>
+        <box size="0.02 0.05 0.08" />
+        </geometry>
+      </collision>
+    <collision name="knob_boss">
+      <origin xyz="0.096 0.07 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.022" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="table">
+    <visual name="table_shell">
+      <geometry>
+        <mesh filename="assets/meshes/drill_press_table.obj" />
+        </geometry>
+      <material name="cast_iron" />
+      </visual>
+    <collision name="table_shell">
+      <geometry>
+        <mesh filename="assets/meshes/drill_press_table.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="insert_cover">
+    <visual name="hinge_barrel">
+      <origin xyz="0 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.004" length="0.078" />
+        </geometry>
+      <material name="dark_steel" />
+      </visual>
+    <visual name="cover_plate">
+      <origin xyz="0 0.065 -0.003" rpy="0 0 0" />
+      <geometry>
+        <box size="0.086 0.128 0.006" />
+        </geometry>
+      <material name="aluminum" />
+      </visual>
+    <visual name="finger_tab">
+      <origin xyz="0 0.121 0.001" rpy="0 0 0" />
+      <geometry>
+        <box size="0.02 0.01 0.004" />
+        </geometry>
+      <material name="aluminum" />
+      </visual>
+    <collision name="hinge_barrel">
+      <origin xyz="0 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.004" length="0.078" />
+        </geometry>
+      </collision>
+    <collision name="cover_plate">
+      <origin xyz="0 0.065 -0.003" rpy="0 0 0" />
+      <geometry>
+        <box size="0.086 0.128 0.006" />
+        </geometry>
+      </collision>
+    <collision name="finger_tab">
+      <origin xyz="0 0.121 0.001" rpy="0 0 0" />
+      <geometry>
+        <box size="0.02 0.01 0.004" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="table_lock_knob">
+    <visual name="knob_shaft">
+      <origin xyz="0.009 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.018" />
+        </geometry>
+      <material name="bright_steel" />
+      </visual>
+    <visual name="knob_body">
+      <origin xyz="0.018 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <mesh filename="assets/meshes/drill_press_table_lock_knob.obj" />
+        </geometry>
+      <material name="black_plastic" />
+      </visual>
+    <collision name="knob_shaft">
+      <origin xyz="0.009 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.018" />
+        </geometry>
+      </collision>
+    <collision name="knob_body">
+      <origin xyz="0.018 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <mesh filename="assets/meshes/drill_press_table_lock_knob.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="head">
+    <visual name="head_body">
+      <origin xyz="0 0.1 0.14" rpy="0 0 0" />
+      <geometry>
+        <box size="0.34 0.2 0.22" />
+        </geometry>
+      <material name="machine_green" />
+      </visual>
+    <visual name="belt_cover">
+      <origin xyz="0 0.11 0.295" rpy="0 0 0" />
+      <geometry>
+        <box size="0.38 0.22 0.09" />
+        </geometry>
+      <material name="machine_green" />
+      </visual>
+    <visual name="spindle_housing">
+      <origin xyz="0 0.19 -0.03" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.052" length="0.22" />
+        </geometry>
+      <material name="dark_steel" />
+      </visual>
+    <visual name="quill_body">
+      <origin xyz="0 0.19 -0.12" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.034" length="0.16" />
+        </geometry>
+      <material name="bright_steel" />
+      </visual>
+    <visual name="chuck_body">
+      <origin xyz="0 0.19 -0.235" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.024" length="0.1" />
+        </geometry>
+      <material name="dark_steel" />
+      </visual>
+    <visual name="feed_hub">
+      <origin xyz="0.17 0.11 0.13" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.04" />
+        </geometry>
+      <material name="bright_steel" />
+      </visual>
+    <visual name="feed_handle_0">
+      <origin xyz="0.17 0.21 0.13" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.2" />
+        </geometry>
+      <material name="bright_steel" />
+      </visual>
+    <visual name="feed_ball_0">
+      <origin xyz="0.17 0.31 0.13" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.013" />
+        </geometry>
+      <material name="bright_steel" />
+      </visual>
+    <visual name="feed_handle_1">
+      <origin xyz="0.17 0.06 0.216603" rpy="0.523599 0 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.2" />
+        </geometry>
+      <material name="bright_steel" />
+      </visual>
+    <visual name="feed_ball_1">
+      <origin xyz="0.17 0.01 0.303205" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.013" />
+        </geometry>
+      <material name="bright_steel" />
+      </visual>
+    <visual name="feed_handle_2">
+      <origin xyz="0.17 0.06 0.0433975" rpy="2.61799 0 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.2" />
+        </geometry>
+      <material name="bright_steel" />
+      </visual>
+    <visual name="feed_ball_2">
+      <origin xyz="0.17 0.01 -0.0432051" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.013" />
+        </geometry>
+      <material name="bright_steel" />
+      </visual>
+    <collision name="head_body">
+      <origin xyz="0 0.1 0.14" rpy="0 0 0" />
+      <geometry>
+        <box size="0.34 0.2 0.22" />
+        </geometry>
+      </collision>
+    <collision name="belt_cover">
+      <origin xyz="0 0.11 0.295" rpy="0 0 0" />
+      <geometry>
+        <box size="0.38 0.22 0.09" />
+        </geometry>
+      </collision>
+    <collision name="spindle_housing">
+      <origin xyz="0 0.19 -0.03" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.052" length="0.22" />
+        </geometry>
+      </collision>
+    <collision name="quill_body">
+      <origin xyz="0 0.19 -0.12" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.034" length="0.16" />
+        </geometry>
+      </collision>
+    <collision name="chuck_body">
+      <origin xyz="0 0.19 -0.235" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.024" length="0.1" />
+        </geometry>
+      </collision>
+    <collision name="feed_hub">
+      <origin xyz="0.17 0.11 0.13" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.04" />
+        </geometry>
+      </collision>
+    <collision name="feed_handle_0">
+      <origin xyz="0.17 0.21 0.13" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.2" />
+        </geometry>
+      </collision>
+    <collision name="feed_ball_0">
+      <origin xyz="0.17 0.31 0.13" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.013" />
+        </geometry>
+      </collision>
+    <collision name="feed_handle_1">
+      <origin xyz="0.17 0.06 0.216603" rpy="0.523599 0 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.2" />
+        </geometry>
+      </collision>
+    <collision name="feed_ball_1">
+      <origin xyz="0.17 0.01 0.303205" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.013" />
+        </geometry>
+      </collision>
+    <collision name="feed_handle_2">
+      <origin xyz="0.17 0.06 0.0433975" rpy="2.61799 0 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.2" />
+        </geometry>
+      </collision>
+    <collision name="feed_ball_2">
+      <origin xyz="0.17 0.01 -0.0432051" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.013" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="motor">
+    <visual name="motor_mount">
+      <origin xyz="0 -0.012 0.11" rpy="0 0 0" />
+      <geometry>
+        <box size="0.14 0.024 0.1" />
+        </geometry>
+      <material name="dark_steel" />
+      </visual>
+    <visual name="motor_body">
+      <origin xyz="0 -0.132 0.11" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.078" length="0.24" />
+        </geometry>
+      <material name="motor_gray" />
+      </visual>
+    <visual name="motor_cap">
+      <origin xyz="0 -0.242 0.11" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.042" length="0.02" />
+        </geometry>
+      <material name="dark_steel" />
+      </visual>
+    <collision name="motor_mount">
+      <origin xyz="0 -0.012 0.11" rpy="0 0 0" />
+      <geometry>
+        <box size="0.14 0.024 0.1" />
+        </geometry>
+      </collision>
+    <collision name="motor_body">
+      <origin xyz="0 -0.132 0.11" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.078" length="0.24" />
+        </geometry>
+      </collision>
+    <collision name="motor_cap">
+      <origin xyz="0 -0.242 0.11" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.042" length="0.02" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="base_to_column" type="fixed">
+    <origin xyz="0 0 0.103" rpy="0 0 0" />
+    <parent link="base" />
+    <child link="column" />
+    </joint>
+  <joint name="column_to_carriage" type="prismatic">
+    <origin xyz="0 0 0.65" rpy="0 0 0" />
+    <parent link="column" />
+    <child link="carriage" />
+    <axis xyz="0 0 1" />
+    <limit effort="700" velocity="0.12" lower="0" upper="0.18" />
+    </joint>
+  <joint name="carriage_to_table" type="revolute">
+    <origin xyz="0 0.11 -0.03" rpy="0 0 0" />
+    <parent link="carriage" />
+    <child link="table" />
+    <axis xyz="1 0 0" />
+    <limit effort="120" velocity="0.7" lower="-0.872665" upper="0.872665" />
+    </joint>
+  <joint name="table_to_insert_cover" type="revolute">
+    <origin xyz="0 0.112 0.08" rpy="0 0 0" />
+    <parent link="table" />
+    <child link="insert_cover" />
+    <axis xyz="1 0 0" />
+    <limit effort="8" velocity="1.2" lower="0" upper="1.8326" />
+    </joint>
+  <joint name="carriage_to_table_lock_knob" type="continuous">
+    <origin xyz="0.107 0.07 0" rpy="0 0 0" />
+    <parent link="carriage" />
+    <child link="table_lock_knob" />
+    <axis xyz="1 0 0" />
+    <limit effort="3" velocity="6" />
+    </joint>
+  <joint name="column_to_head" type="fixed">
+    <origin xyz="0 0.04 1.22" rpy="0 0 0" />
+    <parent link="column" />
+    <child link="head" />
+    </joint>
+  <joint name="head_to_motor" type="fixed">
+    <origin xyz="0 0 0.18" rpy="0 0 0" />
+    <parent link="head" />
+    <child link="motor" />
+    </joint>
+  </robot>

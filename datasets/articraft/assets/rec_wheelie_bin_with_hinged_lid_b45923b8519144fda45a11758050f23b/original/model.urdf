@@ -1,0 +1,362 @@
+<robot name="wheelie_bin">
+  <material name="body_green">
+    <color rgba="0.19 0.39 0.2 1" />
+    </material>
+  <material name="lid_green">
+    <color rgba="0.17 0.36 0.18 1" />
+    </material>
+  <material name="axle_steel">
+    <color rgba="0.34 0.36 0.38 1" />
+    </material>
+  <material name="wheel_rubber">
+    <color rgba="0.06 0.06 0.06 1" />
+    </material>
+  <material name="hub_grey">
+    <color rgba="0.17 0.18 0.19 1" />
+    </material>
+  <link name="body">
+    <inertial>
+      <origin xyz="0 0 0.51" rpy="0 0 0" />
+      <mass value="14" />
+      <inertia ixx="1.85267" ixy="0" ixz="0" iyy="1.66227" iyz="0" izz="1.08733" />
+      </inertial>
+    <visual name="floor">
+      <origin xyz="0 0 0.127" rpy="0 0 0" />
+      <geometry>
+        <box size="0.49 0.6 0.014" />
+        </geometry>
+      <material name="body_green">
+        <color rgba="0.19 0.39 0.2 1" />
+        </material>
+      </visual>
+    <visual name="front_wall">
+      <origin xyz="0 0.316 0.5125" rpy="-0.1 0 0" />
+      <geometry>
+        <box size="0.54 0.007 0.785" />
+        </geometry>
+      <material name="body_green">
+        <color rgba="0.19 0.39 0.2 1" />
+        </material>
+      </visual>
+    <visual name="rear_wall">
+      <origin xyz="0 -0.308 0.535" rpy="0 0 0" />
+      <geometry>
+        <box size="0.49 0.007 0.83" />
+        </geometry>
+      <material name="body_green">
+        <color rgba="0.19 0.39 0.2 1" />
+        </material>
+      </visual>
+    <visual name="left_wall">
+      <origin xyz="0.252 0.006 0.535" rpy="0 -0.09 0" />
+      <geometry>
+        <box size="0.007 0.64 0.83" />
+        </geometry>
+      <material name="body_green">
+        <color rgba="0.19 0.39 0.2 1" />
+        </material>
+      </visual>
+    <visual name="right_wall">
+      <origin xyz="-0.252 0.006 0.535" rpy="0 0.09 0" />
+      <geometry>
+        <box size="0.007 0.64 0.83" />
+        </geometry>
+      <material name="body_green">
+        <color rgba="0.19 0.39 0.2 1" />
+        </material>
+      </visual>
+    <visual name="front_rim">
+      <origin xyz="0 0.339 0.936" rpy="0 0 0" />
+      <geometry>
+        <box size="0.55 0.028 0.028" />
+        </geometry>
+      <material name="body_green">
+        <color rgba="0.19 0.39 0.2 1" />
+        </material>
+      </visual>
+    <visual name="left_rim">
+      <origin xyz="0.275 0.012 0.936" rpy="0 0 0" />
+      <geometry>
+        <box size="0.028 0.65 0.028" />
+        </geometry>
+      <material name="body_green">
+        <color rgba="0.19 0.39 0.2 1" />
+        </material>
+      </visual>
+    <visual name="right_rim">
+      <origin xyz="-0.275 0.012 0.936" rpy="0 0 0" />
+      <geometry>
+        <box size="0.028 0.65 0.028" />
+        </geometry>
+      <material name="body_green">
+        <color rgba="0.19 0.39 0.2 1" />
+        </material>
+      </visual>
+    <visual name="rear_handle_bridge">
+      <origin xyz="0 -0.286 0.93" rpy="0 0 0" />
+      <geometry>
+        <box size="0.23 0.045 0.036" />
+        </geometry>
+      <material name="body_green">
+        <color rgba="0.19 0.39 0.2 1" />
+        </material>
+      </visual>
+    <visual name="left_axle_pocket">
+      <origin xyz="0.23 -0.286 0.18" rpy="0 0 0" />
+      <geometry>
+        <box size="0.04 0.06 0.14" />
+        </geometry>
+      <material name="body_green">
+        <color rgba="0.19 0.39 0.2 1" />
+        </material>
+      </visual>
+    <visual name="right_axle_pocket">
+      <origin xyz="-0.23 -0.286 0.18" rpy="0 0 0" />
+      <geometry>
+        <box size="0.04 0.06 0.14" />
+        </geometry>
+      <material name="body_green">
+        <color rgba="0.19 0.39 0.2 1" />
+        </material>
+      </visual>
+    <visual name="axle_tube">
+      <origin xyz="0 -0.3 0.11" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.56" />
+        </geometry>
+      <material name="axle_steel">
+        <color rgba="0.34 0.36 0.38 1" />
+        </material>
+      </visual>
+    <visual name="left_axle_stub">
+      <origin xyz="0.28 -0.3 0.11" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.016" length="0.05" />
+        </geometry>
+      <material name="axle_steel">
+        <color rgba="0.34 0.36 0.38 1" />
+        </material>
+      </visual>
+    <visual name="right_axle_stub">
+      <origin xyz="-0.28 -0.3 0.11" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.016" length="0.05" />
+        </geometry>
+      <material name="axle_steel">
+        <color rgba="0.34 0.36 0.38 1" />
+        </material>
+      </visual>
+    <visual name="left_hinge_barrel">
+      <origin xyz="0.095 -0.322 0.962" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.11" />
+        </geometry>
+      <material name="axle_steel">
+        <color rgba="0.34 0.36 0.38 1" />
+        </material>
+      </visual>
+    <visual name="left_hinge_bracket">
+      <origin xyz="0.095 -0.306 0.952" rpy="0 0 0" />
+      <geometry>
+        <box size="0.028 0.04 0.034" />
+        </geometry>
+      <material name="body_green">
+        <color rgba="0.19 0.39 0.2 1" />
+        </material>
+      </visual>
+    <visual name="right_hinge_barrel">
+      <origin xyz="-0.095 -0.322 0.962" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.11" />
+        </geometry>
+      <material name="axle_steel">
+        <color rgba="0.34 0.36 0.38 1" />
+        </material>
+      </visual>
+    <visual name="right_hinge_bracket">
+      <origin xyz="-0.095 -0.306 0.952" rpy="0 0 0" />
+      <geometry>
+        <box size="0.028 0.04 0.034" />
+        </geometry>
+      <material name="body_green">
+        <color rgba="0.19 0.39 0.2 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="lid">
+    <inertial>
+      <origin xyz="0 0.34 0.02" rpy="0 0 0" />
+      <mass value="2.7" />
+      <inertia ixx="0.11889" ixy="0" ixz="0" iyy="0.08325" iyz="0" izz="0.19764" />
+      </inertial>
+    <visual name="lid_panel">
+      <origin xyz="0 0.355 0.02" rpy="-0.045 0 0" />
+      <geometry>
+        <box size="0.6 0.71 0.012" />
+        </geometry>
+      <material name="lid_green">
+        <color rgba="0.17 0.36 0.18 1" />
+        </material>
+      </visual>
+    <visual name="left_skirt">
+      <origin xyz="0.288 0.345 0.014" rpy="0 0 0" />
+      <geometry>
+        <box size="0.022 0.67 0.02" />
+        </geometry>
+      <material name="lid_green">
+        <color rgba="0.17 0.36 0.18 1" />
+        </material>
+      </visual>
+    <visual name="right_skirt">
+      <origin xyz="-0.288 0.345 0.014" rpy="0 0 0" />
+      <geometry>
+        <box size="0.022 0.67 0.02" />
+        </geometry>
+      <material name="lid_green">
+        <color rgba="0.17 0.36 0.18 1" />
+        </material>
+      </visual>
+    <visual name="front_skirt">
+      <origin xyz="0 0.7 0.014" rpy="0 0 0" />
+      <geometry>
+        <box size="0.56 0.032 0.032" />
+        </geometry>
+      <material name="lid_green">
+        <color rgba="0.17 0.36 0.18 1" />
+        </material>
+      </visual>
+    <visual name="front_grip">
+      <origin xyz="0 0.716 -0.01" rpy="0 0 0" />
+      <geometry>
+        <box size="0.18 0.03 0.018" />
+        </geometry>
+      <material name="lid_green">
+        <color rgba="0.17 0.36 0.18 1" />
+        </material>
+      </visual>
+    <visual name="lid_hinge_barrel">
+      <origin xyz="0 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.08" />
+        </geometry>
+      <material name="axle_steel">
+        <color rgba="0.34 0.36 0.38 1" />
+        </material>
+      </visual>
+    <visual name="lid_hinge_web">
+      <origin xyz="0 0.024 0.016" rpy="0 0 0" />
+      <geometry>
+        <box size="0.07 0.024 0.032" />
+        </geometry>
+      <material name="lid_green">
+        <color rgba="0.17 0.36 0.18 1" />
+        </material>
+      </visual>
+    <visual name="lid_rear_stop">
+      <origin xyz="0 0.05 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.12 0.028 0.028" />
+        </geometry>
+      <material name="lid_green">
+        <color rgba="0.17 0.36 0.18 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="left_wheel">
+    <visual name="tire">
+      <origin xyz="0 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.108" length="0.044" />
+        </geometry>
+      <material name="wheel_rubber">
+        <color rgba="0.06 0.06 0.06 1" />
+        </material>
+      </visual>
+    <visual name="hub">
+      <origin xyz="0 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.067" length="0.05" />
+        </geometry>
+      <material name="hub_grey">
+        <color rgba="0.17 0.18 0.19 1" />
+        </material>
+      </visual>
+    <visual name="inner_boss">
+      <origin xyz="-0.012 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.03" length="0.026" />
+        </geometry>
+      <material name="hub_grey">
+        <color rgba="0.17 0.18 0.19 1" />
+        </material>
+      </visual>
+    <visual name="hub_rib">
+      <origin xyz="0.025 0 0.02" rpy="0 0 0" />
+      <geometry>
+        <box size="0.008 0.02 0.054" />
+        </geometry>
+      <material name="hub_grey">
+        <color rgba="0.17 0.18 0.19 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="right_wheel">
+    <visual name="tire">
+      <origin xyz="0 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.108" length="0.044" />
+        </geometry>
+      <material name="wheel_rubber">
+        <color rgba="0.06 0.06 0.06 1" />
+        </material>
+      </visual>
+    <visual name="hub">
+      <origin xyz="0 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.067" length="0.05" />
+        </geometry>
+      <material name="hub_grey">
+        <color rgba="0.17 0.18 0.19 1" />
+        </material>
+      </visual>
+    <visual name="inner_boss">
+      <origin xyz="0.012 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.03" length="0.026" />
+        </geometry>
+      <material name="hub_grey">
+        <color rgba="0.17 0.18 0.19 1" />
+        </material>
+      </visual>
+    <visual name="hub_rib">
+      <origin xyz="-0.025 0 0.02" rpy="0 0 0" />
+      <geometry>
+        <box size="0.008 0.02 0.054" />
+        </geometry>
+      <material name="hub_grey">
+        <color rgba="0.17 0.18 0.19 1" />
+        </material>
+      </visual>
+    </link>
+  <joint name="body_to_lid" type="revolute">
+    <origin xyz="0 -0.322 0.962" rpy="0 0 0" />
+    <parent link="body" />
+    <child link="lid" />
+    <axis xyz="1 0 0" />
+    <limit effort="12" velocity="2" lower="0" upper="1.91986" />
+    </joint>
+  <joint name="body_to_left_wheel" type="continuous">
+    <origin xyz="0.33 -0.3 0.11" rpy="0 0 0" />
+    <parent link="body" />
+    <child link="left_wheel" />
+    <axis xyz="1 0 0" />
+    <limit effort="25" velocity="18" />
+    </joint>
+  <joint name="body_to_right_wheel" type="continuous">
+    <origin xyz="-0.33 -0.3 0.11" rpy="0 0 0" />
+    <parent link="body" />
+    <child link="right_wheel" />
+    <axis xyz="1 0 0" />
+    <limit effort="25" velocity="18" />
+    </joint>
+  </robot>

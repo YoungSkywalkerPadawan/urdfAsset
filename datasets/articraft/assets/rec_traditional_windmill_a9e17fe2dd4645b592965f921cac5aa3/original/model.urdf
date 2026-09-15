@@ -1,0 +1,863 @@
+<robot name="traditional_windmill">
+  <material name="masonry">
+    <color rgba="0.78 0.75 0.69 1" />
+    </material>
+  <material name="roof_thatch">
+    <color rgba="0.34 0.24 0.12 1" />
+    </material>
+  <material name="weathered_wood">
+    <color rgba="0.46 0.34 0.22 1" />
+    </material>
+  <material name="dark_timber">
+    <color rgba="0.24 0.16 0.1 1" />
+    </material>
+  <material name="metal">
+    <color rgba="0.43 0.44 0.46 1" />
+    </material>
+  <material name="trim">
+    <color rgba="0.87 0.85 0.79 1" />
+    </material>
+  <link name="tower">
+    <inertial>
+      <origin xyz="0 0 2.92" rpy="0 0 0" />
+      <mass value="2400" />
+      <inertia ixx="9467.12" ixy="0" ixz="0" iyy="9467.12" iyz="0" izz="5292" />
+      </inertial>
+    <visual name="tower_shell">
+      <geometry>
+        <mesh filename="assets/meshes/tower_shell.obj" />
+        </geometry>
+      <material name="masonry">
+        <color rgba="0.78 0.75 0.69 1" />
+        </material>
+      </visual>
+    <visual name="cap_curb">
+      <origin xyz="0 0 5.77" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="1.56" length="0.14" />
+        </geometry>
+      <material name="dark_timber">
+        <color rgba="0.24 0.16 0.1 1" />
+        </material>
+      </visual>
+    <visual name="base_plinth">
+      <origin xyz="0 0 0.1" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="2.18" length="0.2" />
+        </geometry>
+      <material name="dark_timber">
+        <color rgba="0.24 0.16 0.1 1" />
+        </material>
+      </visual>
+    <visual name="front_door">
+      <origin xyz="1.76 0 0.79" rpy="0 0 0" />
+      <geometry>
+        <box size="0.92 0.18 1.58" />
+        </geometry>
+      <material name="weathered_wood">
+        <color rgba="0.46 0.34 0.22 1" />
+        </material>
+      </visual>
+    <visual name="door_trim">
+      <origin xyz="1.58 0 0.82" rpy="0 0 0" />
+      <geometry>
+        <box size="0.84 0.06 1.64" />
+        </geometry>
+      <material name="trim">
+        <color rgba="0.87 0.85 0.79 1" />
+        </material>
+      </visual>
+    <visual name="window_frame_lower">
+      <origin xyz="1.82 0 2.35" rpy="0 0 0" />
+      <geometry>
+        <box size="0.48 0.16 0.72" />
+        </geometry>
+      <material name="trim">
+        <color rgba="0.87 0.85 0.79 1" />
+        </material>
+      </visual>
+    <visual name="window_shutter_lower">
+      <origin xyz="1.9 0 2.35" rpy="0 0 0" />
+      <geometry>
+        <box size="0.38 0.1 0.58" />
+        </geometry>
+      <material name="dark_timber">
+        <color rgba="0.24 0.16 0.1 1" />
+        </material>
+      </visual>
+    <visual name="window_frame_upper">
+      <origin xyz="1.54 0 4.24" rpy="0 0 0" />
+      <geometry>
+        <box size="0.38 0.16 0.56" />
+        </geometry>
+      <material name="trim">
+        <color rgba="0.87 0.85 0.79 1" />
+        </material>
+      </visual>
+    <visual name="window_shutter_upper">
+      <origin xyz="1.64 0 4.24" rpy="0 0 0" />
+      <geometry>
+        <box size="0.28 0.1 0.42" />
+        </geometry>
+      <material name="dark_timber">
+        <color rgba="0.24 0.16 0.1 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="cap">
+    <inertial>
+      <origin xyz="0 0 0.76" rpy="0 0 0" />
+      <mass value="230" />
+      <inertia ixx="240.549" ixy="0" ixz="0" iyy="306.674" iyz="0" izz="458.658" />
+      </inertial>
+    <visual name="cap_shell">
+      <geometry>
+        <mesh filename="assets/meshes/cap_shell.obj" />
+        </geometry>
+      <material name="roof_thatch">
+        <color rgba="0.34 0.24 0.12 1" />
+        </material>
+      </visual>
+    <visual name="cap_ring">
+      <origin xyz="0 0 0.09" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="1.6" length="0.18" />
+        </geometry>
+      <material name="dark_timber">
+        <color rgba="0.24 0.16 0.1 1" />
+        </material>
+      </visual>
+    <visual name="shaft_house">
+      <origin xyz="1.42 0 0.56" rpy="0 0 0" />
+      <geometry>
+        <box size="0.78 0.56 0.42" />
+        </geometry>
+      <material name="weathered_wood">
+        <color rgba="0.46 0.34 0.22 1" />
+        </material>
+      </visual>
+    <visual name="shaft_bearing">
+      <origin xyz="1.84 0 0.56" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.17" length="0.54" />
+        </geometry>
+      <material name="metal">
+        <color rgba="0.43 0.44 0.46 1" />
+        </material>
+      </visual>
+    <visual name="tail_pole">
+      <origin xyz="-1.3 0 0.48" rpy="0 0 0" />
+      <geometry>
+        <box size="1.26 0.18 0.12" />
+        </geometry>
+      <material name="weathered_wood">
+        <color rgba="0.46 0.34 0.22 1" />
+        </material>
+      </visual>
+    <visual name="tail_fin">
+      <origin xyz="-1.86 0 0.76" rpy="0 0 0" />
+      <geometry>
+        <box size="0.48 0.08 0.7" />
+        </geometry>
+      <material name="weathered_wood">
+        <color rgba="0.46 0.34 0.22 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="sails">
+    <inertial>
+      <origin xyz="0.32 0 0" rpy="0 0 0" />
+      <mass value="180" />
+      <inertia ixx="1228.8" ixy="0" ixz="0" iyy="622.176" iyz="0" izz="622.176" />
+      </inertial>
+    <visual name="hub_back_plate">
+      <origin xyz="0.04 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.44" length="0.08" />
+        </geometry>
+      <material name="metal">
+        <color rgba="0.43 0.44 0.46 1" />
+        </material>
+      </visual>
+    <visual name="hub_core">
+      <origin xyz="0.26 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.3" length="0.52" />
+        </geometry>
+      <material name="weathered_wood">
+        <color rgba="0.46 0.34 0.22 1" />
+        </material>
+      </visual>
+    <visual name="hub_front_cap">
+      <origin xyz="0.58 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.14" length="0.12" />
+        </geometry>
+      <material name="metal">
+        <color rgba="0.43 0.44 0.46 1" />
+        </material>
+      </visual>
+    <visual name="blade_0_center_spar">
+      <origin xyz="0.06 0.989949 0.989949" rpy="0 0.785398 1.5708" />
+      <geometry>
+        <cylinder radius="0.045" length="2.72" />
+        </geometry>
+      <material name="weathered_wood">
+        <color rgba="0.46 0.34 0.22 1" />
+        </material>
+      </visual>
+    <visual name="blade_0_leading_spar">
+      <origin xyz="0.06 1.18087 0.954594" rpy="0 0.825377 1.5708" />
+      <geometry>
+        <cylinder radius="0.026" length="2.502" />
+        </geometry>
+      <material name="weathered_wood">
+        <color rgba="0.46 0.34 0.22 1" />
+        </material>
+      </visual>
+    <visual name="blade_0_trailing_spar">
+      <origin xyz="0.06 0.954594 1.18087" rpy="0 0.745419 1.5708" />
+      <geometry>
+        <cylinder radius="0.026" length="2.502" />
+        </geometry>
+      <material name="weathered_wood">
+        <color rgba="0.46 0.34 0.22 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="0.06 0.410122 0.410122" rpy="0 0.785398 -1.5708" />
+      <geometry>
+        <cylinder radius="0.017" length="0.273445" />
+        </geometry>
+      <material name="weathered_wood">
+        <color rgba="0.46 0.34 0.22 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="0.06 0.636396 0.636396" rpy="0 0.785398 -1.5708" />
+      <geometry>
+        <cylinder radius="0.017" length="0.294958" />
+        </geometry>
+      <material name="weathered_wood">
+        <color rgba="0.46 0.34 0.22 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="0.06 0.527062 0.519456" rpy="0 1.51162 1.5708" />
+      <geometry>
+        <cylinder radius="0.012" length="0.427984" />
+        </geometry>
+      <material name="weathered_wood">
+        <color rgba="0.46 0.34 0.22 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="0.06 0.86267 0.86267" rpy="0 0.785398 -1.5708" />
+      <geometry>
+        <cylinder radius="0.017" length="0.316471" />
+        </geometry>
+      <material name="weathered_wood">
+        <color rgba="0.46 0.34 0.22 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="0.06 0.74573 0.753336" rpy="0 0.0228271 1.5708" />
+      <geometry>
+        <cylinder radius="0.012" length="0.442562" />
+        </geometry>
+      <material name="weathered_wood">
+        <color rgba="0.46 0.34 0.22 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="0.06 1.10309 1.10309" rpy="0 0.785398 -1.5708" />
+      <geometry>
+        <cylinder radius="0.017" length="0.339328" />
+        </geometry>
+      <material name="weathered_wood">
+        <color rgba="0.46 0.34 0.22 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="0.06 0.986919 0.978838" rpy="0 1.55268 1.5708" />
+      <geometry>
+        <cylinder radius="0.012" length="0.472354" />
+        </geometry>
+      <material name="weathered_wood">
+        <color rgba="0.46 0.34 0.22 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="0.06 1.3435 1.3435" rpy="0 0.785398 -1.5708" />
+      <geometry>
+        <cylinder radius="0.017" length="0.362185" />
+        </geometry>
+      <material name="weathered_wood">
+        <color rgba="0.46 0.34 0.22 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="0.06 1.21925 1.22734" rpy="0 0.0155705 -1.5708" />
+      <geometry>
+        <cylinder radius="0.012" length="0.488498" />
+        </geometry>
+      <material name="weathered_wood">
+        <color rgba="0.46 0.34 0.22 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="0.06 1.58392 1.58392" rpy="0 0.785398 -1.5708" />
+      <geometry>
+        <cylinder radius="0.017" length="0.385042" />
+        </geometry>
+      <material name="weathered_wood">
+        <color rgba="0.46 0.34 0.22 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="0.06 1.46775 1.45967" rpy="0 1.61786 1.5708" />
+      <geometry>
+        <cylinder radius="0.012" length="0.50516" />
+        </geometry>
+      <material name="weathered_wood">
+        <color rgba="0.46 0.34 0.22 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="0.06 1.79605 1.79605" rpy="0 0.785398 -1.5708" />
+      <geometry>
+        <cylinder radius="0.017" length="0.40521" />
+        </geometry>
+      <material name="weathered_wood">
+        <color rgba="0.46 0.34 0.22 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="0.06 1.68642 1.69355" rpy="0 0.136002 -1.5708" />
+      <geometry>
+        <cylinder radius="0.012" length="0.496109" />
+        </geometry>
+      <material name="weathered_wood">
+        <color rgba="0.46 0.34 0.22 1" />
+        </material>
+      </visual>
+    <visual name="blade_0_tip_rung">
+      <origin xyz="0.06 1.95161 1.95161" rpy="0 0.785398 -1.5708" />
+      <geometry>
+        <cylinder radius="0.017" length="0.42" />
+        </geometry>
+      <material name="weathered_wood">
+        <color rgba="0.46 0.34 0.22 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="0.06 1.87645 1.87122" rpy="0 1.86634 1.5708" />
+      <geometry>
+        <cylinder radius="0.012" length="0.467593" />
+        </geometry>
+      <material name="weathered_wood">
+        <color rgba="0.46 0.34 0.22 1" />
+        </material>
+      </visual>
+    <visual name="blade_1_center_spar">
+      <origin xyz="0.06 -0.989949 0.989949" rpy="0 0.785398 -1.5708" />
+      <geometry>
+        <cylinder radius="0.045" length="2.72" />
+        </geometry>
+      <material name="weathered_wood">
+        <color rgba="0.46 0.34 0.22 1" />
+        </material>
+      </visual>
+    <visual name="blade_1_leading_spar">
+      <origin xyz="0.06 -0.954594 1.18087" rpy="0 0.745419 -1.5708" />
+      <geometry>
+        <cylinder radius="0.026" length="2.502" />
+        </geometry>
+      <material name="weathered_wood">
+        <color rgba="0.46 0.34 0.22 1" />
+        </material>
+      </visual>
+    <visual name="blade_1_trailing_spar">
+      <origin xyz="0.06 -1.18087 0.954594" rpy="0 0.825377 -1.5708" />
+      <geometry>
+        <cylinder radius="0.026" length="2.502" />
+        </geometry>
+      <material name="weathered_wood">
+        <color rgba="0.46 0.34 0.22 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="0.06 -0.410122 0.410122" rpy="0 2.35619 -1.5708" />
+      <geometry>
+        <cylinder radius="0.017" length="0.273445" />
+        </geometry>
+      <material name="weathered_wood">
+        <color rgba="0.46 0.34 0.22 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="0.06 -0.636396 0.636396" rpy="0 2.35619 -1.5708" />
+      <geometry>
+        <cylinder radius="0.017" length="0.294958" />
+        </geometry>
+      <material name="weathered_wood">
+        <color rgba="0.46 0.34 0.22 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="0.06 -0.519456 0.527062" rpy="0 0.0591798 -1.5708" />
+      <geometry>
+        <cylinder radius="0.012" length="0.427984" />
+        </geometry>
+      <material name="weathered_wood">
+        <color rgba="0.46 0.34 0.22 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="0.06 -0.86267 0.86267" rpy="0 2.35619 -1.5708" />
+      <geometry>
+        <cylinder radius="0.017" length="0.316471" />
+        </geometry>
+      <material name="weathered_wood">
+        <color rgba="0.46 0.34 0.22 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="0.06 -0.753336 0.74573" rpy="0 1.54797 -1.5708" />
+      <geometry>
+        <cylinder radius="0.012" length="0.442562" />
+        </geometry>
+      <material name="weathered_wood">
+        <color rgba="0.46 0.34 0.22 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="0.06 -1.10309 1.10309" rpy="0 2.35619 -1.5708" />
+      <geometry>
+        <cylinder radius="0.017" length="0.339328" />
+        </geometry>
+      <material name="weathered_wood">
+        <color rgba="0.46 0.34 0.22 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="0.06 -0.978838 0.986919" rpy="0 0.0181158 -1.5708" />
+      <geometry>
+        <cylinder radius="0.012" length="0.472354" />
+        </geometry>
+      <material name="weathered_wood">
+        <color rgba="0.46 0.34 0.22 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="0.06 -1.3435 1.3435" rpy="0 2.35619 -1.5708" />
+      <geometry>
+        <cylinder radius="0.017" length="0.362185" />
+        </geometry>
+      <material name="weathered_wood">
+        <color rgba="0.46 0.34 0.22 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="0.06 -1.22734 1.21925" rpy="0 1.58637 -1.5708" />
+      <geometry>
+        <cylinder radius="0.012" length="0.488498" />
+        </geometry>
+      <material name="weathered_wood">
+        <color rgba="0.46 0.34 0.22 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="0.06 -1.58392 1.58392" rpy="0 2.35619 -1.5708" />
+      <geometry>
+        <cylinder radius="0.017" length="0.385042" />
+        </geometry>
+      <material name="weathered_wood">
+        <color rgba="0.46 0.34 0.22 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="0.06 -1.45967 1.46775" rpy="0 0.0470684 1.5708" />
+      <geometry>
+        <cylinder radius="0.012" length="0.50516" />
+        </geometry>
+      <material name="weathered_wood">
+        <color rgba="0.46 0.34 0.22 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="0.06 -1.79605 1.79605" rpy="0 2.35619 -1.5708" />
+      <geometry>
+        <cylinder radius="0.017" length="0.40521" />
+        </geometry>
+      <material name="weathered_wood">
+        <color rgba="0.46 0.34 0.22 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="0.06 -1.69355 1.68642" rpy="0 1.7068 -1.5708" />
+      <geometry>
+        <cylinder radius="0.012" length="0.496109" />
+        </geometry>
+      <material name="weathered_wood">
+        <color rgba="0.46 0.34 0.22 1" />
+        </material>
+      </visual>
+    <visual name="blade_1_tip_rung">
+      <origin xyz="0.06 -1.95161 1.95161" rpy="0 2.35619 -1.5708" />
+      <geometry>
+        <cylinder radius="0.017" length="0.42" />
+        </geometry>
+      <material name="weathered_wood">
+        <color rgba="0.46 0.34 0.22 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="0.06 -1.87122 1.87645" rpy="0 0.295547 1.5708" />
+      <geometry>
+        <cylinder radius="0.012" length="0.467593" />
+        </geometry>
+      <material name="weathered_wood">
+        <color rgba="0.46 0.34 0.22 1" />
+        </material>
+      </visual>
+    <visual name="blade_2_center_spar">
+      <origin xyz="0.06 -0.989949 -0.989949" rpy="0 2.35619 -1.5708" />
+      <geometry>
+        <cylinder radius="0.045" length="2.72" />
+        </geometry>
+      <material name="weathered_wood">
+        <color rgba="0.46 0.34 0.22 1" />
+        </material>
+      </visual>
+    <visual name="blade_2_leading_spar">
+      <origin xyz="0.06 -1.18087 -0.954594" rpy="0 2.31622 -1.5708" />
+      <geometry>
+        <cylinder radius="0.026" length="2.502" />
+        </geometry>
+      <material name="weathered_wood">
+        <color rgba="0.46 0.34 0.22 1" />
+        </material>
+      </visual>
+    <visual name="blade_2_trailing_spar">
+      <origin xyz="0.06 -0.954594 -1.18087" rpy="0 2.39617 -1.5708" />
+      <geometry>
+        <cylinder radius="0.026" length="2.502" />
+        </geometry>
+      <material name="weathered_wood">
+        <color rgba="0.46 0.34 0.22 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="0.06 -0.410122 -0.410122" rpy="0 2.35619 1.5708" />
+      <geometry>
+        <cylinder radius="0.017" length="0.273445" />
+        </geometry>
+      <material name="weathered_wood">
+        <color rgba="0.46 0.34 0.22 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="0.06 -0.636396 -0.636396" rpy="0 2.35619 1.5708" />
+      <geometry>
+        <cylinder radius="0.017" length="0.294958" />
+        </geometry>
+      <material name="weathered_wood">
+        <color rgba="0.46 0.34 0.22 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="0.06 -0.527062 -0.519456" rpy="0 1.62998 -1.5708" />
+      <geometry>
+        <cylinder radius="0.012" length="0.427984" />
+        </geometry>
+      <material name="weathered_wood">
+        <color rgba="0.46 0.34 0.22 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="0.06 -0.86267 -0.86267" rpy="0 2.35619 1.5708" />
+      <geometry>
+        <cylinder radius="0.017" length="0.316471" />
+        </geometry>
+      <material name="weathered_wood">
+        <color rgba="0.46 0.34 0.22 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="0.06 -0.74573 -0.753336" rpy="0 3.11877 -1.5708" />
+      <geometry>
+        <cylinder radius="0.012" length="0.442562" />
+        </geometry>
+      <material name="weathered_wood">
+        <color rgba="0.46 0.34 0.22 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="0.06 -1.10309 -1.10309" rpy="0 2.35619 1.5708" />
+      <geometry>
+        <cylinder radius="0.017" length="0.339328" />
+        </geometry>
+      <material name="weathered_wood">
+        <color rgba="0.46 0.34 0.22 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="0.06 -0.986919 -0.978838" rpy="0 1.58891 -1.5708" />
+      <geometry>
+        <cylinder radius="0.012" length="0.472354" />
+        </geometry>
+      <material name="weathered_wood">
+        <color rgba="0.46 0.34 0.22 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="0.06 -1.3435 -1.3435" rpy="0 2.35619 1.5708" />
+      <geometry>
+        <cylinder radius="0.017" length="0.362185" />
+        </geometry>
+      <material name="weathered_wood">
+        <color rgba="0.46 0.34 0.22 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="0.06 -1.21925 -1.22734" rpy="0 3.12602 1.5708" />
+      <geometry>
+        <cylinder radius="0.012" length="0.488498" />
+        </geometry>
+      <material name="weathered_wood">
+        <color rgba="0.46 0.34 0.22 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="0.06 -1.58392 -1.58392" rpy="0 2.35619 1.5708" />
+      <geometry>
+        <cylinder radius="0.017" length="0.385042" />
+        </geometry>
+      <material name="weathered_wood">
+        <color rgba="0.46 0.34 0.22 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="0.06 -1.46775 -1.45967" rpy="0 1.52373 -1.5708" />
+      <geometry>
+        <cylinder radius="0.012" length="0.50516" />
+        </geometry>
+      <material name="weathered_wood">
+        <color rgba="0.46 0.34 0.22 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="0.06 -1.79605 -1.79605" rpy="0 2.35619 1.5708" />
+      <geometry>
+        <cylinder radius="0.017" length="0.40521" />
+        </geometry>
+      <material name="weathered_wood">
+        <color rgba="0.46 0.34 0.22 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="0.06 -1.68642 -1.69355" rpy="0 3.00559 1.5708" />
+      <geometry>
+        <cylinder radius="0.012" length="0.496109" />
+        </geometry>
+      <material name="weathered_wood">
+        <color rgba="0.46 0.34 0.22 1" />
+        </material>
+      </visual>
+    <visual name="blade_2_tip_rung">
+      <origin xyz="0.06 -1.95161 -1.95161" rpy="0 2.35619 1.5708" />
+      <geometry>
+        <cylinder radius="0.017" length="0.42" />
+        </geometry>
+      <material name="weathered_wood">
+        <color rgba="0.46 0.34 0.22 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="0.06 -1.87645 -1.87122" rpy="0 1.27525 -1.5708" />
+      <geometry>
+        <cylinder radius="0.012" length="0.467593" />
+        </geometry>
+      <material name="weathered_wood">
+        <color rgba="0.46 0.34 0.22 1" />
+        </material>
+      </visual>
+    <visual name="blade_3_center_spar">
+      <origin xyz="0.06 0.989949 -0.989949" rpy="0 2.35619 1.5708" />
+      <geometry>
+        <cylinder radius="0.045" length="2.72" />
+        </geometry>
+      <material name="weathered_wood">
+        <color rgba="0.46 0.34 0.22 1" />
+        </material>
+      </visual>
+    <visual name="blade_3_leading_spar">
+      <origin xyz="0.06 0.954594 -1.18087" rpy="0 2.39617 1.5708" />
+      <geometry>
+        <cylinder radius="0.026" length="2.502" />
+        </geometry>
+      <material name="weathered_wood">
+        <color rgba="0.46 0.34 0.22 1" />
+        </material>
+      </visual>
+    <visual name="blade_3_trailing_spar">
+      <origin xyz="0.06 1.18087 -0.954594" rpy="0 2.31622 1.5708" />
+      <geometry>
+        <cylinder radius="0.026" length="2.502" />
+        </geometry>
+      <material name="weathered_wood">
+        <color rgba="0.46 0.34 0.22 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="0.06 0.410122 -0.410122" rpy="0 0.785398 1.5708" />
+      <geometry>
+        <cylinder radius="0.017" length="0.273445" />
+        </geometry>
+      <material name="weathered_wood">
+        <color rgba="0.46 0.34 0.22 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="0.06 0.636396 -0.636396" rpy="0 0.785398 1.5708" />
+      <geometry>
+        <cylinder radius="0.017" length="0.294958" />
+        </geometry>
+      <material name="weathered_wood">
+        <color rgba="0.46 0.34 0.22 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="0.06 0.519456 -0.527062" rpy="0 3.08241 1.5708" />
+      <geometry>
+        <cylinder radius="0.012" length="0.427984" />
+        </geometry>
+      <material name="weathered_wood">
+        <color rgba="0.46 0.34 0.22 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="0.06 0.86267 -0.86267" rpy="0 0.785398 1.5708" />
+      <geometry>
+        <cylinder radius="0.017" length="0.316471" />
+        </geometry>
+      <material name="weathered_wood">
+        <color rgba="0.46 0.34 0.22 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="0.06 0.753336 -0.74573" rpy="0 1.59362 1.5708" />
+      <geometry>
+        <cylinder radius="0.012" length="0.442562" />
+        </geometry>
+      <material name="weathered_wood">
+        <color rgba="0.46 0.34 0.22 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="0.06 1.10309 -1.10309" rpy="0 0.785398 1.5708" />
+      <geometry>
+        <cylinder radius="0.017" length="0.339328" />
+        </geometry>
+      <material name="weathered_wood">
+        <color rgba="0.46 0.34 0.22 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="0.06 0.978838 -0.986919" rpy="0 3.12348 1.5708" />
+      <geometry>
+        <cylinder radius="0.012" length="0.472354" />
+        </geometry>
+      <material name="weathered_wood">
+        <color rgba="0.46 0.34 0.22 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="0.06 1.3435 -1.3435" rpy="0 0.785398 1.5708" />
+      <geometry>
+        <cylinder radius="0.017" length="0.362185" />
+        </geometry>
+      <material name="weathered_wood">
+        <color rgba="0.46 0.34 0.22 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="0.06 1.22734 -1.21925" rpy="0 1.55523 1.5708" />
+      <geometry>
+        <cylinder radius="0.012" length="0.488498" />
+        </geometry>
+      <material name="weathered_wood">
+        <color rgba="0.46 0.34 0.22 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="0.06 1.58392 -1.58392" rpy="0 0.785398 1.5708" />
+      <geometry>
+        <cylinder radius="0.017" length="0.385042" />
+        </geometry>
+      <material name="weathered_wood">
+        <color rgba="0.46 0.34 0.22 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="0.06 1.45967 -1.46775" rpy="0 3.09452 -1.5708" />
+      <geometry>
+        <cylinder radius="0.012" length="0.50516" />
+        </geometry>
+      <material name="weathered_wood">
+        <color rgba="0.46 0.34 0.22 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="0.06 1.79605 -1.79605" rpy="0 0.785398 1.5708" />
+      <geometry>
+        <cylinder radius="0.017" length="0.40521" />
+        </geometry>
+      <material name="weathered_wood">
+        <color rgba="0.46 0.34 0.22 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="0.06 1.69355 -1.68642" rpy="0 1.43479 1.5708" />
+      <geometry>
+        <cylinder radius="0.012" length="0.496109" />
+        </geometry>
+      <material name="weathered_wood">
+        <color rgba="0.46 0.34 0.22 1" />
+        </material>
+      </visual>
+    <visual name="blade_3_tip_rung">
+      <origin xyz="0.06 1.95161 -1.95161" rpy="0 0.785398 1.5708" />
+      <geometry>
+        <cylinder radius="0.017" length="0.42" />
+        </geometry>
+      <material name="weathered_wood">
+        <color rgba="0.46 0.34 0.22 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="0.06 1.87122 -1.87645" rpy="0 2.84605 -1.5708" />
+      <geometry>
+        <cylinder radius="0.012" length="0.467593" />
+        </geometry>
+      <material name="weathered_wood">
+        <color rgba="0.46 0.34 0.22 1" />
+        </material>
+      </visual>
+    </link>
+  <joint name="tower_to_cap" type="continuous">
+    <origin xyz="0 0 5.84" rpy="0 0 0" />
+    <parent link="tower" />
+    <child link="cap" />
+    <axis xyz="0 0 1" />
+    <limit effort="180" velocity="0.25" />
+    </joint>
+  <joint name="cap_to_sails" type="continuous">
+    <origin xyz="2.11 0 0.56" rpy="0 0 0" />
+    <parent link="cap" />
+    <child link="sails" />
+    <axis xyz="1 0 0" />
+    <limit effort="120" velocity="1.4" />
+    </joint>
+  </robot>

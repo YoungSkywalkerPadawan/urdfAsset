@@ -1,0 +1,332 @@
+<robot name="magnetic_base_drill_press">
+  <material name="deep_blue_machine_paint">
+    <color rgba="0.03 0.1 0.22 1" />
+    </material>
+  <material name="black_anodized_steel">
+    <color rgba="0.01 0.012 0.014 1" />
+    </material>
+  <material name="dark_magnetic_steel">
+    <color rgba="0.08 0.08 0.075 1" />
+    </material>
+  <material name="brushed_steel">
+    <color rgba="0.62 0.64 0.62 1" />
+    </material>
+  <material name="matte_black_rubber">
+    <color rgba="0.015 0.015 0.015 1" />
+    </material>
+  <material name="red_stop_button">
+    <color rgba="0.85 0.03 0.02 1" />
+    </material>
+  <material name="green_start_button">
+    <color rgba="0.02 0.55 0.1 1" />
+    </material>
+  <material name="silver_label_plate">
+    <color rgba="0.75 0.75 0.68 1" />
+    </material>
+  <link name="base">
+    <visual name="magnet_block">
+      <origin xyz="0 0 0.035" rpy="0 0 0" />
+      <geometry>
+        <box size="0.34 0.22 0.07" />
+        </geometry>
+      <material name="dark_magnetic_steel">
+        <color rgba="0.08 0.08 0.075 1" />
+        </material>
+      </visual>
+    <visual name="base_top_cover">
+      <origin xyz="0 0 0.088" rpy="0 0 0" />
+      <geometry>
+        <box size="0.3 0.18 0.04" />
+        </geometry>
+      <material name="deep_blue_machine_paint">
+        <color rgba="0.03 0.1 0.22 1" />
+        </material>
+      </visual>
+    <visual name="front_control_panel">
+      <origin xyz="0 -0.108 0.086" rpy="0 0 0" />
+      <geometry>
+        <box size="0.14 0.012 0.045" />
+        </geometry>
+      <material name="black_anodized_steel">
+        <color rgba="0.01 0.012 0.014 1" />
+        </material>
+      </visual>
+    <visual name="magnet_label_plate">
+      <origin xyz="0 -0.112 0.048" rpy="0 0 0" />
+      <geometry>
+        <box size="0.12 0.004 0.02" />
+        </geometry>
+      <material name="silver_label_plate">
+        <color rgba="0.75 0.75 0.68 1" />
+        </material>
+      </visual>
+    <visual name="sleeve_side_0">
+      <origin xyz="-0.039 0.06 0.228" rpy="0 0 0" />
+      <geometry>
+        <box size="0.012 0.09 0.244" />
+        </geometry>
+      <material name="deep_blue_machine_paint">
+        <color rgba="0.03 0.1 0.22 1" />
+        </material>
+      </visual>
+    <visual name="sleeve_side_1">
+      <origin xyz="0.039 0.06 0.228" rpy="0 0 0" />
+      <geometry>
+        <box size="0.012 0.09 0.244" />
+        </geometry>
+      <material name="deep_blue_machine_paint">
+        <color rgba="0.03 0.1 0.22 1" />
+        </material>
+      </visual>
+    <visual name="sleeve_front_wall">
+      <origin xyz="0 0.021 0.228" rpy="0 0 0" />
+      <geometry>
+        <box size="0.09 0.012 0.244" />
+        </geometry>
+      <material name="deep_blue_machine_paint">
+        <color rgba="0.03 0.1 0.22 1" />
+        </material>
+      </visual>
+    <visual name="sleeve_rear_wall">
+      <origin xyz="0 0.099 0.228" rpy="0 0 0" />
+      <geometry>
+        <box size="0.09 0.012 0.244" />
+        </geometry>
+      <material name="deep_blue_machine_paint">
+        <color rgba="0.03 0.1 0.22 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="column">
+    <visual name="sliding_column">
+      <origin xyz="0 0 0.11" rpy="0 0 0" />
+      <geometry>
+        <box size="0.066 0.066 0.7" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.62 0.64 0.62 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="head">
+    <visual name="rear_mount_plate">
+      <origin xyz="0 -0.011 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.13 0.022 0.205" />
+        </geometry>
+      <material name="deep_blue_machine_paint">
+        <color rgba="0.03 0.1 0.22 1" />
+        </material>
+      </visual>
+    <visual name="head_cheek_0">
+      <origin xyz="-0.0525 -0.102 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.035 0.185 0.205" />
+        </geometry>
+      <material name="deep_blue_machine_paint">
+        <color rgba="0.03 0.1 0.22 1" />
+        </material>
+      </visual>
+    <visual name="head_cheek_1">
+      <origin xyz="0.0525 -0.102 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.035 0.185 0.205" />
+        </geometry>
+      <material name="deep_blue_machine_paint">
+        <color rgba="0.03 0.1 0.22 1" />
+        </material>
+      </visual>
+    <visual name="top_bridge">
+      <origin xyz="0 -0.102 0.081" rpy="0 0 0" />
+      <geometry>
+        <box size="0.14 0.185 0.044" />
+        </geometry>
+      <material name="deep_blue_machine_paint">
+        <color rgba="0.03 0.1 0.22 1" />
+        </material>
+      </visual>
+    <visual name="motor_barrel">
+      <origin xyz="0 -0.102 0.19" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.07" length="0.185" />
+        </geometry>
+      <material name="black_anodized_steel">
+        <color rgba="0.01 0.012 0.014 1" />
+        </material>
+      </visual>
+    <visual name="motor_cap">
+      <origin xyz="0 -0.102 0.296" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.075" length="0.03" />
+        </geometry>
+      <material name="black_anodized_steel">
+        <color rgba="0.01 0.012 0.014 1" />
+        </material>
+      </visual>
+    <visual name="front_nameplate">
+      <origin xyz="0 -0.198 -0.03" rpy="0 0 0" />
+      <geometry>
+        <box size="0.15 0.01 0.075" />
+        </geometry>
+      <material name="black_anodized_steel">
+        <color rgba="0.01 0.012 0.014 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="quill">
+    <visual name="quill_sleeve">
+      <origin xyz="0 0 -0.06" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.035" length="0.23" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.62 0.64 0.62 1" />
+        </material>
+      </visual>
+    <visual name="drill_chuck">
+      <origin xyz="0 0 -0.2" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.034" length="0.05" />
+        </geometry>
+      <material name="dark_magnetic_steel">
+        <color rgba="0.08 0.08 0.075 1" />
+        </material>
+      </visual>
+    <visual name="drill_bit">
+      <origin xyz="0 0 -0.31" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.008" length="0.17" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.62 0.64 0.62 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="feed_handle">
+    <visual name="handle_hub">
+      <origin xyz="0.0275 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.022" length="0.055" />
+        </geometry>
+      <material name="dark_magnetic_steel">
+        <color rgba="0.08 0.08 0.075 1" />
+        </material>
+      </visual>
+    <visual name="handle_spoke_0">
+      <origin xyz="0.06 -0 0.05" rpy="0 0 0" />
+      <geometry>
+        <box size="0.012 0.012 0.1" />
+        </geometry>
+      <material name="dark_magnetic_steel">
+        <color rgba="0.08 0.08 0.075 1" />
+        </material>
+      </visual>
+    <visual name="handle_knob_0">
+      <origin xyz="0.06 -0 0.105" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.018" />
+        </geometry>
+      <material name="matte_black_rubber">
+        <color rgba="0.015 0.015 0.015 1" />
+        </material>
+      </visual>
+    <visual name="handle_spoke_1">
+      <origin xyz="0.06 -0.0433013 -0.025" rpy="2.0944 0 0" />
+      <geometry>
+        <box size="0.012 0.012 0.1" />
+        </geometry>
+      <material name="dark_magnetic_steel">
+        <color rgba="0.08 0.08 0.075 1" />
+        </material>
+      </visual>
+    <visual name="handle_knob_1">
+      <origin xyz="0.06 -0.0909327 -0.0525" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.018" />
+        </geometry>
+      <material name="matte_black_rubber">
+        <color rgba="0.015 0.015 0.015 1" />
+        </material>
+      </visual>
+    <visual name="handle_spoke_2">
+      <origin xyz="0.06 0.0433013 -0.025" rpy="4.18879 0 0" />
+      <geometry>
+        <box size="0.012 0.012 0.1" />
+        </geometry>
+      <material name="dark_magnetic_steel">
+        <color rgba="0.08 0.08 0.075 1" />
+        </material>
+      </visual>
+    <visual name="handle_knob_2">
+      <origin xyz="0.06 0.0909327 -0.0525" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.018" />
+        </geometry>
+      <material name="matte_black_rubber">
+        <color rgba="0.015 0.015 0.015 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="magnet_button">
+    <visual name="button_cap">
+      <origin xyz="0 -0.006 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.034 0.012 0.024" />
+        </geometry>
+      <material name="green_start_button">
+        <color rgba="0.02 0.55 0.1 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="power_button">
+    <visual name="button_cap">
+      <origin xyz="0 -0.006 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.034 0.012 0.024" />
+        </geometry>
+      <material name="red_stop_button">
+        <color rgba="0.85 0.03 0.02 1" />
+        </material>
+      </visual>
+    </link>
+  <joint name="base_to_column" type="prismatic">
+    <origin xyz="0 0.06 0.35" rpy="0 0 0" />
+    <parent link="base" />
+    <child link="column" />
+    <axis xyz="0 0 1" />
+    <limit effort="300" velocity="0.12" lower="0" upper="0.18" />
+    </joint>
+  <joint name="column_to_head" type="fixed">
+    <origin xyz="0 -0.033 0.3" rpy="0 0 0" />
+    <parent link="column" />
+    <child link="head" />
+    </joint>
+  <joint name="head_to_quill" type="prismatic">
+    <origin xyz="0 -0.102 0" rpy="0 0 0" />
+    <parent link="head" />
+    <child link="quill" />
+    <axis xyz="0 0 -1" />
+    <limit effort="120" velocity="0.18" lower="0" upper="0.12" />
+    </joint>
+  <joint name="head_to_feed_handle" type="continuous">
+    <origin xyz="0.07 -0.102 0" rpy="0 0 0" />
+    <parent link="head" />
+    <child link="feed_handle" />
+    <axis xyz="1 0 0" />
+    <limit effort="5" velocity="8" />
+    </joint>
+  <joint name="base_to_magnet_button" type="prismatic">
+    <origin xyz="-0.035 -0.114 0.088" rpy="0 0 0" />
+    <parent link="base" />
+    <child link="magnet_button" />
+    <axis xyz="0 1 0" />
+    <limit effort="8" velocity="0.03" lower="0" upper="0.006" />
+    </joint>
+  <joint name="base_to_power_button" type="prismatic">
+    <origin xyz="0.035 -0.114 0.088" rpy="0 0 0" />
+    <parent link="base" />
+    <child link="power_button" />
+    <axis xyz="0 1 0" />
+    <limit effort="8" velocity="0.03" lower="0" upper="0.006" />
+    </joint>
+  </robot>

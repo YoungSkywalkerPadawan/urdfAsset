@@ -1,0 +1,282 @@
+<robot name="marine_gimbal_globe">
+  <material name="antique_brass">
+    <color rgba="0.78 0.58 0.27 1" />
+    </material>
+  <material name="dark_brass">
+    <color rgba="0.38 0.25 0.1 1" />
+    </material>
+  <material name="polished_edge">
+    <color rgba="0.95 0.78 0.36 1" />
+    </material>
+  <material name="mahogany">
+    <color rgba="0.25 0.1 0.045 1" />
+    </material>
+  <material name="deep_ocean_blue">
+    <color rgba="0.03 0.2 0.44 1" />
+    </material>
+  <material name="antique_map_green">
+    <color rgba="0.34 0.52 0.26 1" />
+    </material>
+  <material name="parchment_lines">
+    <color rgba="0.92 0.78 0.5 1" />
+    </material>
+  <link name="outer_cradle">
+    <visual name="wooden_foot">
+      <origin xyz="0 0 0.019" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.185" length="0.038" />
+        </geometry>
+      <material name="mahogany">
+        <color rgba="0.25 0.1 0.045 1" />
+        </material>
+      </visual>
+    <visual name="turned_plinth">
+      <origin xyz="0 0 0.053" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.135" length="0.03" />
+        </geometry>
+      <material name="mahogany">
+        <color rgba="0.25 0.1 0.045 1" />
+        </material>
+      </visual>
+    <visual name="base_trim">
+      <geometry>
+        <mesh filename="assets/meshes/base_brass_trim.obj" />
+        </geometry>
+      <material name="antique_brass">
+        <color rgba="0.78 0.58 0.27 1" />
+        </material>
+      </visual>
+    <visual name="pedestal_column">
+      <origin xyz="0 0 0.205" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.034" length="0.285" />
+        </geometry>
+      <material name="dark_brass">
+        <color rgba="0.38 0.25 0.1 1" />
+        </material>
+      </visual>
+    <visual name="capital_trim">
+      <geometry>
+        <mesh filename="assets/meshes/column_brass_trim.obj" />
+        </geometry>
+      <material name="polished_edge">
+        <color rgba="0.95 0.78 0.36 1" />
+        </material>
+      </visual>
+    <visual name="lower_saddle">
+      <origin xyz="0 0 0.312" rpy="0 0 0" />
+      <geometry>
+        <box size="0.09 0.05 0.07" />
+        </geometry>
+      <material name="antique_brass">
+        <color rgba="0.78 0.58 0.27 1" />
+        </material>
+      </visual>
+    <visual name="outer_ring">
+      <geometry>
+        <mesh filename="assets/meshes/outer_support_ring.obj" />
+        </geometry>
+      <material name="antique_brass">
+        <color rgba="0.78 0.58 0.27 1" />
+        </material>
+      </visual>
+    <visual name="side_bearing_pos">
+      <origin xyz="0.255 0 0.62" rpy="0 0 0" />
+      <geometry>
+        <box size="0.045 0.066 0.078" />
+        </geometry>
+      <material name="dark_brass">
+        <color rgba="0.38 0.25 0.1 1" />
+        </material>
+      </visual>
+    <visual name="side_bearing_neg">
+      <origin xyz="-0.255 0 0.62" rpy="0 0 0" />
+      <geometry>
+        <box size="0.045 0.066 0.078" />
+        </geometry>
+      <material name="dark_brass">
+        <color rgba="0.38 0.25 0.1 1" />
+        </material>
+      </visual>
+    <visual name="bearing_cap_pos">
+      <origin xyz="0.23 0 0.62" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.03" length="0.01" />
+        </geometry>
+      <material name="polished_edge">
+        <color rgba="0.95 0.78 0.36 1" />
+        </material>
+      </visual>
+    <visual name="bearing_cap_neg">
+      <origin xyz="-0.23 0 0.62" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.03" length="0.01" />
+        </geometry>
+      <material name="polished_edge">
+        <color rgba="0.95 0.78 0.36 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="inner_ring">
+    <visual name="meridian_ring">
+      <geometry>
+        <mesh filename="assets/meshes/inner_meridian_ring.obj" />
+        </geometry>
+      <material name="antique_brass">
+        <color rgba="0.78 0.58 0.27 1" />
+        </material>
+      </visual>
+    <visual name="north_socket">
+      <origin xyz="0 0 0.224" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.022" length="0.046" />
+        </geometry>
+      <material name="dark_brass">
+        <color rgba="0.38 0.25 0.1 1" />
+        </material>
+      </visual>
+    <visual name="south_socket">
+      <origin xyz="0 0 -0.224" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.022" length="0.046" />
+        </geometry>
+      <material name="dark_brass">
+        <color rgba="0.38 0.25 0.1 1" />
+        </material>
+      </visual>
+    <visual name="side_trunnion_pos">
+      <origin xyz="0.238 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.011" length="0.055" />
+        </geometry>
+      <material name="polished_edge">
+        <color rgba="0.95 0.78 0.36 1" />
+        </material>
+      </visual>
+    <visual name="side_trunnion_neg">
+      <origin xyz="-0.238 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.011" length="0.055" />
+        </geometry>
+      <material name="polished_edge">
+        <color rgba="0.95 0.78 0.36 1" />
+        </material>
+      </visual>
+    <visual name="inner_hub_pos">
+      <origin xyz="0.211 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.017" length="0.014" />
+        </geometry>
+      <material name="antique_brass">
+        <color rgba="0.78 0.58 0.27 1" />
+        </material>
+      </visual>
+    <visual name="inner_hub_neg">
+      <origin xyz="-0.211 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.017" length="0.014" />
+        </geometry>
+      <material name="antique_brass">
+        <color rgba="0.78 0.58 0.27 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="globe">
+    <visual name="ocean_sphere">
+      <geometry>
+        <sphere radius="0.18" />
+        </geometry>
+      <material name="deep_ocean_blue">
+        <color rgba="0.03 0.2 0.44 1" />
+        </material>
+      </visual>
+    <visual name="graticule">
+      <geometry>
+        <mesh filename="assets/meshes/engraved_graticule.obj" />
+        </geometry>
+      <material name="parchment_lines">
+        <color rgba="0.92 0.78 0.5 1" />
+        </material>
+      </visual>
+    <visual name="north_pin">
+      <origin xyz="0 0 0.21" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0085" length="0.075" />
+        </geometry>
+      <material name="polished_edge">
+        <color rgba="0.95 0.78 0.36 1" />
+        </material>
+      </visual>
+    <visual name="south_pin">
+      <origin xyz="0 0 -0.21" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0085" length="0.075" />
+        </geometry>
+      <material name="polished_edge">
+        <color rgba="0.95 0.78 0.36 1" />
+        </material>
+      </visual>
+    <visual name="north_america">
+      <geometry>
+        <mesh filename="assets/meshes/north_america_patch.obj" />
+        </geometry>
+      <material name="antique_map_green">
+        <color rgba="0.34 0.52 0.26 1" />
+        </material>
+      </visual>
+    <visual name="south_america">
+      <geometry>
+        <mesh filename="assets/meshes/south_america_patch.obj" />
+        </geometry>
+      <material name="antique_map_green">
+        <color rgba="0.34 0.52 0.26 1" />
+        </material>
+      </visual>
+    <visual name="eurasia">
+      <geometry>
+        <mesh filename="assets/meshes/eurasia_patch.obj" />
+        </geometry>
+      <material name="antique_map_green">
+        <color rgba="0.34 0.52 0.26 1" />
+        </material>
+      </visual>
+    <visual name="africa">
+      <geometry>
+        <mesh filename="assets/meshes/africa_patch.obj" />
+        </geometry>
+      <material name="antique_map_green">
+        <color rgba="0.34 0.52 0.26 1" />
+        </material>
+      </visual>
+    <visual name="australia">
+      <geometry>
+        <mesh filename="assets/meshes/australia_patch.obj" />
+        </geometry>
+      <material name="antique_map_green">
+        <color rgba="0.34 0.52 0.26 1" />
+        </material>
+      </visual>
+    <visual name="greenland">
+      <geometry>
+        <mesh filename="assets/meshes/greenland_patch.obj" />
+        </geometry>
+      <material name="antique_map_green">
+        <color rgba="0.34 0.52 0.26 1" />
+        </material>
+      </visual>
+    </link>
+  <joint name="cradle_to_inner" type="revolute">
+    <origin xyz="0 0 0.62" rpy="0 0 0" />
+    <parent link="outer_cradle" />
+    <child link="inner_ring" />
+    <axis xyz="1 0 0" />
+    <limit effort="8" velocity="1.2" lower="-0.9" upper="0.9" />
+    </joint>
+  <joint name="inner_to_globe" type="continuous">
+    <parent link="inner_ring" />
+    <child link="globe" />
+    <axis xyz="0 0 1" />
+    <limit effort="2" velocity="2.5" />
+    </joint>
+  </robot>

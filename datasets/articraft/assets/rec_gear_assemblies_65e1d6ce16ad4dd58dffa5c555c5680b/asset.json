@@ -1,0 +1,154 @@
+{
+  "summary": {
+    "id": "rec_gear_assemblies_65e1d6ce16ad4dd58dffa5c555c5680b",
+    "category": "gear",
+    "robot_name": "bevel_to_spur_transfer",
+    "joint_count": 3,
+    "link_count": 4,
+    "target_link_count": 4,
+    "family": "rec_gear_assemblies",
+    "warnings": [],
+    "diagonal": 1.00031007751806,
+    "bytes": 11957535
+  },
+  "source": {
+    "dataset": "camvsl/Articraft-10K",
+    "revision": "3c79d5a05bb7cb6bf7bfee5e090176636ee3ac65",
+    "license": "CC-BY-4.0",
+    "url": "https://huggingface.co/datasets/camvsl/Articraft-10K/blob/3c79d5a05bb7cb6bf7bfee5e090176636ee3ac65/rec_gear_assemblies_65e1d6ce16ad4dd58dffa5c555c5680b.tar.gz",
+    "archive_sha256": "1e49b278ad11f844649052e3ee7a8beb743c080af0ea275bf23d588962935cfe",
+    "archive": "rec_gear_assemblies_65e1d6ce16ad4dd58dffa5c555c5680b.tar.gz",
+    "label_status": "Original generated URDF reference; not manually verified or physically validated"
+  },
+  "links": [
+    {
+      "id": "link_000",
+      "name": "base",
+      "point_file": "inputs/link_000.npz",
+      "faces": 3460,
+      "vertices": 3460,
+      "bounds": [
+        [
+          -0.07,
+          -0.12,
+          0.0
+        ],
+        [
+          0.79,
+          0.26,
+          0.3024770734638391
+        ]
+      ]
+    },
+    {
+      "id": "link_001",
+      "name": "input_shaft",
+      "point_file": "inputs/link_001.npz",
+      "faces": 46263,
+      "vertices": 25524,
+      "bounds": [
+        [
+          0.091701,
+          -0.069084,
+          0.04099999999999998
+        ],
+        [
+          0.228299,
+          0.069084,
+          0.254
+        ]
+      ]
+    },
+    {
+      "id": "link_002",
+      "name": "transfer_shaft",
+      "point_file": "inputs/link_002.npz",
+      "faces": 54149,
+      "vertices": 32382,
+      "bounds": [
+        [
+          0.07999996327004033,
+          -0.068299,
+          0.19493500000000002
+        ],
+        [
+          0.7000000367299597,
+          0.068299,
+          0.33310300000000004
+        ]
+      ]
+    },
+    {
+      "id": "link_003",
+      "name": "output_shaft",
+      "point_file": "inputs/link_003.npz",
+      "faces": 7384,
+      "vertices": 7206,
+      "bounds": [
+        [
+          0.2449999632693994,
+          0.049003000000000005,
+          0.18550292653642414
+        ],
+        [
+          0.6750000367306006,
+          0.20499699999999998,
+          0.3414970734635759
+        ]
+      ]
+    }
+  ],
+  "joints": [
+    {
+      "name": "input_axis",
+      "type": "continuous",
+      "parent": "link_000",
+      "child": "link_001",
+      "reference_q": 0.0,
+      "mimic": null
+    },
+    {
+      "name": "transfer_axis",
+      "type": "continuous",
+      "parent": "link_000",
+      "child": "link_002",
+      "reference_q": 0.0,
+      "mimic": {
+        "joint": "input_axis",
+        "multiplier": "-1"
+      }
+    },
+    {
+      "name": "output_axis",
+      "type": "continuous",
+      "parent": "link_000",
+      "child": "link_003",
+      "reference_q": 0.0,
+      "mimic": {
+        "joint": "transfer_axis",
+        "multiplier": "-0.75"
+      }
+    }
+  ],
+  "bounds": [
+    [
+      -0.07,
+      -0.12,
+      0.0
+    ],
+    [
+      0.79,
+      0.26,
+      0.3414970734635759
+    ]
+  ],
+  "point_pool_size": 65536,
+  "reference_pose": "Zero position clamped to limits; mimic values propagated",
+  "qc": {
+    "finite_geometry": true,
+    "tree_valid": true,
+    "axis_unit": true,
+    "physical_collision_validation": false,
+    "visual_tessellation": "32 cylinder segments, icosphere subdivision 2"
+  }
+}

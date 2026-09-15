@@ -1,0 +1,449 @@
+<robot name="traditional_windmill">
+  <material name="whitewashed_plaster">
+    <color rgba="0.78 0.73 0.62 1" />
+    </material>
+  <material name="fieldstone">
+    <color rgba="0.35 0.32 0.29 1" />
+    </material>
+  <material name="aged_oak">
+    <color rgba="0.45 0.25 0.12 1" />
+    </material>
+  <material name="dark_timber">
+    <color rgba="0.22 0.12 0.06 1" />
+    </material>
+  <material name="thatch">
+    <color rgba="0.55 0.43 0.22 1" />
+    </material>
+  <material name="iron">
+    <color rgba="0.06 0.06 0.055 1" />
+    </material>
+  <link name="tower">
+    <visual name="stone_plinth">
+      <origin xyz="0 0 0.08" rpy="0 0 0" />
+      <geometry>
+        <box size="1.7 1.7 0.16" />
+        </geometry>
+      <material name="fieldstone" />
+      </visual>
+    <visual name="tapered_body">
+      <geometry>
+        <mesh filename="assets/meshes/tapered_tower.obj" />
+        </geometry>
+      <material name="whitewashed_plaster" />
+      </visual>
+    <visual name="top_curb">
+      <origin xyz="0 0 3.44" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.5" length="0.12" />
+        </geometry>
+      <material name="fieldstone" />
+      </visual>
+    <visual name="front_door">
+      <origin xyz="0.66 0 0.55" rpy="0 0 0" />
+      <geometry>
+        <box size="0.08 0.4 0.62" />
+        </geometry>
+      <material name="dark_timber" />
+      </visual>
+    <visual name="front_window">
+      <origin xyz="0.61 0 1.72" rpy="0 0 0" />
+      <geometry>
+        <box size="0.1 0.32 0.28" />
+        </geometry>
+      <material name="aged_oak" />
+      </visual>
+    </link>
+  <link name="cap">
+    <visual name="yaw_turntable">
+      <origin xyz="0 0 0.06" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.54" length="0.12" />
+        </geometry>
+      <material name="iron" />
+      </visual>
+    <visual name="cap_house">
+      <geometry>
+        <mesh filename="assets/meshes/bored_cap_house.obj" />
+        </geometry>
+      <material name="aged_oak" />
+      </visual>
+    <visual name="gabled_roof">
+      <geometry>
+        <mesh filename="assets/meshes/cap_gabled_roof.obj" />
+        </geometry>
+      <material name="thatch" />
+      </visual>
+    <visual name="front_bearing">
+      <geometry>
+        <mesh filename="assets/meshes/front_bearing_ring.obj" />
+        </geometry>
+      <material name="iron" />
+      </visual>
+    <visual name="support_0">
+      <origin xyz="0.56 0.36 0.34" rpy="0 0 0" />
+      <geometry>
+        <box size="0.52 0.11 0.58" />
+        </geometry>
+      <material name="dark_timber" />
+      </visual>
+    <visual name="support_1">
+      <origin xyz="0.56 -0.36 0.34" rpy="0 0 0" />
+      <geometry>
+        <box size="0.52 0.11 0.58" />
+        </geometry>
+      <material name="dark_timber" />
+      </visual>
+    <visual name="lower_bearing_saddle">
+      <origin xyz="0.5 0 0.11" rpy="0 0 0" />
+      <geometry>
+        <box size="0.38 0.22 0.13" />
+        </geometry>
+      <material name="dark_timber" />
+      </visual>
+    </link>
+  <link name="sail_hub">
+    <visual name="shaft">
+      <origin xyz="-0.2 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.115" length="0.58" />
+        </geometry>
+      <material name="iron" />
+      </visual>
+    <visual name="hub_drum">
+      <origin xyz="0.13 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.24" length="0.18" />
+        </geometry>
+      <material name="iron" />
+      </visual>
+    <visual name="wooden_spider">
+      <origin xyz="0.2 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.13" length="0.08" />
+        </geometry>
+      <material name="dark_timber" />
+      </visual>
+    <visual name="blade_0_rail_0">
+      <origin xyz="0.16 0.875 -0.15" rpy="0 0 0" />
+      <geometry>
+        <box size="0.07 1.55 0.045" />
+        </geometry>
+      <material name="aged_oak" />
+      </visual>
+    <visual name="blade_0_rail_1">
+      <origin xyz="0.16 0.875 0.15" rpy="0 0 0" />
+      <geometry>
+        <box size="0.07 1.55 0.045" />
+        </geometry>
+      <material name="aged_oak" />
+      </visual>
+    <visual name="blade_0_cross_0">
+      <origin xyz="0.16 0.22 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.075 0.045 0.4" />
+        </geometry>
+      <material name="aged_oak" />
+      </visual>
+    <visual name="blade_0_cross_1">
+      <origin xyz="0.16 0.54 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.075 0.045 0.4" />
+        </geometry>
+      <material name="aged_oak" />
+      </visual>
+    <visual name="blade_0_cross_2">
+      <origin xyz="0.16 0.88 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.075 0.045 0.4" />
+        </geometry>
+      <material name="aged_oak" />
+      </visual>
+    <visual name="blade_0_cross_3">
+      <origin xyz="0.16 1.23 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.075 0.045 0.4" />
+        </geometry>
+      <material name="aged_oak" />
+      </visual>
+    <visual name="blade_0_cross_4">
+      <origin xyz="0.16 1.55 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.075 0.045 0.4" />
+        </geometry>
+      <material name="aged_oak" />
+      </visual>
+    <visual name="blade_0_brace_0">
+      <origin xyz="0.16 0.395 0" rpy="0.802346 0 0" />
+      <geometry>
+        <box size="0.05 0.417253 0.035" />
+        </geometry>
+      <material name="aged_oak" />
+      </visual>
+    <visual name="blade_0_brace_1">
+      <origin xyz="0.16 0.71 0" rpy="-0.722979 0 0" />
+      <geometry>
+        <box size="0.05 0.453431 0.035" />
+        </geometry>
+      <material name="aged_oak" />
+      </visual>
+    <visual name="blade_0_brace_2">
+      <origin xyz="0.16 1.055 0" rpy="0.708626 0 0" />
+      <geometry>
+        <box size="0.05 0.460977 0.035" />
+        </geometry>
+      <material name="aged_oak" />
+      </visual>
+    <visual name="blade_0_brace_3">
+      <origin xyz="0.16 1.39 0" rpy="-0.753151 0 0" />
+      <geometry>
+        <box size="0.05 0.438634 0.035" />
+        </geometry>
+      <material name="aged_oak" />
+      </visual>
+    <visual name="blade_1571_rail_0">
+      <origin xyz="0.16 0.15 0.875" rpy="1.5708 0 0" />
+      <geometry>
+        <box size="0.07 1.55 0.045" />
+        </geometry>
+      <material name="aged_oak" />
+      </visual>
+    <visual name="blade_1571_rail_1">
+      <origin xyz="0.16 -0.15 0.875" rpy="1.5708 0 0" />
+      <geometry>
+        <box size="0.07 1.55 0.045" />
+        </geometry>
+      <material name="aged_oak" />
+      </visual>
+    <visual name="blade_1571_cross_0">
+      <origin xyz="0.16 1.34711e-17 0.22" rpy="1.5708 0 0" />
+      <geometry>
+        <box size="0.075 0.045 0.4" />
+        </geometry>
+      <material name="aged_oak" />
+      </visual>
+    <visual name="blade_1571_cross_1">
+      <origin xyz="0.16 3.30655e-17 0.54" rpy="1.5708 0 0" />
+      <geometry>
+        <box size="0.075 0.045 0.4" />
+        </geometry>
+      <material name="aged_oak" />
+      </visual>
+    <visual name="blade_1571_cross_2">
+      <origin xyz="0.16 5.38845e-17 0.88" rpy="1.5708 0 0" />
+      <geometry>
+        <box size="0.075 0.045 0.4" />
+        </geometry>
+      <material name="aged_oak" />
+      </visual>
+    <visual name="blade_1571_cross_3">
+      <origin xyz="0.16 7.53158e-17 1.23" rpy="1.5708 0 0" />
+      <geometry>
+        <box size="0.075 0.045 0.4" />
+        </geometry>
+      <material name="aged_oak" />
+      </visual>
+    <visual name="blade_1571_cross_4">
+      <origin xyz="0.16 9.49101e-17 1.55" rpy="1.5708 0 0" />
+      <geometry>
+        <box size="0.075 0.045 0.4" />
+        </geometry>
+      <material name="aged_oak" />
+      </visual>
+    <visual name="blade_1571_brace_0">
+      <origin xyz="0.16 2.41868e-17 0.395" rpy="2.37314 0 0" />
+      <geometry>
+        <box size="0.05 0.417253 0.035" />
+        </geometry>
+      <material name="aged_oak" />
+      </visual>
+    <visual name="blade_1571_brace_1">
+      <origin xyz="0.16 4.3475e-17 0.71" rpy="0.847817 0 0" />
+      <geometry>
+        <box size="0.05 0.453431 0.035" />
+        </geometry>
+      <material name="aged_oak" />
+      </visual>
+    <visual name="blade_1571_brace_2">
+      <origin xyz="0.16 6.46001e-17 1.055" rpy="2.27942 0 0" />
+      <geometry>
+        <box size="0.05 0.460977 0.035" />
+        </geometry>
+      <material name="aged_oak" />
+      </visual>
+    <visual name="blade_1571_brace_3">
+      <origin xyz="0.16 8.5113e-17 1.39" rpy="0.817645 0 0" />
+      <geometry>
+        <box size="0.05 0.438634 0.035" />
+        </geometry>
+      <material name="aged_oak" />
+      </visual>
+    <visual name="blade_3142_rail_0">
+      <origin xyz="0.16 -0.875 0.15" rpy="3.14159 0 0" />
+      <geometry>
+        <box size="0.07 1.55 0.045" />
+        </geometry>
+      <material name="aged_oak" />
+      </visual>
+    <visual name="blade_3142_rail_1">
+      <origin xyz="0.16 -0.875 -0.15" rpy="3.14159 0 0" />
+      <geometry>
+        <box size="0.07 1.55 0.045" />
+        </geometry>
+      <material name="aged_oak" />
+      </visual>
+    <visual name="blade_3142_cross_0">
+      <origin xyz="0.16 -0.22 2.69422e-17" rpy="3.14159 0 0" />
+      <geometry>
+        <box size="0.075 0.045 0.4" />
+        </geometry>
+      <material name="aged_oak" />
+      </visual>
+    <visual name="blade_3142_cross_1">
+      <origin xyz="0.16 -0.54 6.61309e-17" rpy="3.14159 0 0" />
+      <geometry>
+        <box size="0.075 0.045 0.4" />
+        </geometry>
+      <material name="aged_oak" />
+      </visual>
+    <visual name="blade_3142_cross_2">
+      <origin xyz="0.16 -0.88 1.07769e-16" rpy="3.14159 0 0" />
+      <geometry>
+        <box size="0.075 0.045 0.4" />
+        </geometry>
+      <material name="aged_oak" />
+      </visual>
+    <visual name="blade_3142_cross_3">
+      <origin xyz="0.16 -1.23 1.50632e-16" rpy="3.14159 0 0" />
+      <geometry>
+        <box size="0.075 0.045 0.4" />
+        </geometry>
+      <material name="aged_oak" />
+      </visual>
+    <visual name="blade_3142_cross_4">
+      <origin xyz="0.16 -1.55 1.8982e-16" rpy="3.14159 0 0" />
+      <geometry>
+        <box size="0.075 0.045 0.4" />
+        </geometry>
+      <material name="aged_oak" />
+      </visual>
+    <visual name="blade_3142_brace_0">
+      <origin xyz="0.16 -0.395 4.83735e-17" rpy="3.94394 0 0" />
+      <geometry>
+        <box size="0.05 0.417253 0.035" />
+        </geometry>
+      <material name="aged_oak" />
+      </visual>
+    <visual name="blade_3142_brace_1">
+      <origin xyz="0.16 -0.71 8.69499e-17" rpy="2.41861 0 0" />
+      <geometry>
+        <box size="0.05 0.453431 0.035" />
+        </geometry>
+      <material name="aged_oak" />
+      </visual>
+    <visual name="blade_3142_brace_2">
+      <origin xyz="0.16 -1.055 1.292e-16" rpy="3.85022 0 0" />
+      <geometry>
+        <box size="0.05 0.460977 0.035" />
+        </geometry>
+      <material name="aged_oak" />
+      </visual>
+    <visual name="blade_3142_brace_3">
+      <origin xyz="0.16 -1.39 1.70226e-16" rpy="2.38844 0 0" />
+      <geometry>
+        <box size="0.05 0.438634 0.035" />
+        </geometry>
+      <material name="aged_oak" />
+      </visual>
+    <visual name="blade_4712_rail_0">
+      <origin xyz="0.16 -0.15 -0.875" rpy="4.71239 0 0" />
+      <geometry>
+        <box size="0.07 1.55 0.045" />
+        </geometry>
+      <material name="aged_oak" />
+      </visual>
+    <visual name="blade_4712_rail_1">
+      <origin xyz="0.16 0.15 -0.875" rpy="4.71239 0 0" />
+      <geometry>
+        <box size="0.07 1.55 0.045" />
+        </geometry>
+      <material name="aged_oak" />
+      </visual>
+    <visual name="blade_4712_cross_0">
+      <origin xyz="0.16 -4.04133e-17 -0.22" rpy="4.71239 0 0" />
+      <geometry>
+        <box size="0.075 0.045 0.4" />
+        </geometry>
+      <material name="aged_oak" />
+      </visual>
+    <visual name="blade_4712_cross_1">
+      <origin xyz="0.16 -9.91964e-17 -0.54" rpy="4.71239 0 0" />
+      <geometry>
+        <box size="0.075 0.045 0.4" />
+        </geometry>
+      <material name="aged_oak" />
+      </visual>
+    <visual name="blade_4712_cross_2">
+      <origin xyz="0.16 -1.61653e-16 -0.88" rpy="4.71239 0 0" />
+      <geometry>
+        <box size="0.075 0.045 0.4" />
+        </geometry>
+      <material name="aged_oak" />
+      </visual>
+    <visual name="blade_4712_cross_3">
+      <origin xyz="0.16 -2.25947e-16 -1.23" rpy="4.71239 0 0" />
+      <geometry>
+        <box size="0.075 0.045 0.4" />
+        </geometry>
+      <material name="aged_oak" />
+      </visual>
+    <visual name="blade_4712_cross_4">
+      <origin xyz="0.16 -2.8473e-16 -1.55" rpy="4.71239 0 0" />
+      <geometry>
+        <box size="0.075 0.045 0.4" />
+        </geometry>
+      <material name="aged_oak" />
+      </visual>
+    <visual name="blade_4712_brace_0">
+      <origin xyz="0.16 -7.25603e-17 -0.395" rpy="5.51473 0 0" />
+      <geometry>
+        <box size="0.05 0.417253 0.035" />
+        </geometry>
+      <material name="aged_oak" />
+      </visual>
+    <visual name="blade_4712_brace_1">
+      <origin xyz="0.16 -1.30425e-16 -0.71" rpy="3.98941 0 0" />
+      <geometry>
+        <box size="0.05 0.453431 0.035" />
+        </geometry>
+      <material name="aged_oak" />
+      </visual>
+    <visual name="blade_4712_brace_2">
+      <origin xyz="0.16 -1.938e-16 -1.055" rpy="5.42102 0 0" />
+      <geometry>
+        <box size="0.05 0.460977 0.035" />
+        </geometry>
+      <material name="aged_oak" />
+      </visual>
+    <visual name="blade_4712_brace_3">
+      <origin xyz="0.16 -2.55339e-16 -1.39" rpy="3.95924 0 0" />
+      <geometry>
+        <box size="0.05 0.438634 0.035" />
+        </geometry>
+      <material name="aged_oak" />
+      </visual>
+    </link>
+  <joint name="tower_to_cap" type="continuous">
+    <origin xyz="0 0 3.5" rpy="0 0 0" />
+    <parent link="tower" />
+    <child link="cap" />
+    <axis xyz="0 0 1" />
+    <limit effort="220" velocity="0.4" />
+    </joint>
+  <joint name="cap_to_sail_hub" type="continuous">
+    <origin xyz="0.79 0 0.38" rpy="0 0 0" />
+    <parent link="cap" />
+    <child link="sail_hub" />
+    <axis xyz="1 0 0" />
+    <limit effort="80" velocity="6" />
+    </joint>
+  </robot>

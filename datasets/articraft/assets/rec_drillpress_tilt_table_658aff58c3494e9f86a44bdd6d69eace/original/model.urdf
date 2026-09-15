@@ -1,0 +1,423 @@
+<robot name="radial_arm_drill_press">
+  <material name="cast_iron_blue_gray">
+    <color rgba="0.23 0.29 0.32 1" />
+    </material>
+  <material name="dark_cast_iron">
+    <color rgba="0.12 0.14 0.15 1" />
+    </material>
+  <material name="machined_steel">
+    <color rgba="0.72 0.72 0.68 1" />
+    </material>
+  <material name="blackened_slots">
+    <color rgba="0.025 0.025 0.025 1" />
+    </material>
+  <material name="brass_control_caps">
+    <color rgba="0.78 0.62 0.3 1" />
+    </material>
+  <link name="base">
+    <visual name="floor_plate">
+      <origin xyz="0.48 0 0.0525" rpy="0 0 0" />
+      <geometry>
+        <box size="0.98 0.64 0.105" />
+        </geometry>
+      <material name="dark_cast_iron">
+        <color rgba="0.12 0.14 0.15 1" />
+        </material>
+      </visual>
+    <visual name="round_column">
+      <origin xyz="0 0 0.915" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.095" length="1.62" />
+        </geometry>
+      <material name="cast_iron_blue_gray">
+        <color rgba="0.23 0.29 0.32 1" />
+        </material>
+      </visual>
+    <visual name="column_cap">
+      <origin xyz="0 0 1.76" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.125" length="0.07" />
+        </geometry>
+      <material name="dark_cast_iron">
+        <color rgba="0.12 0.14 0.15 1" />
+        </material>
+      </visual>
+    <visual name="table_support">
+      <origin xyz="0.435 0 0.405" rpy="0 0 0" />
+      <geometry>
+        <box size="0.745 0.125 0.08" />
+        </geometry>
+      <material name="cast_iron_blue_gray">
+        <color rgba="0.23 0.29 0.32 1" />
+        </material>
+      </visual>
+    <visual name="round_table">
+      <origin xyz="0.755 0 0.4575" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.355" length="0.055" />
+        </geometry>
+      <material name="cast_iron_blue_gray">
+        <color rgba="0.23 0.29 0.32 1" />
+        </material>
+      </visual>
+    <visual name="table_t_slot_0">
+      <origin xyz="0.755 -0.105 0.484" rpy="0 0 0" />
+      <geometry>
+        <box size="0.56 0.024 0.006" />
+        </geometry>
+      <material name="blackened_slots">
+        <color rgba="0.025 0.025 0.025 1" />
+        </material>
+      </visual>
+    <visual name="table_t_slot_1">
+      <origin xyz="0.755 0.105 0.484" rpy="0 0 0" />
+      <geometry>
+        <box size="0.56 0.024 0.006" />
+        </geometry>
+      <material name="blackened_slots">
+        <color rgba="0.025 0.025 0.025 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="arm">
+    <visual name="radial_arm_casting">
+      <geometry>
+        <mesh filename="assets/meshes/radial_arm_casting.obj" />
+        </geometry>
+      <material name="cast_iron_blue_gray">
+        <color rgba="0.23 0.29 0.32 1" />
+        </material>
+      </visual>
+    <visual name="front_slide_way">
+      <origin xyz="0.675 -0.068 0.071" rpy="0 0 0" />
+      <geometry>
+        <box size="0.94 0.018 0.018" />
+        </geometry>
+      <material name="machined_steel">
+        <color rgba="0.72 0.72 0.68 1" />
+        </material>
+      </visual>
+    <visual name="rear_slide_way">
+      <origin xyz="0.675 0.068 0.071" rpy="0 0 0" />
+      <geometry>
+        <box size="0.94 0.018 0.018" />
+        </geometry>
+      <material name="machined_steel">
+        <color rgba="0.72 0.72 0.68 1" />
+        </material>
+      </visual>
+    <visual name="bearing_shoe_0">
+      <origin xyz="0.13 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.07 0.028 0.18" />
+        </geometry>
+      <material name="machined_steel">
+        <color rgba="0.72 0.72 0.68 1" />
+        </material>
+      </visual>
+    <visual name="bearing_shoe_1">
+      <origin xyz="-0.13 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.07 0.028 0.18" />
+        </geometry>
+      <material name="machined_steel">
+        <color rgba="0.72 0.72 0.68 1" />
+        </material>
+      </visual>
+    <visual name="bearing_shoe_2">
+      <origin xyz="0 0.13 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.028 0.07 0.18" />
+        </geometry>
+      <material name="machined_steel">
+        <color rgba="0.72 0.72 0.68 1" />
+        </material>
+      </visual>
+    <visual name="bearing_shoe_3">
+      <origin xyz="0 -0.13 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.028 0.07 0.18" />
+        </geometry>
+      <material name="machined_steel">
+        <color rgba="0.72 0.72 0.68 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="head">
+    <visual name="sleeve_top">
+      <origin xyz="0 0 0.1075" rpy="0 0 0" />
+      <geometry>
+        <box size="0.35 0.31 0.055" />
+        </geometry>
+      <material name="cast_iron_blue_gray">
+        <color rgba="0.23 0.29 0.32 1" />
+        </material>
+      </visual>
+    <visual name="sleeve_bottom_0">
+      <origin xyz="0 -0.115 -0.1375" rpy="0 0 0" />
+      <geometry>
+        <box size="0.35 0.08 0.055" />
+        </geometry>
+      <material name="cast_iron_blue_gray">
+        <color rgba="0.23 0.29 0.32 1" />
+        </material>
+      </visual>
+    <visual name="sleeve_bottom_1">
+      <origin xyz="0 0.115 -0.1375" rpy="0 0 0" />
+      <geometry>
+        <box size="0.35 0.08 0.055" />
+        </geometry>
+      <material name="cast_iron_blue_gray">
+        <color rgba="0.23 0.29 0.32 1" />
+        </material>
+      </visual>
+    <visual name="sleeve_cheek_0">
+      <origin xyz="0 -0.1325 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.35 0.055 0.27" />
+        </geometry>
+      <material name="cast_iron_blue_gray">
+        <color rgba="0.23 0.29 0.32 1" />
+        </material>
+      </visual>
+    <visual name="sleeve_cheek_1">
+      <origin xyz="0 0.1325 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.35 0.055 0.27" />
+        </geometry>
+      <material name="cast_iron_blue_gray">
+        <color rgba="0.23 0.29 0.32 1" />
+        </material>
+      </visual>
+    <visual name="gearbox_throat_0">
+      <origin xyz="0.03 -0.08 -0.175" rpy="0 0 0" />
+      <geometry>
+        <box size="0.2 0.055 0.06" />
+        </geometry>
+      <material name="cast_iron_blue_gray">
+        <color rgba="0.23 0.29 0.32 1" />
+        </material>
+      </visual>
+    <visual name="gearbox_throat_1">
+      <origin xyz="0.03 0.08 -0.175" rpy="0 0 0" />
+      <geometry>
+        <box size="0.2 0.055 0.06" />
+        </geometry>
+      <material name="cast_iron_blue_gray">
+        <color rgba="0.23 0.29 0.32 1" />
+        </material>
+      </visual>
+    <visual name="gearbox_cheek_0">
+      <origin xyz="0.055 -0.112 -0.345" rpy="0 0 0" />
+      <geometry>
+        <box size="0.22 0.06 0.41" />
+        </geometry>
+      <material name="cast_iron_blue_gray">
+        <color rgba="0.23 0.29 0.32 1" />
+        </material>
+      </visual>
+    <visual name="gearbox_cheek_1">
+      <origin xyz="0.055 0.112 -0.345" rpy="0 0 0" />
+      <geometry>
+        <box size="0.22 0.06 0.41" />
+        </geometry>
+      <material name="cast_iron_blue_gray">
+        <color rgba="0.23 0.29 0.32 1" />
+        </material>
+      </visual>
+    <visual name="gearbox_back">
+      <origin xyz="-0.07 0 -0.345" rpy="0 0 0" />
+      <geometry>
+        <box size="0.06 0.22 0.41" />
+        </geometry>
+      <material name="cast_iron_blue_gray">
+        <color rgba="0.23 0.29 0.32 1" />
+        </material>
+      </visual>
+    <visual name="quill_guide_ring">
+      <origin xyz="0.055 0 -0.3" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/quill_guide_ring.obj" />
+        </geometry>
+      <material name="machined_steel">
+        <color rgba="0.72 0.72 0.68 1" />
+        </material>
+      </visual>
+    <visual name="guide_lug_0">
+      <origin xyz="0.055 -0.068 -0.3" rpy="0 0 0" />
+      <geometry>
+        <box size="0.07 0.03 0.026" />
+        </geometry>
+      <material name="cast_iron_blue_gray">
+        <color rgba="0.23 0.29 0.32 1" />
+        </material>
+      </visual>
+    <visual name="guide_lug_1">
+      <origin xyz="0.055 0.068 -0.3" rpy="0 0 0" />
+      <geometry>
+        <box size="0.07 0.03 0.026" />
+        </geometry>
+      <material name="cast_iron_blue_gray">
+        <color rgba="0.23 0.29 0.32 1" />
+        </material>
+      </visual>
+    <visual name="motor_pedestal">
+      <origin xyz="-0.035 0 0.17" rpy="0 0 0" />
+      <geometry>
+        <box size="0.15 0.18 0.07" />
+        </geometry>
+      <material name="dark_cast_iron">
+        <color rgba="0.12 0.14 0.15 1" />
+        </material>
+      </visual>
+    <visual name="horizontal_motor">
+      <origin xyz="-0.04 0 0.305" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.112" length="0.35" />
+        </geometry>
+      <material name="dark_cast_iron">
+        <color rgba="0.12 0.14 0.15 1" />
+        </material>
+      </visual>
+    <visual name="feed_shaft">
+      <origin xyz="0.055 0.15 -0.315" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.026" length="0.06" />
+        </geometry>
+      <material name="machined_steel">
+        <color rgba="0.72 0.72 0.68 1" />
+        </material>
+      </visual>
+    <visual name="slide_lock_knob">
+      <origin xyz="0.168 -0.137 -0.235" rpy="0 0 0" />
+      <geometry>
+        <box size="0.07 0.02 0.048" />
+        </geometry>
+      <material name="brass_control_caps">
+        <color rgba="0.78 0.62 0.3 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="quill">
+    <visual name="quill_sleeve">
+      <origin xyz="0 0 -0.0825" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.035" length="0.415" />
+        </geometry>
+      <material name="machined_steel">
+        <color rgba="0.72 0.72 0.68 1" />
+        </material>
+      </visual>
+    <visual name="drill_chuck">
+      <origin xyz="0 0 -0.326" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.046" length="0.072" />
+        </geometry>
+      <material name="dark_cast_iron">
+        <color rgba="0.12 0.14 0.15 1" />
+        </material>
+      </visual>
+    <visual name="drill_bit">
+      <origin xyz="0 0 -0.4645" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.205" />
+        </geometry>
+      <material name="machined_steel">
+        <color rgba="0.72 0.72 0.68 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="feed_handle">
+    <visual name="feed_hub">
+      <origin xyz="0 0.0275 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.055" length="0.055" />
+        </geometry>
+      <material name="dark_cast_iron">
+        <color rgba="0.12 0.14 0.15 1" />
+        </material>
+      </visual>
+    <visual name="feed_spoke_0">
+      <origin xyz="0.086 0.03 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.165" />
+        </geometry>
+      <material name="machined_steel">
+        <color rgba="0.72 0.72 0.68 1" />
+        </material>
+      </visual>
+    <visual name="feed_grip_0">
+      <origin xyz="0.172 0.03 0" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.023" />
+        </geometry>
+      <material name="brass_control_caps">
+        <color rgba="0.78 0.62 0.3 1" />
+        </material>
+      </visual>
+    <visual name="feed_spoke_1">
+      <origin xyz="-0.043 0.03 0.0744782" rpy="0 -0.523599 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.165" />
+        </geometry>
+      <material name="machined_steel">
+        <color rgba="0.72 0.72 0.68 1" />
+        </material>
+      </visual>
+    <visual name="feed_grip_1">
+      <origin xyz="-0.086 0.03 0.148956" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.023" />
+        </geometry>
+      <material name="brass_control_caps">
+        <color rgba="0.78 0.62 0.3 1" />
+        </material>
+      </visual>
+    <visual name="feed_spoke_2">
+      <origin xyz="-0.043 0.03 -0.0744782" rpy="0 -2.61799 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.165" />
+        </geometry>
+      <material name="machined_steel">
+        <color rgba="0.72 0.72 0.68 1" />
+        </material>
+      </visual>
+    <visual name="feed_grip_2">
+      <origin xyz="-0.086 0.03 -0.148956" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.023" />
+        </geometry>
+      <material name="brass_control_caps">
+        <color rgba="0.78 0.62 0.3 1" />
+        </material>
+      </visual>
+    </link>
+  <joint name="column_to_arm" type="continuous">
+    <origin xyz="0 0 1.45" rpy="0 0 0" />
+    <parent link="base" />
+    <child link="arm" />
+    <axis xyz="0 0 1" />
+    <limit effort="250" velocity="0.7" />
+    </joint>
+  <joint name="arm_to_head" type="prismatic">
+    <origin xyz="0.35 0 0" rpy="0 0 0" />
+    <parent link="arm" />
+    <child link="head" />
+    <axis xyz="1 0 0" />
+    <limit effort="850" velocity="0.22" lower="0" upper="0.62" />
+    </joint>
+  <joint name="head_to_quill" type="prismatic">
+    <origin xyz="0.055 0 -0.2" rpy="0 0 0" />
+    <parent link="head" />
+    <child link="quill" />
+    <axis xyz="0 0 -1" />
+    <limit effort="420" velocity="0.16" lower="0" upper="0.18" />
+    </joint>
+  <joint name="head_to_feed_handle" type="revolute">
+    <origin xyz="0.055 0.18 -0.315" rpy="0 0 0" />
+    <parent link="head" />
+    <child link="feed_handle" />
+    <axis xyz="0 1 0" />
+    <limit effort="18" velocity="2" lower="-0.85" upper="1.15" />
+    </joint>
+  </robot>

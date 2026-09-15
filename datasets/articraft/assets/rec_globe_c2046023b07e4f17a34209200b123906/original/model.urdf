@@ -1,0 +1,184 @@
+<robot name="executive_globe">
+  <material name="walnut">
+    <color rgba="0.3 0.18 0.1 1" />
+    </material>
+  <material name="brass">
+    <color rgba="0.76 0.63 0.32 1" />
+    </material>
+  <material name="dark_brass">
+    <color rgba="0.56 0.45 0.22 1" />
+    </material>
+  <material name="globe_ocean">
+    <color rgba="0.18 0.31 0.48 1" />
+    </material>
+  <material name="globe_land">
+    <color rgba="0.76 0.71 0.58 1" />
+    </material>
+  <link name="base">
+    <inertial>
+      <origin xyz="0 0 0.02" rpy="0 0 0" />
+      <mass value="1.8" />
+      <inertia ixx="0.0033504" ixy="0" ixz="0" iyy="0.0033504" iyz="0" izz="0.0062208" />
+      </inertial>
+    <visual name="base_disc">
+      <origin xyz="0 0 0.011" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.072" length="0.022" />
+        </geometry>
+      <material name="walnut">
+        <color rgba="0.3 0.18 0.1 1" />
+        </material>
+      </visual>
+    <visual name="base_bead">
+      <origin xyz="0 0 0.025" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.056" length="0.006" />
+        </geometry>
+      <material name="dark_brass">
+        <color rgba="0.56 0.45 0.22 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="support">
+    <inertial>
+      <origin xyz="0 0 0.13" rpy="0 0 0" />
+      <mass value="0.7" />
+      <inertia ixx="0.00441583" ixy="0" ixz="0" iyy="0.00730333" iyz="0" izz="0.0038325" />
+      </inertial>
+    <visual name="collar_shell">
+      <origin xyz="0 0 0.009" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.042" length="0.018" />
+        </geometry>
+      <material name="brass">
+        <color rgba="0.76 0.63 0.32 1" />
+        </material>
+      </visual>
+    <visual name="collar_cap">
+      <origin xyz="0 0 0.018" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.026" length="0.014" />
+        </geometry>
+      <material name="dark_brass">
+        <color rgba="0.56 0.45 0.22 1" />
+        </material>
+      </visual>
+    <visual name="support_stem">
+      <origin xyz="-0.0199312 0 0.0255617" rpy="0 0.907891 3.14159" />
+      <geometry>
+        <cylinder radius="0.0085" length="0.0505735" />
+        </geometry>
+      <material name="brass">
+        <color rgba="0.76 0.63 0.32 1" />
+        </material>
+      </visual>
+    <visual name="meridian_arc">
+      <geometry>
+        <mesh filename="assets/meshes/executive_globe_meridian.obj" />
+        </geometry>
+      <material name="brass">
+        <color rgba="0.76 0.63 0.32 1" />
+        </material>
+      </visual>
+    <visual name="lower_hub">
+      <origin xyz="-0.0438624 0 0.0371234" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.01" />
+        </geometry>
+      <material name="dark_brass">
+        <color rgba="0.56 0.45 0.22 1" />
+        </material>
+      </visual>
+    <visual name="upper_hub">
+      <origin xyz="0.0438624 0 0.238877" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.01" />
+        </geometry>
+      <material name="dark_brass">
+        <color rgba="0.56 0.45 0.22 1" />
+        </material>
+      </visual>
+    <visual name="lower_pivot_pin">
+      <origin xyz="-0.0394762 0 0.0472111" rpy="0 0.410152 0" />
+      <geometry>
+        <cylinder radius="0.0045" length="0.01" />
+        </geometry>
+      <material name="dark_brass">
+        <color rgba="0.56 0.45 0.22 1" />
+        </material>
+      </visual>
+    <visual name="upper_pivot_pin">
+      <origin xyz="0.0394762 0 0.228789" rpy="0 2.73144 3.14159" />
+      <geometry>
+        <cylinder radius="0.0045" length="0.01" />
+        </geometry>
+      <material name="dark_brass">
+        <color rgba="0.56 0.45 0.22 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="globe">
+    <inertial>
+      <mass value="0.8" />
+      <inertia ixx="0.00236672" ixy="0" ixz="0" iyy="0.00236672" iyz="0" izz="0.00236672" />
+      </inertial>
+    <visual name="globe_shell">
+      <geometry>
+        <sphere radius="0.086" />
+        </geometry>
+      <material name="globe_ocean">
+        <color rgba="0.18 0.31 0.48 1" />
+        </material>
+      </visual>
+    <visual name="north_bushing">
+      <origin xyz="0 0 0.09" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.008" />
+        </geometry>
+      <material name="brass">
+        <color rgba="0.76 0.63 0.32 1" />
+        </material>
+      </visual>
+    <visual name="south_bushing">
+      <origin xyz="0 0 -0.09" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.008" />
+        </geometry>
+      <material name="brass">
+        <color rgba="0.76 0.63 0.32 1" />
+        </material>
+      </visual>
+    <visual name="land_marker">
+      <origin xyz="0.058 0.02 0.033" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.018" />
+        </geometry>
+      <material name="globe_land">
+        <color rgba="0.76 0.71 0.58 1" />
+        </material>
+      </visual>
+    <visual name="land_marker_secondary">
+      <origin xyz="0.032 -0.028 -0.01" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.013" />
+        </geometry>
+      <material name="globe_land">
+        <color rgba="0.76 0.71 0.58 1" />
+        </material>
+      </visual>
+    </link>
+  <joint name="base_to_support" type="continuous">
+    <origin xyz="0 0 0.028" rpy="0 0 0" />
+    <parent link="base" />
+    <child link="support" />
+    <axis xyz="0 0 1" />
+    <limit effort="2" velocity="1.6" />
+    </joint>
+  <joint name="support_to_globe" type="continuous">
+    <origin xyz="0 0 0.138" rpy="0 0.410152 0" />
+    <parent link="support" />
+    <child link="globe" />
+    <axis xyz="0 0 1" />
+    <limit effort="0.8" velocity="4" />
+    </joint>
+  </robot>

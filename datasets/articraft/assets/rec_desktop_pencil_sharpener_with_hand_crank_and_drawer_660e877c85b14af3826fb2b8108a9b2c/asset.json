@@ -1,0 +1,175 @@
+{
+  "summary": {
+    "id": "rec_desktop_pencil_sharpener_with_hand_crank_and_drawer_660e877c85b14af3826fb2b8108a9b2c",
+    "category": "crank",
+    "robot_name": "classroom_pencil_sharpener",
+    "joint_count": 3,
+    "link_count": 5,
+    "target_link_count": 4,
+    "family": "rec_desktop_pencil_sharpener_with_hand_crank_and_drawer",
+    "warnings": [],
+    "diagonal": 0.2171497351228829,
+    "bytes": 6770935
+  },
+  "source": {
+    "dataset": "camvsl/Articraft-10K",
+    "revision": "3c79d5a05bb7cb6bf7bfee5e090176636ee3ac65",
+    "license": "CC-BY-4.0",
+    "url": "https://huggingface.co/datasets/camvsl/Articraft-10K/blob/3c79d5a05bb7cb6bf7bfee5e090176636ee3ac65/rec_desktop_pencil_sharpener_with_hand_crank_and_drawer_660e877c85b14af3826fb2b8108a9b2c.tar.gz",
+    "archive_sha256": "c3ec51694d59ea87c10ad67459205e1fe841d7def6ac86717f6fcbe7b0b8077d",
+    "archive": "rec_desktop_pencil_sharpener_with_hand_crank_and_drawer_660e877c85b14af3826fb2b8108a9b2c.tar.gz",
+    "label_status": "Original generated URDF reference; not manually verified or physically validated"
+  },
+  "links": [
+    {
+      "id": "link_000",
+      "name": "body",
+      "point_file": "inputs/link_000.npz",
+      "faces": 7404,
+      "vertices": 4680,
+      "bounds": [
+        [
+          -0.055,
+          -0.036,
+          0.0
+        ],
+        [
+          0.055,
+          0.042000044078441004,
+          0.128
+        ]
+      ]
+    },
+    {
+      "id": "link_001",
+      "name": "drawer",
+      "point_file": null,
+      "faces": 200,
+      "vertices": 114,
+      "bounds": [
+        [
+          -0.028000000000000004,
+          -0.029,
+          0.004500000000000001
+        ],
+        [
+          0.066,
+          0.029,
+          0.034499999999999996
+        ]
+      ]
+    },
+    {
+      "id": "link_002",
+      "name": "dial",
+      "point_file": "inputs/link_002.npz",
+      "faces": 1020,
+      "vertices": 1020,
+      "bounds": [
+        [
+          0.055,
+          -0.0205,
+          0.065506
+        ],
+        [
+          0.060500000000000005,
+          0.0205,
+          0.10699999999999998
+        ]
+      ]
+    },
+    {
+      "id": "link_003",
+      "name": "crank",
+      "point_file": "inputs/link_003.npz",
+      "faces": 512,
+      "vertices": 264,
+      "bounds": [
+        [
+          -0.0009999999999999992,
+          0.0419999595947776,
+          0.028554845381942
+        ],
+        [
+          0.0394411854971431,
+          0.07300001175421586,
+          0.0830000183659513
+        ]
+      ]
+    },
+    {
+      "id": "link_004",
+      "name": "knob",
+      "point_file": "inputs/link_004.npz",
+      "faces": 140,
+      "vertices": 74,
+      "bounds": [
+        [
+          0.027999999999999997,
+          0.0729999706144199,
+          0.023999966941208033
+        ],
+        [
+          0.044,
+          0.0910000293855801,
+          0.040499999999999994
+        ]
+      ]
+    }
+  ],
+  "joints": [
+    {
+      "name": "body_to_drawer",
+      "type": "prismatic",
+      "parent": "link_000",
+      "child": "link_001",
+      "reference_q": 0.0,
+      "mimic": null
+    },
+    {
+      "name": "body_to_dial",
+      "type": "continuous",
+      "parent": "link_000",
+      "child": "link_002",
+      "reference_q": 0.0,
+      "mimic": null
+    },
+    {
+      "name": "body_to_crank",
+      "type": "continuous",
+      "parent": "link_000",
+      "child": "link_003",
+      "reference_q": 0.0,
+      "mimic": null
+    },
+    {
+      "name": "crank_to_knob",
+      "type": "continuous",
+      "parent": "link_003",
+      "child": "link_004",
+      "reference_q": 0.0,
+      "mimic": null
+    }
+  ],
+  "bounds": [
+    [
+      -0.055,
+      -0.036,
+      0.0
+    ],
+    [
+      0.066,
+      0.0910000293855801,
+      0.128
+    ]
+  ],
+  "point_pool_size": 65536,
+  "reference_pose": "Zero position clamped to limits; mimic values propagated",
+  "qc": {
+    "finite_geometry": true,
+    "tree_valid": true,
+    "axis_unit": true,
+    "physical_collision_validation": false,
+    "visual_tessellation": "32 cylinder segments, icosphere subdivision 2"
+  }
+}

@@ -1,0 +1,735 @@
+<robot name="lighthouse_clock_tower">
+  <material name="masonry_white">
+    <color rgba="0.94 0.95 0.92 1" />
+    </material>
+  <material name="stone_gray">
+    <color rgba="0.61 0.61 0.6 1" />
+    </material>
+  <material name="iron_dark">
+    <color rgba="0.16 0.17 0.18 1" />
+    </material>
+  <material name="copper_roof">
+    <color rgba="0.34 0.43 0.36 1" />
+    </material>
+  <material name="clock_face_white">
+    <color rgba="0.96 0.95 0.9 1" />
+    </material>
+  <material name="brass">
+    <color rgba="0.74 0.61 0.29 1" />
+    </material>
+  <material name="glass">
+    <color rgba="0.8 0.9 0.98 0.35" />
+    </material>
+  <material name="lamp_glow">
+    <color rgba="0.98 0.88 0.52 0.75" />
+    </material>
+  <link name="tower">
+    <inertial>
+      <origin xyz="0 0 13.1" rpy="0 0 0" />
+      <mass value="85000" />
+      <inertia ixx="5.27142e+06" ixy="0" ixz="0" iyy="5.27142e+06" iyz="0" izz="818267" />
+      </inertial>
+    <visual name="base_plinth">
+      <origin xyz="0 0 0.7" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="3" length="1.4" />
+        </geometry>
+      <material name="stone_gray">
+        <color rgba="0.61 0.61 0.6 1" />
+        </material>
+      </visual>
+    <visual name="lower_collar">
+      <origin xyz="0 0 1.72" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="2.72" length="0.65" />
+        </geometry>
+      <material name="stone_gray">
+        <color rgba="0.61 0.61 0.6 1" />
+        </material>
+      </visual>
+    <visual name="shaft_shell">
+      <origin xyz="0 0 10.3" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="2.45" length="17.8" />
+        </geometry>
+      <material name="masonry_white">
+        <color rgba="0.94 0.95 0.92 1" />
+        </material>
+      </visual>
+    <visual name="gallery_support_cornice">
+      <origin xyz="0 0 18.85" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="2.62" length="0.58" />
+        </geometry>
+      <material name="stone_gray">
+        <color rgba="0.61 0.61 0.6 1" />
+        </material>
+      </visual>
+    <visual name="gallery_floor_ring">
+      <origin xyz="0 0 18.98" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/gallery_floor_ring.obj" />
+        </geometry>
+      <material name="stone_gray">
+        <color rgba="0.61 0.61 0.6 1" />
+        </material>
+      </visual>
+    <visual name="gallery_bracket_0">
+      <origin xyz="2.95 0 18.94" rpy="0 0 0" />
+      <geometry>
+        <box size="1.1 0.16 0.18" />
+        </geometry>
+      <material name="stone_gray">
+        <color rgba="0.61 0.61 0.6 1" />
+        </material>
+      </visual>
+    <visual name="gallery_bracket_1">
+      <origin xyz="2.55477 1.475 18.94" rpy="0 0 0.523599" />
+      <geometry>
+        <box size="1.1 0.16 0.18" />
+        </geometry>
+      <material name="stone_gray">
+        <color rgba="0.61 0.61 0.6 1" />
+        </material>
+      </visual>
+    <visual name="gallery_bracket_2">
+      <origin xyz="1.475 2.55477 18.94" rpy="0 0 1.0472" />
+      <geometry>
+        <box size="1.1 0.16 0.18" />
+        </geometry>
+      <material name="stone_gray">
+        <color rgba="0.61 0.61 0.6 1" />
+        </material>
+      </visual>
+    <visual name="gallery_bracket_3">
+      <origin xyz="1.80635e-16 2.95 18.94" rpy="0 0 1.5708" />
+      <geometry>
+        <box size="1.1 0.16 0.18" />
+        </geometry>
+      <material name="stone_gray">
+        <color rgba="0.61 0.61 0.6 1" />
+        </material>
+      </visual>
+    <visual name="gallery_bracket_4">
+      <origin xyz="-1.475 2.55477 18.94" rpy="0 0 2.0944" />
+      <geometry>
+        <box size="1.1 0.16 0.18" />
+        </geometry>
+      <material name="stone_gray">
+        <color rgba="0.61 0.61 0.6 1" />
+        </material>
+      </visual>
+    <visual name="gallery_bracket_5">
+      <origin xyz="-2.55477 1.475 18.94" rpy="0 0 2.61799" />
+      <geometry>
+        <box size="1.1 0.16 0.18" />
+        </geometry>
+      <material name="stone_gray">
+        <color rgba="0.61 0.61 0.6 1" />
+        </material>
+      </visual>
+    <visual name="gallery_bracket_6">
+      <origin xyz="-2.95 3.61271e-16 18.94" rpy="0 0 3.14159" />
+      <geometry>
+        <box size="1.1 0.16 0.18" />
+        </geometry>
+      <material name="stone_gray">
+        <color rgba="0.61 0.61 0.6 1" />
+        </material>
+      </visual>
+    <visual name="gallery_bracket_7">
+      <origin xyz="-2.55477 -1.475 18.94" rpy="0 0 3.66519" />
+      <geometry>
+        <box size="1.1 0.16 0.18" />
+        </geometry>
+      <material name="stone_gray">
+        <color rgba="0.61 0.61 0.6 1" />
+        </material>
+      </visual>
+    <visual name="gallery_bracket_8">
+      <origin xyz="-1.475 -2.55477 18.94" rpy="0 0 4.18879" />
+      <geometry>
+        <box size="1.1 0.16 0.18" />
+        </geometry>
+      <material name="stone_gray">
+        <color rgba="0.61 0.61 0.6 1" />
+        </material>
+      </visual>
+    <visual name="gallery_bracket_9">
+      <origin xyz="-5.41906e-16 -2.95 18.94" rpy="0 0 4.71239" />
+      <geometry>
+        <box size="1.1 0.16 0.18" />
+        </geometry>
+      <material name="stone_gray">
+        <color rgba="0.61 0.61 0.6 1" />
+        </material>
+      </visual>
+    <visual name="gallery_bracket_10">
+      <origin xyz="1.475 -2.55477 18.94" rpy="0 0 5.23599" />
+      <geometry>
+        <box size="1.1 0.16 0.18" />
+        </geometry>
+      <material name="stone_gray">
+        <color rgba="0.61 0.61 0.6 1" />
+        </material>
+      </visual>
+    <visual name="gallery_bracket_11">
+      <origin xyz="2.55477 -1.475 18.94" rpy="0 0 5.75959" />
+      <geometry>
+        <box size="1.1 0.16 0.18" />
+        </geometry>
+      <material name="stone_gray">
+        <color rgba="0.61 0.61 0.6 1" />
+        </material>
+      </visual>
+    <visual name="lantern_base">
+      <origin xyz="0 0 19.42" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="1.8" length="0.52" />
+        </geometry>
+      <material name="stone_gray">
+        <color rgba="0.61 0.61 0.6 1" />
+        </material>
+      </visual>
+    <visual name="lantern_glass_shell">
+      <origin xyz="0 0 19.65" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/lantern_glass_shell.obj" />
+        </geometry>
+      <material name="glass">
+        <color rgba="0.8 0.9 0.98 0.35" />
+        </material>
+      </visual>
+    <visual name="lantern_lower_ring">
+      <origin xyz="0 0 19.73" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="1.62" length="0.16" />
+        </geometry>
+      <material name="iron_dark">
+        <color rgba="0.16 0.17 0.18 1" />
+        </material>
+      </visual>
+    <visual name="lantern_upper_ring">
+      <origin xyz="0 0 22.57" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="1.66" length="0.16" />
+        </geometry>
+      <material name="iron_dark">
+        <color rgba="0.16 0.17 0.18 1" />
+        </material>
+      </visual>
+    <visual name="lantern_mullion_0">
+      <origin xyz="1.51 0 21.11" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.045" length="2.92" />
+        </geometry>
+      <material name="iron_dark">
+        <color rgba="0.16 0.17 0.18 1" />
+        </material>
+      </visual>
+    <visual name="lantern_mullion_1">
+      <origin xyz="1.06773 1.06773 21.11" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.045" length="2.92" />
+        </geometry>
+      <material name="iron_dark">
+        <color rgba="0.16 0.17 0.18 1" />
+        </material>
+      </visual>
+    <visual name="lantern_mullion_2">
+      <origin xyz="9.24608e-17 1.51 21.11" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.045" length="2.92" />
+        </geometry>
+      <material name="iron_dark">
+        <color rgba="0.16 0.17 0.18 1" />
+        </material>
+      </visual>
+    <visual name="lantern_mullion_3">
+      <origin xyz="-1.06773 1.06773 21.11" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.045" length="2.92" />
+        </geometry>
+      <material name="iron_dark">
+        <color rgba="0.16 0.17 0.18 1" />
+        </material>
+      </visual>
+    <visual name="lantern_mullion_4">
+      <origin xyz="-1.51 1.84922e-16 21.11" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.045" length="2.92" />
+        </geometry>
+      <material name="iron_dark">
+        <color rgba="0.16 0.17 0.18 1" />
+        </material>
+      </visual>
+    <visual name="lantern_mullion_5">
+      <origin xyz="-1.06773 -1.06773 21.11" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.045" length="2.92" />
+        </geometry>
+      <material name="iron_dark">
+        <color rgba="0.16 0.17 0.18 1" />
+        </material>
+      </visual>
+    <visual name="lantern_mullion_6">
+      <origin xyz="-2.77383e-16 -1.51 21.11" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.045" length="2.92" />
+        </geometry>
+      <material name="iron_dark">
+        <color rgba="0.16 0.17 0.18 1" />
+        </material>
+      </visual>
+    <visual name="lantern_mullion_7">
+      <origin xyz="1.06773 -1.06773 21.11" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.045" length="2.92" />
+        </geometry>
+      <material name="iron_dark">
+        <color rgba="0.16 0.17 0.18 1" />
+        </material>
+      </visual>
+    <visual name="lamp_pedestal">
+      <origin xyz="0 0 19.85" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.18" length="0.4" />
+        </geometry>
+      <material name="iron_dark">
+        <color rgba="0.16 0.17 0.18 1" />
+        </material>
+      </visual>
+    <visual name="lamp_core">
+      <origin xyz="0 0 20.55" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.24" length="1" />
+        </geometry>
+      <material name="lamp_glow">
+        <color rgba="0.98 0.88 0.52 0.75" />
+        </material>
+      </visual>
+    <visual name="lamp_lens">
+      <origin xyz="0 0 21.2" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.28" />
+        </geometry>
+      <material name="lamp_glow">
+        <color rgba="0.98 0.88 0.52 0.75" />
+        </material>
+      </visual>
+    <visual name="lantern_roof">
+      <origin xyz="0 0 23.85" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/lantern_roof.obj" />
+        </geometry>
+      <material name="copper_roof">
+        <color rgba="0.34 0.43 0.36 1" />
+        </material>
+      </visual>
+    <visual name="roof_finial_stem">
+      <origin xyz="0 0 25.3" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.08" length="0.5" />
+        </geometry>
+      <material name="brass">
+        <color rgba="0.74 0.61 0.29 1" />
+        </material>
+      </visual>
+    <visual name="roof_finial_ball">
+      <origin xyz="0 0 25.61" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.12" />
+        </geometry>
+      <material name="brass">
+        <color rgba="0.74 0.61 0.29 1" />
+        </material>
+      </visual>
+    <visual name="gallery_top_rail">
+      <origin xyz="0 0 20.2" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/gallery_top_rail.obj" />
+        </geometry>
+      <material name="iron_dark">
+        <color rgba="0.16 0.17 0.18 1" />
+        </material>
+      </visual>
+    <visual name="gallery_mid_rail">
+      <origin xyz="0 0 19.72" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/gallery_mid_rail.obj" />
+        </geometry>
+      <material name="iron_dark">
+        <color rgba="0.16 0.17 0.18 1" />
+        </material>
+      </visual>
+    <visual name="gallery_post_0">
+      <origin xyz="3.15 0 19.7" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.06" length="1" />
+        </geometry>
+      <material name="iron_dark">
+        <color rgba="0.16 0.17 0.18 1" />
+        </material>
+      </visual>
+    <visual name="gallery_post_1">
+      <origin xyz="2.91022 1.20545 19.7" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.06" length="1" />
+        </geometry>
+      <material name="iron_dark">
+        <color rgba="0.16 0.17 0.18 1" />
+        </material>
+      </visual>
+    <visual name="gallery_post_2">
+      <origin xyz="2.22739 2.22739 19.7" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.06" length="1" />
+        </geometry>
+      <material name="iron_dark">
+        <color rgba="0.16 0.17 0.18 1" />
+        </material>
+      </visual>
+    <visual name="gallery_post_3">
+      <origin xyz="1.20545 2.91022 19.7" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.06" length="1" />
+        </geometry>
+      <material name="iron_dark">
+        <color rgba="0.16 0.17 0.18 1" />
+        </material>
+      </visual>
+    <visual name="gallery_post_4">
+      <origin xyz="1.92882e-16 3.15 19.7" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.06" length="1" />
+        </geometry>
+      <material name="iron_dark">
+        <color rgba="0.16 0.17 0.18 1" />
+        </material>
+      </visual>
+    <visual name="gallery_post_5">
+      <origin xyz="-1.20545 2.91022 19.7" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.06" length="1" />
+        </geometry>
+      <material name="iron_dark">
+        <color rgba="0.16 0.17 0.18 1" />
+        </material>
+      </visual>
+    <visual name="gallery_post_6">
+      <origin xyz="-2.22739 2.22739 19.7" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.06" length="1" />
+        </geometry>
+      <material name="iron_dark">
+        <color rgba="0.16 0.17 0.18 1" />
+        </material>
+      </visual>
+    <visual name="gallery_post_7">
+      <origin xyz="-2.91022 1.20545 19.7" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.06" length="1" />
+        </geometry>
+      <material name="iron_dark">
+        <color rgba="0.16 0.17 0.18 1" />
+        </material>
+      </visual>
+    <visual name="gallery_post_8">
+      <origin xyz="-3.15 3.85764e-16 19.7" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.06" length="1" />
+        </geometry>
+      <material name="iron_dark">
+        <color rgba="0.16 0.17 0.18 1" />
+        </material>
+      </visual>
+    <visual name="gallery_post_9">
+      <origin xyz="-2.91022 -1.20545 19.7" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.06" length="1" />
+        </geometry>
+      <material name="iron_dark">
+        <color rgba="0.16 0.17 0.18 1" />
+        </material>
+      </visual>
+    <visual name="gallery_post_10">
+      <origin xyz="-2.22739 -2.22739 19.7" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.06" length="1" />
+        </geometry>
+      <material name="iron_dark">
+        <color rgba="0.16 0.17 0.18 1" />
+        </material>
+      </visual>
+    <visual name="gallery_post_11">
+      <origin xyz="-1.20545 -2.91022 19.7" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.06" length="1" />
+        </geometry>
+      <material name="iron_dark">
+        <color rgba="0.16 0.17 0.18 1" />
+        </material>
+      </visual>
+    <visual name="gallery_post_12">
+      <origin xyz="-5.78646e-16 -3.15 19.7" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.06" length="1" />
+        </geometry>
+      <material name="iron_dark">
+        <color rgba="0.16 0.17 0.18 1" />
+        </material>
+      </visual>
+    <visual name="gallery_post_13">
+      <origin xyz="1.20545 -2.91022 19.7" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.06" length="1" />
+        </geometry>
+      <material name="iron_dark">
+        <color rgba="0.16 0.17 0.18 1" />
+        </material>
+      </visual>
+    <visual name="gallery_post_14">
+      <origin xyz="2.22739 -2.22739 19.7" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.06" length="1" />
+        </geometry>
+      <material name="iron_dark">
+        <color rgba="0.16 0.17 0.18 1" />
+        </material>
+      </visual>
+    <visual name="gallery_post_15">
+      <origin xyz="2.91022 -1.20545 19.7" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.06" length="1" />
+        </geometry>
+      <material name="iron_dark">
+        <color rgba="0.16 0.17 0.18 1" />
+        </material>
+      </visual>
+    <visual name="clock_dial">
+      <origin xyz="0 2.5 10.8" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="1.68" length="0.12" />
+        </geometry>
+      <material name="clock_face_white">
+        <color rgba="0.96 0.95 0.9 1" />
+        </material>
+      </visual>
+    <visual name="clock_bezel">
+      <origin xyz="0 2.53 10.8" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="1.78" length="0.08" />
+        </geometry>
+      <material name="iron_dark">
+        <color rgba="0.16 0.17 0.18 1" />
+        </material>
+      </visual>
+    <visual name="clock_marker_0">
+      <origin xyz="0 2.57 12.08" rpy="0 0 0" />
+      <geometry>
+        <box size="0.11 0.04 0.38" />
+        </geometry>
+      <material name="iron_dark">
+        <color rgba="0.16 0.17 0.18 1" />
+        </material>
+      </visual>
+    <visual name="clock_marker_1">
+      <origin xyz="0.64 2.57 11.9085" rpy="0 0.523599 0" />
+      <geometry>
+        <box size="0.08 0.04 0.24" />
+        </geometry>
+      <material name="iron_dark">
+        <color rgba="0.16 0.17 0.18 1" />
+        </material>
+      </visual>
+    <visual name="clock_marker_2">
+      <origin xyz="1.10851 2.57 11.44" rpy="0 1.0472 0" />
+      <geometry>
+        <box size="0.08 0.04 0.24" />
+        </geometry>
+      <material name="iron_dark">
+        <color rgba="0.16 0.17 0.18 1" />
+        </material>
+      </visual>
+    <visual name="clock_marker_3">
+      <origin xyz="1.28 2.57 10.8" rpy="0 1.5708 0" />
+      <geometry>
+        <box size="0.11 0.04 0.38" />
+        </geometry>
+      <material name="iron_dark">
+        <color rgba="0.16 0.17 0.18 1" />
+        </material>
+      </visual>
+    <visual name="clock_marker_4">
+      <origin xyz="1.10851 2.57 10.16" rpy="0 2.0944 0" />
+      <geometry>
+        <box size="0.08 0.04 0.24" />
+        </geometry>
+      <material name="iron_dark">
+        <color rgba="0.16 0.17 0.18 1" />
+        </material>
+      </visual>
+    <visual name="clock_marker_5">
+      <origin xyz="0.64 2.57 9.69149" rpy="0 2.61799 0" />
+      <geometry>
+        <box size="0.08 0.04 0.24" />
+        </geometry>
+      <material name="iron_dark">
+        <color rgba="0.16 0.17 0.18 1" />
+        </material>
+      </visual>
+    <visual name="clock_marker_6">
+      <origin xyz="1.56755e-16 2.57 9.52" rpy="0 3.14159 0" />
+      <geometry>
+        <box size="0.11 0.04 0.38" />
+        </geometry>
+      <material name="iron_dark">
+        <color rgba="0.16 0.17 0.18 1" />
+        </material>
+      </visual>
+    <visual name="clock_marker_7">
+      <origin xyz="-0.64 2.57 9.69149" rpy="0 3.66519 0" />
+      <geometry>
+        <box size="0.08 0.04 0.24" />
+        </geometry>
+      <material name="iron_dark">
+        <color rgba="0.16 0.17 0.18 1" />
+        </material>
+      </visual>
+    <visual name="clock_marker_8">
+      <origin xyz="-1.10851 2.57 10.16" rpy="0 4.18879 0" />
+      <geometry>
+        <box size="0.08 0.04 0.24" />
+        </geometry>
+      <material name="iron_dark">
+        <color rgba="0.16 0.17 0.18 1" />
+        </material>
+      </visual>
+    <visual name="clock_marker_9">
+      <origin xyz="-1.28 2.57 10.8" rpy="0 4.71239 0" />
+      <geometry>
+        <box size="0.11 0.04 0.38" />
+        </geometry>
+      <material name="iron_dark">
+        <color rgba="0.16 0.17 0.18 1" />
+        </material>
+      </visual>
+    <visual name="clock_marker_10">
+      <origin xyz="-1.10851 2.57 11.44" rpy="0 5.23599 0" />
+      <geometry>
+        <box size="0.08 0.04 0.24" />
+        </geometry>
+      <material name="iron_dark">
+        <color rgba="0.16 0.17 0.18 1" />
+        </material>
+      </visual>
+    <visual name="clock_marker_11">
+      <origin xyz="-0.64 2.57 11.9085" rpy="0 5.75959 0" />
+      <geometry>
+        <box size="0.08 0.04 0.24" />
+        </geometry>
+      <material name="iron_dark">
+        <color rgba="0.16 0.17 0.18 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="hour_hand">
+    <inertial>
+      <origin xyz="0 0 0.35" rpy="0 0 0" />
+      <mass value="18" />
+      <inertia ixx="1.3575" ixy="0" ixz="0" iyy="1.48875" iyz="0" izz="0.13875" />
+      </inertial>
+    <visual name="hour_blade">
+      <geometry>
+        <mesh filename="assets/meshes/hour_hand_blade.obj" />
+        </geometry>
+      <material name="iron_dark">
+        <color rgba="0.16 0.17 0.18 1" />
+        </material>
+      </visual>
+    <visual name="hour_tip">
+      <origin xyz="0 0 0.7" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/hour_hand_tip.obj" />
+        </geometry>
+      <material name="iron_dark">
+        <color rgba="0.16 0.17 0.18 1" />
+        </material>
+      </visual>
+    <visual name="hour_counterweight">
+      <origin xyz="0 0 -0.12" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.055" length="0.024" />
+        </geometry>
+      <material name="iron_dark">
+        <color rgba="0.16 0.17 0.18 1" />
+        </material>
+      </visual>
+    <visual name="hour_hub">
+      <origin xyz="0 0.007 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.16" length="0.044" />
+        </geometry>
+      <material name="brass">
+        <color rgba="0.74 0.61 0.29 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="minute_hand">
+    <inertial>
+      <origin xyz="0 0.04 0.55" rpy="0 0 0" />
+      <mass value="12" />
+      <inertia ixx="2.105" ixy="0" ixz="0" iyy="2.1509" iyz="0" izz="0.0509" />
+      </inertial>
+    <visual name="minute_blade">
+      <origin xyz="0 0.04 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/minute_hand_blade.obj" />
+        </geometry>
+      <material name="brass">
+        <color rgba="0.74 0.61 0.29 1" />
+        </material>
+      </visual>
+    <visual name="minute_tip">
+      <origin xyz="0 0.04 1.04" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/minute_hand_tip.obj" />
+        </geometry>
+      <material name="brass">
+        <color rgba="0.74 0.61 0.29 1" />
+        </material>
+      </visual>
+    <visual name="minute_counterweight">
+      <origin xyz="0 0.04 -0.15" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.04" length="0.018" />
+        </geometry>
+      <material name="brass">
+        <color rgba="0.74 0.61 0.29 1" />
+        </material>
+      </visual>
+    <visual name="minute_hub">
+      <origin xyz="0 0.04 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.11" length="0.022" />
+        </geometry>
+      <material name="brass">
+        <color rgba="0.74 0.61 0.29 1" />
+        </material>
+      </visual>
+    </link>
+  <joint name="tower_to_hour_hand" type="continuous">
+    <origin xyz="0 2.58 10.8" rpy="0 0 0" />
+    <parent link="tower" />
+    <child link="hour_hand" />
+    <axis xyz="0 1 0" />
+    <limit effort="25" velocity="6.5" />
+    </joint>
+  <joint name="tower_to_minute_hand" type="continuous">
+    <origin xyz="0 2.58 10.8" rpy="0 0 0" />
+    <parent link="tower" />
+    <child link="minute_hand" />
+    <axis xyz="0 1 0" />
+    <limit effort="25" velocity="12" />
+    </joint>
+  </robot>

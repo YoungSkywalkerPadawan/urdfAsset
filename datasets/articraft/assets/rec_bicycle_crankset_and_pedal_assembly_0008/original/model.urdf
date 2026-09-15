@@ -1,0 +1,524 @@
+<robot name="bmx_crankset">
+  <material name="black_oxide">
+    <color rgba="0.11 0.11 0.12 1" />
+    </material>
+  <material name="forged_alloy">
+    <color rgba="0.56 0.57 0.6 1" />
+    </material>
+  <material name="chainring_alloy">
+    <color rgba="0.7 0.72 0.75 1" />
+    </material>
+  <material name="bolt_steel">
+    <color rgba="0.78 0.79 0.8 1" />
+    </material>
+  <material name="pedal_black">
+    <color rgba="0.08 0.08 0.09 1" />
+    </material>
+  <material name="pedal_deck">
+    <color rgba="0.18 0.19 0.2 1" />
+    </material>
+  <link name="bottom_bracket">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 1.5708 0" />
+      <mass value="0.42" />
+      <inertia ixx="0.00025494" ixy="0" ixz="0" iyy="0.00025494" iyz="0" izz="8.4e-05" />
+      </inertial>
+    <visual name="shell">
+      <geometry>
+        <mesh filename="assets/meshes/bmx_bottom_bracket_shell.obj" />
+        </geometry>
+      <material name="black_oxide">
+        <color rgba="0.11 0.11 0.12 1" />
+        </material>
+      </visual>
+    <visual name="right_cup">
+      <origin xyz="0.034 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/bmx_bottom_bracket_cup.obj" />
+        </geometry>
+      <material name="bolt_steel">
+        <color rgba="0.78 0.79 0.8 1" />
+        </material>
+      </visual>
+    <visual name="left_cup">
+      <origin xyz="-0.034 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/bmx_bottom_bracket_cup.obj" />
+        </geometry>
+      <material name="bolt_steel">
+        <color rgba="0.78 0.79 0.8 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="spindle">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 1.5708 0" />
+      <mass value="0.55" />
+      <inertia ixx="0.00134782" ixy="0" ixz="0" iyy="0.00134782" iyz="0" izz="4.6475e-05" />
+      </inertial>
+    <visual name="axle">
+      <origin xyz="0 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.011" length="0.17" />
+        </geometry>
+      <material name="black_oxide">
+        <color rgba="0.11 0.11 0.12 1" />
+        </material>
+      </visual>
+    <visual name="right_interface">
+      <origin xyz="0.076 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.013" length="0.018" />
+        </geometry>
+      <material name="black_oxide">
+        <color rgba="0.11 0.11 0.12 1" />
+        </material>
+      </visual>
+    <visual name="left_interface">
+      <origin xyz="-0.076 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.013" length="0.018" />
+        </geometry>
+      <material name="black_oxide">
+        <color rgba="0.11 0.11 0.12 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="right_arm">
+    <inertial>
+      <origin xyz="0.011 0 -0.086" rpy="0 0 0" />
+      <mass value="0.62" />
+      <inertia ixx="0.00165767" ixy="0" ixz="0" iyy="0.00168991" iyz="0" izz="7.35733e-05" />
+      </inertial>
+    <visual name="boss">
+      <origin xyz="0.011 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.022" />
+        </geometry>
+      <material name="forged_alloy">
+        <color rgba="0.56 0.57 0.6 1" />
+        </material>
+      </visual>
+    <visual name="beam">
+      <geometry>
+        <mesh filename="assets/meshes/bmx_crank_arm.obj" />
+        </geometry>
+      <material name="forged_alloy">
+        <color rgba="0.56 0.57 0.6 1" />
+        </material>
+      </visual>
+    <visual name="pedal_eye">
+      <origin xyz="0.008 0 -0.168" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/bmx_pedal_eye.obj" />
+        </geometry>
+      <material name="forged_alloy">
+        <color rgba="0.56 0.57 0.6 1" />
+        </material>
+      </visual>
+    <visual name="spider_tab_0">
+      <origin xyz="-0.001 0 0.024" rpy="0 0 0" />
+      <geometry>
+        <box size="0.006 0.01 0.042" />
+        </geometry>
+      <material name="forged_alloy">
+        <color rgba="0.56 0.57 0.6 1" />
+        </material>
+      </visual>
+    <visual name="spider_tab_1">
+      <origin xyz="-0.001 0.0228254 0.00741641" rpy="1.25664 0 0" />
+      <geometry>
+        <box size="0.006 0.01 0.042" />
+        </geometry>
+      <material name="forged_alloy">
+        <color rgba="0.56 0.57 0.6 1" />
+        </material>
+      </visual>
+    <visual name="spider_tab_2">
+      <origin xyz="-0.001 0.0141068 -0.0194164" rpy="2.51327 0 0" />
+      <geometry>
+        <box size="0.006 0.01 0.042" />
+        </geometry>
+      <material name="forged_alloy">
+        <color rgba="0.56 0.57 0.6 1" />
+        </material>
+      </visual>
+    <visual name="spider_tab_3">
+      <origin xyz="-0.001 -0.0141068 -0.0194164" rpy="3.76991 0 0" />
+      <geometry>
+        <box size="0.006 0.01 0.042" />
+        </geometry>
+      <material name="forged_alloy">
+        <color rgba="0.56 0.57 0.6 1" />
+        </material>
+      </visual>
+    <visual name="spider_tab_4">
+      <origin xyz="-0.001 -0.0228254 0.00741641" rpy="5.02655 0 0" />
+      <geometry>
+        <box size="0.006 0.01 0.042" />
+        </geometry>
+      <material name="forged_alloy">
+        <color rgba="0.56 0.57 0.6 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="left_arm">
+    <inertial>
+      <origin xyz="0.011 0 -0.086" rpy="0 0 0" />
+      <mass value="0.58" />
+      <inertia ixx="0.00155073" ixy="0" ixz="0" iyy="0.00158089" iyz="0" izz="6.88267e-05" />
+      </inertial>
+    <visual name="boss">
+      <origin xyz="0.011 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.022" />
+        </geometry>
+      <material name="forged_alloy">
+        <color rgba="0.56 0.57 0.6 1" />
+        </material>
+      </visual>
+    <visual name="beam">
+      <geometry>
+        <mesh filename="assets/meshes/bmx_crank_arm.obj" />
+        </geometry>
+      <material name="forged_alloy">
+        <color rgba="0.56 0.57 0.6 1" />
+        </material>
+      </visual>
+    <visual name="pedal_eye">
+      <origin xyz="0.008 0 -0.168" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/bmx_pedal_eye.obj" />
+        </geometry>
+      <material name="forged_alloy">
+        <color rgba="0.56 0.57 0.6 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="sprocket">
+    <inertial>
+      <origin xyz="-0.008 0 0" rpy="0 1.5708 0" />
+      <mass value="0.34" />
+      <inertia ixx="0.000443473" ixy="0" ixz="0" iyy="0.000443473" iyz="0" izz="0.00088128" />
+      </inertial>
+    <visual name="ring">
+      <origin xyz="-0.008 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/bmx_sprocket.obj" />
+        </geometry>
+      <material name="chainring_alloy">
+        <color rgba="0.7 0.72 0.75 1" />
+        </material>
+      </visual>
+    <visual name="bolt_0">
+      <origin xyz="-0.0045 0 0.038" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0045" length="0.007" />
+        </geometry>
+      <material name="bolt_steel">
+        <color rgba="0.78 0.79 0.8 1" />
+        </material>
+      </visual>
+    <visual name="bolt_1">
+      <origin xyz="-0.0045 0.0361401 0.0117426" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0045" length="0.007" />
+        </geometry>
+      <material name="bolt_steel">
+        <color rgba="0.78 0.79 0.8 1" />
+        </material>
+      </visual>
+    <visual name="bolt_2">
+      <origin xyz="-0.0045 0.0223358 -0.0307426" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0045" length="0.007" />
+        </geometry>
+      <material name="bolt_steel">
+        <color rgba="0.78 0.79 0.8 1" />
+        </material>
+      </visual>
+    <visual name="bolt_3">
+      <origin xyz="-0.0045 -0.0223358 -0.0307426" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0045" length="0.007" />
+        </geometry>
+      <material name="bolt_steel">
+        <color rgba="0.78 0.79 0.8 1" />
+        </material>
+      </visual>
+    <visual name="bolt_4">
+      <origin xyz="-0.0045 -0.0361401 0.0117426" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0045" length="0.007" />
+        </geometry>
+      <material name="bolt_steel">
+        <color rgba="0.78 0.79 0.8 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="right_pedal">
+    <inertial>
+      <origin xyz="0.04 0 0.004" rpy="0 0 0" />
+      <mass value="0.26" />
+      <inertia ixx="0.000208347" ixy="0" ixz="0" iyy="0.000147333" iyz="0" izz="0.000338347" />
+      </inertial>
+    <visual name="axle">
+      <origin xyz="0.033 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.066" />
+        </geometry>
+      <material name="bolt_steel">
+        <color rgba="0.78 0.79 0.8 1" />
+        </material>
+      </visual>
+    <visual name="inner_rail">
+      <origin xyz="0.022 0 0.005" rpy="0 0 0" />
+      <geometry>
+        <box size="0.01 0.084 0.012" />
+        </geometry>
+      <material name="pedal_black">
+        <color rgba="0.08 0.08 0.09 1" />
+        </material>
+      </visual>
+    <visual name="front_rail">
+      <origin xyz="0.048 0.041 0.008" rpy="0 0 0" />
+      <geometry>
+        <box size="0.06 0.012 0.008" />
+        </geometry>
+      <material name="pedal_black">
+        <color rgba="0.08 0.08 0.09 1" />
+        </material>
+      </visual>
+    <visual name="rear_rail">
+      <origin xyz="0.048 -0.041 0.008" rpy="0 0 0" />
+      <geometry>
+        <box size="0.06 0.012 0.008" />
+        </geometry>
+      <material name="pedal_black">
+        <color rgba="0.08 0.08 0.09 1" />
+        </material>
+      </visual>
+    <visual name="outer_rail">
+      <origin xyz="0.074 0 0.005" rpy="0 0 0" />
+      <geometry>
+        <box size="0.01 0.084 0.012" />
+        </geometry>
+      <material name="pedal_black">
+        <color rgba="0.08 0.08 0.09 1" />
+        </material>
+      </visual>
+    <visual name="deck">
+      <origin xyz="0.048 0 -0.002" rpy="0 0 0" />
+      <geometry>
+        <box size="0.056 0.066 0.004" />
+        </geometry>
+      <material name="pedal_deck">
+        <color rgba="0.18 0.19 0.2 1" />
+        </material>
+      </visual>
+    <visual name="pin_0">
+      <origin xyz="0.028 0.026 0.006" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0016" length="0.012" />
+        </geometry>
+      <material name="bolt_steel">
+        <color rgba="0.78 0.79 0.8 1" />
+        </material>
+      </visual>
+    <visual name="pin_1">
+      <origin xyz="0.028 -0.026 0.006" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0016" length="0.012" />
+        </geometry>
+      <material name="bolt_steel">
+        <color rgba="0.78 0.79 0.8 1" />
+        </material>
+      </visual>
+    <visual name="pin_2">
+      <origin xyz="0.046 0.026 0.006" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0016" length="0.012" />
+        </geometry>
+      <material name="bolt_steel">
+        <color rgba="0.78 0.79 0.8 1" />
+        </material>
+      </visual>
+    <visual name="pin_3">
+      <origin xyz="0.046 -0.026 0.006" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0016" length="0.012" />
+        </geometry>
+      <material name="bolt_steel">
+        <color rgba="0.78 0.79 0.8 1" />
+        </material>
+      </visual>
+    <visual name="pin_4">
+      <origin xyz="0.064 0.026 0.006" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0016" length="0.012" />
+        </geometry>
+      <material name="bolt_steel">
+        <color rgba="0.78 0.79 0.8 1" />
+        </material>
+      </visual>
+    <visual name="pin_5">
+      <origin xyz="0.064 -0.026 0.006" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0016" length="0.012" />
+        </geometry>
+      <material name="bolt_steel">
+        <color rgba="0.78 0.79 0.8 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="left_pedal">
+    <inertial>
+      <origin xyz="0.04 0 0.004" rpy="0 0 0" />
+      <mass value="0.26" />
+      <inertia ixx="0.000208347" ixy="0" ixz="0" iyy="0.000147333" iyz="0" izz="0.000338347" />
+      </inertial>
+    <visual name="axle">
+      <origin xyz="0.033 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.066" />
+        </geometry>
+      <material name="bolt_steel">
+        <color rgba="0.78 0.79 0.8 1" />
+        </material>
+      </visual>
+    <visual name="inner_rail">
+      <origin xyz="0.022 0 0.005" rpy="0 0 0" />
+      <geometry>
+        <box size="0.01 0.084 0.012" />
+        </geometry>
+      <material name="pedal_black">
+        <color rgba="0.08 0.08 0.09 1" />
+        </material>
+      </visual>
+    <visual name="front_rail">
+      <origin xyz="0.048 0.041 0.008" rpy="0 0 0" />
+      <geometry>
+        <box size="0.06 0.012 0.008" />
+        </geometry>
+      <material name="pedal_black">
+        <color rgba="0.08 0.08 0.09 1" />
+        </material>
+      </visual>
+    <visual name="rear_rail">
+      <origin xyz="0.048 -0.041 0.008" rpy="0 0 0" />
+      <geometry>
+        <box size="0.06 0.012 0.008" />
+        </geometry>
+      <material name="pedal_black">
+        <color rgba="0.08 0.08 0.09 1" />
+        </material>
+      </visual>
+    <visual name="outer_rail">
+      <origin xyz="0.074 0 0.005" rpy="0 0 0" />
+      <geometry>
+        <box size="0.01 0.084 0.012" />
+        </geometry>
+      <material name="pedal_black">
+        <color rgba="0.08 0.08 0.09 1" />
+        </material>
+      </visual>
+    <visual name="deck">
+      <origin xyz="0.048 0 -0.002" rpy="0 0 0" />
+      <geometry>
+        <box size="0.056 0.066 0.004" />
+        </geometry>
+      <material name="pedal_deck">
+        <color rgba="0.18 0.19 0.2 1" />
+        </material>
+      </visual>
+    <visual name="pin_0">
+      <origin xyz="0.028 0.026 0.006" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0016" length="0.012" />
+        </geometry>
+      <material name="bolt_steel">
+        <color rgba="0.78 0.79 0.8 1" />
+        </material>
+      </visual>
+    <visual name="pin_1">
+      <origin xyz="0.028 -0.026 0.006" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0016" length="0.012" />
+        </geometry>
+      <material name="bolt_steel">
+        <color rgba="0.78 0.79 0.8 1" />
+        </material>
+      </visual>
+    <visual name="pin_2">
+      <origin xyz="0.046 0.026 0.006" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0016" length="0.012" />
+        </geometry>
+      <material name="bolt_steel">
+        <color rgba="0.78 0.79 0.8 1" />
+        </material>
+      </visual>
+    <visual name="pin_3">
+      <origin xyz="0.046 -0.026 0.006" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0016" length="0.012" />
+        </geometry>
+      <material name="bolt_steel">
+        <color rgba="0.78 0.79 0.8 1" />
+        </material>
+      </visual>
+    <visual name="pin_4">
+      <origin xyz="0.064 0.026 0.006" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0016" length="0.012" />
+        </geometry>
+      <material name="bolt_steel">
+        <color rgba="0.78 0.79 0.8 1" />
+        </material>
+      </visual>
+    <visual name="pin_5">
+      <origin xyz="0.064 -0.026 0.006" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0016" length="0.012" />
+        </geometry>
+      <material name="bolt_steel">
+        <color rgba="0.78 0.79 0.8 1" />
+        </material>
+      </visual>
+    </link>
+  <joint name="bottom_bracket_spin" type="continuous">
+    <parent link="bottom_bracket" />
+    <child link="spindle" />
+    <axis xyz="1 0 0" />
+    <limit effort="180" velocity="25" />
+    </joint>
+  <joint name="spindle_to_right_arm" type="fixed">
+    <origin xyz="0.085 0 0" rpy="0 0 0" />
+    <parent link="spindle" />
+    <child link="right_arm" />
+    </joint>
+  <joint name="spindle_to_left_arm" type="fixed">
+    <origin xyz="-0.085 0 0" rpy="0 3.14159 0" />
+    <parent link="spindle" />
+    <child link="left_arm" />
+    </joint>
+  <joint name="right_arm_to_sprocket" type="fixed">
+    <origin xyz="0.012 0 0" rpy="0 0 0" />
+    <parent link="right_arm" />
+    <child link="sprocket" />
+    </joint>
+  <joint name="right_pedal_spin" type="continuous">
+    <origin xyz="0.008 0 -0.168" rpy="0 0 0" />
+    <parent link="right_arm" />
+    <child link="right_pedal" />
+    <axis xyz="1 0 0" />
+    <limit effort="20" velocity="22" />
+    </joint>
+  <joint name="left_pedal_spin" type="continuous">
+    <origin xyz="0.008 0 -0.168" rpy="0 0 0" />
+    <parent link="left_arm" />
+    <child link="left_pedal" />
+    <axis xyz="1 0 0" />
+    <limit effort="20" velocity="22" />
+    </joint>
+  </robot>

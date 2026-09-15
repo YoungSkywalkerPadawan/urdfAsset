@@ -1,0 +1,229 @@
+{
+  "summary": {
+    "id": "rec_wheelchair_6ae386918c244593abf427b9f0e03008",
+    "category": "wheel",
+    "robot_name": "outdoor_weatherproof_wheelchair",
+    "joint_count": 6,
+    "link_count": 7,
+    "target_link_count": 7,
+    "family": "rec_wheelchair",
+    "warnings": [],
+    "diagonal": 1.6173954371148695,
+    "bytes": 12185577
+  },
+  "source": {
+    "dataset": "camvsl/Articraft-10K",
+    "revision": "3c79d5a05bb7cb6bf7bfee5e090176636ee3ac65",
+    "license": "CC-BY-4.0",
+    "url": "https://huggingface.co/datasets/camvsl/Articraft-10K/blob/3c79d5a05bb7cb6bf7bfee5e090176636ee3ac65/rec_wheelchair_6ae386918c244593abf427b9f0e03008.tar.gz",
+    "archive_sha256": "4b12af395a48118e9f288a25b54e1519fb807996945d5da84ef2d911217a355d",
+    "archive": "rec_wheelchair_6ae386918c244593abf427b9f0e03008.tar.gz",
+    "label_status": "Original generated URDF reference; not manually verified or physically validated"
+  },
+  "links": [
+    {
+      "id": "link_000",
+      "name": "chair_frame",
+      "point_file": "inputs/link_000.npz",
+      "faces": 5232,
+      "vertices": 2700,
+      "bounds": [
+        [
+          -0.3400000734639334,
+          -0.29004961613996094,
+          0.09073559098303267
+        ],
+        [
+          0.3400000734639334,
+          0.576,
+          0.91
+        ]
+      ]
+    },
+    {
+      "id": "link_001",
+      "name": "left_drive_wheel",
+      "point_file": "inputs/link_001.npz",
+      "faces": 9136,
+      "vertices": 4885,
+      "bounds": [
+        [
+          0.3399997685883821,
+          -0.372,
+          0.018000000000000016
+        ],
+        [
+          0.44600000000000006,
+          0.21199999999999997,
+          0.602
+        ]
+      ]
+    },
+    {
+      "id": "link_002",
+      "name": "right_drive_wheel",
+      "point_file": "inputs/link_002.npz",
+      "faces": 9136,
+      "vertices": 4885,
+      "bounds": [
+        [
+          -0.44600000000000006,
+          -0.372,
+          0.018000000000000016
+        ],
+        [
+          -0.3399997685883821,
+          0.21199999999999997,
+          0.602
+        ]
+      ]
+    },
+    {
+      "id": "link_003",
+      "name": "left_caster_yoke",
+      "point_file": "inputs/link_003.npz",
+      "faces": 676,
+      "vertices": 354,
+      "bounds": [
+        [
+          0.22099997796080312,
+          0.43500000000000005,
+          0.020000000000000018
+        ],
+        [
+          0.2890000220391969,
+          0.495,
+          0.22
+        ]
+      ]
+    },
+    {
+      "id": "link_004",
+      "name": "right_caster_yoke",
+      "point_file": "inputs/link_004.npz",
+      "faces": 676,
+      "vertices": 354,
+      "bounds": [
+        [
+          -0.2890000220391969,
+          0.43500000000000005,
+          0.020000000000000018
+        ],
+        [
+          -0.22099997796080312,
+          0.495,
+          0.22
+        ]
+      ]
+    },
+    {
+      "id": "link_005",
+      "name": "left_caster_wheel",
+      "point_file": "inputs/link_005.npz",
+      "faces": 3456,
+      "vertices": 1862,
+      "bounds": [
+        [
+          0.238426,
+          0.388,
+          -0.05
+        ],
+        [
+          0.271574,
+          0.542,
+          0.104
+        ]
+      ]
+    },
+    {
+      "id": "link_006",
+      "name": "right_caster_wheel",
+      "point_file": "inputs/link_006.npz",
+      "faces": 3456,
+      "vertices": 1862,
+      "bounds": [
+        [
+          -0.271574,
+          0.388,
+          -0.05
+        ],
+        [
+          -0.238426,
+          0.542,
+          0.104
+        ]
+      ]
+    }
+  ],
+  "joints": [
+    {
+      "name": "left_drive_spin",
+      "type": "continuous",
+      "parent": "link_000",
+      "child": "link_001",
+      "reference_q": 0.0,
+      "mimic": null
+    },
+    {
+      "name": "right_drive_spin",
+      "type": "continuous",
+      "parent": "link_000",
+      "child": "link_002",
+      "reference_q": 0.0,
+      "mimic": null
+    },
+    {
+      "name": "left_caster_swivel",
+      "type": "continuous",
+      "parent": "link_000",
+      "child": "link_003",
+      "reference_q": 0.0,
+      "mimic": null
+    },
+    {
+      "name": "right_caster_swivel",
+      "type": "continuous",
+      "parent": "link_000",
+      "child": "link_004",
+      "reference_q": 0.0,
+      "mimic": null
+    },
+    {
+      "name": "left_caster_roll",
+      "type": "continuous",
+      "parent": "link_003",
+      "child": "link_005",
+      "reference_q": 0.0,
+      "mimic": null
+    },
+    {
+      "name": "right_caster_roll",
+      "type": "continuous",
+      "parent": "link_004",
+      "child": "link_006",
+      "reference_q": 0.0,
+      "mimic": null
+    }
+  ],
+  "bounds": [
+    [
+      -0.44600000000000006,
+      -0.372,
+      -0.05
+    ],
+    [
+      0.44600000000000006,
+      0.576,
+      0.91
+    ]
+  ],
+  "point_pool_size": 65536,
+  "reference_pose": "Zero position clamped to limits; mimic values propagated",
+  "qc": {
+    "finite_geometry": true,
+    "tree_valid": true,
+    "axis_unit": true,
+    "physical_collision_validation": false,
+    "visual_tessellation": "32 cylinder segments, icosphere subdivision 2"
+  }
+}

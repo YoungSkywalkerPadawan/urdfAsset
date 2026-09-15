@@ -1,0 +1,455 @@
+<robot name="professional_multimeter">
+  <material name="charcoal">
+    <color rgba="0.16 0.17 0.18 1" />
+    </material>
+  <material name="shell_yellow">
+    <color rgba="0.9 0.73 0.14 1" />
+    </material>
+  <material name="dial_grey">
+    <color rgba="0.58 0.6 0.62 1" />
+    </material>
+  <material name="display_glass">
+    <color rgba="0.22 0.37 0.33 0.62" />
+    </material>
+  <material name="lcd_tint">
+    <color rgba="0.66 0.74 0.56 1" />
+    </material>
+  <material name="soft_key_grey">
+    <color rgba="0.73 0.76 0.78 1" />
+    </material>
+  <material name="terminal_black">
+    <color rgba="0.08 0.08 0.09 1" />
+    </material>
+  <material name="terminal_red">
+    <color rgba="0.73 0.09 0.09 1" />
+    </material>
+  <material name="terminal_orange">
+    <color rgba="0.88 0.4 0.08 1" />
+    </material>
+  <link name="body">
+    <visual name="core_shell">
+      <geometry>
+        <mesh filename="assets/meshes/multimeter_body_core.obj" />
+        </geometry>
+      <material name="charcoal">
+        <color rgba="0.16 0.17 0.18 1" />
+        </material>
+      </visual>
+    <visual name="bumper_shell">
+      <geometry>
+        <mesh filename="assets/meshes/multimeter_bumper_shell.obj" />
+        </geometry>
+      <material name="shell_yellow">
+        <color rgba="0.9 0.73 0.14 1" />
+        </material>
+      </visual>
+    <visual name="dial_bezel">
+      <origin xyz="0 -0.0087 -0.022" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.032" length="0.0018" />
+        </geometry>
+      <material name="dial_grey">
+        <color rgba="0.58 0.6 0.62 1" />
+        </material>
+      </visual>
+    <visual name="dial_face">
+      <origin xyz="0 -0.0084 -0.022" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.024" length="0.0012" />
+        </geometry>
+      <material name="charcoal">
+        <color rgba="0.16 0.17 0.18 1" />
+        </material>
+      </visual>
+    <visual name="terminal_0">
+      <origin xyz="-0.028 -0.01225 -0.071" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0066" length="0.0025" />
+        </geometry>
+      <material name="terminal_black">
+        <color rgba="0.08 0.08 0.09 1" />
+        </material>
+      </visual>
+    <visual name="terminal_1">
+      <origin xyz="-0.01 -0.01225 -0.071" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0066" length="0.0025" />
+        </geometry>
+      <material name="terminal_orange">
+        <color rgba="0.88 0.4 0.08 1" />
+        </material>
+      </visual>
+    <visual name="terminal_2">
+      <origin xyz="0.01 -0.01225 -0.071" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0066" length="0.0025" />
+        </geometry>
+      <material name="terminal_black">
+        <color rgba="0.08 0.08 0.09 1" />
+        </material>
+      </visual>
+    <visual name="terminal_3">
+      <origin xyz="0.029 -0.01225 -0.071" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0066" length="0.0025" />
+        </geometry>
+      <material name="terminal_red">
+        <color rgba="0.73 0.09 0.09 1" />
+        </material>
+      </visual>
+    <visual name="pivot_pad_0">
+      <origin xyz="-0.039 0.011 -0.07" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0032" length="0.004" />
+        </geometry>
+      <material name="charcoal">
+        <color rgba="0.16 0.17 0.18 1" />
+        </material>
+      </visual>
+    <visual name="pivot_pad_1">
+      <origin xyz="0.039 0.011 -0.07" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0032" length="0.004" />
+        </geometry>
+      <material name="charcoal">
+        <color rgba="0.16 0.17 0.18 1" />
+        </material>
+      </visual>
+    <collision name="core_shell">
+      <geometry>
+        <mesh filename="assets/meshes/multimeter_body_core.obj" />
+        </geometry>
+      </collision>
+    <collision name="bumper_shell">
+      <geometry>
+        <mesh filename="assets/meshes/multimeter_bumper_shell.obj" />
+        </geometry>
+      </collision>
+    <collision name="dial_bezel">
+      <origin xyz="0 -0.0087 -0.022" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.032" length="0.0018" />
+        </geometry>
+      </collision>
+    <collision name="dial_face">
+      <origin xyz="0 -0.0084 -0.022" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.024" length="0.0012" />
+        </geometry>
+      </collision>
+    <collision name="terminal_0">
+      <origin xyz="-0.028 -0.01225 -0.071" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0066" length="0.0025" />
+        </geometry>
+      </collision>
+    <collision name="terminal_1">
+      <origin xyz="-0.01 -0.01225 -0.071" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0066" length="0.0025" />
+        </geometry>
+      </collision>
+    <collision name="terminal_2">
+      <origin xyz="0.01 -0.01225 -0.071" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0066" length="0.0025" />
+        </geometry>
+      </collision>
+    <collision name="terminal_3">
+      <origin xyz="0.029 -0.01225 -0.071" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0066" length="0.0025" />
+        </geometry>
+      </collision>
+    <collision name="pivot_pad_0">
+      <origin xyz="-0.039 0.011 -0.07" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0032" length="0.004" />
+        </geometry>
+      </collision>
+    <collision name="pivot_pad_1">
+      <origin xyz="0.039 0.011 -0.07" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0032" length="0.004" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="display">
+    <visual name="glass">
+      <origin xyz="0 0 0.0017" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.031 0.0034" />
+        </geometry>
+      <material name="display_glass">
+        <color rgba="0.22 0.37 0.33 0.62" />
+        </material>
+      </visual>
+    <visual name="lcd">
+      <origin xyz="0 0 0.0031" rpy="0 0 0" />
+      <geometry>
+        <box size="0.039 0.019 0.001" />
+        </geometry>
+      <material name="lcd_tint">
+        <color rgba="0.66 0.74 0.56 1" />
+        </material>
+      </visual>
+    <collision name="glass">
+      <origin xyz="0 0 0.0017" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.031 0.0034" />
+        </geometry>
+      </collision>
+    <collision name="lcd">
+      <origin xyz="0 0 0.0031" rpy="0 0 0" />
+      <geometry>
+        <box size="0.039 0.019 0.001" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="selector">
+    <visual name="knob">
+      <geometry>
+        <mesh filename="assets/meshes/multimeter_selector_knob.obj" />
+        </geometry>
+      <material name="charcoal">
+        <color rgba="0.16 0.17 0.18 1" />
+        </material>
+      </visual>
+    <collision name="knob">
+      <geometry>
+        <mesh filename="assets/meshes/multimeter_selector_knob.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="soft_key_0">
+    <visual name="cap">
+      <origin xyz="0 0 0.0023" rpy="0 0 0" />
+      <geometry>
+        <box size="0.0115 0.0052 0.0046" />
+        </geometry>
+      <material name="soft_key_grey">
+        <color rgba="0.73 0.76 0.78 1" />
+        </material>
+      </visual>
+    <visual name="stem">
+      <origin xyz="0 0 -0.0035" rpy="0 0 0" />
+      <geometry>
+        <box size="0.008 0.0032 0.007" />
+        </geometry>
+      <material name="soft_key_grey">
+        <color rgba="0.73 0.76 0.78 1" />
+        </material>
+      </visual>
+    <collision name="cap">
+      <origin xyz="0 0 0.0023" rpy="0 0 0" />
+      <geometry>
+        <box size="0.0115 0.0052 0.0046" />
+        </geometry>
+      </collision>
+    <collision name="stem">
+      <origin xyz="0 0 -0.0035" rpy="0 0 0" />
+      <geometry>
+        <box size="0.008 0.0032 0.007" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="soft_key_1">
+    <visual name="cap">
+      <origin xyz="0 0 0.0023" rpy="0 0 0" />
+      <geometry>
+        <box size="0.0115 0.0052 0.0046" />
+        </geometry>
+      <material name="soft_key_grey">
+        <color rgba="0.73 0.76 0.78 1" />
+        </material>
+      </visual>
+    <visual name="stem">
+      <origin xyz="0 0 -0.0035" rpy="0 0 0" />
+      <geometry>
+        <box size="0.008 0.0032 0.007" />
+        </geometry>
+      <material name="soft_key_grey">
+        <color rgba="0.73 0.76 0.78 1" />
+        </material>
+      </visual>
+    <collision name="cap">
+      <origin xyz="0 0 0.0023" rpy="0 0 0" />
+      <geometry>
+        <box size="0.0115 0.0052 0.0046" />
+        </geometry>
+      </collision>
+    <collision name="stem">
+      <origin xyz="0 0 -0.0035" rpy="0 0 0" />
+      <geometry>
+        <box size="0.008 0.0032 0.007" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="soft_key_2">
+    <visual name="cap">
+      <origin xyz="0 0 0.0023" rpy="0 0 0" />
+      <geometry>
+        <box size="0.0115 0.0052 0.0046" />
+        </geometry>
+      <material name="soft_key_grey">
+        <color rgba="0.73 0.76 0.78 1" />
+        </material>
+      </visual>
+    <visual name="stem">
+      <origin xyz="0 0 -0.0035" rpy="0 0 0" />
+      <geometry>
+        <box size="0.008 0.0032 0.007" />
+        </geometry>
+      <material name="soft_key_grey">
+        <color rgba="0.73 0.76 0.78 1" />
+        </material>
+      </visual>
+    <collision name="cap">
+      <origin xyz="0 0 0.0023" rpy="0 0 0" />
+      <geometry>
+        <box size="0.0115 0.0052 0.0046" />
+        </geometry>
+      </collision>
+    <collision name="stem">
+      <origin xyz="0 0 -0.0035" rpy="0 0 0" />
+      <geometry>
+        <box size="0.008 0.0032 0.007" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="soft_key_3">
+    <visual name="cap">
+      <origin xyz="0 0 0.0023" rpy="0 0 0" />
+      <geometry>
+        <box size="0.0115 0.0052 0.0046" />
+        </geometry>
+      <material name="soft_key_grey">
+        <color rgba="0.73 0.76 0.78 1" />
+        </material>
+      </visual>
+    <visual name="stem">
+      <origin xyz="0 0 -0.0035" rpy="0 0 0" />
+      <geometry>
+        <box size="0.008 0.0032 0.007" />
+        </geometry>
+      <material name="soft_key_grey">
+        <color rgba="0.73 0.76 0.78 1" />
+        </material>
+      </visual>
+    <collision name="cap">
+      <origin xyz="0 0 0.0023" rpy="0 0 0" />
+      <geometry>
+        <box size="0.0115 0.0052 0.0046" />
+        </geometry>
+      </collision>
+    <collision name="stem">
+      <origin xyz="0 0 -0.0035" rpy="0 0 0" />
+      <geometry>
+        <box size="0.008 0.0032 0.007" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="soft_key_4">
+    <visual name="cap">
+      <origin xyz="0 0 0.0023" rpy="0 0 0" />
+      <geometry>
+        <box size="0.0115 0.0052 0.0046" />
+        </geometry>
+      <material name="soft_key_grey">
+        <color rgba="0.73 0.76 0.78 1" />
+        </material>
+      </visual>
+    <visual name="stem">
+      <origin xyz="0 0 -0.0035" rpy="0 0 0" />
+      <geometry>
+        <box size="0.008 0.0032 0.007" />
+        </geometry>
+      <material name="soft_key_grey">
+        <color rgba="0.73 0.76 0.78 1" />
+        </material>
+      </visual>
+    <collision name="cap">
+      <origin xyz="0 0 0.0023" rpy="0 0 0" />
+      <geometry>
+        <box size="0.0115 0.0052 0.0046" />
+        </geometry>
+      </collision>
+    <collision name="stem">
+      <origin xyz="0 0 -0.0035" rpy="0 0 0" />
+      <geometry>
+        <box size="0.008 0.0032 0.007" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="stand">
+    <visual name="stand_frame">
+      <origin xyz="0 0.0019 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/multimeter_tilt_stand.obj" />
+        </geometry>
+      <material name="charcoal">
+        <color rgba="0.16 0.17 0.18 1" />
+        </material>
+      </visual>
+    <collision name="stand_frame">
+      <origin xyz="0 0.0019 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/multimeter_tilt_stand.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="body_to_display" type="fixed">
+    <origin xyz="0 -0.0068 0.056" rpy="1.5708 0 0" />
+    <parent link="body" />
+    <child link="display" />
+    </joint>
+  <joint name="body_to_selector" type="continuous">
+    <origin xyz="0 -0.0078 -0.022" rpy="1.5708 0 0" />
+    <parent link="body" />
+    <child link="selector" />
+    <axis xyz="0 0 1" />
+    <limit effort="0.25" velocity="8" />
+    </joint>
+  <joint name="body_to_soft_key_0" type="prismatic">
+    <origin xyz="-0.028 -0.0078 0.017" rpy="1.5708 0 0" />
+    <parent link="body" />
+    <child link="soft_key_0" />
+    <axis xyz="0 0 -1" />
+    <limit effort="4" velocity="0.06" lower="0" upper="0.0018" />
+    </joint>
+  <joint name="body_to_soft_key_1" type="prismatic">
+    <origin xyz="-0.014 -0.0078 0.017" rpy="1.5708 0 0" />
+    <parent link="body" />
+    <child link="soft_key_1" />
+    <axis xyz="0 0 -1" />
+    <limit effort="4" velocity="0.06" lower="0" upper="0.0018" />
+    </joint>
+  <joint name="body_to_soft_key_2" type="prismatic">
+    <origin xyz="0 -0.0078 0.017" rpy="1.5708 0 0" />
+    <parent link="body" />
+    <child link="soft_key_2" />
+    <axis xyz="0 0 -1" />
+    <limit effort="4" velocity="0.06" lower="0" upper="0.0018" />
+    </joint>
+  <joint name="body_to_soft_key_3" type="prismatic">
+    <origin xyz="0.014 -0.0078 0.017" rpy="1.5708 0 0" />
+    <parent link="body" />
+    <child link="soft_key_3" />
+    <axis xyz="0 0 -1" />
+    <limit effort="4" velocity="0.06" lower="0" upper="0.0018" />
+    </joint>
+  <joint name="body_to_soft_key_4" type="prismatic">
+    <origin xyz="0.028 -0.0078 0.017" rpy="1.5708 0 0" />
+    <parent link="body" />
+    <child link="soft_key_4" />
+    <axis xyz="0 0 -1" />
+    <limit effort="4" velocity="0.06" lower="0" upper="0.0018" />
+    </joint>
+  <joint name="body_to_stand" type="revolute">
+    <origin xyz="0 0.0085 -0.07" rpy="0 0 0" />
+    <parent link="body" />
+    <child link="stand" />
+    <axis xyz="-1 0 0" />
+    <limit effort="8" velocity="1.2" lower="0" upper="1.1" />
+    </joint>
+  </robot>

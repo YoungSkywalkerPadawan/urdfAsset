@@ -1,0 +1,818 @@
+<robot name="premium_traditional_windmill">
+  <material name="tower_paint">
+    <color rgba="0.9 0.91 0.88 1" />
+    </material>
+  <material name="graphite_metal">
+    <color rgba="0.23 0.25 0.28 1" />
+    </material>
+  <material name="blade_metal">
+    <color rgba="0.71 0.74 0.77 1" />
+    </material>
+  <material name="dark_polymer">
+    <color rgba="0.17 0.18 0.2 1" />
+    </material>
+  <material name="smoked_polymer">
+    <color rgba="0.18 0.22 0.24 0.55" />
+    </material>
+  <material name="rubber_black">
+    <color rgba="0.05 0.05 0.05 1" />
+    </material>
+  <link name="tower">
+    <inertial>
+      <origin xyz="0 0 0.59" rpy="0 0 0" />
+      <mass value="18" />
+      <inertia ixx="2.4636" ixy="0" ixz="0" iyy="2.559" iyz="0" izz="0.8454" />
+      </inertial>
+    <visual name="tower_shell">
+      <geometry>
+        <mesh filename="assets/meshes/tower_shell.obj" />
+        </geometry>
+      <material name="tower_paint">
+        <color rgba="0.9 0.91 0.88 1" />
+        </material>
+      </visual>
+    <visual name="base_plinth">
+      <origin xyz="0 0 0.06" rpy="0 0 0" />
+      <geometry>
+        <box size="0.56 0.5 0.12" />
+        </geometry>
+      <material name="graphite_metal">
+        <color rgba="0.23 0.25 0.28 1" />
+        </material>
+      </visual>
+    <visual name="crown_plate">
+      <origin xyz="0 0 1.16" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.185" length="0.04" />
+        </geometry>
+      <material name="graphite_metal">
+        <color rgba="0.23 0.25 0.28 1" />
+        </material>
+      </visual>
+    <visual name="service_door">
+      <origin xyz="0.204 0 0.15" rpy="0 0 0" />
+      <geometry>
+        <box size="0.11 0.02 0.235" />
+        </geometry>
+      <material name="dark_polymer">
+        <color rgba="0.17 0.18 0.2 1" />
+        </material>
+      </visual>
+    <visual name="front_window">
+      <origin xyz="0.17 0 0.56" rpy="0 0 0" />
+      <geometry>
+        <box size="0.076 0.016 0.104" />
+        </geometry>
+      <material name="smoked_polymer">
+        <color rgba="0.18 0.22 0.24 0.55" />
+        </material>
+      </visual>
+    <visual name="upper_window">
+      <origin xyz="0.138 0 0.875" rpy="0 0 0" />
+      <geometry>
+        <box size="0.062 0.016 0.086" />
+        </geometry>
+      <material name="smoked_polymer">
+        <color rgba="0.18 0.22 0.24 0.55" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="-0.185 -0.165 0.009" rpy="0 0 0" />
+      <geometry>
+        <box size="0.09 0.08 0.018" />
+        </geometry>
+      <material name="rubber_black">
+        <color rgba="0.05 0.05 0.05 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="-0.185 0.165 0.009" rpy="0 0 0" />
+      <geometry>
+        <box size="0.09 0.08 0.018" />
+        </geometry>
+      <material name="rubber_black">
+        <color rgba="0.05 0.05 0.05 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="0.185 -0.165 0.009" rpy="0 0 0" />
+      <geometry>
+        <box size="0.09 0.08 0.018" />
+        </geometry>
+      <material name="rubber_black">
+        <color rgba="0.05 0.05 0.05 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="0.185 0.165 0.009" rpy="0 0 0" />
+      <geometry>
+        <box size="0.09 0.08 0.018" />
+        </geometry>
+      <material name="rubber_black">
+        <color rgba="0.05 0.05 0.05 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="cap">
+    <inertial>
+      <origin xyz="-0.02 0 0.14" rpy="0 0 0" />
+      <mass value="4.6" />
+      <inertia ixx="0.0913867" ixy="0" ixz="0" iyy="0.197033" iyz="0" izz="0.228313" />
+      </inertial>
+    <visual name="yaw_plate">
+      <origin xyz="0 0 0.02" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.19" length="0.04" />
+        </geometry>
+      <material name="graphite_metal">
+        <color rgba="0.23 0.25 0.28 1" />
+        </material>
+      </visual>
+    <visual name="cap_shell">
+      <geometry>
+        <mesh filename="assets/meshes/cap_shell.obj" />
+        </geometry>
+      <material name="dark_polymer">
+        <color rgba="0.17 0.18 0.2 1" />
+        </material>
+      </visual>
+    <visual name="nacelle_deck">
+      <origin xyz="0.03 0 0.05" rpy="0 0 0" />
+      <geometry>
+        <box size="0.16 0.16 0.022" />
+        </geometry>
+      <material name="graphite_metal">
+        <color rgba="0.23 0.25 0.28 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="0.12 0.056 0.1" rpy="0 0 0" />
+      <geometry>
+        <box size="0.185 0.014 0.12" />
+        </geometry>
+      <material name="graphite_metal">
+        <color rgba="0.23 0.25 0.28 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="0.12 -0.056 0.1" rpy="0 0 0" />
+      <geometry>
+        <box size="0.185 0.014 0.12" />
+        </geometry>
+      <material name="graphite_metal">
+        <color rgba="0.23 0.25 0.28 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="0.145 0 0.176" rpy="0 0 0" />
+      <geometry>
+        <box size="0.105 0.118 0.022" />
+        </geometry>
+      <material name="graphite_metal">
+        <color rgba="0.23 0.25 0.28 1" />
+        </material>
+      </visual>
+    <visual name="nose_housing">
+      <origin xyz="0.245 0 0.148" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/nose_housing.obj" />
+        </geometry>
+      <material name="graphite_metal">
+        <color rgba="0.23 0.25 0.28 1" />
+        </material>
+      </visual>
+    <visual name="bearing_seat">
+      <origin xyz="0.245 0 0.148" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/bearing_seat.obj" />
+        </geometry>
+      <material name="graphite_metal">
+        <color rgba="0.23 0.25 0.28 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="-0.29 0 0.13" rpy="0 0 0" />
+      <geometry>
+        <box size="0.24 0.025 0.025" />
+        </geometry>
+      <material name="graphite_metal">
+        <color rgba="0.23 0.25 0.28 1" />
+        </material>
+      </visual>
+    <visual name="tail_vane">
+      <origin xyz="-0.44 0 0.188" rpy="0 0 0" />
+      <geometry>
+        <box size="0.11 0.006 0.18" />
+        </geometry>
+      <material name="dark_polymer">
+        <color rgba="0.17 0.18 0.2 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="-0.426 0 0.12" rpy="0 0 0" />
+      <geometry>
+        <box size="0.082 0.028 0.026" />
+        </geometry>
+      <material name="dark_polymer">
+        <color rgba="0.17 0.18 0.2 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="rotor">
+    <inertial>
+      <origin xyz="0.02 0 0" rpy="0 0 0" />
+      <mass value="3.2" />
+      <inertia ixx="0.405547" ixy="0" ixz="0" iyy="0.405547" iyz="0" izz="0.793813" />
+      </inertial>
+    <visual name="drive_shaft">
+      <origin xyz="-0.041 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.016" length="0.082" />
+        </geometry>
+      <material name="graphite_metal">
+        <color rgba="0.23 0.25 0.28 1" />
+        </material>
+      </visual>
+    <visual name="thrust_collar">
+      <origin xyz="0.004 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.032" length="0.008" />
+        </geometry>
+      <material name="graphite_metal">
+        <color rgba="0.23 0.25 0.28 1" />
+        </material>
+      </visual>
+    <visual name="hub_shell">
+      <origin xyz="0.05 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.058" length="0.09" />
+        </geometry>
+      <material name="graphite_metal">
+        <color rgba="0.23 0.25 0.28 1" />
+        </material>
+      </visual>
+    <visual name="spinner">
+      <origin xyz="0.126 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/rotor_spinner.obj" />
+        </geometry>
+      <material name="graphite_metal">
+        <color rgba="0.23 0.25 0.28 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="0.017 -0.023 0.088" rpy="0 0.300021 -0.785398" />
+      <geometry>
+        <cylinder radius="0.0095" length="0.0669925" />
+        </geometry>
+      <material name="graphite_metal">
+        <color rgba="0.23 0.25 0.28 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="0.017 0.023 0.088" rpy="0 0.300021 0.785398" />
+      <geometry>
+        <cylinder radius="0.0095" length="0.0669925" />
+        </geometry>
+      <material name="graphite_metal">
+        <color rgba="0.23 0.25 0.28 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="0.015 0 0.085" rpy="0 0.25169 0" />
+      <geometry>
+        <cylinder radius="0.008" length="0.0722772" />
+        </geometry>
+      <material name="graphite_metal">
+        <color rgba="0.23 0.25 0.28 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="0.029 -0.0455 0.3525" rpy="0 0.0699352 -1.25875" />
+      <geometry>
+        <cylinder radius="0.006" length="0.466139" />
+        </geometry>
+      <material name="blade_metal">
+        <color rgba="0.71 0.74 0.77 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="0.029 0.0455 0.3525" rpy="0 0.0699352 1.25875" />
+      <geometry>
+        <cylinder radius="0.006" length="0.466139" />
+        </geometry>
+      <material name="blade_metal">
+        <color rgba="0.71 0.74 0.77 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="0.029 0 0.3525" rpy="0 0.0215021 0" />
+      <geometry>
+        <cylinder radius="0.0048" length="0.465108" />
+        </geometry>
+      <material name="blade_metal">
+        <color rgba="0.71 0.74 0.77 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="0.024 0 0.12" rpy="0 1.5708 1.5708" />
+      <geometry>
+        <cylinder radius="0.0062" length="0.06" />
+        </geometry>
+      <material name="blade_metal">
+        <color rgba="0.71 0.74 0.77 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="0.034 0 0.585" rpy="0 1.5708 1.5708" />
+      <geometry>
+        <cylinder radius="0.0058" length="0.122" />
+        </geometry>
+      <material name="blade_metal">
+        <color rgba="0.71 0.74 0.77 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="0.0258 0 0.2037" rpy="0 1.5708 1.5708" />
+      <geometry>
+        <cylinder radius="0.0046" length="0.07116" />
+        </geometry>
+      <material name="blade_metal">
+        <color rgba="0.71 0.74 0.77 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="0.0274 0 0.2781" rpy="0 1.5708 1.5708" />
+      <geometry>
+        <cylinder radius="0.0046" length="0.08108" />
+        </geometry>
+      <material name="blade_metal">
+        <color rgba="0.71 0.74 0.77 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="0.029 0 0.3525" rpy="0 1.5708 1.5708" />
+      <geometry>
+        <cylinder radius="0.0046" length="0.091" />
+        </geometry>
+      <material name="blade_metal">
+        <color rgba="0.71 0.74 0.77 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="0.0306 0 0.4269" rpy="0 1.5708 1.5708" />
+      <geometry>
+        <cylinder radius="0.0046" length="0.10092" />
+        </geometry>
+      <material name="blade_metal">
+        <color rgba="0.71 0.74 0.77 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="0.0322 0 0.5013" rpy="0 1.5708 1.5708" />
+      <geometry>
+        <cylinder radius="0.0042" length="0.11084" />
+        </geometry>
+      <material name="blade_metal">
+        <color rgba="0.71 0.74 0.77 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="0.0265 0.00775 0.23625" rpy="0 0.314632 1.50467" />
+      <geometry>
+        <cylinder radius="0.004" length="0.244503" />
+        </geometry>
+      <material name="blade_metal">
+        <color rgba="0.71 0.74 0.77 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="0.0279 -0.01209 0.30135" rpy="0 0.228998 -1.4784" />
+      <geometry>
+        <cylinder radius="0.004" length="0.372422" />
+        </geometry>
+      <material name="blade_metal">
+        <color rgba="0.71 0.74 0.77 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="0.017 -0.088 -0.023" rpy="0 1.78133 -1.35544" />
+      <geometry>
+        <cylinder radius="0.0095" length="0.0669925" />
+        </geometry>
+      <material name="graphite_metal">
+        <color rgba="0.23 0.25 0.28 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="0.017 -0.088 0.023" rpy="0 1.36027 -1.35544" />
+      <geometry>
+        <cylinder radius="0.0095" length="0.0669925" />
+        </geometry>
+      <material name="graphite_metal">
+        <color rgba="0.23 0.25 0.28 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="0.015 -0.085 5.20475e-18" rpy="0 1.5708 -1.31911" />
+      <geometry>
+        <cylinder radius="0.008" length="0.0722772" />
+        </geometry>
+      <material name="graphite_metal">
+        <color rgba="0.23 0.25 0.28 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="0.029 -0.3525 -0.0455" rpy="0 1.63735 -1.54929" />
+      <geometry>
+        <cylinder radius="0.006" length="0.466139" />
+        </geometry>
+      <material name="blade_metal">
+        <color rgba="0.71 0.74 0.77 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="0.029 -0.3525 0.0455" rpy="0 1.50424 -1.54929" />
+      <geometry>
+        <cylinder radius="0.006" length="0.466139" />
+        </geometry>
+      <material name="blade_metal">
+        <color rgba="0.71 0.74 0.77 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="0.029 -0.3525 2.15844e-17" rpy="0 1.5708 -1.54929" />
+      <geometry>
+        <cylinder radius="0.0048" length="0.465108" />
+        </geometry>
+      <material name="blade_metal">
+        <color rgba="0.71 0.74 0.77 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="0.024 -0.12 6.93889e-18" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0062" length="0.06" />
+        </geometry>
+      <material name="blade_metal">
+        <color rgba="0.71 0.74 0.77 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="0.034 -0.585 3.46945e-17" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0058" length="0.122" />
+        </geometry>
+      <material name="blade_metal">
+        <color rgba="0.71 0.74 0.77 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="0.0258 -0.2037 1.38778e-17" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0046" length="0.07116" />
+        </geometry>
+      <material name="blade_metal">
+        <color rgba="0.71 0.74 0.77 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="0.0274 -0.2781 1.38778e-17" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0046" length="0.08108" />
+        </geometry>
+      <material name="blade_metal">
+        <color rgba="0.71 0.74 0.77 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="0.029 -0.3525 2.08167e-17" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0046" length="0.091" />
+        </geometry>
+      <material name="blade_metal">
+        <color rgba="0.71 0.74 0.77 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="0.0306 -0.4269 2.77556e-17" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0046" length="0.10092" />
+        </geometry>
+      <material name="blade_metal">
+        <color rgba="0.71 0.74 0.77 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="0.0322 -0.5013 2.77556e-17" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0042" length="0.11084" />
+        </geometry>
+      <material name="blade_metal">
+        <color rgba="0.71 0.74 0.77 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="0.0265 -0.23625 0.00775" rpy="0 1.25688 -1.54929" />
+      <geometry>
+        <cylinder radius="0.004" length="0.244503" />
+        </geometry>
+      <material name="blade_metal">
+        <color rgba="0.71 0.74 0.77 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="0.0279 -0.30135 -0.01209" rpy="0 1.7988 -1.54929" />
+      <geometry>
+        <cylinder radius="0.004" length="0.372422" />
+        </geometry>
+      <material name="blade_metal">
+        <color rgba="0.71 0.74 0.77 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="0.017 0.023 -0.088" rpy="0 2.84157 0.785398" />
+      <geometry>
+        <cylinder radius="0.0095" length="0.0669925" />
+        </geometry>
+      <material name="graphite_metal">
+        <color rgba="0.23 0.25 0.28 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="0.017 -0.023 -0.088" rpy="0 2.84157 -0.785398" />
+      <geometry>
+        <cylinder radius="0.0095" length="0.0669925" />
+        </geometry>
+      <material name="graphite_metal">
+        <color rgba="0.23 0.25 0.28 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="0.015 -1.04095e-17 -0.085" rpy="0 2.8899 -4.76252e-16" />
+      <geometry>
+        <cylinder radius="0.008" length="0.0722772" />
+        </geometry>
+      <material name="graphite_metal">
+        <color rgba="0.23 0.25 0.28 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="0.029 0.0455 -0.3525" rpy="0 3.07166 1.25875" />
+      <geometry>
+        <cylinder radius="0.006" length="0.466139" />
+        </geometry>
+      <material name="blade_metal">
+        <color rgba="0.71 0.74 0.77 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="0.029 -0.0455 -0.3525" rpy="0 3.07166 -1.25875" />
+      <geometry>
+        <cylinder radius="0.006" length="0.466139" />
+        </geometry>
+      <material name="blade_metal">
+        <color rgba="0.71 0.74 0.77 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="0.029 -4.31688e-17 -0.3525" rpy="0 3.12009 -5.69461e-15" />
+      <geometry>
+        <cylinder radius="0.0048" length="0.465108" />
+        </geometry>
+      <material name="blade_metal">
+        <color rgba="0.71 0.74 0.77 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="0.024 -1.38778e-17 -0.12" rpy="0 1.5708 -1.5708" />
+      <geometry>
+        <cylinder radius="0.0062" length="0.06" />
+        </geometry>
+      <material name="blade_metal">
+        <color rgba="0.71 0.74 0.77 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="0.034 -6.93889e-17 -0.585" rpy="0 1.5708 -1.5708" />
+      <geometry>
+        <cylinder radius="0.0058" length="0.122" />
+        </geometry>
+      <material name="blade_metal">
+        <color rgba="0.71 0.74 0.77 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="0.0258 -2.77556e-17 -0.2037" rpy="0 1.5708 -1.5708" />
+      <geometry>
+        <cylinder radius="0.0046" length="0.07116" />
+        </geometry>
+      <material name="blade_metal">
+        <color rgba="0.71 0.74 0.77 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="0.0274 -3.46945e-17 -0.2781" rpy="0 1.5708 -1.5708" />
+      <geometry>
+        <cylinder radius="0.0046" length="0.08108" />
+        </geometry>
+      <material name="blade_metal">
+        <color rgba="0.71 0.74 0.77 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="0.029 -4.16334e-17 -0.3525" rpy="0 1.5708 -1.5708" />
+      <geometry>
+        <cylinder radius="0.0046" length="0.091" />
+        </geometry>
+      <material name="blade_metal">
+        <color rgba="0.71 0.74 0.77 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="0.0306 -5.55112e-17 -0.4269" rpy="0 1.5708 -1.5708" />
+      <geometry>
+        <cylinder radius="0.0046" length="0.10092" />
+        </geometry>
+      <material name="blade_metal">
+        <color rgba="0.71 0.74 0.77 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="0.0322 -6.245e-17 -0.5013" rpy="0 1.5708 -1.5708" />
+      <geometry>
+        <cylinder radius="0.0042" length="0.11084" />
+        </geometry>
+      <material name="blade_metal">
+        <color rgba="0.71 0.74 0.77 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="0.0265 -0.00775 -0.23625" rpy="0 2.82696 -1.50467" />
+      <geometry>
+        <cylinder radius="0.004" length="0.244503" />
+        </geometry>
+      <material name="blade_metal">
+        <color rgba="0.71 0.74 0.77 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="0.0279 0.01209 -0.30135" rpy="0 2.91259 1.4784" />
+      <geometry>
+        <cylinder radius="0.004" length="0.372422" />
+        </geometry>
+      <material name="blade_metal">
+        <color rgba="0.71 0.74 0.77 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="0.017 0.088 0.023" rpy="0 1.36027 1.35544" />
+      <geometry>
+        <cylinder radius="0.0095" length="0.0669925" />
+        </geometry>
+      <material name="graphite_metal">
+        <color rgba="0.23 0.25 0.28 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="0.017 0.088 -0.023" rpy="0 1.78133 1.35544" />
+      <geometry>
+        <cylinder radius="0.0095" length="0.0669925" />
+        </geometry>
+      <material name="graphite_metal">
+        <color rgba="0.23 0.25 0.28 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="0.015 0.085 -1.56142e-17" rpy="0 1.5708 1.31911" />
+      <geometry>
+        <cylinder radius="0.008" length="0.0722772" />
+        </geometry>
+      <material name="graphite_metal">
+        <color rgba="0.23 0.25 0.28 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="0.029 0.3525 0.0455" rpy="0 1.50424 1.54929" />
+      <geometry>
+        <cylinder radius="0.006" length="0.466139" />
+        </geometry>
+      <material name="blade_metal">
+        <color rgba="0.71 0.74 0.77 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="0.029 0.3525 -0.0455" rpy="0 1.63735 1.54929" />
+      <geometry>
+        <cylinder radius="0.006" length="0.466139" />
+        </geometry>
+      <material name="blade_metal">
+        <color rgba="0.71 0.74 0.77 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="0.029 0.3525 -6.47532e-17" rpy="0 1.5708 1.54929" />
+      <geometry>
+        <cylinder radius="0.0048" length="0.465108" />
+        </geometry>
+      <material name="blade_metal">
+        <color rgba="0.71 0.74 0.77 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="0.024 0.12 -2.08167e-17" rpy="0 3.14159 0" />
+      <geometry>
+        <cylinder radius="0.0062" length="0.06" />
+        </geometry>
+      <material name="blade_metal">
+        <color rgba="0.71 0.74 0.77 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="0.034 0.585 -1.04083e-16" rpy="0 3.14159 0" />
+      <geometry>
+        <cylinder radius="0.0058" length="0.122" />
+        </geometry>
+      <material name="blade_metal">
+        <color rgba="0.71 0.74 0.77 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="0.0258 0.2037 -3.46945e-17" rpy="0 3.14159 0" />
+      <geometry>
+        <cylinder radius="0.0046" length="0.07116" />
+        </geometry>
+      <material name="blade_metal">
+        <color rgba="0.71 0.74 0.77 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="0.0274 0.2781 -4.85723e-17" rpy="0 3.14159 0" />
+      <geometry>
+        <cylinder radius="0.0046" length="0.08108" />
+        </geometry>
+      <material name="blade_metal">
+        <color rgba="0.71 0.74 0.77 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="0.029 0.3525 -6.245e-17" rpy="0 3.14159 0" />
+      <geometry>
+        <cylinder radius="0.0046" length="0.091" />
+        </geometry>
+      <material name="blade_metal">
+        <color rgba="0.71 0.74 0.77 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="0.0306 0.4269 -7.63278e-17" rpy="0 3.14159 0" />
+      <geometry>
+        <cylinder radius="0.0046" length="0.10092" />
+        </geometry>
+      <material name="blade_metal">
+        <color rgba="0.71 0.74 0.77 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="0.0322 0.5013 -9.02056e-17" rpy="0 3.14159 0" />
+      <geometry>
+        <cylinder radius="0.0042" length="0.11084" />
+        </geometry>
+      <material name="blade_metal">
+        <color rgba="0.71 0.74 0.77 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="0.0265 0.23625 -0.00775" rpy="0 1.88472 1.54929" />
+      <geometry>
+        <cylinder radius="0.004" length="0.244503" />
+        </geometry>
+      <material name="blade_metal">
+        <color rgba="0.71 0.74 0.77 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="0.0279 0.30135 0.01209" rpy="0 1.34279 1.54929" />
+      <geometry>
+        <cylinder radius="0.004" length="0.372422" />
+        </geometry>
+      <material name="blade_metal">
+        <color rgba="0.71 0.74 0.77 1" />
+        </material>
+      </visual>
+    </link>
+  <joint name="tower_to_cap" type="continuous">
+    <origin xyz="0 0 1.18" rpy="0 0 0" />
+    <parent link="tower" />
+    <child link="cap" />
+    <axis xyz="0 0 1" />
+    <limit effort="18" velocity="0.9" />
+    </joint>
+  <joint name="cap_to_rotor" type="continuous">
+    <origin xyz="0.245 0 0.148" rpy="0 0 0" />
+    <parent link="cap" />
+    <child link="rotor" />
+    <axis xyz="1 0 0" />
+    <limit effort="10" velocity="14" />
+    </joint>
+  </robot>

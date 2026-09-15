@@ -1,0 +1,334 @@
+<robot name="antique_desk_globe">
+  <material name="walnut">
+    <color rgba="0.3 0.18 0.1 1" />
+    </material>
+  <material name="dark_walnut">
+    <color rgba="0.22 0.13 0.07 1" />
+    </material>
+  <material name="antique_brass">
+    <color rgba="0.69 0.58 0.31 1" />
+    </material>
+  <material name="aged_brass">
+    <color rgba="0.57 0.46 0.24 1" />
+    </material>
+  <material name="parchment">
+    <color rgba="0.84 0.79 0.64 1" />
+    </material>
+  <material name="sepia">
+    <color rgba="0.42 0.31 0.18 1" />
+    </material>
+  <link name="base">
+    <inertial>
+      <origin xyz="0 0 0.1" rpy="0 0 0" />
+      <mass value="2.8" />
+      <inertia ixx="0.0332267" ixy="0" ixz="0" iyy="0.0332267" iyz="0" izz="0.0477867" />
+      </inertial>
+    <visual name="foot_pos_x">
+      <geometry>
+        <mesh filename="assets/meshes/pedestal_foot.obj" />
+        </geometry>
+      <material name="walnut">
+        <color rgba="0.3 0.18 0.1 1" />
+        </material>
+      </visual>
+    <visual name="foot_pos_y">
+      <origin xyz="0 0 0" rpy="0 0 1.5708" />
+      <geometry>
+        <mesh filename="assets/meshes/pedestal_foot.obj" />
+        </geometry>
+      <material name="walnut">
+        <color rgba="0.3 0.18 0.1 1" />
+        </material>
+      </visual>
+    <visual name="foot_neg_x">
+      <origin xyz="0 0 0" rpy="0 0 3.14159" />
+      <geometry>
+        <mesh filename="assets/meshes/pedestal_foot.obj" />
+        </geometry>
+      <material name="walnut">
+        <color rgba="0.3 0.18 0.1 1" />
+        </material>
+      </visual>
+    <visual name="foot_neg_y">
+      <origin xyz="0 0 0" rpy="0 0 4.71239" />
+      <geometry>
+        <mesh filename="assets/meshes/pedestal_foot.obj" />
+        </geometry>
+      <material name="walnut">
+        <color rgba="0.3 0.18 0.1 1" />
+        </material>
+      </visual>
+    <visual name="pedestal_hub">
+      <origin xyz="0 0 0.025" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.04" length="0.05" />
+        </geometry>
+      <material name="dark_walnut">
+        <color rgba="0.22 0.13 0.07 1" />
+        </material>
+      </visual>
+    <visual name="pedestal_neck">
+      <origin xyz="0 0 0.0725" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.028" length="0.045" />
+        </geometry>
+      <material name="walnut">
+        <color rgba="0.3 0.18 0.1 1" />
+        </material>
+      </visual>
+    <visual name="center_post">
+      <origin xyz="0 0 0.1375" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.017" length="0.085" />
+        </geometry>
+      <material name="walnut">
+        <color rgba="0.3 0.18 0.1 1" />
+        </material>
+      </visual>
+    <visual name="top_finial">
+      <origin xyz="0 0 0.176" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.023" length="0.012" />
+        </geometry>
+      <material name="dark_walnut">
+        <color rgba="0.22 0.13 0.07 1" />
+        </material>
+      </visual>
+    <visual name="support_arm_pos">
+      <geometry>
+        <mesh filename="assets/meshes/support_arm_pos.obj" />
+        </geometry>
+      <material name="aged_brass">
+        <color rgba="0.57 0.46 0.24 1" />
+        </material>
+      </visual>
+    <visual name="support_arm_neg">
+      <geometry>
+        <mesh filename="assets/meshes/support_arm_neg.obj" />
+        </geometry>
+      <material name="aged_brass">
+        <color rgba="0.57 0.46 0.24 1" />
+        </material>
+      </visual>
+    <visual name="support_connector_pos">
+      <origin xyz="-0.051 0.15 0.305" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0055" length="0.082" />
+        </geometry>
+      <material name="aged_brass">
+        <color rgba="0.57 0.46 0.24 1" />
+        </material>
+      </visual>
+    <visual name="support_connector_neg">
+      <origin xyz="-0.051 -0.15 0.305" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0055" length="0.082" />
+        </geometry>
+      <material name="aged_brass">
+        <color rgba="0.57 0.46 0.24 1" />
+        </material>
+      </visual>
+    <visual name="support_collar_pos">
+      <origin xyz="0 0.158 0.305" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.012" />
+        </geometry>
+      <material name="antique_brass">
+        <color rgba="0.69 0.58 0.31 1" />
+        </material>
+      </visual>
+    <visual name="support_collar_neg">
+      <origin xyz="0 -0.158 0.305" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.012" />
+        </geometry>
+      <material name="antique_brass">
+        <color rgba="0.69 0.58 0.31 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="meridian">
+    <inertial>
+      <mass value="0.65" />
+      <inertia ixx="0.0110933" ixy="0" ixz="0" iyy="0.00558052" iyz="0" izz="0.00558052" />
+      </inertial>
+    <visual name="meridian_arc_pos">
+      <geometry>
+        <mesh filename="assets/meshes/meridian_arc_pos.obj" />
+        </geometry>
+      <material name="antique_brass">
+        <color rgba="0.69 0.58 0.31 1" />
+        </material>
+      </visual>
+    <visual name="meridian_arc_neg">
+      <geometry>
+        <mesh filename="assets/meshes/meridian_arc_neg.obj" />
+        </geometry>
+      <material name="antique_brass">
+        <color rgba="0.69 0.58 0.31 1" />
+        </material>
+      </visual>
+    <visual name="trunnion_pos">
+      <origin xyz="0 0.14 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0042" length="0.024" />
+        </geometry>
+      <material name="aged_brass">
+        <color rgba="0.57 0.46 0.24 1" />
+        </material>
+      </visual>
+    <visual name="trunnion_neg">
+      <origin xyz="0 -0.14 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0042" length="0.024" />
+        </geometry>
+      <material name="aged_brass">
+        <color rgba="0.57 0.46 0.24 1" />
+        </material>
+      </visual>
+    <visual name="upper_pivot_bearing">
+      <origin xyz="0 0 0.122" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.01" />
+        </geometry>
+      <material name="aged_brass">
+        <color rgba="0.57 0.46 0.24 1" />
+        </material>
+      </visual>
+    <visual name="lower_pivot_bearing">
+      <origin xyz="0 0 -0.122" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.01" />
+        </geometry>
+      <material name="aged_brass">
+        <color rgba="0.57 0.46 0.24 1" />
+        </material>
+      </visual>
+    <visual name="upper_bridge_pos_left">
+      <origin xyz="0.0045 0.024 0.121" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0032" length="0.048" />
+        </geometry>
+      <material name="aged_brass">
+        <color rgba="0.57 0.46 0.24 1" />
+        </material>
+      </visual>
+    <visual name="upper_bridge_pos_right">
+      <origin xyz="-0.0045 0.024 0.121" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0032" length="0.048" />
+        </geometry>
+      <material name="aged_brass">
+        <color rgba="0.57 0.46 0.24 1" />
+        </material>
+      </visual>
+    <visual name="upper_bridge_neg_left">
+      <origin xyz="0.0045 -0.024 0.121" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0032" length="0.048" />
+        </geometry>
+      <material name="aged_brass">
+        <color rgba="0.57 0.46 0.24 1" />
+        </material>
+      </visual>
+    <visual name="upper_bridge_neg_right">
+      <origin xyz="-0.0045 -0.024 0.121" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0032" length="0.048" />
+        </geometry>
+      <material name="aged_brass">
+        <color rgba="0.57 0.46 0.24 1" />
+        </material>
+      </visual>
+    <visual name="lower_bridge_pos_left">
+      <origin xyz="0.0045 0.024 -0.121" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0032" length="0.048" />
+        </geometry>
+      <material name="aged_brass">
+        <color rgba="0.57 0.46 0.24 1" />
+        </material>
+      </visual>
+    <visual name="lower_bridge_pos_right">
+      <origin xyz="-0.0045 0.024 -0.121" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0032" length="0.048" />
+        </geometry>
+      <material name="aged_brass">
+        <color rgba="0.57 0.46 0.24 1" />
+        </material>
+      </visual>
+    <visual name="lower_bridge_neg_left">
+      <origin xyz="0.0045 -0.024 -0.121" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0032" length="0.048" />
+        </geometry>
+      <material name="aged_brass">
+        <color rgba="0.57 0.46 0.24 1" />
+        </material>
+      </visual>
+    <visual name="lower_bridge_neg_right">
+      <origin xyz="-0.0045 -0.024 -0.121" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0032" length="0.048" />
+        </geometry>
+      <material name="aged_brass">
+        <color rgba="0.57 0.46 0.24 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="globe">
+    <inertial>
+      <mass value="0.9" />
+      <inertia ixx="0.003969" ixy="0" ixz="0" iyy="0.003969" iyz="0" izz="0.003969" />
+      </inertial>
+    <visual name="globe_sphere">
+      <geometry>
+        <sphere radius="0.105" />
+        </geometry>
+      <material name="parchment">
+        <color rgba="0.84 0.79 0.64 1" />
+        </material>
+      </visual>
+    <visual name="prime_meridian_band">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/prime_meridian_band.obj" />
+        </geometry>
+      <material name="sepia">
+        <color rgba="0.42 0.31 0.18 1" />
+        </material>
+      </visual>
+    <visual name="north_pivot">
+      <origin xyz="0 0 0.111" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0038" length="0.012" />
+        </geometry>
+      <material name="aged_brass">
+        <color rgba="0.57 0.46 0.24 1" />
+        </material>
+      </visual>
+    <visual name="south_pivot">
+      <origin xyz="0 0 -0.111" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0038" length="0.012" />
+        </geometry>
+      <material name="aged_brass">
+        <color rgba="0.57 0.46 0.24 1" />
+        </material>
+      </visual>
+    </link>
+  <joint name="base_to_meridian" type="revolute">
+    <origin xyz="0 0 0.305" rpy="0 0.410152 0" />
+    <parent link="base" />
+    <child link="meridian" />
+    <axis xyz="0 1 0" />
+    <limit effort="4" velocity="1.2" lower="-0.65" upper="0.65" />
+    </joint>
+  <joint name="meridian_to_globe" type="continuous">
+    <parent link="meridian" />
+    <child link="globe" />
+    <axis xyz="0 0 1" />
+    <limit effort="1" velocity="4" />
+    </joint>
+  </robot>

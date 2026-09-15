@@ -1,0 +1,430 @@
+<robot name="suction_base_pencil_sharpener">
+  <material name="body_plastic">
+    <color rgba="0.83 0.16 0.17 1" />
+    </material>
+  <material name="dark_plastic">
+    <color rgba="0.17 0.17 0.18 1" />
+    </material>
+  <material name="drawer_plastic">
+    <color rgba="0.84 0.84 0.86 1" />
+    </material>
+  <material name="handle_grip">
+    <color rgba="0.1 0.1 0.11 1" />
+    </material>
+  <material name="lever_plastic">
+    <color rgba="0.09 0.09 0.1 1" />
+    </material>
+  <link name="body">
+    <visual name="base_shell">
+      <geometry>
+        <mesh filename="assets/meshes/sharpener_base.obj" />
+        </geometry>
+      <material name="dark_plastic">
+        <color rgba="0.17 0.17 0.18 1" />
+        </material>
+      </visual>
+    <visual name="floor">
+      <origin xyz="0 0 0.018" rpy="0 0 0" />
+      <geometry>
+        <box size="0.086 0.058 0.004" />
+        </geometry>
+      <material name="body_plastic">
+        <color rgba="0.83 0.16 0.17 1" />
+        </material>
+      </visual>
+    <visual name="rear_wall">
+      <origin xyz="-0.051 0 0.045" rpy="0 0 0" />
+      <geometry>
+        <box size="0.01 0.064 0.058" />
+        </geometry>
+      <material name="body_plastic">
+        <color rgba="0.83 0.16 0.17 1" />
+        </material>
+      </visual>
+    <visual name="left_wall">
+      <origin xyz="0 -0.0305 0.045" rpy="0 0 0" />
+      <geometry>
+        <box size="0.094 0.007 0.058" />
+        </geometry>
+      <material name="body_plastic">
+        <color rgba="0.83 0.16 0.17 1" />
+        </material>
+      </visual>
+    <visual name="right_wall">
+      <origin xyz="0 0.0305 0.045" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/sharpener_right_wall.obj" />
+        </geometry>
+      <material name="body_plastic">
+        <color rgba="0.83 0.16 0.17 1" />
+        </material>
+      </visual>
+    <visual name="front_lower">
+      <origin xyz="0.051 0 0.022" rpy="0 0 0" />
+      <geometry>
+        <box size="0.01 0.068 0.012" />
+        </geometry>
+      <material name="body_plastic">
+        <color rgba="0.83 0.16 0.17 1" />
+        </material>
+      </visual>
+    <visual name="body_shell">
+      <origin xyz="0.051 0.0295 0.041" rpy="0 0 0" />
+      <geometry>
+        <box size="0.01 0.009 0.024" />
+        </geometry>
+      <material name="body_plastic">
+        <color rgba="0.83 0.16 0.17 1" />
+        </material>
+      </visual>
+    <visual name="front_side_1">
+      <origin xyz="0.051 -0.0295 0.041" rpy="0 0 0" />
+      <geometry>
+        <box size="0.01 0.009 0.024" />
+        </geometry>
+      <material name="body_plastic">
+        <color rgba="0.83 0.16 0.17 1" />
+        </material>
+      </visual>
+    <visual name="front_bridge">
+      <origin xyz="0.051 0 0.059" rpy="0 0 0" />
+      <geometry>
+        <box size="0.01 0.068 0.012" />
+        </geometry>
+      <material name="body_plastic">
+        <color rgba="0.83 0.16 0.17 1" />
+        </material>
+      </visual>
+    <visual name="pencil_panel">
+      <origin xyz="0.051 0 0.065" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/sharpener_pencil_panel.obj" />
+        </geometry>
+      <material name="body_plastic">
+        <color rgba="0.83 0.16 0.17 1" />
+        </material>
+      </visual>
+    <visual name="front_upper_side_0">
+      <origin xyz="0.051 0.027 0.065" rpy="0 0 0" />
+      <geometry>
+        <box size="0.01 0.014 0.018" />
+        </geometry>
+      <material name="body_plastic">
+        <color rgba="0.83 0.16 0.17 1" />
+        </material>
+      </visual>
+    <visual name="front_upper_side_1">
+      <origin xyz="0.051 -0.027 0.065" rpy="0 0 0" />
+      <geometry>
+        <box size="0.01 0.014 0.018" />
+        </geometry>
+      <material name="body_plastic">
+        <color rgba="0.83 0.16 0.17 1" />
+        </material>
+      </visual>
+    <visual name="roof">
+      <origin xyz="0 0 0.0775" rpy="0 0 0" />
+      <geometry>
+        <box size="0.092 0.054 0.007" />
+        </geometry>
+      <material name="body_plastic">
+        <color rgba="0.83 0.16 0.17 1" />
+        </material>
+      </visual>
+    <visual name="top_cap">
+      <origin xyz="0 0 0.085" rpy="0 0 0" />
+      <geometry>
+        <box size="0.084 0.05 0.014" />
+        </geometry>
+      <material name="body_plastic">
+        <color rgba="0.83 0.16 0.17 1" />
+        </material>
+      </visual>
+    <visual name="lever_lug_0">
+      <origin xyz="0.024 0.01 -0.001" rpy="0 0 0" />
+      <geometry>
+        <box size="0.01 0.006 0.01" />
+        </geometry>
+      <material name="dark_plastic">
+        <color rgba="0.17 0.17 0.18 1" />
+        </material>
+      </visual>
+    <visual name="lever_lug_1">
+      <origin xyz="0.024 -0.01 -0.001" rpy="0 0 0" />
+      <geometry>
+        <box size="0.01 0.006 0.01" />
+        </geometry>
+      <material name="dark_plastic">
+        <color rgba="0.17 0.17 0.18 1" />
+        </material>
+      </visual>
+    <collision name="base_shell">
+      <geometry>
+        <mesh filename="assets/meshes/sharpener_base.obj" />
+        </geometry>
+      </collision>
+    <collision name="floor">
+      <origin xyz="0 0 0.018" rpy="0 0 0" />
+      <geometry>
+        <box size="0.086 0.058 0.004" />
+        </geometry>
+      </collision>
+    <collision name="rear_wall">
+      <origin xyz="-0.051 0 0.045" rpy="0 0 0" />
+      <geometry>
+        <box size="0.01 0.064 0.058" />
+        </geometry>
+      </collision>
+    <collision name="left_wall">
+      <origin xyz="0 -0.0305 0.045" rpy="0 0 0" />
+      <geometry>
+        <box size="0.094 0.007 0.058" />
+        </geometry>
+      </collision>
+    <collision name="right_wall">
+      <origin xyz="0 0.0305 0.045" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/sharpener_right_wall.obj" />
+        </geometry>
+      </collision>
+    <collision name="front_lower">
+      <origin xyz="0.051 0 0.022" rpy="0 0 0" />
+      <geometry>
+        <box size="0.01 0.068 0.012" />
+        </geometry>
+      </collision>
+    <collision name="body_shell">
+      <origin xyz="0.051 0.0295 0.041" rpy="0 0 0" />
+      <geometry>
+        <box size="0.01 0.009 0.024" />
+        </geometry>
+      </collision>
+    <collision name="front_side_1">
+      <origin xyz="0.051 -0.0295 0.041" rpy="0 0 0" />
+      <geometry>
+        <box size="0.01 0.009 0.024" />
+        </geometry>
+      </collision>
+    <collision name="front_bridge">
+      <origin xyz="0.051 0 0.059" rpy="0 0 0" />
+      <geometry>
+        <box size="0.01 0.068 0.012" />
+        </geometry>
+      </collision>
+    <collision name="pencil_panel">
+      <origin xyz="0.051 0 0.065" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/sharpener_pencil_panel.obj" />
+        </geometry>
+      </collision>
+    <collision name="front_upper_side_0">
+      <origin xyz="0.051 0.027 0.065" rpy="0 0 0" />
+      <geometry>
+        <box size="0.01 0.014 0.018" />
+        </geometry>
+      </collision>
+    <collision name="front_upper_side_1">
+      <origin xyz="0.051 -0.027 0.065" rpy="0 0 0" />
+      <geometry>
+        <box size="0.01 0.014 0.018" />
+        </geometry>
+      </collision>
+    <collision name="roof">
+      <origin xyz="0 0 0.0775" rpy="0 0 0" />
+      <geometry>
+        <box size="0.092 0.054 0.007" />
+        </geometry>
+      </collision>
+    <collision name="top_cap">
+      <origin xyz="0 0 0.085" rpy="0 0 0" />
+      <geometry>
+        <box size="0.084 0.05 0.014" />
+        </geometry>
+      </collision>
+    <collision name="lever_lug_0">
+      <origin xyz="0.024 0.01 -0.001" rpy="0 0 0" />
+      <geometry>
+        <box size="0.01 0.006 0.01" />
+        </geometry>
+      </collision>
+    <collision name="lever_lug_1">
+      <origin xyz="0.024 -0.01 -0.001" rpy="0 0 0" />
+      <geometry>
+        <box size="0.01 0.006 0.01" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="drawer">
+    <visual name="front_panel">
+      <geometry>
+        <mesh filename="assets/meshes/drawer_panel.obj" />
+        </geometry>
+      <material name="dark_plastic">
+        <color rgba="0.17 0.17 0.18 1" />
+        </material>
+      </visual>
+    <visual name="tray">
+      <geometry>
+        <mesh filename="assets/meshes/drawer_tray.obj" />
+        </geometry>
+      <material name="drawer_plastic">
+        <color rgba="0.84 0.84 0.86 1" />
+        </material>
+      </visual>
+    <collision name="front_panel">
+      <geometry>
+        <mesh filename="assets/meshes/drawer_panel.obj" />
+        </geometry>
+      </collision>
+    <collision name="tray">
+      <geometry>
+        <mesh filename="assets/meshes/drawer_tray.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="crank">
+    <visual name="shaft">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.004" length="0.03" />
+        </geometry>
+      <material name="handle_grip">
+        <color rgba="0.1 0.1 0.11 1" />
+        </material>
+      </visual>
+    <visual name="hub">
+      <origin xyz="0 0.0055 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.007" length="0.003" />
+        </geometry>
+      <material name="dark_plastic">
+        <color rgba="0.17 0.17 0.18 1" />
+        </material>
+      </visual>
+    <visual name="arm">
+      <origin xyz="0.024 0.015 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.048 0.008 0.006" />
+        </geometry>
+      <material name="dark_plastic">
+        <color rgba="0.17 0.17 0.18 1" />
+        </material>
+      </visual>
+    <visual name="drop">
+      <origin xyz="0.044 0.015 -0.012" rpy="0 0 0" />
+      <geometry>
+        <box size="0.008 0.008 0.024" />
+        </geometry>
+      <material name="dark_plastic">
+        <color rgba="0.17 0.17 0.18 1" />
+        </material>
+      </visual>
+    <visual name="handle_mesh">
+      <origin xyz="0.044 0.019 -0.024" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0055" length="0.022" />
+        </geometry>
+      <material name="handle_grip">
+        <color rgba="0.1 0.1 0.11 1" />
+        </material>
+      </visual>
+    <collision name="shaft">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.004" length="0.03" />
+        </geometry>
+      </collision>
+    <collision name="hub">
+      <origin xyz="0 0.0055 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.007" length="0.003" />
+        </geometry>
+      </collision>
+    <collision name="arm">
+      <origin xyz="0.024 0.015 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.048 0.008 0.006" />
+        </geometry>
+      </collision>
+    <collision name="drop">
+      <origin xyz="0.044 0.015 -0.012" rpy="0 0 0" />
+      <geometry>
+        <box size="0.008 0.008 0.024" />
+        </geometry>
+      </collision>
+    <collision name="handle_mesh">
+      <origin xyz="0.044 0.019 -0.024" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0055" length="0.022" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="lever">
+    <visual name="pivot_barrel">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0035" length="0.014" />
+        </geometry>
+      <material name="lever_plastic">
+        <color rgba="0.09 0.09 0.1 1" />
+        </material>
+      </visual>
+    <visual name="arm">
+      <origin xyz="-0.023 0 -0.004" rpy="0 0 0" />
+      <geometry>
+        <box size="0.046 0.01 0.006" />
+        </geometry>
+      <material name="lever_plastic">
+        <color rgba="0.09 0.09 0.1 1" />
+        </material>
+      </visual>
+    <visual name="lever_mesh">
+      <origin xyz="-0.044 0 -0.004" rpy="0 0 0" />
+      <geometry>
+        <box size="0.02 0.018 0.006" />
+        </geometry>
+      <material name="lever_plastic">
+        <color rgba="0.09 0.09 0.1 1" />
+        </material>
+      </visual>
+    <collision name="pivot_barrel">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0035" length="0.014" />
+        </geometry>
+      </collision>
+    <collision name="arm">
+      <origin xyz="-0.023 0 -0.004" rpy="0 0 0" />
+      <geometry>
+        <box size="0.046 0.01 0.006" />
+        </geometry>
+      </collision>
+    <collision name="lever_mesh">
+      <origin xyz="-0.044 0 -0.004" rpy="0 0 0" />
+      <geometry>
+        <box size="0.02 0.018 0.006" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="body_to_drawer" type="prismatic">
+    <origin xyz="0.056 0 0.041" rpy="0 0 0" />
+    <parent link="body" />
+    <child link="drawer" />
+    <axis xyz="1 0 0" />
+    <limit effort="35" velocity="0.2" lower="0" upper="0.034" />
+    </joint>
+  <joint name="body_to_crank" type="continuous">
+    <origin xyz="-0.004 0.0305 0.058" rpy="0 0 0" />
+    <parent link="body" />
+    <child link="crank" />
+    <axis xyz="0 1 0" />
+    <limit effort="8" velocity="10" />
+    </joint>
+  <joint name="body_to_lever" type="revolute">
+    <origin xyz="0.024 0 -0.004" rpy="0 0 0" />
+    <parent link="body" />
+    <child link="lever" />
+    <axis xyz="0 -1 0" />
+    <limit effort="6" velocity="2" lower="0" upper="1.05" />
+    </joint>
+  </robot>

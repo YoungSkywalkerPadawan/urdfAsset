@@ -1,0 +1,205 @@
+<robot name="minimalist_globe">
+  <material name="matte_black">
+    <color rgba="0.11 0.11 0.12 1" />
+    </material>
+  <material name="graphite">
+    <color rgba="0.22 0.23 0.25 1" />
+    </material>
+  <material name="brushed_steel">
+    <color rgba="0.72 0.74 0.76 1" />
+    </material>
+  <material name="ocean_blue">
+    <color rgba="0.22 0.44 0.67 1" />
+    </material>
+  <material name="land_sage">
+    <color rgba="0.62 0.7 0.58 1" />
+    </material>
+  <link name="base_ring">
+    <inertial>
+      <origin xyz="0 0 0.015" rpy="0 0 0" />
+      <mass value="1.6" />
+      <inertia ixx="0.00657333" ixy="0" ixz="0" iyy="0.00657333" iyz="0" izz="0.0129067" />
+      </inertial>
+    <visual name="outer_ring">
+      <origin xyz="0 0 0.012" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/globe_base_ring.obj" />
+        </geometry>
+      <material name="matte_black">
+        <color rgba="0.11 0.11 0.12 1" />
+        </material>
+      </visual>
+    <visual name="base_hub">
+      <origin xyz="0 0 0.007" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.028" length="0.014" />
+        </geometry>
+      <material name="graphite">
+        <color rgba="0.22 0.23 0.25 1" />
+        </material>
+      </visual>
+    <visual name="bridge_0">
+      <origin xyz="0.055 0 0.008" rpy="0 0 0" />
+      <geometry>
+        <box size="0.056 0.012 0.006" />
+        </geometry>
+      <material name="graphite">
+        <color rgba="0.22 0.23 0.25 1" />
+        </material>
+      </visual>
+    <visual name="bridge_1">
+      <origin xyz="0.055 0 0.008" rpy="0 0 1.5708" />
+      <geometry>
+        <box size="0.056 0.012 0.006" />
+        </geometry>
+      <material name="graphite">
+        <color rgba="0.22 0.23 0.25 1" />
+        </material>
+      </visual>
+    <visual name="bridge_2">
+      <origin xyz="0.055 0 0.008" rpy="0 0 3.14159" />
+      <geometry>
+        <box size="0.056 0.012 0.006" />
+        </geometry>
+      <material name="graphite">
+        <color rgba="0.22 0.23 0.25 1" />
+        </material>
+      </visual>
+    <visual name="bridge_3">
+      <origin xyz="0.055 0 0.008" rpy="0 0 4.71239" />
+      <geometry>
+        <box size="0.056 0.012 0.006" />
+        </geometry>
+      <material name="graphite">
+        <color rgba="0.22 0.23 0.25 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="pedestal_arm">
+    <inertial>
+      <origin xyz="0.055 0 0.155" rpy="0 0 0" />
+      <mass value="0.9" />
+      <inertia ixx="0.008115" ixy="0" ixz="0" iyy="0.0086775" iyz="0" izz="0.0023775" />
+      </inertial>
+    <visual name="pedestal_disk">
+      <origin xyz="0 0 0.009" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.052" length="0.018" />
+        </geometry>
+      <material name="graphite">
+        <color rgba="0.22 0.23 0.25 1" />
+        </material>
+      </visual>
+    <visual name="pedestal_collar">
+      <origin xyz="0 0 0.023" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.03" length="0.01" />
+        </geometry>
+      <material name="matte_black">
+        <color rgba="0.11 0.11 0.12 1" />
+        </material>
+      </visual>
+    <visual name="support_foot">
+      <origin xyz="0.095 0 0.0315" rpy="0 1.353 0" />
+      <geometry>
+        <cylinder radius="0.0065" length="0.124952" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.72 0.74 0.76 1" />
+        </material>
+      </visual>
+    <visual name="support_riser">
+      <origin xyz="0.173 0 0.1415" rpy="0 0.174377 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.195972" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.72 0.74 0.76 1" />
+        </material>
+      </visual>
+    <visual name="support_head">
+      <origin xyz="0.151627 0 0.262654" rpy="0 -0.999721 0" />
+      <geometry>
+        <cylinder radius="0.0055" length="0.091221" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.72 0.74 0.76 1" />
+        </material>
+      </visual>
+    <visual name="arm_elbow_lower">
+      <origin xyz="0.156 0 0.045" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.008" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.72 0.74 0.76 1" />
+        </material>
+      </visual>
+    <visual name="arm_elbow_upper">
+      <origin xyz="0.19 0 0.238" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.0075" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.72 0.74 0.76 1" />
+        </material>
+      </visual>
+    <visual name="support_tip">
+      <origin xyz="0.113254 0 0.287308" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.008" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.72 0.74 0.76 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="globe">
+    <inertial>
+      <origin xyz="0 0 -0.118" rpy="0 0 0" />
+      <mass value="0.7" />
+      <inertia ixx="0.00326592" ixy="0" ixz="0" iyy="0.00326592" iyz="0" izz="0.00326592" />
+      </inertial>
+    <visual name="globe_shell">
+      <origin xyz="0 0 -0.118" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.1" />
+        </geometry>
+      <material name="ocean_blue">
+        <color rgba="0.22 0.44 0.67 1" />
+        </material>
+      </visual>
+    <visual name="polar_spindle">
+      <origin xyz="0 0 -0.016" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.007" length="0.032" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.72 0.74 0.76 1" />
+        </material>
+      </visual>
+    <visual name="continent_marker">
+      <origin xyz="0.066 0.042 -0.066" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.012" />
+        </geometry>
+      <material name="land_sage">
+        <color rgba="0.62 0.7 0.58 1" />
+        </material>
+      </visual>
+    </link>
+  <joint name="base_swivel" type="continuous">
+    <origin xyz="0 0 0.014" rpy="0 0 0" />
+    <parent link="base_ring" />
+    <child link="pedestal_arm" />
+    <axis xyz="0 0 1" />
+    <limit effort="12" velocity="2.8" />
+    </joint>
+  <joint name="globe_spin" type="continuous">
+    <origin xyz="0.11 0 0.28" rpy="0 0.418879 0" />
+    <parent link="pedestal_arm" />
+    <child link="globe" />
+    <axis xyz="0 0 1" />
+    <limit effort="4" velocity="5" />
+    </joint>
+  </robot>

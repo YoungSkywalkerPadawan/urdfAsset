@@ -1,0 +1,121 @@
+{
+  "summary": {
+    "id": "rec_wind_turbine_f157677f2b8842c69fe59ae83b296815",
+    "category": "turbine",
+    "robot_name": "cost_optimized_wind_turbine",
+    "joint_count": 1,
+    "link_count": 3,
+    "target_link_count": 2,
+    "family": "rec_wind_turbine",
+    "warnings": [],
+    "diagonal": 18.95865407479839,
+    "bytes": 4959884
+  },
+  "source": {
+    "dataset": "camvsl/Articraft-10K",
+    "revision": "3c79d5a05bb7cb6bf7bfee5e090176636ee3ac65",
+    "license": "CC-BY-4.0",
+    "url": "https://huggingface.co/datasets/camvsl/Articraft-10K/blob/3c79d5a05bb7cb6bf7bfee5e090176636ee3ac65/rec_wind_turbine_f157677f2b8842c69fe59ae83b296815.tar.gz",
+    "archive_sha256": "6d5835b8787a6dc2e105a955eb81b0c9c763267955c9b66677e8f08e2af0845d",
+    "archive": "rec_wind_turbine_f157677f2b8842c69fe59ae83b296815.tar.gz",
+    "label_status": "Original generated URDF reference; not manually verified or physically validated"
+  },
+  "links": [
+    {
+      "id": "link_000",
+      "name": "tower",
+      "point_file": null,
+      "faces": 1888,
+      "vertices": 948,
+      "bounds": [
+        [
+          -1.46,
+          -1.46,
+          0.0
+        ],
+        [
+          1.46,
+          1.46,
+          10.05
+        ]
+      ]
+    },
+    {
+      "id": "link_001",
+      "name": "nacelle",
+      "point_file": "inputs/link_001.npz",
+      "faces": 492,
+      "vertices": 260,
+      "bounds": [
+        [
+          -0.625,
+          -0.796,
+          10.05
+        ],
+        [
+          1.5500015427393972,
+          0.48,
+          11.130003673202271
+        ]
+      ]
+    },
+    {
+      "id": "link_002",
+      "name": "rotor",
+      "point_file": "inputs/link_002.npz",
+      "faces": 32605,
+      "vertices": 22345,
+      "bounds": [
+        [
+          -1.25,
+          -4.740012,
+          7.930058000000001
+        ],
+        [
+          -0.45999959594851797,
+          4.740012,
+          16.14
+        ]
+      ]
+    }
+  ],
+  "joints": [
+    {
+      "name": "tower_to_nacelle",
+      "type": "fixed",
+      "parent": "link_000",
+      "child": "link_001",
+      "reference_q": 0.0,
+      "mimic": null
+    },
+    {
+      "name": "nacelle_to_rotor",
+      "type": "continuous",
+      "parent": "link_001",
+      "child": "link_002",
+      "reference_q": 0.0,
+      "mimic": null
+    }
+  ],
+  "bounds": [
+    [
+      -1.46,
+      -4.740012,
+      0.0
+    ],
+    [
+      1.5500015427393972,
+      4.740012,
+      16.14
+    ]
+  ],
+  "point_pool_size": 65536,
+  "reference_pose": "Zero position clamped to limits; mimic values propagated",
+  "qc": {
+    "finite_geometry": true,
+    "tree_valid": true,
+    "axis_unit": true,
+    "physical_collision_validation": false,
+    "visual_tessellation": "32 cylinder segments, icosphere subdivision 2"
+  }
+}

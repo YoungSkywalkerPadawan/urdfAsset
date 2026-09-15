@@ -1,0 +1,202 @@
+{
+  "summary": {
+    "id": "rec_drillpress_tilt_table_0005",
+    "category": "drill",
+    "robot_name": "magnetic_drill_press",
+    "joint_count": 1,
+    "link_count": 6,
+    "target_link_count": 2,
+    "family": "rec_drillpress_tilt_table",
+    "warnings": [],
+    "diagonal": 0.539857388575909,
+    "bytes": 3246195
+  },
+  "source": {
+    "dataset": "camvsl/Articraft-10K",
+    "revision": "3c79d5a05bb7cb6bf7bfee5e090176636ee3ac65",
+    "license": "CC-BY-4.0",
+    "url": "https://huggingface.co/datasets/camvsl/Articraft-10K/blob/3c79d5a05bb7cb6bf7bfee5e090176636ee3ac65/rec_drillpress_tilt_table_0005.tar.gz",
+    "archive_sha256": "2cfb49c3eca6a5ed6e575e69204fd9e33173995cce2c53d4aefbd1ed7cd6952c",
+    "archive": "rec_drillpress_tilt_table_0005.tar.gz",
+    "label_status": "Original generated URDF reference; not manually verified or physically validated"
+  },
+  "links": [
+    {
+      "id": "link_000",
+      "name": "base",
+      "point_file": null,
+      "faces": 36,
+      "vertices": 24,
+      "bounds": [
+        [
+          -0.105,
+          -0.075,
+          0.0
+        ],
+        [
+          0.105,
+          0.075,
+          0.07
+        ]
+      ]
+    },
+    {
+      "id": "link_001",
+      "name": "column",
+      "point_file": null,
+      "faces": 36,
+      "vertices": 24,
+      "bounds": [
+        [
+          -0.022,
+          -0.03,
+          0.07
+        ],
+        [
+          0.022,
+          0.020000000000000004,
+          0.41000000000000003
+        ]
+      ]
+    },
+    {
+      "id": "link_002",
+      "name": "head",
+      "point_file": "inputs/link_002.npz",
+      "faces": 444,
+      "vertices": 238,
+      "bounds": [
+        [
+          -0.07500012121526244,
+          0.019999999999999997,
+          0.195
+        ],
+        [
+          0.07500012121526244,
+          0.15,
+          0.3730002754901601
+        ]
+      ]
+    },
+    {
+      "id": "link_003",
+      "name": "spindle",
+      "point_file": null,
+      "faces": 384,
+      "vertices": 198,
+      "bounds": [
+        [
+          -0.022,
+          0.088,
+          0.075
+        ],
+        [
+          0.022,
+          0.13199999999999998,
+          0.195
+        ]
+      ]
+    },
+    {
+      "id": "link_004",
+      "name": "depth_stop",
+      "point_file": null,
+      "faces": 176,
+      "vertices": 98,
+      "bounds": [
+        [
+          0.037,
+          0.15,
+          0.257
+        ],
+        [
+          0.07700001836595806,
+          0.186,
+          0.335
+        ]
+      ]
+    },
+    {
+      "id": "link_005",
+      "name": "feed_handle",
+      "point_file": "inputs/link_005.npz",
+      "faces": 1472,
+      "vertices": 750,
+      "bounds": [
+        [
+          -0.13,
+          0.019966699999999997,
+          0.232
+        ],
+        [
+          -0.05899995592160622,
+          0.12403329999999999,
+          0.324
+        ]
+      ]
+    }
+  ],
+  "joints": [
+    {
+      "name": "base_to_column",
+      "type": "fixed",
+      "parent": "link_000",
+      "child": "link_001",
+      "reference_q": 0.0,
+      "mimic": null
+    },
+    {
+      "name": "column_to_head",
+      "type": "prismatic",
+      "parent": "link_001",
+      "child": "link_002",
+      "reference_q": 0.0,
+      "mimic": null
+    },
+    {
+      "name": "head_to_spindle",
+      "type": "revolute",
+      "parent": "link_002",
+      "child": "link_003",
+      "reference_q": 0.0,
+      "mimic": null
+    },
+    {
+      "name": "head_to_depth_stop",
+      "type": "prismatic",
+      "parent": "link_002",
+      "child": "link_004",
+      "reference_q": 0.0,
+      "mimic": null
+    },
+    {
+      "name": "head_to_feed_handle",
+      "type": "continuous",
+      "parent": "link_002",
+      "child": "link_005",
+      "reference_q": 0.0,
+      "mimic": null
+    }
+  ],
+  "bounds": [
+    [
+      -0.13,
+      -0.075,
+      0.0
+    ],
+    [
+      0.105,
+      0.186,
+      0.41000000000000003
+    ]
+  ],
+  "point_pool_size": 65536,
+  "reference_pose": "Zero position clamped to limits; mimic values propagated",
+  "qc": {
+    "finite_geometry": true,
+    "tree_valid": true,
+    "axis_unit": true,
+    "physical_collision_validation": false,
+    "visual_tessellation": "32 cylinder segments, icosphere subdivision 2"
+  }
+}

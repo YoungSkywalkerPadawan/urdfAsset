@@ -1,0 +1,173 @@
+<robot name="tower_fan">
+  <material name="body_silver">
+    <color rgba="0.82 0.84 0.85 1" />
+    </material>
+  <material name="charcoal">
+    <color rgba="0.14 0.15 0.16 1" />
+    </material>
+  <material name="trim_black">
+    <color rgba="0.07 0.08 0.09 1" />
+    </material>
+  <material name="knob_black">
+    <color rgba="0.12 0.12 0.13 1" />
+    </material>
+  <material name="indicator_silver">
+    <color rgba="0.88 0.89 0.9 1" />
+    </material>
+  <link name="pedestal">
+    <visual name="base_plate">
+      <origin xyz="0 0 0.015" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.17" length="0.03" />
+        </geometry>
+      <material name="charcoal" />
+      </visual>
+    <visual name="turntable_plinth">
+      <origin xyz="0 0 0.036" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.082" length="0.012" />
+        </geometry>
+      <material name="trim_black" />
+      </visual>
+    <visual name="oscillation_post">
+      <origin xyz="0 0 0.054" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.055" length="0.024" />
+        </geometry>
+      <material name="charcoal" />
+      </visual>
+    </link>
+  <link name="body">
+    <visual name="shell">
+      <geometry>
+        <mesh filename="assets/meshes/body_shell.obj" />
+        </geometry>
+      <material name="body_silver" />
+      </visual>
+    <visual name="rear_grille">
+      <geometry>
+        <mesh filename="assets/meshes/rear_grille.obj" />
+        </geometry>
+      <material name="trim_black" />
+      </visual>
+    <visual name="front_bezel">
+      <geometry>
+        <mesh filename="assets/meshes/front_bezel.obj" />
+        </geometry>
+      <material name="trim_black" />
+      </visual>
+    <visual name="control_deck">
+      <geometry>
+        <mesh filename="assets/meshes/control_deck.obj" />
+        </geometry>
+      <material name="trim_black" />
+      </visual>
+    <visual name="turntable_collar">
+      <origin xyz="0 0 0.01" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.066" length="0.02" />
+        </geometry>
+      <material name="trim_black" />
+      </visual>
+    <visual name="knob_0_bushing">
+      <origin xyz="-0.028 0.004 0.895" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.013" length="0.006" />
+        </geometry>
+      <material name="trim_black" />
+      </visual>
+    <visual name="knob_1_bushing">
+      <origin xyz="0.028 0.004 0.895" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.013" length="0.006" />
+        </geometry>
+      <material name="trim_black" />
+      </visual>
+    <visual name="upper_bearing">
+      <origin xyz="0 -0.027 0.821" rpy="0 0 0" />
+      <geometry>
+        <box size="0.026 0.054 0.01" />
+        </geometry>
+      <material name="trim_black" />
+      </visual>
+    <visual name="lower_bearing">
+      <origin xyz="0 -0.027 0.069" rpy="0 0 0" />
+      <geometry>
+        <box size="0.026 0.054 0.01" />
+        </geometry>
+      <material name="trim_black" />
+      </visual>
+    </link>
+  <link name="blower">
+    <visual name="blower_drum">
+      <geometry>
+        <mesh filename="assets/meshes/blower_wheel.obj" />
+        </geometry>
+      <material name="charcoal" />
+      </visual>
+    <visual name="shaft">
+      <geometry>
+        <cylinder radius="0.012" length="0.762" />
+        </geometry>
+      <material name="trim_black" />
+      </visual>
+    </link>
+  <link name="knob_0">
+    <visual name="knob_body">
+      <geometry>
+        <mesh filename="assets/meshes/knob_0.obj" />
+        </geometry>
+      <material name="knob_black" />
+      </visual>
+    <visual name="indicator">
+      <origin xyz="0 0.00935 0.0272" rpy="0 0 0" />
+      <geometry>
+        <box size="0.01 0.0022 0.0016" />
+        </geometry>
+      <material name="indicator_silver" />
+      </visual>
+    </link>
+  <link name="knob_1">
+    <visual name="knob_body">
+      <geometry>
+        <mesh filename="assets/meshes/knob_1.obj" />
+        </geometry>
+      <material name="knob_black" />
+      </visual>
+    <visual name="indicator">
+      <origin xyz="0 0.00935 0.0272" rpy="0 0 0" />
+      <geometry>
+        <box size="0.01 0.0022 0.0016" />
+        </geometry>
+      <material name="indicator_silver" />
+      </visual>
+    </link>
+  <joint name="pedestal_to_body" type="revolute">
+    <origin xyz="0 0 0.066" rpy="0 0 0" />
+    <parent link="pedestal" />
+    <child link="body" />
+    <axis xyz="0 0 1" />
+    <limit effort="25" velocity="1.4" lower="-1.22173" upper="1.22173" />
+    </joint>
+  <joint name="body_to_blower" type="continuous">
+    <origin xyz="0 0.012 0.445" rpy="0 0 0" />
+    <parent link="body" />
+    <child link="blower" />
+    <axis xyz="0 0 1" />
+    <limit effort="12" velocity="22" />
+    </joint>
+  <joint name="body_to_knob_0" type="revolute">
+    <origin xyz="-0.028 0.004 0.898" rpy="0 0 0" />
+    <parent link="body" />
+    <child link="knob_0" />
+    <axis xyz="0 0 1" />
+    <limit effort="1.2" velocity="4" lower="-2.2" upper="2.2" />
+    </joint>
+  <joint name="body_to_knob_1" type="revolute">
+    <origin xyz="0.028 0.004 0.898" rpy="0 0 0" />
+    <parent link="body" />
+    <child link="knob_1" />
+    <axis xyz="0 0 1" />
+    <limit effort="1.2" velocity="4" lower="-2.2" upper="2.2" />
+    </joint>
+  </robot>

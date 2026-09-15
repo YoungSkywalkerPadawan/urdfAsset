@@ -1,0 +1,225 @@
+<robot name="modern_tower_fan">
+  <material name="warm_white_plastic">
+    <color rgba="0.86 0.86 0.8 1" />
+    </material>
+  <material name="dark_graphite">
+    <color rgba="0.05 0.055 0.06 1" />
+    </material>
+  <material name="matte_black">
+    <color rgba="0.01 0.012 0.014 1" />
+    </material>
+  <material name="black_rubber">
+    <color rgba="0.004 0.004 0.004 1" />
+    </material>
+  <material name="brushed_metal">
+    <color rgba="0.58 0.6 0.6 1" />
+    </material>
+  <material name="smoked_rotor">
+    <color rgba="0.22 0.25 0.27 1" />
+    </material>
+  <link name="pedestal">
+    <visual name="oval_foot">
+      <origin xyz="0 0 0.0225" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.18" length="0.045" />
+        </geometry>
+      <material name="warm_white_plastic">
+        <color rgba="0.86 0.86 0.8 1" />
+        </material>
+      </visual>
+    <visual name="rubber_sole">
+      <origin xyz="0 0 0.006" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.168" length="0.01" />
+        </geometry>
+      <material name="black_rubber">
+        <color rgba="0.004 0.004 0.004 1" />
+        </material>
+      </visual>
+    <visual name="pedestal_neck">
+      <origin xyz="0 0 0.11" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.042" length="0.13" />
+        </geometry>
+      <material name="warm_white_plastic">
+        <color rgba="0.86 0.86 0.8 1" />
+        </material>
+      </visual>
+    <visual name="turntable_collar">
+      <origin xyz="0 0 0.1825" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.068" length="0.025" />
+        </geometry>
+      <material name="warm_white_plastic">
+        <color rgba="0.86 0.86 0.8 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="body">
+    <visual name="shell_frame">
+      <geometry>
+        <mesh filename="assets/meshes/body_shell.obj" />
+        </geometry>
+      <material name="warm_white_plastic">
+        <color rgba="0.86 0.86 0.8 1" />
+        </material>
+      </visual>
+    <visual name="rotating_collar">
+      <origin xyz="0 0 0.016" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.064" length="0.032" />
+        </geometry>
+      <material name="warm_white_plastic">
+        <color rgba="0.86 0.86 0.8 1" />
+        </material>
+      </visual>
+    <visual name="intake_grille">
+      <origin xyz="0 -0.082 0.46" rpy="1.5708 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/intake_grille.obj" />
+        </geometry>
+      <material name="dark_graphite">
+        <color rgba="0.05 0.055 0.06 1" />
+        </material>
+      </visual>
+    <visual name="control_deck">
+      <origin xyz="0 -0.015 0.923" rpy="0 0 0" />
+      <geometry>
+        <box size="0.135 0.07 0.006" />
+        </geometry>
+      <material name="matte_black">
+        <color rgba="0.01 0.012 0.014 1" />
+        </material>
+      </visual>
+    <visual name="bottom_bearing">
+      <origin xyz="0 0 0.065" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.02" length="0.025" />
+        </geometry>
+      <material name="brushed_metal">
+        <color rgba="0.58 0.6 0.6 1" />
+        </material>
+      </visual>
+    <visual name="top_bearing">
+      <origin xyz="0 0 0.84" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.02" length="0.025" />
+        </geometry>
+      <material name="brushed_metal">
+        <color rgba="0.58 0.6 0.6 1" />
+        </material>
+      </visual>
+    <visual name="bearing_strut_0">
+      <origin xyz="-0.025 0.039 0.84" rpy="0 0 0" />
+      <geometry>
+        <box size="0.022 0.068 0.014" />
+        </geometry>
+      <material name="brushed_metal">
+        <color rgba="0.58 0.6 0.6 1" />
+        </material>
+      </visual>
+    <visual name="bearing_strut_1">
+      <origin xyz="0.025 0.039 0.84" rpy="0 0 0" />
+      <geometry>
+        <box size="0.022 0.068 0.014" />
+        </geometry>
+      <material name="brushed_metal">
+        <color rgba="0.58 0.6 0.6 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="blower_wheel">
+    <visual name="blower_cage">
+      <geometry>
+        <mesh filename="assets/meshes/blower_wheel.obj" />
+        </geometry>
+      <material name="smoked_rotor">
+        <color rgba="0.22 0.25 0.27 1" />
+        </material>
+      </visual>
+    <visual name="blower_shaft">
+      <geometry>
+        <cylinder radius="0.012" length="0.775" />
+        </geometry>
+      <material name="brushed_metal">
+        <color rgba="0.58 0.6 0.6 1" />
+        </material>
+      </visual>
+    <visual name="blower_hub">
+      <geometry>
+        <cylinder radius="0.028" length="0.06" />
+        </geometry>
+      <material name="brushed_metal">
+        <color rgba="0.58 0.6 0.6 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="speed_knob">
+    <visual name="shaft">
+      <origin xyz="0 0 0.009" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.008" length="0.018" />
+        </geometry>
+      <material name="brushed_metal">
+        <color rgba="0.58 0.6 0.6 1" />
+        </material>
+      </visual>
+    <visual name="knurled_cap">
+      <origin xyz="0 0 0.018" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/speed_knob_cap.obj" />
+        </geometry>
+      <material name="matte_black">
+        <color rgba="0.01 0.012 0.014 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="timer_knob">
+    <visual name="shaft">
+      <origin xyz="0 0 0.009" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.008" length="0.018" />
+        </geometry>
+      <material name="brushed_metal">
+        <color rgba="0.58 0.6 0.6 1" />
+        </material>
+      </visual>
+    <visual name="knurled_cap">
+      <origin xyz="0 0 0.018" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/timer_knob_cap.obj" />
+        </geometry>
+      <material name="matte_black">
+        <color rgba="0.01 0.012 0.014 1" />
+        </material>
+      </visual>
+    </link>
+  <joint name="pedestal_to_body" type="revolute">
+    <origin xyz="0 0 0.195" rpy="0 0 0" />
+    <parent link="pedestal" />
+    <child link="body" />
+    <axis xyz="0 0 1" />
+    <limit effort="12" velocity="0.7" lower="-0.85" upper="0.85" />
+    </joint>
+  <joint name="body_to_blower" type="continuous">
+    <origin xyz="0 0 0.452" rpy="0 0 0" />
+    <parent link="body" />
+    <child link="blower_wheel" />
+    <axis xyz="0 0 1" />
+    <limit effort="3" velocity="70" />
+    </joint>
+  <joint name="body_to_speed_knob" type="revolute">
+    <origin xyz="-0.04 -0.015 0.926" rpy="0 0 0" />
+    <parent link="body" />
+    <child link="speed_knob" />
+    <axis xyz="0 0 1" />
+    <limit effort="0.4" velocity="5" lower="-2.35" upper="2.35" />
+    </joint>
+  <joint name="body_to_timer_knob" type="revolute">
+    <origin xyz="0.04 -0.015 0.926" rpy="0 0 0" />
+    <parent link="body" />
+    <child link="timer_knob" />
+    <axis xyz="0 0 1" />
+    <limit effort="0.4" velocity="5" lower="-2.35" upper="2.35" />
+    </joint>
+  </robot>

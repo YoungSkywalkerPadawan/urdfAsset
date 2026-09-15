@@ -1,0 +1,224 @@
+<robot name="desktop_world_globe">
+  <material name="wood">
+    <color rgba="0.33 0.2 0.12 1" />
+    </material>
+  <material name="dark_wood">
+    <color rgba="0.23 0.13 0.08 1" />
+    </material>
+  <material name="brass">
+    <color rgba="0.73 0.58 0.24 1" />
+    </material>
+  <material name="brass_dark">
+    <color rgba="0.56 0.43 0.17 1" />
+    </material>
+  <material name="steel">
+    <color rgba="0.74 0.76 0.79 1" />
+    </material>
+  <material name="ocean">
+    <color rgba="0.18 0.42 0.69 1" />
+    </material>
+  <material name="land">
+    <color rgba="0.77 0.79 0.58 1" />
+    </material>
+  <material name="ink">
+    <color rgba="0.09 0.11 0.12 1" />
+    </material>
+  <link name="base">
+    <inertial>
+      <origin xyz="0 0 0.041" rpy="0 0 0" />
+      <mass value="2.6" />
+      <inertia ixx="0.00961047" ixy="0" ixz="0" iyy="0.00961047" iyz="0" izz="0.0163072" />
+      </inertial>
+    <visual name="base_plinth">
+      <geometry>
+        <mesh filename="assets/meshes/turned_base_r4.obj" />
+        </geometry>
+      <material name="wood">
+        <color rgba="0.33 0.2 0.12 1" />
+        </material>
+      </visual>
+    <visual name="base_collar">
+      <origin xyz="0 0 0.076" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.046" length="0.012" />
+        </geometry>
+      <material name="dark_wood">
+        <color rgba="0.23 0.13 0.08 1" />
+        </material>
+      </visual>
+    <visual name="yoke_frame">
+      <origin xyz="0 -0.018 0.091" rpy="0 0 0" />
+      <geometry>
+        <box size="0.34 0.028 0.018" />
+        </geometry>
+      <material name="brass_dark">
+        <color rgba="0.56 0.43 0.17 1" />
+        </material>
+      </visual>
+    <visual name="left_upright">
+      <origin xyz="0.17 -0.018 0.179" rpy="0 0 0" />
+      <geometry>
+        <box size="0.02 0.02 0.176" />
+        </geometry>
+      <material name="brass_dark">
+        <color rgba="0.56 0.43 0.17 1" />
+        </material>
+      </visual>
+    <visual name="right_upright">
+      <origin xyz="-0.17 -0.018 0.179" rpy="0 0 0" />
+      <geometry>
+        <box size="0.02 0.02 0.176" />
+        </geometry>
+      <material name="brass_dark">
+        <color rgba="0.56 0.43 0.17 1" />
+        </material>
+      </visual>
+    <visual name="left_support_cheek">
+      <origin xyz="0.172 -0.01 0.257" rpy="0 0 0" />
+      <geometry>
+        <box size="0.024 0.02 0.048" />
+        </geometry>
+      <material name="brass_dark">
+        <color rgba="0.56 0.43 0.17 1" />
+        </material>
+      </visual>
+    <visual name="right_support_cheek">
+      <origin xyz="-0.172 -0.01 0.257" rpy="0 0 0" />
+      <geometry>
+        <box size="0.024 0.02 0.048" />
+        </geometry>
+      <material name="brass_dark">
+        <color rgba="0.56 0.43 0.17 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="meridian">
+    <inertial>
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <mass value="0.65" />
+      <inertia ixx="0.00371172" ixy="0" ixz="0" iyy="0.00371172" iyz="0" izz="0.0073125" />
+      </inertial>
+    <visual name="meridian_ring">
+      <geometry>
+        <mesh filename="assets/meshes/meridian_ring_r4.obj" />
+        </geometry>
+      <material name="brass">
+        <color rgba="0.73 0.58 0.24 1" />
+        </material>
+      </visual>
+    <visual name="left_trunnion">
+      <origin xyz="0.152 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.008" length="0.016" />
+        </geometry>
+      <material name="steel">
+        <color rgba="0.74 0.76 0.79 1" />
+        </material>
+      </visual>
+    <visual name="right_trunnion">
+      <origin xyz="-0.152 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.008" length="0.016" />
+        </geometry>
+      <material name="steel">
+        <color rgba="0.74 0.76 0.79 1" />
+        </material>
+      </visual>
+    <visual name="north_receiver">
+      <origin xyz="0.0542299 0 0.12472" rpy="0 0.410152 0" />
+      <geometry>
+        <cylinder radius="0.0048" length="0.03" />
+        </geometry>
+      <material name="steel">
+        <color rgba="0.74 0.76 0.79 1" />
+        </material>
+      </visual>
+    <visual name="south_receiver">
+      <origin xyz="-0.0542299 0 -0.12472" rpy="0 0.410152 0" />
+      <geometry>
+        <cylinder radius="0.0048" length="0.03" />
+        </geometry>
+      <material name="steel">
+        <color rgba="0.74 0.76 0.79 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="globe">
+    <inertial>
+      <mass value="0.9" />
+      <inertia ixx="0.005184" ixy="0" ixz="0" iyy="0.005184" iyz="0" izz="0.005184" />
+      </inertial>
+    <visual name="globe_sphere">
+      <geometry>
+        <sphere radius="0.12" />
+        </geometry>
+      <material name="ocean">
+        <color rgba="0.18 0.42 0.69 1" />
+        </material>
+      </visual>
+    <visual name="north_pivot">
+      <origin xyz="0.0466536 0 0.107296" rpy="0 0.410152 0" />
+      <geometry>
+        <cylinder radius="0.0036" length="0.018" />
+        </geometry>
+      <material name="steel">
+        <color rgba="0.74 0.76 0.79 1" />
+        </material>
+      </visual>
+    <visual name="south_pivot">
+      <origin xyz="-0.0466536 0 -0.107296" rpy="0 0.410152 0" />
+      <geometry>
+        <cylinder radius="0.0036" length="0.018" />
+        </geometry>
+      <material name="steel">
+        <color rgba="0.74 0.76 0.79 1" />
+        </material>
+      </visual>
+    <visual name="continent_americas">
+      <geometry>
+        <mesh filename="assets/meshes/continent_americas_r4.obj" />
+        </geometry>
+      <material name="land">
+        <color rgba="0.77 0.79 0.58 1" />
+        </material>
+      </visual>
+    <visual name="continent_eurafrica">
+      <geometry>
+        <mesh filename="assets/meshes/continent_eurafrica_r4.obj" />
+        </geometry>
+      <material name="land">
+        <color rgba="0.77 0.79 0.58 1" />
+        </material>
+      </visual>
+    <visual name="continent_australia">
+      <geometry>
+        <mesh filename="assets/meshes/continent_australia_r4.obj" />
+        </geometry>
+      <material name="land">
+        <color rgba="0.77 0.79 0.58 1" />
+        </material>
+      </visual>
+    <visual name="equator_line">
+      <origin xyz="0 0 0" rpy="0 0.410152 0" />
+      <geometry>
+        <mesh filename="assets/meshes/equator_line_r4.obj" />
+        </geometry>
+      <material name="ink">
+        <color rgba="0.09 0.11 0.12 1" />
+        </material>
+      </visual>
+    </link>
+  <joint name="base_to_meridian" type="revolute">
+    <origin xyz="0 0 0.265" rpy="-0.244346 0 0" />
+    <parent link="base" />
+    <child link="meridian" />
+    <axis xyz="1 0 0" />
+    <limit effort="8" velocity="1" lower="-0.558505" upper="0.663225" />
+    </joint>
+  <joint name="meridian_to_globe" type="continuous">
+    <parent link="meridian" />
+    <child link="globe" />
+    <axis xyz="0.398749 0 0.91706" />
+    <limit effort="2" velocity="6" />
+    </joint>
+  </robot>

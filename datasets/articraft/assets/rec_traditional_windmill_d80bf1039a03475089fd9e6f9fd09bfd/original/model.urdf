@@ -1,0 +1,512 @@
+<robot name="traditional_windmill">
+  <material name="warm_stone">
+    <color rgba="0.63 0.58 0.49 1" />
+    </material>
+  <material name="dark_stone">
+    <color rgba="0.34 0.32 0.29 1" />
+    </material>
+  <material name="weathered_timber">
+    <color rgba="0.43 0.28 0.16 1" />
+    </material>
+  <material name="dark_shingles">
+    <color rgba="0.12 0.11 0.1 1" />
+    </material>
+  <material name="pale_sail_wood">
+    <color rgba="0.83 0.76 0.62 1" />
+    </material>
+  <material name="blackened_iron">
+    <color rgba="0.06 0.065 0.07 1" />
+    </material>
+  <material name="painted_door">
+    <color rgba="0.16 0.11 0.07 1" />
+    </material>
+  <material name="dark_glass">
+    <color rgba="0.08 0.12 0.16 1" />
+    </material>
+  <link name="tower">
+    <visual name="stone_tower">
+      <geometry>
+        <mesh filename="assets/meshes/tapered_stone_tower.obj" />
+        </geometry>
+      <material name="warm_stone">
+        <color rgba="0.63 0.58 0.49 1" />
+        </material>
+      </visual>
+    <visual name="arched_door">
+      <origin xyz="0 -1.56 0.78" rpy="0 0 0" />
+      <geometry>
+        <box size="0.74 0.075 1.32" />
+        </geometry>
+      <material name="painted_door">
+        <color rgba="0.16 0.11 0.07 1" />
+        </material>
+      </visual>
+    <visual name="front_window">
+      <origin xyz="0 -1.18 3.18" rpy="0 0 0" />
+      <geometry>
+        <box size="0.42 0.06 0.55" />
+        </geometry>
+      <material name="dark_glass">
+        <color rgba="0.08 0.12 0.16 1" />
+        </material>
+      </visual>
+    <visual name="stone_curb">
+      <origin xyz="0 0 5.92" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="1.13" length="0.16" />
+        </geometry>
+      <material name="dark_stone">
+        <color rgba="0.34 0.32 0.29 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="cap">
+    <visual name="cap_base_ring">
+      <origin xyz="0 0 0.12" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="1.13" length="0.24" />
+        </geometry>
+      <material name="dark_stone">
+        <color rgba="0.34 0.32 0.29 1" />
+        </material>
+      </visual>
+    <visual name="cap_body">
+      <origin xyz="0 -0.15 0.49" rpy="0 0 0" />
+      <geometry>
+        <box size="2.45 1.72 0.78" />
+        </geometry>
+      <material name="weathered_timber">
+        <color rgba="0.43 0.28 0.16 1" />
+        </material>
+      </visual>
+    <visual name="cap_roof">
+      <geometry>
+        <mesh filename="assets/meshes/shingled_cap_roof.obj" />
+        </geometry>
+      <material name="dark_shingles">
+        <color rgba="0.12 0.11 0.1 1" />
+        </material>
+      </visual>
+    <visual name="shaft_bearing">
+      <origin xyz="0 -1.14 0.7" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.22" length="0.5" />
+        </geometry>
+      <material name="blackened_iron">
+        <color rgba="0.06 0.065 0.07 1" />
+        </material>
+      </visual>
+    <visual name="tail_beam">
+      <origin xyz="0 0.98 0.45" rpy="0 0 0" />
+      <geometry>
+        <box size="0.42 0.95 0.24" />
+        </geometry>
+      <material name="weathered_timber">
+        <color rgba="0.43 0.28 0.16 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="sail_hub">
+    <visual name="hub_disk">
+      <origin xyz="0 -0.12 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.3" length="0.18" />
+        </geometry>
+      <material name="weathered_timber">
+        <color rgba="0.43 0.28 0.16 1" />
+        </material>
+      </visual>
+    <visual name="axle_stub">
+      <origin xyz="0 0.09 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.105" length="0.42" />
+        </geometry>
+      <material name="blackened_iron">
+        <color rgba="0.06 0.065 0.07 1" />
+        </material>
+      </visual>
+    <visual name="hub_cap">
+      <origin xyz="0 -0.245 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.16" length="0.07" />
+        </geometry>
+      <material name="blackened_iron">
+        <color rgba="0.06 0.065 0.07 1" />
+        </material>
+      </visual>
+    <visual name="blade_0_spar">
+      <origin xyz="1.525 -0.23 0" rpy="0 -0 0" />
+      <geometry>
+        <box size="3.05 0.07 0.085" />
+        </geometry>
+      <material name="pale_sail_wood">
+        <color rgba="0.83 0.76 0.62 1" />
+        </material>
+      </visual>
+    <visual name="blade_0_rail_0">
+      <origin xyz="1.745 -0.23 -0.245" rpy="0 -0 0" />
+      <geometry>
+        <box size="2.45 0.052 0.045" />
+        </geometry>
+      <material name="pale_sail_wood">
+        <color rgba="0.83 0.76 0.62 1" />
+        </material>
+      </visual>
+    <visual name="blade_0_rail_1">
+      <origin xyz="1.745 -0.23 0.245" rpy="0 -0 0" />
+      <geometry>
+        <box size="2.45 0.052 0.045" />
+        </geometry>
+      <material name="pale_sail_wood">
+        <color rgba="0.83 0.76 0.62 1" />
+        </material>
+      </visual>
+    <visual name="blade_0_rung_0">
+      <origin xyz="0.62 -0.23 0" rpy="0 -0 0" />
+      <geometry>
+        <box size="0.07 0.055 0.423265" />
+        </geometry>
+      <material name="pale_sail_wood">
+        <color rgba="0.83 0.76 0.62 1" />
+        </material>
+      </visual>
+    <visual name="blade_0_rung_1">
+      <origin xyz="1.02 -0.23 0" rpy="0 -0 0" />
+      <geometry>
+        <box size="0.07 0.055 0.436327" />
+        </geometry>
+      <material name="pale_sail_wood">
+        <color rgba="0.83 0.76 0.62 1" />
+        </material>
+      </visual>
+    <visual name="blade_0_rung_2">
+      <origin xyz="1.42 -0.23 0" rpy="0 -0 0" />
+      <geometry>
+        <box size="0.07 0.055 0.449388" />
+        </geometry>
+      <material name="pale_sail_wood">
+        <color rgba="0.83 0.76 0.62 1" />
+        </material>
+      </visual>
+    <visual name="blade_0_rung_3">
+      <origin xyz="1.82 -0.23 0" rpy="0 -0 0" />
+      <geometry>
+        <box size="0.07 0.055 0.462449" />
+        </geometry>
+      <material name="pale_sail_wood">
+        <color rgba="0.83 0.76 0.62 1" />
+        </material>
+      </visual>
+    <visual name="blade_0_rung_4">
+      <origin xyz="2.22 -0.23 0" rpy="0 -0 0" />
+      <geometry>
+        <box size="0.07 0.055 0.47551" />
+        </geometry>
+      <material name="pale_sail_wood">
+        <color rgba="0.83 0.76 0.62 1" />
+        </material>
+      </visual>
+    <visual name="blade_0_rung_5">
+      <origin xyz="2.62 -0.23 0" rpy="0 -0 0" />
+      <geometry>
+        <box size="0.07 0.055 0.488571" />
+        </geometry>
+      <material name="pale_sail_wood">
+        <color rgba="0.83 0.76 0.62 1" />
+        </material>
+      </visual>
+    <visual name="blade_0_rung_6">
+      <origin xyz="2.94 -0.23 0" rpy="0 -0 0" />
+      <geometry>
+        <box size="0.07 0.055 0.49902" />
+        </geometry>
+      <material name="pale_sail_wood">
+        <color rgba="0.83 0.76 0.62 1" />
+        </material>
+      </visual>
+    <visual name="blade_1_spar">
+      <origin xyz="9.33793e-17 -0.23 1.525" rpy="0 -1.5708 0" />
+      <geometry>
+        <box size="3.05 0.07 0.085" />
+        </geometry>
+      <material name="pale_sail_wood">
+        <color rgba="0.83 0.76 0.62 1" />
+        </material>
+      </visual>
+    <visual name="blade_1_rail_0">
+      <origin xyz="0.245 -0.23 1.745" rpy="0 -1.5708 0" />
+      <geometry>
+        <box size="2.45 0.052 0.045" />
+        </geometry>
+      <material name="pale_sail_wood">
+        <color rgba="0.83 0.76 0.62 1" />
+        </material>
+      </visual>
+    <visual name="blade_1_rail_1">
+      <origin xyz="-0.245 -0.23 1.745" rpy="0 -1.5708 0" />
+      <geometry>
+        <box size="2.45 0.052 0.045" />
+        </geometry>
+      <material name="pale_sail_wood">
+        <color rgba="0.83 0.76 0.62 1" />
+        </material>
+      </visual>
+    <visual name="blade_1_rung_0">
+      <origin xyz="3.79641e-17 -0.23 0.62" rpy="0 -1.5708 0" />
+      <geometry>
+        <box size="0.07 0.055 0.423265" />
+        </geometry>
+      <material name="pale_sail_wood">
+        <color rgba="0.83 0.76 0.62 1" />
+        </material>
+      </visual>
+    <visual name="blade_1_rung_1">
+      <origin xyz="6.2457e-17 -0.23 1.02" rpy="0 -1.5708 0" />
+      <geometry>
+        <box size="0.07 0.055 0.436327" />
+        </geometry>
+      <material name="pale_sail_wood">
+        <color rgba="0.83 0.76 0.62 1" />
+        </material>
+      </visual>
+    <visual name="blade_1_rung_2">
+      <origin xyz="8.69499e-17 -0.23 1.42" rpy="0 -1.5708 0" />
+      <geometry>
+        <box size="0.07 0.055 0.449388" />
+        </geometry>
+      <material name="pale_sail_wood">
+        <color rgba="0.83 0.76 0.62 1" />
+        </material>
+      </visual>
+    <visual name="blade_1_rung_3">
+      <origin xyz="1.11443e-16 -0.23 1.82" rpy="0 -1.5708 0" />
+      <geometry>
+        <box size="0.07 0.055 0.462449" />
+        </geometry>
+      <material name="pale_sail_wood">
+        <color rgba="0.83 0.76 0.62 1" />
+        </material>
+      </visual>
+    <visual name="blade_1_rung_4">
+      <origin xyz="1.35936e-16 -0.23 2.22" rpy="0 -1.5708 0" />
+      <geometry>
+        <box size="0.07 0.055 0.47551" />
+        </geometry>
+      <material name="pale_sail_wood">
+        <color rgba="0.83 0.76 0.62 1" />
+        </material>
+      </visual>
+    <visual name="blade_1_rung_5">
+      <origin xyz="1.60429e-16 -0.23 2.62" rpy="0 -1.5708 0" />
+      <geometry>
+        <box size="0.07 0.055 0.488571" />
+        </geometry>
+      <material name="pale_sail_wood">
+        <color rgba="0.83 0.76 0.62 1" />
+        </material>
+      </visual>
+    <visual name="blade_1_rung_6">
+      <origin xyz="1.80023e-16 -0.23 2.94" rpy="0 -1.5708 0" />
+      <geometry>
+        <box size="0.07 0.055 0.49902" />
+        </geometry>
+      <material name="pale_sail_wood">
+        <color rgba="0.83 0.76 0.62 1" />
+        </material>
+      </visual>
+    <visual name="blade_2_spar">
+      <origin xyz="-1.525 -0.23 1.86759e-16" rpy="0 -3.14159 0" />
+      <geometry>
+        <box size="3.05 0.07 0.085" />
+        </geometry>
+      <material name="pale_sail_wood">
+        <color rgba="0.83 0.76 0.62 1" />
+        </material>
+      </visual>
+    <visual name="blade_2_rail_0">
+      <origin xyz="-1.745 -0.23 0.245" rpy="0 -3.14159 0" />
+      <geometry>
+        <box size="2.45 0.052 0.045" />
+        </geometry>
+      <material name="pale_sail_wood">
+        <color rgba="0.83 0.76 0.62 1" />
+        </material>
+      </visual>
+    <visual name="blade_2_rail_1">
+      <origin xyz="-1.745 -0.23 -0.245" rpy="0 -3.14159 0" />
+      <geometry>
+        <box size="2.45 0.052 0.045" />
+        </geometry>
+      <material name="pale_sail_wood">
+        <color rgba="0.83 0.76 0.62 1" />
+        </material>
+      </visual>
+    <visual name="blade_2_rung_0">
+      <origin xyz="-0.62 -0.23 7.59281e-17" rpy="0 -3.14159 0" />
+      <geometry>
+        <box size="0.07 0.055 0.423265" />
+        </geometry>
+      <material name="pale_sail_wood">
+        <color rgba="0.83 0.76 0.62 1" />
+        </material>
+      </visual>
+    <visual name="blade_2_rung_1">
+      <origin xyz="-1.02 -0.23 1.24914e-16" rpy="0 -3.14159 0" />
+      <geometry>
+        <box size="0.07 0.055 0.436327" />
+        </geometry>
+      <material name="pale_sail_wood">
+        <color rgba="0.83 0.76 0.62 1" />
+        </material>
+      </visual>
+    <visual name="blade_2_rung_2">
+      <origin xyz="-1.42 -0.23 1.739e-16" rpy="0 -3.14159 0" />
+      <geometry>
+        <box size="0.07 0.055 0.449388" />
+        </geometry>
+      <material name="pale_sail_wood">
+        <color rgba="0.83 0.76 0.62 1" />
+        </material>
+      </visual>
+    <visual name="blade_2_rung_3">
+      <origin xyz="-1.82 -0.23 2.22886e-16" rpy="0 -3.14159 0" />
+      <geometry>
+        <box size="0.07 0.055 0.462449" />
+        </geometry>
+      <material name="pale_sail_wood">
+        <color rgba="0.83 0.76 0.62 1" />
+        </material>
+      </visual>
+    <visual name="blade_2_rung_4">
+      <origin xyz="-2.22 -0.23 2.71872e-16" rpy="0 -3.14159 0" />
+      <geometry>
+        <box size="0.07 0.055 0.47551" />
+        </geometry>
+      <material name="pale_sail_wood">
+        <color rgba="0.83 0.76 0.62 1" />
+        </material>
+      </visual>
+    <visual name="blade_2_rung_5">
+      <origin xyz="-2.62 -0.23 3.20857e-16" rpy="0 -3.14159 0" />
+      <geometry>
+        <box size="0.07 0.055 0.488571" />
+        </geometry>
+      <material name="pale_sail_wood">
+        <color rgba="0.83 0.76 0.62 1" />
+        </material>
+      </visual>
+    <visual name="blade_2_rung_6">
+      <origin xyz="-2.94 -0.23 3.60046e-16" rpy="0 -3.14159 0" />
+      <geometry>
+        <box size="0.07 0.055 0.49902" />
+        </geometry>
+      <material name="pale_sail_wood">
+        <color rgba="0.83 0.76 0.62 1" />
+        </material>
+      </visual>
+    <visual name="blade_3_spar">
+      <origin xyz="-2.80138e-16 -0.23 -1.525" rpy="0 -4.71239 0" />
+      <geometry>
+        <box size="3.05 0.07 0.085" />
+        </geometry>
+      <material name="pale_sail_wood">
+        <color rgba="0.83 0.76 0.62 1" />
+        </material>
+      </visual>
+    <visual name="blade_3_rail_0">
+      <origin xyz="-0.245 -0.23 -1.745" rpy="0 -4.71239 0" />
+      <geometry>
+        <box size="2.45 0.052 0.045" />
+        </geometry>
+      <material name="pale_sail_wood">
+        <color rgba="0.83 0.76 0.62 1" />
+        </material>
+      </visual>
+    <visual name="blade_3_rail_1">
+      <origin xyz="0.245 -0.23 -1.745" rpy="0 -4.71239 0" />
+      <geometry>
+        <box size="2.45 0.052 0.045" />
+        </geometry>
+      <material name="pale_sail_wood">
+        <color rgba="0.83 0.76 0.62 1" />
+        </material>
+      </visual>
+    <visual name="blade_3_rung_0">
+      <origin xyz="-1.13892e-16 -0.23 -0.62" rpy="0 -4.71239 0" />
+      <geometry>
+        <box size="0.07 0.055 0.423265" />
+        </geometry>
+      <material name="pale_sail_wood">
+        <color rgba="0.83 0.76 0.62 1" />
+        </material>
+      </visual>
+    <visual name="blade_3_rung_1">
+      <origin xyz="-1.87371e-16 -0.23 -1.02" rpy="0 -4.71239 0" />
+      <geometry>
+        <box size="0.07 0.055 0.436327" />
+        </geometry>
+      <material name="pale_sail_wood">
+        <color rgba="0.83 0.76 0.62 1" />
+        </material>
+      </visual>
+    <visual name="blade_3_rung_2">
+      <origin xyz="-2.6085e-16 -0.23 -1.42" rpy="0 -4.71239 0" />
+      <geometry>
+        <box size="0.07 0.055 0.449388" />
+        </geometry>
+      <material name="pale_sail_wood">
+        <color rgba="0.83 0.76 0.62 1" />
+        </material>
+      </visual>
+    <visual name="blade_3_rung_3">
+      <origin xyz="-3.34329e-16 -0.23 -1.82" rpy="0 -4.71239 0" />
+      <geometry>
+        <box size="0.07 0.055 0.462449" />
+        </geometry>
+      <material name="pale_sail_wood">
+        <color rgba="0.83 0.76 0.62 1" />
+        </material>
+      </visual>
+    <visual name="blade_3_rung_4">
+      <origin xyz="-4.07807e-16 -0.23 -2.22" rpy="0 -4.71239 0" />
+      <geometry>
+        <box size="0.07 0.055 0.47551" />
+        </geometry>
+      <material name="pale_sail_wood">
+        <color rgba="0.83 0.76 0.62 1" />
+        </material>
+      </visual>
+    <visual name="blade_3_rung_5">
+      <origin xyz="-4.81286e-16 -0.23 -2.62" rpy="0 -4.71239 0" />
+      <geometry>
+        <box size="0.07 0.055 0.488571" />
+        </geometry>
+      <material name="pale_sail_wood">
+        <color rgba="0.83 0.76 0.62 1" />
+        </material>
+      </visual>
+    <visual name="blade_3_rung_6">
+      <origin xyz="-5.40069e-16 -0.23 -2.94" rpy="0 -4.71239 0" />
+      <geometry>
+        <box size="0.07 0.055 0.49902" />
+        </geometry>
+      <material name="pale_sail_wood">
+        <color rgba="0.83 0.76 0.62 1" />
+        </material>
+      </visual>
+    </link>
+  <joint name="tower_to_cap" type="continuous">
+    <origin xyz="0 0 6" rpy="0 0 0" />
+    <parent link="tower" />
+    <child link="cap" />
+    <axis xyz="0 0 1" />
+    <limit effort="2500" velocity="0.35" />
+    </joint>
+  <joint name="cap_to_sail_hub" type="continuous">
+    <origin xyz="0 -1.45 0.7" rpy="0 0 0" />
+    <parent link="cap" />
+    <child link="sail_hub" />
+    <axis xyz="0 1 0" />
+    <limit effort="1200" velocity="2.5" />
+    </joint>
+  </robot>

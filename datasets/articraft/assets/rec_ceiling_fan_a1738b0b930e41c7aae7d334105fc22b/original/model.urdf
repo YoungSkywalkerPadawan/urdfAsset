@@ -1,0 +1,356 @@
+<robot name="ceiling_fan_with_light_kit">
+  <material name="brushed_nickel">
+    <color rgba="0.72 0.74 0.77 1" />
+    </material>
+  <material name="dark_trim">
+    <color rgba="0.24 0.25 0.28 1" />
+    </material>
+  <material name="walnut">
+    <color rgba="0.47 0.33 0.21 1" />
+    </material>
+  <material name="frosted_glass">
+    <color rgba="0.96 0.97 0.99 0.58" />
+    </material>
+  <material name="warm_light">
+    <color rgba="0.95 0.9 0.76 0.92" />
+    </material>
+  <link name="canopy">
+    <visual name="ceiling_plate">
+      <origin xyz="0 0 0.004" rpy="0 0 0" />
+      <geometry>
+        <box size="0.17 0.17 0.008" />
+        </geometry>
+      <material name="brushed_nickel">
+        <color rgba="0.72 0.74 0.77 1" />
+        </material>
+      </visual>
+    <visual name="canopy_shell">
+      <geometry>
+        <mesh filename="assets/meshes/ceiling_fan_canopy.obj" />
+        </geometry>
+      <material name="brushed_nickel">
+        <color rgba="0.72 0.74 0.77 1" />
+        </material>
+      </visual>
+    <visual name="canopy_collar">
+      <origin xyz="0 0 -0.114" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.024" />
+        </geometry>
+      <material name="dark_trim">
+        <color rgba="0.24 0.25 0.28 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="downrod">
+    <visual name="rod_shaft">
+      <origin xyz="0 0 -0.15" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.011" length="0.3" />
+        </geometry>
+      <material name="brushed_nickel">
+        <color rgba="0.72 0.74 0.77 1" />
+        </material>
+      </visual>
+    <visual name="lower_coupling">
+      <origin xyz="0 0 -0.301" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.038" />
+        </geometry>
+      <material name="dark_trim">
+        <color rgba="0.24 0.25 0.28 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="rotor_assembly">
+    <visual name="motor_shell">
+      <geometry>
+        <mesh filename="assets/meshes/ceiling_fan_rotor.obj" />
+        </geometry>
+      <material name="brushed_nickel">
+        <color rgba="0.72 0.74 0.77 1" />
+        </material>
+      </visual>
+    <visual name="light_ring">
+      <origin xyz="0 0 -0.22" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.102" length="0.022" />
+        </geometry>
+      <material name="dark_trim">
+        <color rgba="0.24 0.25 0.28 1" />
+        </material>
+      </visual>
+    <visual name="light_stem">
+      <origin xyz="0 0 -0.262" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.009" length="0.062" />
+        </geometry>
+      <material name="dark_trim">
+        <color rgba="0.24 0.25 0.28 1" />
+        </material>
+      </visual>
+    <visual name="bulb_socket">
+      <origin xyz="0 0 -0.306" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.026" />
+        </geometry>
+      <material name="dark_trim">
+        <color rgba="0.24 0.25 0.28 1" />
+        </material>
+      </visual>
+    <visual name="bulb_globe">
+      <origin xyz="0 0 -0.343" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.026" />
+        </geometry>
+      <material name="warm_light">
+        <color rgba="0.95 0.9 0.76 0.92" />
+        </material>
+      </visual>
+    <visual name="blade_root_1">
+      <origin xyz="0.106 0 -0.056" rpy="0 0 0" />
+      <geometry>
+        <box size="0.022 0.04 0.014" />
+        </geometry>
+      <material name="dark_trim">
+        <color rgba="0.24 0.25 0.28 1" />
+        </material>
+      </visual>
+    <visual name="blade_arm_1">
+      <origin xyz="0.155 0 -0.06" rpy="0 0 0" />
+      <geometry>
+        <box size="0.082 0.024 0.012" />
+        </geometry>
+      <material name="dark_trim">
+        <color rgba="0.24 0.25 0.28 1" />
+        </material>
+      </visual>
+    <visual name="blade_bracket_1">
+      <origin xyz="0.218 0 -0.068" rpy="0.18 0 0" />
+      <geometry>
+        <box size="0.064 0.118 0.014" />
+        </geometry>
+      <material name="dark_trim">
+        <color rgba="0.24 0.25 0.28 1" />
+        </material>
+      </visual>
+    <visual name="blade_panel_1">
+      <origin xyz="0.114 0 -0.052" rpy="0.18 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/ceiling_fan_blade.obj" />
+        </geometry>
+      <material name="walnut">
+        <color rgba="0.47 0.33 0.21 1" />
+        </material>
+      </visual>
+    <visual name="blade_root_2">
+      <origin xyz="0.0327558 0.100812 -0.056" rpy="0 0 1.25664" />
+      <geometry>
+        <box size="0.022 0.04 0.014" />
+        </geometry>
+      <material name="dark_trim">
+        <color rgba="0.24 0.25 0.28 1" />
+        </material>
+      </visual>
+    <visual name="blade_arm_2">
+      <origin xyz="0.0478976 0.147414 -0.06" rpy="0 0 1.25664" />
+      <geometry>
+        <box size="0.082 0.024 0.012" />
+        </geometry>
+      <material name="dark_trim">
+        <color rgba="0.24 0.25 0.28 1" />
+        </material>
+      </visual>
+    <visual name="blade_bracket_2">
+      <origin xyz="0.0673657 0.20733 -0.068" rpy="0.18 0 1.25664" />
+      <geometry>
+        <box size="0.064 0.118 0.014" />
+        </geometry>
+      <material name="dark_trim">
+        <color rgba="0.24 0.25 0.28 1" />
+        </material>
+      </visual>
+    <visual name="blade_panel_2">
+      <origin xyz="0.0352279 0.10842 -0.052" rpy="0.18 0 1.25664" />
+      <geometry>
+        <mesh filename="assets/meshes/ceiling_fan_blade.obj" />
+        </geometry>
+      <material name="walnut">
+        <color rgba="0.47 0.33 0.21 1" />
+        </material>
+      </visual>
+    <visual name="blade_root_3">
+      <origin xyz="-0.0857558 0.0623052 -0.056" rpy="0 0 2.51327" />
+      <geometry>
+        <box size="0.022 0.04 0.014" />
+        </geometry>
+      <material name="dark_trim">
+        <color rgba="0.24 0.25 0.28 1" />
+        </material>
+      </visual>
+    <visual name="blade_arm_3">
+      <origin xyz="-0.125398 0.0911067 -0.06" rpy="0 0 2.51327" />
+      <geometry>
+        <box size="0.082 0.024 0.012" />
+        </geometry>
+      <material name="dark_trim">
+        <color rgba="0.24 0.25 0.28 1" />
+        </material>
+      </visual>
+    <visual name="blade_bracket_3">
+      <origin xyz="-0.176366 0.128137 -0.068" rpy="0.18 0 2.51327" />
+      <geometry>
+        <box size="0.064 0.118 0.014" />
+        </geometry>
+      <material name="dark_trim">
+        <color rgba="0.24 0.25 0.28 1" />
+        </material>
+      </visual>
+    <visual name="blade_panel_3">
+      <origin xyz="-0.0922279 0.0670075 -0.052" rpy="0.18 0 2.51327" />
+      <geometry>
+        <mesh filename="assets/meshes/ceiling_fan_blade.obj" />
+        </geometry>
+      <material name="walnut">
+        <color rgba="0.47 0.33 0.21 1" />
+        </material>
+      </visual>
+    <visual name="blade_root_4">
+      <origin xyz="-0.0857558 -0.0623052 -0.056" rpy="0 0 3.76991" />
+      <geometry>
+        <box size="0.022 0.04 0.014" />
+        </geometry>
+      <material name="dark_trim">
+        <color rgba="0.24 0.25 0.28 1" />
+        </material>
+      </visual>
+    <visual name="blade_arm_4">
+      <origin xyz="-0.125398 -0.0911067 -0.06" rpy="0 0 3.76991" />
+      <geometry>
+        <box size="0.082 0.024 0.012" />
+        </geometry>
+      <material name="dark_trim">
+        <color rgba="0.24 0.25 0.28 1" />
+        </material>
+      </visual>
+    <visual name="blade_bracket_4">
+      <origin xyz="-0.176366 -0.128137 -0.068" rpy="0.18 0 3.76991" />
+      <geometry>
+        <box size="0.064 0.118 0.014" />
+        </geometry>
+      <material name="dark_trim">
+        <color rgba="0.24 0.25 0.28 1" />
+        </material>
+      </visual>
+    <visual name="blade_panel_4">
+      <origin xyz="-0.0922279 -0.0670075 -0.052" rpy="0.18 0 3.76991" />
+      <geometry>
+        <mesh filename="assets/meshes/ceiling_fan_blade.obj" />
+        </geometry>
+      <material name="walnut">
+        <color rgba="0.47 0.33 0.21 1" />
+        </material>
+      </visual>
+    <visual name="blade_root_5">
+      <origin xyz="0.0327558 -0.100812 -0.056" rpy="0 0 5.02655" />
+      <geometry>
+        <box size="0.022 0.04 0.014" />
+        </geometry>
+      <material name="dark_trim">
+        <color rgba="0.24 0.25 0.28 1" />
+        </material>
+      </visual>
+    <visual name="blade_arm_5">
+      <origin xyz="0.0478976 -0.147414 -0.06" rpy="0 0 5.02655" />
+      <geometry>
+        <box size="0.082 0.024 0.012" />
+        </geometry>
+      <material name="dark_trim">
+        <color rgba="0.24 0.25 0.28 1" />
+        </material>
+      </visual>
+    <visual name="blade_bracket_5">
+      <origin xyz="0.0673657 -0.20733 -0.068" rpy="0.18 0 5.02655" />
+      <geometry>
+        <box size="0.064 0.118 0.014" />
+        </geometry>
+      <material name="dark_trim">
+        <color rgba="0.24 0.25 0.28 1" />
+        </material>
+      </visual>
+    <visual name="blade_panel_5">
+      <origin xyz="0.0352279 -0.10842 -0.052" rpy="0.18 0 5.02655" />
+      <geometry>
+        <mesh filename="assets/meshes/ceiling_fan_blade.obj" />
+        </geometry>
+      <material name="walnut">
+        <color rgba="0.47 0.33 0.21 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="diffuser_cover">
+    <visual name="glass_shell">
+      <geometry>
+        <mesh filename="assets/meshes/ceiling_fan_diffuser.obj" />
+        </geometry>
+      <material name="frosted_glass">
+        <color rgba="0.96 0.97 0.99 0.58" />
+        </material>
+      </visual>
+    <visual name="left_hinge_pin">
+      <origin xyz="-0.099 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0045" length="0.014" />
+        </geometry>
+      <material name="dark_trim">
+        <color rgba="0.24 0.25 0.28 1" />
+        </material>
+      </visual>
+    <visual name="right_hinge_pin">
+      <origin xyz="0.099 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0045" length="0.014" />
+        </geometry>
+      <material name="dark_trim">
+        <color rgba="0.24 0.25 0.28 1" />
+        </material>
+      </visual>
+    <visual name="finial_flange">
+      <origin xyz="0 0 -0.151" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.016" length="0.006" />
+        </geometry>
+      <material name="brushed_nickel">
+        <color rgba="0.72 0.74 0.77 1" />
+        </material>
+      </visual>
+    <visual name="diffuser_finial">
+      <origin xyz="0 0 -0.159" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.018" />
+        </geometry>
+      <material name="brushed_nickel">
+        <color rgba="0.72 0.74 0.77 1" />
+        </material>
+      </visual>
+    </link>
+  <joint name="canopy_to_downrod" type="fixed">
+    <origin xyz="0 0 -0.126" rpy="0 0 0" />
+    <parent link="canopy" />
+    <child link="downrod" />
+    </joint>
+  <joint name="fan_spin" type="continuous">
+    <origin xyz="0 0 -0.32" rpy="0 0 0" />
+    <parent link="downrod" />
+    <child link="rotor_assembly" />
+    <axis xyz="0 0 1" />
+    <limit effort="12" velocity="15" />
+    </joint>
+  <joint name="diffuser_hinge" type="revolute">
+    <origin xyz="0 0 -0.236" rpy="0 0 0" />
+    <parent link="rotor_assembly" />
+    <child link="diffuser_cover" />
+    <axis xyz="1 0 0" />
+    <limit effort="3" velocity="1.5" lower="0" upper="1.15" />
+    </joint>
+  </robot>

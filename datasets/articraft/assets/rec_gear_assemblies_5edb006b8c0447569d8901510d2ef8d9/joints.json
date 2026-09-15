@@ -1,0 +1,536 @@
+{
+  "frame": "URDF root world frame, metres; right handed",
+  "joints": [
+    {
+      "name": "base_to_drive_pinion",
+      "type": "continuous",
+      "parent": "link_000",
+      "child": "link_001",
+      "origin_world": [
+        -0.185,
+        0.0,
+        0.14
+      ],
+      "direction_world": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "origin_near_child_center": [
+        -0.185,
+        0.0,
+        0.1565
+      ],
+      "parent_name": "base",
+      "child_name": "drive_pinion",
+      "mimic": null,
+      "source_origin_xyz": [
+        -0.185,
+        0.0,
+        0.14
+      ],
+      "source_axis": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "parent_world": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "joint_origin_transform": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          -0.185
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          -0.0,
+          0.0,
+          1.0,
+          0.14
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "base_to_center_gear",
+      "type": "continuous",
+      "parent": "link_000",
+      "child": "link_002",
+      "origin_world": [
+        0.0,
+        0.0,
+        0.14
+      ],
+      "direction_world": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "origin_near_child_center": [
+        0.0,
+        0.0,
+        0.1565
+      ],
+      "parent_name": "base",
+      "child_name": "center_gear",
+      "mimic": {
+        "joint": "base_to_drive_pinion",
+        "multiplier": "-0.5"
+      },
+      "source_origin_xyz": [
+        0.0,
+        0.0,
+        0.14
+      ],
+      "source_axis": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "parent_world": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "joint_origin_transform": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          -0.0,
+          0.0,
+          1.0,
+          0.14
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "base_to_upper_idler",
+      "type": "continuous",
+      "parent": "link_000",
+      "child": "link_003",
+      "origin_world": [
+        0.0935272,
+        0.152623,
+        0.14
+      ],
+      "direction_world": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "origin_near_child_center": [
+        0.0935272,
+        0.152623,
+        0.1565
+      ],
+      "parent_name": "base",
+      "child_name": "upper_idler",
+      "mimic": {
+        "joint": "base_to_drive_pinion",
+        "multiplier": "1.11111"
+      },
+      "source_origin_xyz": [
+        0.0935272,
+        0.152623,
+        0.14
+      ],
+      "source_axis": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "parent_world": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "joint_origin_transform": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0935272
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.152623
+        ],
+        [
+          -0.0,
+          0.0,
+          1.0,
+          0.14
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "base_to_upper_output",
+      "type": "continuous",
+      "parent": "link_000",
+      "child": "link_004",
+      "origin_world": [
+        0.242476,
+        0.148722,
+        0.14
+      ],
+      "direction_world": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "origin_near_child_center": [
+        0.242476,
+        0.148722,
+        0.1565
+      ],
+      "parent_name": "base",
+      "child_name": "upper_output",
+      "mimic": {
+        "joint": "base_to_drive_pinion",
+        "multiplier": "-0.666667"
+      },
+      "source_origin_xyz": [
+        0.242476,
+        0.148722,
+        0.14
+      ],
+      "source_axis": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "parent_world": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "joint_origin_transform": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.242476
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.148722
+        ],
+        [
+          -0.0,
+          0.0,
+          1.0,
+          0.14
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "base_to_lower_idler",
+      "type": "continuous",
+      "parent": "link_000",
+      "child": "link_005",
+      "origin_world": [
+        0.0997972,
+        -0.162854,
+        0.14
+      ],
+      "direction_world": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "origin_near_child_center": [
+        0.0997972,
+        -0.162854,
+        0.1565
+      ],
+      "parent_name": "base",
+      "child_name": "lower_idler",
+      "mimic": {
+        "joint": "base_to_drive_pinion",
+        "multiplier": "0.909091"
+      },
+      "source_origin_xyz": [
+        0.0997972,
+        -0.162854,
+        0.14
+      ],
+      "source_axis": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "parent_world": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "joint_origin_transform": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0997972
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          -0.162854
+        ],
+        [
+          -0.0,
+          0.0,
+          1.0,
+          0.14
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "base_to_lower_output",
+      "type": "continuous",
+      "parent": "link_000",
+      "child": "link_006",
+      "origin_world": [
+        0.248763,
+        -0.166046,
+        0.14
+      ],
+      "direction_world": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "origin_near_child_center": [
+        0.248763,
+        -0.166046,
+        0.1565
+      ],
+      "parent_name": "base",
+      "child_name": "lower_output",
+      "mimic": {
+        "joint": "base_to_drive_pinion",
+        "multiplier": "-0.769231"
+      },
+      "source_origin_xyz": [
+        0.248763,
+        -0.166046,
+        0.14
+      ],
+      "source_axis": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "parent_world": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "joint_origin_transform": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.248763
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          -0.166046
+        ],
+        [
+          -0.0,
+          0.0,
+          1.0,
+          0.14
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    }
+  ]
+}

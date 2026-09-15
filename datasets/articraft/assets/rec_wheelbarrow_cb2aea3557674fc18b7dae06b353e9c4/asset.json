@@ -1,0 +1,121 @@
+{
+  "summary": {
+    "id": "rec_wheelbarrow_cb2aea3557674fc18b7dae06b353e9c4",
+    "category": "wheel",
+    "robot_name": "wheelbarrow",
+    "joint_count": 1,
+    "link_count": 3,
+    "target_link_count": 2,
+    "family": "rec_wheelbarrow",
+    "warnings": [],
+    "diagonal": 1.7597923662596606,
+    "bytes": 3599123
+  },
+  "source": {
+    "dataset": "camvsl/Articraft-10K",
+    "revision": "3c79d5a05bb7cb6bf7bfee5e090176636ee3ac65",
+    "license": "CC-BY-4.0",
+    "url": "https://huggingface.co/datasets/camvsl/Articraft-10K/blob/3c79d5a05bb7cb6bf7bfee5e090176636ee3ac65/rec_wheelbarrow_cb2aea3557674fc18b7dae06b353e9c4.tar.gz",
+    "archive_sha256": "27b26bd5cbf9641271dde65ea114455c9b9982cc58585d23e69b892800df7a85",
+    "archive": "rec_wheelbarrow_cb2aea3557674fc18b7dae06b353e9c4.tar.gz",
+    "label_status": "Original generated URDF reference; not manually verified or physically validated"
+  },
+  "links": [
+    {
+      "id": "link_000",
+      "name": "frame",
+      "point_file": "inputs/link_000.npz",
+      "faces": 6036,
+      "vertices": 3046,
+      "bounds": [
+        [
+          -0.3450000624441157,
+          -0.647,
+          0.01599919189497171
+        ],
+        [
+          0.3450000624441157,
+          0.652,
+          0.567949
+        ]
+      ]
+    },
+    {
+      "id": "link_001",
+      "name": "tray",
+      "point_file": null,
+      "faces": 52,
+      "vertices": 32,
+      "bounds": [
+        [
+          -0.27,
+          -0.26,
+          0.365
+        ],
+        [
+          0.27,
+          0.47,
+          0.64
+        ]
+      ]
+    },
+    {
+      "id": "link_002",
+      "name": "front_wheel",
+      "point_file": "inputs/link_002.npz",
+      "faces": 1600,
+      "vertices": 804,
+      "bounds": [
+        [
+          -0.08000012856163892,
+          0.44,
+          0.0
+        ],
+        [
+          0.08000012856163892,
+          0.8400000000000001,
+          0.4
+        ]
+      ]
+    }
+  ],
+  "joints": [
+    {
+      "name": "tray_mount",
+      "type": "fixed",
+      "parent": "link_000",
+      "child": "link_001",
+      "reference_q": 0.0,
+      "mimic": null
+    },
+    {
+      "name": "front_wheel_spin",
+      "type": "continuous",
+      "parent": "link_000",
+      "child": "link_002",
+      "reference_q": 0.0,
+      "mimic": null
+    }
+  ],
+  "bounds": [
+    [
+      -0.3450000624441157,
+      -0.647,
+      0.0
+    ],
+    [
+      0.3450000624441157,
+      0.8400000000000001,
+      0.64
+    ]
+  ],
+  "point_pool_size": 65536,
+  "reference_pose": "Zero position clamped to limits; mimic values propagated",
+  "qc": {
+    "finite_geometry": true,
+    "tree_valid": true,
+    "axis_unit": true,
+    "physical_collision_validation": false,
+    "visual_tessellation": "32 cylinder segments, icosphere subdivision 2"
+  }
+}

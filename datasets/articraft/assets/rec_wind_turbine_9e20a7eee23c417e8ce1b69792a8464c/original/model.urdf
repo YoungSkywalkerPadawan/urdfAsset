@@ -1,0 +1,90 @@
+<robot name="horizontal_axis_wind_turbine">
+  <material name="tower_paint">
+    <color rgba="0.78 0.8 0.82 1" />
+    </material>
+  <material name="nacelle_paint">
+    <color rgba="0.86 0.88 0.9 1" />
+    </material>
+  <material name="blade_paint">
+    <color rgba="0.96 0.96 0.92 1" />
+    </material>
+  <material name="hub_metal">
+    <color rgba="0.62 0.64 0.66 1" />
+    </material>
+  <link name="tower">
+    <visual name="tapered_tower">
+      <geometry>
+        <mesh filename="assets/meshes/tower.obj" />
+        </geometry>
+      <material name="tower_paint">
+        <color rgba="0.78 0.8 0.82 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="nacelle">
+    <visual name="nacelle_shell">
+      <geometry>
+        <mesh filename="assets/meshes/nacelle.obj" />
+        </geometry>
+      <material name="nacelle_paint">
+        <color rgba="0.86 0.88 0.9 1" />
+        </material>
+      </visual>
+    <visual name="front_bearing">
+      <geometry>
+        <mesh filename="assets/meshes/front_bearing_face.obj" />
+        </geometry>
+      <material name="hub_metal">
+        <color rgba="0.62 0.64 0.66 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="rotor">
+    <visual name="hub_shell">
+      <geometry>
+        <mesh filename="assets/meshes/hub_shell.obj" />
+        </geometry>
+      <material name="hub_metal">
+        <color rgba="0.62 0.64 0.66 1" />
+        </material>
+      </visual>
+    <visual name="blade_0">
+      <geometry>
+        <mesh filename="assets/meshes/blade_0.obj" />
+        </geometry>
+      <material name="blade_paint">
+        <color rgba="0.96 0.96 0.92 1" />
+        </material>
+      </visual>
+    <visual name="blade_1">
+      <geometry>
+        <mesh filename="assets/meshes/blade_1.obj" />
+        </geometry>
+      <material name="blade_paint">
+        <color rgba="0.96 0.96 0.92 1" />
+        </material>
+      </visual>
+    <visual name="blade_2">
+      <geometry>
+        <mesh filename="assets/meshes/blade_2.obj" />
+        </geometry>
+      <material name="blade_paint">
+        <color rgba="0.96 0.96 0.92 1" />
+        </material>
+      </visual>
+    </link>
+  <joint name="tower_to_nacelle" type="revolute">
+    <origin xyz="0 0 70" rpy="0 0 0" />
+    <parent link="tower" />
+    <child link="nacelle" />
+    <axis xyz="0 0 1" />
+    <limit effort="2.5e+06" velocity="0.2" lower="-3.14159" upper="3.14159" />
+    </joint>
+  <joint name="nacelle_to_rotor" type="continuous">
+    <origin xyz="7.3 0 2.8" rpy="0 0 0" />
+    <parent link="nacelle" />
+    <child link="rotor" />
+    <axis xyz="1 0 0" />
+    <limit effort="1.2e+06" velocity="2.2" />
+    </joint>
+  </robot>

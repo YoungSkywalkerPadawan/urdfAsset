@@ -1,0 +1,641 @@
+<robot name="manual_wheelchair">
+  <material name="satin_aluminum">
+    <color rgba="0.72 0.74 0.72 1" />
+    </material>
+  <material name="dark_navy_fabric">
+    <color rgba="0.03 0.055 0.09 1" />
+    </material>
+  <material name="black_rubber">
+    <color rgba="0.015 0.014 0.013 1" />
+    </material>
+  <material name="graphite">
+    <color rgba="0.09 0.095 0.1 1" />
+    </material>
+  <material name="ribbed_black_footplates">
+    <color rgba="0.025 0.025 0.025 1" />
+    </material>
+  <link name="frame">
+    <visual name="side_frame_0">
+      <geometry>
+        <mesh filename="assets/meshes/side_frame_0.obj" />
+        </geometry>
+      <material name="satin_aluminum">
+        <color rgba="0.72 0.74 0.72 1" />
+        </material>
+      </visual>
+    <visual name="rear_post_0">
+      <geometry>
+        <mesh filename="assets/meshes/rear_post_0.obj" />
+        </geometry>
+      <material name="satin_aluminum">
+        <color rgba="0.72 0.74 0.72 1" />
+        </material>
+      </visual>
+    <visual name="push_grip_0">
+      <geometry>
+        <mesh filename="assets/meshes/push_grip_0.obj" />
+        </geometry>
+      <material name="black_rubber">
+        <color rgba="0.015 0.014 0.013 1" />
+        </material>
+      </visual>
+    <visual name="side_frame_1">
+      <geometry>
+        <mesh filename="assets/meshes/side_frame_1.obj" />
+        </geometry>
+      <material name="satin_aluminum">
+        <color rgba="0.72 0.74 0.72 1" />
+        </material>
+      </visual>
+    <visual name="rear_post_1">
+      <geometry>
+        <mesh filename="assets/meshes/rear_post_1.obj" />
+        </geometry>
+      <material name="satin_aluminum">
+        <color rgba="0.72 0.74 0.72 1" />
+        </material>
+      </visual>
+    <visual name="push_grip_1">
+      <geometry>
+        <mesh filename="assets/meshes/push_grip_1.obj" />
+        </geometry>
+      <material name="black_rubber">
+        <color rgba="0.015 0.014 0.013 1" />
+        </material>
+      </visual>
+    <visual name="rear_axle">
+      <geometry>
+        <mesh filename="assets/meshes/rear_axle.obj" />
+        </geometry>
+      <material name="satin_aluminum">
+        <color rgba="0.72 0.74 0.72 1" />
+        </material>
+      </visual>
+    <visual name="rear_seat_rail">
+      <geometry>
+        <mesh filename="assets/meshes/rear_seat_rail.obj" />
+        </geometry>
+      <material name="satin_aluminum">
+        <color rgba="0.72 0.74 0.72 1" />
+        </material>
+      </visual>
+    <visual name="front_seat_rail">
+      <geometry>
+        <mesh filename="assets/meshes/front_seat_rail.obj" />
+        </geometry>
+      <material name="satin_aluminum">
+        <color rgba="0.72 0.74 0.72 1" />
+        </material>
+      </visual>
+    <visual name="front_caster_rail">
+      <geometry>
+        <mesh filename="assets/meshes/front_caster_rail.obj" />
+        </geometry>
+      <material name="satin_aluminum">
+        <color rgba="0.72 0.74 0.72 1" />
+        </material>
+      </visual>
+    <visual name="backrest_crossbar">
+      <geometry>
+        <mesh filename="assets/meshes/backrest_crossbar.obj" />
+        </geometry>
+      <material name="satin_aluminum">
+        <color rgba="0.72 0.74 0.72 1" />
+        </material>
+      </visual>
+    <visual name="handle_crossbar">
+      <geometry>
+        <mesh filename="assets/meshes/handle_crossbar.obj" />
+        </geometry>
+      <material name="satin_aluminum">
+        <color rgba="0.72 0.74 0.72 1" />
+        </material>
+      </visual>
+    <visual name="handle_bridge_0">
+      <geometry>
+        <mesh filename="assets/meshes/handle_bridge_0.obj" />
+        </geometry>
+      <material name="satin_aluminum">
+        <color rgba="0.72 0.74 0.72 1" />
+        </material>
+      </visual>
+    <visual name="handle_bridge_1">
+      <geometry>
+        <mesh filename="assets/meshes/handle_bridge_1.obj" />
+        </geometry>
+      <material name="satin_aluminum">
+        <color rgba="0.72 0.74 0.72 1" />
+        </material>
+      </visual>
+    <visual name="caster_socket_0">
+      <geometry>
+        <mesh filename="assets/meshes/caster_socket_0.obj" />
+        </geometry>
+      <material name="satin_aluminum">
+        <color rgba="0.72 0.74 0.72 1" />
+        </material>
+      </visual>
+    <visual name="caster_socket_1">
+      <geometry>
+        <mesh filename="assets/meshes/caster_socket_1.obj" />
+        </geometry>
+      <material name="satin_aluminum">
+        <color rgba="0.72 0.74 0.72 1" />
+        </material>
+      </visual>
+    <visual name="seat_cushion">
+      <origin xyz="0.035 0 0.505" rpy="0 0 0" />
+      <geometry>
+        <box size="0.465 0.485 0.045" />
+        </geometry>
+      <material name="dark_navy_fabric">
+        <color rgba="0.03 0.055 0.09 1" />
+        </material>
+      </visual>
+    <visual name="backrest_sling">
+      <origin xyz="-0.285 0 0.705" rpy="0 -0.08 0" />
+      <geometry>
+        <box size="0.045 0.485 0.405" />
+        </geometry>
+      <material name="dark_navy_fabric">
+        <color rgba="0.03 0.055 0.09 1" />
+        </material>
+      </visual>
+    <visual name="arm_pad_0">
+      <origin xyz="0.025 -0.285 0.67" rpy="0 0 0" />
+      <geometry>
+        <box size="0.33 0.05 0.035" />
+        </geometry>
+      <material name="black_rubber">
+        <color rgba="0.015 0.014 0.013 1" />
+        </material>
+      </visual>
+    <visual name="arm_support_0_0">
+      <geometry>
+        <mesh filename="assets/meshes/arm_support_0_0.obj" />
+        </geometry>
+      <material name="satin_aluminum">
+        <color rgba="0.72 0.74 0.72 1" />
+        </material>
+      </visual>
+    <visual name="arm_support_0_1">
+      <geometry>
+        <mesh filename="assets/meshes/arm_support_0_1.obj" />
+        </geometry>
+      <material name="satin_aluminum">
+        <color rgba="0.72 0.74 0.72 1" />
+        </material>
+      </visual>
+    <visual name="arm_pad_1">
+      <origin xyz="0.025 0.285 0.67" rpy="0 0 0" />
+      <geometry>
+        <box size="0.33 0.05 0.035" />
+        </geometry>
+      <material name="black_rubber">
+        <color rgba="0.015 0.014 0.013 1" />
+        </material>
+      </visual>
+    <visual name="arm_support_1_0">
+      <geometry>
+        <mesh filename="assets/meshes/arm_support_1_0.obj" />
+        </geometry>
+      <material name="satin_aluminum">
+        <color rgba="0.72 0.74 0.72 1" />
+        </material>
+      </visual>
+    <visual name="arm_support_1_1">
+      <geometry>
+        <mesh filename="assets/meshes/arm_support_1_1.obj" />
+        </geometry>
+      <material name="satin_aluminum">
+        <color rgba="0.72 0.74 0.72 1" />
+        </material>
+      </visual>
+    <visual name="footrest_hanger_0">
+      <geometry>
+        <mesh filename="assets/meshes/footrest_hanger_0.obj" />
+        </geometry>
+      <material name="satin_aluminum">
+        <color rgba="0.72 0.74 0.72 1" />
+        </material>
+      </visual>
+    <visual name="footplate_socket_0">
+      <geometry>
+        <mesh filename="assets/meshes/footplate_socket_0.obj" />
+        </geometry>
+      <material name="satin_aluminum">
+        <color rgba="0.72 0.74 0.72 1" />
+        </material>
+      </visual>
+    <visual name="footplate_0">
+      <origin xyz="0.57 -0.145 0.135" rpy="0 0.1 0" />
+      <geometry>
+        <box size="0.175 0.135 0.018" />
+        </geometry>
+      <material name="ribbed_black_footplates">
+        <color rgba="0.025 0.025 0.025 1" />
+        </material>
+      </visual>
+    <visual name="footplate_rib_0_0">
+      <origin xyz="0.575 -0.19 0.142" rpy="0 0.1 0" />
+      <geometry>
+        <box size="0.115 0.006 0.006" />
+        </geometry>
+      <material name="graphite">
+        <color rgba="0.09 0.095 0.1 1" />
+        </material>
+      </visual>
+    <visual name="footplate_rib_0_1">
+      <origin xyz="0.575 -0.145 0.142" rpy="0 0.1 0" />
+      <geometry>
+        <box size="0.115 0.006 0.006" />
+        </geometry>
+      <material name="graphite">
+        <color rgba="0.09 0.095 0.1 1" />
+        </material>
+      </visual>
+    <visual name="footplate_rib_0_2">
+      <origin xyz="0.575 -0.1 0.142" rpy="0 0.1 0" />
+      <geometry>
+        <box size="0.115 0.006 0.006" />
+        </geometry>
+      <material name="graphite">
+        <color rgba="0.09 0.095 0.1 1" />
+        </material>
+      </visual>
+    <visual name="footrest_hanger_1">
+      <geometry>
+        <mesh filename="assets/meshes/footrest_hanger_1.obj" />
+        </geometry>
+      <material name="satin_aluminum">
+        <color rgba="0.72 0.74 0.72 1" />
+        </material>
+      </visual>
+    <visual name="footplate_socket_1">
+      <geometry>
+        <mesh filename="assets/meshes/footplate_socket_1.obj" />
+        </geometry>
+      <material name="satin_aluminum">
+        <color rgba="0.72 0.74 0.72 1" />
+        </material>
+      </visual>
+    <visual name="footplate_1">
+      <origin xyz="0.57 0.145 0.135" rpy="0 0.1 0" />
+      <geometry>
+        <box size="0.175 0.135 0.018" />
+        </geometry>
+      <material name="ribbed_black_footplates">
+        <color rgba="0.025 0.025 0.025 1" />
+        </material>
+      </visual>
+    <visual name="footplate_rib_1_0">
+      <origin xyz="0.575 0.1 0.142" rpy="0 0.1 0" />
+      <geometry>
+        <box size="0.115 0.006 0.006" />
+        </geometry>
+      <material name="graphite">
+        <color rgba="0.09 0.095 0.1 1" />
+        </material>
+      </visual>
+    <visual name="footplate_rib_1_1">
+      <origin xyz="0.575 0.145 0.142" rpy="0 0.1 0" />
+      <geometry>
+        <box size="0.115 0.006 0.006" />
+        </geometry>
+      <material name="graphite">
+        <color rgba="0.09 0.095 0.1 1" />
+        </material>
+      </visual>
+    <visual name="footplate_rib_1_2">
+      <origin xyz="0.575 0.19 0.142" rpy="0 0.1 0" />
+      <geometry>
+        <box size="0.115 0.006 0.006" />
+        </geometry>
+      <material name="graphite">
+        <color rgba="0.09 0.095 0.1 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="rear_wheel_0">
+    <visual name="rim">
+      <geometry>
+        <mesh filename="assets/meshes/rear_wheel_0_rim.obj" />
+        </geometry>
+      <material name="satin_aluminum">
+        <color rgba="0.72 0.74 0.72 1" />
+        </material>
+      </visual>
+    <visual name="tire">
+      <geometry>
+        <mesh filename="assets/meshes/rear_wheel_0_tire.obj" />
+        </geometry>
+      <material name="black_rubber">
+        <color rgba="0.015 0.014 0.013 1" />
+        </material>
+      </visual>
+    <visual name="handrim">
+      <origin xyz="-0.034 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/rear_wheel_0_handrim.obj" />
+        </geometry>
+      <material name="satin_aluminum">
+        <color rgba="0.72 0.74 0.72 1" />
+        </material>
+      </visual>
+    <visual name="handrim_standoff_0">
+      <geometry>
+        <mesh filename="assets/meshes/rear_wheel_0_handrim_standoff_0.obj" />
+        </geometry>
+      <material name="satin_aluminum">
+        <color rgba="0.72 0.74 0.72 1" />
+        </material>
+      </visual>
+    <visual name="handrim_standoff_1">
+      <geometry>
+        <mesh filename="assets/meshes/rear_wheel_0_handrim_standoff_1.obj" />
+        </geometry>
+      <material name="satin_aluminum">
+        <color rgba="0.72 0.74 0.72 1" />
+        </material>
+      </visual>
+    <visual name="handrim_standoff_2">
+      <geometry>
+        <mesh filename="assets/meshes/rear_wheel_0_handrim_standoff_2.obj" />
+        </geometry>
+      <material name="satin_aluminum">
+        <color rgba="0.72 0.74 0.72 1" />
+        </material>
+      </visual>
+    <visual name="handrim_standoff_3">
+      <geometry>
+        <mesh filename="assets/meshes/rear_wheel_0_handrim_standoff_3.obj" />
+        </geometry>
+      <material name="satin_aluminum">
+        <color rgba="0.72 0.74 0.72 1" />
+        </material>
+      </visual>
+    <visual name="handrim_standoff_4">
+      <geometry>
+        <mesh filename="assets/meshes/rear_wheel_0_handrim_standoff_4.obj" />
+        </geometry>
+      <material name="satin_aluminum">
+        <color rgba="0.72 0.74 0.72 1" />
+        </material>
+      </visual>
+    <visual name="handrim_standoff_5">
+      <geometry>
+        <mesh filename="assets/meshes/rear_wheel_0_handrim_standoff_5.obj" />
+        </geometry>
+      <material name="satin_aluminum">
+        <color rgba="0.72 0.74 0.72 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="rear_wheel_1">
+    <visual name="rim">
+      <geometry>
+        <mesh filename="assets/meshes/rear_wheel_1_rim.obj" />
+        </geometry>
+      <material name="satin_aluminum">
+        <color rgba="0.72 0.74 0.72 1" />
+        </material>
+      </visual>
+    <visual name="tire">
+      <geometry>
+        <mesh filename="assets/meshes/rear_wheel_1_tire.obj" />
+        </geometry>
+      <material name="black_rubber">
+        <color rgba="0.015 0.014 0.013 1" />
+        </material>
+      </visual>
+    <visual name="handrim">
+      <origin xyz="0.034 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/rear_wheel_1_handrim.obj" />
+        </geometry>
+      <material name="satin_aluminum">
+        <color rgba="0.72 0.74 0.72 1" />
+        </material>
+      </visual>
+    <visual name="handrim_standoff_0">
+      <geometry>
+        <mesh filename="assets/meshes/rear_wheel_1_handrim_standoff_0.obj" />
+        </geometry>
+      <material name="satin_aluminum">
+        <color rgba="0.72 0.74 0.72 1" />
+        </material>
+      </visual>
+    <visual name="handrim_standoff_1">
+      <geometry>
+        <mesh filename="assets/meshes/rear_wheel_1_handrim_standoff_1.obj" />
+        </geometry>
+      <material name="satin_aluminum">
+        <color rgba="0.72 0.74 0.72 1" />
+        </material>
+      </visual>
+    <visual name="handrim_standoff_2">
+      <geometry>
+        <mesh filename="assets/meshes/rear_wheel_1_handrim_standoff_2.obj" />
+        </geometry>
+      <material name="satin_aluminum">
+        <color rgba="0.72 0.74 0.72 1" />
+        </material>
+      </visual>
+    <visual name="handrim_standoff_3">
+      <geometry>
+        <mesh filename="assets/meshes/rear_wheel_1_handrim_standoff_3.obj" />
+        </geometry>
+      <material name="satin_aluminum">
+        <color rgba="0.72 0.74 0.72 1" />
+        </material>
+      </visual>
+    <visual name="handrim_standoff_4">
+      <geometry>
+        <mesh filename="assets/meshes/rear_wheel_1_handrim_standoff_4.obj" />
+        </geometry>
+      <material name="satin_aluminum">
+        <color rgba="0.72 0.74 0.72 1" />
+        </material>
+      </visual>
+    <visual name="handrim_standoff_5">
+      <geometry>
+        <mesh filename="assets/meshes/rear_wheel_1_handrim_standoff_5.obj" />
+        </geometry>
+      <material name="satin_aluminum">
+        <color rgba="0.72 0.74 0.72 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="caster_fork_0">
+    <visual name="swivel_stem">
+      <origin xyz="0 0 -0.075" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.15" />
+        </geometry>
+      <material name="satin_aluminum">
+        <color rgba="0.72 0.74 0.72 1" />
+        </material>
+      </visual>
+    <visual name="fork_crown">
+      <origin xyz="-0.045 0 -0.092" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.06" length="0.018" />
+        </geometry>
+      <material name="graphite">
+        <color rgba="0.09 0.095 0.1 1" />
+        </material>
+      </visual>
+    <visual name="fork_plate_0">
+      <origin xyz="-0.095 -0.032 -0.154" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.007 0.118" />
+        </geometry>
+      <material name="graphite">
+        <color rgba="0.09 0.095 0.1 1" />
+        </material>
+      </visual>
+    <visual name="fork_plate_1">
+      <origin xyz="-0.095 0.032 -0.154" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.007 0.118" />
+        </geometry>
+      <material name="graphite">
+        <color rgba="0.09 0.095 0.1 1" />
+        </material>
+      </visual>
+    <visual name="caster_axle">
+      <origin xyz="-0.095 0 -0.16" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.008" length="0.08" />
+        </geometry>
+      <material name="satin_aluminum">
+        <color rgba="0.72 0.74 0.72 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="caster_wheel_0">
+    <visual name="rim">
+      <geometry>
+        <mesh filename="assets/meshes/caster_wheel_0_rim.obj" />
+        </geometry>
+      <material name="satin_aluminum">
+        <color rgba="0.72 0.74 0.72 1" />
+        </material>
+      </visual>
+    <visual name="tire">
+      <geometry>
+        <mesh filename="assets/meshes/caster_wheel_0_tire.obj" />
+        </geometry>
+      <material name="black_rubber">
+        <color rgba="0.015 0.014 0.013 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="caster_fork_1">
+    <visual name="swivel_stem">
+      <origin xyz="0 0 -0.075" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.15" />
+        </geometry>
+      <material name="satin_aluminum">
+        <color rgba="0.72 0.74 0.72 1" />
+        </material>
+      </visual>
+    <visual name="fork_crown">
+      <origin xyz="-0.045 0 -0.092" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.06" length="0.018" />
+        </geometry>
+      <material name="graphite">
+        <color rgba="0.09 0.095 0.1 1" />
+        </material>
+      </visual>
+    <visual name="fork_plate_0">
+      <origin xyz="-0.095 -0.032 -0.154" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.007 0.118" />
+        </geometry>
+      <material name="graphite">
+        <color rgba="0.09 0.095 0.1 1" />
+        </material>
+      </visual>
+    <visual name="fork_plate_1">
+      <origin xyz="-0.095 0.032 -0.154" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.007 0.118" />
+        </geometry>
+      <material name="graphite">
+        <color rgba="0.09 0.095 0.1 1" />
+        </material>
+      </visual>
+    <visual name="caster_axle">
+      <origin xyz="-0.095 0 -0.16" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.008" length="0.08" />
+        </geometry>
+      <material name="satin_aluminum">
+        <color rgba="0.72 0.74 0.72 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="caster_wheel_1">
+    <visual name="rim">
+      <geometry>
+        <mesh filename="assets/meshes/caster_wheel_1_rim.obj" />
+        </geometry>
+      <material name="satin_aluminum">
+        <color rgba="0.72 0.74 0.72 1" />
+        </material>
+      </visual>
+    <visual name="tire">
+      <geometry>
+        <mesh filename="assets/meshes/caster_wheel_1_tire.obj" />
+        </geometry>
+      <material name="black_rubber">
+        <color rgba="0.015 0.014 0.013 1" />
+        </material>
+      </visual>
+    </link>
+  <joint name="frame_to_rear_wheel_0" type="continuous">
+    <origin xyz="-0.285 -0.34 0.305" rpy="0 0 1.5708" />
+    <parent link="frame" />
+    <child link="rear_wheel_0" />
+    <axis xyz="1 0 0" />
+    <limit effort="12" velocity="18" />
+    </joint>
+  <joint name="frame_to_rear_wheel_1" type="continuous">
+    <origin xyz="-0.285 0.34 0.305" rpy="0 0 1.5708" />
+    <parent link="frame" />
+    <child link="rear_wheel_1" />
+    <axis xyz="1 0 0" />
+    <limit effort="12" velocity="18" />
+    </joint>
+  <joint name="frame_to_caster_fork_0" type="continuous">
+    <origin xyz="0.425 -0.24 0.235" rpy="0 0 0" />
+    <parent link="frame" />
+    <child link="caster_fork_0" />
+    <axis xyz="0 0 1" />
+    <limit effort="4" velocity="10" />
+    </joint>
+  <joint name="caster_fork_0_to_wheel" type="continuous">
+    <origin xyz="-0.095 0 -0.16" rpy="0 0 1.5708" />
+    <parent link="caster_fork_0" />
+    <child link="caster_wheel_0" />
+    <axis xyz="1 0 0" />
+    <limit effort="2" velocity="25" />
+    </joint>
+  <joint name="frame_to_caster_fork_1" type="continuous">
+    <origin xyz="0.425 0.24 0.235" rpy="0 0 0" />
+    <parent link="frame" />
+    <child link="caster_fork_1" />
+    <axis xyz="0 0 1" />
+    <limit effort="4" velocity="10" />
+    </joint>
+  <joint name="caster_fork_1_to_wheel" type="continuous">
+    <origin xyz="-0.095 0 -0.16" rpy="0 0 1.5708" />
+    <parent link="caster_fork_1" />
+    <child link="caster_wheel_1" />
+    <axis xyz="1 0 0" />
+    <limit effort="2" velocity="25" />
+    </joint>
+  </robot>

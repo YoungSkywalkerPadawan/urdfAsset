@@ -1,0 +1,121 @@
+{
+  "summary": {
+    "id": "rec_globe_ef9e5cd15f884bac90c4a531305bb379",
+    "category": "globe",
+    "robot_name": "antique_desk_globe",
+    "joint_count": 1,
+    "link_count": 3,
+    "target_link_count": 2,
+    "family": "rec_globe",
+    "warnings": [],
+    "diagonal": 0.8341283450428817,
+    "bytes": 4249874
+  },
+  "source": {
+    "dataset": "camvsl/Articraft-10K",
+    "revision": "3c79d5a05bb7cb6bf7bfee5e090176636ee3ac65",
+    "license": "CC-BY-4.0",
+    "url": "https://huggingface.co/datasets/camvsl/Articraft-10K/blob/3c79d5a05bb7cb6bf7bfee5e090176636ee3ac65/rec_globe_ef9e5cd15f884bac90c4a531305bb379.tar.gz",
+    "archive_sha256": "4b3bc23c270fbe76bbf7f1201fe1280739d8de2724a3725d4d62185a07941609",
+    "archive": "rec_globe_ef9e5cd15f884bac90c4a531305bb379.tar.gz",
+    "label_status": "Original generated URDF reference; not manually verified or physically validated"
+  },
+  "links": [
+    {
+      "id": "link_000",
+      "name": "stand",
+      "point_file": null,
+      "faces": 8648,
+      "vertices": 4620,
+      "bounds": [
+        [
+          -0.2215,
+          -0.2215,
+          -0.008000033058711005
+        ],
+        [
+          0.2215,
+          0.2215,
+          0.4070000330587313
+        ]
+      ]
+    },
+    {
+      "id": "link_001",
+      "name": "meridian",
+      "point_file": "inputs/link_001.npz",
+      "faces": 6400,
+      "vertices": 3462,
+      "bounds": [
+        [
+          -0.18600003673194648,
+          -0.07057790600065382,
+          0.2372985749128508
+        ],
+        [
+          0.18600003673194648,
+          0.07057790600065382,
+          0.5427014250871492
+        ]
+      ]
+    },
+    {
+      "id": "link_002",
+      "name": "globe",
+      "point_file": "inputs/link_002.npz",
+      "faces": 12064,
+      "vertices": 7160,
+      "bounds": [
+        [
+          -0.1368,
+          -0.1364288251788615,
+          0.25357117481981417
+        ],
+        [
+          0.137442,
+          0.1364288251788615,
+          0.5264288251801859
+        ]
+      ]
+    }
+  ],
+  "joints": [
+    {
+      "name": "stand_to_meridian",
+      "type": "revolute",
+      "parent": "link_000",
+      "child": "link_001",
+      "reference_q": 0.0,
+      "mimic": null
+    },
+    {
+      "name": "meridian_to_globe",
+      "type": "continuous",
+      "parent": "link_001",
+      "child": "link_002",
+      "reference_q": 0.0,
+      "mimic": null
+    }
+  ],
+  "bounds": [
+    [
+      -0.2215,
+      -0.2215,
+      -0.008000033058711005
+    ],
+    [
+      0.2215,
+      0.2215,
+      0.5427014250871492
+    ]
+  ],
+  "point_pool_size": 65536,
+  "reference_pose": "Zero position clamped to limits; mimic values propagated",
+  "qc": {
+    "finite_geometry": true,
+    "tree_valid": true,
+    "axis_unit": true,
+    "physical_collision_validation": false,
+    "visual_tessellation": "32 cylinder segments, icosphere subdivision 2"
+  }
+}

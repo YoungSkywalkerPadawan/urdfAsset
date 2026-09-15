@@ -1,0 +1,269 @@
+{
+  "frame": "URDF root world frame, metres; right handed",
+  "joints": [
+    {
+      "name": "input_axis",
+      "type": "continuous",
+      "parent": "link_000",
+      "child": "link_001",
+      "origin_world": [
+        0.16,
+        0.0,
+        0.205
+      ],
+      "direction_world": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "origin_near_child_center": [
+        0.16,
+        0.0,
+        0.1475
+      ],
+      "parent_name": "base",
+      "child_name": "input_shaft",
+      "mimic": null,
+      "source_origin_xyz": [
+        0.16,
+        0.0,
+        0.205
+      ],
+      "source_axis": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "parent_world": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "joint_origin_transform": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.16
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          -0.0,
+          0.0,
+          1.0,
+          0.205
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "transfer_axis",
+      "type": "continuous",
+      "parent": "link_000",
+      "child": "link_002",
+      "origin_world": [
+        0.16,
+        0.0,
+        0.2635
+      ],
+      "direction_world": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "origin_near_child_center": [
+        0.39,
+        0.0,
+        0.2635
+      ],
+      "parent_name": "base",
+      "child_name": "transfer_shaft",
+      "mimic": {
+        "joint": "input_axis",
+        "multiplier": "-1"
+      },
+      "source_origin_xyz": [
+        0.16,
+        0.0,
+        0.2635
+      ],
+      "source_axis": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "parent_world": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "joint_origin_transform": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.16
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          -0.0,
+          0.0,
+          1.0,
+          0.2635
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "output_axis",
+      "type": "continuous",
+      "parent": "link_000",
+      "child": "link_003",
+      "origin_world": [
+        0.16,
+        0.127,
+        0.2635
+      ],
+      "direction_world": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "origin_near_child_center": [
+        0.4600000000000001,
+        0.127,
+        0.2635
+      ],
+      "parent_name": "base",
+      "child_name": "output_shaft",
+      "mimic": {
+        "joint": "transfer_axis",
+        "multiplier": "-0.75"
+      },
+      "source_origin_xyz": [
+        0.16,
+        0.127,
+        0.2635
+      ],
+      "source_axis": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "parent_world": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "joint_origin_transform": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.16
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.127
+        ],
+        [
+          -0.0,
+          0.0,
+          1.0,
+          0.2635
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    }
+  ]
+}

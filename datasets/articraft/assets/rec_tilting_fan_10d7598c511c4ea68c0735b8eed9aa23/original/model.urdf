@@ -1,0 +1,833 @@
+<robot name="retrofit_tilting_fan">
+  <material name="cast_olive">
+    <color rgba="0.31 0.35 0.27 1" />
+    </material>
+  <material name="warm_gray">
+    <color rgba="0.7 0.71 0.69 1" />
+    </material>
+  <material name="dark_steel">
+    <color rgba="0.22 0.23 0.25 1" />
+    </material>
+  <material name="hardware">
+    <color rgba="0.6 0.52 0.35 1" />
+    </material>
+  <material name="rotor_black">
+    <color rgba="0.16 0.16 0.17 1" />
+    </material>
+  <material name="hatch_black">
+    <color rgba="0.1 0.1 0.11 1" />
+    </material>
+  <link name="stand">
+    <inertial>
+      <origin xyz="-0.055 0 0.25" rpy="0 0 0" />
+      <mass value="8" />
+      <inertia ixx="0.226667" ixy="0" ixz="0" iyy="0.307733" iyz="0" izz="0.201067" />
+      </inertial>
+    <visual name="base_casting">
+      <origin xyz="-0.055 0 0.015" rpy="0 0 0" />
+      <geometry>
+        <box size="0.44 0.3 0.03" />
+        </geometry>
+      <material name="cast_olive">
+        <color rgba="0.31 0.35 0.27 1" />
+        </material>
+      </visual>
+    <visual name="base_pad">
+      <origin xyz="-0.085 0 0.042" rpy="0 0 0" />
+      <geometry>
+        <box size="0.22 0.16 0.024" />
+        </geometry>
+      <material name="cast_olive">
+        <color rgba="0.31 0.35 0.27 1" />
+        </material>
+      </visual>
+    <visual name="toe_pad">
+      <origin xyz="0.08 0 0.035" rpy="0 0 0" />
+      <geometry>
+        <box size="0.18 0.13 0.02" />
+        </geometry>
+      <material name="cast_olive">
+        <color rgba="0.31 0.35 0.27 1" />
+        </material>
+      </visual>
+    <visual name="toe_bridge">
+      <origin xyz="-0.005 0 0.033" rpy="0 0 0" />
+      <geometry>
+        <box size="0.115 0.1 0.018" />
+        </geometry>
+      <material name="cast_olive">
+        <color rgba="0.31 0.35 0.27 1" />
+        </material>
+      </visual>
+    <visual name="stand_column">
+      <origin xyz="-0.09 0 0.162" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.042" length="0.24" />
+        </geometry>
+      <material name="cast_olive">
+        <color rgba="0.31 0.35 0.27 1" />
+        </material>
+      </visual>
+    <visual name="column_adapter">
+      <origin xyz="-0.075 0 0.307" rpy="0 0 0" />
+      <geometry>
+        <box size="0.12 0.15 0.05" />
+        </geometry>
+      <material name="cast_olive">
+        <color rgba="0.31 0.35 0.27 1" />
+        </material>
+      </visual>
+    <visual name="cross_tube">
+      <origin xyz="-0.032 0 0.332" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.22" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.22 0.23 0.25 1" />
+        </material>
+      </visual>
+    <visual name="yoke_adapter_plate">
+      <origin xyz="-0.002 0 0.346" rpy="0 0 0" />
+      <geometry>
+        <box size="0.06 0.17 0.016" />
+        </geometry>
+      <material name="warm_gray">
+        <color rgba="0.7 0.71 0.69 1" />
+        </material>
+      </visual>
+    <visual name="left_yoke_arm">
+      <origin xyz="0.016 0.103 0.436" rpy="0 0 0" />
+      <geometry>
+        <box size="0.055 0.024 0.12" />
+        </geometry>
+      <material name="warm_gray">
+        <color rgba="0.7 0.71 0.69 1" />
+        </material>
+      </visual>
+    <visual name="right_yoke_arm">
+      <origin xyz="0.016 -0.103 0.436" rpy="0 0 0" />
+      <geometry>
+        <box size="0.055 0.024 0.12" />
+        </geometry>
+      <material name="warm_gray">
+        <color rgba="0.7 0.71 0.69 1" />
+        </material>
+      </visual>
+    <visual name="left_upper_brace">
+      <geometry>
+        <mesh filename="assets/meshes/left_upper_brace.obj" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.22 0.23 0.25 1" />
+        </material>
+      </visual>
+    <visual name="right_upper_brace">
+      <geometry>
+        <mesh filename="assets/meshes/right_upper_brace.obj" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.22 0.23 0.25 1" />
+        </material>
+      </visual>
+    <visual name="left_lower_gusset">
+      <geometry>
+        <mesh filename="assets/meshes/left_lower_gusset.obj" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.22 0.23 0.25 1" />
+        </material>
+      </visual>
+    <visual name="right_lower_gusset">
+      <geometry>
+        <mesh filename="assets/meshes/right_lower_gusset.obj" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.22 0.23 0.25 1" />
+        </material>
+      </visual>
+    <visual name="left_tilt_knob">
+      <origin xyz="0.016 0.123 0.436" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.03" length="0.016" />
+        </geometry>
+      <material name="hardware">
+        <color rgba="0.6 0.52 0.35 1" />
+        </material>
+      </visual>
+    <visual name="right_tilt_knob">
+      <origin xyz="0.016 -0.123 0.436" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.03" length="0.016" />
+        </geometry>
+      <material name="hardware">
+        <color rgba="0.6 0.52 0.35 1" />
+        </material>
+      </visual>
+    <visual name="stand_service_hatch">
+      <origin xyz="-0.128 0 0.205" rpy="0 0 0" />
+      <geometry>
+        <box size="0.012 0.085 0.1" />
+        </geometry>
+      <material name="hatch_black">
+        <color rgba="0.1 0.1 0.11 1" />
+        </material>
+      </visual>
+    <visual name="stand_hatch_bolt_00">
+      <origin xyz="-0.129 0.028 0.244" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0045" length="0.014" />
+        </geometry>
+      <material name="hardware">
+        <color rgba="0.6 0.52 0.35 1" />
+        </material>
+      </visual>
+    <visual name="stand_hatch_bolt_01">
+      <origin xyz="-0.129 -0.028 0.244" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0045" length="0.014" />
+        </geometry>
+      <material name="hardware">
+        <color rgba="0.6 0.52 0.35 1" />
+        </material>
+      </visual>
+    <visual name="stand_hatch_bolt_02">
+      <origin xyz="-0.129 0.028 0.166" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0045" length="0.014" />
+        </geometry>
+      <material name="hardware">
+        <color rgba="0.6 0.52 0.35 1" />
+        </material>
+      </visual>
+    <visual name="stand_hatch_bolt_03">
+      <origin xyz="-0.129 -0.028 0.166" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0045" length="0.014" />
+        </geometry>
+      <material name="hardware">
+        <color rgba="0.6 0.52 0.35 1" />
+        </material>
+      </visual>
+    <visual name="adapter_bolt_00">
+      <origin xyz="-0.018 0.055 0.32" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0045" length="0.014" />
+        </geometry>
+      <material name="hardware">
+        <color rgba="0.6 0.52 0.35 1" />
+        </material>
+      </visual>
+    <visual name="adapter_bolt_01">
+      <origin xyz="-0.018 -0.055 0.32" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0045" length="0.014" />
+        </geometry>
+      <material name="hardware">
+        <color rgba="0.6 0.52 0.35 1" />
+        </material>
+      </visual>
+    <visual name="adapter_bolt_02">
+      <origin xyz="-0.018 0.055 0.294" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0045" length="0.014" />
+        </geometry>
+      <material name="hardware">
+        <color rgba="0.6 0.52 0.35 1" />
+        </material>
+      </visual>
+    <visual name="adapter_bolt_03">
+      <origin xyz="-0.018 -0.055 0.294" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0045" length="0.014" />
+        </geometry>
+      <material name="hardware">
+        <color rgba="0.6 0.52 0.35 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="head">
+    <inertial>
+      <origin xyz="0.14 0 0" rpy="0 0 0" />
+      <mass value="4.2" />
+      <inertia ixx="0.175" ixy="0" ixz="0" iyy="0.12796" iyz="0" izz="0.12796" />
+      </inertial>
+    <visual name="trunnion_bar">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.022" length="0.182" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.22 0.23 0.25 1" />
+        </material>
+      </visual>
+    <visual name="rear_bridge">
+      <origin xyz="0.024 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.064 0.094 0.076" />
+        </geometry>
+      <material name="warm_gray">
+        <color rgba="0.7 0.71 0.69 1" />
+        </material>
+      </visual>
+    <visual name="motor_shell">
+      <origin xyz="0.11 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/motor_shell.obj" />
+        </geometry>
+      <material name="warm_gray">
+        <color rgba="0.7 0.71 0.69 1" />
+        </material>
+      </visual>
+    <visual name="nose_bearing">
+      <origin xyz="0.117 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.028" length="0.056" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.22 0.23 0.25 1" />
+        </material>
+      </visual>
+    <visual name="guard_support_collar">
+      <origin xyz="0.066 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.074" length="0.014" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.22 0.23 0.25 1" />
+        </material>
+      </visual>
+    <visual name="guard_rear_ring">
+      <origin xyz="0.11 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <mesh filename="assets/meshes/guard_rear_ring.obj" />
+        </geometry>
+      <material name="warm_gray">
+        <color rgba="0.7 0.71 0.69 1" />
+        </material>
+      </visual>
+    <visual name="guard_cage">
+      <origin xyz="0.195 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <mesh filename="assets/meshes/guard_mid_ring.obj" />
+        </geometry>
+      <material name="warm_gray">
+        <color rgba="0.7 0.71 0.69 1" />
+        </material>
+      </visual>
+    <visual name="guard_front_ring">
+      <origin xyz="0.28 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <mesh filename="assets/meshes/guard_front_ring.obj" />
+        </geometry>
+      <material name="warm_gray">
+        <color rgba="0.7 0.71 0.69 1" />
+        </material>
+      </visual>
+    <visual name="guard_wire_rear_00">
+      <origin xyz="0.1525 0.219 0" rpy="0 1.5708 0.296845" />
+      <geometry>
+        <cylinder radius="0.0036" length="0.0888876" />
+        </geometry>
+      <material name="warm_gray">
+        <color rgba="0.7 0.71 0.69 1" />
+        </material>
+      </visual>
+    <visual name="guard_wire_front_00">
+      <origin xyz="0.2375 0.219 0" rpy="0 1.5708 -0.296845" />
+      <geometry>
+        <cylinder radius="0.0036" length="0.0888876" />
+        </geometry>
+      <material name="warm_gray">
+        <color rgba="0.7 0.71 0.69 1" />
+        </material>
+      </visual>
+    <visual name="guard_wire_rear_01">
+      <origin xyz="0.1525 0.18966 0.1095" rpy="0 1.42402 0.258954" />
+      <geometry>
+        <cylinder radius="0.0036" length="0.0888876" />
+        </geometry>
+      <material name="warm_gray">
+        <color rgba="0.7 0.71 0.69 1" />
+        </material>
+      </visual>
+    <visual name="guard_wire_front_01">
+      <origin xyz="0.2375 0.18966 0.1095" rpy="0 1.71757 -0.258954" />
+      <geometry>
+        <cylinder radius="0.0036" length="0.0888876" />
+        </geometry>
+      <material name="warm_gray">
+        <color rgba="0.7 0.71 0.69 1" />
+        </material>
+      </visual>
+    <visual name="guard_wire_rear_02">
+      <origin xyz="0.1525 0.1095 0.18966" rpy="0 1.31469 0.151765" />
+      <geometry>
+        <cylinder radius="0.0036" length="0.0888876" />
+        </geometry>
+      <material name="warm_gray">
+        <color rgba="0.7 0.71 0.69 1" />
+        </material>
+      </visual>
+    <visual name="guard_wire_front_02">
+      <origin xyz="0.2375 0.1095 0.18966" rpy="0 1.8269 -0.151765" />
+      <geometry>
+        <cylinder radius="0.0036" length="0.0888876" />
+        </geometry>
+      <material name="warm_gray">
+        <color rgba="0.7 0.71 0.69 1" />
+        </material>
+      </visual>
+    <visual name="guard_wire_rear_03">
+      <origin xyz="0.1525 1.34099e-17 0.219" rpy="0 1.27395 1.87299e-17" />
+      <geometry>
+        <cylinder radius="0.0036" length="0.0888876" />
+        </geometry>
+      <material name="warm_gray">
+        <color rgba="0.7 0.71 0.69 1" />
+        </material>
+      </visual>
+    <visual name="guard_wire_front_03">
+      <origin xyz="0.2375 1.34099e-17 0.219" rpy="0 1.86764 -1.87299e-17" />
+      <geometry>
+        <cylinder radius="0.0036" length="0.0888876" />
+        </geometry>
+      <material name="warm_gray">
+        <color rgba="0.7 0.71 0.69 1" />
+        </material>
+      </visual>
+    <visual name="guard_wire_rear_04">
+      <origin xyz="0.1525 -0.1095 0.18966" rpy="0 1.31469 -0.151765" />
+      <geometry>
+        <cylinder radius="0.0036" length="0.0888876" />
+        </geometry>
+      <material name="warm_gray">
+        <color rgba="0.7 0.71 0.69 1" />
+        </material>
+      </visual>
+    <visual name="guard_wire_front_04">
+      <origin xyz="0.2375 -0.1095 0.18966" rpy="0 1.8269 0.151765" />
+      <geometry>
+        <cylinder radius="0.0036" length="0.0888876" />
+        </geometry>
+      <material name="warm_gray">
+        <color rgba="0.7 0.71 0.69 1" />
+        </material>
+      </visual>
+    <visual name="guard_wire_rear_05">
+      <origin xyz="0.1525 -0.18966 0.1095" rpy="0 1.42402 -0.258954" />
+      <geometry>
+        <cylinder radius="0.0036" length="0.0888876" />
+        </geometry>
+      <material name="warm_gray">
+        <color rgba="0.7 0.71 0.69 1" />
+        </material>
+      </visual>
+    <visual name="guard_wire_front_05">
+      <origin xyz="0.2375 -0.18966 0.1095" rpy="0 1.71757 0.258954" />
+      <geometry>
+        <cylinder radius="0.0036" length="0.0888876" />
+        </geometry>
+      <material name="warm_gray">
+        <color rgba="0.7 0.71 0.69 1" />
+        </material>
+      </visual>
+    <visual name="guard_wire_rear_06">
+      <origin xyz="0.1525 -0.219 2.68198e-17" rpy="0 1.5708 -0.296845" />
+      <geometry>
+        <cylinder radius="0.0036" length="0.0888876" />
+        </geometry>
+      <material name="warm_gray">
+        <color rgba="0.7 0.71 0.69 1" />
+        </material>
+      </visual>
+    <visual name="guard_wire_front_06">
+      <origin xyz="0.2375 -0.219 2.68198e-17" rpy="0 1.5708 0.296845" />
+      <geometry>
+        <cylinder radius="0.0036" length="0.0888876" />
+        </geometry>
+      <material name="warm_gray">
+        <color rgba="0.7 0.71 0.69 1" />
+        </material>
+      </visual>
+    <visual name="guard_wire_rear_07">
+      <origin xyz="0.1525 -0.18966 -0.1095" rpy="0 1.71757 -0.258954" />
+      <geometry>
+        <cylinder radius="0.0036" length="0.0888876" />
+        </geometry>
+      <material name="warm_gray">
+        <color rgba="0.7 0.71 0.69 1" />
+        </material>
+      </visual>
+    <visual name="guard_wire_front_07">
+      <origin xyz="0.2375 -0.18966 -0.1095" rpy="0 1.42402 0.258954" />
+      <geometry>
+        <cylinder radius="0.0036" length="0.0888876" />
+        </geometry>
+      <material name="warm_gray">
+        <color rgba="0.7 0.71 0.69 1" />
+        </material>
+      </visual>
+    <visual name="guard_wire_rear_08">
+      <origin xyz="0.1525 -0.1095 -0.18966" rpy="0 1.8269 -0.151765" />
+      <geometry>
+        <cylinder radius="0.0036" length="0.0888876" />
+        </geometry>
+      <material name="warm_gray">
+        <color rgba="0.7 0.71 0.69 1" />
+        </material>
+      </visual>
+    <visual name="guard_wire_front_08">
+      <origin xyz="0.2375 -0.1095 -0.18966" rpy="0 1.31469 0.151765" />
+      <geometry>
+        <cylinder radius="0.0036" length="0.0888876" />
+        </geometry>
+      <material name="warm_gray">
+        <color rgba="0.7 0.71 0.69 1" />
+        </material>
+      </visual>
+    <visual name="guard_wire_rear_09">
+      <origin xyz="0.1525 -4.02296e-17 -0.219" rpy="0 1.86764 -5.61897e-17" />
+      <geometry>
+        <cylinder radius="0.0036" length="0.0888876" />
+        </geometry>
+      <material name="warm_gray">
+        <color rgba="0.7 0.71 0.69 1" />
+        </material>
+      </visual>
+    <visual name="guard_wire_front_09">
+      <origin xyz="0.2375 -4.02296e-17 -0.219" rpy="0 1.27395 5.61897e-17" />
+      <geometry>
+        <cylinder radius="0.0036" length="0.0888876" />
+        </geometry>
+      <material name="warm_gray">
+        <color rgba="0.7 0.71 0.69 1" />
+        </material>
+      </visual>
+    <visual name="guard_wire_rear_10">
+      <origin xyz="0.1525 0.1095 -0.18966" rpy="0 1.8269 0.151765" />
+      <geometry>
+        <cylinder radius="0.0036" length="0.0888876" />
+        </geometry>
+      <material name="warm_gray">
+        <color rgba="0.7 0.71 0.69 1" />
+        </material>
+      </visual>
+    <visual name="guard_wire_front_10">
+      <origin xyz="0.2375 0.1095 -0.18966" rpy="0 1.31469 -0.151765" />
+      <geometry>
+        <cylinder radius="0.0036" length="0.0888876" />
+        </geometry>
+      <material name="warm_gray">
+        <color rgba="0.7 0.71 0.69 1" />
+        </material>
+      </visual>
+    <visual name="guard_wire_rear_11">
+      <origin xyz="0.1525 0.18966 -0.1095" rpy="0 1.71757 0.258954" />
+      <geometry>
+        <cylinder radius="0.0036" length="0.0888876" />
+        </geometry>
+      <material name="warm_gray">
+        <color rgba="0.7 0.71 0.69 1" />
+        </material>
+      </visual>
+    <visual name="guard_wire_front_11">
+      <origin xyz="0.2375 0.18966 -0.1095" rpy="0 1.42402 -0.258954" />
+      <geometry>
+        <cylinder radius="0.0036" length="0.0888876" />
+        </geometry>
+      <material name="warm_gray">
+        <color rgba="0.7 0.71 0.69 1" />
+        </material>
+      </visual>
+    <visual name="guard_support_strut_00">
+      <origin xyz="0.088 0.121244 0.07" rpy="0 1.07658 1.20337" />
+      <geometry>
+        <cylinder radius="0.0045" length="0.13914" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.22 0.23 0.25 1" />
+        </material>
+      </visual>
+    <visual name="guard_support_strut_01">
+      <origin xyz="0.088 8.57253e-18 0.14" rpy="0 0.321751 1.83697e-16" />
+      <geometry>
+        <cylinder radius="0.0045" length="0.13914" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.22 0.23 0.25 1" />
+        </material>
+      </visual>
+    <visual name="guard_support_strut_02">
+      <origin xyz="0.088 -0.121244 0.07" rpy="0 1.07658 -1.20337" />
+      <geometry>
+        <cylinder radius="0.0045" length="0.13914" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.22 0.23 0.25 1" />
+        </material>
+      </visual>
+    <visual name="guard_support_strut_03">
+      <origin xyz="0.088 -0.121244 -0.07" rpy="0 2.06501 -1.20337" />
+      <geometry>
+        <cylinder radius="0.0045" length="0.13914" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.22 0.23 0.25 1" />
+        </material>
+      </visual>
+    <visual name="guard_support_strut_04">
+      <origin xyz="0.088 -2.57176e-17 -0.14" rpy="0 2.81984 -5.51091e-16" />
+      <geometry>
+        <cylinder radius="0.0045" length="0.13914" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.22 0.23 0.25 1" />
+        </material>
+      </visual>
+    <visual name="guard_support_strut_05">
+      <origin xyz="0.088 0.121244 -0.07" rpy="0 2.06501 1.20337" />
+      <geometry>
+        <cylinder radius="0.0045" length="0.13914" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.22 0.23 0.25 1" />
+        </material>
+      </visual>
+    <visual name="left_adapter_plate">
+      <origin xyz="0.016 0.046 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.06 0.032 0.084" />
+        </geometry>
+      <material name="warm_gray">
+        <color rgba="0.7 0.71 0.69 1" />
+        </material>
+      </visual>
+    <visual name="right_adapter_plate">
+      <origin xyz="0.016 -0.046 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.06 0.032 0.084" />
+        </geometry>
+      <material name="warm_gray">
+        <color rgba="0.7 0.71 0.69 1" />
+        </material>
+      </visual>
+    <visual name="head_service_hatch">
+      <origin xyz="0.08 0 0.074" rpy="0 0 0" />
+      <geometry>
+        <box size="0.062 0.086 0.012" />
+        </geometry>
+      <material name="hatch_black">
+        <color rgba="0.1 0.1 0.11 1" />
+        </material>
+      </visual>
+    <visual name="pivot_plate_bolt_00">
+      <origin xyz="0.01 0.036 0.026" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0045" length="0.016" />
+        </geometry>
+      <material name="hardware">
+        <color rgba="0.6 0.52 0.35 1" />
+        </material>
+      </visual>
+    <visual name="pivot_plate_bolt_01">
+      <origin xyz="0.01 0.036 -0.026" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0045" length="0.016" />
+        </geometry>
+      <material name="hardware">
+        <color rgba="0.6 0.52 0.35 1" />
+        </material>
+      </visual>
+    <visual name="pivot_plate_bolt_02">
+      <origin xyz="0.01 -0.036 0.026" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0045" length="0.016" />
+        </geometry>
+      <material name="hardware">
+        <color rgba="0.6 0.52 0.35 1" />
+        </material>
+      </visual>
+    <visual name="pivot_plate_bolt_03">
+      <origin xyz="0.01 -0.036 -0.026" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0045" length="0.016" />
+        </geometry>
+      <material name="hardware">
+        <color rgba="0.6 0.52 0.35 1" />
+        </material>
+      </visual>
+    <visual name="head_hatch_bolt_00">
+      <origin xyz="0.066 0.028 0.081" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0045" length="0.014" />
+        </geometry>
+      <material name="hardware">
+        <color rgba="0.6 0.52 0.35 1" />
+        </material>
+      </visual>
+    <visual name="head_hatch_bolt_01">
+      <origin xyz="0.066 -0.028 0.081" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0045" length="0.014" />
+        </geometry>
+      <material name="hardware">
+        <color rgba="0.6 0.52 0.35 1" />
+        </material>
+      </visual>
+    <visual name="head_hatch_bolt_02">
+      <origin xyz="0.094 0.028 0.081" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0045" length="0.014" />
+        </geometry>
+      <material name="hardware">
+        <color rgba="0.6 0.52 0.35 1" />
+        </material>
+      </visual>
+    <visual name="head_hatch_bolt_03">
+      <origin xyz="0.094 -0.028 0.081" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0045" length="0.014" />
+        </geometry>
+      <material name="hardware">
+        <color rgba="0.6 0.52 0.35 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="rotor">
+    <inertial>
+      <origin xyz="0.06 0 0" rpy="0 1.5708 0" />
+      <mass value="0.9" />
+      <inertia ixx="0.00903" ixy="0" ixz="0" iyy="0.00903" iyz="0" izz="0.016245" />
+      </inertial>
+    <visual name="hub_washer">
+      <origin xyz="0.004 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.038" length="0.008" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.22 0.23 0.25 1" />
+        </material>
+      </visual>
+    <visual name="rotor_hub">
+      <origin xyz="0.032 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.046" length="0.056" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.22 0.23 0.25 1" />
+        </material>
+      </visual>
+    <visual name="hub_flange">
+      <origin xyz="0.014 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.07" length="0.012" />
+        </geometry>
+      <material name="rotor_black">
+        <color rgba="0.16 0.16 0.17 1" />
+        </material>
+      </visual>
+    <visual name="blade_root_spindle">
+      <origin xyz="0.032 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.02" length="0.05" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.22 0.23 0.25 1" />
+        </material>
+      </visual>
+    <visual name="rotor_spinner">
+      <origin xyz="0.025 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/rotor_spinner.obj" />
+        </geometry>
+      <material name="warm_gray">
+        <color rgba="0.7 0.71 0.69 1" />
+        </material>
+      </visual>
+    <visual name="blade_arm_00">
+      <origin xyz="0.04 0 0.032" rpy="0 0 0" />
+      <geometry>
+        <box size="0.038 0.018 0.06" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.22 0.23 0.25 1" />
+        </material>
+      </visual>
+    <visual name="rotor_blade_00">
+      <geometry>
+        <mesh filename="assets/meshes/rotor_blade_leaf.obj" />
+        </geometry>
+      <material name="rotor_black">
+        <color rgba="0.16 0.16 0.17 1" />
+        </material>
+      </visual>
+    <visual name="blade_arm_01">
+      <origin xyz="0.04 0 0.032" rpy="1.5708 0 0" />
+      <geometry>
+        <box size="0.038 0.018 0.06" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.22 0.23 0.25 1" />
+        </material>
+      </visual>
+    <visual name="rotor_blade_01">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/rotor_blade_leaf.obj" />
+        </geometry>
+      <material name="rotor_black">
+        <color rgba="0.16 0.16 0.17 1" />
+        </material>
+      </visual>
+    <visual name="blade_arm_02">
+      <origin xyz="0.04 0 0.032" rpy="3.14159 0 0" />
+      <geometry>
+        <box size="0.038 0.018 0.06" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.22 0.23 0.25 1" />
+        </material>
+      </visual>
+    <visual name="rotor_blade_02">
+      <origin xyz="0 0 0" rpy="3.14159 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/rotor_blade_leaf.obj" />
+        </geometry>
+      <material name="rotor_black">
+        <color rgba="0.16 0.16 0.17 1" />
+        </material>
+      </visual>
+    <visual name="blade_arm_03">
+      <origin xyz="0.04 0 0.032" rpy="4.71239 0 0" />
+      <geometry>
+        <box size="0.038 0.018 0.06" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.22 0.23 0.25 1" />
+        </material>
+      </visual>
+    <visual name="rotor_blade_03">
+      <origin xyz="0 0 0" rpy="4.71239 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/rotor_blade_leaf.obj" />
+        </geometry>
+      <material name="rotor_black">
+        <color rgba="0.16 0.16 0.17 1" />
+        </material>
+      </visual>
+    </link>
+  <joint name="stand_to_head_tilt" type="revolute">
+    <origin xyz="0 0 0.436" rpy="0 0 0" />
+    <parent link="stand" />
+    <child link="head" />
+    <axis xyz="0 -1 0" />
+    <limit effort="18" velocity="1.4" lower="-0.314159" upper="0.558505" />
+    </joint>
+  <joint name="head_to_rotor_spin" type="continuous">
+    <origin xyz="0.141 0 0" rpy="0 0 0" />
+    <parent link="head" />
+    <child link="rotor" />
+    <axis xyz="1 0 0" />
+    <limit effort="6" velocity="28" />
+    </joint>
+  </robot>

@@ -1,0 +1,543 @@
+<robot name="table_box_fan">
+  <material name="stand_finish">
+    <color rgba="0.77 0.79 0.82 1" />
+    </material>
+  <material name="housing_finish">
+    <color rgba="0.88 0.89 0.91 1" />
+    </material>
+  <material name="guard_finish">
+    <color rgba="0.72 0.75 0.79 1" />
+    </material>
+  <material name="rotor_finish">
+    <color rgba="0.33 0.36 0.4 1" />
+    </material>
+  <material name="knob_finish">
+    <color rgba="0.18 0.19 0.21 1" />
+    </material>
+  <material name="axle_finish">
+    <color rgba="0.55 0.57 0.61 1" />
+    </material>
+  <link name="stand">
+    <visual name="left_skid">
+      <origin xyz="-0.184 0 0.007" rpy="0 0 0" />
+      <geometry>
+        <box size="0.028 0.21 0.014" />
+        </geometry>
+      <material name="stand_finish">
+        <color rgba="0.77 0.79 0.82 1" />
+        </material>
+      </visual>
+    <visual name="right_skid">
+      <origin xyz="0.184 0 0.007" rpy="0 0 0" />
+      <geometry>
+        <box size="0.028 0.21 0.014" />
+        </geometry>
+      <material name="stand_finish">
+        <color rgba="0.77 0.79 0.82 1" />
+        </material>
+      </visual>
+    <visual name="front_tie">
+      <origin xyz="0 -0.092 0.014" rpy="0 0 0" />
+      <geometry>
+        <box size="0.34 0.022 0.012" />
+        </geometry>
+      <material name="stand_finish">
+        <color rgba="0.77 0.79 0.82 1" />
+        </material>
+      </visual>
+    <visual name="rear_tie">
+      <origin xyz="0 0.092 0.014" rpy="0 0 0" />
+      <geometry>
+        <box size="0.34 0.022 0.012" />
+        </geometry>
+      <material name="stand_finish">
+        <color rgba="0.77 0.79 0.82 1" />
+        </material>
+      </visual>
+    <visual name="left_arm">
+      <origin xyz="-0.198 0 0.085" rpy="0 0 0" />
+      <geometry>
+        <box size="0.024 0.022 0.15" />
+        </geometry>
+      <material name="stand_finish">
+        <color rgba="0.77 0.79 0.82 1" />
+        </material>
+      </visual>
+    <visual name="right_arm">
+      <origin xyz="0.198 0 0.085" rpy="0 0 0" />
+      <geometry>
+        <box size="0.024 0.022 0.15" />
+        </geometry>
+      <material name="stand_finish">
+        <color rgba="0.77 0.79 0.82 1" />
+        </material>
+      </visual>
+    <visual name="left_hinge_cap">
+      <origin xyz="-0.195 0 0.18" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.024" length="0.018" />
+        </geometry>
+      <material name="stand_finish">
+        <color rgba="0.77 0.79 0.82 1" />
+        </material>
+      </visual>
+    <visual name="right_hinge_cap">
+      <origin xyz="0.195 0 0.18" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.024" length="0.018" />
+        </geometry>
+      <material name="stand_finish">
+        <color rgba="0.77 0.79 0.82 1" />
+        </material>
+      </visual>
+    <collision name="left_skid">
+      <origin xyz="-0.184 0 0.007" rpy="0 0 0" />
+      <geometry>
+        <box size="0.028 0.21 0.014" />
+        </geometry>
+      </collision>
+    <collision name="right_skid">
+      <origin xyz="0.184 0 0.007" rpy="0 0 0" />
+      <geometry>
+        <box size="0.028 0.21 0.014" />
+        </geometry>
+      </collision>
+    <collision name="front_tie">
+      <origin xyz="0 -0.092 0.014" rpy="0 0 0" />
+      <geometry>
+        <box size="0.34 0.022 0.012" />
+        </geometry>
+      </collision>
+    <collision name="rear_tie">
+      <origin xyz="0 0.092 0.014" rpy="0 0 0" />
+      <geometry>
+        <box size="0.34 0.022 0.012" />
+        </geometry>
+      </collision>
+    <collision name="left_arm">
+      <origin xyz="-0.198 0 0.085" rpy="0 0 0" />
+      <geometry>
+        <box size="0.024 0.022 0.15" />
+        </geometry>
+      </collision>
+    <collision name="right_arm">
+      <origin xyz="0.198 0 0.085" rpy="0 0 0" />
+      <geometry>
+        <box size="0.024 0.022 0.15" />
+        </geometry>
+      </collision>
+    <collision name="left_hinge_cap">
+      <origin xyz="-0.195 0 0.18" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.024" length="0.018" />
+        </geometry>
+      </collision>
+    <collision name="right_hinge_cap">
+      <origin xyz="0.195 0 0.18" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.024" length="0.018" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="housing">
+    <visual name="top_shell">
+      <origin xyz="0 0 0.159" rpy="0 0 0" />
+      <geometry>
+        <box size="0.34 0.12 0.022" />
+        </geometry>
+      <material name="housing_finish">
+        <color rgba="0.88 0.89 0.91 1" />
+        </material>
+      </visual>
+    <visual name="bottom_shell">
+      <origin xyz="0 0 -0.159" rpy="0 0 0" />
+      <geometry>
+        <box size="0.34 0.12 0.022" />
+        </geometry>
+      <material name="housing_finish">
+        <color rgba="0.88 0.89 0.91 1" />
+        </material>
+      </visual>
+    <visual name="left_shell">
+      <origin xyz="-0.159 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.022 0.12 0.296" />
+        </geometry>
+      <material name="housing_finish">
+        <color rgba="0.88 0.89 0.91 1" />
+        </material>
+      </visual>
+    <visual name="right_shell">
+      <origin xyz="0.159 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.022 0.12 0.296" />
+        </geometry>
+      <material name="housing_finish">
+        <color rgba="0.88 0.89 0.91 1" />
+        </material>
+      </visual>
+    <visual name="front_top_bezel">
+      <origin xyz="0 -0.055 0.154" rpy="0 0 0" />
+      <geometry>
+        <box size="0.34 0.01 0.032" />
+        </geometry>
+      <material name="housing_finish">
+        <color rgba="0.88 0.89 0.91 1" />
+        </material>
+      </visual>
+    <visual name="front_bottom_bezel">
+      <origin xyz="0 -0.055 -0.154" rpy="0 0 0" />
+      <geometry>
+        <box size="0.34 0.01 0.032" />
+        </geometry>
+      <material name="housing_finish">
+        <color rgba="0.88 0.89 0.91 1" />
+        </material>
+      </visual>
+    <visual name="front_left_bezel">
+      <origin xyz="-0.154 -0.055 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.032 0.01 0.276" />
+        </geometry>
+      <material name="housing_finish">
+        <color rgba="0.88 0.89 0.91 1" />
+        </material>
+      </visual>
+    <visual name="front_right_bezel">
+      <origin xyz="0.154 -0.055 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.032 0.01 0.276" />
+        </geometry>
+      <material name="housing_finish">
+        <color rgba="0.88 0.89 0.91 1" />
+        </material>
+      </visual>
+    <visual name="rear_top_rim">
+      <origin xyz="0 0.056 0.159" rpy="0 0 0" />
+      <geometry>
+        <box size="0.33 0.008 0.022" />
+        </geometry>
+      <material name="housing_finish">
+        <color rgba="0.88 0.89 0.91 1" />
+        </material>
+      </visual>
+    <visual name="rear_bottom_rim">
+      <origin xyz="0 0.056 -0.159" rpy="0 0 0" />
+      <geometry>
+        <box size="0.33 0.008 0.022" />
+        </geometry>
+      <material name="housing_finish">
+        <color rgba="0.88 0.89 0.91 1" />
+        </material>
+      </visual>
+    <visual name="rear_left_rim">
+      <origin xyz="-0.159 0.056 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.022 0.008 0.296" />
+        </geometry>
+      <material name="housing_finish">
+        <color rgba="0.88 0.89 0.91 1" />
+        </material>
+      </visual>
+    <visual name="rear_right_rim">
+      <origin xyz="0.159 0.056 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.022 0.008 0.296" />
+        </geometry>
+      <material name="housing_finish">
+        <color rgba="0.88 0.89 0.91 1" />
+        </material>
+      </visual>
+    <visual name="front_guard">
+      <origin xyz="0 -0.04875 0" rpy="1.5708 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/box_fan_guard.obj" />
+        </geometry>
+      <material name="guard_finish">
+        <color rgba="0.72 0.75 0.79 1" />
+        </material>
+      </visual>
+    <visual name="rear_guard">
+      <origin xyz="0 0.04875 0" rpy="1.5708 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/box_fan_guard.obj" />
+        </geometry>
+      <material name="guard_finish">
+        <color rgba="0.72 0.75 0.79 1" />
+        </material>
+      </visual>
+    <visual name="motor_can">
+      <origin xyz="0 0.032 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.034" length="0.044" />
+        </geometry>
+      <material name="stand_finish">
+        <color rgba="0.77 0.79 0.82 1" />
+        </material>
+      </visual>
+    <visual name="axle_bushing">
+      <origin xyz="0 0.008 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.006" />
+        </geometry>
+      <material name="axle_finish">
+        <color rgba="0.55 0.57 0.61 1" />
+        </material>
+      </visual>
+    <visual name="cross_strut_x">
+      <origin xyz="0 0.028 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.296 0.01 0.012" />
+        </geometry>
+      <material name="guard_finish">
+        <color rgba="0.72 0.75 0.79 1" />
+        </material>
+      </visual>
+    <visual name="cross_strut_z">
+      <origin xyz="0 0.028 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.012 0.01 0.296" />
+        </geometry>
+      <material name="guard_finish">
+        <color rgba="0.72 0.75 0.79 1" />
+        </material>
+      </visual>
+    <visual name="left_hinge_boss">
+      <origin xyz="-0.176 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.022" length="0.016" />
+        </geometry>
+      <material name="housing_finish">
+        <color rgba="0.88 0.89 0.91 1" />
+        </material>
+      </visual>
+    <visual name="right_hinge_boss">
+      <origin xyz="0.176 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.022" length="0.016" />
+        </geometry>
+      <material name="housing_finish">
+        <color rgba="0.88 0.89 0.91 1" />
+        </material>
+      </visual>
+    <visual name="knob_collar">
+      <origin xyz="0.167 0.018 0.105" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.01" />
+        </geometry>
+      <material name="housing_finish">
+        <color rgba="0.88 0.89 0.91 1" />
+        </material>
+      </visual>
+    <collision name="top_shell">
+      <origin xyz="0 0 0.159" rpy="0 0 0" />
+      <geometry>
+        <box size="0.34 0.12 0.022" />
+        </geometry>
+      </collision>
+    <collision name="bottom_shell">
+      <origin xyz="0 0 -0.159" rpy="0 0 0" />
+      <geometry>
+        <box size="0.34 0.12 0.022" />
+        </geometry>
+      </collision>
+    <collision name="left_shell">
+      <origin xyz="-0.159 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.022 0.12 0.296" />
+        </geometry>
+      </collision>
+    <collision name="right_shell">
+      <origin xyz="0.159 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.022 0.12 0.296" />
+        </geometry>
+      </collision>
+    <collision name="front_top_bezel">
+      <origin xyz="0 -0.055 0.154" rpy="0 0 0" />
+      <geometry>
+        <box size="0.34 0.01 0.032" />
+        </geometry>
+      </collision>
+    <collision name="front_bottom_bezel">
+      <origin xyz="0 -0.055 -0.154" rpy="0 0 0" />
+      <geometry>
+        <box size="0.34 0.01 0.032" />
+        </geometry>
+      </collision>
+    <collision name="front_left_bezel">
+      <origin xyz="-0.154 -0.055 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.032 0.01 0.276" />
+        </geometry>
+      </collision>
+    <collision name="front_right_bezel">
+      <origin xyz="0.154 -0.055 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.032 0.01 0.276" />
+        </geometry>
+      </collision>
+    <collision name="rear_top_rim">
+      <origin xyz="0 0.056 0.159" rpy="0 0 0" />
+      <geometry>
+        <box size="0.33 0.008 0.022" />
+        </geometry>
+      </collision>
+    <collision name="rear_bottom_rim">
+      <origin xyz="0 0.056 -0.159" rpy="0 0 0" />
+      <geometry>
+        <box size="0.33 0.008 0.022" />
+        </geometry>
+      </collision>
+    <collision name="rear_left_rim">
+      <origin xyz="-0.159 0.056 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.022 0.008 0.296" />
+        </geometry>
+      </collision>
+    <collision name="rear_right_rim">
+      <origin xyz="0.159 0.056 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.022 0.008 0.296" />
+        </geometry>
+      </collision>
+    <collision name="front_guard">
+      <origin xyz="0 -0.04875 0" rpy="1.5708 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/box_fan_guard.obj" />
+        </geometry>
+      </collision>
+    <collision name="rear_guard">
+      <origin xyz="0 0.04875 0" rpy="1.5708 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/box_fan_guard.obj" />
+        </geometry>
+      </collision>
+    <collision name="motor_can">
+      <origin xyz="0 0.032 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.034" length="0.044" />
+        </geometry>
+      </collision>
+    <collision name="axle_bushing">
+      <origin xyz="0 0.008 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.006" />
+        </geometry>
+      </collision>
+    <collision name="cross_strut_x">
+      <origin xyz="0 0.028 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.296 0.01 0.012" />
+        </geometry>
+      </collision>
+    <collision name="cross_strut_z">
+      <origin xyz="0 0.028 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.012 0.01 0.296" />
+        </geometry>
+      </collision>
+    <collision name="left_hinge_boss">
+      <origin xyz="-0.176 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.022" length="0.016" />
+        </geometry>
+      </collision>
+    <collision name="right_hinge_boss">
+      <origin xyz="0.176 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.022" length="0.016" />
+        </geometry>
+      </collision>
+    <collision name="knob_collar">
+      <origin xyz="0.167 0.018 0.105" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.01" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="rotor">
+    <visual name="rotor">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/box_fan_rotor.obj" />
+        </geometry>
+      <material name="rotor_finish">
+        <color rgba="0.33 0.36 0.4 1" />
+        </material>
+      </visual>
+    <visual name="shaft_stub">
+      <origin xyz="0 -0.004 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.009" length="0.018" />
+        </geometry>
+      <material name="axle_finish">
+        <color rgba="0.55 0.57 0.61 1" />
+        </material>
+      </visual>
+    <collision name="rotor">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/box_fan_rotor.obj" />
+        </geometry>
+      </collision>
+    <collision name="shaft_stub">
+      <origin xyz="0 -0.004 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.009" length="0.018" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="knob">
+    <visual name="shaft">
+      <origin xyz="0.005 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.005" length="0.01" />
+        </geometry>
+      <material name="axle_finish">
+        <color rgba="0.55 0.57 0.61 1" />
+        </material>
+      </visual>
+    <visual name="knob">
+      <origin xyz="0.01 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <mesh filename="assets/meshes/box_fan_speed_knob.obj" />
+        </geometry>
+      <material name="knob_finish">
+        <color rgba="0.18 0.19 0.21 1" />
+        </material>
+      </visual>
+    <collision name="shaft">
+      <origin xyz="0.005 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.005" length="0.01" />
+        </geometry>
+      </collision>
+    <collision name="knob">
+      <origin xyz="0.01 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <mesh filename="assets/meshes/box_fan_speed_knob.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="stand_to_housing" type="revolute">
+    <origin xyz="0 0 0.18" rpy="0 0 0" />
+    <parent link="stand" />
+    <child link="housing" />
+    <axis xyz="-1 0 0" />
+    <limit effort="10" velocity="1.6" lower="-0.349066" upper="0.558505" />
+    </joint>
+  <joint name="housing_to_rotor" type="continuous">
+    <parent link="housing" />
+    <child link="rotor" />
+    <axis xyz="0 1 0" />
+    <limit effort="2" velocity="24" />
+    </joint>
+  <joint name="housing_to_knob" type="continuous">
+    <origin xyz="0.172 0.018 0.105" rpy="0 0 0" />
+    <parent link="housing" />
+    <child link="knob" />
+    <axis xyz="1 0 0" />
+    <limit effort="0.4" velocity="8" />
+    </joint>
+  </robot>

@@ -1,0 +1,175 @@
+{
+  "summary": {
+    "id": "rec_single_rotor_helicopter_9097ca4db32548aeabcfe714f70fc717",
+    "category": "rotor",
+    "robot_name": "medical_transport_helicopter",
+    "joint_count": 2,
+    "link_count": 5,
+    "target_link_count": 3,
+    "family": "rec_single_rotor_helicopter",
+    "warnings": [],
+    "diagonal": 17.580792618924153,
+    "bytes": 5099568
+  },
+  "source": {
+    "dataset": "camvsl/Articraft-10K",
+    "revision": "3c79d5a05bb7cb6bf7bfee5e090176636ee3ac65",
+    "license": "CC-BY-4.0",
+    "url": "https://huggingface.co/datasets/camvsl/Articraft-10K/blob/3c79d5a05bb7cb6bf7bfee5e090176636ee3ac65/rec_single_rotor_helicopter_9097ca4db32548aeabcfe714f70fc717.tar.gz",
+    "archive_sha256": "693327a416dc9e9bc1af4a7644c237cb1403bca318c99a5918c3f48c6840bc7a",
+    "archive": "rec_single_rotor_helicopter_9097ca4db32548aeabcfe714f70fc717.tar.gz",
+    "label_status": "Original generated URDF reference; not manually verified or physically validated"
+  },
+  "links": [
+    {
+      "id": "link_000",
+      "name": "airframe",
+      "point_file": "inputs/link_000.npz",
+      "faces": 7342,
+      "vertices": 3750,
+      "bounds": [
+        [
+          -7.84,
+          -1.25,
+          -1.2700101931436896
+        ],
+        [
+          2.675000257105636,
+          1.25,
+          1.9100000000000001
+        ]
+      ]
+    },
+    {
+      "id": "link_001",
+      "name": "patient_door",
+      "point_file": null,
+      "faces": 188,
+      "vertices": 106,
+      "bounds": [
+        [
+          -0.76,
+          1.17,
+          -0.63
+        ],
+        [
+          1.26,
+          1.360000110195681,
+          0.96
+        ]
+      ]
+    },
+    {
+      "id": "link_002",
+      "name": "bay_hatch",
+      "point_file": null,
+      "faces": 152,
+      "vertices": 82,
+      "bounds": [
+        [
+          -0.8799999999999999,
+          -1.295000095502928,
+          -0.51
+        ],
+        [
+          0.5,
+          -1.174999904497072,
+          0.5900000000000001
+        ]
+      ]
+    },
+    {
+      "id": "link_003",
+      "name": "main_rotor",
+      "point_file": "inputs/link_003.npz",
+      "faces": 292,
+      "vertices": 156,
+      "bounds": [
+        [
+          -5.45,
+          -5.3,
+          1.91
+        ],
+        [
+          5.1499999999999995,
+          5.3,
+          2.12
+        ]
+      ]
+    },
+    {
+      "id": "link_004",
+      "name": "tail_rotor",
+      "point_file": "inputs/link_004.npz",
+      "faces": 152,
+      "vertices": 82,
+      "bounds": [
+        [
+          -8.459999999999999,
+          0.4499995959481808,
+          0.32000000000000006
+        ],
+        [
+          -6.9799999999999995,
+          0.6700004040518194,
+          1.8
+        ]
+      ]
+    }
+  ],
+  "joints": [
+    {
+      "name": "door_slide",
+      "type": "prismatic",
+      "parent": "link_000",
+      "child": "link_001",
+      "reference_q": 0.0,
+      "mimic": null
+    },
+    {
+      "name": "bay_hinge",
+      "type": "revolute",
+      "parent": "link_000",
+      "child": "link_002",
+      "reference_q": 0.0,
+      "mimic": null
+    },
+    {
+      "name": "mast_spin",
+      "type": "continuous",
+      "parent": "link_000",
+      "child": "link_003",
+      "reference_q": 0.0,
+      "mimic": null
+    },
+    {
+      "name": "tail_spin",
+      "type": "continuous",
+      "parent": "link_000",
+      "child": "link_004",
+      "reference_q": 0.0,
+      "mimic": null
+    }
+  ],
+  "bounds": [
+    [
+      -8.459999999999999,
+      -5.3,
+      -1.2700101931436896
+    ],
+    [
+      5.1499999999999995,
+      5.3,
+      2.12
+    ]
+  ],
+  "point_pool_size": 65536,
+  "reference_pose": "Zero position clamped to limits; mimic values propagated",
+  "qc": {
+    "finite_geometry": true,
+    "tree_valid": true,
+    "axis_unit": true,
+    "physical_collision_validation": false,
+    "visual_tessellation": "32 cylinder segments, icosphere subdivision 2"
+  }
+}

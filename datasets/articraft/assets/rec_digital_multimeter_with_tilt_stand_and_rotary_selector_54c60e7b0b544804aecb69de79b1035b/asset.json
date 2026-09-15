@@ -1,0 +1,283 @@
+{
+  "summary": {
+    "id": "rec_digital_multimeter_with_tilt_stand_and_rotary_selector_54c60e7b0b544804aecb69de79b1035b",
+    "category": "rotary",
+    "robot_name": "professional_multimeter",
+    "joint_count": 1,
+    "link_count": 9,
+    "target_link_count": 2,
+    "family": "rec_digital_multimeter_with_tilt_stand_and_rotary_selector",
+    "warnings": [],
+    "diagonal": 0.22160948674951117,
+    "bytes": 4089923
+  },
+  "source": {
+    "dataset": "camvsl/Articraft-10K",
+    "revision": "3c79d5a05bb7cb6bf7bfee5e090176636ee3ac65",
+    "license": "CC-BY-4.0",
+    "url": "https://huggingface.co/datasets/camvsl/Articraft-10K/blob/3c79d5a05bb7cb6bf7bfee5e090176636ee3ac65/rec_digital_multimeter_with_tilt_stand_and_rotary_selector_54c60e7b0b544804aecb69de79b1035b.tar.gz",
+    "archive_sha256": "e5071180cf4f98cd8f012cc4442bfbd33779d9ee1bed8a712558eb4d4fb131a2",
+    "archive": "rec_digital_multimeter_with_tilt_stand_and_rotary_selector_54c60e7b0b544804aecb69de79b1035b.tar.gz",
+    "label_status": "Original generated URDF reference; not manually verified or physically validated"
+  },
+  "links": [
+    {
+      "id": "link_000",
+      "name": "body",
+      "point_file": "inputs/link_000.npz",
+      "faces": 2156,
+      "vertices": 1736,
+      "bounds": [
+        [
+          -0.05,
+          -0.015,
+          -0.096
+        ],
+        [
+          0.05,
+          0.015,
+          0.096
+        ]
+      ]
+    },
+    {
+      "id": "link_001",
+      "name": "display",
+      "point_file": null,
+      "faces": 24,
+      "vertices": 16,
+      "bounds": [
+        [
+          -0.025,
+          -0.010400034895424196,
+          0.04049998751120722
+        ],
+        [
+          0.025,
+          -0.006799943065320898,
+          0.07149999999989544
+        ]
+      ]
+    },
+    {
+      "id": "link_002",
+      "name": "selector",
+      "point_file": "inputs/link_002.npz",
+      "faces": 17302,
+      "vertices": 8585,
+      "bounds": [
+        [
+          -0.0264,
+          -0.032400048706533714,
+          -0.04839199999982195
+        ],
+        [
+          0.0264,
+          -0.007799903056770912,
+          0.0043919999998219515
+        ]
+      ]
+    },
+    {
+      "id": "link_003",
+      "name": "soft_key_0",
+      "point_file": null,
+      "faces": 24,
+      "vertices": 16,
+      "bounds": [
+        [
+          -0.03375,
+          -0.012400009550302234,
+          0.014399983103274066
+        ],
+        [
+          -0.02225,
+          -0.0007999941229190578,
+          0.01959999999998246
+        ]
+      ]
+    },
+    {
+      "id": "link_004",
+      "name": "soft_key_1",
+      "point_file": null,
+      "faces": 24,
+      "vertices": 16,
+      "bounds": [
+        [
+          -0.01975,
+          -0.012400009550302234,
+          0.014399983103274066
+        ],
+        [
+          -0.00825,
+          -0.0007999941229190578,
+          0.01959999999998246
+        ]
+      ]
+    },
+    {
+      "id": "link_005",
+      "name": "soft_key_2",
+      "point_file": null,
+      "faces": 24,
+      "vertices": 16,
+      "bounds": [
+        [
+          -0.00575,
+          -0.012400009550302234,
+          0.014399983103274066
+        ],
+        [
+          0.00575,
+          -0.0007999941229190578,
+          0.01959999999998246
+        ]
+      ]
+    },
+    {
+      "id": "link_006",
+      "name": "soft_key_3",
+      "point_file": null,
+      "faces": 24,
+      "vertices": 16,
+      "bounds": [
+        [
+          0.00825,
+          -0.012400009550302234,
+          0.014399983103274066
+        ],
+        [
+          0.01975,
+          -0.0007999941229190578,
+          0.01959999999998246
+        ]
+      ]
+    },
+    {
+      "id": "link_007",
+      "name": "soft_key_4",
+      "point_file": null,
+      "faces": 24,
+      "vertices": 16,
+      "bounds": [
+        [
+          0.02225,
+          -0.012400009550302234,
+          0.014399983103274066
+        ],
+        [
+          0.03375,
+          -0.0007999941229190578,
+          0.01959999999998246
+        ]
+      ]
+    },
+    {
+      "id": "link_008",
+      "name": "stand",
+      "point_file": null,
+      "faces": 336,
+      "vertices": 408,
+      "bounds": [
+        [
+          -0.036,
+          0.0064,
+          -0.07
+        ],
+        [
+          0.036,
+          0.0144,
+          0.055999999999999994
+        ]
+      ]
+    }
+  ],
+  "joints": [
+    {
+      "name": "body_to_display",
+      "type": "fixed",
+      "parent": "link_000",
+      "child": "link_001",
+      "reference_q": 0.0,
+      "mimic": null
+    },
+    {
+      "name": "body_to_selector",
+      "type": "continuous",
+      "parent": "link_000",
+      "child": "link_002",
+      "reference_q": 0.0,
+      "mimic": null
+    },
+    {
+      "name": "body_to_soft_key_0",
+      "type": "prismatic",
+      "parent": "link_000",
+      "child": "link_003",
+      "reference_q": 0.0,
+      "mimic": null
+    },
+    {
+      "name": "body_to_soft_key_1",
+      "type": "prismatic",
+      "parent": "link_000",
+      "child": "link_004",
+      "reference_q": 0.0,
+      "mimic": null
+    },
+    {
+      "name": "body_to_soft_key_2",
+      "type": "prismatic",
+      "parent": "link_000",
+      "child": "link_005",
+      "reference_q": 0.0,
+      "mimic": null
+    },
+    {
+      "name": "body_to_soft_key_3",
+      "type": "prismatic",
+      "parent": "link_000",
+      "child": "link_006",
+      "reference_q": 0.0,
+      "mimic": null
+    },
+    {
+      "name": "body_to_soft_key_4",
+      "type": "prismatic",
+      "parent": "link_000",
+      "child": "link_007",
+      "reference_q": 0.0,
+      "mimic": null
+    },
+    {
+      "name": "body_to_stand",
+      "type": "revolute",
+      "parent": "link_000",
+      "child": "link_008",
+      "reference_q": 0.0,
+      "mimic": null
+    }
+  ],
+  "bounds": [
+    [
+      -0.05,
+      -0.032400048706533714,
+      -0.096
+    ],
+    [
+      0.05,
+      0.015,
+      0.096
+    ]
+  ],
+  "point_pool_size": 65536,
+  "reference_pose": "Zero position clamped to limits; mimic values propagated",
+  "qc": {
+    "finite_geometry": true,
+    "tree_valid": true,
+    "axis_unit": true,
+    "physical_collision_validation": false,
+    "visual_tessellation": "32 cylinder segments, icosphere subdivision 2"
+  }
+}

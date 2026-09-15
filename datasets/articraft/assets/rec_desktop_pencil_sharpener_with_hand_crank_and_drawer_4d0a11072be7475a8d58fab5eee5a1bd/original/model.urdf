@@ -1,0 +1,209 @@
+<robot name="compact_office_pencil_sharpener">
+  <material name="mint_plastic">
+    <color rgba="0.55 0.78 0.72 1" />
+    </material>
+  <material name="charcoal_plastic">
+    <color rgba="0.05 0.055 0.06 1" />
+    </material>
+  <material name="smoked_tray">
+    <color rgba="0.16 0.18 0.2 1" />
+    </material>
+  <material name="brushed_metal">
+    <color rgba="0.72 0.7 0.65 1" />
+    </material>
+  <material name="red_selector">
+    <color rgba="0.85 0.1 0.06 1" />
+    </material>
+  <material name="rubber">
+    <color rgba="0.015 0.015 0.014 1" />
+    </material>
+  <link name="housing">
+    <visual name="body_shell">
+      <geometry>
+        <mesh filename="assets/meshes/rounded_housing.obj" />
+        </geometry>
+      <material name="mint_plastic">
+        <color rgba="0.55 0.78 0.72 1" />
+        </material>
+      </visual>
+    <visual name="entry_bezel">
+      <origin xyz="-0.082 -0.014 0.012" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.02" length="0.004" />
+        </geometry>
+      <material name="brushed_metal">
+        <color rgba="0.72 0.7 0.65 1" />
+        </material>
+      </visual>
+    <visual name="entry_shadow">
+      <origin xyz="-0.0845 -0.014 0.012" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0125" length="0.0015" />
+        </geometry>
+      <material name="charcoal_plastic">
+        <color rgba="0.05 0.055 0.06 1" />
+        </material>
+      </visual>
+    <visual name="inner_cutter">
+      <origin xyz="-0.084 -0.014 0.012" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.012" />
+        </geometry>
+      <material name="brushed_metal">
+        <color rgba="0.72 0.7 0.65 1" />
+        </material>
+      </visual>
+    <visual name="selector_rail_0">
+      <origin xyz="-0.081 0.015 0.007" rpy="0 0 0" />
+      <geometry>
+        <box size="0.004 0.003 0.04" />
+        </geometry>
+      <material name="charcoal_plastic">
+        <color rgba="0.05 0.055 0.06 1" />
+        </material>
+      </visual>
+    <visual name="selector_rail_1">
+      <origin xyz="-0.081 0.037 0.007" rpy="0 0 0" />
+      <geometry>
+        <box size="0.004 0.003 0.04" />
+        </geometry>
+      <material name="charcoal_plastic">
+        <color rgba="0.05 0.055 0.06 1" />
+        </material>
+      </visual>
+    <visual name="crank_bushing">
+      <origin xyz="0.083 0.034 0.014" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.011" length="0.008" />
+        </geometry>
+      <material name="brushed_metal">
+        <color rgba="0.72 0.7 0.65 1" />
+        </material>
+      </visual>
+    <visual name="foot_0">
+      <origin xyz="-0.055 -0.03 -0.053" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.008" length="0.006" />
+        </geometry>
+      <material name="rubber">
+        <color rgba="0.015 0.015 0.014 1" />
+        </material>
+      </visual>
+    <visual name="foot_1">
+      <origin xyz="-0.055 0.03 -0.053" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.008" length="0.006" />
+        </geometry>
+      <material name="rubber">
+        <color rgba="0.015 0.015 0.014 1" />
+        </material>
+      </visual>
+    <visual name="foot_2">
+      <origin xyz="0.055 -0.03 -0.053" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.008" length="0.006" />
+        </geometry>
+      <material name="rubber">
+        <color rgba="0.015 0.015 0.014 1" />
+        </material>
+      </visual>
+    <visual name="foot_3">
+      <origin xyz="0.055 0.03 -0.053" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.008" length="0.006" />
+        </geometry>
+      <material name="rubber">
+        <color rgba="0.015 0.015 0.014 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="tray">
+    <visual name="tray_basin">
+      <geometry>
+        <mesh filename="assets/meshes/sliding_tray.obj" />
+        </geometry>
+      <material name="smoked_tray">
+        <color rgba="0.16 0.18 0.2 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="selector">
+    <visual name="selector_tab">
+      <origin xyz="-0.006 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/selector_tab.obj" />
+        </geometry>
+      <material name="red_selector">
+        <color rgba="0.85 0.1 0.06 1" />
+        </material>
+      </visual>
+    <visual name="selector_stem">
+      <origin xyz="0.0015 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.006 0.012 0.018" />
+        </geometry>
+      <material name="red_selector">
+        <color rgba="0.85 0.1 0.06 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="crank">
+    <visual name="crank_shaft">
+      <origin xyz="0.01 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.02" />
+        </geometry>
+      <material name="brushed_metal">
+        <color rgba="0.72 0.7 0.65 1" />
+        </material>
+      </visual>
+    <visual name="crank_hub">
+      <origin xyz="0.023 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.006" />
+        </geometry>
+      <material name="charcoal_plastic">
+        <color rgba="0.05 0.055 0.06 1" />
+        </material>
+      </visual>
+    <visual name="crank_arm">
+      <origin xyz="0.026 0 -0.026" rpy="0 0 0" />
+      <geometry>
+        <box size="0.005 0.01 0.052" />
+        </geometry>
+      <material name="charcoal_plastic">
+        <color rgba="0.05 0.055 0.06 1" />
+        </material>
+      </visual>
+    <visual name="crank_handle">
+      <origin xyz="0.042 0 -0.052" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.007" length="0.028" />
+        </geometry>
+      <material name="brushed_metal">
+        <color rgba="0.72 0.7 0.65 1" />
+        </material>
+      </visual>
+    </link>
+  <joint name="housing_to_tray" type="prismatic">
+    <origin xyz="-0.08 0 -0.03" rpy="0 0 0" />
+    <parent link="housing" />
+    <child link="tray" />
+    <axis xyz="-1 0 0" />
+    <limit effort="20" velocity="0.18" lower="0" upper="0.055" />
+    </joint>
+  <joint name="housing_to_selector" type="prismatic">
+    <origin xyz="-0.081 0.026 0.007" rpy="0 0 0" />
+    <parent link="housing" />
+    <child link="selector" />
+    <axis xyz="0 0 1" />
+    <limit effort="4" velocity="0.08" lower="-0.01" upper="0.01" />
+    </joint>
+  <joint name="housing_to_crank" type="continuous">
+    <origin xyz="0.087 0.034 0.014" rpy="0 0 0" />
+    <parent link="housing" />
+    <child link="crank" />
+    <axis xyz="1 0 0" />
+    <limit effort="8" velocity="6" />
+    </joint>
+  </robot>

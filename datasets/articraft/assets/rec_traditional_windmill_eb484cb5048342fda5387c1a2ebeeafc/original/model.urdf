@@ -1,0 +1,362 @@
+<robot name="traditional_windmill">
+  <material name="tower_stone">
+    <color rgba="0.72 0.69 0.63 1" />
+    </material>
+  <material name="cap_paint">
+    <color rgba="0.34 0.21 0.16 1" />
+    </material>
+  <material name="dark_iron">
+    <color rgba="0.2 0.21 0.22 1" />
+    </material>
+  <material name="weathered_wood">
+    <color rgba="0.84 0.8 0.72 1" />
+    </material>
+  <link name="tower">
+    <inertial>
+      <origin xyz="0 0 3.1" rpy="0 0 0" />
+      <mass value="14000" />
+      <inertia ixx="56058.3" ixy="0" ixz="0" iyy="56058.3" iyz="0" izz="22423.3" />
+      </inertial>
+    <visual name="base_plinth">
+      <origin xyz="0 0 0.125" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="1.52" length="0.25" />
+        </geometry>
+      <material name="tower_stone">
+        <color rgba="0.72 0.69 0.63 1" />
+        </material>
+      </visual>
+    <visual name="tower_shell">
+      <geometry>
+        <mesh filename="assets/meshes/windmill_tower_shell.obj" />
+        </geometry>
+      <material name="tower_stone">
+        <color rgba="0.72 0.69 0.63 1" />
+        </material>
+      </visual>
+    <visual name="curb_ring">
+      <origin xyz="0 0 6.15" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/windmill_curb_ring.obj" />
+        </geometry>
+      <material name="dark_iron">
+        <color rgba="0.2 0.21 0.22 1" />
+        </material>
+      </visual>
+    <visual name="top_deck">
+      <origin xyz="0 0 6.13" rpy="0 0 0" />
+      <geometry>
+        <box size="1.56 1.56 0.14" />
+        </geometry>
+      <material name="dark_iron">
+        <color rgba="0.2 0.21 0.22 1" />
+        </material>
+      </visual>
+    <visual name="yaw_pintle">
+      <origin xyz="0 0 6.26" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.07" length="0.24" />
+        </geometry>
+      <material name="dark_iron">
+        <color rgba="0.2 0.21 0.22 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="cap">
+    <inertial>
+      <origin xyz="0 0 0.72" rpy="0 0 0" />
+      <mass value="2200" />
+      <inertia ixx="1272.79" ixy="0" ixz="0" iyy="1272.79" iyz="0" izz="1774.67" />
+      </inertial>
+    <visual name="thrust_flange">
+      <origin xyz="0 0 0.03" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/windmill_thrust_flange.obj" />
+        </geometry>
+      <material name="dark_iron">
+        <color rgba="0.2 0.21 0.22 1" />
+        </material>
+      </visual>
+    <visual name="yaw_sleeve">
+      <origin xyz="0 0 0.15" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/windmill_yaw_sleeve.obj" />
+        </geometry>
+      <material name="dark_iron">
+        <color rgba="0.2 0.21 0.22 1" />
+        </material>
+      </visual>
+    <visual name="rear_panel">
+      <origin xyz="-0.06 0 0.67" rpy="0 0 0" />
+      <geometry>
+        <box size="0.16 0.86 0.74" />
+        </geometry>
+      <material name="cap_paint">
+        <color rgba="0.34 0.21 0.16 1" />
+        </material>
+      </visual>
+    <visual name="rear_cross_tie">
+      <origin xyz="0.14 0 0.25" rpy="0 0 0" />
+      <geometry>
+        <box size="0.2 0.52 0.1" />
+        </geometry>
+      <material name="dark_iron">
+        <color rgba="0.2 0.21 0.22 1" />
+        </material>
+      </visual>
+    <visual name="yaw_bridge">
+      <origin xyz="0.04 0 0.25" rpy="0 0 0" />
+      <geometry>
+        <box size="0.26 0.32 0.1" />
+        </geometry>
+      <material name="dark_iron">
+        <color rgba="0.2 0.21 0.22 1" />
+        </material>
+      </visual>
+    <visual name="curb_shoe_right">
+      <origin xyz="0.06 -0.8 0.16" rpy="0 0 0" />
+      <geometry>
+        <box size="0.26 0.2 0.2" />
+        </geometry>
+      <material name="dark_iron">
+        <color rgba="0.2 0.21 0.22 1" />
+        </material>
+      </visual>
+    <visual name="flange_link_right">
+      <origin xyz="0.12 -0.54 0.24" rpy="0 0 0" />
+      <geometry>
+        <box size="0.28 0.42 0.16" />
+        </geometry>
+      <material name="dark_iron">
+        <color rgba="0.2 0.21 0.22 1" />
+        </material>
+      </visual>
+    <visual name="rear_post_right">
+      <origin xyz="0.16 -0.28 0.34" rpy="0 0 0" />
+      <geometry>
+        <box size="0.28 0.16 0.48" />
+        </geometry>
+      <material name="dark_iron">
+        <color rgba="0.2 0.21 0.22 1" />
+        </material>
+      </visual>
+    <visual name="side_sill_right">
+      <origin xyz="0.86 -0.28 0.48" rpy="0 0 0" />
+      <geometry>
+        <box size="1.22 0.16 0.2" />
+        </geometry>
+      <material name="dark_iron">
+        <color rgba="0.2 0.21 0.22 1" />
+        </material>
+      </visual>
+    <visual name="side_frame_right">
+      <origin xyz="1.06 -0.28 0.79" rpy="0 0 0" />
+      <geometry>
+        <box size="0.64 0.14 0.58" />
+        </geometry>
+      <material name="dark_iron">
+        <color rgba="0.2 0.21 0.22 1" />
+        </material>
+      </visual>
+    <visual name="roof_panel_right">
+      <origin xyz="0.72 -0.42 0.95" rpy="0.62 0 0" />
+      <geometry>
+        <box size="1.46 0.1 0.86" />
+        </geometry>
+      <material name="cap_paint">
+        <color rgba="0.34 0.21 0.16 1" />
+        </material>
+      </visual>
+    <visual name="curb_shoe_left">
+      <origin xyz="0.06 0.8 0.16" rpy="0 0 0" />
+      <geometry>
+        <box size="0.26 0.2 0.2" />
+        </geometry>
+      <material name="dark_iron">
+        <color rgba="0.2 0.21 0.22 1" />
+        </material>
+      </visual>
+    <visual name="flange_link_left">
+      <origin xyz="0.12 0.54 0.24" rpy="0 0 0" />
+      <geometry>
+        <box size="0.28 0.42 0.16" />
+        </geometry>
+      <material name="dark_iron">
+        <color rgba="0.2 0.21 0.22 1" />
+        </material>
+      </visual>
+    <visual name="rear_post_left">
+      <origin xyz="0.16 0.28 0.34" rpy="0 0 0" />
+      <geometry>
+        <box size="0.28 0.16 0.48" />
+        </geometry>
+      <material name="dark_iron">
+        <color rgba="0.2 0.21 0.22 1" />
+        </material>
+      </visual>
+    <visual name="side_sill_left">
+      <origin xyz="0.86 0.28 0.48" rpy="0 0 0" />
+      <geometry>
+        <box size="1.22 0.16 0.2" />
+        </geometry>
+      <material name="dark_iron">
+        <color rgba="0.2 0.21 0.22 1" />
+        </material>
+      </visual>
+    <visual name="side_frame_left">
+      <origin xyz="1.06 0.28 0.79" rpy="0 0 0" />
+      <geometry>
+        <box size="0.64 0.14 0.58" />
+        </geometry>
+      <material name="dark_iron">
+        <color rgba="0.2 0.21 0.22 1" />
+        </material>
+      </visual>
+    <visual name="roof_panel_left">
+      <origin xyz="0.72 0.42 0.95" rpy="-0.62 0 0" />
+      <geometry>
+        <box size="1.46 0.1 0.86" />
+        </geometry>
+      <material name="cap_paint">
+        <color rgba="0.34 0.21 0.16 1" />
+        </material>
+      </visual>
+    <visual name="bearing_bed">
+      <origin xyz="1.04 0 0.6" rpy="0 0 0" />
+      <geometry>
+        <box size="1.18 0.6 0.18" />
+        </geometry>
+      <material name="dark_iron">
+        <color rgba="0.2 0.21 0.22 1" />
+        </material>
+      </visual>
+    <visual name="upper_bridge">
+      <origin xyz="1.46 0 1.05" rpy="0 0 0" />
+      <geometry>
+        <box size="0.62 0.52 0.18" />
+        </geometry>
+      <material name="dark_iron">
+        <color rgba="0.2 0.21 0.22 1" />
+        </material>
+      </visual>
+    <visual name="rear_bearing_seat">
+      <origin xyz="1.28 0 0.78" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/windmill_rear_bearing.obj" />
+        </geometry>
+      <material name="dark_iron">
+        <color rgba="0.2 0.21 0.22 1" />
+        </material>
+      </visual>
+    <visual name="front_bearing_seat">
+      <origin xyz="1.62 0 0.78" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/windmill_front_bearing.obj" />
+        </geometry>
+      <material name="dark_iron">
+        <color rgba="0.2 0.21 0.22 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="rotor">
+    <inertial>
+      <origin xyz="0.56 0 0" rpy="0 0 0" />
+      <mass value="980" />
+      <inertia ixx="7201.3" ixy="0" ixz="0" iyy="3666.8" iyz="0" izz="3666.8" />
+      </inertial>
+    <visual name="main_shaft">
+      <origin xyz="0.18 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.045" length="0.86" />
+        </geometry>
+      <material name="dark_iron">
+        <color rgba="0.2 0.21 0.22 1" />
+        </material>
+      </visual>
+    <visual name="rear_collar">
+      <origin xyz="-0.18 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.075" length="0.07" />
+        </geometry>
+      <material name="dark_iron">
+        <color rgba="0.2 0.21 0.22 1" />
+        </material>
+      </visual>
+    <visual name="rear_journal">
+      <origin xyz="0 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.045" length="0.12" />
+        </geometry>
+      <material name="dark_iron">
+        <color rgba="0.2 0.21 0.22 1" />
+        </material>
+      </visual>
+    <visual name="front_journal">
+      <origin xyz="0.34 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.045" length="0.14" />
+        </geometry>
+      <material name="dark_iron">
+        <color rgba="0.2 0.21 0.22 1" />
+        </material>
+      </visual>
+    <visual name="hub_barrel">
+      <origin xyz="0.58 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.17" length="0.3" />
+        </geometry>
+      <material name="dark_iron">
+        <color rgba="0.2 0.21 0.22 1" />
+        </material>
+      </visual>
+    <visual name="hub_flange">
+      <origin xyz="0.74 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.23" length="0.09" />
+        </geometry>
+      <material name="dark_iron">
+        <color rgba="0.2 0.21 0.22 1" />
+        </material>
+      </visual>
+    <visual name="vertical_stock">
+      <origin xyz="0.54 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.1 0.18 1.3" />
+        </geometry>
+      <material name="dark_iron">
+        <color rgba="0.2 0.21 0.22 1" />
+        </material>
+      </visual>
+    <visual name="horizontal_stock">
+      <origin xyz="0.54 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.1 1.3 0.18" />
+        </geometry>
+      <material name="dark_iron">
+        <color rgba="0.2 0.21 0.22 1" />
+        </material>
+      </visual>
+    <visual name="blade_lattice">
+      <geometry>
+        <mesh filename="assets/meshes/windmill_blade_lattice.obj" />
+        </geometry>
+      <material name="weathered_wood">
+        <color rgba="0.84 0.8 0.72 1" />
+        </material>
+      </visual>
+    </link>
+  <joint name="tower_to_cap" type="continuous">
+    <origin xyz="0 0 6.2" rpy="0 0 0" />
+    <parent link="tower" />
+    <child link="cap" />
+    <axis xyz="0 0 1" />
+    <limit effort="18000" velocity="0.15" />
+    </joint>
+  <joint name="cap_to_rotor" type="continuous">
+    <origin xyz="1.28 0 0.78" rpy="0 0 0" />
+    <parent link="cap" />
+    <child link="rotor" />
+    <axis xyz="1 0 0" />
+    <limit effort="12000" velocity="2.5" />
+    </joint>
+  </robot>

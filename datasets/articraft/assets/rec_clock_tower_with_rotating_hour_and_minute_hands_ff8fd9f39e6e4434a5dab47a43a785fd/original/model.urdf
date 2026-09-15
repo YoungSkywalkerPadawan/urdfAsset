@@ -1,0 +1,520 @@
+<robot name="japanese_pagoda_clock_tower">
+  <material name="timber_dark">
+    <color rgba="0.42 0.26 0.15 1" />
+    </material>
+  <material name="timber_light">
+    <color rgba="0.55 0.36 0.22 1" />
+    </material>
+  <material name="roof_tile">
+    <color rgba="0.18 0.23 0.2 1" />
+    </material>
+  <material name="roof_trim">
+    <color rgba="0.23 0.28 0.24 1" />
+    </material>
+  <material name="clock_face">
+    <color rgba="0.94 0.92 0.86 1" />
+    </material>
+  <material name="clock_bezel">
+    <color rgba="0.52 0.39 0.18 1" />
+    </material>
+  <material name="hand_dark">
+    <color rgba="0.08 0.08 0.09 1" />
+    </material>
+  <material name="finial_metal">
+    <color rgba="0.76 0.63 0.28 1" />
+    </material>
+  <link name="tower_shaft">
+    <inertial>
+      <origin xyz="0 0 3.025" rpy="0 0 0" />
+      <mass value="4200" />
+      <inertia ixx="17864.9" ixy="0" ixz="0" iyy="17864.9" iyz="0" izz="10108" />
+      </inertial>
+    <visual name="plinth">
+      <origin xyz="0 0 0.35" rpy="0 0 0" />
+      <geometry>
+        <box size="3.8 3.8 0.7" />
+        </geometry>
+      <material name="timber_light">
+        <color rgba="0.55 0.36 0.22 1" />
+        </material>
+      </visual>
+    <visual name="shaft_body">
+      <origin xyz="0 0 3.2" rpy="0 0 0" />
+      <geometry>
+        <box size="2.8 2.8 5" />
+        </geometry>
+      <material name="timber_dark">
+        <color rgba="0.42 0.26 0.15 1" />
+        </material>
+      </visual>
+    <visual name="shaft_crown">
+      <origin xyz="0 0 5.875" rpy="0 0 0" />
+      <geometry>
+        <box size="3.2 3.2 0.35" />
+        </geometry>
+      <material name="timber_light">
+        <color rgba="0.55 0.36 0.22 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="-1.24 -1.24 3.15" rpy="0 0 0" />
+      <geometry>
+        <box size="0.24 0.24 4.9" />
+        </geometry>
+      <material name="timber_light">
+        <color rgba="0.55 0.36 0.22 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="-1.24 1.24 3.15" rpy="0 0 0" />
+      <geometry>
+        <box size="0.24 0.24 4.9" />
+        </geometry>
+      <material name="timber_light">
+        <color rgba="0.55 0.36 0.22 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="1.24 -1.24 3.15" rpy="0 0 0" />
+      <geometry>
+        <box size="0.24 0.24 4.9" />
+        </geometry>
+      <material name="timber_light">
+        <color rgba="0.55 0.36 0.22 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="1.24 1.24 3.15" rpy="0 0 0" />
+      <geometry>
+        <box size="0.24 0.24 4.9" />
+        </geometry>
+      <material name="timber_light">
+        <color rgba="0.55 0.36 0.22 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="first_stage">
+    <inertial>
+      <origin xyz="0 0 0.625" rpy="0 0 0" />
+      <mass value="480" />
+      <inertia ixx="422.5" ixy="0" ixz="0" iyy="422.5" iyz="0" izz="720" />
+      </inertial>
+    <visual name="first_stage_lower_band">
+      <geometry>
+        <mesh filename="assets/meshes/first_stage_lower_band.obj" />
+        </geometry>
+      <material name="timber_dark">
+        <color rgba="0.42 0.26 0.15 1" />
+        </material>
+      </visual>
+    <visual name="first_stage_wall">
+      <origin xyz="0 0 0.14" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/first_stage_wall.obj" />
+        </geometry>
+      <material name="timber_dark">
+        <color rgba="0.42 0.26 0.15 1" />
+        </material>
+      </visual>
+    <visual name="first_stage_upper_band">
+      <origin xyz="0 0 1.11" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/first_stage_upper_band.obj" />
+        </geometry>
+      <material name="timber_dark">
+        <color rgba="0.42 0.26 0.15 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="first_roof">
+    <inertial>
+      <origin xyz="0 0 0.575" rpy="0 0 0" />
+      <mass value="360" />
+      <inertia ixx="674.475" ixy="0" ixz="0" iyy="674.475" iyz="0" izz="1269.6" />
+      </inertial>
+    <visual name="first_roof_shell">
+      <geometry>
+        <mesh filename="assets/meshes/first_roof_shell.obj" />
+        </geometry>
+      <material name="roof_tile">
+        <color rgba="0.18 0.23 0.2 1" />
+        </material>
+      </visual>
+    <visual name="first_roof_cap">
+      <origin xyz="0 0 1.07" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/first_roof_cap.obj" />
+        </geometry>
+      <material name="roof_trim">
+        <color rgba="0.23 0.28 0.24 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="second_stage">
+    <inertial>
+      <origin xyz="0 0 0.46" rpy="0 0 0" />
+      <mass value="220" />
+      <inertia ixx="104.251" ixy="0" ixz="0" iyy="104.251" iyz="0" izz="177.467" />
+      </inertial>
+    <visual name="second_stage_lower_band">
+      <geometry>
+        <mesh filename="assets/meshes/second_stage_lower_band.obj" />
+        </geometry>
+      <material name="timber_dark">
+        <color rgba="0.42 0.26 0.15 1" />
+        </material>
+      </visual>
+    <visual name="second_stage_wall">
+      <origin xyz="0 0 0.14" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/second_stage_wall.obj" />
+        </geometry>
+      <material name="timber_dark">
+        <color rgba="0.42 0.26 0.15 1" />
+        </material>
+      </visual>
+    <visual name="second_stage_upper_band">
+      <origin xyz="0 0 0.78" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/second_stage_upper_band.obj" />
+        </geometry>
+      <material name="timber_dark">
+        <color rgba="0.42 0.26 0.15 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="second_roof">
+    <inertial>
+      <origin xyz="0 0 0.475" rpy="0 0 0" />
+      <mass value="210" />
+      <inertia ixx="212.188" ixy="0" ixz="0" iyy="212.188" iyz="0" izz="392.788" />
+      </inertial>
+    <visual name="second_roof_shell">
+      <geometry>
+        <mesh filename="assets/meshes/second_roof_shell.obj" />
+        </geometry>
+      <material name="roof_tile">
+        <color rgba="0.18 0.23 0.2 1" />
+        </material>
+      </visual>
+    <visual name="second_roof_cap">
+      <origin xyz="0 0 0.88" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/second_roof_cap.obj" />
+        </geometry>
+      <material name="roof_trim">
+        <color rgba="0.23 0.28 0.24 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="third_stage">
+    <inertial>
+      <origin xyz="0 0 0.375" rpy="0 0 0" />
+      <mass value="125" />
+      <inertia ixx="30.8854" ixy="0" ixz="0" iyy="30.8854" iyz="0" izz="50.0521" />
+      </inertial>
+    <visual name="third_stage_lower_band">
+      <geometry>
+        <mesh filename="assets/meshes/third_stage_lower_band.obj" />
+        </geometry>
+      <material name="timber_dark">
+        <color rgba="0.42 0.26 0.15 1" />
+        </material>
+      </visual>
+    <visual name="third_stage_wall">
+      <origin xyz="0 0 0.115" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/third_stage_wall.obj" />
+        </geometry>
+      <material name="timber_dark">
+        <color rgba="0.42 0.26 0.15 1" />
+        </material>
+      </visual>
+    <visual name="third_stage_upper_band">
+      <origin xyz="0 0 0.63" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/third_stage_upper_band.obj" />
+        </geometry>
+      <material name="timber_dark">
+        <color rgba="0.42 0.26 0.15 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="third_roof">
+    <inertial>
+      <origin xyz="0 0 0.41" rpy="0 0 0" />
+      <mass value="120" />
+      <inertia ixx="66.749" ixy="0" ixz="0" iyy="66.749" iyz="0" izz="120.05" />
+      </inertial>
+    <visual name="third_roof_shell">
+      <geometry>
+        <mesh filename="assets/meshes/third_roof_shell.obj" />
+        </geometry>
+      <material name="roof_tile">
+        <color rgba="0.18 0.23 0.2 1" />
+        </material>
+      </visual>
+    <visual name="third_roof_cap">
+      <origin xyz="0 0 0.76" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/third_roof_cap.obj" />
+        </geometry>
+      <material name="roof_trim">
+        <color rgba="0.23 0.28 0.24 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="finial">
+    <inertial>
+      <origin xyz="0 0 0.44" rpy="0 0 0" />
+      <mass value="48" />
+      <inertia ixx="3.4576" ixy="0" ixz="0" iyy="3.4576" iyz="0" izz="0.72" />
+      </inertial>
+    <visual name="finial_base">
+      <origin xyz="0 0 0.1" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.14" length="0.2" />
+        </geometry>
+      <material name="finial_metal">
+        <color rgba="0.76 0.63 0.28 1" />
+        </material>
+      </visual>
+    <visual name="finial_globe">
+      <origin xyz="0 0 0.27" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.13" />
+        </geometry>
+      <material name="finial_metal">
+        <color rgba="0.76 0.63 0.28 1" />
+        </material>
+      </visual>
+    <visual name="finial_spire">
+      <origin xyz="0 0 0.56" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.06" length="0.42" />
+        </geometry>
+      <material name="finial_metal">
+        <color rgba="0.76 0.63 0.28 1" />
+        </material>
+      </visual>
+    <visual name="finial_tip">
+      <origin xyz="0 0 0.8" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.08" />
+        </geometry>
+      <material name="finial_metal">
+        <color rgba="0.76 0.63 0.28 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="clock_dial">
+    <inertial>
+      <origin xyz="0 0.03 0" rpy="1.5708 0 0" />
+      <mass value="24" />
+      <inertia ixx="2.3136" ixy="0" ixz="0" iyy="2.3136" iyz="0" izz="4.6128" />
+      </inertial>
+    <visual name="dial_bezel">
+      <origin xyz="0 0.03 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.62" length="0.06" />
+        </geometry>
+      <material name="clock_bezel">
+        <color rgba="0.52 0.39 0.18 1" />
+        </material>
+      </visual>
+    <visual name="dial_face">
+      <origin xyz="0 0.051 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.55" length="0.018" />
+        </geometry>
+      <material name="clock_face">
+        <color rgba="0.94 0.92 0.86 1" />
+        </material>
+      </visual>
+    <visual name="dial_hub">
+      <origin xyz="0 0.05 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.055" length="0.02" />
+        </geometry>
+      <material name="clock_bezel">
+        <color rgba="0.52 0.39 0.18 1" />
+        </material>
+      </visual>
+    <visual name="marker_12">
+      <origin xyz="0 0.046 0.43" rpy="0 0 0" />
+      <geometry>
+        <box size="0.08 0.008 0.035" />
+        </geometry>
+      <material name="clock_bezel">
+        <color rgba="0.52 0.39 0.18 1" />
+        </material>
+      </visual>
+    <visual name="marker_6">
+      <origin xyz="0 0.046 -0.43" rpy="0 0 0" />
+      <geometry>
+        <box size="0.08 0.008 0.035" />
+        </geometry>
+      <material name="clock_bezel">
+        <color rgba="0.52 0.39 0.18 1" />
+        </material>
+      </visual>
+    <visual name="marker_3">
+      <origin xyz="0.43 0.046 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.035 0.008 0.08" />
+        </geometry>
+      <material name="clock_bezel">
+        <color rgba="0.52 0.39 0.18 1" />
+        </material>
+      </visual>
+    <visual name="marker_9">
+      <origin xyz="-0.43 0.046 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.035 0.008 0.08" />
+        </geometry>
+      <material name="clock_bezel">
+        <color rgba="0.52 0.39 0.18 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="hour_hand">
+    <inertial>
+      <origin xyz="0 0.005 0.06" rpy="0 0 0" />
+      <mass value="1.2" />
+      <inertia ixx="0.02117" ixy="0" ixz="0" iyy="0.02216" iyz="0" izz="0.00101" />
+      </inertial>
+    <visual name="hour_sleeve">
+      <origin xyz="0 0.005 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.028" length="0.01" />
+        </geometry>
+      <material name="hand_dark">
+        <color rgba="0.08 0.08 0.09 1" />
+        </material>
+      </visual>
+    <visual name="hour_hub_cap">
+      <origin xyz="0 0.008 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.046" length="0.004" />
+        </geometry>
+      <material name="hand_dark">
+        <color rgba="0.08 0.08 0.09 1" />
+        </material>
+      </visual>
+    <visual name="hour_blade">
+      <origin xyz="0 0.003 0.17" rpy="0 0 0" />
+      <geometry>
+        <box size="0.055 0.006 0.34" />
+        </geometry>
+      <material name="hand_dark">
+        <color rgba="0.08 0.08 0.09 1" />
+        </material>
+      </visual>
+    <visual name="hour_tail">
+      <origin xyz="0 0.003 -0.055" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.006 0.11" />
+        </geometry>
+      <material name="hand_dark">
+        <color rgba="0.08 0.08 0.09 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="minute_hand">
+    <inertial>
+      <origin xyz="0.17 0.015 0" rpy="0 0 0" />
+      <mass value="0.9" />
+      <inertia ixx="0.0005232" ixy="0" ixz="0" iyy="0.02931" iyz="0" izz="0.0288732" />
+      </inertial>
+    <visual name="minute_collar">
+      <origin xyz="0 0.015 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.016" length="0.01" />
+        </geometry>
+      <material name="hand_dark">
+        <color rgba="0.08 0.08 0.09 1" />
+        </material>
+      </visual>
+    <visual name="minute_hub_cap">
+      <origin xyz="0 0.022 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.032" length="0.004" />
+        </geometry>
+      <material name="hand_dark">
+        <color rgba="0.08 0.08 0.09 1" />
+        </material>
+      </visual>
+    <visual name="minute_blade">
+      <origin xyz="0.24 0.017 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.48 0.005 0.04" />
+        </geometry>
+      <material name="hand_dark">
+        <color rgba="0.08 0.08 0.09 1" />
+        </material>
+      </visual>
+    <visual name="minute_tail">
+      <origin xyz="-0.07 0.017 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.14 0.005 0.026" />
+        </geometry>
+      <material name="hand_dark">
+        <color rgba="0.08 0.08 0.09 1" />
+        </material>
+      </visual>
+    </link>
+  <joint name="shaft_to_first_stage" type="fixed">
+    <origin xyz="0 0 6.05" rpy="0 0 0" />
+    <parent link="tower_shaft" />
+    <child link="first_stage" />
+    </joint>
+  <joint name="first_stage_to_first_roof" type="fixed">
+    <origin xyz="0 0 1.25" rpy="0 0 0" />
+    <parent link="first_stage" />
+    <child link="first_roof" />
+    </joint>
+  <joint name="first_roof_to_second_stage" type="fixed">
+    <origin xyz="0 0 1.15" rpy="0 0 0" />
+    <parent link="first_roof" />
+    <child link="second_stage" />
+    </joint>
+  <joint name="second_stage_to_second_roof" type="fixed">
+    <origin xyz="0 0 0.92" rpy="0 0 0" />
+    <parent link="second_stage" />
+    <child link="second_roof" />
+    </joint>
+  <joint name="second_roof_to_third_stage" type="fixed">
+    <origin xyz="0 0 0.95" rpy="0 0 0" />
+    <parent link="second_roof" />
+    <child link="third_stage" />
+    </joint>
+  <joint name="third_stage_to_third_roof" type="fixed">
+    <origin xyz="0 0 0.75" rpy="0 0 0" />
+    <parent link="third_stage" />
+    <child link="third_roof" />
+    </joint>
+  <joint name="third_roof_to_finial" type="fixed">
+    <origin xyz="0 0 0.82" rpy="0 0 0" />
+    <parent link="third_roof" />
+    <child link="finial" />
+    </joint>
+  <joint name="first_stage_to_clock_dial" type="fixed">
+    <origin xyz="0 1.56 0.62" rpy="0 0 0" />
+    <parent link="first_stage" />
+    <child link="clock_dial" />
+    </joint>
+  <joint name="dial_to_hour_hand" type="continuous">
+    <origin xyz="0 0.06 0" rpy="0 0 0" />
+    <parent link="clock_dial" />
+    <child link="hour_hand" />
+    <axis xyz="0 1 0" />
+    <limit effort="0.5" velocity="1" />
+    </joint>
+  <joint name="dial_to_minute_hand" type="continuous">
+    <origin xyz="0 0.06 0" rpy="0 0 0" />
+    <parent link="clock_dial" />
+    <child link="minute_hand" />
+    <axis xyz="0 1 0" />
+    <limit effort="0.5" velocity="2" />
+    </joint>
+  </robot>

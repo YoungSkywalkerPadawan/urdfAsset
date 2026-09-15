@@ -1,0 +1,137 @@
+<robot name="industrial_ceiling_fan">
+  <material name="dark_enamel">
+    <color rgba="0.17 0.18 0.2 1" />
+    </material>
+  <material name="iron_bracket">
+    <color rgba="0.24 0.25 0.27 1" />
+    </material>
+  <material name="galvanized_steel">
+    <color rgba="0.72 0.74 0.76 1" />
+    </material>
+  <link name="support_assembly">
+    <inertial>
+      <origin xyz="0 0 0.47" rpy="0 0 0" />
+      <mass value="18" />
+      <inertia ixx="1.50596" ixy="0" ixz="0" iyy="1.50596" iyz="0" izz="0.189225" />
+      </inertial>
+    <visual name="ceiling_plate">
+      <origin xyz="0 0 0.956" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.045" length="0.014" />
+        </geometry>
+      <material name="dark_enamel">
+        <color rgba="0.17 0.18 0.2 1" />
+        </material>
+      </visual>
+    <visual name="canopy_shell">
+      <geometry>
+        <mesh filename="assets/meshes/canopy_shell.obj" />
+        </geometry>
+      <material name="dark_enamel">
+        <color rgba="0.17 0.18 0.2 1" />
+        </material>
+      </visual>
+    <visual name="downrod">
+      <origin xyz="0 0 0.6035" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.015" length="0.699" />
+        </geometry>
+      <material name="dark_enamel">
+        <color rgba="0.17 0.18 0.2 1" />
+        </material>
+      </visual>
+    <visual name="downrod_coupler">
+      <origin xyz="0 0 0.232" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.032" length="0.08" />
+        </geometry>
+      <material name="dark_enamel">
+        <color rgba="0.17 0.18 0.2 1" />
+        </material>
+      </visual>
+    <visual name="motor_spindle">
+      <origin xyz="0 0 0.102" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.016" length="0.204" />
+        </geometry>
+      <material name="iron_bracket">
+        <color rgba="0.24 0.25 0.27 1" />
+        </material>
+      </visual>
+    <visual name="motor_shell">
+      <geometry>
+        <mesh filename="assets/meshes/motor_shell.obj" />
+        </geometry>
+      <material name="dark_enamel">
+        <color rgba="0.17 0.18 0.2 1" />
+        </material>
+      </visual>
+    <visual name="stator_bearing">
+      <origin xyz="0 0 -0.006" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.058" length="0.012" />
+        </geometry>
+      <material name="iron_bracket">
+        <color rgba="0.24 0.25 0.27 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="rotor_assembly">
+    <inertial>
+      <origin xyz="0 0 -0.07" rpy="0 0 0" />
+      <mass value="11" />
+      <inertia ixx="1.5191" ixy="0" ixz="0" iyy="1.5191" iyz="0" izz="3.0118" />
+      </inertial>
+    <visual name="rotor_bearing">
+      <origin xyz="0 0 -0.018" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.058" length="0.012" />
+        </geometry>
+      <material name="iron_bracket">
+        <color rgba="0.24 0.25 0.27 1" />
+        </material>
+      </visual>
+    <visual name="hub_barrel">
+      <origin xyz="0 0 -0.049" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.078" length="0.05" />
+        </geometry>
+      <material name="iron_bracket">
+        <color rgba="0.24 0.25 0.27 1" />
+        </material>
+      </visual>
+    <visual name="hub_cap">
+      <origin xyz="0 0 -0.088" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.06" length="0.028" />
+        </geometry>
+      <material name="iron_bracket">
+        <color rgba="0.24 0.25 0.27 1" />
+        </material>
+      </visual>
+    <visual name="iron_brackets">
+      <origin xyz="0 0 -0.008" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/iron_brackets.obj" />
+        </geometry>
+      <material name="iron_bracket">
+        <color rgba="0.24 0.25 0.27 1" />
+        </material>
+      </visual>
+    <visual name="metal_blades">
+      <origin xyz="0 0 -0.008" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/metal_blades.obj" />
+        </geometry>
+      <material name="galvanized_steel">
+        <color rgba="0.72 0.74 0.76 1" />
+        </material>
+      </visual>
+    </link>
+  <joint name="rotor_spin" type="continuous">
+    <parent link="support_assembly" />
+    <child link="rotor_assembly" />
+    <axis xyz="0 0 1" />
+    <limit effort="14" velocity="22" />
+    </joint>
+  </robot>

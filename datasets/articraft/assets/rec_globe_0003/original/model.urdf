@@ -1,0 +1,288 @@
+<robot name="classroom_globe_stand">
+  <material name="bronze">
+    <color rgba="0.48 0.34 0.2 1" />
+    </material>
+  <material name="aged_brass">
+    <color rgba="0.63 0.54 0.33 1" />
+    </material>
+  <material name="dark_iron">
+    <color rgba="0.19 0.19 0.2 1" />
+    </material>
+  <material name="ocean_blue">
+    <color rgba="0.24 0.46 0.67 1" />
+    </material>
+  <material name="parchment">
+    <color rgba="0.92 0.88 0.72 1" />
+    </material>
+  <material name="land_olive">
+    <color rgba="0.56 0.62 0.33 1" />
+    </material>
+  <link name="support">
+    <inertial>
+      <origin xyz="0 0 0.075" rpy="0 0 0" />
+      <mass value="2.8" />
+      <inertia ixx="0.0145075" ixy="0" ixz="0" iyy="0.0145075" iyz="0" izz="0.018515" />
+      </inertial>
+    <visual name="pedestal_foot">
+      <origin xyz="0 0 0.006" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.115" length="0.012" />
+        </geometry>
+      <material name="bronze">
+        <color rgba="0.48 0.34 0.2 1" />
+        </material>
+      </visual>
+    <visual name="pedestal_step">
+      <origin xyz="0 0 0.018" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.09" length="0.012" />
+        </geometry>
+      <material name="bronze">
+        <color rgba="0.48 0.34 0.2 1" />
+        </material>
+      </visual>
+    <visual name="crown_plate">
+      <origin xyz="0 0 0.03" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.068" length="0.012" />
+        </geometry>
+      <material name="bronze">
+        <color rgba="0.48 0.34 0.2 1" />
+        </material>
+      </visual>
+    <visual name="center_column">
+      <origin xyz="0 0 0.049" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.024" length="0.038" />
+        </geometry>
+      <material name="bronze">
+        <color rgba="0.48 0.34 0.2 1" />
+        </material>
+      </visual>
+    <visual name="column_collar">
+      <origin xyz="0 0 0.068" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.028" length="0.008" />
+        </geometry>
+      <material name="bronze">
+        <color rgba="0.48 0.34 0.2 1" />
+        </material>
+      </visual>
+    <visual name="fork_bridge">
+      <origin xyz="0 0 0.067" rpy="0 0 0" />
+      <geometry>
+        <box size="0.056 0.034 0.01" />
+        </geometry>
+      <material name="bronze">
+        <color rgba="0.48 0.34 0.2 1" />
+        </material>
+      </visual>
+    <visual name="right_fork_arm">
+      <origin xyz="0.098 0 0.12" rpy="0 -0.64 0" />
+      <geometry>
+        <box size="0.17 0.018 0.012" />
+        </geometry>
+      <material name="bronze">
+        <color rgba="0.48 0.34 0.2 1" />
+        </material>
+      </visual>
+    <visual name="left_fork_arm">
+      <origin xyz="-0.098 0 0.12" rpy="0 0.64 0" />
+      <geometry>
+        <box size="0.17 0.018 0.012" />
+        </geometry>
+      <material name="bronze">
+        <color rgba="0.48 0.34 0.2 1" />
+        </material>
+      </visual>
+    <visual name="right_cheek_plate">
+      <origin xyz="0.16 0 0.167" rpy="0 0 0" />
+      <geometry>
+        <box size="0.014 0.038 0.076" />
+        </geometry>
+      <material name="bronze">
+        <color rgba="0.48 0.34 0.2 1" />
+        </material>
+      </visual>
+    <visual name="left_cheek_plate">
+      <origin xyz="-0.16 0 0.167" rpy="0 0 0" />
+      <geometry>
+        <box size="0.014 0.038 0.076" />
+        </geometry>
+      <material name="bronze">
+        <color rgba="0.48 0.34 0.2 1" />
+        </material>
+      </visual>
+    <visual name="right_bushing">
+      <origin xyz="0.155 0 0.205" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.006" />
+        </geometry>
+      <material name="dark_iron">
+        <color rgba="0.19 0.19 0.2 1" />
+        </material>
+      </visual>
+    <visual name="left_bushing">
+      <origin xyz="-0.155 0 0.205" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.006" />
+        </geometry>
+      <material name="dark_iron">
+        <color rgba="0.19 0.19 0.2 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="meridian">
+    <inertial>
+      <mass value="0.75" />
+      <inertia ixx="0.00499525" ixy="0" ixz="0" iyy="0.0107462" iyz="0" izz="0.005801" />
+      </inertial>
+    <visual name="ring_band">
+      <geometry>
+        <mesh filename="assets/meshes/meridian_ring.obj" />
+        </geometry>
+      <material name="aged_brass">
+        <color rgba="0.63 0.54 0.33 1" />
+        </material>
+      </visual>
+    <visual name="right_hub">
+      <origin xyz="0.144 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.009" length="0.016" />
+        </geometry>
+      <material name="dark_iron">
+        <color rgba="0.19 0.19 0.2 1" />
+        </material>
+      </visual>
+    <visual name="left_hub">
+      <origin xyz="-0.144 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.009" length="0.016" />
+        </geometry>
+      <material name="dark_iron">
+        <color rgba="0.19 0.19 0.2 1" />
+        </material>
+      </visual>
+    <visual name="top_bearing">
+      <origin xyz="0 0 0.126" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.01 0.01" />
+        </geometry>
+      <material name="dark_iron">
+        <color rgba="0.19 0.19 0.2 1" />
+        </material>
+      </visual>
+    <visual name="bottom_bearing">
+      <origin xyz="0 0 -0.126" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.01 0.01" />
+        </geometry>
+      <material name="dark_iron">
+        <color rgba="0.19 0.19 0.2 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="globe">
+    <inertial>
+      <mass value="1.1" />
+      <inertia ixx="0.00513216" ixy="0" ixz="0" iyy="0.00513216" iyz="0" izz="0.00513216" />
+      </inertial>
+    <visual name="globe_shell">
+      <geometry>
+        <sphere radius="0.108" />
+        </geometry>
+      <material name="ocean_blue">
+        <color rgba="0.24 0.46 0.67 1" />
+        </material>
+      </visual>
+    <visual name="equator_band">
+      <geometry>
+        <mesh filename="assets/meshes/equator_band.obj" />
+        </geometry>
+      <material name="parchment">
+        <color rgba="0.92 0.88 0.72 1" />
+        </material>
+      </visual>
+    <visual name="legend_patch">
+      <geometry>
+        <mesh filename="assets/meshes/legend_patch.obj" />
+        </geometry>
+      <material name="parchment">
+        <color rgba="0.92 0.88 0.72 1" />
+        </material>
+      </visual>
+    <visual name="continent_americas">
+      <geometry>
+        <mesh filename="assets/meshes/continent_americas.obj" />
+        </geometry>
+      <material name="land_olive">
+        <color rgba="0.56 0.62 0.33 1" />
+        </material>
+      </visual>
+    <visual name="continent_eurafrica">
+      <geometry>
+        <mesh filename="assets/meshes/continent_eurafrica.obj" />
+        </geometry>
+      <material name="land_olive">
+        <color rgba="0.56 0.62 0.33 1" />
+        </material>
+      </visual>
+    <visual name="continent_australia">
+      <geometry>
+        <mesh filename="assets/meshes/continent_australia.obj" />
+        </geometry>
+      <material name="land_olive">
+        <color rgba="0.56 0.62 0.33 1" />
+        </material>
+      </visual>
+    <visual name="north_pin">
+      <origin xyz="0 0 0.1125" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.003" length="0.009" />
+        </geometry>
+      <material name="aged_brass">
+        <color rgba="0.63 0.54 0.33 1" />
+        </material>
+      </visual>
+    <visual name="north_cap">
+      <origin xyz="0 0 0.119" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.005" length="0.004" />
+        </geometry>
+      <material name="aged_brass">
+        <color rgba="0.63 0.54 0.33 1" />
+        </material>
+      </visual>
+    <visual name="south_pin">
+      <origin xyz="0 0 -0.1125" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.003" length="0.009" />
+        </geometry>
+      <material name="aged_brass">
+        <color rgba="0.63 0.54 0.33 1" />
+        </material>
+      </visual>
+    <visual name="south_cap">
+      <origin xyz="0 0 -0.119" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.005" length="0.004" />
+        </geometry>
+      <material name="aged_brass">
+        <color rgba="0.63 0.54 0.33 1" />
+        </material>
+      </visual>
+    </link>
+  <joint name="support_to_meridian" type="revolute">
+    <origin xyz="0 0 0.205" rpy="0 0 0" />
+    <parent link="support" />
+    <child link="meridian" />
+    <axis xyz="1 0 0" />
+    <limit effort="6" velocity="1.5" lower="-0.785398" upper="0.785398" />
+    </joint>
+  <joint name="meridian_to_globe" type="continuous">
+    <parent link="meridian" />
+    <child link="globe" />
+    <axis xyz="0 0 1" />
+    <limit effort="2" velocity="3" />
+    </joint>
+  </robot>

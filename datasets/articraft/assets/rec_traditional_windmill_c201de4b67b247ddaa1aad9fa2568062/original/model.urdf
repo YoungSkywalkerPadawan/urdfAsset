@@ -1,0 +1,862 @@
+<robot name="traditional_windmill">
+  <material name="stone">
+    <color rgba="0.73 0.7 0.63 1" />
+    </material>
+  <material name="weathered_wood">
+    <color rgba="0.47 0.34 0.24 1" />
+    </material>
+  <material name="dark_roof">
+    <color rgba="0.19 0.17 0.16 1" />
+    </material>
+  <material name="aged_canvas">
+    <color rgba="0.82 0.78 0.67 1" />
+    </material>
+  <material name="iron">
+    <color rgba="0.32 0.31 0.33 1" />
+    </material>
+  <link name="tower">
+    <inertial>
+      <origin xyz="0 0 4.275" rpy="0 0 0" />
+      <mass value="2600" />
+      <inertia ixx="18310.5" ixy="0" ixz="0" iyy="18310.5" iyz="0" izz="4943.25" />
+      </inertial>
+    <visual name="tower_base_stage">
+      <origin xyz="0 0 0.95" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="1.95" length="1.9" />
+        </geometry>
+      <material name="stone">
+        <color rgba="0.73 0.7 0.63 1" />
+        </material>
+      </visual>
+    <visual name="tower_mid_stage_1">
+      <origin xyz="0 0 2.95" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="1.78" length="2.2" />
+        </geometry>
+      <material name="stone">
+        <color rgba="0.73 0.7 0.63 1" />
+        </material>
+      </visual>
+    <visual name="tower_mid_stage_2">
+      <origin xyz="0 0 5.05" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="1.56" length="2.2" />
+        </geometry>
+      <material name="stone">
+        <color rgba="0.73 0.7 0.63 1" />
+        </material>
+      </visual>
+    <visual name="tower_upper_stage">
+      <origin xyz="0 0 7.05" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="1.34" length="2.3" />
+        </geometry>
+      <material name="stone">
+        <color rgba="0.73 0.7 0.63 1" />
+        </material>
+      </visual>
+    <visual name="tower_top_stage">
+      <origin xyz="0 0 8.25" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="1.2" length="0.3" />
+        </geometry>
+      <material name="stone">
+        <color rgba="0.73 0.7 0.63 1" />
+        </material>
+      </visual>
+    <visual name="tower_curb">
+      <origin xyz="0 0 8.31" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="1.25" length="0.18" />
+        </geometry>
+      <material name="weathered_wood">
+        <color rgba="0.47 0.34 0.24 1" />
+        </material>
+      </visual>
+    <visual name="tower_footing">
+      <origin xyz="0 0 0.06" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="2.02" length="0.12" />
+        </geometry>
+      <material name="stone">
+        <color rgba="0.73 0.7 0.63 1" />
+        </material>
+      </visual>
+    <visual name="front_door">
+      <origin xyz="1.86 0 0.875" rpy="0 0 0" />
+      <geometry>
+        <box size="0.1 0.95 1.75" />
+        </geometry>
+      <material name="weathered_wood">
+        <color rgba="0.47 0.34 0.24 1" />
+        </material>
+      </visual>
+    <visual name="window_1">
+      <origin xyz="1.28 0 3" rpy="0 0 0" />
+      <geometry>
+        <box size="0.06 0.52 0.74" />
+        </geometry>
+      <material name="weathered_wood">
+        <color rgba="0.47 0.34 0.24 1" />
+        </material>
+      </visual>
+    <visual name="window_2">
+      <origin xyz="1.28 0 5.1" rpy="0 0 0" />
+      <geometry>
+        <box size="0.06 0.52 0.74" />
+        </geometry>
+      <material name="weathered_wood">
+        <color rgba="0.47 0.34 0.24 1" />
+        </material>
+      </visual>
+    <visual name="window_3">
+      <origin xyz="1.28 0 6.8" rpy="0 0 0" />
+      <geometry>
+        <box size="0.06 0.52 0.74" />
+        </geometry>
+      <material name="weathered_wood">
+        <color rgba="0.47 0.34 0.24 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="cap">
+    <inertial>
+      <origin xyz="0.2 0 0.72" rpy="0 0 0" />
+      <mass value="480" />
+      <inertia ixx="375.7" ixy="0" ixz="0" iyy="375.7" iyz="0" izz="583.2" />
+      </inertial>
+    <visual name="cap_base">
+      <origin xyz="0 0 0.13" rpy="0 0 0" />
+      <geometry>
+        <box size="2.46 2.18 0.26" />
+        </geometry>
+      <material name="weathered_wood">
+        <color rgba="0.47 0.34 0.24 1" />
+        </material>
+      </visual>
+    <visual name="cap_body">
+      <origin xyz="0 0 0.42" rpy="0 0 0" />
+      <geometry>
+        <box size="2.12 2.04 0.44" />
+        </geometry>
+      <material name="weathered_wood">
+        <color rgba="0.47 0.34 0.24 1" />
+        </material>
+      </visual>
+    <visual name="front_roof">
+      <origin xyz="0.32 0 0.73" rpy="0 -0.42 0" />
+      <geometry>
+        <box size="1.55 2.2 0.14" />
+        </geometry>
+      <material name="dark_roof">
+        <color rgba="0.19 0.17 0.16 1" />
+        </material>
+      </visual>
+    <visual name="rear_roof">
+      <origin xyz="-0.38 0 0.72" rpy="0 0.36 0" />
+      <geometry>
+        <box size="1.55 2.2 0.14" />
+        </geometry>
+      <material name="dark_roof">
+        <color rgba="0.19 0.17 0.16 1" />
+        </material>
+      </visual>
+    <visual name="roof_ridge">
+      <origin xyz="0 0 0.8" rpy="0 0 0" />
+      <geometry>
+        <box size="0.38 2.14 0.28" />
+        </geometry>
+      <material name="dark_roof">
+        <color rgba="0.19 0.17 0.16 1" />
+        </material>
+      </visual>
+    <visual name="front_face">
+      <origin xyz="1.16 0 0.48" rpy="0 0 0" />
+      <geometry>
+        <box size="0.22 2.05 0.7" />
+        </geometry>
+      <material name="dark_roof">
+        <color rgba="0.19 0.17 0.16 1" />
+        </material>
+      </visual>
+    <visual name="rear_face">
+      <origin xyz="-1.12 0 0.42" rpy="0 0 0" />
+      <geometry>
+        <box size="0.24 2.05 0.62" />
+        </geometry>
+      <material name="dark_roof">
+        <color rgba="0.19 0.17 0.16 1" />
+        </material>
+      </visual>
+    <visual name="turn_ring">
+      <origin xyz="0 0 0.1" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="1.34" length="0.2" />
+        </geometry>
+      <material name="weathered_wood">
+        <color rgba="0.47 0.34 0.24 1" />
+        </material>
+      </visual>
+    <visual name="front_bearing">
+      <origin xyz="1.42 0 0.63" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.26" length="0.46" />
+        </geometry>
+      <material name="weathered_wood">
+        <color rgba="0.47 0.34 0.24 1" />
+        </material>
+      </visual>
+    <visual name="bearing_cheeks">
+      <origin xyz="1.15 0 0.5" rpy="0 0 0" />
+      <geometry>
+        <box size="0.14 0.72 0.48" />
+        </geometry>
+      <material name="weathered_wood">
+        <color rgba="0.47 0.34 0.24 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="hub">
+    <inertial>
+      <origin xyz="0.16 0 0" rpy="0 0 0" />
+      <mass value="240" />
+      <inertia ixx="4161.6" ixy="0" ixz="0" iyy="2088" iyz="0" izz="2088" />
+      </inertial>
+    <visual name="rear_collar">
+      <origin xyz="0.08 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.2" length="0.16" />
+        </geometry>
+      <material name="iron">
+        <color rgba="0.32 0.31 0.33 1" />
+        </material>
+      </visual>
+    <visual name="hub_body">
+      <origin xyz="0.22 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.34" length="0.28" />
+        </geometry>
+      <material name="weathered_wood">
+        <color rgba="0.47 0.34 0.24 1" />
+        </material>
+      </visual>
+    <visual name="nose_cap">
+      <origin xyz="0.41 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.14" length="0.12" />
+        </geometry>
+      <material name="iron">
+        <color rgba="0.32 0.31 0.33 1" />
+        </material>
+      </visual>
+    <visual name="vertical_stock">
+      <origin xyz="0.22 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.18 0.22 3.1" />
+        </geometry>
+      <material name="weathered_wood">
+        <color rgba="0.47 0.34 0.24 1" />
+        </material>
+      </visual>
+    <visual name="horizontal_stock">
+      <origin xyz="0.22 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.18 3.1 0.22" />
+        </geometry>
+      <material name="weathered_wood">
+        <color rgba="0.47 0.34 0.24 1" />
+        </material>
+      </visual>
+    <visual name="blade_0_rail_left">
+      <origin xyz="0.22 -0.27 3.15" rpy="0 0 0" />
+      <geometry>
+        <box size="0.06 0.08 3.6" />
+        </geometry>
+      <material name="weathered_wood">
+        <color rgba="0.47 0.34 0.24 1" />
+        </material>
+      </visual>
+    <visual name="blade_0_rail_right">
+      <origin xyz="0.22 0.27 3.15" rpy="0 0 0" />
+      <geometry>
+        <box size="0.06 0.08 3.6" />
+        </geometry>
+      <material name="weathered_wood">
+        <color rgba="0.47 0.34 0.24 1" />
+        </material>
+      </visual>
+    <visual name="blade_0_root">
+      <origin xyz="0.22 0 1.4" rpy="0 0 0" />
+      <geometry>
+        <box size="0.08 0.62 0.18" />
+        </geometry>
+      <material name="weathered_wood">
+        <color rgba="0.47 0.34 0.24 1" />
+        </material>
+      </visual>
+    <visual name="blade_0_tip">
+      <origin xyz="0.22 0 4.96" rpy="0 0 0" />
+      <geometry>
+        <box size="0.06 0.62 0.16" />
+        </geometry>
+      <material name="weathered_wood">
+        <color rgba="0.47 0.34 0.24 1" />
+        </material>
+      </visual>
+    <visual name="blade_0_slat_0">
+      <origin xyz="0.22 0 1.78" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.62 0.05" />
+        </geometry>
+      <material name="weathered_wood">
+        <color rgba="0.47 0.34 0.24 1" />
+        </material>
+      </visual>
+    <visual name="blade_0_slat_1">
+      <origin xyz="0.22 0 2.18" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.62 0.05" />
+        </geometry>
+      <material name="weathered_wood">
+        <color rgba="0.47 0.34 0.24 1" />
+        </material>
+      </visual>
+    <visual name="blade_0_slat_2">
+      <origin xyz="0.22 0 2.58" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.62 0.05" />
+        </geometry>
+      <material name="weathered_wood">
+        <color rgba="0.47 0.34 0.24 1" />
+        </material>
+      </visual>
+    <visual name="blade_0_slat_3">
+      <origin xyz="0.22 0 2.98" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.62 0.05" />
+        </geometry>
+      <material name="weathered_wood">
+        <color rgba="0.47 0.34 0.24 1" />
+        </material>
+      </visual>
+    <visual name="blade_0_slat_4">
+      <origin xyz="0.22 0 3.38" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.62 0.05" />
+        </geometry>
+      <material name="weathered_wood">
+        <color rgba="0.47 0.34 0.24 1" />
+        </material>
+      </visual>
+    <visual name="blade_0_slat_5">
+      <origin xyz="0.22 0 3.78" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.62 0.05" />
+        </geometry>
+      <material name="weathered_wood">
+        <color rgba="0.47 0.34 0.24 1" />
+        </material>
+      </visual>
+    <visual name="blade_0_slat_6">
+      <origin xyz="0.22 0 4.18" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.62 0.05" />
+        </geometry>
+      <material name="weathered_wood">
+        <color rgba="0.47 0.34 0.24 1" />
+        </material>
+      </visual>
+    <visual name="blade_0_slat_7">
+      <origin xyz="0.22 0 4.58" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.62 0.05" />
+        </geometry>
+      <material name="weathered_wood">
+        <color rgba="0.47 0.34 0.24 1" />
+        </material>
+      </visual>
+    <visual name="blade_0_shutter_0">
+      <origin xyz="0.22 0 2" rpy="0 0 0" />
+      <geometry>
+        <box size="0.015 0.56 0.3" />
+        </geometry>
+      <material name="aged_canvas">
+        <color rgba="0.82 0.78 0.67 1" />
+        </material>
+      </visual>
+    <visual name="blade_0_shutter_1">
+      <origin xyz="0.22 0 2.8" rpy="0 0 0" />
+      <geometry>
+        <box size="0.015 0.56 0.3" />
+        </geometry>
+      <material name="aged_canvas">
+        <color rgba="0.82 0.78 0.67 1" />
+        </material>
+      </visual>
+    <visual name="blade_0_shutter_2">
+      <origin xyz="0.22 0 3.6" rpy="0 0 0" />
+      <geometry>
+        <box size="0.015 0.56 0.3" />
+        </geometry>
+      <material name="aged_canvas">
+        <color rgba="0.82 0.78 0.67 1" />
+        </material>
+      </visual>
+    <visual name="blade_0_shutter_3">
+      <origin xyz="0.22 0 4.4" rpy="0 0 0" />
+      <geometry>
+        <box size="0.015 0.56 0.3" />
+        </geometry>
+      <material name="aged_canvas">
+        <color rgba="0.82 0.78 0.67 1" />
+        </material>
+      </visual>
+    <visual name="blade_1_rail_left">
+      <origin xyz="0.22 -3.15 -0.27" rpy="1.5708 0 0" />
+      <geometry>
+        <box size="0.06 0.08 3.6" />
+        </geometry>
+      <material name="weathered_wood">
+        <color rgba="0.47 0.34 0.24 1" />
+        </material>
+      </visual>
+    <visual name="blade_1_rail_right">
+      <origin xyz="0.22 -3.15 0.27" rpy="1.5708 0 0" />
+      <geometry>
+        <box size="0.06 0.08 3.6" />
+        </geometry>
+      <material name="weathered_wood">
+        <color rgba="0.47 0.34 0.24 1" />
+        </material>
+      </visual>
+    <visual name="blade_1_root">
+      <origin xyz="0.22 -1.4 8.57253e-17" rpy="1.5708 0 0" />
+      <geometry>
+        <box size="0.08 0.62 0.18" />
+        </geometry>
+      <material name="weathered_wood">
+        <color rgba="0.47 0.34 0.24 1" />
+        </material>
+      </visual>
+    <visual name="blade_1_tip">
+      <origin xyz="0.22 -4.96 3.03712e-16" rpy="1.5708 0 0" />
+      <geometry>
+        <box size="0.06 0.62 0.16" />
+        </geometry>
+      <material name="weathered_wood">
+        <color rgba="0.47 0.34 0.24 1" />
+        </material>
+      </visual>
+    <visual name="blade_1_slat_0">
+      <origin xyz="0.22 -1.78 1.08994e-16" rpy="1.5708 0 0" />
+      <geometry>
+        <box size="0.03 0.62 0.05" />
+        </geometry>
+      <material name="weathered_wood">
+        <color rgba="0.47 0.34 0.24 1" />
+        </material>
+      </visual>
+    <visual name="blade_1_slat_1">
+      <origin xyz="0.22 -2.18 1.33487e-16" rpy="1.5708 0 0" />
+      <geometry>
+        <box size="0.03 0.62 0.05" />
+        </geometry>
+      <material name="weathered_wood">
+        <color rgba="0.47 0.34 0.24 1" />
+        </material>
+      </visual>
+    <visual name="blade_1_slat_2">
+      <origin xyz="0.22 -2.58 1.57979e-16" rpy="1.5708 0 0" />
+      <geometry>
+        <box size="0.03 0.62 0.05" />
+        </geometry>
+      <material name="weathered_wood">
+        <color rgba="0.47 0.34 0.24 1" />
+        </material>
+      </visual>
+    <visual name="blade_1_slat_3">
+      <origin xyz="0.22 -2.98 1.82472e-16" rpy="1.5708 0 0" />
+      <geometry>
+        <box size="0.03 0.62 0.05" />
+        </geometry>
+      <material name="weathered_wood">
+        <color rgba="0.47 0.34 0.24 1" />
+        </material>
+      </visual>
+    <visual name="blade_1_slat_4">
+      <origin xyz="0.22 -3.38 2.06965e-16" rpy="1.5708 0 0" />
+      <geometry>
+        <box size="0.03 0.62 0.05" />
+        </geometry>
+      <material name="weathered_wood">
+        <color rgba="0.47 0.34 0.24 1" />
+        </material>
+      </visual>
+    <visual name="blade_1_slat_5">
+      <origin xyz="0.22 -3.78 2.31458e-16" rpy="1.5708 0 0" />
+      <geometry>
+        <box size="0.03 0.62 0.05" />
+        </geometry>
+      <material name="weathered_wood">
+        <color rgba="0.47 0.34 0.24 1" />
+        </material>
+      </visual>
+    <visual name="blade_1_slat_6">
+      <origin xyz="0.22 -4.18 2.55951e-16" rpy="1.5708 0 0" />
+      <geometry>
+        <box size="0.03 0.62 0.05" />
+        </geometry>
+      <material name="weathered_wood">
+        <color rgba="0.47 0.34 0.24 1" />
+        </material>
+      </visual>
+    <visual name="blade_1_slat_7">
+      <origin xyz="0.22 -4.58 2.80444e-16" rpy="1.5708 0 0" />
+      <geometry>
+        <box size="0.03 0.62 0.05" />
+        </geometry>
+      <material name="weathered_wood">
+        <color rgba="0.47 0.34 0.24 1" />
+        </material>
+      </visual>
+    <visual name="blade_1_shutter_0">
+      <origin xyz="0.22 -2 1.22465e-16" rpy="1.5708 0 0" />
+      <geometry>
+        <box size="0.015 0.56 0.3" />
+        </geometry>
+      <material name="aged_canvas">
+        <color rgba="0.82 0.78 0.67 1" />
+        </material>
+      </visual>
+    <visual name="blade_1_shutter_1">
+      <origin xyz="0.22 -2.8 1.71451e-16" rpy="1.5708 0 0" />
+      <geometry>
+        <box size="0.015 0.56 0.3" />
+        </geometry>
+      <material name="aged_canvas">
+        <color rgba="0.82 0.78 0.67 1" />
+        </material>
+      </visual>
+    <visual name="blade_1_shutter_2">
+      <origin xyz="0.22 -3.6 2.20436e-16" rpy="1.5708 0 0" />
+      <geometry>
+        <box size="0.015 0.56 0.3" />
+        </geometry>
+      <material name="aged_canvas">
+        <color rgba="0.82 0.78 0.67 1" />
+        </material>
+      </visual>
+    <visual name="blade_1_shutter_3">
+      <origin xyz="0.22 -4.4 2.69422e-16" rpy="1.5708 0 0" />
+      <geometry>
+        <box size="0.015 0.56 0.3" />
+        </geometry>
+      <material name="aged_canvas">
+        <color rgba="0.82 0.78 0.67 1" />
+        </material>
+      </visual>
+    <visual name="blade_2_rail_left">
+      <origin xyz="0.22 0.27 -3.15" rpy="3.14159 0 0" />
+      <geometry>
+        <box size="0.06 0.08 3.6" />
+        </geometry>
+      <material name="weathered_wood">
+        <color rgba="0.47 0.34 0.24 1" />
+        </material>
+      </visual>
+    <visual name="blade_2_rail_right">
+      <origin xyz="0.22 -0.27 -3.15" rpy="3.14159 0 0" />
+      <geometry>
+        <box size="0.06 0.08 3.6" />
+        </geometry>
+      <material name="weathered_wood">
+        <color rgba="0.47 0.34 0.24 1" />
+        </material>
+      </visual>
+    <visual name="blade_2_root">
+      <origin xyz="0.22 -1.71451e-16 -1.4" rpy="3.14159 0 0" />
+      <geometry>
+        <box size="0.08 0.62 0.18" />
+        </geometry>
+      <material name="weathered_wood">
+        <color rgba="0.47 0.34 0.24 1" />
+        </material>
+      </visual>
+    <visual name="blade_2_tip">
+      <origin xyz="0.22 -6.07425e-16 -4.96" rpy="3.14159 0 0" />
+      <geometry>
+        <box size="0.06 0.62 0.16" />
+        </geometry>
+      <material name="weathered_wood">
+        <color rgba="0.47 0.34 0.24 1" />
+        </material>
+      </visual>
+    <visual name="blade_2_slat_0">
+      <origin xyz="0.22 -2.17987e-16 -1.78" rpy="3.14159 0 0" />
+      <geometry>
+        <box size="0.03 0.62 0.05" />
+        </geometry>
+      <material name="weathered_wood">
+        <color rgba="0.47 0.34 0.24 1" />
+        </material>
+      </visual>
+    <visual name="blade_2_slat_1">
+      <origin xyz="0.22 -2.66973e-16 -2.18" rpy="3.14159 0 0" />
+      <geometry>
+        <box size="0.03 0.62 0.05" />
+        </geometry>
+      <material name="weathered_wood">
+        <color rgba="0.47 0.34 0.24 1" />
+        </material>
+      </visual>
+    <visual name="blade_2_slat_2">
+      <origin xyz="0.22 -3.15959e-16 -2.58" rpy="3.14159 0 0" />
+      <geometry>
+        <box size="0.03 0.62 0.05" />
+        </geometry>
+      <material name="weathered_wood">
+        <color rgba="0.47 0.34 0.24 1" />
+        </material>
+      </visual>
+    <visual name="blade_2_slat_3">
+      <origin xyz="0.22 -3.64945e-16 -2.98" rpy="3.14159 0 0" />
+      <geometry>
+        <box size="0.03 0.62 0.05" />
+        </geometry>
+      <material name="weathered_wood">
+        <color rgba="0.47 0.34 0.24 1" />
+        </material>
+      </visual>
+    <visual name="blade_2_slat_4">
+      <origin xyz="0.22 -4.13931e-16 -3.38" rpy="3.14159 0 0" />
+      <geometry>
+        <box size="0.03 0.62 0.05" />
+        </geometry>
+      <material name="weathered_wood">
+        <color rgba="0.47 0.34 0.24 1" />
+        </material>
+      </visual>
+    <visual name="blade_2_slat_5">
+      <origin xyz="0.22 -4.62916e-16 -3.78" rpy="3.14159 0 0" />
+      <geometry>
+        <box size="0.03 0.62 0.05" />
+        </geometry>
+      <material name="weathered_wood">
+        <color rgba="0.47 0.34 0.24 1" />
+        </material>
+      </visual>
+    <visual name="blade_2_slat_6">
+      <origin xyz="0.22 -5.11902e-16 -4.18" rpy="3.14159 0 0" />
+      <geometry>
+        <box size="0.03 0.62 0.05" />
+        </geometry>
+      <material name="weathered_wood">
+        <color rgba="0.47 0.34 0.24 1" />
+        </material>
+      </visual>
+    <visual name="blade_2_slat_7">
+      <origin xyz="0.22 -5.60888e-16 -4.58" rpy="3.14159 0 0" />
+      <geometry>
+        <box size="0.03 0.62 0.05" />
+        </geometry>
+      <material name="weathered_wood">
+        <color rgba="0.47 0.34 0.24 1" />
+        </material>
+      </visual>
+    <visual name="blade_2_shutter_0">
+      <origin xyz="0.22 -2.44929e-16 -2" rpy="3.14159 0 0" />
+      <geometry>
+        <box size="0.015 0.56 0.3" />
+        </geometry>
+      <material name="aged_canvas">
+        <color rgba="0.82 0.78 0.67 1" />
+        </material>
+      </visual>
+    <visual name="blade_2_shutter_1">
+      <origin xyz="0.22 -3.42901e-16 -2.8" rpy="3.14159 0 0" />
+      <geometry>
+        <box size="0.015 0.56 0.3" />
+        </geometry>
+      <material name="aged_canvas">
+        <color rgba="0.82 0.78 0.67 1" />
+        </material>
+      </visual>
+    <visual name="blade_2_shutter_2">
+      <origin xyz="0.22 -4.40873e-16 -3.6" rpy="3.14159 0 0" />
+      <geometry>
+        <box size="0.015 0.56 0.3" />
+        </geometry>
+      <material name="aged_canvas">
+        <color rgba="0.82 0.78 0.67 1" />
+        </material>
+      </visual>
+    <visual name="blade_2_shutter_3">
+      <origin xyz="0.22 -5.38845e-16 -4.4" rpy="3.14159 0 0" />
+      <geometry>
+        <box size="0.015 0.56 0.3" />
+        </geometry>
+      <material name="aged_canvas">
+        <color rgba="0.82 0.78 0.67 1" />
+        </material>
+      </visual>
+    <visual name="blade_3_rail_left">
+      <origin xyz="0.22 3.15 0.27" rpy="4.71239 0 0" />
+      <geometry>
+        <box size="0.06 0.08 3.6" />
+        </geometry>
+      <material name="weathered_wood">
+        <color rgba="0.47 0.34 0.24 1" />
+        </material>
+      </visual>
+    <visual name="blade_3_rail_right">
+      <origin xyz="0.22 3.15 -0.27" rpy="4.71239 0 0" />
+      <geometry>
+        <box size="0.06 0.08 3.6" />
+        </geometry>
+      <material name="weathered_wood">
+        <color rgba="0.47 0.34 0.24 1" />
+        </material>
+      </visual>
+    <visual name="blade_3_root">
+      <origin xyz="0.22 1.4 -2.57176e-16" rpy="4.71239 0 0" />
+      <geometry>
+        <box size="0.08 0.62 0.18" />
+        </geometry>
+      <material name="weathered_wood">
+        <color rgba="0.47 0.34 0.24 1" />
+        </material>
+      </visual>
+    <visual name="blade_3_tip">
+      <origin xyz="0.22 4.96 -9.11137e-16" rpy="4.71239 0 0" />
+      <geometry>
+        <box size="0.06 0.62 0.16" />
+        </geometry>
+      <material name="weathered_wood">
+        <color rgba="0.47 0.34 0.24 1" />
+        </material>
+      </visual>
+    <visual name="blade_3_slat_0">
+      <origin xyz="0.22 1.78 -3.26981e-16" rpy="4.71239 0 0" />
+      <geometry>
+        <box size="0.03 0.62 0.05" />
+        </geometry>
+      <material name="weathered_wood">
+        <color rgba="0.47 0.34 0.24 1" />
+        </material>
+      </visual>
+    <visual name="blade_3_slat_1">
+      <origin xyz="0.22 2.18 -4.0046e-16" rpy="4.71239 0 0" />
+      <geometry>
+        <box size="0.03 0.62 0.05" />
+        </geometry>
+      <material name="weathered_wood">
+        <color rgba="0.47 0.34 0.24 1" />
+        </material>
+      </visual>
+    <visual name="blade_3_slat_2">
+      <origin xyz="0.22 2.58 -4.73938e-16" rpy="4.71239 0 0" />
+      <geometry>
+        <box size="0.03 0.62 0.05" />
+        </geometry>
+      <material name="weathered_wood">
+        <color rgba="0.47 0.34 0.24 1" />
+        </material>
+      </visual>
+    <visual name="blade_3_slat_3">
+      <origin xyz="0.22 2.98 -5.47417e-16" rpy="4.71239 0 0" />
+      <geometry>
+        <box size="0.03 0.62 0.05" />
+        </geometry>
+      <material name="weathered_wood">
+        <color rgba="0.47 0.34 0.24 1" />
+        </material>
+      </visual>
+    <visual name="blade_3_slat_4">
+      <origin xyz="0.22 3.38 -6.20896e-16" rpy="4.71239 0 0" />
+      <geometry>
+        <box size="0.03 0.62 0.05" />
+        </geometry>
+      <material name="weathered_wood">
+        <color rgba="0.47 0.34 0.24 1" />
+        </material>
+      </visual>
+    <visual name="blade_3_slat_5">
+      <origin xyz="0.22 3.78 -6.94375e-16" rpy="4.71239 0 0" />
+      <geometry>
+        <box size="0.03 0.62 0.05" />
+        </geometry>
+      <material name="weathered_wood">
+        <color rgba="0.47 0.34 0.24 1" />
+        </material>
+      </visual>
+    <visual name="blade_3_slat_6">
+      <origin xyz="0.22 4.18 -7.67854e-16" rpy="4.71239 0 0" />
+      <geometry>
+        <box size="0.03 0.62 0.05" />
+        </geometry>
+      <material name="weathered_wood">
+        <color rgba="0.47 0.34 0.24 1" />
+        </material>
+      </visual>
+    <visual name="blade_3_slat_7">
+      <origin xyz="0.22 4.58 -8.41332e-16" rpy="4.71239 0 0" />
+      <geometry>
+        <box size="0.03 0.62 0.05" />
+        </geometry>
+      <material name="weathered_wood">
+        <color rgba="0.47 0.34 0.24 1" />
+        </material>
+      </visual>
+    <visual name="blade_3_shutter_0">
+      <origin xyz="0.22 2 -3.67394e-16" rpy="4.71239 0 0" />
+      <geometry>
+        <box size="0.015 0.56 0.3" />
+        </geometry>
+      <material name="aged_canvas">
+        <color rgba="0.82 0.78 0.67 1" />
+        </material>
+      </visual>
+    <visual name="blade_3_shutter_1">
+      <origin xyz="0.22 2.8 -5.14352e-16" rpy="4.71239 0 0" />
+      <geometry>
+        <box size="0.015 0.56 0.3" />
+        </geometry>
+      <material name="aged_canvas">
+        <color rgba="0.82 0.78 0.67 1" />
+        </material>
+      </visual>
+    <visual name="blade_3_shutter_2">
+      <origin xyz="0.22 3.6 -6.61309e-16" rpy="4.71239 0 0" />
+      <geometry>
+        <box size="0.015 0.56 0.3" />
+        </geometry>
+      <material name="aged_canvas">
+        <color rgba="0.82 0.78 0.67 1" />
+        </material>
+      </visual>
+    <visual name="blade_3_shutter_3">
+      <origin xyz="0.22 4.4 -8.08267e-16" rpy="4.71239 0 0" />
+      <geometry>
+        <box size="0.015 0.56 0.3" />
+        </geometry>
+      <material name="aged_canvas">
+        <color rgba="0.82 0.78 0.67 1" />
+        </material>
+      </visual>
+    </link>
+  <joint name="tower_to_cap" type="continuous">
+    <origin xyz="0 0 8.4" rpy="0 0 0" />
+    <parent link="tower" />
+    <child link="cap" />
+    <axis xyz="0 0 1" />
+    <limit effort="120" velocity="0.3" />
+    </joint>
+  <joint name="cap_to_hub" type="continuous">
+    <origin xyz="1.65 0 0.63" rpy="0 0 0" />
+    <parent link="cap" />
+    <child link="hub" />
+    <axis xyz="1 0 0" />
+    <limit effort="80" velocity="1.5" />
+    </joint>
+  </robot>

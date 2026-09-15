@@ -1,0 +1,81 @@
+<robot name="traditional_windmill">
+  <material name="stone">
+    <color rgba="0.74 0.7 0.62 1" />
+    </material>
+  <material name="roof_red">
+    <color rgba="0.46 0.18 0.12 1" />
+    </material>
+  <material name="iron">
+    <color rgba="0.18 0.19 0.21 1" />
+    </material>
+  <material name="sail_wood">
+    <color rgba="0.84 0.82 0.74 1" />
+    </material>
+  <link name="tower">
+    <inertial>
+      <origin xyz="0 0 1.47" rpy="0 0 0" />
+      <mass value="1800" />
+      <inertia ixx="2377.66" ixy="0" ixz="0" iyy="2377.66" iyz="0" izz="2162.25" />
+      </inertial>
+    <visual name="tower_body">
+      <geometry>
+        <mesh filename="assets/meshes/tower_body.obj" />
+        </geometry>
+      <material name="stone">
+        <color rgba="0.74 0.7 0.62 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="cap">
+    <inertial>
+      <origin xyz="0.22 0 0.42" rpy="0 0 0" />
+      <mass value="120" />
+      <inertia ixx="30.05" ixy="0" ixz="0" iyy="33.05" iyz="0" izz="45.05" />
+      </inertial>
+    <visual name="cap_shell">
+      <geometry>
+        <mesh filename="assets/meshes/cap_shell.obj" />
+        </geometry>
+      <material name="roof_red">
+        <color rgba="0.46 0.18 0.12 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="hub">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 1.5708 0" />
+      <mass value="220" />
+      <inertia ixx="585.845" ixy="0" ixz="0" iyy="585.845" iyz="0" izz="180.224" />
+      </inertial>
+    <visual name="hub_metal">
+      <geometry>
+        <mesh filename="assets/meshes/hub_metal.obj" />
+        </geometry>
+      <material name="iron">
+        <color rgba="0.18 0.19 0.21 1" />
+        </material>
+      </visual>
+    <visual name="sail_lattice">
+      <geometry>
+        <mesh filename="assets/meshes/sail_lattice.obj" />
+        </geometry>
+      <material name="sail_wood">
+        <color rgba="0.84 0.82 0.74 1" />
+        </material>
+      </visual>
+    </link>
+  <joint name="tower_to_cap" type="continuous">
+    <origin xyz="0 0 2.88" rpy="0 0 0" />
+    <parent link="tower" />
+    <child link="cap" />
+    <axis xyz="0 0 1" />
+    <limit effort="350" velocity="0.8" />
+    </joint>
+  <joint name="cap_to_hub" type="continuous">
+    <origin xyz="1.82 0 0.43" rpy="0 0 0" />
+    <parent link="cap" />
+    <child link="hub" />
+    <axis xyz="1 0 0" />
+    <limit effort="120" velocity="2.5" />
+    </joint>
+  </robot>

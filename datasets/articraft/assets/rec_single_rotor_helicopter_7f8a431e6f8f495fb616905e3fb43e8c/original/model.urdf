@@ -1,0 +1,483 @@
+<robot name="utility_helicopter">
+  <material name="body_paint">
+    <color rgba="0.34 0.4 0.28 1" />
+    </material>
+  <material name="glass_tint">
+    <color rgba="0.55 0.73 0.82 0.34" />
+    </material>
+  <material name="dark_metal">
+    <color rgba="0.16 0.17 0.18 1" />
+    </material>
+  <material name="skid_metal">
+    <color rgba="0.67 0.69 0.72 1" />
+    </material>
+  <material name="rotor_black">
+    <color rgba="0.1 0.1 0.11 1" />
+    </material>
+  <material name="hub_gray">
+    <color rgba="0.42 0.44 0.46 1" />
+    </material>
+  <material name="accent_red">
+    <color rgba="0.75 0.12 0.1 1" />
+    </material>
+  <link name="airframe">
+    <inertial>
+      <origin xyz="-2 0 0.85" rpy="0 0 0" />
+      <mass value="980" />
+      <inertia ixx="1571.27" ixy="0" ixz="0" iyy="6226.27" iyz="0" izz="6327.53" />
+      </inertial>
+    <visual name="fuselage_shell">
+      <geometry>
+        <mesh filename="assets/meshes/fuselage_shell.obj" />
+        </geometry>
+      <material name="body_paint">
+        <color rgba="0.34 0.4 0.28 1" />
+        </material>
+      </visual>
+    <visual name="canopy_glazing">
+      <geometry>
+        <mesh filename="assets/meshes/canopy_glazing.obj" />
+        </geometry>
+      <material name="glass_tint">
+        <color rgba="0.55 0.73 0.82 0.34" />
+        </material>
+      </visual>
+    <visual name="belly_fairing">
+      <origin xyz="-0.18 0 0.42" rpy="0 0 0" />
+      <geometry>
+        <box size="2.5 0.98 0.38" />
+        </geometry>
+      <material name="body_paint">
+        <color rgba="0.34 0.4 0.28 1" />
+        </material>
+      </visual>
+    <visual name="nose_chin">
+      <origin xyz="1.04 0 0.46" rpy="0 0 0" />
+      <geometry>
+        <box size="0.72 0.84 0.34" />
+        </geometry>
+      <material name="body_paint">
+        <color rgba="0.34 0.4 0.28 1" />
+        </material>
+      </visual>
+    <visual name="engine_housing">
+      <origin xyz="-0.36 0 1.67" rpy="0 0 0" />
+      <geometry>
+        <box size="1.18 0.82 0.26" />
+        </geometry>
+      <material name="body_paint">
+        <color rgba="0.34 0.4 0.28 1" />
+        </material>
+      </visual>
+    <visual name="mast_saddle">
+      <origin xyz="0.02 0 1.91" rpy="0 0 0" />
+      <geometry>
+        <box size="0.58 0.38 0.18" />
+        </geometry>
+      <material name="dark_metal">
+        <color rgba="0.16 0.17 0.18 1" />
+        </material>
+      </visual>
+    <visual name="mast_pylon">
+      <origin xyz="0 0 2.07" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.13" length="0.16" />
+        </geometry>
+      <material name="dark_metal">
+        <color rgba="0.16 0.17 0.18 1" />
+        </material>
+      </visual>
+    <visual name="service_deck">
+      <origin xyz="-0.55 0 1.83" rpy="0 0 0" />
+      <geometry>
+        <box size="0.58 0.56 0.06" />
+        </geometry>
+      <material name="dark_metal">
+        <color rgba="0.16 0.17 0.18 1" />
+        </material>
+      </visual>
+    <visual name="baggage_frame">
+      <origin xyz="-0.95 0.775 0.96" rpy="0 0 0" />
+      <geometry>
+        <box size="0.78 0.06 0.72" />
+        </geometry>
+      <material name="dark_metal">
+        <color rgba="0.16 0.17 0.18 1" />
+        </material>
+      </visual>
+    <visual name="baggage_backer">
+      <origin xyz="-0.95 0.69 0.96" rpy="0 0 0" />
+      <geometry>
+        <box size="0.78 0.16 0.72" />
+        </geometry>
+      <material name="dark_metal">
+        <color rgba="0.16 0.17 0.18 1" />
+        </material>
+      </visual>
+    <visual name="frame_hinge_00">
+      <origin xyz="-0.58 0.795 0.72" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.09" />
+        </geometry>
+      <material name="hub_gray">
+        <color rgba="0.42 0.44 0.46 1" />
+        </material>
+      </visual>
+    <visual name="frame_hinge_24">
+      <origin xyz="-0.58 0.795 0.96" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.09" />
+        </geometry>
+      <material name="hub_gray">
+        <color rgba="0.42 0.44 0.46 1" />
+        </material>
+      </visual>
+    <visual name="frame_hinge_48">
+      <origin xyz="-0.58 0.795 1.2" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.09" />
+        </geometry>
+      <material name="hub_gray">
+        <color rgba="0.42 0.44 0.46 1" />
+        </material>
+      </visual>
+    <visual name="tail_boom">
+      <geometry>
+        <mesh filename="assets/meshes/tail_boom.obj" />
+        </geometry>
+      <material name="body_paint">
+        <color rgba="0.34 0.4 0.28 1" />
+        </material>
+      </visual>
+    <visual name="vertical_fin">
+      <origin xyz="-5.58 0 1.64" rpy="0 0 0" />
+      <geometry>
+        <box size="0.6 0.08 0.76" />
+        </geometry>
+      <material name="body_paint">
+        <color rgba="0.34 0.4 0.28 1" />
+        </material>
+      </visual>
+    <visual name="tail_root_fairing">
+      <origin xyz="-5.1 0 1.31" rpy="0 0 0" />
+      <geometry>
+        <box size="0.34 0.22 0.22" />
+        </geometry>
+      <material name="body_paint">
+        <color rgba="0.34 0.4 0.28 1" />
+        </material>
+      </visual>
+    <visual name="tailplane">
+      <origin xyz="-4.78 0 1.07" rpy="0 0 0" />
+      <geometry>
+        <box size="0.72 1.18 0.05" />
+        </geometry>
+      <material name="body_paint">
+        <color rgba="0.34 0.4 0.28 1" />
+        </material>
+      </visual>
+    <visual name="tail_pylon">
+      <origin xyz="-6.295 0 1.32" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.06" length="0.75" />
+        </geometry>
+      <material name="dark_metal">
+        <color rgba="0.16 0.17 0.18 1" />
+        </material>
+      </visual>
+    <visual name="tail_gearbox">
+      <origin xyz="-6.61 0.06 1.32" rpy="0 0 0" />
+      <geometry>
+        <box size="0.12 0.12 0.16" />
+        </geometry>
+      <material name="dark_metal">
+        <color rgba="0.16 0.17 0.18 1" />
+        </material>
+      </visual>
+    <visual name="left_skid">
+      <geometry>
+        <mesh filename="assets/meshes/left_skid.obj" />
+        </geometry>
+      <material name="skid_metal">
+        <color rgba="0.67 0.69 0.72 1" />
+        </material>
+      </visual>
+    <visual name="right_skid">
+      <geometry>
+        <mesh filename="assets/meshes/right_skid.obj" />
+        </geometry>
+      <material name="skid_metal">
+        <color rgba="0.67 0.69 0.72 1" />
+        </material>
+      </visual>
+    <visual name="front_cross_tube">
+      <geometry>
+        <mesh filename="assets/meshes/front_cross_tube.obj" />
+        </geometry>
+      <material name="skid_metal">
+        <color rgba="0.67 0.69 0.72 1" />
+        </material>
+      </visual>
+    <visual name="rear_cross_tube">
+      <geometry>
+        <mesh filename="assets/meshes/rear_cross_tube.obj" />
+        </geometry>
+      <material name="skid_metal">
+        <color rgba="0.67 0.69 0.72 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="baggage_door">
+    <inertial>
+      <origin xyz="-0.39 0.015 0" rpy="0 0 0" />
+      <mass value="18" />
+      <inertia ixx="0.8268" ixy="0" ixz="0" iyy="1.734" iyz="0" izz="0.918" />
+      </inertial>
+    <visual name="door_panel">
+      <origin xyz="-0.38 0.015 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.76 0.03 0.7" />
+        </geometry>
+      <material name="body_paint">
+        <color rgba="0.34 0.4 0.28 1" />
+        </material>
+      </visual>
+    <visual name="door_hinge_00">
+      <origin xyz="-0.01 0.012 -0.24" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.09" />
+        </geometry>
+      <material name="hub_gray">
+        <color rgba="0.42 0.44 0.46 1" />
+        </material>
+      </visual>
+    <visual name="door_hinge_24">
+      <origin xyz="-0.01 0.012 0" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.09" />
+        </geometry>
+      <material name="hub_gray">
+        <color rgba="0.42 0.44 0.46 1" />
+        </material>
+      </visual>
+    <visual name="door_hinge_48">
+      <origin xyz="-0.01 0.012 0.24" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.09" />
+        </geometry>
+      <material name="hub_gray">
+        <color rgba="0.42 0.44 0.46 1" />
+        </material>
+      </visual>
+    <visual name="door_handle">
+      <origin xyz="-0.58 0.04 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.07 0.06 0.02" />
+        </geometry>
+      <material name="accent_red">
+        <color rgba="0.75 0.12 0.1 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="service_hatch">
+    <inertial>
+      <origin xyz="-0.29 0 0.015" rpy="0 0 0" />
+      <mass value="7.5" />
+      <inertia ixx="0.2125" ixy="0" ixz="0" iyy="0.2125" iyz="0" izz="0.4205" />
+      </inertial>
+    <visual name="hatch_panel">
+      <origin xyz="-0.28 0 0.015" rpy="0 0 0" />
+      <geometry>
+        <box size="0.56 0.54 0.03" />
+        </geometry>
+      <material name="body_paint">
+        <color rgba="0.34 0.4 0.28 1" />
+        </material>
+      </visual>
+    <visual name="hatch_handle">
+      <origin xyz="-0.44 0 0.038" rpy="0 0 0" />
+      <geometry>
+        <box size="0.1 0.1 0.025" />
+        </geometry>
+      <material name="accent_red">
+        <color rgba="0.75 0.12 0.1 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="main_rotor">
+    <inertial>
+      <origin xyz="0 0 0.06" rpy="0 0 0" />
+      <mass value="55" />
+      <inertia ixx="0.562833" ixy="0" ixz="0" iyy="0.562833" iyz="0" izz="0.891" />
+      </inertial>
+    <visual name="main_hub">
+      <origin xyz="0 0 0.06" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.16" length="0.1" />
+        </geometry>
+      <material name="hub_gray">
+        <color rgba="0.42 0.44 0.46 1" />
+        </material>
+      </visual>
+    <visual name="mast_cap">
+      <origin xyz="0 0 0.14" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.055" length="0.12" />
+        </geometry>
+      <material name="hub_gray">
+        <color rgba="0.42 0.44 0.46 1" />
+        </material>
+      </visual>
+    <visual name="x_pos_blade_root">
+      <origin xyz="1.05 0 0.09" rpy="0 0 0" />
+      <geometry>
+        <box size="2.1 0.22 0.05" />
+        </geometry>
+      <material name="rotor_black">
+        <color rgba="0.1 0.1 0.11 1" />
+        </material>
+      </visual>
+    <visual name="x_pos_blade_tip">
+      <origin xyz="3.42 0 0.08" rpy="0 0 0" />
+      <geometry>
+        <box size="2.65 0.16 0.035" />
+        </geometry>
+      <material name="rotor_black">
+        <color rgba="0.1 0.1 0.11 1" />
+        </material>
+      </visual>
+    <visual name="x_neg_blade_root">
+      <origin xyz="-1.05 0 0.09" rpy="0 0 0" />
+      <geometry>
+        <box size="2.1 0.22 0.05" />
+        </geometry>
+      <material name="rotor_black">
+        <color rgba="0.1 0.1 0.11 1" />
+        </material>
+      </visual>
+    <visual name="x_neg_blade_tip">
+      <origin xyz="-3.42 0 0.08" rpy="0 0 0" />
+      <geometry>
+        <box size="2.65 0.16 0.035" />
+        </geometry>
+      <material name="rotor_black">
+        <color rgba="0.1 0.1 0.11 1" />
+        </material>
+      </visual>
+    <visual name="y_pos_blade_root">
+      <origin xyz="0 1.05 0.09" rpy="0 0 1.5708" />
+      <geometry>
+        <box size="2.1 0.22 0.05" />
+        </geometry>
+      <material name="rotor_black">
+        <color rgba="0.1 0.1 0.11 1" />
+        </material>
+      </visual>
+    <visual name="y_pos_blade_tip">
+      <origin xyz="0 3.42 0.08" rpy="0 0 1.5708" />
+      <geometry>
+        <box size="2.65 0.16 0.035" />
+        </geometry>
+      <material name="rotor_black">
+        <color rgba="0.1 0.1 0.11 1" />
+        </material>
+      </visual>
+    <visual name="y_neg_blade_root">
+      <origin xyz="0 -1.05 0.09" rpy="0 0 1.5708" />
+      <geometry>
+        <box size="2.1 0.22 0.05" />
+        </geometry>
+      <material name="rotor_black">
+        <color rgba="0.1 0.1 0.11 1" />
+        </material>
+      </visual>
+    <visual name="y_neg_blade_tip">
+      <origin xyz="0 -3.42 0.08" rpy="0 0 1.5708" />
+      <geometry>
+        <box size="2.65 0.16 0.035" />
+        </geometry>
+      <material name="rotor_black">
+        <color rgba="0.1 0.1 0.11 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="tail_rotor">
+    <inertial>
+      <mass value="9" />
+      <inertia ixx="0.6456" ixy="0" ixz="0" iyy="1.2696" iyz="0" izz="0.6456" />
+      </inertial>
+    <visual name="tail_hub">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.06" length="0.1" />
+        </geometry>
+      <material name="hub_gray">
+        <color rgba="0.42 0.44 0.46 1" />
+        </material>
+      </visual>
+    <visual name="tail_blade_x_pos">
+      <origin xyz="0.39 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.78 0.05 0.12" />
+        </geometry>
+      <material name="rotor_black">
+        <color rgba="0.1 0.1 0.11 1" />
+        </material>
+      </visual>
+    <visual name="tail_blade_x_neg">
+      <origin xyz="-0.39 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.78 0.05 0.12" />
+        </geometry>
+      <material name="rotor_black">
+        <color rgba="0.1 0.1 0.11 1" />
+        </material>
+      </visual>
+    <visual name="tail_blade_z_pos">
+      <origin xyz="0 0 0.39" rpy="0 0 0" />
+      <geometry>
+        <box size="0.12 0.05 0.78" />
+        </geometry>
+      <material name="rotor_black">
+        <color rgba="0.1 0.1 0.11 1" />
+        </material>
+      </visual>
+    <visual name="tail_blade_z_neg">
+      <origin xyz="0 0 -0.39" rpy="0 0 0" />
+      <geometry>
+        <box size="0.12 0.05 0.78" />
+        </geometry>
+      <material name="rotor_black">
+        <color rgba="0.1 0.1 0.11 1" />
+        </material>
+      </visual>
+    </link>
+  <joint name="airframe_to_baggage_door" type="revolute">
+    <origin xyz="-0.57 0.807 0.96" rpy="0 0 0" />
+    <parent link="airframe" />
+    <child link="baggage_door" />
+    <axis xyz="0 0 -1" />
+    <limit effort="35" velocity="1.6" lower="0" upper="1.6057" />
+    </joint>
+  <joint name="airframe_to_service_hatch" type="revolute">
+    <origin xyz="-0.27 0 1.862" rpy="0 0 0" />
+    <parent link="airframe" />
+    <child link="service_hatch" />
+    <axis xyz="0 1 0" />
+    <limit effort="20" velocity="1.5" lower="0" upper="1.36136" />
+    </joint>
+  <joint name="mast_to_main_rotor" type="continuous">
+    <origin xyz="0 0 2.14" rpy="0 0 0" />
+    <parent link="airframe" />
+    <child link="main_rotor" />
+    <axis xyz="0 0 1" />
+    <limit effort="220" velocity="35" />
+    </joint>
+  <joint name="tail_to_tail_rotor" type="continuous">
+    <origin xyz="-6.73 0.17 1.32" rpy="0 0 0" />
+    <parent link="airframe" />
+    <child link="tail_rotor" />
+    <axis xyz="0 1 0" />
+    <limit effort="40" velocity="55" />
+    </joint>
+  </robot>

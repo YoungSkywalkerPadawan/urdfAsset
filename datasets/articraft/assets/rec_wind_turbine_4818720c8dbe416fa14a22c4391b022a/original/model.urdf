@@ -1,0 +1,91 @@
+<robot name="horizontal_axis_wind_turbine">
+  <material name="warm_white_tower">
+    <color rgba="0.86 0.86 0.82 1" />
+    </material>
+  <material name="nacelle_white">
+    <color rgba="0.92 0.93 0.9 1" />
+    </material>
+  <material name="blade_matte_white">
+    <color rgba="0.96 0.96 0.92 1" />
+    </material>
+  <material name="bearing_dark">
+    <color rgba="0.12 0.13 0.14 1" />
+    </material>
+  <link name="tower">
+    <inertial>
+      <origin xyz="0 0 4" rpy="0 0 0" />
+      <mass value="4200" />
+      <inertia ixx="22612.6" ixy="0" ixz="0" iyy="22612.6" iyz="0" izz="425.25" />
+      </inertial>
+    <visual name="tapered_tower">
+      <geometry>
+        <mesh filename="assets/meshes/tapered_tower.obj" />
+        </geometry>
+      <material name="warm_white_tower">
+        <color rgba="0.86 0.86 0.82 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="nacelle">
+    <inertial>
+      <origin xyz="0 0 0.45" rpy="0 0 0" />
+      <mass value="1100" />
+      <inertia ixx="117.333" ixy="0" ixz="0" iyy="355.667" iyz="0" izz="355.667" />
+      </inertial>
+    <visual name="nacelle_shell">
+      <geometry>
+        <mesh filename="assets/meshes/nacelle_shell.obj" />
+        </geometry>
+      <material name="nacelle_white">
+        <color rgba="0.92 0.93 0.9 1" />
+        </material>
+      </visual>
+    <visual name="yaw_bearing">
+      <origin xyz="0 0 0.08" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.34" length="0.16" />
+        </geometry>
+      <material name="bearing_dark">
+        <color rgba="0.12 0.13 0.14 1" />
+        </material>
+      </visual>
+    <visual name="shaft_sleeve">
+      <origin xyz="0.775 0 0.46" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.17" length="0.257" />
+        </geometry>
+      <material name="bearing_dark">
+        <color rgba="0.12 0.13 0.14 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="rotor">
+    <inertial>
+      <mass value="420" />
+      <inertia ixx="581.263" ixy="0" ixz="0" iyy="581.263" iyz="0" izz="1159.73" />
+      </inertial>
+    <visual name="hub_blades">
+      <origin xyz="0 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <mesh filename="assets/meshes/three_blade_rotor.obj" />
+        </geometry>
+      <material name="blade_matte_white">
+        <color rgba="0.96 0.96 0.92 1" />
+        </material>
+      </visual>
+    </link>
+  <joint name="tower_to_nacelle" type="revolute">
+    <origin xyz="0 0 8" rpy="0 0 0" />
+    <parent link="tower" />
+    <child link="nacelle" />
+    <axis xyz="0 0 1" />
+    <limit effort="8000" velocity="0.18" lower="-3.14159" upper="3.14159" />
+    </joint>
+  <joint name="nacelle_to_rotor" type="continuous">
+    <origin xyz="0.98 0 0.46" rpy="0 0 0" />
+    <parent link="nacelle" />
+    <child link="rotor" />
+    <axis xyz="1 0 0" />
+    <limit effort="12000" velocity="2.5" />
+    </joint>
+  </robot>

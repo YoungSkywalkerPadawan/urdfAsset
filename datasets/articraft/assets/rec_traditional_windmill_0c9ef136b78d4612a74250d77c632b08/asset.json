@@ -1,0 +1,175 @@
+{
+  "summary": {
+    "id": "rec_traditional_windmill_0c9ef136b78d4612a74250d77c632b08",
+    "category": "windmill",
+    "robot_name": "traditional_windmill",
+    "joint_count": 2,
+    "link_count": 5,
+    "target_link_count": 4,
+    "family": "rec_traditional_windmill",
+    "warnings": [],
+    "diagonal": 20.146667133983946,
+    "bytes": 6628453
+  },
+  "source": {
+    "dataset": "camvsl/Articraft-10K",
+    "revision": "3c79d5a05bb7cb6bf7bfee5e090176636ee3ac65",
+    "license": "CC-BY-4.0",
+    "url": "https://huggingface.co/datasets/camvsl/Articraft-10K/blob/3c79d5a05bb7cb6bf7bfee5e090176636ee3ac65/rec_traditional_windmill_0c9ef136b78d4612a74250d77c632b08.tar.gz",
+    "archive_sha256": "d6f7d9c35314d487a9682cdd8c0e2be93f8943cba376f163e6be3d50e8187a6f",
+    "archive": "rec_traditional_windmill_0c9ef136b78d4612a74250d77c632b08.tar.gz",
+    "label_status": "Original generated URDF reference; not manually verified or physically validated"
+  },
+  "links": [
+    {
+      "id": "link_000",
+      "name": "tower_base",
+      "point_file": null,
+      "faces": 2404,
+      "vertices": 1212,
+      "bounds": [
+        [
+          -3.32,
+          -3.32,
+          0.0
+        ],
+        [
+          3.32,
+          3.32,
+          8.0
+        ]
+      ]
+    },
+    {
+      "id": "link_001",
+      "name": "bearing_module",
+      "point_file": "inputs/link_001.npz",
+      "faces": 944,
+      "vertices": 494,
+      "bounds": [
+        [
+          -2.42,
+          -2.42,
+          8.0
+        ],
+        [
+          2.42,
+          2.42,
+          8.52
+        ]
+      ]
+    },
+    {
+      "id": "link_002",
+      "name": "cap_shell",
+      "point_file": "inputs/link_002.npz",
+      "faces": 2831,
+      "vertices": 1444,
+      "bounds": [
+        [
+          -2.06,
+          -2.06,
+          8.52
+        ],
+        [
+          2.06,
+          2.06,
+          10.462095999999999
+        ]
+      ]
+    },
+    {
+      "id": "link_003",
+      "name": "head_frame",
+      "point_file": "inputs/link_003.npz",
+      "faces": 712,
+      "vertices": 378,
+      "bounds": [
+        [
+          1.88,
+          -0.58,
+          9.05
+        ],
+        [
+          2.810000881568685,
+          0.58,
+          10.09
+        ]
+      ]
+    },
+    {
+      "id": "link_004",
+      "name": "sail_hub",
+      "point_file": "inputs/link_004.npz",
+      "faces": 1424,
+      "vertices": 872,
+      "bounds": [
+        [
+          2.8099979430059516,
+          -5.600681375598382,
+          3.969318868340313
+        ],
+        [
+          3.7700002203917666,
+          5.600681375598382,
+          15.170681131659688
+        ]
+      ]
+    }
+  ],
+  "joints": [
+    {
+      "name": "base_to_bearing",
+      "type": "fixed",
+      "parent": "link_000",
+      "child": "link_001",
+      "reference_q": 0.0,
+      "mimic": null
+    },
+    {
+      "name": "bearing_to_cap",
+      "type": "continuous",
+      "parent": "link_001",
+      "child": "link_002",
+      "reference_q": 0.0,
+      "mimic": null
+    },
+    {
+      "name": "cap_to_head_frame",
+      "type": "fixed",
+      "parent": "link_002",
+      "child": "link_003",
+      "reference_q": 0.0,
+      "mimic": null
+    },
+    {
+      "name": "head_to_sail_hub",
+      "type": "continuous",
+      "parent": "link_003",
+      "child": "link_004",
+      "reference_q": 0.0,
+      "mimic": null
+    }
+  ],
+  "bounds": [
+    [
+      -3.32,
+      -5.600681375598382,
+      0.0
+    ],
+    [
+      3.7700002203917666,
+      5.600681375598382,
+      15.170681131659688
+    ]
+  ],
+  "point_pool_size": 65536,
+  "reference_pose": "Zero position clamped to limits; mimic values propagated",
+  "qc": {
+    "finite_geometry": true,
+    "tree_valid": true,
+    "axis_unit": true,
+    "physical_collision_validation": false,
+    "visual_tessellation": "32 cylinder segments, icosphere subdivision 2"
+  }
+}

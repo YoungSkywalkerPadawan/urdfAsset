@@ -1,0 +1,244 @@
+{
+  "summary": {
+    "id": "rec_gear_assemblies_5edb006b8c0447569d8901510d2ef8d9",
+    "category": "gear",
+    "robot_name": "industrial_intermeshing_gear_train",
+    "joint_count": 6,
+    "link_count": 7,
+    "target_link_count": 7,
+    "family": "rec_gear_assemblies",
+    "warnings": [],
+    "diagonal": 1.18226646742602,
+    "bytes": 16323626
+  },
+  "source": {
+    "dataset": "camvsl/Articraft-10K",
+    "revision": "3c79d5a05bb7cb6bf7bfee5e090176636ee3ac65",
+    "license": "CC-BY-4.0",
+    "url": "https://huggingface.co/datasets/camvsl/Articraft-10K/blob/3c79d5a05bb7cb6bf7bfee5e090176636ee3ac65/rec_gear_assemblies_5edb006b8c0447569d8901510d2ef8d9.tar.gz",
+    "archive_sha256": "d102a7436c1ee610f8b2810ebfa1655a68f2f7e97b928352cef0c47868cdc87e",
+    "archive": "rec_gear_assemblies_5edb006b8c0447569d8901510d2ef8d9.tar.gz",
+    "label_status": "Original generated URDF reference; not manually verified or physically validated"
+  },
+  "links": [
+    {
+      "id": "link_000",
+      "name": "base",
+      "point_file": "inputs/link_000.npz",
+      "faces": 10560,
+      "vertices": 5642,
+      "bounds": [
+        [
+          -0.4375,
+          -0.35250000000000004,
+          0.0
+        ],
+        [
+          0.47750000000000004,
+          0.35250000000000004,
+          0.2305
+        ]
+      ]
+    },
+    {
+      "id": "link_001",
+      "name": "drive_pinion",
+      "point_file": "inputs/link_001.npz",
+      "faces": 16468,
+      "vertices": 13383,
+      "bounds": [
+        [
+          -0.25099899999999997,
+          -0.065999,
+          0.06100000000000001
+        ],
+        [
+          -0.119001,
+          0.065999,
+          0.252
+        ]
+      ]
+    },
+    {
+      "id": "link_002",
+      "name": "center_gear",
+      "point_file": "inputs/link_002.npz",
+      "faces": 11672,
+      "vertices": 11904,
+      "bounds": [
+        [
+          -0.1257698328814614,
+          -0.12576983288146143,
+          0.06100000000000001
+        ],
+        [
+          0.1257698328814614,
+          0.12576983288146143,
+          0.252
+        ]
+      ]
+    },
+    {
+      "id": "link_003",
+      "name": "upper_idler",
+      "point_file": "inputs/link_003.npz",
+      "faces": 13123,
+      "vertices": 11479,
+      "bounds": [
+        [
+          0.033918741410069266,
+          0.0926249575264732,
+          0.06100000000000001
+        ],
+        [
+          0.15313565858993075,
+          0.2126210424735268,
+          0.252
+        ]
+      ]
+    },
+    {
+      "id": "link_004",
+      "name": "upper_output",
+      "point_file": "inputs/link_004.npz",
+      "faces": 11884,
+      "vertices": 12034,
+      "bounds": [
+        [
+          0.14647634718595026,
+          0.052869513781658994,
+          0.06100000000000001
+        ],
+        [
+          0.33847565281404973,
+          0.244574486218341,
+          0.252
+        ]
+      ]
+    },
+    {
+      "id": "link_005",
+      "name": "lower_idler",
+      "point_file": "inputs/link_005.npz",
+      "faces": 13981,
+      "vertices": 12469,
+      "bounds": [
+        [
+          0.027799476575322668,
+          -0.23454946489570544,
+          0.06100000000000001
+        ],
+        [
+          0.17179492342467734,
+          -0.09115853510429454,
+          0.252
+        ]
+      ]
+    },
+    {
+      "id": "link_006",
+      "name": "lower_output",
+      "point_file": "inputs/link_006.npz",
+      "faces": 14723,
+      "vertices": 13308,
+      "bounds": [
+        [
+          0.1649902171956556,
+          -0.2500448497028988,
+          0.06100000000000001
+        ],
+        [
+          0.3325357828043444,
+          -0.08204715029710119,
+          0.252
+        ]
+      ]
+    }
+  ],
+  "joints": [
+    {
+      "name": "base_to_drive_pinion",
+      "type": "continuous",
+      "parent": "link_000",
+      "child": "link_001",
+      "reference_q": 0.0,
+      "mimic": null
+    },
+    {
+      "name": "base_to_center_gear",
+      "type": "continuous",
+      "parent": "link_000",
+      "child": "link_002",
+      "reference_q": 0.0,
+      "mimic": {
+        "joint": "base_to_drive_pinion",
+        "multiplier": "-0.5"
+      }
+    },
+    {
+      "name": "base_to_upper_idler",
+      "type": "continuous",
+      "parent": "link_000",
+      "child": "link_003",
+      "reference_q": 0.0,
+      "mimic": {
+        "joint": "base_to_drive_pinion",
+        "multiplier": "1.11111"
+      }
+    },
+    {
+      "name": "base_to_upper_output",
+      "type": "continuous",
+      "parent": "link_000",
+      "child": "link_004",
+      "reference_q": 0.0,
+      "mimic": {
+        "joint": "base_to_drive_pinion",
+        "multiplier": "-0.666667"
+      }
+    },
+    {
+      "name": "base_to_lower_idler",
+      "type": "continuous",
+      "parent": "link_000",
+      "child": "link_005",
+      "reference_q": 0.0,
+      "mimic": {
+        "joint": "base_to_drive_pinion",
+        "multiplier": "0.909091"
+      }
+    },
+    {
+      "name": "base_to_lower_output",
+      "type": "continuous",
+      "parent": "link_000",
+      "child": "link_006",
+      "reference_q": 0.0,
+      "mimic": {
+        "joint": "base_to_drive_pinion",
+        "multiplier": "-0.769231"
+      }
+    }
+  ],
+  "bounds": [
+    [
+      -0.4375,
+      -0.35250000000000004,
+      0.0
+    ],
+    [
+      0.47750000000000004,
+      0.35250000000000004,
+      0.252
+    ]
+  ],
+  "point_pool_size": 65536,
+  "reference_pose": "Zero position clamped to limits; mimic values propagated",
+  "qc": {
+    "finite_geometry": true,
+    "tree_valid": true,
+    "axis_unit": true,
+    "physical_collision_validation": false,
+    "visual_tessellation": "32 cylinder segments, icosphere subdivision 2"
+  }
+}

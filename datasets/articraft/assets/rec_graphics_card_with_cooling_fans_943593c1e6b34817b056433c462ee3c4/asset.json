@@ -1,0 +1,121 @@
+{
+  "summary": {
+    "id": "rec_graphics_card_with_cooling_fans_943593c1e6b34817b056433c462ee3c4",
+    "category": "fan",
+    "robot_name": "liquid_cooled_gpu",
+    "joint_count": 1,
+    "link_count": 3,
+    "target_link_count": 2,
+    "family": "rec_graphics_card_with_cooling_fans",
+    "warnings": [],
+    "diagonal": 0.342644286657087,
+    "bytes": 3696280
+  },
+  "source": {
+    "dataset": "camvsl/Articraft-10K",
+    "revision": "3c79d5a05bb7cb6bf7bfee5e090176636ee3ac65",
+    "license": "CC-BY-4.0",
+    "url": "https://huggingface.co/datasets/camvsl/Articraft-10K/blob/3c79d5a05bb7cb6bf7bfee5e090176636ee3ac65/rec_graphics_card_with_cooling_fans_943593c1e6b34817b056433c462ee3c4.tar.gz",
+    "archive_sha256": "7ba91a123a0dcdc6e8fafb9d8aa8bae9df3855b8a5d497cf81f4a2605ff227fc",
+    "archive": "rec_graphics_card_with_cooling_fans_943593c1e6b34817b056433c462ee3c4.tar.gz",
+    "label_status": "Original generated URDF reference; not manually verified or physically validated"
+  },
+  "links": [
+    {
+      "id": "link_000",
+      "name": "body",
+      "point_file": "inputs/link_000.npz",
+      "faces": 2804,
+      "vertices": 1446,
+      "bounds": [
+        [
+          -0.16100002718155587,
+          -0.064,
+          0.0
+        ],
+        [
+          0.155,
+          0.0645,
+          0.0322
+        ]
+      ]
+    },
+    {
+      "id": "link_001",
+      "name": "assist_fan",
+      "point_file": "inputs/link_001.npz",
+      "faces": 8198,
+      "vertices": 4101,
+      "bounds": [
+        [
+          0.078628,
+          -0.0016520000000000007,
+          0.019437
+        ],
+        [
+          0.1285,
+          0.04832,
+          0.0266
+        ]
+      ]
+    },
+    {
+      "id": "link_002",
+      "name": "selector_knob",
+      "point_file": null,
+      "faces": 1344,
+      "vertices": 674,
+      "bounds": [
+        [
+          -0.026659999999999996,
+          -0.06180000275481748,
+          0.0020000000000674634
+        ],
+        [
+          -0.00934,
+          -0.04899996326794897,
+          0.02199999999993254
+        ]
+      ]
+    }
+  ],
+  "joints": [
+    {
+      "name": "fan_spin",
+      "type": "continuous",
+      "parent": "link_000",
+      "child": "link_001",
+      "reference_q": 0.0,
+      "mimic": null
+    },
+    {
+      "name": "selector_turn",
+      "type": "revolute",
+      "parent": "link_000",
+      "child": "link_002",
+      "reference_q": 0.0,
+      "mimic": null
+    }
+  ],
+  "bounds": [
+    [
+      -0.16100002718155587,
+      -0.064,
+      0.0
+    ],
+    [
+      0.155,
+      0.0645,
+      0.0322
+    ]
+  ],
+  "point_pool_size": 65536,
+  "reference_pose": "Zero position clamped to limits; mimic values propagated",
+  "qc": {
+    "finite_geometry": true,
+    "tree_valid": true,
+    "axis_unit": true,
+    "physical_collision_validation": false,
+    "visual_tessellation": "32 cylinder segments, icosphere subdivision 2"
+  }
+}

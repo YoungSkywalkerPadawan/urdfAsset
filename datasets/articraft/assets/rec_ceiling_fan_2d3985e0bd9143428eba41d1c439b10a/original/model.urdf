@@ -1,0 +1,505 @@
+<robot name="traditional_ceiling_fan">
+  <material name="hardware">
+    <color rgba="0.27 0.21 0.14 1" />
+    </material>
+  <material name="iron_finish">
+    <color rgba="0.2 0.18 0.16 1" />
+    </material>
+  <material name="wood">
+    <color rgba="0.55 0.37 0.21 1" />
+    </material>
+  <link name="canopy">
+    <inertial>
+      <origin xyz="0 0 -0.043" rpy="0 0 0" />
+      <mass value="1" />
+      <inertia ixx="0.00232433" ixy="0" ixz="0" iyy="0.00232433" iyz="0" izz="0.003528" />
+      </inertial>
+    <visual name="canopy_shell">
+      <geometry>
+        <mesh filename="assets/meshes/canopy_shell.obj" />
+        </geometry>
+      <material name="hardware">
+        <color rgba="0.27 0.21 0.14 1" />
+        </material>
+      </visual>
+    <visual name="mount_boss">
+      <origin xyz="0 0 -0.002" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.012" />
+        </geometry>
+      <material name="hardware">
+        <color rgba="0.27 0.21 0.14 1" />
+        </material>
+      </visual>
+    <visual name="boss_rib_pos_x">
+      <origin xyz="0.019 0 -0.002" rpy="0 0 0" />
+      <geometry>
+        <box size="0.004 0.01 0.01" />
+        </geometry>
+      <material name="hardware">
+        <color rgba="0.27 0.21 0.14 1" />
+        </material>
+      </visual>
+    <visual name="boss_rib_neg_x">
+      <origin xyz="-0.019 0 -0.002" rpy="0 0 0" />
+      <geometry>
+        <box size="0.004 0.01 0.01" />
+        </geometry>
+      <material name="hardware">
+        <color rgba="0.27 0.21 0.14 1" />
+        </material>
+      </visual>
+    <visual name="boss_rib_pos_y">
+      <origin xyz="0 0.019 -0.002" rpy="0 0 0" />
+      <geometry>
+        <box size="0.01 0.004 0.01" />
+        </geometry>
+      <material name="hardware">
+        <color rgba="0.27 0.21 0.14 1" />
+        </material>
+      </visual>
+    <visual name="boss_rib_neg_y">
+      <origin xyz="0 -0.019 -0.002" rpy="0 0 0" />
+      <geometry>
+        <box size="0.01 0.004 0.01" />
+        </geometry>
+      <material name="hardware">
+        <color rgba="0.27 0.21 0.14 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="downrod">
+    <inertial>
+      <origin xyz="0 0 -0.063" rpy="0 0 0" />
+      <mass value="1.4" />
+      <inertia ixx="0.0020216" ixy="0" ixz="0" iyy="0.0020216" iyz="0" izz="0.0003388" />
+      </inertial>
+    <visual name="downrod_tube">
+      <origin xyz="0 0 -0.063" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.126" />
+        </geometry>
+      <material name="hardware">
+        <color rgba="0.27 0.21 0.14 1" />
+        </material>
+      </visual>
+    <visual name="upper_coupler">
+      <origin xyz="0 0 -0.012" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.016" length="0.02" />
+        </geometry>
+      <material name="hardware">
+        <color rgba="0.27 0.21 0.14 1" />
+        </material>
+      </visual>
+    <visual name="lower_coupler">
+      <origin xyz="0 0 -0.113" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.022" length="0.026" />
+        </geometry>
+      <material name="hardware">
+        <color rgba="0.27 0.21 0.14 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="motor_housing">
+    <inertial>
+      <origin xyz="0 0 -0.108" rpy="0 0 0" />
+      <mass value="6.5" />
+      <inertia ixx="0.044226" ixy="0" ixz="0" iyy="0.044226" iyz="0" izz="0.037908" />
+      </inertial>
+    <visual name="motor_barrel">
+      <origin xyz="0 0 -0.09" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.108" length="0.14" />
+        </geometry>
+      <material name="hardware">
+        <color rgba="0.27 0.21 0.14 1" />
+        </material>
+      </visual>
+    <visual name="upper_neck">
+      <origin xyz="0 0 -0.02" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.055" length="0.04" />
+        </geometry>
+      <material name="hardware">
+        <color rgba="0.27 0.21 0.14 1" />
+        </material>
+      </visual>
+    <visual name="lower_switch_housing">
+      <origin xyz="0 0 -0.179" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.064" length="0.038" />
+        </geometry>
+      <material name="hardware">
+        <color rgba="0.27 0.21 0.14 1" />
+        </material>
+      </visual>
+    <visual name="bottom_finial">
+      <origin xyz="0 0 -0.207" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.025" length="0.018" />
+        </geometry>
+      <material name="hardware">
+        <color rgba="0.27 0.21 0.14 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="blade_iron_1">
+    <inertial>
+      <origin xyz="0.105 0 -0.005" rpy="0 0 0" />
+      <mass value="0.35" />
+      <inertia ixx="9.05333e-05" ixy="0" ixz="0" iyy="0.00129792" iyz="0" izz="0.00136512" />
+      </inertial>
+    <visual name="root_hub">
+      <origin xyz="0.022 0 -0.002" rpy="0 0 0" />
+      <geometry>
+        <box size="0.044 0.03 0.012" />
+        </geometry>
+      <material name="iron_finish">
+        <color rgba="0.2 0.18 0.16 1" />
+        </material>
+      </visual>
+    <visual name="iron_arm">
+      <origin xyz="0.083 0 -0.006" rpy="0 -0.1 0" />
+      <geometry>
+        <box size="0.128 0.02 0.006" />
+        </geometry>
+      <material name="iron_finish">
+        <color rgba="0.2 0.18 0.16 1" />
+        </material>
+      </visual>
+    <visual name="blade_pad">
+      <origin xyz="0.171 0 -0.002" rpy="0 0 0" />
+      <geometry>
+        <box size="0.072 0.054 0.01" />
+        </geometry>
+      <material name="iron_finish">
+        <color rgba="0.2 0.18 0.16 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="blade_1">
+    <inertial>
+      <origin xyz="0.204 0 0.005" rpy="0 0 0" />
+      <mass value="0.7" />
+      <inertia ixx="0.00102223" ixy="0" ixz="0" iyy="0.00971623" iyz="0" izz="0.0107268" />
+      </inertial>
+    <visual name="blade_root">
+      <origin xyz="0.02 0 0.005" rpy="0 0 0" />
+      <geometry>
+        <box size="0.04 0.056 0.01" />
+        </geometry>
+      <material name="wood">
+        <color rgba="0.55 0.37 0.21 1" />
+        </material>
+      </visual>
+    <visual name="blade_panel">
+      <origin xyz="0.223 0 0.005" rpy="-0.2 0 0" />
+      <geometry>
+        <box size="0.368 0.132 0.01" />
+        </geometry>
+      <material name="wood">
+        <color rgba="0.55 0.37 0.21 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="blade_iron_2">
+    <inertial>
+      <origin xyz="0.105 0 -0.005" rpy="0 0 0" />
+      <mass value="0.35" />
+      <inertia ixx="9.05333e-05" ixy="0" ixz="0" iyy="0.00129792" iyz="0" izz="0.00136512" />
+      </inertial>
+    <visual name="root_hub">
+      <origin xyz="0.022 0 -0.002" rpy="0 0 0" />
+      <geometry>
+        <box size="0.044 0.03 0.012" />
+        </geometry>
+      <material name="iron_finish">
+        <color rgba="0.2 0.18 0.16 1" />
+        </material>
+      </visual>
+    <visual name="iron_arm">
+      <origin xyz="0.083 0 -0.006" rpy="0 -0.1 0" />
+      <geometry>
+        <box size="0.128 0.02 0.006" />
+        </geometry>
+      <material name="iron_finish">
+        <color rgba="0.2 0.18 0.16 1" />
+        </material>
+      </visual>
+    <visual name="blade_pad">
+      <origin xyz="0.171 0 -0.002" rpy="0 0 0" />
+      <geometry>
+        <box size="0.072 0.054 0.01" />
+        </geometry>
+      <material name="iron_finish">
+        <color rgba="0.2 0.18 0.16 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="blade_2">
+    <inertial>
+      <origin xyz="0.204 0 0.005" rpy="0 0 0" />
+      <mass value="0.7" />
+      <inertia ixx="0.00102223" ixy="0" ixz="0" iyy="0.00971623" iyz="0" izz="0.0107268" />
+      </inertial>
+    <visual name="blade_root">
+      <origin xyz="0.02 0 0.005" rpy="0 0 0" />
+      <geometry>
+        <box size="0.04 0.056 0.01" />
+        </geometry>
+      <material name="wood">
+        <color rgba="0.55 0.37 0.21 1" />
+        </material>
+      </visual>
+    <visual name="blade_panel">
+      <origin xyz="0.223 0 0.005" rpy="-0.2 0 0" />
+      <geometry>
+        <box size="0.368 0.132 0.01" />
+        </geometry>
+      <material name="wood">
+        <color rgba="0.55 0.37 0.21 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="blade_iron_3">
+    <inertial>
+      <origin xyz="0.105 0 -0.005" rpy="0 0 0" />
+      <mass value="0.35" />
+      <inertia ixx="9.05333e-05" ixy="0" ixz="0" iyy="0.00129792" iyz="0" izz="0.00136512" />
+      </inertial>
+    <visual name="root_hub">
+      <origin xyz="0.022 0 -0.002" rpy="0 0 0" />
+      <geometry>
+        <box size="0.044 0.03 0.012" />
+        </geometry>
+      <material name="iron_finish">
+        <color rgba="0.2 0.18 0.16 1" />
+        </material>
+      </visual>
+    <visual name="iron_arm">
+      <origin xyz="0.083 0 -0.006" rpy="0 -0.1 0" />
+      <geometry>
+        <box size="0.128 0.02 0.006" />
+        </geometry>
+      <material name="iron_finish">
+        <color rgba="0.2 0.18 0.16 1" />
+        </material>
+      </visual>
+    <visual name="blade_pad">
+      <origin xyz="0.171 0 -0.002" rpy="0 0 0" />
+      <geometry>
+        <box size="0.072 0.054 0.01" />
+        </geometry>
+      <material name="iron_finish">
+        <color rgba="0.2 0.18 0.16 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="blade_3">
+    <inertial>
+      <origin xyz="0.204 0 0.005" rpy="0 0 0" />
+      <mass value="0.7" />
+      <inertia ixx="0.00102223" ixy="0" ixz="0" iyy="0.00971623" iyz="0" izz="0.0107268" />
+      </inertial>
+    <visual name="blade_root">
+      <origin xyz="0.02 0 0.005" rpy="0 0 0" />
+      <geometry>
+        <box size="0.04 0.056 0.01" />
+        </geometry>
+      <material name="wood">
+        <color rgba="0.55 0.37 0.21 1" />
+        </material>
+      </visual>
+    <visual name="blade_panel">
+      <origin xyz="0.223 0 0.005" rpy="-0.2 0 0" />
+      <geometry>
+        <box size="0.368 0.132 0.01" />
+        </geometry>
+      <material name="wood">
+        <color rgba="0.55 0.37 0.21 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="blade_iron_4">
+    <inertial>
+      <origin xyz="0.105 0 -0.005" rpy="0 0 0" />
+      <mass value="0.35" />
+      <inertia ixx="9.05333e-05" ixy="0" ixz="0" iyy="0.00129792" iyz="0" izz="0.00136512" />
+      </inertial>
+    <visual name="root_hub">
+      <origin xyz="0.022 0 -0.002" rpy="0 0 0" />
+      <geometry>
+        <box size="0.044 0.03 0.012" />
+        </geometry>
+      <material name="iron_finish">
+        <color rgba="0.2 0.18 0.16 1" />
+        </material>
+      </visual>
+    <visual name="iron_arm">
+      <origin xyz="0.083 0 -0.006" rpy="0 -0.1 0" />
+      <geometry>
+        <box size="0.128 0.02 0.006" />
+        </geometry>
+      <material name="iron_finish">
+        <color rgba="0.2 0.18 0.16 1" />
+        </material>
+      </visual>
+    <visual name="blade_pad">
+      <origin xyz="0.171 0 -0.002" rpy="0 0 0" />
+      <geometry>
+        <box size="0.072 0.054 0.01" />
+        </geometry>
+      <material name="iron_finish">
+        <color rgba="0.2 0.18 0.16 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="blade_4">
+    <inertial>
+      <origin xyz="0.204 0 0.005" rpy="0 0 0" />
+      <mass value="0.7" />
+      <inertia ixx="0.00102223" ixy="0" ixz="0" iyy="0.00971623" iyz="0" izz="0.0107268" />
+      </inertial>
+    <visual name="blade_root">
+      <origin xyz="0.02 0 0.005" rpy="0 0 0" />
+      <geometry>
+        <box size="0.04 0.056 0.01" />
+        </geometry>
+      <material name="wood">
+        <color rgba="0.55 0.37 0.21 1" />
+        </material>
+      </visual>
+    <visual name="blade_panel">
+      <origin xyz="0.223 0 0.005" rpy="-0.2 0 0" />
+      <geometry>
+        <box size="0.368 0.132 0.01" />
+        </geometry>
+      <material name="wood">
+        <color rgba="0.55 0.37 0.21 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="blade_iron_5">
+    <inertial>
+      <origin xyz="0.105 0 -0.005" rpy="0 0 0" />
+      <mass value="0.35" />
+      <inertia ixx="9.05333e-05" ixy="0" ixz="0" iyy="0.00129792" iyz="0" izz="0.00136512" />
+      </inertial>
+    <visual name="root_hub">
+      <origin xyz="0.022 0 -0.002" rpy="0 0 0" />
+      <geometry>
+        <box size="0.044 0.03 0.012" />
+        </geometry>
+      <material name="iron_finish">
+        <color rgba="0.2 0.18 0.16 1" />
+        </material>
+      </visual>
+    <visual name="iron_arm">
+      <origin xyz="0.083 0 -0.006" rpy="0 -0.1 0" />
+      <geometry>
+        <box size="0.128 0.02 0.006" />
+        </geometry>
+      <material name="iron_finish">
+        <color rgba="0.2 0.18 0.16 1" />
+        </material>
+      </visual>
+    <visual name="blade_pad">
+      <origin xyz="0.171 0 -0.002" rpy="0 0 0" />
+      <geometry>
+        <box size="0.072 0.054 0.01" />
+        </geometry>
+      <material name="iron_finish">
+        <color rgba="0.2 0.18 0.16 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="blade_5">
+    <inertial>
+      <origin xyz="0.204 0 0.005" rpy="0 0 0" />
+      <mass value="0.7" />
+      <inertia ixx="0.00102223" ixy="0" ixz="0" iyy="0.00971623" iyz="0" izz="0.0107268" />
+      </inertial>
+    <visual name="blade_root">
+      <origin xyz="0.02 0 0.005" rpy="0 0 0" />
+      <geometry>
+        <box size="0.04 0.056 0.01" />
+        </geometry>
+      <material name="wood">
+        <color rgba="0.55 0.37 0.21 1" />
+        </material>
+      </visual>
+    <visual name="blade_panel">
+      <origin xyz="0.223 0 0.005" rpy="-0.2 0 0" />
+      <geometry>
+        <box size="0.368 0.132 0.01" />
+        </geometry>
+      <material name="wood">
+        <color rgba="0.55 0.37 0.21 1" />
+        </material>
+      </visual>
+    </link>
+  <joint name="canopy_to_downrod" type="fixed">
+    <origin xyz="0 0 -0.006" rpy="0 0 0" />
+    <parent link="canopy" />
+    <child link="downrod" />
+    </joint>
+  <joint name="downrod_to_motor" type="continuous">
+    <origin xyz="0 0 -0.126" rpy="0 0 0" />
+    <parent link="downrod" />
+    <child link="motor_housing" />
+    <axis xyz="0 0 1" />
+    <limit effort="12" velocity="18" />
+    </joint>
+  <joint name="motor_to_blade_iron_1" type="fixed">
+    <origin xyz="0.108 0 -0.095" rpy="0 0 0" />
+    <parent link="motor_housing" />
+    <child link="blade_iron_1" />
+    </joint>
+  <joint name="blade_iron_to_blade_1" type="fixed">
+    <origin xyz="0.207 0 0.003" rpy="0 0 0" />
+    <parent link="blade_iron_1" />
+    <child link="blade_1" />
+    </joint>
+  <joint name="motor_to_blade_iron_2" type="fixed">
+    <origin xyz="0.0333738 0.102714 -0.095" rpy="0 0 1.25664" />
+    <parent link="motor_housing" />
+    <child link="blade_iron_2" />
+    </joint>
+  <joint name="blade_iron_to_blade_2" type="fixed">
+    <origin xyz="0.207 0 0.003" rpy="0 0 0" />
+    <parent link="blade_iron_2" />
+    <child link="blade_2" />
+    </joint>
+  <joint name="motor_to_blade_iron_3" type="fixed">
+    <origin xyz="-0.0873738 0.0634808 -0.095" rpy="0 0 2.51327" />
+    <parent link="motor_housing" />
+    <child link="blade_iron_3" />
+    </joint>
+  <joint name="blade_iron_to_blade_3" type="fixed">
+    <origin xyz="0.207 0 0.003" rpy="0 0 0" />
+    <parent link="blade_iron_3" />
+    <child link="blade_3" />
+    </joint>
+  <joint name="motor_to_blade_iron_4" type="fixed">
+    <origin xyz="-0.0873738 -0.0634808 -0.095" rpy="0 0 3.76991" />
+    <parent link="motor_housing" />
+    <child link="blade_iron_4" />
+    </joint>
+  <joint name="blade_iron_to_blade_4" type="fixed">
+    <origin xyz="0.207 0 0.003" rpy="0 0 0" />
+    <parent link="blade_iron_4" />
+    <child link="blade_4" />
+    </joint>
+  <joint name="motor_to_blade_iron_5" type="fixed">
+    <origin xyz="0.0333738 -0.102714 -0.095" rpy="0 0 5.02655" />
+    <parent link="motor_housing" />
+    <child link="blade_iron_5" />
+    </joint>
+  <joint name="blade_iron_to_blade_5" type="fixed">
+    <origin xyz="0.207 0 0.003" rpy="0 0 0" />
+    <parent link="blade_iron_5" />
+    <child link="blade_5" />
+    </joint>
+  </robot>

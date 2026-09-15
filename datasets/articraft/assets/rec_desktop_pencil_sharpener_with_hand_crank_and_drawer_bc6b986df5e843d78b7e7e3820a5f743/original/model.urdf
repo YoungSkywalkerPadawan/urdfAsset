@@ -1,0 +1,216 @@
+<robot name="compact_office_pencil_sharpener">
+  <material name="warm_white_plastic">
+    <color rgba="0.88 0.84 0.74 1" />
+    </material>
+  <material name="charcoal_plastic">
+    <color rgba="0.05 0.055 0.06 1" />
+    </material>
+  <material name="smoky_translucent_tray">
+    <color rgba="0.18 0.25 0.3 0.72" />
+    </material>
+  <material name="brushed_steel">
+    <color rgba="0.62 0.63 0.6 1" />
+    </material>
+  <material name="dust_flap_grey">
+    <color rgba="0.22 0.24 0.25 1" />
+    </material>
+  <link name="body">
+    <visual name="shell">
+      <geometry>
+        <mesh filename="assets/meshes/rounded_shell.obj" />
+        </geometry>
+      <material name="warm_white_plastic">
+        <color rgba="0.88 0.84 0.74 1" />
+        </material>
+      </visual>
+    <visual name="entry_hole">
+      <origin xyz="0.0637 0 0.0525" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0122" length="0.0025" />
+        </geometry>
+      <material name="charcoal_plastic">
+        <color rgba="0.05 0.055 0.06 1" />
+        </material>
+      </visual>
+    <visual name="entry_bezel">
+      <origin xyz="0.0665 0 0.0525" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0175" length="0.003" />
+        </geometry>
+      <material name="charcoal_plastic">
+        <color rgba="0.05 0.055 0.06 1" />
+        </material>
+      </visual>
+    <visual name="flap_hinge_knuckle_0">
+      <origin xyz="0.0688 -0.024 0.067" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0038" length="0.01" />
+        </geometry>
+      <material name="charcoal_plastic">
+        <color rgba="0.05 0.055 0.06 1" />
+        </material>
+      </visual>
+    <visual name="flap_hinge_knuckle_1">
+      <origin xyz="0.0688 0.024 0.067" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0038" length="0.01" />
+        </geometry>
+      <material name="charcoal_plastic">
+        <color rgba="0.05 0.055 0.06 1" />
+        </material>
+      </visual>
+    <visual name="tray_shadow_slot">
+      <origin xyz="0.059 0 0.01" rpy="0 0 0" />
+      <geometry>
+        <box size="0.026 0.055 0.004" />
+        </geometry>
+      <material name="charcoal_plastic">
+        <color rgba="0.05 0.055 0.06 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="tray">
+    <visual name="tray_floor">
+      <origin xyz="-0.039 0 0.003" rpy="0 0 0" />
+      <geometry>
+        <box size="0.082 0.058 0.004" />
+        </geometry>
+      <material name="smoky_translucent_tray">
+        <color rgba="0.18 0.25 0.3 0.72" />
+        </material>
+      </visual>
+    <visual name="tray_side_0">
+      <origin xyz="-0.039 -0.031 0.011" rpy="0 0 0" />
+      <geometry>
+        <box size="0.08 0.004 0.016" />
+        </geometry>
+      <material name="smoky_translucent_tray">
+        <color rgba="0.18 0.25 0.3 0.72" />
+        </material>
+      </visual>
+    <visual name="tray_side_1">
+      <origin xyz="-0.039 0.031 0.011" rpy="0 0 0" />
+      <geometry>
+        <box size="0.08 0.004 0.016" />
+        </geometry>
+      <material name="smoky_translucent_tray">
+        <color rgba="0.18 0.25 0.3 0.72" />
+        </material>
+      </visual>
+    <visual name="front_face">
+      <origin xyz="0.004 0 0.014" rpy="0 0 0" />
+      <geometry>
+        <box size="0.005 0.07 0.026" />
+        </geometry>
+      <material name="smoky_translucent_tray">
+        <color rgba="0.18 0.25 0.3 0.72" />
+        </material>
+      </visual>
+    <visual name="finger_pull">
+      <origin xyz="0.0085 0 0.019" rpy="0 0 0" />
+      <geometry>
+        <box size="0.012 0.04 0.004" />
+        </geometry>
+      <material name="charcoal_plastic">
+        <color rgba="0.05 0.055 0.06 1" />
+        </material>
+      </visual>
+    <visual name="rear_lip">
+      <origin xyz="-0.08 0 0.0095" rpy="0 0 0" />
+      <geometry>
+        <box size="0.004 0.054 0.013" />
+        </geometry>
+      <material name="smoky_translucent_tray">
+        <color rgba="0.18 0.25 0.3 0.72" />
+        </material>
+      </visual>
+    </link>
+  <link name="crank">
+    <visual name="side_axle">
+      <origin xyz="0 0 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.014" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.62 0.63 0.6 1" />
+        </material>
+      </visual>
+    <visual name="hub_cap">
+      <origin xyz="0 0.008 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.008" length="0.006" />
+        </geometry>
+      <material name="charcoal_plastic">
+        <color rgba="0.05 0.055 0.06 1" />
+        </material>
+      </visual>
+    <visual name="crank_arm">
+      <origin xyz="0 0.011 -0.022" rpy="0 0 0" />
+      <geometry>
+        <box size="0.007 0.006 0.044" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.62 0.63 0.6 1" />
+        </material>
+      </visual>
+    <visual name="handle_grip">
+      <origin xyz="0 0.02 -0.047" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0055" length="0.023" />
+        </geometry>
+      <material name="charcoal_plastic">
+        <color rgba="0.05 0.055 0.06 1" />
+        </material>
+      </visual>
+    <visual name="handle_pin">
+      <origin xyz="0 0.014 -0.047" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0032" length="0.012" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.62 0.63 0.6 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="dust_flap">
+    <visual name="flap_plate">
+      <origin xyz="0 0 -0.014" rpy="0 0 0" />
+      <geometry>
+        <box size="0.004 0.038 0.028" />
+        </geometry>
+      <material name="dust_flap_grey">
+        <color rgba="0.22 0.24 0.25 1" />
+        </material>
+      </visual>
+    <visual name="flap_barrel">
+      <origin xyz="0 0 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.003" length="0.032" />
+        </geometry>
+      <material name="dust_flap_grey">
+        <color rgba="0.22 0.24 0.25 1" />
+        </material>
+      </visual>
+    </link>
+  <joint name="body_to_tray" type="prismatic">
+    <origin xyz="0.067 0 0.012" rpy="0 0 0" />
+    <parent link="body" />
+    <child link="tray" />
+    <axis xyz="1 0 0" />
+    <limit effort="8" velocity="0.18" lower="0" upper="0.045" />
+    </joint>
+  <joint name="body_to_crank" type="continuous">
+    <origin xyz="-0.006 0.052 0.048" rpy="0 0 0" />
+    <parent link="body" />
+    <child link="crank" />
+    <axis xyz="0 1 0" />
+    <limit effort="1.5" velocity="12" />
+    </joint>
+  <joint name="body_to_dust_flap" type="revolute">
+    <origin xyz="0.0688 0 0.067" rpy="0 0 0" />
+    <parent link="body" />
+    <child link="dust_flap" />
+    <axis xyz="0 -1 0" />
+    <limit effort="0.25" velocity="2" lower="0" upper="1.35" />
+    </joint>
+  </robot>

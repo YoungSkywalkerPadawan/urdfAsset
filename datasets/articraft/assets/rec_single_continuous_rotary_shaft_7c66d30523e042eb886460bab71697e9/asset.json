@@ -1,0 +1,94 @@
+{
+  "summary": {
+    "id": "rec_single_continuous_rotary_shaft_7c66d30523e042eb886460bab71697e9",
+    "category": "rotary",
+    "robot_name": "overhung_spindle_stage",
+    "joint_count": 1,
+    "link_count": 2,
+    "target_link_count": 2,
+    "family": "rec_single_continuous_rotary_shaft",
+    "warnings": [],
+    "diagonal": 0.4488674106281275,
+    "bytes": 3529660
+  },
+  "source": {
+    "dataset": "camvsl/Articraft-10K",
+    "revision": "3c79d5a05bb7cb6bf7bfee5e090176636ee3ac65",
+    "license": "CC-BY-4.0",
+    "url": "https://huggingface.co/datasets/camvsl/Articraft-10K/blob/3c79d5a05bb7cb6bf7bfee5e090176636ee3ac65/rec_single_continuous_rotary_shaft_7c66d30523e042eb886460bab71697e9.tar.gz",
+    "archive_sha256": "1066206c502dbcf91b13ddb707be9d6f1961489cbd98e07ae61fb5daf5abca35",
+    "archive": "rec_single_continuous_rotary_shaft_7c66d30523e042eb886460bab71697e9.tar.gz",
+    "label_status": "Original generated URDF reference; not manually verified or physically validated"
+  },
+  "links": [
+    {
+      "id": "link_000",
+      "name": "bearing_body",
+      "point_file": "inputs/link_000.npz",
+      "faces": 4848,
+      "vertices": 4776,
+      "bounds": [
+        [
+          -0.06,
+          -0.07,
+          -0.1
+        ],
+        [
+          0.145,
+          0.07,
+          0.067982
+        ]
+      ]
+    },
+    {
+      "id": "link_001",
+      "name": "spindle",
+      "point_file": "inputs/link_001.npz",
+      "faces": 1500,
+      "vertices": 1518,
+      "bounds": [
+        [
+          -0.065,
+          -0.04,
+          -0.039988
+        ],
+        [
+          0.327,
+          0.04,
+          0.039988
+        ]
+      ]
+    }
+  ],
+  "joints": [
+    {
+      "name": "body_to_spindle",
+      "type": "continuous",
+      "parent": "link_000",
+      "child": "link_001",
+      "reference_q": 0.0,
+      "mimic": null
+    }
+  ],
+  "bounds": [
+    [
+      -0.065,
+      -0.07,
+      -0.1
+    ],
+    [
+      0.327,
+      0.07,
+      0.067982
+    ]
+  ],
+  "point_pool_size": 65536,
+  "reference_pose": "Zero position clamped to limits; mimic values propagated",
+  "qc": {
+    "finite_geometry": true,
+    "tree_valid": true,
+    "axis_unit": true,
+    "physical_collision_validation": false,
+    "visual_tessellation": "32 cylinder segments, icosphere subdivision 2"
+  }
+}

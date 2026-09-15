@@ -1,0 +1,1248 @@
+<robot name="industrial_safety_wind_turbine">
+  <material name="tower_paint">
+    <color rgba="0.83 0.85 0.86 1" />
+    </material>
+  <material name="nacelle_paint">
+    <color rgba="0.84 0.86 0.88 1" />
+    </material>
+  <material name="dark_steel">
+    <color rgba="0.26 0.28 0.31 1" />
+    </material>
+  <material name="weathered_steel">
+    <color rgba="0.43 0.45 0.47 1" />
+    </material>
+  <material name="safety_yellow">
+    <color rgba="0.92 0.78 0.12 1" />
+    </material>
+  <material name="lockout_red">
+    <color rgba="0.79 0.14 0.11 1" />
+    </material>
+  <material name="composite_white">
+    <color rgba="0.9 0.91 0.92 1" />
+    </material>
+  <link name="tower">
+    <inertial>
+      <origin xyz="0 0 14.1" rpy="0 0 0" />
+      <mass value="58000" />
+      <inertia ixx="4.01113e+06" ixy="0" ixz="0" iyy="4.01113e+06" iyz="0" izz="170520" />
+      </inertial>
+    <visual name="tower_shell">
+      <geometry>
+        <mesh filename="assets/meshes/tower_shell.obj" />
+        </geometry>
+      <material name="tower_paint">
+        <color rgba="0.83 0.85 0.86 1" />
+        </material>
+      </visual>
+    <visual name="base_flange">
+      <origin xyz="0 0 0.11" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="2.05" length="0.22" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.26 0.28 0.31 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="0 0 0.16" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="1.95" length="0.32" />
+        </geometry>
+      <material name="weathered_steel">
+        <color rgba="0.43 0.45 0.47 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="1.78 0 0.27" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.045" length="0.1" />
+        </geometry>
+      <material name="weathered_steel">
+        <color rgba="0.43 0.45 0.47 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="1.64451 0.681177 0.27" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.045" length="0.1" />
+        </geometry>
+      <material name="weathered_steel">
+        <color rgba="0.43 0.45 0.47 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="1.25865 1.25865 0.27" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.045" length="0.1" />
+        </geometry>
+      <material name="weathered_steel">
+        <color rgba="0.43 0.45 0.47 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="0.681177 1.64451 0.27" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.045" length="0.1" />
+        </geometry>
+      <material name="weathered_steel">
+        <color rgba="0.43 0.45 0.47 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="1.08994e-16 1.78 0.27" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.045" length="0.1" />
+        </geometry>
+      <material name="weathered_steel">
+        <color rgba="0.43 0.45 0.47 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="-0.681177 1.64451 0.27" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.045" length="0.1" />
+        </geometry>
+      <material name="weathered_steel">
+        <color rgba="0.43 0.45 0.47 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="-1.25865 1.25865 0.27" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.045" length="0.1" />
+        </geometry>
+      <material name="weathered_steel">
+        <color rgba="0.43 0.45 0.47 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="-1.64451 0.681177 0.27" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.045" length="0.1" />
+        </geometry>
+      <material name="weathered_steel">
+        <color rgba="0.43 0.45 0.47 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="-1.78 2.17987e-16 0.27" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.045" length="0.1" />
+        </geometry>
+      <material name="weathered_steel">
+        <color rgba="0.43 0.45 0.47 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="-1.64451 -0.681177 0.27" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.045" length="0.1" />
+        </geometry>
+      <material name="weathered_steel">
+        <color rgba="0.43 0.45 0.47 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="-1.25865 -1.25865 0.27" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.045" length="0.1" />
+        </geometry>
+      <material name="weathered_steel">
+        <color rgba="0.43 0.45 0.47 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="-0.681177 -1.64451 0.27" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.045" length="0.1" />
+        </geometry>
+      <material name="weathered_steel">
+        <color rgba="0.43 0.45 0.47 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="-3.26981e-16 -1.78 0.27" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.045" length="0.1" />
+        </geometry>
+      <material name="weathered_steel">
+        <color rgba="0.43 0.45 0.47 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="0.681177 -1.64451 0.27" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.045" length="0.1" />
+        </geometry>
+      <material name="weathered_steel">
+        <color rgba="0.43 0.45 0.47 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="1.25865 -1.25865 0.27" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.045" length="0.1" />
+        </geometry>
+      <material name="weathered_steel">
+        <color rgba="0.43 0.45 0.47 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="1.64451 -0.681177 0.27" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.045" length="0.1" />
+        </geometry>
+      <material name="weathered_steel">
+        <color rgba="0.43 0.45 0.47 1" />
+        </material>
+      </visual>
+    <visual name="top_bearing_ring">
+      <origin xyz="0 0 28.1" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="1.28" length="0.2" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.26 0.28 0.31 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="0 0 27.87" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="1.18" length="0.26" />
+        </geometry>
+      <material name="weathered_steel">
+        <color rgba="0.43 0.45 0.47 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="nacelle">
+    <inertial>
+      <origin xyz="0.12 0 1.45" rpy="0 0 0" />
+      <mass value="12000" />
+      <inertia ixx="25920" ixy="0" ixz="0" iyy="40000" iyz="0" izz="40000" />
+      </inertial>
+    <visual name="yaw_skirt">
+      <origin xyz="0 0 0.1" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="1.28" length="0.2" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.26 0.28 0.31 1" />
+        </material>
+      </visual>
+    <visual name="bedplate">
+      <origin xyz="0.18 0 0.34" rpy="0 0 0" />
+      <geometry>
+        <box size="4.8 3.1 0.28" />
+        </geometry>
+      <material name="weathered_steel">
+        <color rgba="0.43 0.45 0.47 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="0.1 1.47 1.58" rpy="0 0 0" />
+      <geometry>
+        <box size="4.55 0.08 2.2" />
+        </geometry>
+      <material name="nacelle_paint">
+        <color rgba="0.84 0.86 0.88 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="0.1 -1.47 1.58" rpy="0 0 0" />
+      <geometry>
+        <box size="4.55 0.08 2.2" />
+        </geometry>
+      <material name="nacelle_paint">
+        <color rgba="0.84 0.86 0.88 1" />
+        </material>
+      </visual>
+    <visual name="roof_plate">
+      <origin xyz="0.1 0 2.73" rpy="0 0 0" />
+      <geometry>
+        <box size="3.3 3.02 0.1" />
+        </geometry>
+      <material name="nacelle_paint">
+        <color rgba="0.84 0.86 0.88 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="-2.12 0 1.58" rpy="0 0 0" />
+      <geometry>
+        <box size="0.1 3.02 2.2" />
+        </geometry>
+      <material name="nacelle_paint">
+        <color rgba="0.84 0.86 0.88 1" />
+        </material>
+      </visual>
+    <visual name="front_bulkhead">
+      <origin xyz="1.7 0 1.48" rpy="0 0 0" />
+      <geometry>
+        <box size="0.2 2.42 2" />
+        </geometry>
+      <material name="nacelle_paint">
+        <color rgba="0.84 0.86 0.88 1" />
+        </material>
+      </visual>
+    <visual name="bearing_housing">
+      <origin xyz="1.95 0 1.88" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.6" length="0.3" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.26 0.28 0.31 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="1.1 1.03 0.96" rpy="0 0 0" />
+      <geometry>
+        <box size="1.35 0.22 1.12" />
+        </geometry>
+      <material name="weathered_steel">
+        <color rgba="0.43 0.45 0.47 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="1.1 -1.03 0.96" rpy="0 0 0" />
+      <geometry>
+        <box size="1.35 0.22 1.12" />
+        </geometry>
+      <material name="weathered_steel">
+        <color rgba="0.43 0.45 0.47 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="-0.45 0 1.09" rpy="0 0 0" />
+      <geometry>
+        <box size="1.72 1.55 1.22" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.26 0.28 0.31 1" />
+        </material>
+      </visual>
+    <visual name="service_walkway">
+      <origin xyz="-0.22 0 2.82" rpy="0 0 0" />
+      <geometry>
+        <box size="2.6 2.6 0.08" />
+        </geometry>
+      <material name="weathered_steel">
+        <color rgba="0.43 0.45 0.47 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="-0.35 1.51 1.44" rpy="0 0 0" />
+      <geometry>
+        <box size="1.15 0.04 0.78" />
+        </geometry>
+      <material name="weathered_steel">
+        <color rgba="0.43 0.45 0.47 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="-0.8 1.55 1.2" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.08" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.26 0.28 0.31 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="-0.8 1.55 1.68" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.08" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.26 0.28 0.31 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="-0.35 1.55 1.2" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.08" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.26 0.28 0.31 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="-0.35 1.55 1.68" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.08" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.26 0.28 0.31 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="0.1 1.55 1.2" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.08" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.26 0.28 0.31 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="0.1 1.55 1.68" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.08" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.26 0.28 0.31 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="-0.35 -1.51 1.44" rpy="0 0 0" />
+      <geometry>
+        <box size="1.15 0.04 0.78" />
+        </geometry>
+      <material name="weathered_steel">
+        <color rgba="0.43 0.45 0.47 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="-0.8 -1.55 1.2" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.08" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.26 0.28 0.31 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="-0.8 -1.55 1.68" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.08" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.26 0.28 0.31 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="-0.35 -1.55 1.2" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.08" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.26 0.28 0.31 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="-0.35 -1.55 1.68" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.08" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.26 0.28 0.31 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="0.1 -1.55 1.2" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.08" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.26 0.28 0.31 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="0.1 -1.55 1.68" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.08" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.26 0.28 0.31 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="-1.32 -1.22 3.34" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.026" length="0.96" />
+        </geometry>
+      <material name="safety_yellow">
+        <color rgba="0.92 0.78 0.12 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="-1.32 0 3.34" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.026" length="0.96" />
+        </geometry>
+      <material name="safety_yellow">
+        <color rgba="0.92 0.78 0.12 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="-1.32 1.22 3.34" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.026" length="0.96" />
+        </geometry>
+      <material name="safety_yellow">
+        <color rgba="0.92 0.78 0.12 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="-0.35 1.22 3.34" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.026" length="0.96" />
+        </geometry>
+      <material name="safety_yellow">
+        <color rgba="0.92 0.78 0.12 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="0.7 1.22 3.34" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.026" length="0.96" />
+        </geometry>
+      <material name="safety_yellow">
+        <color rgba="0.92 0.78 0.12 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="0.7 -1.22 3.34" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.026" length="0.96" />
+        </geometry>
+      <material name="safety_yellow">
+        <color rgba="0.92 0.78 0.12 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="-0.35 -1.22 3.34" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.026" length="0.96" />
+        </geometry>
+      <material name="safety_yellow">
+        <color rgba="0.92 0.78 0.12 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="-1.32 -0.61 3.82" rpy="0 1.5708 1.5708" />
+      <geometry>
+        <cylinder radius="0.022" length="1.22" />
+        </geometry>
+      <material name="safety_yellow">
+        <color rgba="0.92 0.78 0.12 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="-1.32 -0.61 3.34" rpy="0 1.5708 1.5708" />
+      <geometry>
+        <cylinder radius="0.02" length="1.22" />
+        </geometry>
+      <material name="safety_yellow">
+        <color rgba="0.92 0.78 0.12 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="-1.32 0.61 3.82" rpy="0 1.5708 1.5708" />
+      <geometry>
+        <cylinder radius="0.022" length="1.22" />
+        </geometry>
+      <material name="safety_yellow">
+        <color rgba="0.92 0.78 0.12 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="-1.32 0.61 3.34" rpy="0 1.5708 1.5708" />
+      <geometry>
+        <cylinder radius="0.02" length="1.22" />
+        </geometry>
+      <material name="safety_yellow">
+        <color rgba="0.92 0.78 0.12 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="-0.835 1.22 3.82" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.022" length="0.97" />
+        </geometry>
+      <material name="safety_yellow">
+        <color rgba="0.92 0.78 0.12 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="-0.835 1.22 3.34" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.02" length="0.97" />
+        </geometry>
+      <material name="safety_yellow">
+        <color rgba="0.92 0.78 0.12 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="0.175 1.22 3.82" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.022" length="1.05" />
+        </geometry>
+      <material name="safety_yellow">
+        <color rgba="0.92 0.78 0.12 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="0.175 1.22 3.34" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.02" length="1.05" />
+        </geometry>
+      <material name="safety_yellow">
+        <color rgba="0.92 0.78 0.12 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="0.7 0 3.82" rpy="0 1.5708 -1.5708" />
+      <geometry>
+        <cylinder radius="0.022" length="2.44" />
+        </geometry>
+      <material name="safety_yellow">
+        <color rgba="0.92 0.78 0.12 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="0.7 0 3.34" rpy="0 1.5708 -1.5708" />
+      <geometry>
+        <cylinder radius="0.02" length="2.44" />
+        </geometry>
+      <material name="safety_yellow">
+        <color rgba="0.92 0.78 0.12 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="0.175 -1.22 3.82" rpy="0 1.5708 3.14159" />
+      <geometry>
+        <cylinder radius="0.022" length="1.05" />
+        </geometry>
+      <material name="safety_yellow">
+        <color rgba="0.92 0.78 0.12 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="0.175 -1.22 3.34" rpy="0 1.5708 3.14159" />
+      <geometry>
+        <cylinder radius="0.02" length="1.05" />
+        </geometry>
+      <material name="safety_yellow">
+        <color rgba="0.92 0.78 0.12 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="-1.62 0 0.3" rpy="0 0 0" />
+      <geometry>
+        <box size="0.56 0.18 0.2" />
+        </geometry>
+      <material name="safety_yellow">
+        <color rgba="0.92 0.78 0.12 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="1.53 1.19 1.58" rpy="0 0 0" />
+      <geometry>
+        <box size="0.44 0.18 0.54" />
+        </geometry>
+      <material name="weathered_steel">
+        <color rgba="0.43 0.45 0.47 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="1.95 1.57 1.62" rpy="0 0 0" />
+      <geometry>
+        <box size="0.26 0.22 0.34" />
+        </geometry>
+      <material name="lockout_red">
+        <color rgba="0.79 0.14 0.11 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="hub">
+    <inertial>
+      <origin xyz="1.05 0 0" rpy="0 1.5708 0" />
+      <mass value="4500" />
+      <inertia ixx="3584.06" ixy="0" ixz="0" iyy="3584.06" iyz="0" izz="2480.62" />
+      </inertial>
+    <visual name="rear_flange">
+      <origin xyz="0.09 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.58" length="0.18" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.26 0.28 0.31 1" />
+        </material>
+      </visual>
+    <visual name="lock_disc">
+      <origin xyz="0.24 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.82" length="0.1" />
+        </geometry>
+      <material name="lockout_red">
+        <color rgba="0.79 0.14 0.11 1" />
+        </material>
+      </visual>
+    <visual name="main_body">
+      <origin xyz="0.74 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.96" length="1.28" />
+        </geometry>
+      <material name="weathered_steel">
+        <color rgba="0.43 0.45 0.47 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="1.69 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.72" length="0.78" />
+        </geometry>
+      <material name="weathered_steel">
+        <color rgba="0.43 0.45 0.47 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="2.22 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.42" length="0.28" />
+        </geometry>
+      <material name="weathered_steel">
+        <color rgba="0.43 0.45 0.47 1" />
+        </material>
+      </visual>
+    <visual name="blade_seat_1">
+      <origin xyz="1.05 -0 1.04" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.36" length="0.76" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.26 0.28 0.31 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="0.66 0 0.34" rpy="0 0 0" />
+      <geometry>
+        <box size="0.88 0.18 0.56" />
+        </geometry>
+      <material name="weathered_steel">
+        <color rgba="0.43 0.45 0.47 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="0.98 0 0.16" rpy="0 0 0" />
+      <geometry>
+        <box size="0.36 0.12 0.32" />
+        </geometry>
+      <material name="weathered_steel">
+        <color rgba="0.43 0.45 0.47 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="1.18 0 0.42" rpy="0 0 0" />
+      <geometry>
+        <box size="0.18 0.1 0.34" />
+        </geometry>
+      <material name="safety_yellow">
+        <color rgba="0.92 0.78 0.12 1" />
+        </material>
+      </visual>
+    <visual name="blade_seat_2">
+      <origin xyz="1.05 -0.900666 -0.52" rpy="2.0944 0 0" />
+      <geometry>
+        <cylinder radius="0.36" length="0.76" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.26 0.28 0.31 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="0.66 -0.294449 -0.17" rpy="2.0944 0 0" />
+      <geometry>
+        <box size="0.88 0.18 0.56" />
+        </geometry>
+      <material name="weathered_steel">
+        <color rgba="0.43 0.45 0.47 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="0.98 -0.138564 -0.08" rpy="2.0944 0 0" />
+      <geometry>
+        <box size="0.36 0.12 0.32" />
+        </geometry>
+      <material name="weathered_steel">
+        <color rgba="0.43 0.45 0.47 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="1.18 -0.363731 -0.21" rpy="2.0944 0 0" />
+      <geometry>
+        <box size="0.18 0.1 0.34" />
+        </geometry>
+      <material name="safety_yellow">
+        <color rgba="0.92 0.78 0.12 1" />
+        </material>
+      </visual>
+    <visual name="blade_seat_3">
+      <origin xyz="1.05 0.900666 -0.52" rpy="4.18879 0 0" />
+      <geometry>
+        <cylinder radius="0.36" length="0.76" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.26 0.28 0.31 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="0.66 0.294449 -0.17" rpy="4.18879 0 0" />
+      <geometry>
+        <box size="0.88 0.18 0.56" />
+        </geometry>
+      <material name="weathered_steel">
+        <color rgba="0.43 0.45 0.47 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="0.98 0.138564 -0.08" rpy="4.18879 0 0" />
+      <geometry>
+        <box size="0.36 0.12 0.32" />
+        </geometry>
+      <material name="weathered_steel">
+        <color rgba="0.43 0.45 0.47 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="1.18 0.363731 -0.21" rpy="4.18879 0 0" />
+      <geometry>
+        <box size="0.18 0.1 0.34" />
+        </geometry>
+      <material name="safety_yellow">
+        <color rgba="0.92 0.78 0.12 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="blade_top">
+    <inertial>
+      <origin xyz="0.18 0 5.05" rpy="0 0 0" />
+      <mass value="950" />
+      <inertia ixx="7787.62" ixy="0" ixz="0" iyy="7987.92" iyz="0" izz="257.292" />
+      </inertial>
+    <visual name="root_flange">
+      <origin xyz="0 0 0.11" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.42" length="0.22" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.26 0.28 0.31 1" />
+        </material>
+      </visual>
+    <visual name="root_laminate">
+      <origin xyz="0 0 0.5" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.34" length="0.56" />
+        </geometry>
+      <material name="weathered_steel">
+        <color rgba="0.43 0.45 0.47 1" />
+        </material>
+      </visual>
+    <visual name="blade_skin">
+      <geometry>
+        <mesh filename="assets/meshes/blade_skin.obj" />
+        </geometry>
+      <material name="composite_white">
+        <color rgba="0.9 0.91 0.92 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="-0.32 0.24 0.16" rpy="0 0 0" />
+      <geometry>
+        <box size="0.16 0.1 0.2" />
+        </geometry>
+      <material name="safety_yellow">
+        <color rgba="0.92 0.78 0.12 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="0.3 0 0.14" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.022" length="0.06" />
+        </geometry>
+      <material name="weathered_steel">
+        <color rgba="0.43 0.45 0.47 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="0.242705 0.176336 0.14" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.022" length="0.06" />
+        </geometry>
+      <material name="weathered_steel">
+        <color rgba="0.43 0.45 0.47 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="0.0927051 0.285317 0.14" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.022" length="0.06" />
+        </geometry>
+      <material name="weathered_steel">
+        <color rgba="0.43 0.45 0.47 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="-0.0927051 0.285317 0.14" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.022" length="0.06" />
+        </geometry>
+      <material name="weathered_steel">
+        <color rgba="0.43 0.45 0.47 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="-0.242705 0.176336 0.14" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.022" length="0.06" />
+        </geometry>
+      <material name="weathered_steel">
+        <color rgba="0.43 0.45 0.47 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="-0.3 3.67394e-17 0.14" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.022" length="0.06" />
+        </geometry>
+      <material name="weathered_steel">
+        <color rgba="0.43 0.45 0.47 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="-0.242705 -0.176336 0.14" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.022" length="0.06" />
+        </geometry>
+      <material name="weathered_steel">
+        <color rgba="0.43 0.45 0.47 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="-0.0927051 -0.285317 0.14" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.022" length="0.06" />
+        </geometry>
+      <material name="weathered_steel">
+        <color rgba="0.43 0.45 0.47 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="0.0927051 -0.285317 0.14" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.022" length="0.06" />
+        </geometry>
+      <material name="weathered_steel">
+        <color rgba="0.43 0.45 0.47 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="0.242705 -0.176336 0.14" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.022" length="0.06" />
+        </geometry>
+      <material name="weathered_steel">
+        <color rgba="0.43 0.45 0.47 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="blade_lower_left">
+    <inertial>
+      <origin xyz="0.18 0 5.05" rpy="0 0 0" />
+      <mass value="950" />
+      <inertia ixx="7787.62" ixy="0" ixz="0" iyy="7987.92" iyz="0" izz="257.292" />
+      </inertial>
+    <visual name="root_flange">
+      <origin xyz="0 0 0.11" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.42" length="0.22" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.26 0.28 0.31 1" />
+        </material>
+      </visual>
+    <visual name="root_laminate">
+      <origin xyz="0 0 0.5" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.34" length="0.56" />
+        </geometry>
+      <material name="weathered_steel">
+        <color rgba="0.43 0.45 0.47 1" />
+        </material>
+      </visual>
+    <visual name="blade_skin">
+      <geometry>
+        <mesh filename="assets/meshes/blade_skin.obj" />
+        </geometry>
+      <material name="composite_white">
+        <color rgba="0.9 0.91 0.92 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="-0.32 0.24 0.16" rpy="0 0 0" />
+      <geometry>
+        <box size="0.16 0.1 0.2" />
+        </geometry>
+      <material name="safety_yellow">
+        <color rgba="0.92 0.78 0.12 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="0.3 0 0.14" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.022" length="0.06" />
+        </geometry>
+      <material name="weathered_steel">
+        <color rgba="0.43 0.45 0.47 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="0.242705 0.176336 0.14" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.022" length="0.06" />
+        </geometry>
+      <material name="weathered_steel">
+        <color rgba="0.43 0.45 0.47 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="0.0927051 0.285317 0.14" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.022" length="0.06" />
+        </geometry>
+      <material name="weathered_steel">
+        <color rgba="0.43 0.45 0.47 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="-0.0927051 0.285317 0.14" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.022" length="0.06" />
+        </geometry>
+      <material name="weathered_steel">
+        <color rgba="0.43 0.45 0.47 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="-0.242705 0.176336 0.14" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.022" length="0.06" />
+        </geometry>
+      <material name="weathered_steel">
+        <color rgba="0.43 0.45 0.47 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="-0.3 3.67394e-17 0.14" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.022" length="0.06" />
+        </geometry>
+      <material name="weathered_steel">
+        <color rgba="0.43 0.45 0.47 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="-0.242705 -0.176336 0.14" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.022" length="0.06" />
+        </geometry>
+      <material name="weathered_steel">
+        <color rgba="0.43 0.45 0.47 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="-0.0927051 -0.285317 0.14" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.022" length="0.06" />
+        </geometry>
+      <material name="weathered_steel">
+        <color rgba="0.43 0.45 0.47 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="0.0927051 -0.285317 0.14" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.022" length="0.06" />
+        </geometry>
+      <material name="weathered_steel">
+        <color rgba="0.43 0.45 0.47 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="0.242705 -0.176336 0.14" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.022" length="0.06" />
+        </geometry>
+      <material name="weathered_steel">
+        <color rgba="0.43 0.45 0.47 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="blade_lower_right">
+    <inertial>
+      <origin xyz="0.18 0 5.05" rpy="0 0 0" />
+      <mass value="950" />
+      <inertia ixx="7787.62" ixy="0" ixz="0" iyy="7987.92" iyz="0" izz="257.292" />
+      </inertial>
+    <visual name="root_flange">
+      <origin xyz="0 0 0.11" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.42" length="0.22" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.26 0.28 0.31 1" />
+        </material>
+      </visual>
+    <visual name="root_laminate">
+      <origin xyz="0 0 0.5" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.34" length="0.56" />
+        </geometry>
+      <material name="weathered_steel">
+        <color rgba="0.43 0.45 0.47 1" />
+        </material>
+      </visual>
+    <visual name="blade_skin">
+      <geometry>
+        <mesh filename="assets/meshes/blade_skin.obj" />
+        </geometry>
+      <material name="composite_white">
+        <color rgba="0.9 0.91 0.92 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="-0.32 0.24 0.16" rpy="0 0 0" />
+      <geometry>
+        <box size="0.16 0.1 0.2" />
+        </geometry>
+      <material name="safety_yellow">
+        <color rgba="0.92 0.78 0.12 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="0.3 0 0.14" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.022" length="0.06" />
+        </geometry>
+      <material name="weathered_steel">
+        <color rgba="0.43 0.45 0.47 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="0.242705 0.176336 0.14" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.022" length="0.06" />
+        </geometry>
+      <material name="weathered_steel">
+        <color rgba="0.43 0.45 0.47 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="0.0927051 0.285317 0.14" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.022" length="0.06" />
+        </geometry>
+      <material name="weathered_steel">
+        <color rgba="0.43 0.45 0.47 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="-0.0927051 0.285317 0.14" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.022" length="0.06" />
+        </geometry>
+      <material name="weathered_steel">
+        <color rgba="0.43 0.45 0.47 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="-0.242705 0.176336 0.14" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.022" length="0.06" />
+        </geometry>
+      <material name="weathered_steel">
+        <color rgba="0.43 0.45 0.47 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="-0.3 3.67394e-17 0.14" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.022" length="0.06" />
+        </geometry>
+      <material name="weathered_steel">
+        <color rgba="0.43 0.45 0.47 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="-0.242705 -0.176336 0.14" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.022" length="0.06" />
+        </geometry>
+      <material name="weathered_steel">
+        <color rgba="0.43 0.45 0.47 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="-0.0927051 -0.285317 0.14" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.022" length="0.06" />
+        </geometry>
+      <material name="weathered_steel">
+        <color rgba="0.43 0.45 0.47 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="0.0927051 -0.285317 0.14" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.022" length="0.06" />
+        </geometry>
+      <material name="weathered_steel">
+        <color rgba="0.43 0.45 0.47 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="0.242705 -0.176336 0.14" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.022" length="0.06" />
+        </geometry>
+      <material name="weathered_steel">
+        <color rgba="0.43 0.45 0.47 1" />
+        </material>
+      </visual>
+    </link>
+  <joint name="tower_to_nacelle_yaw" type="revolute">
+    <origin xyz="0 0 28.2" rpy="0 0 0" />
+    <parent link="tower" />
+    <child link="nacelle" />
+    <axis xyz="0 0 1" />
+    <limit effort="250000" velocity="0.18" lower="-1.15" upper="1.15" />
+    </joint>
+  <joint name="nacelle_to_hub_spin" type="continuous">
+    <origin xyz="2.1 0 1.88" rpy="0 0 0" />
+    <parent link="nacelle" />
+    <child link="hub" />
+    <axis xyz="1 0 0" />
+    <limit effort="400000" velocity="1.2" />
+    </joint>
+  <joint name="hub_to_blade_top_pitch" type="revolute">
+    <origin xyz="1.05 -0 1.42" rpy="0 0 0" />
+    <parent link="hub" />
+    <child link="blade_top" />
+    <axis xyz="0 0 1" />
+    <limit effort="180000" velocity="0.25" lower="-0.3" upper="1.25" />
+    </joint>
+  <joint name="hub_to_blade_lower_left_pitch" type="revolute">
+    <origin xyz="1.05 -1.22976 -0.71" rpy="2.0944 0 0" />
+    <parent link="hub" />
+    <child link="blade_lower_left" />
+    <axis xyz="0 0 1" />
+    <limit effort="180000" velocity="0.25" lower="-0.3" upper="1.25" />
+    </joint>
+  <joint name="hub_to_blade_lower_right_pitch" type="revolute">
+    <origin xyz="1.05 1.22976 -0.71" rpy="4.18879 0 0" />
+    <parent link="hub" />
+    <child link="blade_lower_right" />
+    <axis xyz="0 0 1" />
+    <limit effort="180000" velocity="0.25" lower="-0.3" upper="1.25" />
+    </joint>
+  </robot>

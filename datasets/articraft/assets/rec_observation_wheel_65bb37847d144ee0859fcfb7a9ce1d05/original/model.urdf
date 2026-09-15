@@ -1,0 +1,1307 @@
+<robot name="urban_observation_wheel">
+  <material name="steel_dark">
+    <color rgba="0.23 0.25 0.28 1" />
+    </material>
+  <material name="steel_mid">
+    <color rgba="0.6 0.62 0.66 1" />
+    </material>
+  <material name="painted_white">
+    <color rgba="0.93 0.94 0.96 1" />
+    </material>
+  <material name="accent_red">
+    <color rgba="0.77 0.28 0.24 1" />
+    </material>
+  <material name="cabin_body">
+    <color rgba="0.9 0.9 0.88 1" />
+    </material>
+  <material name="glass_blue">
+    <color rgba="0.62 0.78 0.9 0.55" />
+    </material>
+  <link name="base">
+    <visual name="deck">
+      <origin xyz="0 0 0.06" rpy="0 0 0" />
+      <geometry>
+        <box size="1.68 0.84 0.12" />
+        </geometry>
+      <material name="steel_dark">
+        <color rgba="0.23 0.25 0.28 1" />
+        </material>
+      </visual>
+    <visual name="loading_plinth">
+      <origin xyz="0 0 0.14" rpy="0 0 0" />
+      <geometry>
+        <box size="0.58 0.32 0.04" />
+        </geometry>
+      <material name="painted_white">
+        <color rgba="0.93 0.94 0.96 1" />
+        </material>
+      </visual>
+    <visual name="rear_leg_right">
+      <origin xyz="-0.225 -0.34 1.305" rpy="0 0.18764 0" />
+      <geometry>
+        <box size="0.12 0.08 2.41234" />
+        </geometry>
+      <material name="steel_mid">
+        <color rgba="0.6 0.62 0.66 1" />
+        </material>
+      </visual>
+    <visual name="front_leg_right">
+      <origin xyz="0.225 -0.34 1.305" rpy="0 -0.18764 0" />
+      <geometry>
+        <box size="0.12 0.08 2.41234" />
+        </geometry>
+      <material name="steel_mid">
+        <color rgba="0.6 0.62 0.66 1" />
+        </material>
+      </visual>
+    <visual name="side_tie_right">
+      <origin xyz="0 -0.34 0.82" rpy="0 0 0" />
+      <geometry>
+        <box size="0.74 0.08 0.08" />
+        </geometry>
+      <material name="steel_mid">
+        <color rgba="0.6 0.62 0.66 1" />
+        </material>
+      </visual>
+    <visual name="bearing_block_right">
+      <origin xyz="0 -0.34 2.53" rpy="0 0 0" />
+      <geometry>
+        <box size="0.22 0.08 0.2" />
+        </geometry>
+      <material name="steel_dark">
+        <color rgba="0.23 0.25 0.28 1" />
+        </material>
+      </visual>
+    <visual name="rear_leg_left">
+      <origin xyz="-0.225 0.34 1.305" rpy="0 0.18764 0" />
+      <geometry>
+        <box size="0.12 0.08 2.41234" />
+        </geometry>
+      <material name="steel_mid">
+        <color rgba="0.6 0.62 0.66 1" />
+        </material>
+      </visual>
+    <visual name="front_leg_left">
+      <origin xyz="0.225 0.34 1.305" rpy="0 -0.18764 0" />
+      <geometry>
+        <box size="0.12 0.08 2.41234" />
+        </geometry>
+      <material name="steel_mid">
+        <color rgba="0.6 0.62 0.66 1" />
+        </material>
+      </visual>
+    <visual name="side_tie_left">
+      <origin xyz="0 0.34 0.82" rpy="0 0 0" />
+      <geometry>
+        <box size="0.74 0.08 0.08" />
+        </geometry>
+      <material name="steel_mid">
+        <color rgba="0.6 0.62 0.66 1" />
+        </material>
+      </visual>
+    <visual name="bearing_block_left">
+      <origin xyz="0 0.34 2.53" rpy="0 0 0" />
+      <geometry>
+        <box size="0.22 0.08 0.2" />
+        </geometry>
+      <material name="steel_dark">
+        <color rgba="0.23 0.25 0.28 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="wheel">
+    <visual name="rim_left">
+      <geometry>
+        <mesh filename="assets/meshes/wheel_rim_left.obj" />
+        </geometry>
+      <material name="painted_white">
+        <color rgba="0.93 0.94 0.96 1" />
+        </material>
+      </visual>
+    <visual name="rim_right">
+      <geometry>
+        <mesh filename="assets/meshes/wheel_rim_right.obj" />
+        </geometry>
+      <material name="painted_white">
+        <color rgba="0.93 0.94 0.96 1" />
+        </material>
+      </visual>
+    <visual name="axle_shaft">
+      <origin xyz="0 0 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.07" length="0.6" />
+        </geometry>
+      <material name="steel_dark">
+        <color rgba="0.23 0.25 0.28 1" />
+        </material>
+      </visual>
+    <visual name="hub_drum">
+      <origin xyz="0 0 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.18" length="0.28" />
+        </geometry>
+      <material name="accent_red">
+        <color rgba="0.77 0.28 0.24 1" />
+        </material>
+      </visual>
+    <visual name="hub_plate_right">
+      <origin xyz="0 -0.12 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.28" length="0.04" />
+        </geometry>
+      <material name="painted_white">
+        <color rgba="0.93 0.94 0.96 1" />
+        </material>
+      </visual>
+    <visual name="hub_plate_left">
+      <origin xyz="0 0.12 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.28" length="0.04" />
+        </geometry>
+      <material name="painted_white">
+        <color rgba="0.93 0.94 0.96 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="0.49 -0.12 0.848705" rpy="0 0.523599 0" />
+      <geometry>
+        <cylinder radius="0.022" length="1.96" />
+        </geometry>
+      <material name="steel_mid">
+        <color rgba="0.6 0.62 0.66 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="0.49 0.12 0.848705" rpy="0 0.523599 0" />
+      <geometry>
+        <cylinder radius="0.022" length="1.96" />
+        </geometry>
+      <material name="steel_mid">
+        <color rgba="0.6 0.62 0.66 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="0.98 -0.12 6.00077e-17" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.022" length="1.96" />
+        </geometry>
+      <material name="steel_mid">
+        <color rgba="0.6 0.62 0.66 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="0.98 0.12 6.00077e-17" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.022" length="1.96" />
+        </geometry>
+      <material name="steel_mid">
+        <color rgba="0.6 0.62 0.66 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="0.49 -0.12 -0.848705" rpy="0 2.61799 0" />
+      <geometry>
+        <cylinder radius="0.022" length="1.96" />
+        </geometry>
+      <material name="steel_mid">
+        <color rgba="0.6 0.62 0.66 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="0.49 0.12 -0.848705" rpy="0 2.61799 0" />
+      <geometry>
+        <cylinder radius="0.022" length="1.96" />
+        </geometry>
+      <material name="steel_mid">
+        <color rgba="0.6 0.62 0.66 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="-0.49 -0.12 -0.848705" rpy="0 -2.61799 0" />
+      <geometry>
+        <cylinder radius="0.022" length="1.96" />
+        </geometry>
+      <material name="steel_mid">
+        <color rgba="0.6 0.62 0.66 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="-0.49 0.12 -0.848705" rpy="0 -2.61799 0" />
+      <geometry>
+        <cylinder radius="0.022" length="1.96" />
+        </geometry>
+      <material name="steel_mid">
+        <color rgba="0.6 0.62 0.66 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="-0.98 -0.12 -1.80023e-16" rpy="0 -1.5708 0" />
+      <geometry>
+        <cylinder radius="0.022" length="1.96" />
+        </geometry>
+      <material name="steel_mid">
+        <color rgba="0.6 0.62 0.66 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="-0.98 0.12 -1.80023e-16" rpy="0 -1.5708 0" />
+      <geometry>
+        <cylinder radius="0.022" length="1.96" />
+        </geometry>
+      <material name="steel_mid">
+        <color rgba="0.6 0.62 0.66 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="-0.49 -0.12 0.848705" rpy="0 -0.523599 0" />
+      <geometry>
+        <cylinder radius="0.022" length="1.96" />
+        </geometry>
+      <material name="steel_mid">
+        <color rgba="0.6 0.62 0.66 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="-0.49 0.12 0.848705" rpy="0 -0.523599 0" />
+      <geometry>
+        <cylinder radius="0.022" length="1.96" />
+        </geometry>
+      <material name="steel_mid">
+        <color rgba="0.6 0.62 0.66 1" />
+        </material>
+      </visual>
+    <visual name="rim_tie_0">
+      <origin xyz="2.43705e-16 0 -1.99" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.024" length="0.32" />
+        </geometry>
+      <material name="steel_dark">
+        <color rgba="0.23 0.25 0.28 1" />
+        </material>
+      </visual>
+    <visual name="fork_0_right">
+      <origin xyz="2.23498e-16 -0.12 -1.825" rpy="0 0 3.14159" />
+      <geometry>
+        <box size="0.05 0.04 0.33" />
+        </geometry>
+      <material name="accent_red">
+        <color rgba="0.77 0.28 0.24 1" />
+        </material>
+      </visual>
+    <visual name="fork_0_left">
+      <origin xyz="2.23498e-16 0.12 -1.825" rpy="0 0 3.14159" />
+      <geometry>
+        <box size="0.05 0.04 0.33" />
+        </geometry>
+      <material name="accent_red">
+        <color rgba="0.77 0.28 0.24 1" />
+        </material>
+      </visual>
+    <visual name="rim_tie_1">
+      <origin xyz="-1.72339 0 -0.995" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.024" length="0.32" />
+        </geometry>
+      <material name="steel_dark">
+        <color rgba="0.23 0.25 0.28 1" />
+        </material>
+      </visual>
+    <visual name="fork_1_right">
+      <origin xyz="-1.5805 -0.12 -0.9125" rpy="0 -2.0944 0" />
+      <geometry>
+        <box size="0.05 0.04 0.33" />
+        </geometry>
+      <material name="accent_red">
+        <color rgba="0.77 0.28 0.24 1" />
+        </material>
+      </visual>
+    <visual name="fork_1_left">
+      <origin xyz="-1.5805 0.12 -0.9125" rpy="0 -2.0944 0" />
+      <geometry>
+        <box size="0.05 0.04 0.33" />
+        </geometry>
+      <material name="accent_red">
+        <color rgba="0.77 0.28 0.24 1" />
+        </material>
+      </visual>
+    <visual name="rim_tie_2">
+      <origin xyz="-1.72339 0 0.995" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.024" length="0.32" />
+        </geometry>
+      <material name="steel_dark">
+        <color rgba="0.23 0.25 0.28 1" />
+        </material>
+      </visual>
+    <visual name="fork_2_right">
+      <origin xyz="-1.5805 -0.12 0.9125" rpy="0 -1.0472 0" />
+      <geometry>
+        <box size="0.05 0.04 0.33" />
+        </geometry>
+      <material name="accent_red">
+        <color rgba="0.77 0.28 0.24 1" />
+        </material>
+      </visual>
+    <visual name="fork_2_left">
+      <origin xyz="-1.5805 0.12 0.9125" rpy="0 -1.0472 0" />
+      <geometry>
+        <box size="0.05 0.04 0.33" />
+        </geometry>
+      <material name="accent_red">
+        <color rgba="0.77 0.28 0.24 1" />
+        </material>
+      </visual>
+    <visual name="rim_tie_3">
+      <origin xyz="-4.87409e-16 0 1.99" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.024" length="0.32" />
+        </geometry>
+      <material name="steel_dark">
+        <color rgba="0.23 0.25 0.28 1" />
+        </material>
+      </visual>
+    <visual name="fork_3_right">
+      <origin xyz="-4.46996e-16 -0.12 1.825" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.04 0.33" />
+        </geometry>
+      <material name="accent_red">
+        <color rgba="0.77 0.28 0.24 1" />
+        </material>
+      </visual>
+    <visual name="fork_3_left">
+      <origin xyz="-4.46996e-16 0.12 1.825" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.04 0.33" />
+        </geometry>
+      <material name="accent_red">
+        <color rgba="0.77 0.28 0.24 1" />
+        </material>
+      </visual>
+    <visual name="rim_tie_4">
+      <origin xyz="1.72339 0 0.995" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.024" length="0.32" />
+        </geometry>
+      <material name="steel_dark">
+        <color rgba="0.23 0.25 0.28 1" />
+        </material>
+      </visual>
+    <visual name="fork_4_right">
+      <origin xyz="1.5805 -0.12 0.9125" rpy="0 1.0472 0" />
+      <geometry>
+        <box size="0.05 0.04 0.33" />
+        </geometry>
+      <material name="accent_red">
+        <color rgba="0.77 0.28 0.24 1" />
+        </material>
+      </visual>
+    <visual name="fork_4_left">
+      <origin xyz="1.5805 0.12 0.9125" rpy="0 1.0472 0" />
+      <geometry>
+        <box size="0.05 0.04 0.33" />
+        </geometry>
+      <material name="accent_red">
+        <color rgba="0.77 0.28 0.24 1" />
+        </material>
+      </visual>
+    <visual name="rim_tie_5">
+      <origin xyz="1.72339 0 -0.995" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.024" length="0.32" />
+        </geometry>
+      <material name="steel_dark">
+        <color rgba="0.23 0.25 0.28 1" />
+        </material>
+      </visual>
+    <visual name="fork_5_right">
+      <origin xyz="1.5805 -0.12 -0.9125" rpy="0 2.0944 0" />
+      <geometry>
+        <box size="0.05 0.04 0.33" />
+        </geometry>
+      <material name="accent_red">
+        <color rgba="0.77 0.28 0.24 1" />
+        </material>
+      </visual>
+    <visual name="fork_5_left">
+      <origin xyz="1.5805 0.12 -0.9125" rpy="0 2.0944 0" />
+      <geometry>
+        <box size="0.05 0.04 0.33" />
+        </geometry>
+      <material name="accent_red">
+        <color rgba="0.77 0.28 0.24 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="cabin_0">
+    <visual name="hanger_rod">
+      <origin xyz="0 0 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.02" length="0.2" />
+        </geometry>
+      <material name="steel_dark">
+        <color rgba="0.23 0.25 0.28 1" />
+        </material>
+      </visual>
+    <visual name="hanger_crosshead">
+      <origin xyz="0 0 -0.015" rpy="0 0 0" />
+      <geometry>
+        <box size="0.34 0.03 0.03" />
+        </geometry>
+      <material name="steel_dark">
+        <color rgba="0.23 0.25 0.28 1" />
+        </material>
+      </visual>
+    <visual name="hanger_strap_right">
+      <origin xyz="-0.155 0 -0.185" rpy="0 0 0" />
+      <geometry>
+        <box size="0.026 0.024 0.37" />
+        </geometry>
+      <material name="steel_dark">
+        <color rgba="0.23 0.25 0.28 1" />
+        </material>
+      </visual>
+    <visual name="hanger_strap_left">
+      <origin xyz="0.155 0 -0.185" rpy="0 0 0" />
+      <geometry>
+        <box size="0.026 0.024 0.37" />
+        </geometry>
+      <material name="steel_dark">
+        <color rgba="0.23 0.25 0.28 1" />
+        </material>
+      </visual>
+    <visual name="roof">
+      <origin xyz="0 0 -0.378" rpy="0 0 0" />
+      <geometry>
+        <box size="0.42 0.18 0.03" />
+        </geometry>
+      <material name="cabin_body">
+        <color rgba="0.9 0.9 0.88 1" />
+        </material>
+      </visual>
+    <visual name="floor">
+      <origin xyz="0 0 -0.688" rpy="0 0 0" />
+      <geometry>
+        <box size="0.42 0.18 0.03" />
+        </geometry>
+      <material name="cabin_body">
+        <color rgba="0.9 0.9 0.88 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="-0.195 -0.075 -0.533" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.03 0.28" />
+        </geometry>
+      <material name="cabin_body">
+        <color rgba="0.9 0.9 0.88 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="-0.195 0.075 -0.533" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.03 0.28" />
+        </geometry>
+      <material name="cabin_body">
+        <color rgba="0.9 0.9 0.88 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="0.195 -0.075 -0.533" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.03 0.28" />
+        </geometry>
+      <material name="cabin_body">
+        <color rgba="0.9 0.9 0.88 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="0.195 0.075 -0.533" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.03 0.28" />
+        </geometry>
+      <material name="cabin_body">
+        <color rgba="0.9 0.9 0.88 1" />
+        </material>
+      </visual>
+    <visual name="front_glass">
+      <origin xyz="0 0.087 -0.533" rpy="0 0 0" />
+      <geometry>
+        <box size="0.33 0.006 0.28" />
+        </geometry>
+      <material name="glass_blue">
+        <color rgba="0.62 0.78 0.9 0.55" />
+        </material>
+      </visual>
+    <visual name="rear_glass">
+      <origin xyz="0 -0.087 -0.533" rpy="0 0 0" />
+      <geometry>
+        <box size="0.33 0.006 0.28" />
+        </geometry>
+      <material name="glass_blue">
+        <color rgba="0.62 0.78 0.9 0.55" />
+        </material>
+      </visual>
+    <visual name="right_glass">
+      <origin xyz="0.197 0 -0.533" rpy="0 0 0" />
+      <geometry>
+        <box size="0.006 0.12 0.28" />
+        </geometry>
+      <material name="glass_blue">
+        <color rgba="0.62 0.78 0.9 0.55" />
+        </material>
+      </visual>
+    <visual name="left_glass">
+      <origin xyz="-0.197 0 -0.533" rpy="0 0 0" />
+      <geometry>
+        <box size="0.006 0.12 0.28" />
+        </geometry>
+      <material name="glass_blue">
+        <color rgba="0.62 0.78 0.9 0.55" />
+        </material>
+      </visual>
+    <visual name="roof_brace">
+      <origin xyz="0 0 -0.393" rpy="0 0 0" />
+      <geometry>
+        <box size="0.18 0.028 0.04" />
+        </geometry>
+      <material name="steel_dark">
+        <color rgba="0.23 0.25 0.28 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="cabin_1">
+    <visual name="hanger_rod">
+      <origin xyz="0 0 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.02" length="0.2" />
+        </geometry>
+      <material name="steel_dark">
+        <color rgba="0.23 0.25 0.28 1" />
+        </material>
+      </visual>
+    <visual name="hanger_crosshead">
+      <origin xyz="0 0 -0.015" rpy="0 0 0" />
+      <geometry>
+        <box size="0.34 0.03 0.03" />
+        </geometry>
+      <material name="steel_dark">
+        <color rgba="0.23 0.25 0.28 1" />
+        </material>
+      </visual>
+    <visual name="hanger_strap_right">
+      <origin xyz="-0.155 0 -0.185" rpy="0 0 0" />
+      <geometry>
+        <box size="0.026 0.024 0.37" />
+        </geometry>
+      <material name="steel_dark">
+        <color rgba="0.23 0.25 0.28 1" />
+        </material>
+      </visual>
+    <visual name="hanger_strap_left">
+      <origin xyz="0.155 0 -0.185" rpy="0 0 0" />
+      <geometry>
+        <box size="0.026 0.024 0.37" />
+        </geometry>
+      <material name="steel_dark">
+        <color rgba="0.23 0.25 0.28 1" />
+        </material>
+      </visual>
+    <visual name="roof">
+      <origin xyz="0 0 -0.378" rpy="0 0 0" />
+      <geometry>
+        <box size="0.42 0.18 0.03" />
+        </geometry>
+      <material name="cabin_body">
+        <color rgba="0.9 0.9 0.88 1" />
+        </material>
+      </visual>
+    <visual name="floor">
+      <origin xyz="0 0 -0.688" rpy="0 0 0" />
+      <geometry>
+        <box size="0.42 0.18 0.03" />
+        </geometry>
+      <material name="cabin_body">
+        <color rgba="0.9 0.9 0.88 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="-0.195 -0.075 -0.533" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.03 0.28" />
+        </geometry>
+      <material name="cabin_body">
+        <color rgba="0.9 0.9 0.88 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="-0.195 0.075 -0.533" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.03 0.28" />
+        </geometry>
+      <material name="cabin_body">
+        <color rgba="0.9 0.9 0.88 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="0.195 -0.075 -0.533" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.03 0.28" />
+        </geometry>
+      <material name="cabin_body">
+        <color rgba="0.9 0.9 0.88 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="0.195 0.075 -0.533" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.03 0.28" />
+        </geometry>
+      <material name="cabin_body">
+        <color rgba="0.9 0.9 0.88 1" />
+        </material>
+      </visual>
+    <visual name="front_glass">
+      <origin xyz="0 0.087 -0.533" rpy="0 0 0" />
+      <geometry>
+        <box size="0.33 0.006 0.28" />
+        </geometry>
+      <material name="glass_blue">
+        <color rgba="0.62 0.78 0.9 0.55" />
+        </material>
+      </visual>
+    <visual name="rear_glass">
+      <origin xyz="0 -0.087 -0.533" rpy="0 0 0" />
+      <geometry>
+        <box size="0.33 0.006 0.28" />
+        </geometry>
+      <material name="glass_blue">
+        <color rgba="0.62 0.78 0.9 0.55" />
+        </material>
+      </visual>
+    <visual name="right_glass">
+      <origin xyz="0.197 0 -0.533" rpy="0 0 0" />
+      <geometry>
+        <box size="0.006 0.12 0.28" />
+        </geometry>
+      <material name="glass_blue">
+        <color rgba="0.62 0.78 0.9 0.55" />
+        </material>
+      </visual>
+    <visual name="left_glass">
+      <origin xyz="-0.197 0 -0.533" rpy="0 0 0" />
+      <geometry>
+        <box size="0.006 0.12 0.28" />
+        </geometry>
+      <material name="glass_blue">
+        <color rgba="0.62 0.78 0.9 0.55" />
+        </material>
+      </visual>
+    <visual name="roof_brace">
+      <origin xyz="0 0 -0.393" rpy="0 0 0" />
+      <geometry>
+        <box size="0.18 0.028 0.04" />
+        </geometry>
+      <material name="steel_dark">
+        <color rgba="0.23 0.25 0.28 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="cabin_2">
+    <visual name="hanger_rod">
+      <origin xyz="0 0 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.02" length="0.2" />
+        </geometry>
+      <material name="steel_dark">
+        <color rgba="0.23 0.25 0.28 1" />
+        </material>
+      </visual>
+    <visual name="hanger_crosshead">
+      <origin xyz="0 0 -0.015" rpy="0 0 0" />
+      <geometry>
+        <box size="0.34 0.03 0.03" />
+        </geometry>
+      <material name="steel_dark">
+        <color rgba="0.23 0.25 0.28 1" />
+        </material>
+      </visual>
+    <visual name="hanger_strap_right">
+      <origin xyz="-0.155 0 -0.185" rpy="0 0 0" />
+      <geometry>
+        <box size="0.026 0.024 0.37" />
+        </geometry>
+      <material name="steel_dark">
+        <color rgba="0.23 0.25 0.28 1" />
+        </material>
+      </visual>
+    <visual name="hanger_strap_left">
+      <origin xyz="0.155 0 -0.185" rpy="0 0 0" />
+      <geometry>
+        <box size="0.026 0.024 0.37" />
+        </geometry>
+      <material name="steel_dark">
+        <color rgba="0.23 0.25 0.28 1" />
+        </material>
+      </visual>
+    <visual name="roof">
+      <origin xyz="0 0 -0.378" rpy="0 0 0" />
+      <geometry>
+        <box size="0.42 0.18 0.03" />
+        </geometry>
+      <material name="cabin_body">
+        <color rgba="0.9 0.9 0.88 1" />
+        </material>
+      </visual>
+    <visual name="floor">
+      <origin xyz="0 0 -0.688" rpy="0 0 0" />
+      <geometry>
+        <box size="0.42 0.18 0.03" />
+        </geometry>
+      <material name="cabin_body">
+        <color rgba="0.9 0.9 0.88 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="-0.195 -0.075 -0.533" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.03 0.28" />
+        </geometry>
+      <material name="cabin_body">
+        <color rgba="0.9 0.9 0.88 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="-0.195 0.075 -0.533" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.03 0.28" />
+        </geometry>
+      <material name="cabin_body">
+        <color rgba="0.9 0.9 0.88 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="0.195 -0.075 -0.533" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.03 0.28" />
+        </geometry>
+      <material name="cabin_body">
+        <color rgba="0.9 0.9 0.88 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="0.195 0.075 -0.533" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.03 0.28" />
+        </geometry>
+      <material name="cabin_body">
+        <color rgba="0.9 0.9 0.88 1" />
+        </material>
+      </visual>
+    <visual name="front_glass">
+      <origin xyz="0 0.087 -0.533" rpy="0 0 0" />
+      <geometry>
+        <box size="0.33 0.006 0.28" />
+        </geometry>
+      <material name="glass_blue">
+        <color rgba="0.62 0.78 0.9 0.55" />
+        </material>
+      </visual>
+    <visual name="rear_glass">
+      <origin xyz="0 -0.087 -0.533" rpy="0 0 0" />
+      <geometry>
+        <box size="0.33 0.006 0.28" />
+        </geometry>
+      <material name="glass_blue">
+        <color rgba="0.62 0.78 0.9 0.55" />
+        </material>
+      </visual>
+    <visual name="right_glass">
+      <origin xyz="0.197 0 -0.533" rpy="0 0 0" />
+      <geometry>
+        <box size="0.006 0.12 0.28" />
+        </geometry>
+      <material name="glass_blue">
+        <color rgba="0.62 0.78 0.9 0.55" />
+        </material>
+      </visual>
+    <visual name="left_glass">
+      <origin xyz="-0.197 0 -0.533" rpy="0 0 0" />
+      <geometry>
+        <box size="0.006 0.12 0.28" />
+        </geometry>
+      <material name="glass_blue">
+        <color rgba="0.62 0.78 0.9 0.55" />
+        </material>
+      </visual>
+    <visual name="roof_brace">
+      <origin xyz="0 0 -0.393" rpy="0 0 0" />
+      <geometry>
+        <box size="0.18 0.028 0.04" />
+        </geometry>
+      <material name="steel_dark">
+        <color rgba="0.23 0.25 0.28 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="cabin_3">
+    <visual name="hanger_rod">
+      <origin xyz="0 0 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.02" length="0.2" />
+        </geometry>
+      <material name="steel_dark">
+        <color rgba="0.23 0.25 0.28 1" />
+        </material>
+      </visual>
+    <visual name="hanger_crosshead">
+      <origin xyz="0 0 -0.015" rpy="0 0 0" />
+      <geometry>
+        <box size="0.34 0.03 0.03" />
+        </geometry>
+      <material name="steel_dark">
+        <color rgba="0.23 0.25 0.28 1" />
+        </material>
+      </visual>
+    <visual name="hanger_strap_right">
+      <origin xyz="-0.155 0 -0.185" rpy="0 0 0" />
+      <geometry>
+        <box size="0.026 0.024 0.37" />
+        </geometry>
+      <material name="steel_dark">
+        <color rgba="0.23 0.25 0.28 1" />
+        </material>
+      </visual>
+    <visual name="hanger_strap_left">
+      <origin xyz="0.155 0 -0.185" rpy="0 0 0" />
+      <geometry>
+        <box size="0.026 0.024 0.37" />
+        </geometry>
+      <material name="steel_dark">
+        <color rgba="0.23 0.25 0.28 1" />
+        </material>
+      </visual>
+    <visual name="roof">
+      <origin xyz="0 0 -0.378" rpy="0 0 0" />
+      <geometry>
+        <box size="0.42 0.18 0.03" />
+        </geometry>
+      <material name="cabin_body">
+        <color rgba="0.9 0.9 0.88 1" />
+        </material>
+      </visual>
+    <visual name="floor">
+      <origin xyz="0 0 -0.688" rpy="0 0 0" />
+      <geometry>
+        <box size="0.42 0.18 0.03" />
+        </geometry>
+      <material name="cabin_body">
+        <color rgba="0.9 0.9 0.88 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="-0.195 -0.075 -0.533" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.03 0.28" />
+        </geometry>
+      <material name="cabin_body">
+        <color rgba="0.9 0.9 0.88 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="-0.195 0.075 -0.533" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.03 0.28" />
+        </geometry>
+      <material name="cabin_body">
+        <color rgba="0.9 0.9 0.88 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="0.195 -0.075 -0.533" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.03 0.28" />
+        </geometry>
+      <material name="cabin_body">
+        <color rgba="0.9 0.9 0.88 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="0.195 0.075 -0.533" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.03 0.28" />
+        </geometry>
+      <material name="cabin_body">
+        <color rgba="0.9 0.9 0.88 1" />
+        </material>
+      </visual>
+    <visual name="front_glass">
+      <origin xyz="0 0.087 -0.533" rpy="0 0 0" />
+      <geometry>
+        <box size="0.33 0.006 0.28" />
+        </geometry>
+      <material name="glass_blue">
+        <color rgba="0.62 0.78 0.9 0.55" />
+        </material>
+      </visual>
+    <visual name="rear_glass">
+      <origin xyz="0 -0.087 -0.533" rpy="0 0 0" />
+      <geometry>
+        <box size="0.33 0.006 0.28" />
+        </geometry>
+      <material name="glass_blue">
+        <color rgba="0.62 0.78 0.9 0.55" />
+        </material>
+      </visual>
+    <visual name="right_glass">
+      <origin xyz="0.197 0 -0.533" rpy="0 0 0" />
+      <geometry>
+        <box size="0.006 0.12 0.28" />
+        </geometry>
+      <material name="glass_blue">
+        <color rgba="0.62 0.78 0.9 0.55" />
+        </material>
+      </visual>
+    <visual name="left_glass">
+      <origin xyz="-0.197 0 -0.533" rpy="0 0 0" />
+      <geometry>
+        <box size="0.006 0.12 0.28" />
+        </geometry>
+      <material name="glass_blue">
+        <color rgba="0.62 0.78 0.9 0.55" />
+        </material>
+      </visual>
+    <visual name="roof_brace">
+      <origin xyz="0 0 -0.393" rpy="0 0 0" />
+      <geometry>
+        <box size="0.18 0.028 0.04" />
+        </geometry>
+      <material name="steel_dark">
+        <color rgba="0.23 0.25 0.28 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="cabin_4">
+    <visual name="hanger_rod">
+      <origin xyz="0 0 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.02" length="0.2" />
+        </geometry>
+      <material name="steel_dark">
+        <color rgba="0.23 0.25 0.28 1" />
+        </material>
+      </visual>
+    <visual name="hanger_crosshead">
+      <origin xyz="0 0 -0.015" rpy="0 0 0" />
+      <geometry>
+        <box size="0.34 0.03 0.03" />
+        </geometry>
+      <material name="steel_dark">
+        <color rgba="0.23 0.25 0.28 1" />
+        </material>
+      </visual>
+    <visual name="hanger_strap_right">
+      <origin xyz="-0.155 0 -0.185" rpy="0 0 0" />
+      <geometry>
+        <box size="0.026 0.024 0.37" />
+        </geometry>
+      <material name="steel_dark">
+        <color rgba="0.23 0.25 0.28 1" />
+        </material>
+      </visual>
+    <visual name="hanger_strap_left">
+      <origin xyz="0.155 0 -0.185" rpy="0 0 0" />
+      <geometry>
+        <box size="0.026 0.024 0.37" />
+        </geometry>
+      <material name="steel_dark">
+        <color rgba="0.23 0.25 0.28 1" />
+        </material>
+      </visual>
+    <visual name="roof">
+      <origin xyz="0 0 -0.378" rpy="0 0 0" />
+      <geometry>
+        <box size="0.42 0.18 0.03" />
+        </geometry>
+      <material name="cabin_body">
+        <color rgba="0.9 0.9 0.88 1" />
+        </material>
+      </visual>
+    <visual name="floor">
+      <origin xyz="0 0 -0.688" rpy="0 0 0" />
+      <geometry>
+        <box size="0.42 0.18 0.03" />
+        </geometry>
+      <material name="cabin_body">
+        <color rgba="0.9 0.9 0.88 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="-0.195 -0.075 -0.533" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.03 0.28" />
+        </geometry>
+      <material name="cabin_body">
+        <color rgba="0.9 0.9 0.88 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="-0.195 0.075 -0.533" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.03 0.28" />
+        </geometry>
+      <material name="cabin_body">
+        <color rgba="0.9 0.9 0.88 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="0.195 -0.075 -0.533" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.03 0.28" />
+        </geometry>
+      <material name="cabin_body">
+        <color rgba="0.9 0.9 0.88 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="0.195 0.075 -0.533" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.03 0.28" />
+        </geometry>
+      <material name="cabin_body">
+        <color rgba="0.9 0.9 0.88 1" />
+        </material>
+      </visual>
+    <visual name="front_glass">
+      <origin xyz="0 0.087 -0.533" rpy="0 0 0" />
+      <geometry>
+        <box size="0.33 0.006 0.28" />
+        </geometry>
+      <material name="glass_blue">
+        <color rgba="0.62 0.78 0.9 0.55" />
+        </material>
+      </visual>
+    <visual name="rear_glass">
+      <origin xyz="0 -0.087 -0.533" rpy="0 0 0" />
+      <geometry>
+        <box size="0.33 0.006 0.28" />
+        </geometry>
+      <material name="glass_blue">
+        <color rgba="0.62 0.78 0.9 0.55" />
+        </material>
+      </visual>
+    <visual name="right_glass">
+      <origin xyz="0.197 0 -0.533" rpy="0 0 0" />
+      <geometry>
+        <box size="0.006 0.12 0.28" />
+        </geometry>
+      <material name="glass_blue">
+        <color rgba="0.62 0.78 0.9 0.55" />
+        </material>
+      </visual>
+    <visual name="left_glass">
+      <origin xyz="-0.197 0 -0.533" rpy="0 0 0" />
+      <geometry>
+        <box size="0.006 0.12 0.28" />
+        </geometry>
+      <material name="glass_blue">
+        <color rgba="0.62 0.78 0.9 0.55" />
+        </material>
+      </visual>
+    <visual name="roof_brace">
+      <origin xyz="0 0 -0.393" rpy="0 0 0" />
+      <geometry>
+        <box size="0.18 0.028 0.04" />
+        </geometry>
+      <material name="steel_dark">
+        <color rgba="0.23 0.25 0.28 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="cabin_5">
+    <visual name="hanger_rod">
+      <origin xyz="0 0 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.02" length="0.2" />
+        </geometry>
+      <material name="steel_dark">
+        <color rgba="0.23 0.25 0.28 1" />
+        </material>
+      </visual>
+    <visual name="hanger_crosshead">
+      <origin xyz="0 0 -0.015" rpy="0 0 0" />
+      <geometry>
+        <box size="0.34 0.03 0.03" />
+        </geometry>
+      <material name="steel_dark">
+        <color rgba="0.23 0.25 0.28 1" />
+        </material>
+      </visual>
+    <visual name="hanger_strap_right">
+      <origin xyz="-0.155 0 -0.185" rpy="0 0 0" />
+      <geometry>
+        <box size="0.026 0.024 0.37" />
+        </geometry>
+      <material name="steel_dark">
+        <color rgba="0.23 0.25 0.28 1" />
+        </material>
+      </visual>
+    <visual name="hanger_strap_left">
+      <origin xyz="0.155 0 -0.185" rpy="0 0 0" />
+      <geometry>
+        <box size="0.026 0.024 0.37" />
+        </geometry>
+      <material name="steel_dark">
+        <color rgba="0.23 0.25 0.28 1" />
+        </material>
+      </visual>
+    <visual name="roof">
+      <origin xyz="0 0 -0.378" rpy="0 0 0" />
+      <geometry>
+        <box size="0.42 0.18 0.03" />
+        </geometry>
+      <material name="cabin_body">
+        <color rgba="0.9 0.9 0.88 1" />
+        </material>
+      </visual>
+    <visual name="floor">
+      <origin xyz="0 0 -0.688" rpy="0 0 0" />
+      <geometry>
+        <box size="0.42 0.18 0.03" />
+        </geometry>
+      <material name="cabin_body">
+        <color rgba="0.9 0.9 0.88 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="-0.195 -0.075 -0.533" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.03 0.28" />
+        </geometry>
+      <material name="cabin_body">
+        <color rgba="0.9 0.9 0.88 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="-0.195 0.075 -0.533" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.03 0.28" />
+        </geometry>
+      <material name="cabin_body">
+        <color rgba="0.9 0.9 0.88 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="0.195 -0.075 -0.533" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.03 0.28" />
+        </geometry>
+      <material name="cabin_body">
+        <color rgba="0.9 0.9 0.88 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="0.195 0.075 -0.533" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.03 0.28" />
+        </geometry>
+      <material name="cabin_body">
+        <color rgba="0.9 0.9 0.88 1" />
+        </material>
+      </visual>
+    <visual name="front_glass">
+      <origin xyz="0 0.087 -0.533" rpy="0 0 0" />
+      <geometry>
+        <box size="0.33 0.006 0.28" />
+        </geometry>
+      <material name="glass_blue">
+        <color rgba="0.62 0.78 0.9 0.55" />
+        </material>
+      </visual>
+    <visual name="rear_glass">
+      <origin xyz="0 -0.087 -0.533" rpy="0 0 0" />
+      <geometry>
+        <box size="0.33 0.006 0.28" />
+        </geometry>
+      <material name="glass_blue">
+        <color rgba="0.62 0.78 0.9 0.55" />
+        </material>
+      </visual>
+    <visual name="right_glass">
+      <origin xyz="0.197 0 -0.533" rpy="0 0 0" />
+      <geometry>
+        <box size="0.006 0.12 0.28" />
+        </geometry>
+      <material name="glass_blue">
+        <color rgba="0.62 0.78 0.9 0.55" />
+        </material>
+      </visual>
+    <visual name="left_glass">
+      <origin xyz="-0.197 0 -0.533" rpy="0 0 0" />
+      <geometry>
+        <box size="0.006 0.12 0.28" />
+        </geometry>
+      <material name="glass_blue">
+        <color rgba="0.62 0.78 0.9 0.55" />
+        </material>
+      </visual>
+    <visual name="roof_brace">
+      <origin xyz="0 0 -0.393" rpy="0 0 0" />
+      <geometry>
+        <box size="0.18 0.028 0.04" />
+        </geometry>
+      <material name="steel_dark">
+        <color rgba="0.23 0.25 0.28 1" />
+        </material>
+      </visual>
+    </link>
+  <joint name="base_to_wheel" type="continuous">
+    <origin xyz="0 0 2.55" rpy="0 0 0" />
+    <parent link="base" />
+    <child link="wheel" />
+    <axis xyz="0 1 0" />
+    <limit effort="40" velocity="1.2" />
+    </joint>
+  <joint name="wheel_to_cabin_0" type="continuous">
+    <origin xyz="2.03291e-16 0 -1.66" rpy="0 0 0" />
+    <parent link="wheel" />
+    <child link="cabin_0" />
+    <axis xyz="0 1 0" />
+    <limit effort="6" velocity="2" />
+    </joint>
+  <joint name="wheel_to_cabin_1" type="continuous">
+    <origin xyz="-1.4376 0 -0.83" rpy="0 0 0" />
+    <parent link="wheel" />
+    <child link="cabin_1" />
+    <axis xyz="0 1 0" />
+    <limit effort="6" velocity="2" />
+    </joint>
+  <joint name="wheel_to_cabin_2" type="continuous">
+    <origin xyz="-1.4376 0 0.83" rpy="0 0 0" />
+    <parent link="wheel" />
+    <child link="cabin_2" />
+    <axis xyz="0 1 0" />
+    <limit effort="6" velocity="2" />
+    </joint>
+  <joint name="wheel_to_cabin_3" type="continuous">
+    <origin xyz="-4.06583e-16 0 1.66" rpy="0 0 0" />
+    <parent link="wheel" />
+    <child link="cabin_3" />
+    <axis xyz="0 1 0" />
+    <limit effort="6" velocity="2" />
+    </joint>
+  <joint name="wheel_to_cabin_4" type="continuous">
+    <origin xyz="1.4376 0 0.83" rpy="0 0 0" />
+    <parent link="wheel" />
+    <child link="cabin_4" />
+    <axis xyz="0 1 0" />
+    <limit effort="6" velocity="2" />
+    </joint>
+  <joint name="wheel_to_cabin_5" type="continuous">
+    <origin xyz="1.4376 0 -0.83" rpy="0 0 0" />
+    <parent link="wheel" />
+    <child link="cabin_5" />
+    <axis xyz="0 1 0" />
+    <limit effort="6" velocity="2" />
+    </joint>
+  </robot>

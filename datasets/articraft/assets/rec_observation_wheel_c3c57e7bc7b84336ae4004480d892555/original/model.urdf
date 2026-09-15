@@ -1,0 +1,1051 @@
+<robot name="transportable_ferris_wheel">
+  <material name="painted_steel">
+    <color rgba="0.12 0.14 0.15 1" />
+    </material>
+  <material name="safety_yellow">
+    <color rgba="0.95 0.7 0.1 1" />
+    </material>
+  <material name="outrigger_red">
+    <color rgba="0.82 0.08 0.05 1" />
+    </material>
+  <material name="cabin_blue">
+    <color rgba="0.08 0.25 0.78 1" />
+    </material>
+  <material name="cabin_orange">
+    <color rgba="0.95 0.36 0.08 1" />
+    </material>
+  <material name="cabin_cream">
+    <color rgba="0.95 0.88 0.68 1" />
+    </material>
+  <material name="rubber_black">
+    <color rgba="0.015 0.014 0.012 1" />
+    </material>
+  <material name="galvanized_metal">
+    <color rgba="0.72 0.75 0.76 1" />
+    </material>
+  <link name="base">
+    <visual name="deck">
+      <origin xyz="-0.1 0 0.14" rpy="0 0 0" />
+      <geometry>
+        <box size="1.75 0.48 0.12" />
+        </geometry>
+      <material name="painted_steel">
+        <color rgba="0.12 0.14 0.15 1" />
+        </material>
+      </visual>
+    <visual name="center_beam">
+      <origin xyz="-0.12 0 0.08" rpy="0 0 0" />
+      <geometry>
+        <box size="1.9 0.1 0.1" />
+        </geometry>
+      <material name="painted_steel">
+        <color rgba="0.12 0.14 0.15 1" />
+        </material>
+      </visual>
+    <visual name="side_rail_0">
+      <origin xyz="-0.18 0.22 0.21" rpy="0 0 0" />
+      <geometry>
+        <box size="1.55 0.08 0.07" />
+        </geometry>
+      <material name="painted_steel">
+        <color rgba="0.12 0.14 0.15 1" />
+        </material>
+      </visual>
+    <visual name="side_rail_1">
+      <origin xyz="-0.18 -0.22 0.21" rpy="0 0 0" />
+      <geometry>
+        <box size="1.55 0.08 0.07" />
+        </geometry>
+      <material name="painted_steel">
+        <color rgba="0.12 0.14 0.15 1" />
+        </material>
+      </visual>
+    <visual name="tongue_0">
+      <geometry>
+        <mesh filename="assets/meshes/tongue_0.obj" />
+        </geometry>
+      <material name="painted_steel">
+        <color rgba="0.12 0.14 0.15 1" />
+        </material>
+      </visual>
+    <visual name="tongue_1">
+      <geometry>
+        <mesh filename="assets/meshes/tongue_1.obj" />
+        </geometry>
+      <material name="painted_steel">
+        <color rgba="0.12 0.14 0.15 1" />
+        </material>
+      </visual>
+    <visual name="tow_coupler">
+      <origin xyz="1.51 0 0.16" rpy="0 0 0" />
+      <geometry>
+        <box size="0.18 0.12 0.07" />
+        </geometry>
+      <material name="galvanized_metal">
+        <color rgba="0.72 0.75 0.76 1" />
+        </material>
+      </visual>
+    <visual name="road_axle">
+      <origin xyz="-0.52 0 0.13" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.024" length="0.84" />
+        </geometry>
+      <material name="galvanized_metal">
+        <color rgba="0.72 0.75 0.76 1" />
+        </material>
+      </visual>
+    <visual name="road_tire_0">
+      <origin xyz="-0.52 0.43 0.13" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.155" length="0.075" />
+        </geometry>
+      <material name="rubber_black">
+        <color rgba="0.015 0.014 0.012 1" />
+        </material>
+      </visual>
+    <visual name="road_hub_0">
+      <origin xyz="-0.52 0.43 0.13" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.065" length="0.082" />
+        </geometry>
+      <material name="galvanized_metal">
+        <color rgba="0.72 0.75 0.76 1" />
+        </material>
+      </visual>
+    <visual name="road_tire_1">
+      <origin xyz="-0.52 -0.43 0.13" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.155" length="0.075" />
+        </geometry>
+      <material name="rubber_black">
+        <color rgba="0.015 0.014 0.012 1" />
+        </material>
+      </visual>
+    <visual name="road_hub_1">
+      <origin xyz="-0.52 -0.43 0.13" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.065" length="0.082" />
+        </geometry>
+      <material name="galvanized_metal">
+        <color rgba="0.72 0.75 0.76 1" />
+        </material>
+      </visual>
+    <visual name="tower_front_0">
+      <geometry>
+        <mesh filename="assets/meshes/tower_front_0.obj" />
+        </geometry>
+      <material name="painted_steel">
+        <color rgba="0.12 0.14 0.15 1" />
+        </material>
+      </visual>
+    <visual name="tower_rear_0">
+      <geometry>
+        <mesh filename="assets/meshes/tower_rear_0.obj" />
+        </geometry>
+      <material name="painted_steel">
+        <color rgba="0.12 0.14 0.15 1" />
+        </material>
+      </visual>
+    <visual name="tower_cross_0">
+      <geometry>
+        <mesh filename="assets/meshes/tower_cross_0.obj" />
+        </geometry>
+      <material name="galvanized_metal">
+        <color rgba="0.72 0.75 0.76 1" />
+        </material>
+      </visual>
+    <visual name="bearing_post_0">
+      <origin xyz="0 0.18 1.1" rpy="0 0 0" />
+      <geometry>
+        <box size="0.1 0.08 0.1" />
+        </geometry>
+      <material name="painted_steel">
+        <color rgba="0.12 0.14 0.15 1" />
+        </material>
+      </visual>
+    <visual name="axle_bearing_0">
+      <origin xyz="0 0.18 1.2" rpy="0 0 0" />
+      <geometry>
+        <box size="0.15 0.08 0.1" />
+        </geometry>
+      <material name="galvanized_metal">
+        <color rgba="0.72 0.75 0.76 1" />
+        </material>
+      </visual>
+    <visual name="upper_post_0">
+      <geometry>
+        <mesh filename="assets/meshes/upper_post_0.obj" />
+        </geometry>
+      <material name="galvanized_metal">
+        <color rgba="0.72 0.75 0.76 1" />
+        </material>
+      </visual>
+    <visual name="tower_front_1">
+      <geometry>
+        <mesh filename="assets/meshes/tower_front_1.obj" />
+        </geometry>
+      <material name="painted_steel">
+        <color rgba="0.12 0.14 0.15 1" />
+        </material>
+      </visual>
+    <visual name="tower_rear_1">
+      <geometry>
+        <mesh filename="assets/meshes/tower_rear_1.obj" />
+        </geometry>
+      <material name="painted_steel">
+        <color rgba="0.12 0.14 0.15 1" />
+        </material>
+      </visual>
+    <visual name="tower_cross_1">
+      <geometry>
+        <mesh filename="assets/meshes/tower_cross_1.obj" />
+        </geometry>
+      <material name="galvanized_metal">
+        <color rgba="0.72 0.75 0.76 1" />
+        </material>
+      </visual>
+    <visual name="bearing_post_1">
+      <origin xyz="0 -0.18 1.1" rpy="0 0 0" />
+      <geometry>
+        <box size="0.1 0.08 0.1" />
+        </geometry>
+      <material name="painted_steel">
+        <color rgba="0.12 0.14 0.15 1" />
+        </material>
+      </visual>
+    <visual name="axle_bearing_1">
+      <origin xyz="0 -0.18 1.2" rpy="0 0 0" />
+      <geometry>
+        <box size="0.15 0.08 0.1" />
+        </geometry>
+      <material name="galvanized_metal">
+        <color rgba="0.72 0.75 0.76 1" />
+        </material>
+      </visual>
+    <visual name="upper_post_1">
+      <geometry>
+        <mesh filename="assets/meshes/upper_post_1.obj" />
+        </geometry>
+      <material name="galvanized_metal">
+        <color rgba="0.72 0.75 0.76 1" />
+        </material>
+      </visual>
+    <visual name="top_spreader">
+      <geometry>
+        <mesh filename="assets/meshes/top_spreader.obj" />
+        </geometry>
+      <material name="galvanized_metal">
+        <color rgba="0.72 0.75 0.76 1" />
+        </material>
+      </visual>
+    <visual name="base_spreader">
+      <geometry>
+        <mesh filename="assets/meshes/base_spreader.obj" />
+        </geometry>
+      <material name="painted_steel">
+        <color rgba="0.12 0.14 0.15 1" />
+        </material>
+      </visual>
+    <visual name="outrigger_socket_0">
+      <origin xyz="-0.72 0.3 0.17" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.038" length="0.16" />
+        </geometry>
+      <material name="galvanized_metal">
+        <color rgba="0.72 0.75 0.76 1" />
+        </material>
+      </visual>
+    <visual name="socket_mount_0">
+      <origin xyz="-0.72 0.2451 0.17" rpy="0 0 0" />
+      <geometry>
+        <box size="0.13 0.035 0.08" />
+        </geometry>
+      <material name="painted_steel">
+        <color rgba="0.12 0.14 0.15 1" />
+        </material>
+      </visual>
+    <visual name="outrigger_socket_1">
+      <origin xyz="-0.72 -0.3 0.17" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.038" length="0.16" />
+        </geometry>
+      <material name="galvanized_metal">
+        <color rgba="0.72 0.75 0.76 1" />
+        </material>
+      </visual>
+    <visual name="socket_mount_1">
+      <origin xyz="-0.72 -0.2451 0.17" rpy="0 0 0" />
+      <geometry>
+        <box size="0.13 0.035 0.08" />
+        </geometry>
+      <material name="painted_steel">
+        <color rgba="0.12 0.14 0.15 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="wheel">
+    <visual name="rim_0">
+      <geometry>
+        <mesh filename="assets/meshes/rim_0.obj" />
+        </geometry>
+      <material name="safety_yellow">
+        <color rgba="0.95 0.7 0.1 1" />
+        </material>
+      </visual>
+    <visual name="spoke_0_0">
+      <geometry>
+        <mesh filename="assets/meshes/spoke_0_0.obj" />
+        </geometry>
+      <material name="safety_yellow">
+        <color rgba="0.95 0.7 0.1 1" />
+        </material>
+      </visual>
+    <visual name="spoke_0_1">
+      <geometry>
+        <mesh filename="assets/meshes/spoke_0_1.obj" />
+        </geometry>
+      <material name="safety_yellow">
+        <color rgba="0.95 0.7 0.1 1" />
+        </material>
+      </visual>
+    <visual name="spoke_0_2">
+      <geometry>
+        <mesh filename="assets/meshes/spoke_0_2.obj" />
+        </geometry>
+      <material name="safety_yellow">
+        <color rgba="0.95 0.7 0.1 1" />
+        </material>
+      </visual>
+    <visual name="spoke_0_3">
+      <geometry>
+        <mesh filename="assets/meshes/spoke_0_3.obj" />
+        </geometry>
+      <material name="safety_yellow">
+        <color rgba="0.95 0.7 0.1 1" />
+        </material>
+      </visual>
+    <visual name="spoke_0_4">
+      <geometry>
+        <mesh filename="assets/meshes/spoke_0_4.obj" />
+        </geometry>
+      <material name="safety_yellow">
+        <color rgba="0.95 0.7 0.1 1" />
+        </material>
+      </visual>
+    <visual name="spoke_0_5">
+      <geometry>
+        <mesh filename="assets/meshes/spoke_0_5.obj" />
+        </geometry>
+      <material name="safety_yellow">
+        <color rgba="0.95 0.7 0.1 1" />
+        </material>
+      </visual>
+    <visual name="spoke_0_6">
+      <geometry>
+        <mesh filename="assets/meshes/spoke_0_6.obj" />
+        </geometry>
+      <material name="safety_yellow">
+        <color rgba="0.95 0.7 0.1 1" />
+        </material>
+      </visual>
+    <visual name="spoke_0_7">
+      <geometry>
+        <mesh filename="assets/meshes/spoke_0_7.obj" />
+        </geometry>
+      <material name="safety_yellow">
+        <color rgba="0.95 0.7 0.1 1" />
+        </material>
+      </visual>
+    <visual name="spoke_0_8">
+      <geometry>
+        <mesh filename="assets/meshes/spoke_0_8.obj" />
+        </geometry>
+      <material name="safety_yellow">
+        <color rgba="0.95 0.7 0.1 1" />
+        </material>
+      </visual>
+    <visual name="spoke_0_9">
+      <geometry>
+        <mesh filename="assets/meshes/spoke_0_9.obj" />
+        </geometry>
+      <material name="safety_yellow">
+        <color rgba="0.95 0.7 0.1 1" />
+        </material>
+      </visual>
+    <visual name="spoke_0_10">
+      <geometry>
+        <mesh filename="assets/meshes/spoke_0_10.obj" />
+        </geometry>
+      <material name="safety_yellow">
+        <color rgba="0.95 0.7 0.1 1" />
+        </material>
+      </visual>
+    <visual name="spoke_0_11">
+      <geometry>
+        <mesh filename="assets/meshes/spoke_0_11.obj" />
+        </geometry>
+      <material name="safety_yellow">
+        <color rgba="0.95 0.7 0.1 1" />
+        </material>
+      </visual>
+    <visual name="rim_1">
+      <geometry>
+        <mesh filename="assets/meshes/rim_1.obj" />
+        </geometry>
+      <material name="safety_yellow">
+        <color rgba="0.95 0.7 0.1 1" />
+        </material>
+      </visual>
+    <visual name="spoke_1_0">
+      <geometry>
+        <mesh filename="assets/meshes/spoke_1_0.obj" />
+        </geometry>
+      <material name="safety_yellow">
+        <color rgba="0.95 0.7 0.1 1" />
+        </material>
+      </visual>
+    <visual name="spoke_1_1">
+      <geometry>
+        <mesh filename="assets/meshes/spoke_1_1.obj" />
+        </geometry>
+      <material name="safety_yellow">
+        <color rgba="0.95 0.7 0.1 1" />
+        </material>
+      </visual>
+    <visual name="spoke_1_2">
+      <geometry>
+        <mesh filename="assets/meshes/spoke_1_2.obj" />
+        </geometry>
+      <material name="safety_yellow">
+        <color rgba="0.95 0.7 0.1 1" />
+        </material>
+      </visual>
+    <visual name="spoke_1_3">
+      <geometry>
+        <mesh filename="assets/meshes/spoke_1_3.obj" />
+        </geometry>
+      <material name="safety_yellow">
+        <color rgba="0.95 0.7 0.1 1" />
+        </material>
+      </visual>
+    <visual name="spoke_1_4">
+      <geometry>
+        <mesh filename="assets/meshes/spoke_1_4.obj" />
+        </geometry>
+      <material name="safety_yellow">
+        <color rgba="0.95 0.7 0.1 1" />
+        </material>
+      </visual>
+    <visual name="spoke_1_5">
+      <geometry>
+        <mesh filename="assets/meshes/spoke_1_5.obj" />
+        </geometry>
+      <material name="safety_yellow">
+        <color rgba="0.95 0.7 0.1 1" />
+        </material>
+      </visual>
+    <visual name="spoke_1_6">
+      <geometry>
+        <mesh filename="assets/meshes/spoke_1_6.obj" />
+        </geometry>
+      <material name="safety_yellow">
+        <color rgba="0.95 0.7 0.1 1" />
+        </material>
+      </visual>
+    <visual name="spoke_1_7">
+      <geometry>
+        <mesh filename="assets/meshes/spoke_1_7.obj" />
+        </geometry>
+      <material name="safety_yellow">
+        <color rgba="0.95 0.7 0.1 1" />
+        </material>
+      </visual>
+    <visual name="spoke_1_8">
+      <geometry>
+        <mesh filename="assets/meshes/spoke_1_8.obj" />
+        </geometry>
+      <material name="safety_yellow">
+        <color rgba="0.95 0.7 0.1 1" />
+        </material>
+      </visual>
+    <visual name="spoke_1_9">
+      <geometry>
+        <mesh filename="assets/meshes/spoke_1_9.obj" />
+        </geometry>
+      <material name="safety_yellow">
+        <color rgba="0.95 0.7 0.1 1" />
+        </material>
+      </visual>
+    <visual name="spoke_1_10">
+      <geometry>
+        <mesh filename="assets/meshes/spoke_1_10.obj" />
+        </geometry>
+      <material name="safety_yellow">
+        <color rgba="0.95 0.7 0.1 1" />
+        </material>
+      </visual>
+    <visual name="spoke_1_11">
+      <geometry>
+        <mesh filename="assets/meshes/spoke_1_11.obj" />
+        </geometry>
+      <material name="safety_yellow">
+        <color rgba="0.95 0.7 0.1 1" />
+        </material>
+      </visual>
+    <visual name="rim_tie_0">
+      <geometry>
+        <mesh filename="assets/meshes/rim_tie_0.obj" />
+        </geometry>
+      <material name="safety_yellow">
+        <color rgba="0.95 0.7 0.1 1" />
+        </material>
+      </visual>
+    <visual name="rim_tie_2">
+      <geometry>
+        <mesh filename="assets/meshes/rim_tie_2.obj" />
+        </geometry>
+      <material name="safety_yellow">
+        <color rgba="0.95 0.7 0.1 1" />
+        </material>
+      </visual>
+    <visual name="rim_tie_4">
+      <geometry>
+        <mesh filename="assets/meshes/rim_tie_4.obj" />
+        </geometry>
+      <material name="safety_yellow">
+        <color rgba="0.95 0.7 0.1 1" />
+        </material>
+      </visual>
+    <visual name="rim_tie_6">
+      <geometry>
+        <mesh filename="assets/meshes/rim_tie_6.obj" />
+        </geometry>
+      <material name="safety_yellow">
+        <color rgba="0.95 0.7 0.1 1" />
+        </material>
+      </visual>
+    <visual name="rim_tie_8">
+      <geometry>
+        <mesh filename="assets/meshes/rim_tie_8.obj" />
+        </geometry>
+      <material name="safety_yellow">
+        <color rgba="0.95 0.7 0.1 1" />
+        </material>
+      </visual>
+    <visual name="rim_tie_10">
+      <geometry>
+        <mesh filename="assets/meshes/rim_tie_10.obj" />
+        </geometry>
+      <material name="safety_yellow">
+        <color rgba="0.95 0.7 0.1 1" />
+        </material>
+      </visual>
+    <visual name="hub">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.055" length="0.28" />
+        </geometry>
+      <material name="galvanized_metal">
+        <color rgba="0.72 0.75 0.76 1" />
+        </material>
+      </visual>
+    <visual name="axle_stub">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.032" length="0.46" />
+        </geometry>
+      <material name="painted_steel">
+        <color rgba="0.12 0.14 0.15 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="gondola_0">
+    <visual name="pivot_bar">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.148" />
+        </geometry>
+      <material name="galvanized_metal">
+        <color rgba="0.72 0.75 0.76 1" />
+        </material>
+      </visual>
+    <visual name="top_yoke">
+      <origin xyz="0 0 -0.006" rpy="0 0 0" />
+      <geometry>
+        <box size="0.16 0.02 0.024" />
+        </geometry>
+      <material name="galvanized_metal">
+        <color rgba="0.72 0.75 0.76 1" />
+        </material>
+      </visual>
+    <visual name="hanger_0">
+      <origin xyz="-0.065 0 -0.09" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.018 0.18" />
+        </geometry>
+      <material name="galvanized_metal">
+        <color rgba="0.72 0.75 0.76 1" />
+        </material>
+      </visual>
+    <visual name="hanger_1">
+      <origin xyz="0.065 0 -0.09" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.018 0.18" />
+        </geometry>
+      <material name="galvanized_metal">
+        <color rgba="0.72 0.75 0.76 1" />
+        </material>
+      </visual>
+    <visual name="basket_shell">
+      <origin xyz="0 0 -0.205" rpy="0 0 0" />
+      <geometry>
+        <box size="0.19 0.095 0.1" />
+        </geometry>
+      <material name="cabin_blue">
+        <color rgba="0.08 0.25 0.78 1" />
+        </material>
+      </visual>
+    <visual name="seat_rail">
+      <origin xyz="0 0 -0.135" rpy="0 0 0" />
+      <geometry>
+        <box size="0.17 0.105 0.035" />
+        </geometry>
+      <material name="cabin_cream">
+        <color rgba="0.95 0.88 0.68 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="gondola_1">
+    <visual name="pivot_bar">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.148" />
+        </geometry>
+      <material name="galvanized_metal">
+        <color rgba="0.72 0.75 0.76 1" />
+        </material>
+      </visual>
+    <visual name="top_yoke">
+      <origin xyz="0 0 -0.006" rpy="0 0 0" />
+      <geometry>
+        <box size="0.16 0.02 0.024" />
+        </geometry>
+      <material name="galvanized_metal">
+        <color rgba="0.72 0.75 0.76 1" />
+        </material>
+      </visual>
+    <visual name="hanger_0">
+      <origin xyz="-0.065 0 -0.09" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.018 0.18" />
+        </geometry>
+      <material name="galvanized_metal">
+        <color rgba="0.72 0.75 0.76 1" />
+        </material>
+      </visual>
+    <visual name="hanger_1">
+      <origin xyz="0.065 0 -0.09" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.018 0.18" />
+        </geometry>
+      <material name="galvanized_metal">
+        <color rgba="0.72 0.75 0.76 1" />
+        </material>
+      </visual>
+    <visual name="basket_shell">
+      <origin xyz="0 0 -0.205" rpy="0 0 0" />
+      <geometry>
+        <box size="0.19 0.095 0.1" />
+        </geometry>
+      <material name="cabin_orange">
+        <color rgba="0.95 0.36 0.08 1" />
+        </material>
+      </visual>
+    <visual name="seat_rail">
+      <origin xyz="0 0 -0.135" rpy="0 0 0" />
+      <geometry>
+        <box size="0.17 0.105 0.035" />
+        </geometry>
+      <material name="cabin_cream">
+        <color rgba="0.95 0.88 0.68 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="gondola_2">
+    <visual name="pivot_bar">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.148" />
+        </geometry>
+      <material name="galvanized_metal">
+        <color rgba="0.72 0.75 0.76 1" />
+        </material>
+      </visual>
+    <visual name="top_yoke">
+      <origin xyz="0 0 -0.006" rpy="0 0 0" />
+      <geometry>
+        <box size="0.16 0.02 0.024" />
+        </geometry>
+      <material name="galvanized_metal">
+        <color rgba="0.72 0.75 0.76 1" />
+        </material>
+      </visual>
+    <visual name="hanger_0">
+      <origin xyz="-0.065 0 -0.09" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.018 0.18" />
+        </geometry>
+      <material name="galvanized_metal">
+        <color rgba="0.72 0.75 0.76 1" />
+        </material>
+      </visual>
+    <visual name="hanger_1">
+      <origin xyz="0.065 0 -0.09" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.018 0.18" />
+        </geometry>
+      <material name="galvanized_metal">
+        <color rgba="0.72 0.75 0.76 1" />
+        </material>
+      </visual>
+    <visual name="basket_shell">
+      <origin xyz="0 0 -0.205" rpy="0 0 0" />
+      <geometry>
+        <box size="0.19 0.095 0.1" />
+        </geometry>
+      <material name="cabin_cream">
+        <color rgba="0.95 0.88 0.68 1" />
+        </material>
+      </visual>
+    <visual name="seat_rail">
+      <origin xyz="0 0 -0.135" rpy="0 0 0" />
+      <geometry>
+        <box size="0.17 0.105 0.035" />
+        </geometry>
+      <material name="cabin_cream">
+        <color rgba="0.95 0.88 0.68 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="gondola_3">
+    <visual name="pivot_bar">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.148" />
+        </geometry>
+      <material name="galvanized_metal">
+        <color rgba="0.72 0.75 0.76 1" />
+        </material>
+      </visual>
+    <visual name="top_yoke">
+      <origin xyz="0 0 -0.006" rpy="0 0 0" />
+      <geometry>
+        <box size="0.16 0.02 0.024" />
+        </geometry>
+      <material name="galvanized_metal">
+        <color rgba="0.72 0.75 0.76 1" />
+        </material>
+      </visual>
+    <visual name="hanger_0">
+      <origin xyz="-0.065 0 -0.09" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.018 0.18" />
+        </geometry>
+      <material name="galvanized_metal">
+        <color rgba="0.72 0.75 0.76 1" />
+        </material>
+      </visual>
+    <visual name="hanger_1">
+      <origin xyz="0.065 0 -0.09" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.018 0.18" />
+        </geometry>
+      <material name="galvanized_metal">
+        <color rgba="0.72 0.75 0.76 1" />
+        </material>
+      </visual>
+    <visual name="basket_shell">
+      <origin xyz="0 0 -0.205" rpy="0 0 0" />
+      <geometry>
+        <box size="0.19 0.095 0.1" />
+        </geometry>
+      <material name="cabin_blue">
+        <color rgba="0.08 0.25 0.78 1" />
+        </material>
+      </visual>
+    <visual name="seat_rail">
+      <origin xyz="0 0 -0.135" rpy="0 0 0" />
+      <geometry>
+        <box size="0.17 0.105 0.035" />
+        </geometry>
+      <material name="cabin_cream">
+        <color rgba="0.95 0.88 0.68 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="gondola_4">
+    <visual name="pivot_bar">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.148" />
+        </geometry>
+      <material name="galvanized_metal">
+        <color rgba="0.72 0.75 0.76 1" />
+        </material>
+      </visual>
+    <visual name="top_yoke">
+      <origin xyz="0 0 -0.006" rpy="0 0 0" />
+      <geometry>
+        <box size="0.16 0.02 0.024" />
+        </geometry>
+      <material name="galvanized_metal">
+        <color rgba="0.72 0.75 0.76 1" />
+        </material>
+      </visual>
+    <visual name="hanger_0">
+      <origin xyz="-0.065 0 -0.09" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.018 0.18" />
+        </geometry>
+      <material name="galvanized_metal">
+        <color rgba="0.72 0.75 0.76 1" />
+        </material>
+      </visual>
+    <visual name="hanger_1">
+      <origin xyz="0.065 0 -0.09" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.018 0.18" />
+        </geometry>
+      <material name="galvanized_metal">
+        <color rgba="0.72 0.75 0.76 1" />
+        </material>
+      </visual>
+    <visual name="basket_shell">
+      <origin xyz="0 0 -0.205" rpy="0 0 0" />
+      <geometry>
+        <box size="0.19 0.095 0.1" />
+        </geometry>
+      <material name="cabin_orange">
+        <color rgba="0.95 0.36 0.08 1" />
+        </material>
+      </visual>
+    <visual name="seat_rail">
+      <origin xyz="0 0 -0.135" rpy="0 0 0" />
+      <geometry>
+        <box size="0.17 0.105 0.035" />
+        </geometry>
+      <material name="cabin_cream">
+        <color rgba="0.95 0.88 0.68 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="gondola_5">
+    <visual name="pivot_bar">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.148" />
+        </geometry>
+      <material name="galvanized_metal">
+        <color rgba="0.72 0.75 0.76 1" />
+        </material>
+      </visual>
+    <visual name="top_yoke">
+      <origin xyz="0 0 -0.006" rpy="0 0 0" />
+      <geometry>
+        <box size="0.16 0.02 0.024" />
+        </geometry>
+      <material name="galvanized_metal">
+        <color rgba="0.72 0.75 0.76 1" />
+        </material>
+      </visual>
+    <visual name="hanger_0">
+      <origin xyz="-0.065 0 -0.09" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.018 0.18" />
+        </geometry>
+      <material name="galvanized_metal">
+        <color rgba="0.72 0.75 0.76 1" />
+        </material>
+      </visual>
+    <visual name="hanger_1">
+      <origin xyz="0.065 0 -0.09" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.018 0.18" />
+        </geometry>
+      <material name="galvanized_metal">
+        <color rgba="0.72 0.75 0.76 1" />
+        </material>
+      </visual>
+    <visual name="basket_shell">
+      <origin xyz="0 0 -0.205" rpy="0 0 0" />
+      <geometry>
+        <box size="0.19 0.095 0.1" />
+        </geometry>
+      <material name="cabin_cream">
+        <color rgba="0.95 0.88 0.68 1" />
+        </material>
+      </visual>
+    <visual name="seat_rail">
+      <origin xyz="0 0 -0.135" rpy="0 0 0" />
+      <geometry>
+        <box size="0.17 0.105 0.035" />
+        </geometry>
+      <material name="cabin_cream">
+        <color rgba="0.95 0.88 0.68 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="outrigger_0">
+    <visual name="hinge_barrel">
+      <geometry>
+        <cylinder radius="0.036" length="0.15" />
+        </geometry>
+      <material name="galvanized_metal">
+        <color rgba="0.72 0.75 0.76 1" />
+        </material>
+      </visual>
+    <visual name="hinge_lug">
+      <origin xyz="0.055 0 -0.005" rpy="0 0 0" />
+      <geometry>
+        <box size="0.055 0.04 0.045" />
+        </geometry>
+      <material name="galvanized_metal">
+        <color rgba="0.72 0.75 0.76 1" />
+        </material>
+      </visual>
+    <visual name="brace">
+      <geometry>
+        <mesh filename="assets/meshes/brace.obj" />
+        </geometry>
+      <material name="outrigger_red">
+        <color rgba="0.82 0.08 0.05 1" />
+        </material>
+      </visual>
+    <visual name="foot_pad">
+      <origin xyz="0.62 0 -0.09" rpy="0 0 0" />
+      <geometry>
+        <box size="0.2 0.12 0.035" />
+        </geometry>
+      <material name="galvanized_metal">
+        <color rgba="0.72 0.75 0.76 1" />
+        </material>
+      </visual>
+    <visual name="jack_screw">
+      <origin xyz="0.56 0 -0.055" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.02" length="0.11" />
+        </geometry>
+      <material name="outrigger_red">
+        <color rgba="0.82 0.08 0.05 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="outrigger_1">
+    <visual name="hinge_barrel">
+      <geometry>
+        <cylinder radius="0.036" length="0.15" />
+        </geometry>
+      <material name="galvanized_metal">
+        <color rgba="0.72 0.75 0.76 1" />
+        </material>
+      </visual>
+    <visual name="hinge_lug">
+      <origin xyz="0.055 0 -0.005" rpy="0 0 0" />
+      <geometry>
+        <box size="0.055 0.04 0.045" />
+        </geometry>
+      <material name="galvanized_metal">
+        <color rgba="0.72 0.75 0.76 1" />
+        </material>
+      </visual>
+    <visual name="brace">
+      <geometry>
+        <mesh filename="assets/meshes/brace.obj" />
+        </geometry>
+      <material name="outrigger_red">
+        <color rgba="0.82 0.08 0.05 1" />
+        </material>
+      </visual>
+    <visual name="foot_pad">
+      <origin xyz="0.62 0 -0.09" rpy="0 0 0" />
+      <geometry>
+        <box size="0.2 0.12 0.035" />
+        </geometry>
+      <material name="galvanized_metal">
+        <color rgba="0.72 0.75 0.76 1" />
+        </material>
+      </visual>
+    <visual name="jack_screw">
+      <origin xyz="0.56 0 -0.055" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.02" length="0.11" />
+        </geometry>
+      <material name="outrigger_red">
+        <color rgba="0.82 0.08 0.05 1" />
+        </material>
+      </visual>
+    </link>
+  <joint name="base_to_wheel" type="continuous">
+    <origin xyz="0 0 1.2" rpy="0 0 0" />
+    <parent link="base" />
+    <child link="wheel" />
+    <axis xyz="0 1 0" />
+    <limit effort="80" velocity="1.2" />
+    </joint>
+  <joint name="wheel_to_gondola_0" type="continuous">
+    <origin xyz="3.18408e-17 0 0.52" rpy="0 0 0" />
+    <parent link="wheel" />
+    <child link="gondola_0" />
+    <axis xyz="0 1 0" />
+    <limit effort="4" velocity="2.5" />
+    </joint>
+  <joint name="wheel_to_gondola_1" type="continuous">
+    <origin xyz="-0.450333 0 0.26" rpy="0 0 0" />
+    <parent link="wheel" />
+    <child link="gondola_1" />
+    <axis xyz="0 1 0" />
+    <limit effort="4" velocity="2.5" />
+    </joint>
+  <joint name="wheel_to_gondola_2" type="continuous">
+    <origin xyz="-0.450333 0 -0.26" rpy="0 0 0" />
+    <parent link="wheel" />
+    <child link="gondola_2" />
+    <axis xyz="0 1 0" />
+    <limit effort="4" velocity="2.5" />
+    </joint>
+  <joint name="wheel_to_gondola_3" type="continuous">
+    <origin xyz="-9.55225e-17 0 -0.52" rpy="0 0 0" />
+    <parent link="wheel" />
+    <child link="gondola_3" />
+    <axis xyz="0 1 0" />
+    <limit effort="4" velocity="2.5" />
+    </joint>
+  <joint name="wheel_to_gondola_4" type="continuous">
+    <origin xyz="0.450333 0 -0.26" rpy="0 0 0" />
+    <parent link="wheel" />
+    <child link="gondola_4" />
+    <axis xyz="0 1 0" />
+    <limit effort="4" velocity="2.5" />
+    </joint>
+  <joint name="wheel_to_gondola_5" type="continuous">
+    <origin xyz="0.450333 0 0.26" rpy="0 0 0" />
+    <parent link="wheel" />
+    <child link="gondola_5" />
+    <axis xyz="0 1 0" />
+    <limit effort="4" velocity="2.5" />
+    </joint>
+  <joint name="base_to_outrigger_0" type="revolute">
+    <origin xyz="-0.72 0.3 0.17" rpy="0 0 1.5708" />
+    <parent link="base" />
+    <child link="outrigger_0" />
+    <axis xyz="0 0 1" />
+    <limit effort="18" velocity="1.5" lower="-1.35" upper="0" />
+    </joint>
+  <joint name="base_to_outrigger_1" type="revolute">
+    <origin xyz="-0.72 -0.3 0.17" rpy="0 0 -1.5708" />
+    <parent link="base" />
+    <child link="outrigger_1" />
+    <axis xyz="0 0 1" />
+    <limit effort="18" velocity="1.5" lower="0" upper="1.35" />
+    </joint>
+  </robot>

@@ -1,0 +1,444 @@
+<robot name="tabletop_globe">
+  <material name="base_black">
+    <color rgba="0.14 0.12 0.11 1" />
+    </material>
+  <material name="antique_brass">
+    <color rgba="0.71 0.58 0.31 1" />
+    </material>
+  <material name="warm_ivory">
+    <color rgba="0.9 0.86 0.74 1" />
+    </material>
+  <material name="ocean_blue">
+    <color rgba="0.21 0.45 0.7 1" />
+    </material>
+  <material name="land_tan">
+    <color rgba="0.79 0.73 0.56 1" />
+    </material>
+  <link name="stand">
+    <inertial>
+      <origin xyz="0 0 0.06" rpy="0 0 0" />
+      <mass value="2" />
+      <inertia ixx="0.0078" ixy="0" ixz="0" iyy="0.00906667" iyz="0" izz="0.0120667" />
+      </inertial>
+    <visual name="pedestal_body">
+      <geometry>
+        <mesh filename="assets/meshes/pedestal_body.obj" />
+        </geometry>
+      <material name="base_black">
+        <color rgba="0.14 0.12 0.11 1" />
+        </material>
+      </visual>
+    <visual name="pedestal_cap">
+      <origin xyz="0 0 0.085" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.04" length="0.01" />
+        </geometry>
+      <material name="antique_brass">
+        <color rgba="0.71 0.58 0.31 1" />
+        </material>
+      </visual>
+    <visual name="meridian_mount_strut">
+      <origin xyz="-0.073 -0.0855 0.1165" rpy="0 1.21126 -2.23936" />
+      <geometry>
+        <cylinder radius="0.0038" length="0.162006" />
+        </geometry>
+      <material name="antique_brass">
+        <color rgba="0.71 0.58 0.31 1" />
+        </material>
+      </visual>
+    <visual name="support_mount_strut">
+      <origin xyz="-0.0855 0.0505 0.1265" rpy="0 1.03161 2.75099" />
+      <geometry>
+        <cylinder radius="0.0038" length="0.14997" />
+        </geometry>
+      <material name="antique_brass">
+        <color rgba="0.71 0.58 0.31 1" />
+        </material>
+      </visual>
+    <visual name="meridian_mount">
+      <origin xyz="-0.12 -0.145 0.145" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.004" />
+        </geometry>
+      <material name="warm_ivory">
+        <color rgba="0.9 0.86 0.74 1" />
+        </material>
+      </visual>
+    <visual name="support_mount">
+      <origin xyz="-0.145 0.075 0.165" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.004" />
+        </geometry>
+      <material name="warm_ivory">
+        <color rgba="0.9 0.86 0.74 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="meridian">
+    <inertial>
+      <origin xyz="-0.02 -0.145 0.2" rpy="0 0 0" />
+      <mass value="0.5" />
+      <inertia ixx="0.00386667" ixy="0" ixz="0" iyy="0.00461667" iyz="0" izz="0.00195" />
+      </inertial>
+    <visual name="meridian_mount_pad">
+      <origin xyz="-0.112 -0.145 0.145" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.004" />
+        </geometry>
+      <material name="warm_ivory">
+        <color rgba="0.9 0.86 0.74 1" />
+        </material>
+      </visual>
+    <visual name="meridian_segment_0">
+      <origin xyz="-0.101 -0.145 0.125" rpy="0 2.63875 0" />
+      <geometry>
+        <cylinder radius="0.005" length="0.0456508" />
+        </geometry>
+      <material name="antique_brass">
+        <color rgba="0.71 0.58 0.31 1" />
+        </material>
+      </visual>
+    <visual name="meridian_segment_1">
+      <origin xyz="-0.0675 -0.145 0.0915" rpy="0 2.11122 0" />
+      <geometry>
+        <cylinder radius="0.005" length="0.0524786" />
+        </geometry>
+      <material name="antique_brass">
+        <color rgba="0.71 0.58 0.31 1" />
+        </material>
+      </visual>
+    <visual name="meridian_segment_2">
+      <origin xyz="-0.0175 -0.145 0.084" rpy="0 1.35598 0" />
+      <geometry>
+        <cylinder radius="0.005" length="0.0562939" />
+        </geometry>
+      <material name="antique_brass">
+        <color rgba="0.71 0.58 0.31 1" />
+        </material>
+      </visual>
+    <visual name="meridian_segment_3">
+      <origin xyz="0.026 -0.145 0.105" rpy="0 0.817645 0" />
+      <geometry>
+        <cylinder radius="0.005" length="0.0438634" />
+        </geometry>
+      <material name="antique_brass">
+        <color rgba="0.71 0.58 0.31 1" />
+        </material>
+      </visual>
+    <visual name="meridian_segment_4">
+      <origin xyz="0.048 -0.145 0.145" rpy="0 0.235545 0" />
+      <geometry>
+        <cylinder radius="0.005" length="0.0514198" />
+        </geometry>
+      <material name="antique_brass">
+        <color rgba="0.71 0.58 0.31 1" />
+        </material>
+      </visual>
+    <visual name="meridian_segment_5">
+      <origin xyz="0.051 -0.145 0.2025" rpy="0 0.0920468 3.14159" />
+      <geometry>
+        <cylinder radius="0.005" length="0.0652763" />
+        </geometry>
+      <material name="antique_brass">
+        <color rgba="0.71 0.58 0.31 1" />
+        </material>
+      </visual>
+    <visual name="meridian_segment_6">
+      <origin xyz="0.038 -0.145 0.2635" rpy="0 0.337456 3.14159" />
+      <geometry>
+        <cylinder radius="0.005" length="0.060407" />
+        </geometry>
+      <material name="antique_brass">
+        <color rgba="0.71 0.58 0.31 1" />
+        </material>
+      </visual>
+    <visual name="meridian_segment_7">
+      <origin xyz="0.019 -0.145 0.311" rpy="0 0.442374 3.14159" />
+      <geometry>
+        <cylinder radius="0.005" length="0.0420476" />
+        </geometry>
+      <material name="antique_brass">
+        <color rgba="0.71 0.58 0.31 1" />
+        </material>
+      </visual>
+    <visual name="south_pivot_link">
+      <origin xyz="-0.0686259 -0.0725 0.100664" rpy="0 1.6281 1.2841" />
+      <geometry>
+        <cylinder radius="0.0038" length="0.151419" />
+        </geometry>
+      <material name="antique_brass">
+        <color rgba="0.71 0.58 0.31 1" />
+        </material>
+      </visual>
+    <visual name="north_pivot_link">
+      <origin xyz="0.0286259 -0.0725 0.321836" rpy="0 1.67943 1.31933" />
+      <geometry>
+        <cylinder radius="0.0038" length="0.150597" />
+        </geometry>
+      <material name="antique_brass">
+        <color rgba="0.71 0.58 0.31 1" />
+        </material>
+      </visual>
+    <visual name="north_pivot_stop">
+      <origin xyz="0.0472518 0 0.313672" rpy="0 0.410152 0" />
+      <geometry>
+        <cylinder radius="0.0042" length="0.001" />
+        </geometry>
+      <material name="warm_ivory">
+        <color rgba="0.9 0.86 0.74 1" />
+        </material>
+      </visual>
+    <visual name="south_pivot_stop">
+      <origin xyz="-0.0472518 0 0.0963284" rpy="0 0.410152 0" />
+      <geometry>
+        <cylinder radius="0.0042" length="0.001" />
+        </geometry>
+      <material name="warm_ivory">
+        <color rgba="0.9 0.86 0.74 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="date_supports">
+    <inertial>
+      <origin xyz="-0.04 0 0.18" rpy="0 0 0" />
+      <mass value="0.35" />
+      <inertia ixx="0.00273" ixy="0" ixz="0" iyy="0.00105" iyz="0" izz="0.00357" />
+      </inertial>
+    <visual name="support_mount_pad">
+      <origin xyz="-0.137 0.075 0.165" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.004" />
+        </geometry>
+      <material name="warm_ivory">
+        <color rgba="0.9 0.86 0.74 1" />
+        </material>
+      </visual>
+    <visual name="left_support_segment_0">
+      <origin xyz="-0.1245 0.0825 0.17" rpy="0 1.24037 0.54042" />
+      <geometry>
+        <cylinder radius="0.0042" length="0.0308221" />
+        </geometry>
+      <material name="antique_brass">
+        <color rgba="0.71 0.58 0.31 1" />
+        </material>
+      </visual>
+    <visual name="left_support_segment_1">
+      <origin xyz="-0.091 0.105 0.1815" rpy="0 1.32406 0.620249" />
+      <geometry>
+        <cylinder radius="0.0042" length="0.0532259" />
+        </geometry>
+      <material name="antique_brass">
+        <color rgba="0.71 0.58 0.31 1" />
+        </material>
+      </visual>
+    <visual name="left_support_segment_2">
+      <origin xyz="-0.05 0.128 0.193" rpy="0 1.34272 0.380506" />
+      <geometry>
+        <cylinder radius="0.0042" length="0.0442267" />
+        </geometry>
+      <material name="antique_brass">
+        <color rgba="0.71 0.58 0.31 1" />
+        </material>
+      </visual>
+    <visual name="left_support_segment_3">
+      <origin xyz="-0.015 0.1355 0.2015" rpy="0 1.34169 -0.033321" />
+      <geometry>
+        <cylinder radius="0.0042" length="0.0308221" />
+        </geometry>
+      <material name="antique_brass">
+        <color rgba="0.71 0.58 0.31 1" />
+        </material>
+      </visual>
+    <visual name="right_support_segment_0">
+      <origin xyz="-0.1245 -0.0075 0.17" rpy="0 1.51095 -1.42042" />
+      <geometry>
+        <cylinder radius="0.0042" length="0.167183" />
+        </geometry>
+      <material name="antique_brass">
+        <color rgba="0.71 0.58 0.31 1" />
+        </material>
+      </visual>
+    <visual name="right_support_segment_1">
+      <origin xyz="-0.091 -0.105 0.1815" rpy="0 1.32406 -0.620249" />
+      <geometry>
+        <cylinder radius="0.0042" length="0.0532259" />
+        </geometry>
+      <material name="antique_brass">
+        <color rgba="0.71 0.58 0.31 1" />
+        </material>
+      </visual>
+    <visual name="right_support_segment_2">
+      <origin xyz="-0.05 -0.128 0.193" rpy="0 1.34272 -0.380506" />
+      <geometry>
+        <cylinder radius="0.0042" length="0.0442267" />
+        </geometry>
+      <material name="antique_brass">
+        <color rgba="0.71 0.58 0.31 1" />
+        </material>
+      </visual>
+    <visual name="right_support_segment_3">
+      <origin xyz="-0.015 -0.1355 0.2015" rpy="0 1.34169 0.033321" />
+      <geometry>
+        <cylinder radius="0.0042" length="0.0308221" />
+        </geometry>
+      <material name="antique_brass">
+        <color rgba="0.71 0.58 0.31 1" />
+        </material>
+      </visual>
+    <visual name="left_trunnion_stop">
+      <origin xyz="0 0.135 0.205" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.003" length="0.001" />
+        </geometry>
+      <material name="warm_ivory">
+        <color rgba="0.9 0.86 0.74 1" />
+        </material>
+      </visual>
+    <visual name="right_trunnion_stop">
+      <origin xyz="0 -0.135 0.205" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.003" length="0.001" />
+        </geometry>
+      <material name="warm_ivory">
+        <color rgba="0.9 0.86 0.74 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="globe">
+    <inertial>
+      <mass value="0.9" />
+      <inertia ixx="0.004356" ixy="0" ixz="0" iyy="0.004356" iyz="0" izz="0.004356" />
+      </inertial>
+    <visual name="globe_shell">
+      <geometry>
+        <sphere radius="0.11" />
+        </geometry>
+      <material name="ocean_blue">
+        <color rgba="0.21 0.45 0.7 1" />
+        </material>
+      </visual>
+    <visual name="north_pivot_pin">
+      <origin xyz="0.0454574 0 0.104545" rpy="0 0.410152 0" />
+      <geometry>
+        <cylinder radius="0.0042" length="0.008" />
+        </geometry>
+      <material name="antique_brass">
+        <color rgba="0.71 0.58 0.31 1" />
+        </material>
+      </visual>
+    <visual name="south_pivot_pin">
+      <origin xyz="-0.0454574 -0 -0.104545" rpy="0 0.410152 0" />
+      <geometry>
+        <cylinder radius="0.0042" length="0.008" />
+        </geometry>
+      <material name="antique_brass">
+        <color rgba="0.71 0.58 0.31 1" />
+        </material>
+      </visual>
+    <visual name="north_cap">
+      <origin xyz="0.043663 0 0.100418" rpy="0 0.410152 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.003" />
+        </geometry>
+      <material name="antique_brass">
+        <color rgba="0.71 0.58 0.31 1" />
+        </material>
+      </visual>
+    <visual name="south_cap">
+      <origin xyz="-0.043663 -0 -0.100418" rpy="0 0.410152 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.003" />
+        </geometry>
+      <material name="antique_brass">
+        <color rgba="0.71 0.58 0.31 1" />
+        </material>
+      </visual>
+    <visual name="americas_relief">
+      <geometry>
+        <mesh filename="assets/meshes/americas_relief.obj" />
+        </geometry>
+      <material name="land_tan">
+        <color rgba="0.79 0.73 0.56 1" />
+        </material>
+      </visual>
+    <visual name="eurafrica_relief">
+      <geometry>
+        <mesh filename="assets/meshes/eurafrica_relief.obj" />
+        </geometry>
+      <material name="land_tan">
+        <color rgba="0.79 0.73 0.56 1" />
+        </material>
+      </visual>
+    <visual name="australia_relief">
+      <geometry>
+        <mesh filename="assets/meshes/australia_relief.obj" />
+        </geometry>
+      <material name="land_tan">
+        <color rgba="0.79 0.73 0.56 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="date_ring">
+    <inertial>
+      <mass value="0.11" />
+      <inertia ixx="0.000440979" ixy="0" ixz="0" iyy="0.000440979" iyz="0" izz="0.000880124" />
+      </inertial>
+    <visual name="date_ring_band">
+      <geometry>
+        <mesh filename="assets/meshes/date_ring_band.obj" />
+        </geometry>
+      <material name="warm_ivory">
+        <color rgba="0.9 0.86 0.74 1" />
+        </material>
+      </visual>
+    <visual name="left_trunnion_pin">
+      <origin xyz="0 0.1305 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.003" length="0.008" />
+        </geometry>
+      <material name="antique_brass">
+        <color rgba="0.71 0.58 0.31 1" />
+        </material>
+      </visual>
+    <visual name="right_trunnion_pin">
+      <origin xyz="0 -0.1305 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.003" length="0.008" />
+        </geometry>
+      <material name="antique_brass">
+        <color rgba="0.71 0.58 0.31 1" />
+        </material>
+      </visual>
+    <visual name="date_marker">
+      <origin xyz="0.119218 0 -0.0518374" rpy="0 0.410152 0" />
+      <geometry>
+        <box size="0.016 0.007 0.004" />
+        </geometry>
+      <material name="antique_brass">
+        <color rgba="0.71 0.58 0.31 1" />
+        </material>
+      </visual>
+    </link>
+  <joint name="stand_to_meridian" type="fixed">
+    <parent link="stand" />
+    <child link="meridian" />
+    </joint>
+  <joint name="stand_to_date_supports" type="fixed">
+    <parent link="stand" />
+    <child link="date_supports" />
+    </joint>
+  <joint name="globe_spin" type="continuous">
+    <origin xyz="0 0 0.205" rpy="0 0 0" />
+    <parent link="stand" />
+    <child link="globe" />
+    <axis xyz="0.398749 0 0.91706" />
+    <limit effort="3" velocity="3.5" />
+    </joint>
+  <joint name="date_ring_spin" type="continuous">
+    <origin xyz="0 0 0.205" rpy="0 0 0" />
+    <parent link="stand" />
+    <child link="date_ring" />
+    <axis xyz="0 1 0" />
+    <limit effort="1" velocity="2" />
+    </joint>
+  </robot>

@@ -1,0 +1,150 @@
+<robot name="drill_press_tilt_table">
+  <link name="column">
+    <visual name="col_vis">
+      <origin xyz="0 0 0.4" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.035" length="0.8" />
+        </geometry>
+      <material name="steel">
+        <color rgba="0.7 0.7 0.7 1" />
+        </material>
+      </visual>
+    <collision name="col_vis">
+      <origin xyz="0 0 0.4" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.035" length="0.8" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="carriage_slider">
+    <visual name="slider_vis">
+      <geometry>
+        <cylinder radius="0.045" length="0.01" />
+        </geometry>
+      <material name="steel">
+        <color rgba="0.7 0.7 0.7 1" />
+        </material>
+      </visual>
+    <collision name="slider_vis">
+      <geometry>
+        <cylinder radius="0.045" length="0.01" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="table_bracket">
+    <visual>
+      <geometry>
+        <mesh filename="assets/meshes/table_bracket.obj" />
+        </geometry>
+      <material name="cast_iron">
+        <color rgba="0.3 0.3 0.3 1" />
+        </material>
+      </visual>
+    <collision>
+      <geometry>
+        <mesh filename="assets/meshes/table_bracket.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="table">
+    <visual>
+      <geometry>
+        <mesh filename="assets/meshes/table.obj" />
+        </geometry>
+      <material name="cast_iron">
+        <color rgba="0.3 0.3 0.3 1" />
+        </material>
+      </visual>
+    <collision>
+      <geometry>
+        <mesh filename="assets/meshes/table.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="bracket_lock_handle">
+    <visual>
+      <geometry>
+        <mesh filename="assets/meshes/col_lock.obj" />
+        </geometry>
+      <material name="black_plastic">
+        <color rgba="0.1 0.1 0.1 1" />
+        </material>
+      </visual>
+    <collision>
+      <geometry>
+        <mesh filename="assets/meshes/col_lock.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="tilt_lock_handle">
+    <visual>
+      <geometry>
+        <mesh filename="assets/meshes/tilt_lock.obj" />
+        </geometry>
+      <material name="black_plastic">
+        <color rgba="0.1 0.1 0.1 1" />
+        </material>
+      </visual>
+    <collision>
+      <geometry>
+        <mesh filename="assets/meshes/tilt_lock.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="elevation_crank">
+    <visual>
+      <geometry>
+        <mesh filename="assets/meshes/crank.obj" />
+        </geometry>
+      <material name="silver">
+        <color rgba="0.9 0.9 0.9 1" />
+        </material>
+      </visual>
+    <collision>
+      <geometry>
+        <mesh filename="assets/meshes/crank.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="bracket_elevation" type="prismatic">
+    <origin xyz="0 0 0.4" rpy="0 0 0" />
+    <parent link="column" />
+    <child link="carriage_slider" />
+    <axis xyz="0 0 1" />
+    <limit effort="100" velocity="1" lower="-0.2" upper="0.2" />
+    </joint>
+  <joint name="bracket_swing" type="continuous">
+    <parent link="carriage_slider" />
+    <child link="table_bracket" />
+    <axis xyz="0 0 1" />
+    <limit effort="100" velocity="1" />
+    </joint>
+  <joint name="table_tilt" type="revolute">
+    <origin xyz="0 -0.15 0" rpy="0 0 0" />
+    <parent link="table_bracket" />
+    <child link="table" />
+    <axis xyz="1 0 0" />
+    <limit effort="100" velocity="1" lower="-1.5708" upper="1.5708" />
+    </joint>
+  <joint name="bracket_lock" type="continuous">
+    <origin xyz="0.03 0.055 0" rpy="0 0 0" />
+    <parent link="table_bracket" />
+    <child link="bracket_lock_handle" />
+    <axis xyz="1 0 0" />
+    <limit effort="10" velocity="1" />
+    </joint>
+  <joint name="tilt_lock" type="continuous">
+    <origin xyz="0.07 -0.15 0.025" rpy="0 0 0" />
+    <parent link="table_bracket" />
+    <child link="tilt_lock_handle" />
+    <axis xyz="1 0 0" />
+    <limit effort="10" velocity="1" />
+    </joint>
+  <joint name="crank_turn" type="continuous">
+    <origin xyz="0.065 0 -0.03" rpy="0 0 0" />
+    <parent link="table_bracket" />
+    <child link="elevation_crank" />
+    <axis xyz="1 0 0" />
+    <limit effort="10" velocity="1" />
+    </joint>
+  </robot>
