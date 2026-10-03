@@ -1,0 +1,113 @@
+{
+  "config": {
+    "seed": 20260911,
+    "data_roots": [
+      {
+        "alias": "articraft",
+        "path": "/root/autodl-tmp/continuous-axis-data-20260911/review",
+        "private": false
+      },
+      {
+        "alias": "public",
+        "path": "/root/continuous-public-data-20260911/review",
+        "private": false
+      },
+      {
+        "alias": "user",
+        "path": "/root/autodl-tmp/continuous-user-cases-20260911/review",
+        "private": true
+      }
+    ],
+    "prepared_dir": "/root/autodl-tmp/continuous-axis-training-v2-20260911/prepared",
+    "run_dir": "/root/autodl-tmp/continuous-axis-training-v2-20260911/runs/D_motion",
+    "public_split": [
+      0.8,
+      0.1,
+      0.1
+    ],
+    "private_split": [
+      0.6,
+      0.2,
+      0.2
+    ],
+    "pool_size": 8192,
+    "points": 2048,
+    "batch_size": 8,
+    "workers": 2,
+    "cpu_threads": 4,
+    "epoch_samples": 2048,
+    "epochs": 150,
+    "log_interval": 32,
+    "learning_rate": 0.0003,
+    "weight_decay": 0.01,
+    "gradient_clip": 1.0,
+    "auxiliary_fraction": 0.0,
+    "jitter": 0.001,
+    "normal_dropout": 0.1,
+    "amp": true,
+    "model": {
+      "width": 128,
+      "tokens": 64,
+      "neighbors": 24,
+      "heads": 4,
+      "layers": 2,
+      "dropout": 0.1,
+      "head": "projection",
+      "multiscale": true,
+      "large_neighbors": 96,
+      "distance_chunk": 256
+    },
+    "base_prepared_dir": "/root/autodl-tmp/continuous-axis-training-v1-20260911/prepared",
+    "cache_root": "/root/autodl-tmp/continuous-axis-training-v1-20260911/prepared",
+    "local_fraction": 0.5,
+    "loss": {
+      "origin_weight": 10.0,
+      "projection_weight": 1.0,
+      "line_weight": 0.1,
+      "motion_weight": 0.1,
+      "motion_angles_deg": [
+        45.0,
+        90.0
+      ]
+    }
+  },
+  "device": "cuda",
+  "smoke_only": false,
+  "prepared_snapshot": {
+    "schema_version": 2,
+    "snapshot_sha256": "cd36c28ef0f9754fca9ec49cb60e29ad6aa0520c1af4b3003b011185228d4ace",
+    "base_snapshot_sha256": "14e9fded8dce451aeea253ea4c791926c3bc757d70e47ee64da50281ea572486",
+    "base_ready_sha256": "e10965c48f51d7d5dd5268e578100c67c528b3d1e29102bdb6af2c739eb21608",
+    "source_manifests": {
+      "articraft": "e73bf8ddc34ea378ee9bfda71cb06c5bbebdc0118aa4a13247bbafdf1adf9887",
+      "public": "6cf3fc7066d7d02edd54b04209ff1ea904357258710efd54937046571784c1d2",
+      "public/deduplication": "7e1336e95b9227be78590dfdee973a8a8e4d8a55bb320ce2e4a053108ac0cb21",
+      "user": "a52e462c74d0d2e5625e2d4ea4c23d5dfc393a291b0789299e1eaac5953d6fe9",
+      "user/deduplication": "35d8bfbeaba57ac2f050d0825037fdba26e9df3402a50a6ad2fb9bab691f098a"
+    },
+    "frozen_split_sha256": "0c72ecb4a778e2804658e200722788f1a09bc75e47c88fd362f0bc7d5c58d5e4",
+    "cache_manifest_sha256": "a888d2c17cff72a721a4a196bb8bf9be2e174c0feeb0ffb82de33272cd493ae1",
+    "geometry_code_sha256": "1cef9baf20dcf83319f23f012b39cc655f6b4e0544d568dea9bea0c02288c235",
+    "preparation_code_sha256": "e0cdc7a2648212581294e84c327d380b30db4c647f136115d07e7b55afc0cea6",
+    "assets": 1326,
+    "pairs": 2147,
+    "excluded_assets": 4,
+    "excluded_pairs": 8,
+    "cached_links": 3598,
+    "files": {
+      "cache_manifest.json": "a888d2c17cff72a721a4a196bb8bf9be2e174c0feeb0ffb82de33272cd493ae1",
+      "excluded_rows.jsonl": "1f8375c97c8553ec8a744137ce1148b01ebef7a37189eee35aa7f0e17860a60d",
+      "quality_report.json": "dc9d040c1f6be08d42f462a27b16558eda6572a580442724a1d1f2a9b61c583d",
+      "quality_report.md": "8c0965ab07f21075341671696592d1d3b0d22e508b21b0eab6fbc35726bd83e7",
+      "splits.json": "0c72ecb4a778e2804658e200722788f1a09bc75e47c88fd362f0bc7d5c58d5e4",
+      "statistics.json": "f3b9e860a2f737ed8b79718107a97e80c4af86f7fd19e14a0d8ff397a26e8cbe",
+      "test_auxiliary.jsonl": "6fd56aeed094218337e841a6fcf10334a2b5f48d153bf50471527f74794502ac",
+      "test_continuous.jsonl": "6c3d6208e8821a1eb6dcf40146cecfac39a9d383b60c989c99de83deeafe29a4",
+      "train_auxiliary.jsonl": "0e8432fb63e6320635acead77e08cd886ef6b71b813616b6b9c4ac3101584de1",
+      "train_continuous.jsonl": "190af15810ee7a8f931e210ba6d60200cf9acac120f71c56133bddafb41184ba",
+      "val_auxiliary.jsonl": "8c7b73dad8bb0da8120b114c3e0f3a7253ede3cf82b0057db3ac9fc8091cce01",
+      "val_continuous.jsonl": "876868750c7c06337b2c5f66cd9c482c76accafdefdd7ebd03442dd2b8fe219c"
+    }
+  },
+  "code_sha256": "fbd9dbc44fbc0d31a663e34fe7d0301aec0ff9022f1bb6ab78884294d0f2ba9a"
+}

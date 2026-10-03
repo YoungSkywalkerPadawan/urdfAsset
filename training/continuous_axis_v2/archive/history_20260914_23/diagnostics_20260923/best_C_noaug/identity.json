@@ -1,0 +1,99 @@
+{
+  "mode": "evaluate",
+  "device": "cpu",
+  "torch": "2.8.0+cu128",
+  "seed": 20260923,
+  "snapshot": "cd36c28ef0f9754fca9ec49cb60e29ad6aa0520c1af4b3003b011185228d4ace",
+  "config": {
+    "seed": 20260911,
+    "data_roots": [
+      {
+        "alias": "articraft",
+        "path": "/root/autodl-tmp/continuous-axis-data-20260911/review",
+        "private": false
+      },
+      {
+        "alias": "public",
+        "path": "/root/continuous-public-data-20260911/review",
+        "private": false
+      },
+      {
+        "alias": "user",
+        "path": "/root/autodl-tmp/continuous-user-cases-20260911/review",
+        "private": true
+      }
+    ],
+    "prepared_dir": "/root/autodl-tmp/continuous-axis-training-v2-20260911/prepared",
+    "run_dir": "/root/autodl-tmp/continuous-axis-training-v2-20260911/runs/C_multiscale",
+    "public_split": [
+      0.8,
+      0.1,
+      0.1
+    ],
+    "private_split": [
+      0.6,
+      0.2,
+      0.2
+    ],
+    "pool_size": 8192,
+    "points": 2048,
+    "batch_size": 2,
+    "workers": 0,
+    "cpu_threads": 4,
+    "epoch_samples": 2048,
+    "epochs": 150,
+    "log_interval": 32,
+    "learning_rate": 0.0003,
+    "weight_decay": 0.01,
+    "gradient_clip": 1.0,
+    "auxiliary_fraction": 0.0,
+    "jitter": 0.001,
+    "normal_dropout": 0.1,
+    "amp": true,
+    "model": {
+      "width": 128,
+      "tokens": 64,
+      "neighbors": 24,
+      "heads": 4,
+      "layers": 2,
+      "dropout": 0.1,
+      "head": "projection",
+      "multiscale": true,
+      "large_neighbors": 96,
+      "distance_chunk": 256
+    },
+    "base_prepared_dir": "/root/autodl-tmp/continuous-axis-training-v1-20260911/prepared",
+    "cache_root": "/root/autodl-tmp/continuous-axis-training-v1-20260911/prepared",
+    "local_fraction": 0.5,
+    "loss": {
+      "origin_weight": 10.0,
+      "projection_weight": 1.0,
+      "line_weight": 0.1,
+      "motion_weight": 0.0,
+      "motion_angles_deg": [
+        45.0,
+        90.0
+      ]
+    }
+  },
+  "source_hashes": {
+    "common.py": "6d630cd5d4eb3db4255c4652aba2d68f6521aeb1a040fa5f1cac9836da3ce4a1",
+    "data_geometry.py": "1cef9baf20dcf83319f23f012b39cc655f6b4e0544d568dea9bea0c02288c235",
+    "dataset.py": "f8b83e6af83e1b439f78d23bbbfeda00e2aae39ad31d4f75e3e6b172c829a6ca",
+    "evaluate.py": "6cfd1d5a683b333d110c235521761ebadd8cb37b3946bca5ba5544f461deef99",
+    "gpu_preflight.py": "8989f11dee7c62364dfd2e499f9451ddaaa16fef9c66f0bd0a47ec5c6d172b4e",
+    "infer_glb.py": "2ca74cd42e81a8978e215befb42b9d8b7d0894d50d15743cc537a8e072b6aa7f",
+    "model.py": "38a028b95fac272cc97d95109c638eec2800013be45ff1f99810c579fa2e58d9",
+    "preflight.py": "0788da3efd9b4b9a55d28e7e9bfe0a1369c69354589a286d02857a9ca7ab138a",
+    "prepare_v2.py": "e0cdc7a2648212581294e84c327d380b30db4c647f136115d07e7b55afc0cea6",
+    "train.py": "254c76c343666701923baff3040e2c3f35c17e7c4525f33d4e22c93d56402bc4"
+  },
+  "diagnostic_sha256": "290f7960949e48d31058fcdeafcf99e2f46c520f231e93faa8fe461009756b51",
+  "steps": 400,
+  "clip": 1.0,
+  "losses": [
+    "sin2",
+    "chordal_branch"
+  ],
+  "note": "Diagnostic only; no held-out test evaluation. Selected training samples metadata-checked, not newly human-verified."
+}

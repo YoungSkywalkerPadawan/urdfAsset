@@ -1,5 +1,16 @@
 # URDF 资产库
 
+## 自研关节轴模型：训练与权重
+
+2026-10-03 增加 [持续旋转关节轴训练归档](training/continuous_axis_v2/README.md)：从 AutoDL 保存 A/B/C/D、CPU 全量 E0 和 GPU E1/E2/E3 共 8 组训练，16 份最佳/最终检查点，以及原始代码、损失设计、训练配置、冻结划分、逐轮日志和逐来源验证结果。
+
+- [完整使用与复现说明](training/continuous_axis_v2/README.md)
+- [按数据来源的方向/位置/严格/宽松达标统计](training/continuous_axis_v2/RESULTS.md)
+- [权重与归档完整性校验](training/continuous_axis_v2/verify_archive.py)
+
+权重由 Git LFS 存储；可只拉取 `training/continuous_axis_v2/**/*.pt`。任务是已知 continuous 父子部件对的轴预测，不是整机分件或关节类型预测。当前模型泛化仍不足，不能将训练拟合成绩当作可部署准确率。原资产目录、1550 条轴划分及许可不变。
+
+
 按来源收录 **3,354 个装配资产或 CAD 部件对**：1,330 个已标准化的 GLB/点云资产，以及 2,024 个 PhysX-Mobility 原生 URDF case。用于查找、关节轴测试与训练数据准备，保留各来源的原始标注与许可。
 
 ## 数据目录

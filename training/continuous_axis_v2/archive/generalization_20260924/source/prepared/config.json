@@ -1,0 +1,71 @@
+{
+  "seed": 20260911,
+  "data_roots": [
+    {
+      "alias": "articraft",
+      "path": "/root/autodl-tmp/continuous-axis-data-20260911/review",
+      "private": false
+    },
+    {
+      "alias": "public",
+      "path": "/root/continuous-public-data-20260911/review",
+      "private": false
+    },
+    {
+      "alias": "user",
+      "path": "/root/autodl-tmp/continuous-user-cases-20260911/review",
+      "private": true
+    }
+  ],
+  "prepared_dir": "/root/autodl-tmp/continuous-axis-training-v2-20260911/prepared",
+  "run_dir": "/root/autodl-tmp/continuous-axis-training-v2-20260911/runs/D_motion",
+  "public_split": [
+    0.8,
+    0.1,
+    0.1
+  ],
+  "private_split": [
+    0.6,
+    0.2,
+    0.2
+  ],
+  "pool_size": 8192,
+  "points": 2048,
+  "batch_size": 8,
+  "workers": 2,
+  "cpu_threads": 4,
+  "epoch_samples": 2048,
+  "epochs": 150,
+  "learning_rate": 0.0003,
+  "weight_decay": 0.01,
+  "gradient_clip": 1.0,
+  "auxiliary_fraction": 0.0,
+  "jitter": 0.001,
+  "normal_dropout": 0.1,
+  "amp": true,
+  "model": {
+    "width": 128,
+    "tokens": 64,
+    "neighbors": 24,
+    "heads": 4,
+    "layers": 2,
+    "dropout": 0.1,
+    "head": "projection",
+    "multiscale": true,
+    "large_neighbors": 96,
+    "distance_chunk": 256
+  },
+  "base_prepared_dir": "/root/autodl-tmp/continuous-axis-training-v1-20260911/prepared",
+  "cache_root": "/root/autodl-tmp/continuous-axis-training-v1-20260911/prepared",
+  "local_fraction": 0.5,
+  "loss": {
+    "origin_weight": 10.0,
+    "projection_weight": 1.0,
+    "line_weight": 0.1,
+    "motion_weight": 0.1,
+    "motion_angles_deg": [
+      45.0,
+      90.0
+    ]
+  }
+}

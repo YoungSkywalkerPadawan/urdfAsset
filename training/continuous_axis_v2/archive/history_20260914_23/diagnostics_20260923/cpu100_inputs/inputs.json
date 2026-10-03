@@ -1,0 +1,3846 @@
+{
+  "config": {
+    "seed": 20260911,
+    "data_roots": [
+      {
+        "alias": "articraft",
+        "path": "/root/autodl-tmp/continuous-axis-data-20260911/review",
+        "private": false
+      },
+      {
+        "alias": "public",
+        "path": "/root/continuous-public-data-20260911/review",
+        "private": false
+      },
+      {
+        "alias": "user",
+        "path": "/root/autodl-tmp/continuous-user-cases-20260911/review",
+        "private": true
+      }
+    ],
+    "prepared_dir": "/root/autodl-tmp/continuous-axis-training-v2-20260911/prepared",
+    "run_dir": "/root/autodl-tmp/continuous-axis-training-v2-20260911/runs/C_multiscale",
+    "public_split": [
+      0.8,
+      0.1,
+      0.1
+    ],
+    "private_split": [
+      0.6,
+      0.2,
+      0.2
+    ],
+    "pool_size": 8192,
+    "points": 2048,
+    "batch_size": 8,
+    "workers": 0,
+    "cpu_threads": 4,
+    "epoch_samples": 2048,
+    "epochs": 150,
+    "log_interval": 32,
+    "learning_rate": 0.0003,
+    "weight_decay": 0.01,
+    "gradient_clip": 1.0,
+    "auxiliary_fraction": 0.0,
+    "jitter": 0.001,
+    "normal_dropout": 0.1,
+    "amp": true,
+    "model": {
+      "width": 128,
+      "tokens": 64,
+      "neighbors": 24,
+      "heads": 4,
+      "layers": 2,
+      "dropout": 0.1,
+      "head": "projection",
+      "multiscale": true,
+      "large_neighbors": 96,
+      "distance_chunk": 256
+    },
+    "base_prepared_dir": "/root/autodl-tmp/continuous-axis-training-v1-20260911/prepared",
+    "cache_root": "/root/autodl-tmp/continuous-axis-training-v1-20260911/prepared",
+    "local_fraction": 0.5,
+    "loss": {
+      "origin_weight": 10.0,
+      "projection_weight": 1.0,
+      "line_weight": 0.1,
+      "motion_weight": 0.0,
+      "motion_angles_deg": [
+        45.0,
+        90.0
+      ]
+    }
+  },
+  "rows": [
+    {
+      "id": "articraft/rec_bicycle_crankset_and_pedal_assembly_0008/1",
+      "asset_key": "articraft/rec_bicycle_crankset_and_pedal_assembly_0008",
+      "asset_id": "rec_bicycle_crankset_and_pedal_assembly_0008",
+      "asset_name": "bmx_crankset",
+      "source": "articraft",
+      "private": false,
+      "split": "train",
+      "group": "2807755bb4bedb2a",
+      "joint_index": 1,
+      "joint_name": "right_pedal_spin",
+      "type": "continuous",
+      "mimic": null,
+      "parent_name": "right_arm",
+      "child_name": "right_pedal",
+      "parent_file": "cache/584d9da75165ca6cd8cef196eaa76647b173be688784909a0254ab5d336ab778.npy",
+      "child_file": "cache/46ea1b215d564d2c1dcf838fa0eee77915602e0249cf2a35db3711d09207809b.npy",
+      "center": [
+        0.13261209428310394,
+        0.0,
+        -0.16496777534484863
+      ],
+      "scale": 0.12394882869614687,
+      "origin": [
+        0.0,
+        0.0,
+        -0.024463520043296796
+      ],
+      "direction": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "frame": "shared_child_center_robust_diagonal",
+      "base_scene_scale": 0.5183022163002263,
+      "child_to_scene_scale": 0.23914392954158153
+    },
+    {
+      "id": "public/artvip_model_medical_cart_cbe61230d5/4",
+      "asset_key": "public/artvip_model_medical_cart_cbe61230d5",
+      "asset_id": "artvip_model_medical_cart_cbe61230d5",
+      "asset_name": "Articulated_objects/Medical_equipment/medical_cart/model_medical_cart.usd",
+      "source": "artvip",
+      "private": false,
+      "split": "train",
+      "group": "d731b85af1354f5b",
+      "joint_index": 4,
+      "joint_name": "/root/E_wheel1_65/RevoluteJoint_medical_cart_down",
+      "type": "continuous",
+      "mimic": null,
+      "parent_name": "/root/E_link_61",
+      "child_name": "/root/E_wheel1_65",
+      "parent_file": "cache/400aca59a2b1006aa9a76a3e05da1d9b6f2a56da18bef1ad71330e76cfcb8385.npy",
+      "child_file": "cache/1cfb7ca2691666eda1b3edbdc66e423dca670ca8bdb66816785b66e11c80fc6a.npy",
+      "center": [
+        0.3502240478992462,
+        -0.22934682667255402,
+        0.03223574161529541
+      ],
+      "scale": 0.09763056786781135,
+      "origin": [
+        0.0002982982803838574,
+        -0.007221041510717577,
+        0.004339955523482389
+      ],
+      "direction": [
+        0.9993101903551427,
+        0.02451602830573181,
+        -0.027894583855669244
+      ],
+      "frame": "shared_child_center_robust_diagonal",
+      "base_scene_scale": 1.2998567886683972,
+      "child_to_scene_scale": 0.07510871098948241
+    },
+    {
+      "id": "public/fusion_joint_joint_set_00429_j001_7194fc4bce/0",
+      "asset_key": "public/fusion_joint_joint_set_00429_j001_7194fc4bce",
+      "asset_id": "fusion_joint_joint_set_00429_j001_7194fc4bce",
+      "asset_name": "joint_set_00429_j001.json",
+      "source": "fusion_joint",
+      "private": false,
+      "split": "train",
+      "group": "4cc00e746ec577f6",
+      "joint_index": 0,
+      "joint_name": "Rev51_1",
+      "type": "continuous",
+      "mimic": null,
+      "parent_name": "34566_40440619_0031_2",
+      "child_name": "34566_40440619_0031_1",
+      "parent_file": "cache/26bebf746c59bee099b5180cbe279dadf390c0529bf3b0fe3ec43ac19307f63f.npy",
+      "child_file": "cache/79825a03bb3df8ce175974bc52d29813ea7250a6533ebc15e7a15bc0a0df347f.npy",
+      "center": [
+        -0.0033376573119312525,
+        -0.059699106961488724,
+        0.11199718713760376
+      ],
+      "scale": 0.13839455832997546,
+      "origin": [
+        -3.268604190503289e-20,
+        -0.42199800725418735,
+        -7.360233549345969e-05
+      ],
+      "direction": [
+        1.0,
+        1.1832913578315177e-30,
+        -4.440892098500626e-16
+      ],
+      "frame": "shared_child_center_robust_diagonal",
+      "base_scene_scale": 0.1439118974817525,
+      "child_to_scene_scale": 0.9616616885169162
+    },
+    {
+      "id": "public/urdf_files_irb6600_225_255_f28e0e1ee5/0",
+      "asset_key": "public/urdf_files_irb6600_225_255_f28e0e1ee5",
+      "asset_id": "urdf_files_irb6600_225_255_f28e0e1ee5",
+      "asset_name": "urdf_files_dataset-81f4cdac42c3a51ba88833180db5bf3697988c87/urdf_files/ros-industrial/xacro_generated/abb/abb_irb6600_support/urdf/irb6600_225_255.urdf",
+      "source": "urdf_files",
+      "private": false,
+      "split": "train",
+      "group": "3fba3f4e1f87b35f",
+      "joint_index": 0,
+      "joint_name": "joint_cylinder",
+      "type": "continuous",
+      "mimic": {
+        "joint": "joint_2",
+        "multiplier": "-0.165"
+      },
+      "parent_name": "link_1",
+      "child_name": "link_cylinder",
+      "parent_file": "cache/684742823c37e5e61759fd3f29c853d90edb675472c1da24a435fcc0fdc2712c.npy",
+      "child_file": "cache/1c8cb614747eec2b680b11490c425fff3e6f3c2b065acbe244784c647f5f9b6c.npy",
+      "center": [
+        -0.17713649570941925,
+        -0.2021443396806717,
+        0.6645902991294861
+      ],
+      "scale": 0.8328529826283103,
+      "origin": [
+        -0.13071155001093981,
+        0.0,
+        -0.017518456959164642
+      ],
+      "direction": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "frame": "shared_child_center_robust_diagonal",
+      "base_scene_scale": 3.383241915436412,
+      "child_to_scene_scale": 0.24617009467408385
+    },
+    {
+      "id": "user/user_continuous_26_model_fe024b58bb/10",
+      "asset_key": "user/user_continuous_26_model_fe024b58bb",
+      "asset_id": "user_continuous_26_model_fe024b58bb",
+      "asset_name": "0008-desktop-ferris-wheel-gs1-1",
+      "source": "user_continuous_26",
+      "private": true,
+      "split": "train",
+      "group": "fa4efbca6f5b63ca",
+      "joint_index": 10,
+      "joint_name": "cabin_10_hang",
+      "type": "continuous",
+      "mimic": {
+        "joint": "wheel_spin",
+        "multiplier": "-1",
+        "offset": "0"
+      },
+      "parent_name": "wheel",
+      "child_name": "cabin_10",
+      "parent_file": "cache/63a203956a1b151f5db18fd05565c6703b2dcbe10e1ca9e734f3a2969aff1aa4.npy",
+      "child_file": "cache/189751f090ad6c8e61be7fa4e464ebbfa562ef68d94361f17431280986ea9e54.npy",
+      "center": [
+        -0.12680105865001678,
+        0.030353659763932228,
+        0.4250744581222534
+      ],
+      "scale": 0.07806143636475048,
+      "origin": [
+        0.06780059495283254,
+        0.0010165676500713539,
+        0.27489031335782826
+      ],
+      "direction": [
+        0.0023975635146303432,
+        -0.9999923000015619,
+        0.003106706741830815
+      ],
+      "frame": "shared_child_center_robust_diagonal",
+      "base_scene_scale": 0.6719550179296784,
+      "child_to_scene_scale": 0.11617062791682253
+    },
+    {
+      "id": "articraft/rec_clock_tower_with_rotating_hour_and_minute_hands_1bbecbe1d36b4d84a591de8fe92c7699/7",
+      "asset_key": "articraft/rec_clock_tower_with_rotating_hour_and_minute_hands_1bbecbe1d36b4d84a591de8fe92c7699",
+      "asset_id": "rec_clock_tower_with_rotating_hour_and_minute_hands_1bbecbe1d36b4d84a591de8fe92c7699",
+      "asset_name": "railway_station_clock_tower",
+      "source": "articraft",
+      "private": false,
+      "split": "train",
+      "group": "549a26a52d6d91ba",
+      "joint_index": 7,
+      "joint_name": "west_minute_spin",
+      "type": "continuous",
+      "mimic": null,
+      "parent_name": "tower",
+      "child_name": "west_minute_hand",
+      "parent_file": "cache/de54cd1b04c1b523bbc6ab1a75686c64732ed47f92f9cd5cc14fd49299632491.npy",
+      "child_file": "cache/8886a8415332f02c9afd8310b9b4bfc36720ff192f7d031040551ef983bcc1fa.npy",
+      "center": [
+        -2.447000026702881,
+        -0.0003065267519559711,
+        14.544037818908691
+      ],
+      "scale": 1.074597803532702,
+      "origin": [
+        1.1759951790146772e-06,
+        0.00028524788618427784,
+        -0.32015505424417745
+      ],
+      "direction": [
+        -0.9999999999932538,
+        0.0,
+        -3.6732051033465744e-06
+      ],
+      "frame": "shared_child_center_robust_diagonal",
+      "base_scene_scale": 22.683915006012523,
+      "child_to_scene_scale": 0.04737267809581691
+    },
+    {
+      "id": "public/artvip_model_microscope001_06b144ab77/1",
+      "asset_key": "public/artvip_model_microscope001_06b144ab77",
+      "asset_id": "artvip_model_microscope001_06b144ab77",
+      "asset_name": "Articulated_objects/lab_items/microscope/microscope001/model_microscope001.usd",
+      "source": "artvip",
+      "private": false,
+      "split": "train",
+      "group": "462c3cc006839a99",
+      "joint_index": 1,
+      "joint_name": "/root/E_knob_57/RevoluteJoint_microscope001_up1",
+      "type": "continuous",
+      "mimic": null,
+      "parent_name": "/root/E_body_1",
+      "child_name": "/root/E_knob_57",
+      "parent_file": "cache/06b9a727b8958470ac343a3b4de133bbce75c9adab38e2278972b20842a942f5.npy",
+      "child_file": "cache/54b976a176d8b943bab0fc479e735dc9e01f607b66dfe768cd4f445fa67dfee1.npy",
+      "center": [
+        -0.03906690329313278,
+        0.10961972922086716,
+        0.6015496253967285
+      ],
+      "scale": 0.13445288656469165,
+      "origin": [
+        0.0,
+        -0.00202621517832152,
+        0.0002646575602806941
+      ],
+      "direction": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "frame": "shared_child_center_robust_diagonal",
+      "base_scene_scale": 1.0962701087164506,
+      "child_to_scene_scale": 0.12264576539637075
+    },
+    {
+      "id": "public/fusion_joint_joint_set_00000_j000_a91880d729/0",
+      "asset_key": "public/fusion_joint_joint_set_00000_j000_a91880d729",
+      "asset_id": "fusion_joint_joint_set_00000_j000_a91880d729",
+      "asset_name": "joint_set_00000_j000.json",
+      "source": "fusion_joint",
+      "private": false,
+      "split": "train",
+      "group": "28ab51daaa765cb6",
+      "joint_index": 0,
+      "joint_name": "Rev3_0",
+      "type": "continuous",
+      "mimic": null,
+      "parent_name": "25370_adbde9bf_0025_1",
+      "child_name": "25370_adbde9bf_0025_2",
+      "parent_file": "cache/a6a05295a7c6d4d4b1ac9a74de58d7eccdff7ae73f374ca83b883b79e84ea5ca.npy",
+      "child_file": "cache/0b0896e680673dd5e41f84a64e04fb2be2fbb96bc31769b579622c4f9b722a93.npy",
+      "center": [
+        -0.05399991199374199,
+        0.5887275338172913,
+        0.001587499980814755
+      ],
+      "scale": 0.057906923274857885,
+      "origin": [
+        -0.0004958487951094214,
+        0.0001195081536461516,
+        0.0
+      ],
+      "direction": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "frame": "shared_child_center_robust_diagonal",
+      "base_scene_scale": 0.058886210996896005,
+      "child_to_scene_scale": 0.9833698296178415
+    },
+    {
+      "id": "public/urdf_files_two_arm_robot_example_standalone_d0982de135/6",
+      "asset_key": "public/urdf_files_two_arm_robot_example_standalone_d0982de135",
+      "asset_id": "urdf_files_two_arm_robot_example_standalone_d0982de135",
+      "asset_name": "urdf_files_dataset-81f4cdac42c3a51ba88833180db5bf3697988c87/urdf_files/oems/xacro_generated/kinova_robotics/kinova_description/urdf/two_arm_robot_example_standalone.urdf",
+      "source": "urdf_files",
+      "private": false,
+      "split": "train",
+      "group": "c1928241e8e5d7c7",
+      "joint_index": 6,
+      "joint_name": "right_joint_5",
+      "type": "continuous",
+      "mimic": null,
+      "parent_name": "right_link_4",
+      "child_name": "right_link_5",
+      "parent_file": "cache/34865a7ce5f93ed11f1f77a756f5bdec3d0f517101f8340bb7868e6d0d316945.npy",
+      "child_file": "cache/899dd658a3ee42b2b709feca2d56959d1b25d346cde7f2fc689ae75d88a02471.npy",
+      "center": [
+        0.15001384913921356,
+        0.1613384187221527,
+        0.25407353043556213
+      ],
+      "scale": 0.16229097224506892,
+      "origin": [
+        -0.022450973140461183,
+        0.024206227780265183,
+        -0.031176419301847502
+      ],
+      "direction": [
+        0.8660480111120122,
+        0.23465235885258992,
+        -0.44147379642946366
+      ],
+      "frame": "shared_child_center_robust_diagonal",
+      "base_scene_scale": 0.8824662776895906,
+      "child_to_scene_scale": 0.18390614615888484
+    },
+    {
+      "id": "user/user_continuous_26_model_e6dd04bca2/0",
+      "asset_key": "user/user_continuous_26_model_e6dd04bca2",
+      "asset_id": "user_continuous_26_model_e6dd04bca2",
+      "asset_name": "0009-escape_cipher_dial_g1_bom",
+      "source": "user_continuous_26",
+      "private": true,
+      "split": "train",
+      "group": "9da8ad958e8964b8",
+      "joint_index": 0,
+      "joint_name": "dial_spin",
+      "type": "continuous",
+      "mimic": null,
+      "parent_name": "base_link",
+      "child_name": "dial",
+      "parent_file": "cache/d27ce20656ae439b017499ac3a421f510a920321029ab23e038c878fc38ab1c2.npy",
+      "child_file": "cache/7152bb79c6f4e83e6a49e9241ba42c53d649973c1c9b2972a7a5c71aabe5e84e.npy",
+      "center": [
+        -0.00044969969894737005,
+        -0.003577282652258873,
+        0.14089418947696686
+      ],
+      "scale": 0.21865097088006222,
+      "origin": [
+        0.00032912518303761457,
+        -0.014094228392374893,
+        -0.00020763136423973538
+      ],
+      "direction": [
+        0.0027466561238285838,
+        -0.014665879592080324,
+        0.9998886777316404
+      ],
+      "frame": "shared_child_center_robust_diagonal",
+      "base_scene_scale": 0.3434767203954787,
+      "child_to_scene_scale": 0.6365816310005165
+    },
+    {
+      "id": "articraft/rec_gear_assemblies_fd1c8515a7994802af52fb8470edebf8/1",
+      "asset_key": "articraft/rec_gear_assemblies_fd1c8515a7994802af52fb8470edebf8",
+      "asset_id": "rec_gear_assemblies_fd1c8515a7994802af52fb8470edebf8",
+      "asset_name": "worm_indexing_unit",
+      "source": "articraft",
+      "private": false,
+      "split": "train",
+      "group": "9c16251b30a3233c",
+      "joint_index": 1,
+      "joint_name": "wheel_spin",
+      "type": "continuous",
+      "mimic": null,
+      "parent_name": "frame",
+      "child_name": "wheel_spindle",
+      "parent_file": "cache/3489c962cbbed4b4fcef1029955d421b43d1f42879a17c486d5f54242c49bba9.npy",
+      "child_file": "cache/e323f4650560ab6fd55ac3bcd68d4b49f4544e9485878d408acde7dae818a744.npy",
+      "center": [
+        5.194094046601094e-05,
+        -0.0001732260425342247,
+        0.29960012435913086
+      ],
+      "scale": 0.6530481360130344,
+      "origin": [
+        -7.953615913080907e-05,
+        0.00026525769385362313,
+        0.0
+      ],
+      "direction": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "frame": "shared_child_center_robust_diagonal",
+      "base_scene_scale": 1.0666227074275139,
+      "child_to_scene_scale": 0.6122578597525448
+    },
+    {
+      "id": "public/artvip_model_office_chair_3_fdbdb5b14d/6",
+      "asset_key": "public/artvip_model_office_chair_3_fdbdb5b14d",
+      "asset_id": "artvip_model_office_chair_3_fdbdb5b14d",
+      "asset_name": "Articulated_objects/small_furniture/chair/model_office_chair_3/model_office_chair_3.usd",
+      "source": "artvip",
+      "private": false,
+      "split": "train",
+      "group": "665421547930840f",
+      "joint_index": 6,
+      "joint_name": "/root/E_linkwheel1M1_53/RevoluteJoint_officechair_3_down4",
+      "type": "continuous",
+      "mimic": null,
+      "parent_name": "/root/E_body1_4",
+      "child_name": "/root/E_linkwheel1M1_53",
+      "parent_file": "cache/aa212ebca7a8141fd6fac012da55f11a42e3810f5ea07228fc9d3f0dd1bf7cb4.npy",
+      "child_file": "cache/3822b1e8bc3d4e9f17d100deb35c1b12c30bc420c8cc060250b9b99138c61fe3.npy",
+      "center": [
+        0.29483169317245483,
+        -0.001571997650898993,
+        0.05205225571990013
+      ],
+      "scale": 0.08469618638222742,
+      "origin": [
+        -0.005492389563447334,
+        0.2037246013866267,
+        0.0
+      ],
+      "direction": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "frame": "shared_child_center_robust_diagonal",
+      "base_scene_scale": 1.2940063180585584,
+      "child_to_scene_scale": 0.06545268380860766
+    },
+    {
+      "id": "public/fusion_joint_joint_set_00479_j001_419c9ee20a/0",
+      "asset_key": "public/fusion_joint_joint_set_00479_j001_419c9ee20a",
+      "asset_id": "fusion_joint_joint_set_00479_j001_419c9ee20a",
+      "asset_name": "joint_set_00479_j001.json",
+      "source": "fusion_joint",
+      "private": false,
+      "split": "train",
+      "group": "437e246a1c61af68",
+      "joint_index": 0,
+      "joint_name": "Rev16_1",
+      "type": "continuous",
+      "mimic": null,
+      "parent_name": "51667_ccb371f6_0005_1",
+      "child_name": "51667_ccb371f6_0005_2",
+      "parent_file": "cache/28457a93a07d2b4e953c751c582234a5b4dd2c289b46e92cf93af263576a4278.npy",
+      "child_file": "cache/abcdee99237de25066552f95dbc422cf7b666cac890ad4cf74674a29bd3414de.npy",
+      "center": [
+        0.01902140863239765,
+        0.006180711090564728,
+        0.008999999612569809
+      ],
+      "scale": 0.019892595206141242,
+      "origin": [
+        -1.3990456835576036e-05,
+        -1.8660363916084314e-05,
+        0.0
+      ],
+      "direction": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "frame": "shared_child_center_robust_diagonal",
+      "base_scene_scale": 0.056991306622241236,
+      "child_to_scene_scale": 0.3490461332637358
+    },
+    {
+      "id": "public/urdf_files_pr2_1be41ddf1d/2",
+      "asset_key": "public/urdf_files_pr2_1be41ddf1d",
+      "asset_id": "urdf_files_pr2_1be41ddf1d",
+      "asset_name": "urdf_files_dataset-81f4cdac42c3a51ba88833180db5bf3697988c87/urdf_files/random/robot-assets/pr2/pr2.urdf",
+      "source": "urdf_files",
+      "private": false,
+      "split": "train",
+      "group": "72c5e8b00a201465",
+      "joint_index": 2,
+      "joint_name": "fl_caster_r_wheel_joint",
+      "type": "continuous",
+      "mimic": null,
+      "parent_name": "fl_caster_rotation_link",
+      "child_name": "fl_caster_r_wheel_link",
+      "parent_file": "cache/55f53f219e5050da02a07017aff2f9b930c780449151780e91b2a9e7b4082080.npy",
+      "child_file": "cache/ed7b865591f37ea46ebbf921e633937c49ad85a7ec3b78ae09dac6b394467521.npy",
+      "center": [
+        0.22166801989078522,
+        0.17560000717639923,
+        0.14719009399414062
+      ],
+      "scale": 0.3174570500192813,
+      "origin": [
+        0.009235832403270609,
+        0.0,
+        -0.21417100042355675
+      ],
+      "direction": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "frame": "shared_child_center_robust_diagonal",
+      "base_scene_scale": 2.001222051788674,
+      "child_to_scene_scale": 0.15863159699621593
+    },
+    {
+      "id": "user/user_continuous_26_model_c99279cfe9/0",
+      "asset_key": "user/user_continuous_26_model_c99279cfe9",
+      "asset_id": "user_continuous_26_model_c99279cfe9",
+      "asset_name": "0004-casual_dump_truck_g1_bom",
+      "source": "user_continuous_26",
+      "private": true,
+      "split": "train",
+      "group": "7d90f5d58dc0eab3",
+      "joint_index": 0,
+      "joint_name": "front_left_wheel_spin",
+      "type": "continuous",
+      "mimic": null,
+      "parent_name": "base_link",
+      "child_name": "front_left_wheel",
+      "parent_file": "cache/077336fdcf9318c414aad8957a716aaf31df319337cbcc35cef01c96d4fa7ea0.npy",
+      "child_file": "cache/47747a000c2cac75859cda7de87fb6c080294bdd22c2ad6a8d611bd9e1e25912.npy",
+      "center": [
+        -0.08613947033882141,
+        -0.11217249184846878,
+        0.042068589478731155
+      ],
+      "scale": 0.11989727621499412,
+      "origin": [
+        -9.193735317492013e-08,
+        1.320197764961194e-07,
+        0.0008214281872853
+      ],
+      "direction": [
+        -0.9999999925573915,
+        -4.858014981843696e-05,
+        -0.00011191597796705318
+      ],
+      "frame": "shared_child_center_robust_diagonal",
+      "base_scene_scale": 0.5734578268836507,
+      "child_to_scene_scale": 0.2090777570628924
+    },
+    {
+      "id": "articraft/rec_gear_assemblies_142e7f00a6734277b5f9bd587b2e2a5b/3",
+      "asset_key": "articraft/rec_gear_assemblies_142e7f00a6734277b5f9bd587b2e2a5b",
+      "asset_id": "rec_gear_assemblies_142e7f00a6734277b5f9bd587b2e2a5b",
+      "asset_name": "gear_bench",
+      "source": "articraft",
+      "private": false,
+      "split": "train",
+      "group": "9c16251b30a3233c",
+      "joint_index": 3,
+      "joint_name": "joint_3",
+      "type": "continuous",
+      "mimic": null,
+      "parent_name": "frame",
+      "child_name": "shaft_3",
+      "parent_file": "cache/b6b83302b35141eb6dc536bd39a64e41b01cd15fe5c373ea46c9efe12ac64be0.npy",
+      "child_file": "cache/1fecca19e01741c2fab23bc97de2d83cdde07b40e125f4d7f95f6d9c198e4d5f.npy",
+      "center": [
+        0.12000872194766998,
+        -0.00012888529454357922,
+        0.0402153879404068
+      ],
+      "scale": 0.11720406484215577,
+      "origin": [
+        -7.441676772673037e-05,
+        0.0010996657387024513,
+        0.0
+      ],
+      "direction": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "frame": "shared_child_center_robust_diagonal",
+      "base_scene_scale": 0.23345235059857505,
+      "child_to_scene_scale": 0.5020470538919095
+    },
+    {
+      "id": "public/artvip_model_incubator_d485691b45/1",
+      "asset_key": "public/artvip_model_incubator_d485691b45",
+      "asset_id": "artvip_model_incubator_d485691b45",
+      "asset_name": "Articulated_objects/Medical_equipment/incubator/model_incubator.usd",
+      "source": "artvip",
+      "private": false,
+      "split": "train",
+      "group": "91d39f8fc7720d73",
+      "joint_index": 1,
+      "joint_name": "/root/E_knob1_101/RevoluteJoint_incubator_middle",
+      "type": "continuous",
+      "mimic": null,
+      "parent_name": "/root/E_body_11",
+      "child_name": "/root/E_knob1_101",
+      "parent_file": "cache/438e5039050386f0b76ae9173e9d5db0432ab01d43defaf49454b671399df39b.npy",
+      "child_file": "cache/367901e93ae903749c946af587b7a8254f3dc4567fbccab0f1e879fe6a4cac54.npy",
+      "center": [
+        -0.18022587895393372,
+        -0.24625690281391144,
+        0.544758141040802
+      ],
+      "scale": 0.0730378132945756,
+      "origin": [
+        0.0005829098737761028,
+        -1.7487344905475766e-10,
+        -0.00037866077759251946
+      ],
+      "direction": [
+        2.9999998218954715e-07,
+        0.999999999999955,
+        0.0
+      ],
+      "frame": "shared_child_center_robust_diagonal",
+      "base_scene_scale": 1.3211609867598604,
+      "child_to_scene_scale": 0.05528305333455267
+    },
+    {
+      "id": "public/fusion_joint_joint_set_00665_j001_388903315d/0",
+      "asset_key": "public/fusion_joint_joint_set_00665_j001_388903315d",
+      "asset_id": "fusion_joint_joint_set_00665_j001_388903315d",
+      "asset_name": "joint_set_00665_j001.json",
+      "source": "fusion_joint",
+      "private": false,
+      "split": "train",
+      "group": "80b4ef9ae68c1998",
+      "joint_index": 0,
+      "joint_name": "Rev1_1",
+      "type": "continuous",
+      "mimic": null,
+      "parent_name": "49407_5b45970e_0001_2",
+      "child_name": "49407_5b45970e_0000_2",
+      "parent_file": "cache/1c3e63abf6fb368a481e6e4c444586674cced8db34e19f83eb35e22db514f1fa.npy",
+      "child_file": "cache/65acb536402c552c9afa8e1a9ef0779579a9332d35d0cba41f397618eea7d1f5.npy",
+      "center": [
+        2.5262330382247455e-05,
+        0.0925000011920929,
+        4.006315066362731e-05
+      ],
+      "scale": 0.2687153550187069,
+      "origin": [
+        -9.401148803172555e-05,
+        0.0,
+        -0.00014909140812157263
+      ],
+      "direction": [
+        0.0,
+        -1.0,
+        0.0
+      ],
+      "frame": "shared_child_center_robust_diagonal",
+      "base_scene_scale": 0.2814249455894058,
+      "child_to_scene_scale": 0.9548384364290081
+    },
+    {
+      "id": "public/urdf_files_gingerurdf_ca56fd4ef5/43",
+      "asset_key": "public/urdf_files_gingerurdf_ca56fd4ef5",
+      "asset_id": "urdf_files_gingerurdf_ca56fd4ef5",
+      "asset_name": "urdf_files_dataset-81f4cdac42c3a51ba88833180db5bf3697988c87/urdf_files/random/robot-assets/ginger_robot/gingerurdf.urdf",
+      "source": "urdf_files",
+      "private": false,
+      "split": "train",
+      "group": "72c5e8b00a201465",
+      "joint_index": 43,
+      "joint_name": "Right_4_1",
+      "type": "continuous",
+      "mimic": null,
+      "parent_name": "Right_Wrist_Y_Link",
+      "child_name": "Right_4_1_Link",
+      "parent_file": "cache/6733ebccf6d95b1bfd25e1ec174892c7196a6dc0a26cd2abf3624a2fe6131a90.npy",
+      "child_file": "cache/e5a9318e5da9ccbb68342a44290d0b0017dedfcf89813250850944d0b7d88119.npy",
+      "center": [
+        -0.21966969966888428,
+        -0.138463094830513,
+        0.6857748627662659
+      ],
+      "scale": 0.044238824305321535,
+      "origin": [
+        -0.0036527645901887934,
+        -3.711489185387329e-05,
+        0.2665543935607061
+      ],
+      "direction": [
+        -1.8959590983000043e-15,
+        -0.9999999903061855,
+        -0.00013923946628028612
+      ],
+      "frame": "shared_child_center_robust_diagonal",
+      "base_scene_scale": 1.7660775648768174,
+      "child_to_scene_scale": 0.025049196697318987
+    },
+    {
+      "id": "user/user_continuous_26_model_56c5cd2202/1",
+      "asset_key": "user/user_continuous_26_model_56c5cd2202",
+      "asset_id": "user_continuous_26_model_56c5cd2202",
+      "asset_name": "0014-front-opening-suitcase-acc8c9452179",
+      "source": "user_continuous_26",
+      "private": true,
+      "split": "train",
+      "group": "4422762990f687f1",
+      "joint_index": 1,
+      "joint_name": "rear_left_spin",
+      "type": "continuous",
+      "mimic": null,
+      "parent_name": "base_link",
+      "child_name": "rear_left",
+      "parent_file": "cache/3f96b76b35b120ea297ccea8f9f3c48dae300c531841dad47ce87d5f27fccf81.npy",
+      "child_file": "cache/92f927dda86a919fbcfbf28f409ac49a41e01c374899cbf5e704d3e6f4408d04.npy",
+      "center": [
+        -0.1587032526731491,
+        0.1143086850643158,
+        0.020905306562781334
+      ],
+      "scale": 0.06657263021192975,
+      "origin": [
+        -0.0001844717537320406,
+        0.0014113118998717034,
+        -0.0013007103787977675
+      ],
+      "direction": [
+        -0.9953351179705672,
+        -0.07880897945660512,
+        0.05565202324736864
+      ],
+      "frame": "shared_child_center_robust_diagonal",
+      "base_scene_scale": 0.9009425494287571,
+      "child_to_scene_scale": 0.07389220350858125
+    },
+    {
+      "id": "articraft/rec_traditional_windmill_a9e17fe2dd4645b592965f921cac5aa3/0",
+      "asset_key": "articraft/rec_traditional_windmill_a9e17fe2dd4645b592965f921cac5aa3",
+      "asset_id": "rec_traditional_windmill_a9e17fe2dd4645b592965f921cac5aa3",
+      "asset_name": "traditional_windmill",
+      "source": "articraft",
+      "private": false,
+      "split": "train",
+      "group": "64d678ea71d8326c",
+      "joint_index": 0,
+      "joint_name": "tower_to_cap",
+      "type": "continuous",
+      "mimic": null,
+      "parent_name": "tower",
+      "child_name": "cap",
+      "parent_file": "cache/cdfdaf43dbe8dc0b87073f5ffd0864d34957a1da76b96c68b83638c3ae8b96a1.npy",
+      "child_file": "cache/3d15a8e893fe61aba506e5f4bf55928439f605daedb838355dd451cbfe985098.npy",
+      "center": [
+        -0.00852267537266016,
+        0.0026255741249769926,
+        6.555020809173584
+      ],
+      "scale": 5.1984264257668364,
+      "origin": [
+        0.0016394721545766522,
+        -0.0005050709406913816,
+        0.0
+      ],
+      "direction": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "frame": "shared_child_center_robust_diagonal",
+      "base_scene_scale": 10.7641293807633,
+      "child_to_scene_scale": 0.4829397940029413
+    },
+    {
+      "id": "public/artvip_model_medical_cart001_ec054176f7/5",
+      "asset_key": "public/artvip_model_medical_cart001_ec054176f7",
+      "asset_id": "artvip_model_medical_cart001_ec054176f7",
+      "asset_name": "Articulated_objects/Medical_equipment/medical_cart001/model_medical_cart001.usd",
+      "source": "artvip",
+      "private": false,
+      "split": "train",
+      "group": "c605af63f4dd9b8e",
+      "joint_index": 5,
+      "joint_name": "/root/E_link1_24/RevoluteJoint_medical_cart001_middle",
+      "type": "continuous",
+      "mimic": null,
+      "parent_name": "/root/E_Component212_1",
+      "child_name": "/root/E_link1_24",
+      "parent_file": "cache/b5bdeb42fafd80fb55f871b21e0650cb882fed5c0669e994e917771ff6beec3f.npy",
+      "child_file": "cache/52bdb98384f6096886a0e80dc7865818f869f67d09217e133e598336fafefa58.npy",
+      "center": [
+        -0.2742050886154175,
+        -0.19613097608089447,
+        0.08387530595064163
+      ],
+      "scale": 0.10829896251856512,
+      "origin": [
+        -0.1770709701886497,
+        -0.00015259045312727423,
+        0.0
+      ],
+      "direction": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "frame": "shared_child_center_robust_diagonal",
+      "base_scene_scale": 1.2561000880832378,
+      "child_to_scene_scale": 0.08621841805920524
+    },
+    {
+      "id": "public/fusion_joint_joint_set_00629_j000_ec1c3e7605/0",
+      "asset_key": "public/fusion_joint_joint_set_00629_j000_ec1c3e7605",
+      "asset_id": "fusion_joint_joint_set_00629_j000_ec1c3e7605",
+      "asset_name": "joint_set_00629_j000.json",
+      "source": "fusion_joint",
+      "private": false,
+      "split": "train",
+      "group": "0b8bf180196059a1",
+      "joint_index": 0,
+      "joint_name": "Rev11_0",
+      "type": "continuous",
+      "mimic": null,
+      "parent_name": "22369_481ab478_0078_1",
+      "child_name": "22369_481ab478_0078_2",
+      "parent_file": "cache/e78572a02a60eedf7f076fbaf68e97446d3322ded993e22370953509ca67d72b.npy",
+      "child_file": "cache/d4ea6060a9387c53c8708e080db90d93b9e7859b81ce54f2f477fd7bc3639a70.npy",
+      "center": [
+        -1.2466888620110694e-05,
+        -0.002882900182157755,
+        0.0
+      ],
+      "scale": 0.013883678785439724,
+      "origin": [
+        0.0008979528274008424,
+        0.0,
+        0.0
+      ],
+      "direction": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "frame": "shared_child_center_robust_diagonal",
+      "base_scene_scale": 0.03968971346360834,
+      "child_to_scene_scale": 0.349805467811445
+    },
+    {
+      "id": "public/urdf_files_mir_c5b1650a7d/5",
+      "asset_key": "public/urdf_files_mir_c5b1650a7d",
+      "asset_id": "urdf_files_mir_c5b1650a7d",
+      "asset_name": "urdf_files_dataset-81f4cdac42c3a51ba88833180db5bf3697988c87/urdf_files/random/xacro_generated/mir_description/urdf/mir.urdf",
+      "source": "urdf_files",
+      "private": false,
+      "split": "train",
+      "group": "2489e09e34d9b107",
+      "joint_index": 5,
+      "joint_name": "fr_caster_wheel_joint",
+      "type": "continuous",
+      "mimic": null,
+      "parent_name": "fr_caster_rotation_link",
+      "child_name": "fr_caster_wheel_link",
+      "parent_file": "cache/9fe360c621c6addc1eac28cc3a2fea0ced954e1794f673e51acbab20b5009465.npy",
+      "child_file": "cache/81675370f5134f3ef3ecb35cec6c99296f36bfbf11e29391cfb5ddd0376dde28.npy",
+      "center": [
+        0.3031342625617981,
+        -0.203000009059906,
+        0.06252207607030869
+      ],
+      "scale": 0.17884535506488947,
+      "origin": [
+        6.56289798394385e-05,
+        0.0,
+        -0.00012343664335411766
+      ],
+      "direction": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "frame": "shared_child_center_robust_diagonal",
+      "base_scene_scale": 1.1285088575033646,
+      "child_to_scene_scale": 0.15847935430525076
+    },
+    {
+      "id": "user/user_continuous_26_model_ca62c37c8b/1",
+      "asset_key": "user/user_continuous_26_model_ca62c37c8b",
+      "asset_id": "user_continuous_26_model_ca62c37c8b",
+      "asset_name": "0024-rotating-cutting-table",
+      "source": "user_continuous_26",
+      "private": true,
+      "split": "train",
+      "group": "dbb651df5f435861",
+      "joint_index": 1,
+      "joint_name": "roller_spin",
+      "type": "continuous",
+      "mimic": null,
+      "parent_name": "base_link",
+      "child_name": "cutting_roller",
+      "parent_file": "cache/ab46a872ae667f040381b54087813a12f21636cca9039e7ee2e4127a9de1af74.npy",
+      "child_file": "cache/721edea3bec899c29d1d7dd29e58d2f7691f9fb4a2bbbc5f83a65a00fafa3615.npy",
+      "center": [
+        -0.000702881661709398,
+        0.08261620998382568,
+        0.23842106759548187
+      ],
+      "scale": 0.10060028045938411,
+      "origin": [
+        -1.0523460833418321e-05,
+        7.897950096021048e-05,
+        -0.001306309868940841
+      ],
+      "direction": [
+        0.9999507176667687,
+        0.0062976997081794165,
+        -0.00767471276986842
+      ],
+      "frame": "shared_child_center_robust_diagonal",
+      "base_scene_scale": 0.9539132434700771,
+      "child_to_scene_scale": 0.1054606182983975
+    },
+    {
+      "id": "articraft/rec_wheelie_bin_with_hinged_lid_62cf47f658324bb9bca366103ea0eb97/1",
+      "asset_key": "articraft/rec_wheelie_bin_with_hinged_lid_62cf47f658324bb9bca366103ea0eb97",
+      "asset_id": "rec_wheelie_bin_with_hinged_lid_62cf47f658324bb9bca366103ea0eb97",
+      "asset_name": "wheelie_bin",
+      "source": "articraft",
+      "private": false,
+      "split": "train",
+      "group": "704623ee13c4c957",
+      "joint_index": 1,
+      "joint_name": "bin_body_to_wheel_1",
+      "type": "continuous",
+      "mimic": null,
+      "parent_name": "bin_body",
+      "child_name": "wheel_1",
+      "parent_file": "cache/f850960817cc955d1f16e13ad87debad4154e89b509e9516f8de5751dd49c385.npy",
+      "child_file": "cache/4e0c09182459f5d83ac7c0ff988202d0a73247beecb164650b3c156458a329a9.npy",
+      "center": [
+        -0.3146032392978668,
+        0.3651685118675232,
+        0.15434479713439941
+      ],
+      "scale": 0.37124815132644395,
+      "origin": [
+        -0.001068721017776487,
+        0.0,
+        0.0017648649919457325
+      ],
+      "direction": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "frame": "shared_child_center_robust_diagonal",
+      "base_scene_scale": 1.6296423468908485,
+      "child_to_scene_scale": 0.2278095878121592
+    },
+    {
+      "id": "public/artvip_model_AGV2_cd590d7335/4",
+      "asset_key": "public/artvip_model_AGV2_cd590d7335",
+      "asset_id": "artvip_model_AGV2_cd590d7335",
+      "asset_name": "Articulated_objects/industrial_machinery/agv/AGV_03/model_AGV2.usd",
+      "source": "artvip",
+      "private": false,
+      "split": "train",
+      "group": "4384d0dad08205fe",
+      "joint_index": 4,
+      "joint_name": "/root/E_wheel2_17/RevoluteJoint_AGV2_4",
+      "type": "continuous",
+      "mimic": null,
+      "parent_name": "/root/E_body_1",
+      "child_name": "/root/E_wheel2_17",
+      "parent_file": "cache/67ea6d92f118e413a7dd491e76b89466c7871dc1aba2309919181a55974a1868.npy",
+      "child_file": "cache/187d1e903a4989424c5e98362cf7095afe4e24a052eae366107285e80f54e9a3.npy",
+      "center": [
+        -0.051161497831344604,
+        -0.2810138463973999,
+        0.02913817949593067
+      ],
+      "scale": 0.08306158398598004,
+      "origin": [
+        0.0,
+        0.0005447087364494788,
+        0.0015966547173450903
+      ],
+      "direction": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "frame": "shared_child_center_robust_diagonal",
+      "base_scene_scale": 0.8732447746902874,
+      "child_to_scene_scale": 0.0951183292398622
+    },
+    {
+      "id": "public/fusion_joint_joint_set_00607_j000_c7bc59e58e/0",
+      "asset_key": "public/fusion_joint_joint_set_00607_j000_c7bc59e58e",
+      "asset_id": "fusion_joint_joint_set_00607_j000_c7bc59e58e",
+      "asset_name": "joint_set_00607_j000.json",
+      "source": "fusion_joint",
+      "private": false,
+      "split": "train",
+      "group": "26df27a24aabbc75",
+      "joint_index": 0,
+      "joint_name": "Rev11_0",
+      "type": "continuous",
+      "mimic": null,
+      "parent_name": "50036_7766eac1_0009_1",
+      "child_name": "50036_7766eac1_0009_2",
+      "parent_file": "cache/afdf4136075df25da705f54e56fbb08a61f83a1055e0958f4c8e056261db8b6b.npy",
+      "child_file": "cache/efb14af74a3c20720794cec9316270be223fa953794a13877d6f9a1bb775731f.npy",
+      "center": [
+        -0.0006636017351411283,
+        -0.03447525575757027,
+        0.12732583284378052
+      ],
+      "scale": 1.5434825857153638,
+      "origin": [
+        0.0,
+        -0.23357875727204008,
+        0.3386330185992825
+      ],
+      "direction": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "frame": "shared_child_center_robust_diagonal",
+      "base_scene_scale": 1.6822485452184515,
+      "child_to_scene_scale": 0.9175116186621116
+    },
+    {
+      "id": "public/urdf_files_kinovaJacoJ2N6S300_5d83e229e8/0",
+      "asset_key": "public/urdf_files_kinovaJacoJ2N6S300_5d83e229e8",
+      "asset_id": "urdf_files_kinovaJacoJ2N6S300_5d83e229e8",
+      "asset_name": "urdf_files_dataset-81f4cdac42c3a51ba88833180db5bf3697988c87/urdf_files/matlab/kinova_description/urdf/kinovaJacoJ2N6S300.urdf",
+      "source": "urdf_files",
+      "private": false,
+      "split": "train",
+      "group": "c1928241e8e5d7c7",
+      "joint_index": 0,
+      "joint_name": "j2n6s300_joint_1",
+      "type": "continuous",
+      "mimic": null,
+      "parent_name": "j2n6s300_link_base",
+      "child_name": "j2n6s300_link_1",
+      "parent_file": "cache/c5abae2ab584a8c7a32d7f84a2357c5a85200d5652e452b68b266287fa0f51c1.npy",
+      "child_file": "cache/9b578d7c76e5dfa5af76343221837f7f7c08efafeeee5d9e0f4ad00899093659.npy",
+      "center": [
+        4.480005372897722e-05,
+        2.1398802346084267e-05,
+        0.23078136146068573
+      ],
+      "scale": 0.2112559769840409,
+      "origin": [
+        -0.00021206526013255885,
+        -0.00010129323984855026,
+        5.551115123125783e-17
+      ],
+      "direction": [
+        -2.0682310711021444e-13,
+        0.0,
+        -1.0
+      ],
+      "frame": "shared_child_center_robust_diagonal",
+      "base_scene_scale": 0.670757143120824,
+      "child_to_scene_scale": 0.31495151285476086
+    },
+    {
+      "id": "user/user_continuous_26_model_200f054d0e/0",
+      "asset_key": "user/user_continuous_26_model_200f054d0e",
+      "asset_id": "user_continuous_26_model_200f054d0e",
+      "asset_name": "0025-stand-mixer-c0c754aeec9a",
+      "source": "user_continuous_26",
+      "private": true,
+      "split": "train",
+      "group": "06c8d884fc2988c8",
+      "joint_index": 0,
+      "joint_name": "whisk_spin",
+      "type": "continuous",
+      "mimic": null,
+      "parent_name": "base_link",
+      "child_name": "whisk_rotor",
+      "parent_file": "cache/a933c61a182388114ea2c577cc614be2f9ba4f307a4a0dad00a5260ef6e1c144.npy",
+      "child_file": "cache/af209edbd0c92f47cfab59e2fb53cfe08e561936a98108c8e44652944e1d6a19.npy",
+      "center": [
+        -0.06753099709749222,
+        0.00013211797340773046,
+        0.21948453783988953
+      ],
+      "scale": 0.20723958404867934,
+      "origin": [
+        -0.008846790451689353,
+        -0.015170995887741815,
+        0.004449483463650067
+      ],
+      "direction": [
+        0.3929754166245602,
+        0.04027556222455312,
+        0.9186665341767106
+      ],
+      "frame": "shared_child_center_robust_diagonal",
+      "base_scene_scale": 0.6341967107872417,
+      "child_to_scene_scale": 0.32677492727994206
+    },
+    {
+      "id": "articraft/rec_observation_wheel_a8d8f2930ccb4f8b8c3303a9ad39a300/1",
+      "asset_key": "articraft/rec_observation_wheel_a8d8f2930ccb4f8b8c3303a9ad39a300",
+      "asset_id": "rec_observation_wheel_a8d8f2930ccb4f8b8c3303a9ad39a300",
+      "asset_name": "compact_fairground_wheel",
+      "source": "articraft",
+      "private": false,
+      "split": "train",
+      "group": "561e4b2b9f26751e",
+      "joint_index": 1,
+      "joint_name": "wheel_to_bucket_00",
+      "type": "continuous",
+      "mimic": null,
+      "parent_name": "wheel",
+      "child_name": "bucket_00",
+      "parent_file": "cache/fba508ca182b73ca9338e076c9e8a24fb0168f000680da0270474370731959fd.npy",
+      "child_file": "cache/f6dbf85d6d6ac43280e38ebb2b1d2c68c110c43e7a7fb7ab81a0c77c122ecebe.npy",
+      "center": [
+        0.0,
+        1.1810966730117798,
+        1.4993466138839722
+      ],
+      "scale": 0.44702322749395257,
+      "origin": [
+        0.0,
+        -0.0024532797052356377,
+        0.4041252780728753
+      ],
+      "direction": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "frame": "shared_child_center_robust_diagonal",
+      "base_scene_scale": 4.003092929223603,
+      "child_to_scene_scale": 0.11166946043909413
+    },
+    {
+      "id": "public/artvip_model_neonatal_radiant_warmer_720ce4013c/6",
+      "asset_key": "public/artvip_model_neonatal_radiant_warmer_720ce4013c",
+      "asset_id": "artvip_model_neonatal_radiant_warmer_720ce4013c",
+      "asset_name": "Articulated_objects/Medical_equipment/neonatal_radiant_warmer/model_neonatal_radiant_warmer.usd",
+      "source": "artvip",
+      "private": false,
+      "split": "train",
+      "group": "75014eb8c5bdcbe3",
+      "joint_index": 6,
+      "joint_name": "/root/E_wheel_98/RevoluteJoint_neonatal_radiant_warmer_down",
+      "type": "continuous",
+      "mimic": null,
+      "parent_name": "/root/E_link_100",
+      "child_name": "/root/E_wheel_98",
+      "parent_file": "cache/51171cb48aa8d4240d895fd4fd0233607b4bce46b9e1feacc7dd0735f814d601.npy",
+      "child_file": "cache/17b8b36d913b4fad5f70a5073d66e77a1a9d881f8cb0badab17231a4bf578de9.npy",
+      "center": [
+        0.3385803699493408,
+        -0.19146040081977844,
+        0.04657638818025589
+      ],
+      "scale": 0.13633360930836438,
+      "origin": [
+        0.0007139126163174626,
+        -2.7606752661668565e-07,
+        -0.00022310272651069273
+      ],
+      "direction": [
+        0.0,
+        0.999999234420322,
+        -0.0012374000040992455
+      ],
+      "frame": "shared_child_center_robust_diagonal",
+      "base_scene_scale": 2.1009159758331486,
+      "child_to_scene_scale": 0.0648924616103694
+    },
+    {
+      "id": "public/fusion_joint_joint_set_00373_j000_a3406c4ce9/0",
+      "asset_key": "public/fusion_joint_joint_set_00373_j000_a3406c4ce9",
+      "asset_id": "fusion_joint_joint_set_00373_j000_a3406c4ce9",
+      "asset_name": "joint_set_00373_j000.json",
+      "source": "fusion_joint",
+      "private": false,
+      "split": "train",
+      "group": "bf1c4b93be698d5a",
+      "joint_index": 0,
+      "joint_name": "Rev38_0",
+      "type": "continuous",
+      "mimic": null,
+      "parent_name": "53119_aabd4fc1_0033_1",
+      "child_name": "53119_aabd4fc1_0033_2",
+      "parent_file": "cache/94ad08b25f106bfbfd789f1ff17769d92786e28fee8dd9943f4e464d2f550bfe.npy",
+      "child_file": "cache/bd53ae619fd93cae5e34b6252d185578185e5ea4248f3a16f7961053bceda6d5.npy",
+      "center": [
+        3.8299999237060547,
+        0.09637189656496048,
+        -0.9837349653244019
+      ],
+      "scale": 1.8549615590741657,
+      "origin": [
+        4.112847663713451e-08,
+        0.22932293405236004,
+        -1.402898318889935e-21
+      ],
+      "direction": [
+        3.410605131648481e-14,
+        0.0,
+        1.0
+      ],
+      "frame": "shared_child_center_robust_diagonal",
+      "base_scene_scale": 2.48007761723233,
+      "child_to_scene_scale": 0.7479449619581788
+    },
+    {
+      "id": "public/urdf_files_j2s7s300_standalone_5a0936cfb1/3",
+      "asset_key": "public/urdf_files_j2s7s300_standalone_5a0936cfb1",
+      "asset_id": "urdf_files_j2s7s300_standalone_5a0936cfb1",
+      "asset_name": "urdf_files_dataset-81f4cdac42c3a51ba88833180db5bf3697988c87/urdf_files/oems/xacro_generated/kinova_robotics/kinova_description/urdf/j2s7s300_standalone.urdf",
+      "source": "urdf_files",
+      "private": false,
+      "split": "train",
+      "group": "c1928241e8e5d7c7",
+      "joint_index": 3,
+      "joint_name": "j2s7s300_joint_7",
+      "type": "continuous",
+      "mimic": null,
+      "parent_name": "j2s7s300_link_6",
+      "child_name": "j2s7s300_link_7",
+      "parent_file": "cache/bcd065398f5c2c23d175f7c4419407cd031d4db8d5b1f04559ae00346f1ca819.npy",
+      "child_file": "cache/aae8f8e7aaa098128cdc9ba5212f95adf8e70770674398ad09a27307522b9d83.npy",
+      "center": [
+        0.36525958776474,
+        -0.008602756075561047,
+        0.26800018548965454
+      ],
+      "scale": 0.1899304594279885,
+      "origin": [
+        0.002442441052675326,
+        -0.006303590946100206,
+        0.01737887111491415
+      ],
+      "direction": [
+        -0.9902680687415704,
+        -3.8384793807135405e-16,
+        0.13917310096006524
+      ],
+      "frame": "shared_child_center_robust_diagonal",
+      "base_scene_scale": 0.6771595043584765,
+      "child_to_scene_scale": 0.28048112476531467
+    },
+    {
+      "id": "user/user_continuous_26_model_f27eebf3b5/0",
+      "asset_key": "user/user_continuous_26_model_f27eebf3b5",
+      "asset_id": "user_continuous_26_model_f27eebf3b5",
+      "asset_name": "0005-casual_music_box_g1_bom",
+      "source": "user_continuous_26",
+      "private": true,
+      "split": "train",
+      "group": "ad8ea5a2f2873dd0",
+      "joint_index": 0,
+      "joint_name": "crank_spin",
+      "type": "continuous",
+      "mimic": null,
+      "parent_name": "base_link",
+      "child_name": "crank",
+      "parent_file": "cache/65e2dae373de9d96ce072cbee5c8c4142da71d975dd8e7cbe9f76bc88985cbfd.npy",
+      "child_file": "cache/e6e2515ed33b2014336e63fee18d1c66efcd2ef78b69878eed02d7b6902b2146.npy",
+      "center": [
+        4.014400838059373e-05,
+        -0.10623293370008469,
+        0.05133381113409996
+      ],
+      "scale": 0.06099567630663731,
+      "origin": [
+        0.0005284715638388691,
+        -0.001352800911348817,
+        0.2803319710035558
+      ],
+      "direction": [
+        0.0006700793078999544,
+        -0.9999881258657827,
+        -0.004826916320049571
+      ],
+      "frame": "shared_child_center_robust_diagonal",
+      "base_scene_scale": 0.38383223622322743,
+      "child_to_scene_scale": 0.15891233343716268
+    },
+    {
+      "id": "articraft/rec_wheelchair_17ec0d8991a84b74adcf452c40b6961a/2",
+      "asset_key": "articraft/rec_wheelchair_17ec0d8991a84b74adcf452c40b6961a",
+      "asset_id": "rec_wheelchair_17ec0d8991a84b74adcf452c40b6961a",
+      "asset_name": "manual_wheelchair",
+      "source": "articraft",
+      "private": false,
+      "split": "train",
+      "group": "d084bd1ce37356e2",
+      "joint_index": 2,
+      "joint_name": "left_caster_swivel",
+      "type": "continuous",
+      "mimic": null,
+      "parent_name": "frame",
+      "child_name": "left_caster",
+      "parent_file": "cache/07249ebbf574c45d066bad61ddeb3f8f11b85ce0568e22ea93c9fbca5a62c78d.npy",
+      "child_file": "cache/0fe8fe25d323516d7a1d8ba56df6b6bc030891861b4b902c00d176961cc580e3.npy",
+      "center": [
+        0.40317657589912415,
+        0.24500000476837158,
+        0.12099999934434891
+      ],
+      "scale": 0.20954220041171798,
+      "origin": [
+        0.08028656789811511,
+        -2.2756139704093163e-08,
+        0.0
+      ],
+      "direction": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "frame": "shared_child_center_robust_diagonal",
+      "base_scene_scale": 1.8032529024707407,
+      "child_to_scene_scale": 0.11620233641360685
+    },
+    {
+      "id": "public/artvip_chemistry_825e99e628/0",
+      "asset_key": "public/artvip_chemistry_825e99e628",
+      "asset_id": "artvip_chemistry_825e99e628",
+      "asset_name": "Articulated_objects/lab_items/small_instrument/centrifuge/chemistry.usd",
+      "source": "artvip",
+      "private": false,
+      "split": "train",
+      "group": "790b15d0dc2419f0",
+      "joint_index": 0,
+      "joint_name": "/root/E_centrifuge_30739/RevoluteJoint_chemistry_01_middle",
+      "type": "continuous",
+      "mimic": null,
+      "parent_name": "/root/E_body_30738",
+      "child_name": "/root/E_centrifuge_30739",
+      "parent_file": "cache/64422d020afad86d8a930a3bb3d5049226c70bf8cfccdb6c10cbb0d6c30cf273.npy",
+      "child_file": "cache/aa7b342976b1a8ded3a10d7bc4eb2c29b6d33e7a430fc5215d47f3fe5182524f.npy",
+      "center": [
+        -0.00036828822339884937,
+        0.00095020403387025,
+        0.2271960824728012
+      ],
+      "scale": 0.3225175316606254,
+      "origin": [
+        0.0029189166220769257,
+        0.004286963687991769,
+        0.0
+      ],
+      "direction": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "frame": "shared_child_center_robust_diagonal",
+      "base_scene_scale": 0.6848461592732507,
+      "child_to_scene_scale": 0.4709342781492366
+    },
+    {
+      "id": "public/fusion_joint_joint_set_00258_j000_407662d606/0",
+      "asset_key": "public/fusion_joint_joint_set_00258_j000_407662d606",
+      "asset_id": "fusion_joint_joint_set_00258_j000_407662d606",
+      "asset_name": "joint_set_00258_j000.json",
+      "source": "fusion_joint",
+      "private": false,
+      "split": "train",
+      "group": "dd1bf25557bedbd2",
+      "joint_index": 0,
+      "joint_name": "Rev16_0",
+      "type": "continuous",
+      "mimic": null,
+      "parent_name": "23226_8d1b5098_0017_1",
+      "child_name": "23226_8d1b5098_0061_2",
+      "parent_file": "cache/58ada932b1355041610b8d5b565cf1ec3ce7135be79e32288f775999aba5531e.npy",
+      "child_file": "cache/88708821a18ac5b8fdc2bfed8c06be12d9b00151b73f75417fe4c76fe467a04b.npy",
+      "center": [
+        1.0688527254387736e-06,
+        -1.1323727449052967e-05,
+        0.0017500000540167093
+      ],
+      "scale": 0.007875551188197763,
+      "origin": [
+        0.00015517557598345247,
+        4.915188785161813e-05,
+        0.0
+      ],
+      "direction": [
+        -0.0,
+        0.0,
+        -1.0
+      ],
+      "frame": "shared_child_center_robust_diagonal",
+      "base_scene_scale": 0.04297957772362146,
+      "child_to_scene_scale": 0.18323938031316164
+    },
+    {
+      "id": "public/urdf_files_j2n7s300_standalone_a6a538f9ec/1",
+      "asset_key": "public/urdf_files_j2n7s300_standalone_a6a538f9ec",
+      "asset_id": "urdf_files_j2n7s300_standalone_a6a538f9ec",
+      "asset_name": "urdf_files_dataset-81f4cdac42c3a51ba88833180db5bf3697988c87/urdf_files/oems/xacro_generated/kinova_robotics/kinova_description/urdf/j2n7s300_standalone.urdf",
+      "source": "urdf_files",
+      "private": false,
+      "split": "train",
+      "group": "c1928241e8e5d7c7",
+      "joint_index": 1,
+      "joint_name": "j2n7s300_joint_3",
+      "type": "continuous",
+      "mimic": null,
+      "parent_name": "j2n7s300_link_2",
+      "child_name": "j2n7s300_link_3",
+      "parent_file": "cache/86702a675d5427dafa870af7871f44593c56ffae6a2079614e241010f1e96c35.npy",
+      "child_file": "cache/b8d103a4dfcd5567aa8a32c2b4ad1f41e2f7b3f8e9645d24ed7eb2aa25a66aa7.npy",
+      "center": [
+        0.15400780737400055,
+        0.0015234461752697825,
+        0.003378418507054448
+      ],
+      "scale": 0.3193274262384761,
+      "origin": [
+        0.007284829061962289,
+        0.000239734574734249,
+        0.004205898019924326
+      ],
+      "direction": [
+        -0.4999999999999999,
+        -1.7549344185098065e-16,
+        0.8660254037844387
+      ],
+      "frame": "shared_child_center_robust_diagonal",
+      "base_scene_scale": 0.6989537775334338,
+      "child_to_scene_scale": 0.4568648693270727
+    },
+    {
+      "id": "user/user_continuous_26_model_c9881c3566/0",
+      "asset_key": "user/user_continuous_26_model_c9881c3566",
+      "asset_id": "user_continuous_26_model_c9881c3566",
+      "asset_name": "0012-folding-scooter-001",
+      "source": "user_continuous_26",
+      "private": true,
+      "split": "train",
+      "group": "f09a9d0aa09e0d57",
+      "joint_index": 0,
+      "joint_name": "front_wheel_spin",
+      "type": "continuous",
+      "mimic": null,
+      "parent_name": "base_link",
+      "child_name": "front_wheel",
+      "parent_file": "cache/5b9e928dd8a83c58d84510044512fe19c920d4ec7bb525edb56894998b2e25fc.npy",
+      "child_file": "cache/95c94a77fd765299e00eaa220ab094eb8e485f43ec7fcaff0efce45917366a34.npy",
+      "center": [
+        -0.0002598745340947062,
+        -0.34055981040000916,
+        0.09389253705739975
+      ],
+      "scale": 0.25183206815189163,
+      "origin": [
+        -2.5378744324521668e-05,
+        0.0004715319170333325,
+        0.0028133357093015894
+      ],
+      "direction": [
+        0.9999470313246235,
+        0.006575293969359633,
+        0.007918336585986356
+      ],
+      "frame": "shared_child_center_robust_diagonal",
+      "base_scene_scale": 1.3509111600140642,
+      "child_to_scene_scale": 0.18641645402445994
+    },
+    {
+      "id": "articraft/rec_graphics_card_with_cooling_fans_d6a8b34ff2544c78bd2e6ede6ae0f903/0",
+      "asset_key": "articraft/rec_graphics_card_with_cooling_fans_d6a8b34ff2544c78bd2e6ede6ae0f903",
+      "asset_id": "rec_graphics_card_with_cooling_fans_d6a8b34ff2544c78bd2e6ede6ae0f903",
+      "asset_name": "mini_itx_gpu",
+      "source": "articraft",
+      "private": false,
+      "split": "train",
+      "group": "d05567620afa3846",
+      "joint_index": 0,
+      "joint_name": "body_to_fan",
+      "type": "continuous",
+      "mimic": null,
+      "parent_name": "card_body",
+      "child_name": "fan_rotor",
+      "parent_file": "cache/c63e75ccefc82b3699873adf8ffff3cb7aebe858e0c211b447398a5788a5d521.npy",
+      "child_file": "cache/28b480f3bf94284b94e59657a34264c28ef86769807d7d0cab56ecf637d1cadb.npy",
+      "center": [
+        0.08619886636734009,
+        0.012800258584320545,
+        0.06584422290325165
+      ],
+      "scale": 0.10869768704032468,
+      "origin": [
+        -0.0018295363291982406,
+        0.0,
+        0.00143312246092748
+      ],
+      "direction": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "frame": "shared_child_center_robust_diagonal",
+      "base_scene_scale": 0.2177389517080948,
+      "child_to_scene_scale": 0.49921103315518384
+    },
+    {
+      "id": "public/artvip_model_dolly_69a327401e/5",
+      "asset_key": "public/artvip_model_dolly_69a327401e",
+      "asset_id": "artvip_model_dolly_69a327401e",
+      "asset_name": "Articulated_objects/industrial_machinery/forklift/dolly/model_dolly.usd",
+      "source": "artvip",
+      "private": false,
+      "split": "train",
+      "group": "3f36347ef7da47b2",
+      "joint_index": 5,
+      "joint_name": "/root/E_wheel7_31/RevoluteJoint_dolly_left_2",
+      "type": "continuous",
+      "mimic": null,
+      "parent_name": "/root/E_body_2",
+      "child_name": "/root/E_wheel7_31",
+      "parent_file": "cache/745fdc50af37d9a5b7d784fea39d563e790375a0cea7715ba70b5f4f355e7d79.npy",
+      "child_file": "cache/09992bcd1ddbc0c935b813ff9c6bc71ae9e37c063b7bb11d513d4bd3cf6d5cac.npy",
+      "center": [
+        -0.24164049327373505,
+        0.5197221636772156,
+        0.05815916880965233
+      ],
+      "scale": 0.1722448918647747,
+      "origin": [
+        0.0,
+        0.0002206895209380968,
+        -0.0024317434060074365
+      ],
+      "direction": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "frame": "shared_child_center_robust_diagonal",
+      "base_scene_scale": 2.0476052814533734,
+      "child_to_scene_scale": 0.08412016389336362
+    },
+    {
+      "id": "public/fusion_joint_joint_set_00479_j002_96a94834b2/0",
+      "asset_key": "public/fusion_joint_joint_set_00479_j002_96a94834b2",
+      "asset_id": "fusion_joint_joint_set_00479_j002_96a94834b2",
+      "asset_name": "joint_set_00479_j002.json",
+      "source": "fusion_joint",
+      "private": false,
+      "split": "train",
+      "group": "437e246a1c61af68",
+      "joint_index": 0,
+      "joint_name": "Rev15_2",
+      "type": "continuous",
+      "mimic": null,
+      "parent_name": "51667_ccb371f6_0005_1",
+      "child_name": "51667_ccb371f6_0005_2",
+      "parent_file": "cache/278f7df63687c9ea918840f5f0d7b8c0a88e9066c56af7c0c224951429e8afef.npy",
+      "child_file": "cache/2a6c7f00bd27d1d6c1168f658986972575b606c6e0b1321a6f926265ca4dc13c.npy",
+      "center": [
+        0.01902148313820362,
+        0.006180638913065195,
+        0.008999999612569809
+      ],
+      "scale": 0.01989288071495314,
+      "origin": [
+        -1.7735606300757693e-05,
+        -1.5031788031809683e-05,
+        0.0
+      ],
+      "direction": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "frame": "shared_child_center_robust_diagonal",
+      "base_scene_scale": 0.05699130662224122,
+      "child_to_scene_scale": 0.34905114295431533
+    },
+    {
+      "id": "public/urdf_files_kinovaMovo_fc97c9ede5/1",
+      "asset_key": "public/urdf_files_kinovaMovo_fc97c9ede5",
+      "asset_id": "urdf_files_kinovaMovo_fc97c9ede5",
+      "asset_name": "urdf_files_dataset-81f4cdac42c3a51ba88833180db5bf3697988c87/urdf_files/matlab/movo_description/urdf/kinovaMovo.urdf",
+      "source": "urdf_files",
+      "private": false,
+      "split": "train",
+      "group": "8a7da45b5ebc94fb",
+      "joint_index": 1,
+      "joint_name": "right_gripper_finger2_inner_knuckle_joint",
+      "type": "continuous",
+      "mimic": {
+        "joint": "right_gripper_finger1_joint",
+        "offset": "0"
+      },
+      "parent_name": "right_gripper_base_link",
+      "child_name": "right_gripper_finger2_inner_knuckle_link",
+      "parent_file": "cache/5c01b26c8396b67b3f1109c607172a01bc32bdcb45a8e6dba42cbc880cd5d36d.npy",
+      "child_file": "cache/b6a2bbb5356fa6e3d58efee122b00b65875c033a1e7666653f5904032f18c9d1.npy",
+      "center": [
+        1.2432258129119873,
+        -0.10192763805389404,
+        0.7614700198173523
+      ],
+      "scale": 0.08339326677464735,
+      "origin": [
+        -0.257347071690596,
+        -0.22450681030542896,
+        2.4767441431094994e-09
+      ],
+      "direction": [
+        -1.79489646337435e-09,
+        -8.974482590712297e-09,
+        -1.0
+      ],
+      "frame": "shared_child_center_robust_diagonal",
+      "base_scene_scale": 2.056291690487365,
+      "child_to_scene_scale": 0.040555173743313716
+    },
+    {
+      "id": "user/user_continuous_26_model_ff1002b843/0",
+      "asset_key": "user/user_continuous_26_model_ff1002b843",
+      "asset_id": "user_continuous_26_model_ff1002b843",
+      "asset_name": "0002-carousel-d14eb7e4f7bb",
+      "source": "user_continuous_26",
+      "private": true,
+      "split": "train",
+      "group": "354a3adb595c521c",
+      "joint_index": 0,
+      "joint_name": "carousel_spin",
+      "type": "continuous",
+      "mimic": null,
+      "parent_name": "base_link",
+      "child_name": "carousel",
+      "parent_file": "cache/6a52f9886eea1441aa0331a817179c7bdb4d4847b03c7b3343df2b8b622681c9.npy",
+      "child_file": "cache/6d62ad3bfe4f96257ec0948ad2107e18a6ea31ec797e65172a61fdc66b8da9f7.npy",
+      "center": [
+        -0.0029148694593459368,
+        0.0017077787779271603,
+        0.30700868368148804
+      ],
+      "scale": 0.8042067938978498,
+      "origin": [
+        0.003564415833777673,
+        -0.0023015715763231174,
+        9.822016768967767e-06
+      ],
+      "direction": [
+        -0.0012280432565787765,
+        0.0023656553229794183,
+        0.9999964477860174
+      ],
+      "frame": "shared_child_center_robust_diagonal",
+      "base_scene_scale": 0.9644680922665193,
+      "child_to_scene_scale": 0.8338345253163821
+    },
+    {
+      "id": "articraft/rec_traditional_windmill_0c9ef136b78d4612a74250d77c632b08/0",
+      "asset_key": "articraft/rec_traditional_windmill_0c9ef136b78d4612a74250d77c632b08",
+      "asset_id": "rec_traditional_windmill_0c9ef136b78d4612a74250d77c632b08",
+      "asset_name": "traditional_windmill",
+      "source": "articraft",
+      "private": false,
+      "split": "train",
+      "group": "64d678ea71d8326c",
+      "joint_index": 0,
+      "joint_name": "bearing_to_cap",
+      "type": "continuous",
+      "mimic": null,
+      "parent_name": "bearing_module",
+      "child_name": "cap_shell",
+      "parent_file": "cache/b8dd799f29acd19737e13382be871a92730585da84f4c60a4ce56c3a347fabcc.npy",
+      "child_file": "cache/f2b33bb8514448b0f9bd572f40ad0293786304f6426ef0783be7cd4ee6dfae47.npy",
+      "center": [
+        -0.015115508809685707,
+        -0.0070987893268466,
+        9.487812995910645
+      ],
+      "scale": 5.8593266240663135,
+      "origin": [
+        0.002579734802221295,
+        0.0012115367144219912,
+        0.0
+      ],
+      "direction": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "frame": "shared_child_center_robust_diagonal",
+      "base_scene_scale": 20.146667133983946,
+      "child_to_scene_scale": 0.2908335450771727
+    },
+    {
+      "id": "public/artvip_model_chair_54544b9133/6",
+      "asset_key": "public/artvip_model_chair_54544b9133",
+      "asset_id": "artvip_model_chair_54544b9133",
+      "asset_name": "Articulated_objects/small_furniture/chair/office chair008/model_chair.usd",
+      "source": "artvip",
+      "private": false,
+      "split": "train",
+      "group": "3dc3734cf0fa78e4",
+      "joint_index": 6,
+      "joint_name": "/root/E_wheel3_19/RevoluteJoint_chair_down_007",
+      "type": "continuous",
+      "mimic": null,
+      "parent_name": "/root/E_link_12",
+      "child_name": "/root/E_wheel3_19",
+      "parent_file": "cache/866be20491772c2056cfa04008631c10e33fdeca47cfb583ec1049fb5c7d7b08.npy",
+      "child_file": "cache/8a95984e6d9e330c6446c8540e4285e560a443837f673788bef3e27dce2d9259.npy",
+      "center": [
+        -0.3451816737651825,
+        -0.04789240285754204,
+        0.04672293737530708
+      ],
+      "scale": 0.10698824008098477,
+      "origin": [
+        0.0,
+        0.0004916695366513226,
+        0.006104997469149577
+      ],
+      "direction": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "frame": "shared_child_center_robust_diagonal",
+      "base_scene_scale": 1.48909636202118,
+      "child_to_scene_scale": 0.07184776137372838
+    },
+    {
+      "id": "public/fusion_joint_joint_set_00723_j000_c3e8fac680/0",
+      "asset_key": "public/fusion_joint_joint_set_00723_j000_c3e8fac680",
+      "asset_id": "fusion_joint_joint_set_00723_j000_c3e8fac680",
+      "asset_name": "joint_set_00723_j000.json",
+      "source": "fusion_joint",
+      "private": false,
+      "split": "train",
+      "group": "cb10b17904662780",
+      "joint_index": 0,
+      "joint_name": "Rev1_0",
+      "type": "continuous",
+      "mimic": null,
+      "parent_name": "136401_69f29349_0000_1",
+      "child_name": "136401_69f29349_0000_2",
+      "parent_file": "cache/acafb87ed60ed0e54596fde3d0fbec8d7a8eeab4afb480e0dd432f695ffd8c52.npy",
+      "child_file": "cache/8f34d07aeb1ade50fcba8d4b735c70a6854b91e17bd722aa9479489bff756c02.npy",
+      "center": [
+        -0.100003182888031,
+        0.0,
+        0.004000000189989805
+      ],
+      "scale": 0.056904542798157154,
+      "origin": [
+        5.593381256554768e-05,
+        0.0,
+        0.0
+      ],
+      "direction": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "frame": "shared_child_center_robust_diagonal",
+      "base_scene_scale": 0.10302250008736716,
+      "child_to_scene_scale": 0.5523506297158373
+    },
+    {
+      "id": "public/urdf_files_j2s6s300_standalone_11d96b6039/0",
+      "asset_key": "public/urdf_files_j2s6s300_standalone_11d96b6039",
+      "asset_id": "urdf_files_j2s6s300_standalone_11d96b6039",
+      "asset_name": "urdf_files_dataset-81f4cdac42c3a51ba88833180db5bf3697988c87/urdf_files/oems/xacro_generated/kinova_robotics/kinova_description/urdf/j2s6s300_standalone.urdf",
+      "source": "urdf_files",
+      "private": false,
+      "split": "train",
+      "group": "c1928241e8e5d7c7",
+      "joint_index": 0,
+      "joint_name": "j2s6s300_joint_1",
+      "type": "continuous",
+      "mimic": null,
+      "parent_name": "j2s6s300_link_base",
+      "child_name": "j2s6s300_link_1",
+      "parent_file": "cache/fdd9513915525da1c62f4c13fce68c74eac490b59743146a0cf748c3f1616570.npy",
+      "child_file": "cache/8b74f1685f21c8f73cd8c95481a24c2826d64bde03c4826094a2f021cbb918f6.npy",
+      "center": [
+        -0.00024610775290057063,
+        -2.5943480068235658e-05,
+        0.23076924681663513
+      ],
+      "scale": 0.21121755315633844,
+      "origin": [
+        0.001165186080526156,
+        0.00012282823884922519,
+        0.0
+      ],
+      "direction": [
+        1.2246467991473532e-16,
+        0.0,
+        -1.0
+      ],
+      "frame": "shared_child_center_robust_diagonal",
+      "base_scene_scale": 0.6157800347899459,
+      "child_to_scene_scale": 0.34300812176930795
+    },
+    {
+      "id": "user/user_continuous_26_fan_4414183b4c/2",
+      "asset_key": "user/user_continuous_26_fan_4414183b4c",
+      "asset_id": "user_continuous_26_fan_4414183b4c",
+      "asset_name": "0007-desk-fan-1bb4d940c799",
+      "source": "user_continuous_26",
+      "private": true,
+      "split": "train",
+      "group": "46c2280f92c976ab",
+      "joint_index": 2,
+      "joint_name": "rotor_joint",
+      "type": "continuous",
+      "mimic": null,
+      "parent_name": "motor_head",
+      "child_name": "rotor",
+      "parent_file": "cache/5ff97bc7e0765bc9d1b8a45247009edf56aa0fd11942d8a1892a1ab9a87128d2.npy",
+      "child_file": "cache/527bed576c959f04740b0a652fb297d5916fabfa5b3f496b622b924fa54de4b5.npy",
+      "center": [
+        -0.0029163172002881765,
+        -0.08581187576055527,
+        0.2936275005340576
+      ],
+      "scale": 0.4486919572730389,
+      "origin": [
+        0.006235430233437655,
+        -5.3363441189502314e-05,
+        0.01375098941838095
+      ],
+      "direction": [
+        0.0008106130389761948,
+        0.9999935005033809,
+        0.0035130979912290756
+      ],
+      "frame": "shared_child_center_robust_diagonal",
+      "base_scene_scale": 0.6974999224107925,
+      "child_to_scene_scale": 0.643286031806584
+    },
+    {
+      "id": "articraft/rec_ceiling_fan_ea5b15d87d7249b0937579f5fa18818b/1",
+      "asset_key": "articraft/rec_ceiling_fan_ea5b15d87d7249b0937579f5fa18818b",
+      "asset_id": "rec_ceiling_fan_ea5b15d87d7249b0937579f5fa18818b",
+      "asset_name": "dual_motor_ceiling_fan",
+      "source": "articraft",
+      "private": false,
+      "split": "train",
+      "group": "7d8be745c3f0a6c0",
+      "joint_index": 1,
+      "joint_name": "housing_to_right_blade_set",
+      "type": "continuous",
+      "mimic": null,
+      "parent_name": "housing",
+      "child_name": "right_blade_set",
+      "parent_file": "cache/8df3c085df1e80864316a17bcf78deb4daa7efd728bf2ad795a8d53ac5b803a4.npy",
+      "child_file": "cache/ecda2c6fa489a8475a27c3e645af95174fff9f2b4080ad85c7012e79f8c9496a.npy",
+      "center": [
+        0.35369569063186646,
+        -0.04406169801950455,
+        -0.5444195866584778
+      ],
+      "scale": 0.4455753781450503,
+      "origin": [
+        0.0,
+        0.09888719211311746,
+        0.0009416737976512563
+      ],
+      "direction": [
+        -1.0,
+        0.0,
+        0.0
+      ],
+      "frame": "shared_child_center_robust_diagonal",
+      "base_scene_scale": 1.1258104140106429,
+      "child_to_scene_scale": 0.3957818941803092
+    },
+    {
+      "id": "public/artvip_model_IV_pole_dfb46065d3/0",
+      "asset_key": "public/artvip_model_IV_pole_dfb46065d3",
+      "asset_id": "artvip_model_IV_pole_dfb46065d3",
+      "asset_name": "Articulated_objects/Medical_equipment/IV_pole/model_IV_pole.usd",
+      "source": "artvip",
+      "private": false,
+      "split": "train",
+      "group": "fac212f72db0bab9",
+      "joint_index": 0,
+      "joint_name": "/root/E_knob_8/RevoluteJoint_IV_pole_down",
+      "type": "continuous",
+      "mimic": null,
+      "parent_name": "/root/E_leg_9",
+      "child_name": "/root/E_knob_8",
+      "parent_file": "cache/7b56e2aa83a2d50b277c771b3840f527f3bd3ce5105143b983f872a88c3df9a3.npy",
+      "child_file": "cache/da83ae8a3b49c28cb82489cce514086c4665f26f54e79db4853a0a582eae1fa9.npy",
+      "center": [
+        -2.5871208890748676e-06,
+        -1.0871212482452393,
+        -0.7847310304641724
+      ],
+      "scale": 0.03468400417845143,
+      "origin": [
+        -4.073560026582162e-05,
+        0.0,
+        6.728113064013541e-05
+      ],
+      "direction": [
+        -4.1685988743832424e-13,
+        1.0,
+        -8.259140751417212e-18
+      ],
+      "frame": "shared_child_center_robust_diagonal",
+      "base_scene_scale": 2.910275359419876,
+      "child_to_scene_scale": 0.011917774057422944
+    },
+    {
+      "id": "public/fusion_joint_joint_set_00124_j001_57c6d47e16/0",
+      "asset_key": "public/fusion_joint_joint_set_00124_j001_57c6d47e16",
+      "asset_id": "fusion_joint_joint_set_00124_j001_57c6d47e16",
+      "asset_name": "joint_set_00124_j001.json",
+      "source": "fusion_joint",
+      "private": false,
+      "split": "train",
+      "group": "715fcdda50c4790e",
+      "joint_index": 0,
+      "joint_name": "Rev47_1",
+      "type": "continuous",
+      "mimic": null,
+      "parent_name": "31464_b2855e3a_0012_1",
+      "child_name": "31464_b2855e3a_0034_2",
+      "parent_file": "cache/affd5263f3583cac3cb62f7107d263f874872ec65690d7522f0cca056c278477.npy",
+      "child_file": "cache/1c4f46f814853933d15c7d7f01d8560e953a9d31a891c72f43d0d3613bb19a7d.npy",
+      "center": [
+        0.05714999884366989,
+        0.01079500000923872,
+        -0.02539999969303608
+      ],
+      "scale": 0.12693012845557458,
+      "origin": [
+        -0.25013760262725326,
+        -0.010005504797729865,
+        0.0
+      ],
+      "direction": [
+        -0.0,
+        0.0,
+        1.0
+      ],
+      "frame": "shared_child_center_robust_diagonal",
+      "base_scene_scale": 0.12960223994977865,
+      "child_to_scene_scale": 0.9793822121034365
+    },
+    {
+      "id": "public/urdf_files_kinovaJacoJ2S6S300_0f8e49b9ab/2",
+      "asset_key": "public/urdf_files_kinovaJacoJ2S6S300_0f8e49b9ab",
+      "asset_id": "urdf_files_kinovaJacoJ2S6S300_0f8e49b9ab",
+      "asset_name": "urdf_files_dataset-81f4cdac42c3a51ba88833180db5bf3697988c87/urdf_files/matlab/kinova_description/urdf/kinovaJacoJ2S6S300.urdf",
+      "source": "urdf_files",
+      "private": false,
+      "split": "train",
+      "group": "c1928241e8e5d7c7",
+      "joint_index": 2,
+      "joint_name": "j2s6s300_joint_6",
+      "type": "continuous",
+      "mimic": null,
+      "parent_name": "j2s6s300_link_5",
+      "child_name": "j2s6s300_link_6",
+      "parent_file": "cache/75ff1e8caf57ac1adadce85c954294d48cc9c2bf049e061f3db38d6def3a4797.npy",
+      "child_file": "cache/8994218c38afd38569938c5be5267e7e067da1126fcd9c3b7089b6b5734af927.npy",
+      "center": [
+        0.2870139479637146,
+        -0.008695435710251331,
+        0.18738029897212982
+      ],
+      "scale": 0.205650021532059,
+      "origin": [
+        -0.00018337431913872937,
+        -0.005371087637395543,
+        -0.0002934602548160248
+      ],
+      "direction": [
+        -0.8480480961559396,
+        -1.573318252922886e-11,
+        0.5299192642339834
+      ],
+      "frame": "shared_child_center_robust_diagonal",
+      "base_scene_scale": 0.6154557972064324,
+      "child_to_scene_scale": 0.3341426345571998
+    },
+    {
+      "id": "user/user_continuous_26_model_2afe31074d/0",
+      "asset_key": "user/user_continuous_26_model_2afe31074d",
+      "asset_id": "user_continuous_26_model_2afe31074d",
+      "asset_name": "0001-antique-globe",
+      "source": "user_continuous_26",
+      "private": true,
+      "split": "train",
+      "group": "651436d2db1f3634",
+      "joint_index": 0,
+      "joint_name": "globe_spin",
+      "type": "continuous",
+      "mimic": null,
+      "parent_name": "base_link",
+      "child_name": "globe",
+      "parent_file": "cache/99f6111f74cf354c86e504dcf2322f30e320bbb4b96700f655d4778847ebda78.npy",
+      "child_file": "cache/5d841ad03e0bcdf9db121377607096d7f334b9bbc74ed27e992cbd37e0e46e97.npy",
+      "center": [
+        0.013425145298242569,
+        -0.0002527520409785211,
+        0.31416308879852295
+      ],
+      "scale": 0.5270939742887183,
+      "origin": [
+        0.0004234180500142931,
+        0.0005599922979370618,
+        0.00020357074972861267
+      ],
+      "direction": [
+        -0.43392266820371,
+        0.0005779301730862046,
+        0.9009499342447882
+      ],
+      "frame": "shared_child_center_robust_diagonal",
+      "base_scene_scale": 0.6804331093500375,
+      "child_to_scene_scale": 0.7746448064413096
+    },
+    {
+      "id": "articraft/rec_traditional_windmill_4eb12f6fd6764f518b3fea75fa8519b0/1",
+      "asset_key": "articraft/rec_traditional_windmill_4eb12f6fd6764f518b3fea75fa8519b0",
+      "asset_id": "rec_traditional_windmill_4eb12f6fd6764f518b3fea75fa8519b0",
+      "asset_name": "traditional_windmill",
+      "source": "articraft",
+      "private": false,
+      "split": "train",
+      "group": "64d678ea71d8326c",
+      "joint_index": 1,
+      "joint_name": "cap_to_sail_hub",
+      "type": "continuous",
+      "mimic": null,
+      "parent_name": "cap",
+      "child_name": "sail_hub",
+      "parent_file": "cache/8577a95ea445cc0afccbd69f606c8d29b182625f35914f98dd9f86a342971431.npy",
+      "child_file": "cache/198b9fcdc53cb42628eed98a730f61c31a83d47d3cc4c155c5700cfa7c22f2f5.npy",
+      "center": [
+        0.7230491638183594,
+        0.0005495603545568883,
+        2.0020837783813477
+      ],
+      "scale": 1.9426465701752342,
+      "origin": [
+        0.0,
+        -0.00028289260794737146,
+        -0.0010726492473408023
+      ],
+      "direction": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "frame": "shared_child_center_robust_diagonal",
+      "base_scene_scale": 3.423756562607803,
+      "child_to_scene_scale": 0.5674020727383612
+    },
+    {
+      "id": "public/artvip_model_forklift_b3a409edde/2",
+      "asset_key": "public/artvip_model_forklift_b3a409edde",
+      "asset_id": "artvip_model_forklift_b3a409edde",
+      "asset_name": "Articulated_objects/industrial_machinery/forklift/forklift/model_forklift.usd",
+      "source": "artvip",
+      "private": false,
+      "split": "train",
+      "group": "a8ca7197720b5a90",
+      "joint_index": 2,
+      "joint_name": "/root/E_wheel1_51/RevoluteJoint_forklift_left_02",
+      "type": "continuous",
+      "mimic": null,
+      "parent_name": "/root/E_car_1",
+      "child_name": "/root/E_wheel1_51",
+      "parent_file": "cache/ed595c15a7c36e76525906035702fe658581709992083c20bf77e63ab7cf32ba.npy",
+      "child_file": "cache/4f20e0c9de5adfbeccfc81f60e7129a8779af455d63ac88dcb49823f9fc6757c.npy",
+      "center": [
+        -0.4576054811477661,
+        0.8172962665557861,
+        0.26306062936782837
+      ],
+      "scale": 0.7836487408718251,
+      "origin": [
+        0.0,
+        0.0002646758073375237,
+        0.0003750027157939463
+      ],
+      "direction": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "frame": "shared_child_center_robust_diagonal",
+      "base_scene_scale": 4.436114853039788,
+      "child_to_scene_scale": 0.17665204054282777
+    },
+    {
+      "id": "public/fusion_joint_joint_set_00521_j000_2412e68aae/0",
+      "asset_key": "public/fusion_joint_joint_set_00521_j000_2412e68aae",
+      "asset_id": "fusion_joint_joint_set_00521_j000_2412e68aae",
+      "asset_name": "joint_set_00521_j000.json",
+      "source": "fusion_joint",
+      "private": false,
+      "split": "train",
+      "group": "0d685903cebfea9b",
+      "joint_index": 0,
+      "joint_name": "Rev4_0",
+      "type": "continuous",
+      "mimic": null,
+      "parent_name": "49024_b7f02205_0001_2",
+      "child_name": "49024_b7f02205_0005_1",
+      "parent_file": "cache/cfeab3059528bdc4d406a51cef5ef80b9cd012d12e7cf5c193562dab408f1e6e.npy",
+      "child_file": "cache/52a9f34b32035baf1319314a97cc08e93bc54205a39368b758250f5edda148d3.npy",
+      "center": [
+        -0.0024562727194279432,
+        4.328803697717376e-05,
+        0.21802033483982086
+      ],
+      "scale": 0.43449523085647324,
+      "origin": [
+        -0.00010063926475294558,
+        0.0,
+        0.4786696156600188
+      ],
+      "direction": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "frame": "shared_child_center_robust_diagonal",
+      "base_scene_scale": 0.4366623409454953,
+      "child_to_scene_scale": 0.995037103304284
+    },
+    {
+      "id": "public/urdf_files_turtlebot3_burger_for_autorace_0a555e77af/1",
+      "asset_key": "public/urdf_files_turtlebot3_burger_for_autorace_0a555e77af",
+      "asset_id": "urdf_files_turtlebot3_burger_for_autorace_0a555e77af",
+      "asset_name": "urdf_files_dataset-81f4cdac42c3a51ba88833180db5bf3697988c87/urdf_files/oems/xacro_generated/turtlebot3_robotis/turtlebot3_description/urdf/turtlebot3_burger_for_autorace.urdf",
+      "source": "urdf_files",
+      "private": false,
+      "split": "train",
+      "group": "1cfed9cb78d2719b",
+      "joint_index": 1,
+      "joint_name": "wheel_right_joint",
+      "type": "continuous",
+      "mimic": null,
+      "parent_name": "base_link",
+      "child_name": "wheel_right_link",
+      "parent_file": "cache/9c8f78037179f8cae0d70763ec81aeb37839b825e5e422495817e16206e55200.npy",
+      "child_file": "cache/add862d045a2bc4c752d2a055ea0f964219fd235f216a7f31b25be74eda7f3f9.npy",
+      "center": [
+        -2.4967277568066493e-05,
+        -0.0799500048160553,
+        0.03306226432323456
+      ],
+      "scale": 0.09317592495899547,
+      "origin": [
+        0.0002679584622213732,
+        5.318007226806643e-07,
+        -0.0006678170492014824
+      ],
+      "direction": [
+        0.0,
+        0.9999996829318346,
+        0.0007963267107332633
+      ],
+      "frame": "shared_child_center_robust_diagonal",
+      "base_scene_scale": 0.2952209572278063,
+      "child_to_scene_scale": 0.31561419566530496
+    },
+    {
+      "id": "user/user_continuous_26_model_3da8fbbafd/0",
+      "asset_key": "user/user_continuous_26_model_3da8fbbafd",
+      "asset_id": "user_continuous_26_model_3da8fbbafd",
+      "asset_name": "0021-gs1-tripod-telescope-fantasy-001",
+      "source": "user_continuous_26",
+      "private": true,
+      "split": "train",
+      "group": "bff61f2edd5a81e8",
+      "joint_index": 0,
+      "joint_name": "azimuth_spin",
+      "type": "continuous",
+      "mimic": null,
+      "parent_name": "base_link",
+      "child_name": "azimuth_head",
+      "parent_file": "cache/b05637a4f27a8d2159216b4982f72f27b26031114c652f7bda4c276229d09d13.npy",
+      "child_file": "cache/7391769dc45c34324c85d2313ea1c0404fd72c8c9f1f081dae2c37a5ffd245df.npy",
+      "center": [
+        -7.176156941568479e-06,
+        -0.026135278865695,
+        0.5705349445343018
+      ],
+      "scale": 0.4782208711247276,
+      "origin": [
+        -0.00021657108051154376,
+        0.10971868501010426,
+        -0.0001004830274480839
+      ],
+      "direction": [
+        0.0004961351480572789,
+        0.0009168030164382311,
+        0.9999994566609245
+      ],
+      "frame": "shared_child_center_robust_diagonal",
+      "base_scene_scale": 1.3488447290758598,
+      "child_to_scene_scale": 0.35454108305881377
+    },
+    {
+      "id": "articraft/rec_traditional_windmill_e21c5d19214d45db88435230c23270e8/0",
+      "asset_key": "articraft/rec_traditional_windmill_e21c5d19214d45db88435230c23270e8",
+      "asset_id": "rec_traditional_windmill_e21c5d19214d45db88435230c23270e8",
+      "asset_name": "traditional_windmill",
+      "source": "articraft",
+      "private": false,
+      "split": "train",
+      "group": "64d678ea71d8326c",
+      "joint_index": 0,
+      "joint_name": "tower_to_cap",
+      "type": "continuous",
+      "mimic": null,
+      "parent_name": "tower",
+      "child_name": "cap",
+      "parent_file": "cache/b211b5b0d6b6ee07ea9925406b2b162ecfb40fafd6d962800c410373463fe01d.npy",
+      "child_file": "cache/8f2b40cf2a513d4548ec9a0f6e55ed22897d4dab25444e9324cd5b174744e66b.npy",
+      "center": [
+        -0.33750009536743164,
+        0.0,
+        9.5
+      ],
+      "scale": 4.535772091016838,
+      "origin": [
+        0.07440852154715961,
+        0.0,
+        0.0
+      ],
+      "direction": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "frame": "shared_child_center_robust_diagonal",
+      "base_scene_scale": 19.68110107384895,
+      "child_to_scene_scale": 0.2304633299731231
+    },
+    {
+      "id": "public/artvip_model_AGV_1_73d10afdaf/0",
+      "asset_key": "public/artvip_model_AGV_1_73d10afdaf",
+      "asset_id": "artvip_model_AGV_1_73d10afdaf",
+      "asset_name": "Articulated_objects/industrial_machinery/agv/AGV_01/model_AGV_1.usd",
+      "source": "artvip",
+      "private": false,
+      "split": "train",
+      "group": "e138504b7b40f440",
+      "joint_index": 0,
+      "joint_name": "/root/E_wheel1_4/RevoluteJoint_AGV_1_right",
+      "type": "continuous",
+      "mimic": null,
+      "parent_name": "/root/E_body_1",
+      "child_name": "/root/E_wheel1_4",
+      "parent_file": "cache/d0f5f47b4eeef8d2b9c4046c28132f85838616a675166a57063f3c2c4334d167.npy",
+      "child_file": "cache/a0df6b4d2c7100f595e60887a6f3050564aae77698aa7f4faff95157d89f87ba.npy",
+      "center": [
+        0.3838072717189789,
+        0.019182752817869186,
+        0.12556028366088867
+      ],
+      "scale": 0.3572769274805633,
+      "origin": [
+        0.0,
+        -0.0005148742775213284,
+        -0.0021327659010767414
+      ],
+      "direction": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "frame": "shared_child_center_robust_diagonal",
+      "base_scene_scale": 1.4469700082692427,
+      "child_to_scene_scale": 0.24691384440504832
+    },
+    {
+      "id": "public/fusion_joint_joint_set_00578_j002_343818c6b8/0",
+      "asset_key": "public/fusion_joint_joint_set_00578_j002_343818c6b8",
+      "asset_id": "fusion_joint_joint_set_00578_j002_343818c6b8",
+      "asset_name": "joint_set_00578_j002.json",
+      "source": "fusion_joint",
+      "private": false,
+      "split": "train",
+      "group": "653ccf73b1bb4db9",
+      "joint_index": 0,
+      "joint_name": "Rev1_2",
+      "type": "continuous",
+      "mimic": null,
+      "parent_name": "24357_8d7d40b1_0040_1",
+      "child_name": "24357_8d7d40b1_0040_2",
+      "parent_file": "cache/65705b299cefd426493f697675613394d327712b70980294dc12aaa1d3ec3597.npy",
+      "child_file": "cache/41d078d06023f3aac7b4565e17b255c953aef352b95183ea6ff50902565513a1.npy",
+      "center": [
+        -0.00099662272259593,
+        0.5740045309066772,
+        1.3521531400328968e-05
+      ],
+      "scale": 0.02518412114315534,
+      "origin": [
+        -9.570075287790303e-10,
+        -0.00017970017370029704,
+        -0.0005840143385647662
+      ],
+      "direction": [
+        -0.9999999999858191,
+        5.325579337522868e-06,
+        0.0
+      ],
+      "frame": "shared_child_center_robust_diagonal",
+      "base_scene_scale": 0.02699613534228097,
+      "child_to_scene_scale": 0.9328787555644056
+    },
+    {
+      "id": "public/urdf_files_kinovaMicoM1N6S200_0fd72025f1/2",
+      "asset_key": "public/urdf_files_kinovaMicoM1N6S200_0fd72025f1",
+      "asset_id": "urdf_files_kinovaMicoM1N6S200_0fd72025f1",
+      "asset_name": "urdf_files_dataset-81f4cdac42c3a51ba88833180db5bf3697988c87/urdf_files/matlab/kinova_description/urdf/kinovaMicoM1N6S200.urdf",
+      "source": "urdf_files",
+      "private": false,
+      "split": "train",
+      "group": "c1928241e8e5d7c7",
+      "joint_index": 2,
+      "joint_name": "m1n6s200_joint_5",
+      "type": "continuous",
+      "mimic": null,
+      "parent_name": "m1n6s200_link_4",
+      "child_name": "m1n6s200_link_5",
+      "parent_file": "cache/65e2d85afbb14f0bcd977af9ee9e833e5bef5279d64e2ca289e64bd0a8b4f24e.npy",
+      "child_file": "cache/1e6b8fba2da3301ebfcf78980673f1845a5084f9185b06c8e90b578f5c18b026.npy",
+      "center": [
+        0.16813653707504272,
+        0.05281379446387291,
+        0.2886121869087219
+      ],
+      "scale": 0.15655554464914112,
+      "origin": [
+        0.01112914622952119,
+        0.017448023634500574,
+        -0.028304894311929292
+      ],
+      "direction": [
+        0.1294095225510864,
+        -0.8660254037814128,
+        -0.4829629131500068
+      ],
+      "frame": "shared_child_center_robust_diagonal",
+      "base_scene_scale": 0.6199232335111668,
+      "child_to_scene_scale": 0.2525402117330404
+    },
+    {
+      "id": "user/user_continuous_26_model_9ef4ffab4f/0",
+      "asset_key": "user/user_continuous_26_model_9ef4ffab4f",
+      "asset_id": "user_continuous_26_model_9ef4ffab4f",
+      "asset_name": "0023-perpetual-motion-machine-ce4fab940bc5",
+      "source": "user_continuous_26",
+      "private": true,
+      "split": "train",
+      "group": "915e36d8345fabdc",
+      "joint_index": 0,
+      "joint_name": "orbit_spin",
+      "type": "continuous",
+      "mimic": null,
+      "parent_name": "base_link",
+      "child_name": "inner_orbit_rotor",
+      "parent_file": "cache/370997f605d5ac59c6f22e0ff752da764de7608c0cd2250fc60ed6d367f57b74.npy",
+      "child_file": "cache/3159e21d024119fb82a558e1f7cdd168e31dd4a08ebbffd3819ca3052b886072.npy",
+      "center": [
+        -0.0004491689905989915,
+        -0.0004809946403838694,
+        0.16715779900550842
+      ],
+      "scale": 0.2932778842015418,
+      "origin": [
+        0.0024064083727257657,
+        0.0003745893106055754,
+        -3.819355395395796e-06
+      ],
+      "direction": [
+        0.002070997372666261,
+        -0.0031083018929964844,
+        0.9999930246902848
+      ],
+      "frame": "shared_child_center_robust_diagonal",
+      "base_scene_scale": 0.4751739179832875,
+      "child_to_scene_scale": 0.6172011406818352
+    },
+    {
+      "id": "articraft/rec_wind_turbine_12fdec59bd024fe8870f60f9954e3567/0",
+      "asset_key": "articraft/rec_wind_turbine_12fdec59bd024fe8870f60f9954e3567",
+      "asset_id": "rec_wind_turbine_12fdec59bd024fe8870f60f9954e3567",
+      "asset_name": "utility_wind_turbine",
+      "source": "articraft",
+      "private": false,
+      "split": "train",
+      "group": "96d7acaac8f56742",
+      "joint_index": 0,
+      "joint_name": "tower_to_nacelle",
+      "type": "continuous",
+      "mimic": null,
+      "parent_name": "tower",
+      "child_name": "nacelle",
+      "parent_file": "cache/a35cc4afeb98d25e80c8e426b441feb8bde41baf92f82b6ca61f5e55a193c368.npy",
+      "child_file": "cache/77abf4f6028912521cb8c88f879283c09cd7a96449d96570ab7ef1dd36c065cc.npy",
+      "center": [
+        0.75,
+        -0.0002520906855352223,
+        81.7818832397461
+      ],
+      "scale": 13.351902739836344,
+      "origin": [
+        -0.05617176926868424,
+        1.8880506430225255e-05,
+        0.0
+      ],
+      "direction": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "frame": "shared_child_center_robust_diagonal",
+      "base_scene_scale": 111.15194640373963,
+      "child_to_scene_scale": 0.12012297734614505
+    },
+    {
+      "id": "public/artvip_model_office_chair002_66568fd347/9",
+      "asset_key": "public/artvip_model_office_chair002_66568fd347",
+      "asset_id": "artvip_model_office_chair002_66568fd347",
+      "asset_name": "Articulated_objects/small_furniture/chair/office chair005/model_office_chair002.usd",
+      "source": "artvip",
+      "private": false,
+      "split": "train",
+      "group": "abcfc6d33e075f4a",
+      "joint_index": 9,
+      "joint_name": "/root/E_wheel_20/RevoluteJoint_office_chair002_down10",
+      "type": "continuous",
+      "mimic": null,
+      "parent_name": "/root/E_link1_19",
+      "child_name": "/root/E_wheel_20",
+      "parent_file": "cache/03e1405161be129d84cc7b008cc3538065e2b2cfe24a98cab00acd1eb304231e.npy",
+      "child_file": "cache/0551e6e3237aaa155d474b12346f17963c6ad9bc80337e70257eae0f7a7bdae1.npy",
+      "center": [
+        -0.31263384222984314,
+        0.13885600864887238,
+        0.03863773122429848
+      ],
+      "scale": 0.1030002581407529,
+      "origin": [
+        -0.0005083275566352374,
+        0.0,
+        -0.0005391304402031622
+      ],
+      "direction": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "frame": "shared_child_center_robust_diagonal",
+      "base_scene_scale": 1.4460183292506845,
+      "child_to_scene_scale": 0.07123025763727825
+    },
+    {
+      "id": "public/fusion_joint_joint_set_00348_j000_66990ac70a/0",
+      "asset_key": "public/fusion_joint_joint_set_00348_j000_66990ac70a",
+      "asset_id": "fusion_joint_joint_set_00348_j000_66990ac70a",
+      "asset_name": "joint_set_00348_j000.json",
+      "source": "fusion_joint",
+      "private": false,
+      "split": "train",
+      "group": "6ef24015eb2c94cf",
+      "joint_index": 0,
+      "joint_name": "Rev20_0",
+      "type": "continuous",
+      "mimic": null,
+      "parent_name": "27682_04277f62_0018_1",
+      "child_name": "27682_04277f62_0018_2",
+      "parent_file": "cache/96ae97244b8cc33cd39b52b6c08bd3261841280664c46c293825b73716a06b0f.npy",
+      "child_file": "cache/8c63a2b835e7ccd4fc7f722966e9e491e817fca902575384ded9e26cd7ef3b2f.npy",
+      "center": [
+        -0.0009764338028617203,
+        -0.00039145685150288045,
+        -0.0002140765282092616
+      ],
+      "scale": 0.5316599510039692,
+      "origin": [
+        0.0,
+        0.0007362917796679366,
+        0.11325674693853274
+      ],
+      "direction": [
+        -1.0,
+        0.0,
+        0.0
+      ],
+      "frame": "shared_child_center_robust_diagonal",
+      "base_scene_scale": 0.5778102130016252,
+      "child_to_scene_scale": 0.9201290303300227
+    },
+    {
+      "id": "public/urdf_files_kinovaJacoJ2N7S300_e89470d2fa/2",
+      "asset_key": "public/urdf_files_kinovaJacoJ2N7S300_e89470d2fa",
+      "asset_id": "urdf_files_kinovaJacoJ2N7S300_e89470d2fa",
+      "asset_name": "urdf_files_dataset-81f4cdac42c3a51ba88833180db5bf3697988c87/urdf_files/matlab/kinova_description/urdf/kinovaJacoJ2N7S300.urdf",
+      "source": "urdf_files",
+      "private": false,
+      "split": "train",
+      "group": "c1928241e8e5d7c7",
+      "joint_index": 2,
+      "joint_name": "j2n7s300_joint_5",
+      "type": "continuous",
+      "mimic": null,
+      "parent_name": "j2n7s300_link_4",
+      "child_name": "j2n7s300_link_5",
+      "parent_file": "cache/8f6184a57fb14921b7d460d3cfdd0abbfbc657d8ad8b9b8a1a3ecfae6fffd283.npy",
+      "child_file": "cache/73c61b5fa5ad5259828fbb7d859a31da05bab3924457e3547d20a09a30314104.npy",
+      "center": [
+        -0.0038001369684934616,
+        0.004443065263330936,
+        0.038775764405727386
+      ],
+      "scale": 0.16283622284132165,
+      "origin": [
+        0.00586254755581031,
+        0.05254933201992923,
+        0.010154230228177755
+      ],
+      "direction": [
+        0.8660254037842432,
+        -2.5239969413645595e-12,
+        -0.5000000000003385
+      ],
+      "frame": "shared_child_center_robust_diagonal",
+      "base_scene_scale": 0.6944307963372112,
+      "child_to_scene_scale": 0.23448876936363494
+    },
+    {
+      "id": "user/user_continuous_26_model_8c1f9db3e1/0",
+      "asset_key": "user/user_continuous_26_model_8c1f9db3e1",
+      "asset_id": "user_continuous_26_model_8c1f9db3e1",
+      "asset_name": "0015-gate-valve-gs1-1",
+      "source": "user_continuous_26",
+      "private": true,
+      "split": "train",
+      "group": "437b537f3b1afb23",
+      "joint_index": 0,
+      "joint_name": "handwheel_spin",
+      "type": "continuous",
+      "mimic": null,
+      "parent_name": "base_link",
+      "child_name": "handwheel",
+      "parent_file": "cache/05b9eef5fead8e0b6d7ef7f74f30b2172f018a46d6a42d992e46fda805d1b1c9.npy",
+      "child_file": "cache/75fbafe02e31272e890fde97c9bac6706ee3824a5099c66c5a42619e24bfe25b.npy",
+      "center": [
+        0.006293673999607563,
+        0.002368058543652296,
+        0.5305550694465637
+      ],
+      "scale": 0.3351834223699552,
+      "origin": [
+        -0.00307702749743502,
+        -0.0038667312315551605,
+        -8.357421219962191e-06
+      ],
+      "direction": [
+        -0.00025878564900629877,
+        -0.001955427970362138,
+        0.9999980546638282
+      ],
+      "frame": "shared_child_center_robust_diagonal",
+      "base_scene_scale": 0.6540070423141469,
+      "child_to_scene_scale": 0.5125073595292459
+    },
+    {
+      "id": "articraft/rec_single_rotor_helicopter_6585d7273bdf46318c1a24bde9618232/1",
+      "asset_key": "articraft/rec_single_rotor_helicopter_6585d7273bdf46318c1a24bde9618232",
+      "asset_id": "rec_single_rotor_helicopter_6585d7273bdf46318c1a24bde9618232",
+      "asset_name": "police_helicopter",
+      "source": "articraft",
+      "private": false,
+      "split": "train",
+      "group": "5da55315bc5a634f",
+      "joint_index": 1,
+      "joint_name": "tail_rotor_spin",
+      "type": "continuous",
+      "mimic": null,
+      "parent_name": "fuselage",
+      "child_name": "tail_rotor",
+      "parent_file": "cache/5da423f1da3d4cf17878ba25a555290ac29afc86abbfaca9673136b145645d0a.npy",
+      "child_file": "cache/d9619eb58f0ff3bdefe291e74c4cd1d26b1ae74c97e2c513c87008408d4d48fa.npy",
+      "center": [
+        -4.199999809265137,
+        0.7199999690055847,
+        1.6200000047683716
+      ],
+      "scale": 0.9550916875895016,
+      "origin": [
+        0.0,
+        3.2451769457634703e-08,
+        -4.992579809258361e-09
+      ],
+      "direction": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "frame": "shared_child_center_robust_diagonal",
+      "base_scene_scale": 8.836618604417227,
+      "child_to_scene_scale": 0.10808338917242312
+    },
+    {
+      "id": "public/artvip_model_officechair003_28b4e3a989/1",
+      "asset_key": "public/artvip_model_officechair003_28b4e3a989",
+      "asset_id": "artvip_model_officechair003_28b4e3a989",
+      "asset_name": "Articulated_objects/small_furniture/chair/office chair003/model_officechair003.usd",
+      "source": "artvip",
+      "private": false,
+      "split": "train",
+      "group": "8528afb485d6c347",
+      "joint_index": 1,
+      "joint_name": "/root/E_wheel_10/RevoluteJoint_officechair003_down1",
+      "type": "continuous",
+      "mimic": null,
+      "parent_name": "/root/E_link_2",
+      "child_name": "/root/E_wheel_10",
+      "parent_file": "cache/7e9da63d1946ba96426c7f1d6d0197aa48157bfc77bf230f5dff48817fa85a98.npy",
+      "child_file": "cache/0ddd16705e3533f523f8c39cdbd734ed5af745ec59d4602c8bdbf8b1c935c044.npy",
+      "center": [
+        -0.3466893434524536,
+        -0.07993746548891068,
+        0.03085005283355713
+      ],
+      "scale": 0.10510230424218552,
+      "origin": [
+        1.994318887810209e-08,
+        8.618561624389523e-06,
+        -0.00011847952726098551
+      ],
+      "direction": [
+        0.9999973259364372,
+        -0.0023126002605335584,
+        9.999999955229264e-08
+      ],
+      "frame": "shared_child_center_robust_diagonal",
+      "base_scene_scale": 1.462157648051441,
+      "child_to_scene_scale": 0.07188164995905273
+    },
+    {
+      "id": "public/fusion_joint_joint_set_00087_j000_468296428a/0",
+      "asset_key": "public/fusion_joint_joint_set_00087_j000_468296428a",
+      "asset_id": "fusion_joint_joint_set_00087_j000_468296428a",
+      "asset_name": "joint_set_00087_j000.json",
+      "source": "fusion_joint",
+      "private": false,
+      "split": "train",
+      "group": "8b5d33b87a1f822d",
+      "joint_index": 0,
+      "joint_name": "Rev3_0",
+      "type": "continuous",
+      "mimic": null,
+      "parent_name": "32985_d4007f07_0002_1",
+      "child_name": "32985_d4007f07_0002_2",
+      "parent_file": "cache/fff5b7a191ed6fa422ffe7c2bf6482f6d504d8bfacf069e581a39f4bde4a27d1.npy",
+      "child_file": "cache/2363712110d844791cf5b9de3991836ff0056a0ad7dbdd6cfd0ddeb2305ef4a2.npy",
+      "center": [
+        0.10118529200553894,
+        0.030128341168165207,
+        -0.033224012702703476
+      ],
+      "scale": 0.16963522623833022,
+      "origin": [
+        0.0009295489663444873,
+        0.0,
+        -0.00035397855077804727
+      ],
+      "direction": [
+        0.0,
+        1.0,
+        2.220446049250313e-16
+      ],
+      "frame": "shared_child_center_robust_diagonal",
+      "base_scene_scale": 0.1751476371228766,
+      "child_to_scene_scale": 0.9685270610834499
+    },
+    {
+      "id": "public/urdf_files_robotiq_b8f1ab2267/16",
+      "asset_key": "public/urdf_files_robotiq_b8f1ab2267",
+      "asset_id": "urdf_files_robotiq_b8f1ab2267",
+      "asset_name": "urdf_files_dataset-81f4cdac42c3a51ba88833180db5bf3697988c87/urdf_files/drake/atlas/urdf/robotiq.urdf",
+      "source": "urdf_files",
+      "private": false,
+      "split": "train",
+      "group": "8751d879d6a066ae",
+      "joint_index": 16,
+      "joint_name": "finger_middle_fourbar_3_joint_2",
+      "type": "continuous",
+      "mimic": null,
+      "parent_name": "finger_middle_link_3",
+      "child_name": "finger_middle_fourbar_3_link_3",
+      "parent_file": "cache/66d96eeef571d6ffb4b921bc8ec2fa8c1e316d7ccba4328910609c4182e3e0a9.npy",
+      "child_file": "cache/5f206723969ae612e63b5ce00319e6b0599a07de80ce5745d5614922b6326d39.npy",
+      "center": [
+        0.09612452983856201,
+        0.1307128518819809,
+        3.614899526382942e-07
+      ],
+      "scale": 0.014191043428645918,
+      "origin": [
+        -0.2229240573357745,
+        -0.38796762578942223,
+        0.0
+      ],
+      "direction": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "frame": "shared_child_center_robust_diagonal",
+      "base_scene_scale": 0.33640729952301246,
+      "child_to_scene_scale": 0.04218411267760008
+    },
+    {
+      "id": "user/user_continuous_26_model_4fadb60a29/0",
+      "asset_key": "user/user_continuous_26_model_4fadb60a29",
+      "asset_id": "user_continuous_26_model_4fadb60a29",
+      "asset_name": "0011-exaggerated-slicer",
+      "source": "user_continuous_26",
+      "private": true,
+      "split": "train",
+      "group": "4002920f313fd902",
+      "joint_index": 0,
+      "joint_name": "wheel_spin",
+      "type": "continuous",
+      "mimic": null,
+      "parent_name": "base_link",
+      "child_name": "wheel",
+      "parent_file": "cache/4f75bc224d3e68f71306ba8a1b29b8fa94c3314d125376affa519e777fbc2068.npy",
+      "child_file": "cache/178642f8c67e1157dfec00365af6956d4d604280480025b798780a16c7dbc8a9.npy",
+      "center": [
+        0.006386181805282831,
+        0.0024994283448904753,
+        0.14069096744060516
+      ],
+      "scale": 0.11844552397540875,
+      "origin": [
+        -0.002952915765495598,
+        -0.00030162455599128113,
+        -0.004679111289667491
+      ],
+      "direction": [
+        0.019338382366641812,
+        -0.9984515882613922,
+        0.05215796071305771
+      ],
+      "frame": "shared_child_center_robust_diagonal",
+      "base_scene_scale": 0.6676305774581823,
+      "child_to_scene_scale": 0.1774117722803487
+    },
+    {
+      "id": "articraft/rec_observation_wheel_0e1e6efc6c7f40208147fee27677bfa3/7",
+      "asset_key": "articraft/rec_observation_wheel_0e1e6efc6c7f40208147fee27677bfa3",
+      "asset_id": "rec_observation_wheel_0e1e6efc6c7f40208147fee27677bfa3",
+      "asset_name": "decorative_ferris_wheel",
+      "source": "articraft",
+      "private": false,
+      "split": "train",
+      "group": "561e4b2b9f26751e",
+      "joint_index": 7,
+      "joint_name": "wheel_to_gondola_6",
+      "type": "continuous",
+      "mimic": null,
+      "parent_name": "wheel",
+      "child_name": "gondola_6",
+      "parent_file": "cache/4b22f2889816630d3809e2d5e60ead62e10d533fc9770425c9a5f4e11fa03ef4.npy",
+      "child_file": "cache/63898d8283a0a7896486edc1d7f61998682cafcb0cf681d53db6fc213d28a56d.npy",
+      "center": [
+        0.0,
+        0.0,
+        0.5910552740097046
+      ],
+      "scale": 1.027235835759823,
+      "origin": [
+        -2.145914232411377e-16,
+        0.0,
+        0.3494277686728015
+      ],
+      "direction": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "frame": "shared_child_center_robust_diagonal",
+      "base_scene_scale": 4.784843257620881,
+      "child_to_scene_scale": 0.2146853680366084
+    },
+    {
+      "id": "public/artvip_model_equipment002_12320c3722/0",
+      "asset_key": "public/artvip_model_equipment002_12320c3722",
+      "asset_id": "artvip_model_equipment002_12320c3722",
+      "asset_name": "Articulated_objects/Medical_equipment/Ion_therapy_device/model_equipment002.usd",
+      "source": "artvip",
+      "private": false,
+      "split": "train",
+      "group": "9ffbffc9adee3ad1",
+      "joint_index": 0,
+      "joint_name": "/root/E_knob_6/RevoluteJoint_equipment002_down",
+      "type": "continuous",
+      "mimic": null,
+      "parent_name": "/root/E_body_1",
+      "child_name": "/root/E_knob_6",
+      "parent_file": "cache/7a2b6e15e152e1b7287cbe2a11c1a22a97b6d7356b582fecdf1bdcfe85fbf6a8.npy",
+      "child_file": "cache/2d6d44fd62f3ab53d00032ac3ede68ff18148d7940dced7c5a1fcff9a90ac42a.npy",
+      "center": [
+        0.12338613718748093,
+        -0.11001313477754593,
+        0.03346159681677818
+      ],
+      "scale": 0.02855348475780326,
+      "origin": [
+        0.00015288020169779588,
+        3.8120173684319525e-11,
+        -0.00038866148539313454
+      ],
+      "direction": [
+        -2.4934411158028524e-07,
+        0.9999999999999689,
+        0.0
+      ],
+      "frame": "shared_child_center_robust_diagonal",
+      "base_scene_scale": 0.3923089342502015,
+      "child_to_scene_scale": 0.07278316210762818
+    },
+    {
+      "id": "public/fusion_joint_joint_set_00023_j001_4aa74c57ca/0",
+      "asset_key": "public/fusion_joint_joint_set_00023_j001_4aa74c57ca",
+      "asset_id": "fusion_joint_joint_set_00023_j001_4aa74c57ca",
+      "asset_name": "joint_set_00023_j001.json",
+      "source": "fusion_joint",
+      "private": false,
+      "split": "train",
+      "group": "9384f13cbf62c3ab",
+      "joint_index": 0,
+      "joint_name": "Rev16_1",
+      "type": "continuous",
+      "mimic": null,
+      "parent_name": "51173_ac989a8c_0002_1",
+      "child_name": "51173_ac989a8c_0002_2",
+      "parent_file": "cache/cb9a91be45651a82b76098865be3e6c88add4ec4e1a42b528697109670175ad1.npy",
+      "child_file": "cache/a8166f61cefa1350ae9a28e69ad8f4261c52e52e8feb9626b622e988c47bc882.npy",
+      "center": [
+        -0.012455224990844727,
+        0.06234284117817879,
+        0.20000000298023224
+      ],
+      "scale": 0.5883254639674839,
+      "origin": [
+        -6.60821224129915e-17,
+        -0.005728361293169476,
+        0.29754919286323006
+      ],
+      "direction": [
+        1.0,
+        0.0,
+        2.2204460492503126e-16
+      ],
+      "frame": "shared_child_center_robust_diagonal",
+      "base_scene_scale": 0.5885254857039337,
+      "child_to_scene_scale": 0.9996601307142874
+    },
+    {
+      "id": "public/urdf_files_kinovaGen3_2565d507c6/0",
+      "asset_key": "public/urdf_files_kinovaGen3_2565d507c6",
+      "asset_id": "urdf_files_kinovaGen3_2565d507c6",
+      "asset_name": "urdf_files_dataset-81f4cdac42c3a51ba88833180db5bf3697988c87/urdf_files/robotics-toolbox/xacro_generated/kinova_description/urdf/kinovaGen3.urdf",
+      "source": "urdf_files",
+      "private": false,
+      "split": "train",
+      "group": "c1928241e8e5d7c7",
+      "joint_index": 0,
+      "joint_name": "joint_1",
+      "type": "continuous",
+      "mimic": null,
+      "parent_name": "base_link",
+      "child_name": "shoulder_link",
+      "parent_file": "cache/7ef55f0f8902ac4d352e783a730c529a77daa59c21fb0914596e038c8aa5e228.npy",
+      "child_file": "cache/8a0d3f6a65ce3440eacc1fe246e71fa39d6ab65c1272c60636380e5071fe2d46.npy",
+      "center": [
+        -8.603474270785227e-06,
+        0.0023026373237371445,
+        0.24448223412036896
+      ],
+      "scale": 0.21463390986191486,
+      "origin": [
+        4.008441292580717e-05,
+        -0.01073122226085402,
+        -7.883596087054912e-08
+      ],
+      "direction": [
+        -2.7628999999254435e-18,
+        7.346410206643587e-06,
+        -0.9999999999730151
+      ],
+      "frame": "shared_child_center_robust_diagonal",
+      "base_scene_scale": 1.2007198820451281,
+      "child_to_scene_scale": 0.17875435650847998
+    },
+    {
+      "id": "articraft/rec_traditional_windmill_973bf1df6bd245218dccfc8699935e81/1",
+      "asset_key": "articraft/rec_traditional_windmill_973bf1df6bd245218dccfc8699935e81",
+      "asset_id": "rec_traditional_windmill_973bf1df6bd245218dccfc8699935e81",
+      "asset_name": "traditional_retrofit_windmill",
+      "source": "articraft",
+      "private": false,
+      "split": "train",
+      "group": "64d678ea71d8326c",
+      "joint_index": 1,
+      "joint_name": "cap_to_rotor",
+      "type": "continuous",
+      "mimic": null,
+      "parent_name": "cap",
+      "child_name": "rotor",
+      "parent_file": "cache/79eafbdfdb462af0831743a8a1252ece716698217c8ff6f0aa779f7f06a1d621.npy",
+      "child_file": "cache/4ae9839f0b569e447f7762e209fe3eca4fd631297d11320d1d94cdbe0ebd1182.npy",
+      "center": [
+        2.328669309616089,
+        -0.0018376648658886552,
+        8.007611274719238
+      ],
+      "scale": 13.957759860550778,
+      "origin": [
+        0.0,
+        0.00013165901149241724,
+        -0.0005453077567805309
+      ],
+      "direction": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "frame": "shared_child_center_robust_diagonal",
+      "base_scene_scale": 17.15730322745595,
+      "child_to_scene_scale": 0.8135171172014313
+    },
+    {
+      "id": "public/artvip_model_office_chair001_331e4eaebd/3",
+      "asset_key": "public/artvip_model_office_chair001_331e4eaebd",
+      "asset_id": "artvip_model_office_chair001_331e4eaebd",
+      "asset_name": "Articulated_objects/small_furniture/chair/office chair004/model office chair001.usd",
+      "source": "artvip",
+      "private": false,
+      "split": "train",
+      "group": "68490907e98c1682",
+      "joint_index": 3,
+      "joint_name": "/root/E_wheel2_16/RevoluteJoint_office_chair001_down4",
+      "type": "continuous",
+      "mimic": null,
+      "parent_name": "/root/E_link2_15",
+      "child_name": "/root/E_wheel2_16",
+      "parent_file": "cache/eb06785b3b7a97975e067e527e44df6d94abde31b20c1726917c51805f4d96ce.npy",
+      "child_file": "cache/2c135929998b0e8385e39ffa250af424495daff5be317f5b79b9406483166c6c.npy",
+      "center": [
+        -0.10456458479166031,
+        0.24721075594425201,
+        0.023189270868897438
+      ],
+      "scale": 0.07924796890560763,
+      "origin": [
+        -0.0034564263184071746,
+        0.0,
+        0.0026717472677749094
+      ],
+      "direction": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "frame": "shared_child_center_robust_diagonal",
+      "base_scene_scale": 1.218627094718237,
+      "child_to_scene_scale": 0.06503053251407546
+    },
+    {
+      "id": "public/fusion_joint_joint_set_00079_j000_45a454fb9f/0",
+      "asset_key": "public/fusion_joint_joint_set_00079_j000_45a454fb9f",
+      "asset_id": "fusion_joint_joint_set_00079_j000_45a454fb9f",
+      "asset_name": "joint_set_00079_j000.json",
+      "source": "fusion_joint",
+      "private": false,
+      "split": "train",
+      "group": "1cd4c430b76e73ce",
+      "joint_index": 0,
+      "joint_name": "Rev18_0",
+      "type": "continuous",
+      "mimic": null,
+      "parent_name": "22206_703c82ed_0004_1",
+      "child_name": "22206_703c82ed_0004_2",
+      "parent_file": "cache/f888b2392b229cf07a920ecb56295925bbd27014930d1729b10d22dd44b65651.npy",
+      "child_file": "cache/3d4e8f746a348a70a8cc89440422b1e1891229280d7c339994a77b0dd882a5f3.npy",
+      "center": [
+        0.14285869896411896,
+        0.0003778270329348743,
+        0.1293177604675293
+      ],
+      "scale": 0.08926632090433846,
+      "origin": [
+        0.00018261126610719298,
+        -2.250785685328203e-05,
+        0.0
+      ],
+      "direction": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "frame": "shared_child_center_robust_diagonal",
+      "base_scene_scale": 0.12188946987537524,
+      "child_to_scene_scale": 0.7323546570151465
+    },
+    {
+      "id": "public/urdf_files_kinovaGen3_b3fd3b03ad/3",
+      "asset_key": "public/urdf_files_kinovaGen3_b3fd3b03ad",
+      "asset_id": "urdf_files_kinovaGen3_b3fd3b03ad",
+      "asset_name": "urdf_files_dataset-81f4cdac42c3a51ba88833180db5bf3697988c87/urdf_files/matlab/kortex_description/urdf/kinovaGen3.urdf",
+      "source": "urdf_files",
+      "private": false,
+      "split": "train",
+      "group": "4e1cd9b63ec28a60",
+      "joint_index": 3,
+      "joint_name": "Actuator7",
+      "type": "continuous",
+      "mimic": null,
+      "parent_name": "Wrist2_Link",
+      "child_name": "Bracelet_Link",
+      "parent_file": "cache/a110fc6614cc9af0589a10e16fe1b66b244a2863ed19ab74a5ce616ef0fe34a0.npy",
+      "child_file": "cache/e5fc6f56aba6c0ea4a1061186599601d043c2d4415b7655c732056074000894b.npy",
+      "center": [
+        -0.000207216726266779,
+        -0.005966341122984886,
+        1.1584221124649048
+      ],
+      "scale": 0.1540350915944882,
+      "origin": [
+        0.001345256617318711,
+        -0.12265417706924032,
+        -9.010678980736486e-07
+      ],
+      "direction": [
+        0.0,
+        7.346410206643588e-06,
+        -0.9999999999730151
+      ],
+      "frame": "shared_child_center_robust_diagonal",
+      "base_scene_scale": 1.1989307522680488,
+      "child_to_scene_scale": 0.12847705449467867
+    },
+    {
+      "id": "articraft/rec_tilting_fan_435b68a6ab9b46629ded326c6acd70e4/0",
+      "asset_key": "articraft/rec_tilting_fan_435b68a6ab9b46629ded326c6acd70e4",
+      "asset_id": "rec_tilting_fan_435b68a6ab9b46629ded326c6acd70e4",
+      "asset_name": "tilting_fan",
+      "source": "articraft",
+      "private": false,
+      "split": "train",
+      "group": "a60bf99c10a7194b",
+      "joint_index": 0,
+      "joint_name": "head_to_rotor_spin",
+      "type": "continuous",
+      "mimic": null,
+      "parent_name": "head",
+      "child_name": "rotor",
+      "parent_file": "cache/54bd39cdb1d865fd0bbed12d20682dd8c84f29b0dc037dce78c222113ea87285.npy",
+      "child_file": "cache/f260d8d5c98f10bca2d0cccc8c177df69b019a62ced2ab0642ea81ca57b66aaa.npy",
+      "center": [
+        0.08036698400974274,
+        -0.003668283112347126,
+        0.28307387232780457
+      ],
+      "scale": 0.24682042648826458,
+      "origin": [
+        0.0,
+        0.014862153690191195,
+        -0.09348445206135172
+      ],
+      "direction": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "frame": "shared_child_center_robust_diagonal",
+      "base_scene_scale": 0.6177676601474053,
+      "child_to_scene_scale": 0.39953601072184786
+    },
+    {
+      "id": "public/artvip_model_stool_0_27a7ce5b22/0",
+      "asset_key": "public/artvip_model_stool_0_27a7ce5b22",
+      "asset_id": "artvip_model_stool_0_27a7ce5b22",
+      "asset_name": "Articulated_objects/small_furniture/stool/stool/model_stool_0.usd",
+      "source": "artvip",
+      "private": false,
+      "split": "train",
+      "group": "b5ef26e861a75048",
+      "joint_index": 0,
+      "joint_name": "/root/E_seat_mv_2/RevoluteJoint_stool_middle",
+      "type": "continuous",
+      "mimic": null,
+      "parent_name": "/root/E_support_mv_1",
+      "child_name": "/root/E_seat_mv_2",
+      "parent_file": "cache/21bfc167bcb82b0d2ef82a671113924e9f96802f8e4f8eaee7ff0c060e79d8f4.npy",
+      "child_file": "cache/1dba2ca83586f73042a288ef926338f119f080edb46af03047596a26a26c98d9.npy",
+      "center": [
+        0.007980559021234512,
+        0.027733085677027702,
+        0.4387456774711609
+      ],
+      "scale": 0.6062098409131784,
+      "origin": [
+        0.003043897456657783,
+        0.000660850362974678,
+        0.0
+      ],
+      "direction": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "frame": "shared_child_center_robust_diagonal",
+      "base_scene_scale": 0.8012403963830844,
+      "child_to_scene_scale": 0.7565892129873852
+    },
+    {
+      "id": "public/fusion_joint_joint_set_00563_j001_dcece9a69e/0",
+      "asset_key": "public/fusion_joint_joint_set_00563_j001_dcece9a69e",
+      "asset_id": "fusion_joint_joint_set_00563_j001_dcece9a69e",
+      "asset_name": "joint_set_00563_j001.json",
+      "source": "fusion_joint",
+      "private": false,
+      "split": "train",
+      "group": "458d3521e28800b3",
+      "joint_index": 0,
+      "joint_name": "Rev8_1",
+      "type": "continuous",
+      "mimic": null,
+      "parent_name": "52985_475fe7b2_0005_2",
+      "child_name": "52985_475fe7b2_0003_2",
+      "parent_file": "cache/8637f845013ff0153dc29654b7e96199c89dd82735ed6d09adafbecaa9f114f2.npy",
+      "child_file": "cache/de34d36d6e20f5c164be76a86d90f0c17ec1924926660246140cc69d8dc50744.npy",
+      "center": [
+        0.0,
+        0.053411029279232025,
+        0.0
+      ],
+      "scale": 0.39548824311126174,
+      "origin": [
+        -0.25285201707467003,
+        0.0798733496405888,
+        0.0
+      ],
+      "direction": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "frame": "shared_child_center_robust_diagonal",
+      "base_scene_scale": 0.6840751375300617,
+      "child_to_scene_scale": 0.5781356775210705
+    },
+    {
+      "id": "public/urdf_files_kinovaJacoTwoArmExample_bbc1bddff6/2",
+      "asset_key": "public/urdf_files_kinovaJacoTwoArmExample_bbc1bddff6",
+      "asset_id": "urdf_files_kinovaJacoTwoArmExample_bbc1bddff6",
+      "asset_name": "urdf_files_dataset-81f4cdac42c3a51ba88833180db5bf3697988c87/urdf_files/matlab/kinova_description/urdf/kinovaJacoTwoArmExample.urdf",
+      "source": "urdf_files",
+      "private": false,
+      "split": "train",
+      "group": "c1928241e8e5d7c7",
+      "joint_index": 2,
+      "joint_name": "left_joint_5",
+      "type": "continuous",
+      "mimic": null,
+      "parent_name": "left_link_4",
+      "child_name": "left_link_5",
+      "parent_file": "cache/d6ae4bcbee17f6f7059792f20ba7cca49f4f0a969f312a4e895363d25a2e258d.npy",
+      "child_file": "cache/5345e5786bec41a53dfc1772d97af33530da1c80e7a82eb53f814d3fafd0cd53.npy",
+      "center": [
+        -0.2500198483467102,
+        0.16119173169136047,
+        0.25418663024902344
+      ],
+      "scale": 0.16244281244744568,
+      "origin": [
+        -0.022827844581834844,
+        0.024922605222285565,
+        -0.03153496630211844
+      ],
+      "direction": [
+        0.8660480111091856,
+        0.23465235885261762,
+        -0.4414737964349937
+      ],
+      "frame": "shared_child_center_robust_diagonal",
+      "base_scene_scale": 0.8824663890826631,
+      "child_to_scene_scale": 0.18407818638430798
+    },
+    {
+      "id": "articraft/rec_single_rotor_helicopter_f519cd2e69ed4489bea3ab07813c4814/1",
+      "asset_key": "articraft/rec_single_rotor_helicopter_f519cd2e69ed4489bea3ab07813c4814",
+      "asset_id": "rec_single_rotor_helicopter_f519cd2e69ed4489bea3ab07813c4814",
+      "asset_name": "agricultural_helicopter",
+      "source": "articraft",
+      "private": false,
+      "split": "train",
+      "group": "5da55315bc5a634f",
+      "joint_index": 1,
+      "joint_name": "tail_spin",
+      "type": "continuous",
+      "mimic": null,
+      "parent_name": "airframe",
+      "child_name": "tail_rotor",
+      "parent_file": "cache/a406b42df8967ad021567b8e9574cc45913fd4196c79bf909d879fc619aacfce.npy",
+      "child_file": "cache/295c2831e10dd8926f4f96c9744a10405474b5af958e20dda051190ffb256ad4.npy",
+      "center": [
+        -5.280429840087891,
+        0.19999998807907104,
+        1.0497984886169434
+      ],
+      "scale": 0.9811168496994856,
+      "origin": [
+        0.00043811304231615976,
+        0.0,
+        0.00020538978931857873
+      ],
+      "direction": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "frame": "shared_child_center_robust_diagonal",
+      "base_scene_scale": 12.42049246347958,
+      "child_to_scene_scale": 0.07899178334388099
+    },
+    {
+      "id": "public/artvip_model_anesthesia_machine_9d4adaf57e/2",
+      "asset_key": "public/artvip_model_anesthesia_machine_9d4adaf57e",
+      "asset_id": "artvip_model_anesthesia_machine_9d4adaf57e",
+      "asset_name": "Articulated_objects/Medical_equipment/anesthesia_machine/model_anesthesia_machine.usd",
+      "source": "artvip",
+      "private": false,
+      "split": "train",
+      "group": "1cacf935d09d3998",
+      "joint_index": 2,
+      "joint_name": "/root/E_knob2_3/RevoluteJointanesthesia_machine_up",
+      "type": "continuous",
+      "mimic": null,
+      "parent_name": "/root/E_body_34",
+      "child_name": "/root/E_knob2_3",
+      "parent_file": "cache/7f3e41a9a2a8ae3b9022fcc77c16743e0b3f63b240af6421b857f2c1b3e3d01f.npy",
+      "child_file": "cache/62ad5fb8b4de9bbd9722f12429ea0a7ac7b41433580289013fe62288f1e54359.npy",
+      "center": [
+        0.011613606475293636,
+        -0.03808830678462982,
+        1.26901113986969
+      ],
+      "scale": 0.06568974356764469,
+      "origin": [
+        0.0003880833057096306,
+        0.0,
+        -0.00016877008991222892
+      ],
+      "direction": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "frame": "shared_child_center_robust_diagonal",
+      "base_scene_scale": 2.2375333789144025,
+      "child_to_scene_scale": 0.02935810664845401
+    },
+    {
+      "id": "public/fusion_joint_joint_set_00347_j000_4a2c39bef2/0",
+      "asset_key": "public/fusion_joint_joint_set_00347_j000_4a2c39bef2",
+      "asset_id": "fusion_joint_joint_set_00347_j000_4a2c39bef2",
+      "asset_name": "joint_set_00347_j000.json",
+      "source": "fusion_joint",
+      "private": false,
+      "split": "train",
+      "group": "5dac6b94e41fa9e7",
+      "joint_index": 0,
+      "joint_name": "Rev31_0",
+      "type": "continuous",
+      "mimic": null,
+      "parent_name": "24336_750284ec_0021_2",
+      "child_name": "24336_750284ec_0019_2",
+      "parent_file": "cache/9fb23836b9894701e7923b1682cf958798dc4c600690c12bf902747973ac301f.npy",
+      "child_file": "cache/b7d66685f7601ec775f3997cb7e62da38906b8547eab6cacca973c83f429f53d.npy",
+      "center": [
+        0.024754732847213745,
+        0.11438754945993423,
+        0.019999999552965164
+      ],
+      "scale": 0.19905480067548295,
+      "origin": [
+        0.3277346929012032,
+        0.2766600763096593,
+        0.0
+      ],
+      "direction": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "frame": "shared_child_center_robust_diagonal",
+      "base_scene_scale": 0.20548587070503016,
+      "child_to_scene_scale": 0.9687031034908534
+    },
+    {
+      "id": "public/urdf_files_eve_r3_1d8dfa2d23/0",
+      "asset_key": "public/urdf_files_eve_r3_1d8dfa2d23",
+      "asset_id": "urdf_files_eve_r3_1d8dfa2d23",
+      "asset_name": "urdf_files_dataset-81f4cdac42c3a51ba88833180db5bf3697988c87/urdf_files/random/robot-assets/halodi/eve_r3.urdf",
+      "source": "urdf_files",
+      "private": false,
+      "split": "train",
+      "group": "72c5e8b00a201465",
+      "joint_index": 0,
+      "joint_name": "j_l_wheel_y",
+      "type": "continuous",
+      "mimic": null,
+      "parent_name": "base",
+      "child_name": "l_wheel",
+      "parent_file": "cache/e0929780dfbdec037ba2c729f21449a78b365a453942a55b1945cfc4cda73aca.npy",
+      "child_file": "cache/b28ebf40e8c4be43c69a9480707cc86403648c9701c7809ce75f46c1d087c546.npy",
+      "center": [
+        0.14210398495197296,
+        0.26897719502449036,
+        -0.7601123452186584
+      ],
+      "scale": 0.4250986704524508,
+      "origin": [
+        -0.00024461368430604225,
+        0.0,
+        -0.0020881146967521524
+      ],
+      "direction": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "frame": "shared_child_center_robust_diagonal",
+      "base_scene_scale": 2.0352607761750834,
+      "child_to_scene_scale": 0.20886693018835129
+    },
+    {
+      "id": "articraft/rec_single_rotor_helicopter_23131559de8648789c1df50ff7eb0659/1",
+      "asset_key": "articraft/rec_single_rotor_helicopter_23131559de8648789c1df50ff7eb0659",
+      "asset_id": "rec_single_rotor_helicopter_23131559de8648789c1df50ff7eb0659",
+      "asset_name": "cargo_helicopter",
+      "source": "articraft",
+      "private": false,
+      "split": "train",
+      "group": "5da55315bc5a634f",
+      "joint_index": 1,
+      "joint_name": "tail_rotor_spin",
+      "type": "continuous",
+      "mimic": null,
+      "parent_name": "fuselage",
+      "child_name": "tail_rotor",
+      "parent_file": "cache/5b90f287ec231ee0de5b66c8b7256cf4b59f75ffd51b97b2c1063557c2d40464.npy",
+      "child_file": "cache/eabb81de9edd358e5eb5b9b1f964bc2c0e6631744b8467b4e69be0c579b5d366.npy",
+      "center": [
+        -5.340000152587891,
+        0.2996615767478943,
+        1.6181995868682861
+      ],
+      "scale": 1.8388456045141492,
+      "origin": [
+        8.298026239534372e-08,
+        0.0,
+        0.00097909967389006
+      ],
+      "direction": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "frame": "shared_child_center_robust_diagonal",
+      "base_scene_scale": 11.965864378555668,
+      "child_to_scene_scale": 0.15367428096624525
+    },
+    {
+      "id": "public/artvip_model_clock_004_c9dbfd2100/0",
+      "asset_key": "public/artvip_model_clock_004_c9dbfd2100",
+      "asset_id": "artvip_model_clock_004_c9dbfd2100",
+      "asset_name": "Articulated_objects/household_items/clock/clock004/model_clock_004.usd",
+      "source": "artvip",
+      "private": false,
+      "split": "train",
+      "group": "20c2d0614e97a383",
+      "joint_index": 0,
+      "joint_name": "/root/E_pointer1_1/RevoluteJoint_clock004_middle",
+      "type": "continuous",
+      "mimic": null,
+      "parent_name": "/root/E_body_3",
+      "child_name": "/root/E_pointer1_1",
+      "parent_file": "cache/5cb5066d1c998e1c5c93a50bc272c6fd9d8f50e4e4b418e575b8697c890931ed.npy",
+      "child_file": "cache/d434abf1ef28812a4742295dcae419b2f40266fc5fdc4a6e719ac04e58510ca0.npy",
+      "center": [
+        -0.04403972625732422,
+        -0.009066999889910221,
+        0.19468656182289124
+      ],
+      "scale": 0.12235258571401081,
+      "origin": [
+        0.34033139571244453,
+        0.0,
+        -0.23488239923752474
+      ],
+      "direction": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "frame": "shared_child_center_robust_diagonal",
+      "base_scene_scale": 0.4652485053125635,
+      "child_to_scene_scale": 0.26298329670465426
+    },
+    {
+      "id": "public/fusion_joint_joint_set_00683_j001_6af4f2df85/0",
+      "asset_key": "public/fusion_joint_joint_set_00683_j001_6af4f2df85",
+      "asset_id": "fusion_joint_joint_set_00683_j001_6af4f2df85",
+      "asset_name": "joint_set_00683_j001.json",
+      "source": "fusion_joint",
+      "private": false,
+      "split": "train",
+      "group": "285defbe8c9bf27e",
+      "joint_index": 0,
+      "joint_name": "Rev3_1",
+      "type": "continuous",
+      "mimic": null,
+      "parent_name": "89438_d629f881_0008_1",
+      "child_name": "89438_d629f881_0008_2",
+      "parent_file": "cache/4fb48799c1965cf571a9a5e23e5df55d1707b1a952bf7937c96d1b445caa7a5d.npy",
+      "child_file": "cache/41657397cfd55ced0ef8d2303a7cd102aeba377fa5b311b9ccc29faf0d073528.npy",
+      "center": [
+        -2.2749907970428467,
+        0.09830436110496521,
+        0.6983432769775391
+      ],
+      "scale": 0.03954388166958937,
+      "origin": [
+        0.0,
+        0.0007652431058145817,
+        -0.0004305984104127765
+      ],
+      "direction": [
+        -1.0,
+        -0.0,
+        -2.0194839173657902e-28
+      ],
+      "frame": "shared_child_center_robust_diagonal",
+      "base_scene_scale": 0.13249295960043625,
+      "child_to_scene_scale": 0.2984602486716522
+    },
+    {
+      "id": "public/urdf_files_robotiq_tendons_9e42baa4c8/2",
+      "asset_key": "public/urdf_files_robotiq_tendons_9e42baa4c8",
+      "asset_id": "urdf_files_robotiq_tendons_9e42baa4c8",
+      "asset_name": "urdf_files_dataset-81f4cdac42c3a51ba88833180db5bf3697988c87/urdf_files/drake/atlas/urdf/robotiq_tendons.urdf",
+      "source": "urdf_files",
+      "private": false,
+      "split": "train",
+      "group": "8751d879d6a066ae",
+      "joint_index": 2,
+      "joint_name": "finger_1_joint_2",
+      "type": "continuous",
+      "mimic": null,
+      "parent_name": "finger_1_link_2",
+      "child_name": "finger_1_link_3",
+      "parent_file": "cache/07dd69a1af46d2e5646cdcb6a5c676371850f5f5cdc12f98fac40bc81717d7a6.npy",
+      "child_file": "cache/3132f046666939fc474f6e2493760a553f142b9333d8ce07a5135dad5ab6e6b9.npy",
+      "center": [
+        -0.09782137721776962,
+        0.1355155110359192,
+        0.03600085526704788
+      ],
+      "scale": 0.06845297565524416,
+      "origin": [
+        0.07100308367353736,
+        -0.15058986822232173,
+        -1.1067099723316431e-06
+      ],
+      "direction": [
+        -5.850142675553761e-09,
+        7.346407877330781e-06,
+        -0.9999999999730151
+      ],
+      "frame": "shared_child_center_robust_diagonal",
+      "base_scene_scale": 0.33640729952301246,
+      "child_to_scene_scale": 0.20348243261160726
+    },
+    {
+      "id": "articraft/rec_single_rotor_helicopter_fc81d9489a184dfb9a200c94301669dd/1",
+      "asset_key": "articraft/rec_single_rotor_helicopter_fc81d9489a184dfb9a200c94301669dd",
+      "asset_id": "rec_single_rotor_helicopter_fc81d9489a184dfb9a200c94301669dd",
+      "asset_name": "civilian_helicopter",
+      "source": "articraft",
+      "private": false,
+      "split": "train",
+      "group": "5da55315bc5a634f",
+      "joint_index": 1,
+      "joint_name": "airframe_to_tail_rotor",
+      "type": "continuous",
+      "mimic": null,
+      "parent_name": "airframe",
+      "child_name": "tail_rotor",
+      "parent_file": "cache/0504aa06609aef24fe0b39787c7c889a78945a99f53bcd5b54bb6a02f9c4ec06.npy",
+      "child_file": "cache/3e3ddf6e1f742c10006ea357acb16b8fe362cd3ab19707aab46edb727bd601c6.npy",
+      "center": [
+        -5.04086971282959,
+        0.45749998092651367,
+        1.458521842956543
+      ],
+      "scale": 1.103764719182346,
+      "origin": [
+        0.0007879512856997999,
+        0.0,
+        0.0013391957704101962
+      ],
+      "direction": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "frame": "shared_child_center_robust_diagonal",
+      "base_scene_scale": 9.23759671499774,
+      "child_to_scene_scale": 0.11948613402773085
+    },
+    {
+      "id": "public/artvip_model_clock_003_c00db622bc/1",
+      "asset_key": "public/artvip_model_clock_003_c00db622bc",
+      "asset_id": "artvip_model_clock_003_c00db622bc",
+      "asset_name": "Articulated_objects/household_items/clock/clock003/model_clock_003.usd",
+      "source": "artvip",
+      "private": false,
+      "split": "train",
+      "group": "1fc274c35517f5ab",
+      "joint_index": 1,
+      "joint_name": "/root/E_pointer1_2/RevoluteJoint_clock003_middle1",
+      "type": "continuous",
+      "mimic": null,
+      "parent_name": "/root/E_body_3",
+      "child_name": "/root/E_pointer1_2",
+      "parent_file": "cache/119cc51b378877862aa715a16a8ae6bb205aba0ee1364450e23d78145219f42d.npy",
+      "child_file": "cache/a2ccee2b1cf54f97af02827a6ad8dc7d4be964cd01eda6fca97bb7ab0cf19a81.npy",
+      "center": [
+        -0.04559428244829178,
+        -0.023082472383975983,
+        0.1340995877981186
+      ],
+      "scale": 0.15295646321583234,
+      "origin": [
+        0.31502678193990813,
+        0.0,
+        0.25213717761060894
+      ],
+      "direction": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "frame": "shared_child_center_robust_diagonal",
+      "base_scene_scale": 0.4903577931780351,
+      "child_to_scene_scale": 0.3119282804184947
+    },
+    {
+      "id": "public/fusion_joint_joint_set_00065_j001_6f20937a96/0",
+      "asset_key": "public/fusion_joint_joint_set_00065_j001_6f20937a96",
+      "asset_id": "fusion_joint_joint_set_00065_j001_6f20937a96",
+      "asset_name": "joint_set_00065_j001.json",
+      "source": "fusion_joint",
+      "private": false,
+      "split": "train",
+      "group": "91052e0aaf1e1ef8",
+      "joint_index": 0,
+      "joint_name": "Rev25_1",
+      "type": "continuous",
+      "mimic": null,
+      "parent_name": "56001_1a681242_0021_2",
+      "child_name": "56001_1a681242_0001_1",
+      "parent_file": "cache/2c747bc1d11555966e412cda84df2b08a89483c67c792e50ac8357e6b5958cd3.npy",
+      "child_file": "cache/ef808e7c273c61631af73b58db0495e0e3a03d2240707025185283886a223ca5.npy",
+      "center": [
+        1.1937999725341797,
+        0.031536590307950974,
+        -0.24131841957569122
+      ],
+      "scale": 0.14896654886274732,
+      "origin": [
+        0.0,
+        0.03785611481874701,
+        -0.042503341090627464
+      ],
+      "direction": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "frame": "shared_child_center_robust_diagonal",
+      "base_scene_scale": 2.0373195966742346,
+      "child_to_scene_scale": 0.07311889067671248
+    },
+    {
+      "id": "public/urdf_files_turtlebot3_waffle_pi_474a34ae5b/1",
+      "asset_key": "public/urdf_files_turtlebot3_waffle_pi_474a34ae5b",
+      "asset_id": "urdf_files_turtlebot3_waffle_pi_474a34ae5b",
+      "asset_name": "urdf_files_dataset-81f4cdac42c3a51ba88833180db5bf3697988c87/urdf_files/oems/xacro_generated/turtlebot3_robotis/turtlebot3_description/urdf/turtlebot3_waffle_pi.urdf",
+      "source": "urdf_files",
+      "private": false,
+      "split": "train",
+      "group": "1cfed9cb78d2719b",
+      "joint_index": 1,
+      "joint_name": "wheel_right_joint",
+      "type": "continuous",
+      "mimic": null,
+      "parent_name": "base_link",
+      "child_name": "wheel_right_link",
+      "parent_file": "cache/97f01197bf50b10353ea944493a865152211cbd1aa1dff980a9269816be334da.npy",
+      "child_file": "cache/283a89f93d76538cd1f4e5e6c3a4c640e73466b6f2dbd69272cec374fd543756.npy",
+      "center": [
+        3.96782997995615e-05,
+        -0.14395000040531158,
+        0.03295065835118294
+      ],
+      "scale": 0.09292561150798473,
+      "origin": [
+        -0.0004269899240442674,
+        -4.231746915106527e-07,
+        0.0005314082170300841
+      ],
+      "direction": [
+        0.0,
+        0.9999996829318346,
+        0.0007963267107332633
+      ],
+      "frame": "shared_child_center_robust_diagonal",
+      "base_scene_scale": 0.4291324303074307,
+      "child_to_scene_scale": 0.21654297122548574
+    },
+    {
+      "id": "articraft/rec_bicycle_crankset_and_pedal_assembly_064a3b134ba541918b3d57fd410c2b75/2",
+      "asset_key": "articraft/rec_bicycle_crankset_and_pedal_assembly_064a3b134ba541918b3d57fd410c2b75",
+      "asset_id": "rec_bicycle_crankset_and_pedal_assembly_064a3b134ba541918b3d57fd410c2b75",
+      "asset_name": "mountain_bike_crankset",
+      "source": "articraft",
+      "private": false,
+      "split": "train",
+      "group": "2807755bb4bedb2a",
+      "joint_index": 2,
+      "joint_name": "left_crank_to_left_pedal",
+      "type": "continuous",
+      "mimic": null,
+      "parent_name": "left_crank",
+      "child_name": "left_pedal",
+      "parent_file": "cache/2159d8547159d868e1c46670fe7307ec624a4371e5933faaa4493e8b29ea60fd.npy",
+      "child_file": "cache/7a266d966d0087148b4434879fe44a6d3e27ea8bd7ae7e0cbcd47f76ab6b9e34.npy",
+      "center": [
+        -0.1750136762857437,
+        -1.5186145674306317e-06,
+        -0.087459035217762
+      ],
+      "scale": 0.12187640726052336,
+      "origin": [
+        0.000112214387240742,
+        1.627052212844204e-05,
+        0.0
+      ],
+      "direction": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "frame": "shared_child_center_robust_diagonal",
+      "base_scene_scale": 0.48005360385653945,
+      "child_to_scene_scale": 0.2538808297269762
+    }
+  ],
+  "snapshot_sha256": "cd36c28ef0f9754fca9ec49cb60e29ad6aa0520c1af4b3003b011185228d4ace",
+  "source_hashes": {
+    "common.py": "6d630cd5d4eb3db4255c4652aba2d68f6521aeb1a040fa5f1cac9836da3ce4a1",
+    "data_geometry.py": "1cef9baf20dcf83319f23f012b39cc655f6b4e0544d568dea9bea0c02288c235",
+    "dataset.py": "f8b83e6af83e1b439f78d23bbbfeda00e2aae39ad31d4f75e3e6b172c829a6ca",
+    "evaluate.py": "6cfd1d5a683b333d110c235521761ebadd8cb37b3946bca5ba5544f461deef99",
+    "gpu_preflight.py": "8989f11dee7c62364dfd2e499f9451ddaaa16fef9c66f0bd0a47ec5c6d172b4e",
+    "infer_glb.py": "2ca74cd42e81a8978e215befb42b9d8b7d0894d50d15743cc537a8e072b6aa7f",
+    "model.py": "38a028b95fac272cc97d95109c638eec2800013be45ff1f99810c579fa2e58d9",
+    "preflight.py": "0788da3efd9b4b9a55d28e7e9bfe0a1369c69354589a286d02857a9ca7ab138a",
+    "prepare_v2.py": "e0cdc7a2648212581294e84c327d380b30db4c647f136115d07e7b55afc0cea6",
+    "train.py": "254c76c343666701923baff3040e2c3f35c17e7c4525f33d4e22c93d56402bc4"
+  },
+  "tensor_sha256": "f325e54b4b02761388c3ea233e5410661773f8c864e2f002d77d3bce90de0140",
+  "selection_seed": 20260923,
+  "sources": {
+    "articraft": 22,
+    "artvip": 21,
+    "fusion_joint": 21,
+    "urdf_files": 21,
+    "user_continuous_26": 15
+  },
+  "distinct_assets": 100,
+  "hash_verified_files": 200,
+  "shapes": {
+    "parent": [
+      100,
+      2048,
+      6
+    ],
+    "child": [
+      100,
+      2048,
+      6
+    ],
+    "origin": [
+      100,
+      3
+    ],
+    "direction": [
+      100,
+      3
+    ],
+    "scale": [
+      100
+    ],
+    "center": [
+      100,
+      3
+    ],
+    "row_index": [
+      100
+    ],
+    "projection_target": [
+      100,
+      2048,
+      3
+    ]
+  },
+  "note": "100 distinct train assets, one axis each; metadata/hash checked, not newly human-verified. No augmentation."
+}
